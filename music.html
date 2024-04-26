@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>khalil</title>
+    <link href='https://fonts.googleapis.com/css?family=Victor Mono' rel='stylesheet'>
+    <style>
+    /* Your existing CSS styles */
+
+    /* Add margin-top to move the navigation buttons down */
+    nav.top-nav,
+    nav.buttom-nav {
+        margin-top: 25px; /* Adjust the value as needed */
+    }
+</style>
+    <style>
+    body {
+        font-family: 'Victor Mono', sans-serif;
+        color: white;
+        background-color: black;
+        margin: 0;
+        padding-top: 60px; /* Adjust based on the height of your nav bar */
+    }
+
+    .container {
+        text-align: center;
+    }
+
+    .content-buttons {
+        margin: 20px 0;
+        font-size: 24px;
+    }
+
+    .button {
+        background-color: transparent;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 17px;
+        font-family: 'Victor Mono';
+    }
+
+    .underlined {
+        text-decoration: underline;
+    }
+
+    .content {
+        display: none;
+    }
+
+    .active .content {
+        display: block;
+    }    
+
+    .slash {
+        color: white; /* Set color to match button text */
+        font-size: 15px; /* Match font size with buttons */
+        margin: 4 0px; /* Adjust margin to create space around the slash */
+        vertical-align: middle; /* Align the slash vertically with the buttons */
+    }
+    
+</style>
+
+<style>
+    .containerr {
+        text-align: center;
+    }
+
+    .button-container {
+        margin-bottom: 3px;
+        position: relative;
+    }
+
+    .buttonn {
+        background-color: transparent;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 0;
+        font-family: 'Victor Mono', sans-serif;
+        transition: none; /* Remove transition */
+    }
+
+    .buttonn:hover {
+        transform: scale(1); /* Remove increase in size on hover */
+    }
+
+    .number {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 20px;
+    }
+
+    .link {
+        display: none;
+        position: absolute;
+        top: 26%;
+        left: 20%;
+        transform: translate(-55%, -50%);
+        color: white;
+        text-decoration: none;
+        font-size: 95px;
+    }
+
+    .link img {
+        width: 30%;
+        height: auto;
+        top: 5%;
+        left: 20039%;
+    }
+
+    .group {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        position: relative;
+    }
+
+    .active .link {
+        display: inline-block;
+    }
+</style>
+
+<style>
+    .containerr2 {
+        text-align: center;
+    }
+
+    .button-containert {
+        margin-bottom: 3px;
+        position: relative;
+    }
+
+    .buttonn2 {
+        background-color: transparent;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 0;
+        font-family: 'Victor Mono', sans-serif;
+        transition: none; /* Remove transition */
+    }
+
+    .buttonn2:hover {
+        transform: scale(1); /* Remove increase in size on hover */
+    }
+
+    .numberr {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 20px;
+    }
+
+    .linkk {
+        display: none;
+        position: absolute;
+        top: 26%;
+        left: 30%;
+        transform: translate(-55%, -50%);
+        color: white;
+        text-decoration: none;
+        font-size: 95px;
+    }
+
+        .linkkt {
+        display: none;
+        position: absolute;
+        top: 40%;
+        left: 30%;
+        transform: translate(-60%, -55%);
+        color: white;
+        text-decoration: none;
+        font-size: 50px;
+    }
+
+
+    .link imgg {
+        width: 30%;
+        height: auto;
+        top: 5%;
+        left: 200%;
+    }
+
+    .groupp {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        position: relative;
+    }
+
+    .active .linkk {
+        display: inline-block;
+    }
+</style>
+
+
+    <style>
+    /* Style for the top navigation bar */
+    nav.top-nav {
+      position: fixed; /* Keep the top navigation bar fixed */
+      top: 0; /* Position it at the top */
+      left: 0; /* Position it at the left */
+      width: 100%; /* Take up the full width of the viewport */
+      display: flex; /* Use flexbox layout */
+      justify-content: space-around; /* Space items evenly with more space between them */
+      align-items: center; /* Center-align the items vertically */
+      z-index: 1000; /* Ensure it's above other content */
+    }
+
+    /* Style for the bottom navigation bar */
+    nav.bottom-nav {
+      position: fixed; /* Keep the bottom navigation bar fixed */
+      bottom: 0; /* Position it at the bottom */
+      left: 0; /* Position it at the left */
+      width: 100%; /* Take up the full width of the viewport */
+      display: flex; /* Use flexbox layout */
+      justify-content: space-between; /* Space items evenly */
+      align-items: center; /* Center-align the items vertically */
+      z-index: 1000; /* Ensure it's above other content */
+    }
+
+    nav.top-nav ul,
+    nav.bottom-nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav.top-nav ul li,
+    nav.bottom-nav ul li {
+      display: inline;
+      margin: 0 10px; /* Add margin to create space between buttons */
+    }
+
+    nav.bottom-nav ul li:first-child {
+      margin-right: auto; /* Push the first item to the left */
+    }
+
+    nav.top-nav ul li a {
+      font-family: Victor Mono, Charcoal, sans-serif; /* Use Impact font */
+      font-size: 19px; /* Set font size */
+      color: white; /* Change font color to white */
+      text-decoration: none;
+      padding: 24px; /* Add padding to the buttons */
+    }
+
+    nav.bottom-nav ul li a {
+      font-family: Victor Mono, Charcoal, sans-serif; /* Use Impact font */
+      font-size: 19px; /* Set font size */
+      color: white; /* Change font color to white */
+      text-decoration: none;
+      padding: 15px; /* Add padding to the buttons */
+    }
+
+    nav.top-nav ul li a:hover,
+    nav.bottom-nav ul li a:hover {
+      color: white; /* Change color on hover */
+    }
+</style>
+
+<style>
+    nav.bottom-nav {
+      /* Add the desired height */
+      height: 50px;
+    }
+
+    nav.bottom-nav ul li a {
+      /* Adjust the font size */
+      font-size: 10px;
+    }
+</style>
+<!-- Top Navigation Bar -->
+<nav class="top-nav">
+    <ul>
+        <li><a href="home.html">HOME</a></li>
+        <li><a href="tour.html">TOURS</a></li>
+        <li><a href="acts.html">ACTS</a></li>
+    </ul>
+</nav>
+
+<!-- Bottom Navigation Bar -->
+<nav class="bottom-nav">
+    <ul>
+        <li><a href="home.html"><b>JOIN</b></a></li> <!-- Left-aligned button -->
+    </ul>
+    <ul>
+        <li><a href="beenotr.html"><b>BEEN OTR</b></a></li> <!-- Right-aligned button -->
+        <li><a href="terms.html"><b>TERMS</b></a></li> <!-- Right-aligned button -->
+        <li><a href="privacy.html"><b>PRIVACY</b></a></li> <!-- Right-aligned button -->
+    </ul>
+</nav>
+</head>
+<body>
+
+<font color="white" align="center"><h3>OTR LIVE SHOWS MUSIC LISTS</h3></font>
+
+<font color="white">
+<div class="container">
+    <div class="content-buttons">
+        <button class="button underlined" onclick="toggleContent('music')">OTR II</button>
+        <span class="slash">/</span>
+        <button class="button" onclick="toggleContent('other')">OTR III</button>
+    </div>
+</div>
+    <div id="music" class="content">
+<div class="containerr">
+    <div class="button-container">
+            <div class="group">
+                <div class="number">⠀⠀1.</div>
+                <button class="buttonn" onclick="toggleLink(this)" class="buttonn" onclick="toggleLink(this)" style="font-family: Victor Mono, sans-serif; background-color: transparent; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; transition-duration: 0.4s; cursor: pointer; border-radius: 0;">DANGEROUSLY IN LOVE</button>
+                <a href="https://youtu.be/4Xemq4xCSEA?si=qIptjVumGL3H9snr" class="link">YT</a>
+            </div>
+            <div class="group">
+                <div class="number">⠀⠀2.</div>
+                <button class="buttonn" onclick="toggleLink(this)" class="buttonn" onclick="toggleLink(this)" style="font-family: Victor Mono, sans-serif; background-color: transparent; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; transition-duration: 0.4s; cursor: pointer; border-radius: 0;">FLAWS AND ALL</button>
+                <a href="https://youtu.be/iK9Iio7WgaI?si=J6TSrvLYIjo1HW1R" class="link">YT</a>
+            </div>
+            <div class="group">
+                <div class="number">⠀⠀3.</div>
+                <button class="buttonn" onclick="toggleLink(this)" class="buttonn" onclick="toggleLink(this)" style="font-family: Victor Mono, sans-serif; background-color: transparent; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; transition-duration: 0.4s; cursor: pointer; border-radius: 0;">SPIRIT</button>
+                <a href="https://youtu.be/civgUOommC8?si=mO3pwi5SP1JNZ3tg" class="link">YT</a>
+            </div>
+            <div class="group">
+                <div class="number">⠀⠀4.</div>
+                <button class="buttonn" onclick="toggleLink(this)" class="buttonn" onclick="toggleLink(this)" style="font-family: Victor Mono, sans-serif; background-color: transparent; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; transition-duration: 0.4s; cursor: pointer; border-radius: 0;">IAM THAT...</button>
+                <a href="https://youtu.be/b2xLsCo8zmQ?si=uiFeIOURFwOUBoRp" class="link">YT</a>
+            </div>
+            <div class="group">
+                <div class="number">⠀⠀5.</div>
+                <button class="buttonn" onclick="toggleLink(this)" class="buttonn" onclick="toggleLink(this)" style="font-family: Victor Mono, sans-serif; background-color: transparent; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; transition-duration: 0.4s; cursor: pointer; border-radius: 0;">ALIEN SUPERSTAR</button>
+                <a href="https://youtu.be/e_aT9pAGQo8?si=GhyKGCfVSEVaIt-w" class="link">YT</a>
+            </div>
+            <div class="group">
+                <div class="number">⠀⠀6.</div>
+                <button class="buttonn" onclick="toggleLink(this)" class="buttonn" onclick="toggleLink(this)" style="font-family: Victor Mono, sans-serif; background-color: transparent; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; transition-duration: 0.4s; cursor: pointer; border-radius: 0;">CRAZY IN LOVE</button>
+                <a href="https://youtu.be/ViwtNLUqkMY?si=UrBQtPF68hczWJUO" class="link">YT</a>
+            </div>
+            <div class="group">
+                <div class="number">⠀⠀7.</div>
+                <button class="buttonn" onclick="toggleLink(this)" class="buttonn" onclick="toggleLink(this)" style="font-family: Victor Mono, sans-serif; background-color: transparent; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; transition-duration: 0.4s; cursor: pointer; border-radius: 0;">DRUNK IN LOVE</button>
+                <a href="https://youtu.be/p1JPKLa-Ofc?si=efAG509nNMlgLBwm" class="link">YT</a>
+            </div>
+            <div class="group">
+                <div class="number">⠀⠀8.</div>
+                <button class="buttonn" onclick="toggleLink(this)" class="buttonn" onclick="toggleLink(this)" style="font-family: Victor Mono, sans-serif; background-color: transparent; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; transition-duration: 0.4s; cursor: pointer; border-radius: 0;">BABY BOY</button>
+                <a href="https://youtu.be/8ucz_pm3LX8?si=FrUWk7o0D60PwbHO" class="link">YT</a>
+            </div>
+            <div class="group">
+                <div class="number">⠀⠀9.</div>
+                <button class="buttonn" onclick="toggleLink(this)" class="buttonn" onclick="toggleLink(this)" style="font-family: Victor Mono, sans-serif; background-color: transparent; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; transition-duration: 0.4s; cursor: pointer; border-radius: 0;">MI GENTE</button>
+                <a href="https://youtu.be/APHgDFRpCi0?si=p8Gz_2QyqhUBljYW" class="link">YT</a>
+            </div>
+            <div class="group">
+                <div class="number">⠀⠀10.</div>
+                <button class="buttonn" onclick="toggleLink(this)" class="buttonn" onclick="toggleLink(this)" style="font-family: Victor Mono, sans-serif; background-color: transparent; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; transition-duration: 0.4s; cursor: pointer; border-radius: 0;">BAM</button>
+                <a href="https://youtu.be/wHrpB2lwc2I?si=z7hH0xDVMa1MOYHa" class="link">YT</a>
+            </div>
+            <div class="group">
+                <div class="number">⠀⠀11.</div>
+                <button class="buttonn" onclick="toggleLink(this)" class="buttonn" onclick="toggleLink(this)" style="font-family: Victor Mono, sans-serif; background-color: transparent; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; transition-duration: 0.4s; cursor: pointer; border-radius: 0;">COUNTDOWN</button>
+                <a href="https://youtu.be/2XY3AvVgDns?si=4_UYr_1SDmRH5DE0" class="link">YT</a>
+            </div>
+            <div class="group">
+                <div class="number">⠀⠀12.</div>
+                <button class="buttonn" onclick="toggleLink(this)" class="buttonn" onclick="toggleLink(this)" style="font-family: Victor Mono, sans-serif; background-color: transparent; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; transition-duration: 0.4s; cursor: pointer; border-radius: 0;">DIVA</button>
+                <a href="https://youtu.be/rNM5HW13_O8?si=SiedSE00QbWFz1Hp" class="link">YT</a>
+            </div>
+            <div class="group">
+                <div class="number">⠀⠀13.</div>
+                <button class="buttonn" onclick="toggleLink(this)" class="buttonn" onclick="toggleLink(this)" style="font-family: Victor Mono, sans-serif; background-color: transparent; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; transition-duration: 0.4s; cursor: pointer; border-radius: 0;">MOVE</button>
+                <a href="https://youtu.be/UlbVbKSiTuM?si=IUDEl_rEP9yXLbZ8" class="link">YT</a>
+            </div>
+            <div class="group">
+                <div class="number">⠀⠀14.</div>
+                <button class="buttonn" onclick="toggleLink(this)" class="buttonn" onclick="toggleLink(this)" style="font-family: Victor Mono, sans-serif; background-color: transparent; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; transition-duration: 0.4s; cursor: pointer; border-radius: 0;">COZY</button>
+                <a href="https://youtu.be/81j9gt1rXuk?si=8ZWn8xDxSxScgHZx" class="link">YT</a>
+            </div>
+            <div class="group">
+                <div class="number">⠀⠀15.</div>
+                <button class="buttonn" onclick="toggleLink(this)" class="buttonn" onclick="toggleLink(this)" style="font-family: Victor Mono, sans-serif; background-color: transparent; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; transition-duration: 0.4s; cursor: pointer; border-radius: 0;">HEATED</button>
+                <a href="https://youtu.be/o3WqRPM6M0A?si=JtYK1EThJNLyNn9g" class="link">YT</a>
+            </div>
+            <div class="group">
+                <div class="number">⠀⠀16.</div>
+                <button class="buttonn" onclick="toggleLink(this)" class="buttonn" onclick="toggleLink(this)" style="font-family: Victor Mono, sans-serif; background-color: transparent; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; transition-duration: 0.4s; cursor: pointer; border-radius: 0;">ENERGY</button>
+                <a href="https://youtu.be/O9rk6ldyFkA?si=35gVrjQQqMuUarkk" class="link">YT</a>
+            </div>
+            <div class="group">
+                <div class="number">⠀⠀17.</div>
+                <button class="buttonn" onclick="toggleLink(this)" class="buttonn" onclick="toggleLink(this)" style="font-family: Victor Mono, sans-serif; background-color: transparent; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; transition-duration: 0.4s; cursor: pointer; border-radius: 0;">BREAK MY SOUL</button>
+                <a href="https://youtu.be/HoBIPj8I0d0?si=UoTMoMyxkt00GcH1" class="link">YT</a>
+            </div>
+            <div class="group">
+                <div class="number">⠀⠀18.</div>
+                <button class="buttonn" onclick="toggleLink(this)" class="buttonn" onclick="toggleLink(this)" style="font-family: Victor Mono, sans-serif; background-color: transparent; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; transition-duration: 0.4s; cursor: pointer; border-radius: 0;">BLACK PARADE</button>
+                <a href="https://youtu.be/EJT1m1ele00?si=q7SOGFC2dogqYzCk" class="link">YT</a>
+            </div>
+            <div class="group">
+                <div class="number">⠀⠀19.</div>
+                <button class="buttonn" onclick="toggleLink(this)" class="buttonn" onclick="toggleLink(this)" style="font-family: Victor Mono, sans-serif; background-color: transparent; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; transition-duration: 0.4s; cursor: pointer; border-radius: 0;">MY POWER</button>
+                <a href="https://youtu.be/V_ZsbqSg4aE?si=DoChct9Sx7GLeraq" class="link">YT</a>
+            </div>
+            <div class="group">
+                <div class="number">⠀⠀20.</div>
+                <button class="buttonn" onclick="toggleLink(this)" class="buttonn" onclick="toggleLink(this)" style="font-family: Victor Mono, sans-serif; background-color: transparent; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; transition-duration: 0.4s; cursor: pointer; border-radius: 0;">BEFORE I LET GO</button>
+                <a href="https://youtu.be/4ajhkGty9h4?si=ZKvkS4nnzZ8FBW_t" class="link">YT</a>
+            </div>
+            <div class="group">
+                <div class="number">⠀⠀21.</div>
+                <button class="buttonn" onclick="toggleLink(this)" class="buttonn" onclick="toggleLink(this)" style="font-family: Victor Mono, sans-serif; background-color: transparent; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; transition-duration: 0.4s; cursor: pointer; border-radius: 0;">THIQUE</button>
+                <a href="https://youtu.be/kmh-ejuvnAg?si=p-_0nmvsUJ8XT0-T" class="link">YT</a>
+            </div>
+            <div class="group">
+                <div class="number">⠀⠀22.</div>
+                <button class="buttonn" onclick="toggleLink(this)" class="buttonn" onclick="toggleLink(this)" style="font-family: Victor Mono, sans-serif; background-color: transparent; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; transition-duration: 0.4s; cursor: pointer; border-radius: 0;">HALO (outro)</button>
+                <a href="https://youtu.be/bnVUHWCynig?si=7ZASfKhukRxYvc8v" class="link">YT</a>
+            </div>
+            <div class="group">
+                <div class="number">⠀⠀23.</div>
+                <button class="buttonn" onclick="toggleLink(this)" class="buttonn" onclick="toggleLink(this)" style="font-family: Victor Mono, sans-serif; background-color: transparent; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; transition-duration: 0.4s; cursor: pointer; border-radius: 0;">SHINING (outro)</button>
+                <a href="https://youtu.be/ZsNL1c24wxs?si=OWavNTwq6YrFi3Ts" class="link">YT</a>
+            </div><br><br>
+    </div>
+</div>
+    </div>
+    
+<div id="other" class="content">
+<font color="white" align="center" size="3"><p>THIS OTR SHOW WILL BE AT 5 JUNE 2024</p></font><font color="white" align="center" size="2"><P>THIS MUSIC LIST WILL BE PREFORMED AT OTR III,<br>(LINK WILL BE AVAILABLE AFTER 8.5)</P></font>
+    <div class="containerr2">
+        <div class="button-containert">
+            <div class="groupp">
+                <div class="numberr">⠀⠀1.</div>
+                <button class="buttonn2" onclick="toggleLink(this)" style="font-family: Victor Mono, sans-serif; background-color: transparent; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 0;">HOLLY GRAIL<br>(intro)</button>
+                <a href="https://youtu.be/4kc5_pfNHGk?si=QVF95_wn-M_Q4uDu" class="linkk">YT</a>
+                <a href="https://youtu.be/4kc5_pfNHGk?si=QVF95_wn-M_Q4uDu" class="linkkt">SPOTIFY</a>
+            </div>
+            <div class="groupp">
+                <div class="numberr">⠀⠀2.</div>
+                <button class="buttonn2" onclick="toggleLink(this)" style="font-family: Victor Mono, sans-serif; background-color: transparent; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer; border-radius: 0;">CRAZY IN LOVE</button>
+                <a href="https://youtu.be/ViwtNLUqkMY?si=UhSK88xYM-Y5sTwh" class="linkk">YT</a>
+            </div>
+            <div class="group">
+                <div class="numberr">⠀⠀3.</div>
+                <button class="buttonn2" onclick="toggleLink(this)" class="buttonn2" onclick="toggleLink(this)" style="font-family: Victor Mono, sans-serif; background-color: transparent; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; transition-duration: 0.4s; cursor: pointer; border-radius: 0;">ALREADY</button>
+                <a href="https://youtu.be/5zEj2LJSoQY?si=8JYOvP0_SptcisAr" class="link">YT</a>
+            </div>
+            <div class="group">
+                <div class="number">⠀⠀4.</div>
+                <button class="buttonn2" onclick="toggleLink(this)" class="buttonn2" onclick="toggleLink(this)" style="font-family: Victor Mono, sans-serif; background-color: transparent; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; transition-duration: 0.4s; cursor: pointer; border-radius: 0;">RUN THIS TWON</button>
+                <a href="https://youtu.be/ztygmWtWCjQ?si=AK4NpJrLSvIECB8n" class="link">YT</a>
+            </div>
+            <div class="group">
+                <div class="number">⠀⠀5.</div>
+                <button class="buttonn2" onclick="toggleLink(this)" class="buttonn2" onclick="toggleLink(this)" style="font-family: Victor Mono, sans-serif; background-color: transparent; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; transition-duration: 0.4s; cursor: pointer; border-radius: 0;">BABY BOY</button>
+                <a href="https://youtu.be/8ucz_pm3LX8?si=G7draz3n8pzGh3_Q" class="link">YT</a>
+            </div>
+            <div class="group">
+                <div class="number">⠀⠀6.</div>
+                <button class="buttonn2" onclick="toggleLink(this)" class="buttonn2" onclick="toggleLink(this)" style="font-family: Victor Mono, sans-serif; background-color: transparent; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; transition-duration: 0.4s; cursor: pointer; border-radius: 0;">COZY</button>
+                <a href="https://youtu.be/iK9Iio7WgaI?si=J6TSrvLYIjo1HW1R" class="link">YT</a>
+            </div>
+            <div class="group">
+                <div class="number">⠀⠀7.</div>
+                <button class="buttonn2" onclick="toggleLink(this)" class="buttonn2" onclick="toggleLink(this)" style="font-family: Victor Mono, sans-serif; background-color: transparent; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; transition-duration: 0.4s; cursor: pointer; border-radius: 0;">ALIEN SUPERSTAR</button>
+                <a href="https://youtu.be/iK9Iio7WgaI?si=J6TSrvLYIjo1HW1R" class="link">YT</a>
+            </div>
+            <div class="group">
+                <div class="number">⠀⠀8.</div>
+                <button class="buttonn2" onclick="toggleLink(this)" class="buttonn2" onclick="toggleLink(this)" style="font-family: Victor Mono, sans-serif; background-color: transparent; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; transition-duration: 0.4s; cursor: pointer; border-radius: 0;">DIVA</button>
+                <a href="https://youtu.be/iK9Iio7WgaI?si=J6TSrvLYIjo1HW1R" class="link">YT</a>
+            </div>
+            <div class="group">
+                <div class="number">⠀⠀9.</div>
+                <button class="buttonn2" onclick="toggleLink(this)" class="buttonn2" onclick="toggleLink(this)" style="font-family: Victor Mono, sans-serif; background-color: transparent; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; transition-duration: 0.4s; cursor: pointer; border-radius: 0;">YONCÉ</button>
+                <a href="https://youtu.be/iK9Iio7WgaI?si=J6TSrvLYIjo1HW1R" class="link">YT</a>
+            </div>
+            <div class="group">
+                <div class="number">⠀⠀10.</div>
+                <button class="buttonn2" onclick="toggleLink(this)" class="buttonn2" onclick="toggleLink(this)" style="font-family: Victor Mono, sans-serif; background-color: transparent; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; transition-duration: 0.4s; cursor: pointer; border-radius: 0;">MI GENTE</button>
+                <a href="https://youtu.be/iK9Iio7WgaI?si=J6TSrvLYIjo1HW1R" class="link">YT</a>
+            </div>
+            <div class="group">
+                <div class="number">⠀⠀11.</div>
+                <button class="buttonn2" onclick="toggleLink(this)" class="buttonn2" onclick="toggleLink(this)" style="font-family: Victor Mono, sans-serif; background-color: transparent; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; transition-duration: 0.4s; cursor: pointer; border-radius: 0;">SINGLE LADIES</button>
+                <a href="https://youtu.be/iK9Iio7WgaI?si=J6TSrvLYIjo1HW1R" class="link">YT</a>
+            </div>
+            <div class="group">
+                <div class="number">⠀⠀12.</div>
+                <button class="buttonn2" onclick="toggleLink(this)" class="buttonn2" onclick="toggleLink(this)" style="font-family: Victor Mono, sans-serif; background-color: transparent; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; transition-duration: 0.4s; cursor: pointer; border-radius: 0;">NAUGHTY BOY</button>
+                <a href="https://youtu.be/iK9Iio7WgaI?si=J6TSrvLYIjo1HW1R" class="link">YT</a>
+            </div>
+            <div class="group">
+                <div class="number">⠀⠀13.</div>
+                <button class="buttonn2" onclick="toggleLink(this)" class="buttonn2" onclick="toggleLink(this)" style="font-family: Victor Mono, sans-serif; background-color: transparent; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; transition-duration: 0.4s; cursor: pointer; border-radius: 0;">MOVE</button>
+                <a href="https://youtu.be/iK9Iio7WgaI?si=J6TSrvLYIjo1HW1R" class="link">YT</a>
+            </div>
+            <div class="group">
+                <div class="number">⠀⠀14.</div>
+                <button class="buttonn2" onclick="toggleLink(this)" class="buttonn2" onclick="toggleLink(this)" style="font-family: Victor Mono, sans-serif; background-color: transparent; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; transition-duration: 0.4s; cursor: pointer; border-radius: 0;">ENERGY</button>
+                <a href="https://youtu.be/iK9Iio7WgaI?si=J6TSrvLYIjo1HW1R" class="link">YT</a>
+            </div>
+            <div class="group">
+                <div class="number">⠀⠀15.</div>
+                <button class="buttonn2" onclick="toggleLink(this)" class="buttonn2" onclick="toggleLink(this)" style="font-family: Victor Mono, sans-serif; background-color: transparent; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; transition-duration: 0.4s; cursor: pointer; border-radius: 0;">RUN THE WORLD</button>
+                <a href="https://youtu.be/iK9Iio7WgaI?si=J6TSrvLYIjo1HW1R" class="link">YT</a>
+            </div>
+            <div class="group">
+                <div class="number">⠀⠀16.</div>
+                <button class="buttonn2" onclick="toggleLink(this)" class="buttonn2" onclick="toggleLink(this)" style="font-family: Victor Mono, sans-serif; background-color: transparent; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; transition-duration: 0.4s; cursor: pointer; border-radius: 0;">MY POWER</button>
+                <a href="https://youtu.be/iK9Iio7WgaI?si=J6TSrvLYIjo1HW1R" class="link">YT</a>
+            </div>
+            <div class="group">
+                <div class="number">⠀⠀17.</div>
+                <button class="buttonn2" onclick="toggleLink(this)" class="buttonn2" onclick="toggleLink(this)" style="font-family: Victor Mono, sans-serif; background-color: transparent; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; transition-duration: 0.4s; cursor: pointer; border-radius: 0;">NO CHURCH IN<br>THE WILD</button>
+                <a href="https://youtu.be/iK9Iio7WgaI?si=J6TSrvLYIjo1HW1R" class="link">YT</a>
+            </div>
+            <div class="group">
+                <div class="number">⠀⠀18.</div>
+                <button class="buttonn2" onclick="toggleLink(this)" class="buttonn2" onclick="toggleLink(this)" style="font-family: Victor Mono, sans-serif; background-color: transparent; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; transition-duration: 0.4s; cursor: pointer; border-radius: 0;">APESHIT</button>
+                <a href="https://youtu.be/iK9Iio7WgaI?si=J6TSrvLYIjo1HW1R" class="link">YT</a>
+            </div>
+            <div class="group">
+                <div class="number">⠀⠀19.</div>
+                <button class="buttonn2" onclick="toggleLink(this)" class="buttonn2" onclick="toggleLink(this)" style="font-family: Victor Mono, sans-serif; background-color: transparent; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; transition-duration: 0.4s; cursor: pointer; border-radius: 0;">PURE/HONEY</button>
+                <a href="https://youtu.be/iK9Iio7WgaI?si=J6TSrvLYIjo1HW1R" class="link">YT</a>
+            </div>
+            <div class="group">
+                <div class="number">⠀⠀20.</div>
+                <button class="buttonn2" onclick="toggleLink(this)" class="buttonn2" onclick="toggleLink(this)" style="font-family: Victor Mono, sans-serif; background-color: transparent; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; transition-duration: 0.4s; cursor: pointer; border-radius: 0;">VIRGO'S GROOVE</button>
+                <a href="https://youtu.be/iK9Iio7WgaI?si=J6TSrvLYIjo1HW1R" class="link">YT</a>
+            </div>
+            <div class="group">
+                <div class="number">⠀⠀21.</div>
+                <button class="buttonn2" onclick="toggleLink(this)" class="buttonn2" onclick="toggleLink(this)" style="font-family: Victor Mono, sans-serif; background-color: transparent; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; transition-duration: 0.4s; cursor: pointer; border-radius: 0;">CUFF IT</button>
+                <a href="https://youtu.be/iK9Iio7WgaI?si=J6TSrvLYIjo1HW1R" class="link">YT</a>
+            </div>
+            <div class="group">
+                <div class="number">⠀⠀22.</div>
+                <button class="buttonn2" onclick="toggleLink(this)" class="buttonn2" onclick="toggleLink(this)" style="font-family: Victor Mono, sans-serif; background-color: transparent; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; transition-duration: 0.4s; cursor: pointer; border-radius: 0;">RIVER DEEP<br>MOUNTIAN HIGH</button>
+                <a href="https://youtu.be/iK9Iio7WgaI?si=J6TSrvLYIjo1HW1R" class="link">YT</a>
+            </div>
+            <div class="group">
+                <div class="number">⠀⠀23.</div>
+                <button class="buttonn2" onclick="toggleLink(this)" class="buttonn2" onclick="toggleLink(this)" style="font-family: Victor Mono, sans-serif; background-color: transparent; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; transition-duration: 0.4s; cursor: pointer; border-radius: 0;">PARTY</button>
+                <a href="https://youtu.be/iK9Iio7WgaI?si=J6TSrvLYIjo1HW1R" class="link">YT</a>
+            </div>
+            <div class="group">
+                <div class="number">⠀⠀24.</div>
+                <button class="buttonn2" onclick="toggleLink(this)" class="buttonn2" onclick="toggleLink(this)" style="font-family: Victor Mono, sans-serif; background-color: transparent; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; transition-duration: 0.4s; cursor: pointer; border-radius: 0;">SORRY</button>
+                <a href="https://youtu.be/iK9Iio7WgaI?si=J6TSrvLYIjo1HW1R" class="link">YT</a>
+            </div>
+            <div class="group">
+                <div class="number">⠀⠀25.</div>
+                <button class="buttonn2" onclick="toggleLink(this)" class="buttonn2" onclick="toggleLink(this)" style="font-family: Victor Mono, sans-serif; background-color: transparent; border: none; color: white; padding: 15px 32px; text-align: center; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; transition-duration: 0.4s; cursor: pointer; border-radius: 0;">SUMMER RENAISSANCE<br>(outro)</button>
+                <a href="https://youtu.be/iK9Iio7WgaI?si=J6TSrvLYIjo1HW1R" class="link">YT</a>
+            </div><br><br>
+        </div>
+    </div>
+</div>
+
+  <script>
+function toggleContent(contentId) {
+    // Hide all content elements
+    var contents = document.querySelectorAll('.content');
+    contents.forEach(function(content) {
+        content.style.display = 'none';
+    });
+
+    // Show the selected content
+    var selectedContent = document.getElementById(contentId);
+    selectedContent.style.display = 'block';
+
+    // Update button styles
+    var buttons = document.querySelectorAll('.button, .buttonn2'); // Updated to select both button classes
+    buttons.forEach(function(button) {
+        button.classList.remove('underlined');
+    });
+    // This assumes you have an "underlined" class for both sets of buttons
+    var clickedButton = document.querySelector('[onclick^="toggleContent(\'' + contentId + '\')"]');
+    if (clickedButton) {
+        clickedButton.classList.add('underlined');
+    }
+}
+
+function toggleLink(button) {
+    var groups = document.querySelectorAll('.group, .groupp'); // Updated to select both group classes
+    groups.forEach(function(group) {
+        var link = group.querySelector('.link, .linkk'); // Updated to select both link classes
+        var number = group.querySelector('.number, .numberr'); // Updated to select both number classes
+        if (link && number) {
+            link.style.display = 'none';
+            link.style.fontSize = '16px';
+            number.style.fontSize = '16px';
+            number.style.transition = 'none';
+            link.style.transition = 'none';
+        }
+    });
+
+    var link = button.nextElementSibling;
+    var number = button.previousElementSibling;
+    
+    if (!button.parentNode.classList.contains('active')) {
+        groups.forEach(function(group) {
+            group.classList.remove('active');
+            var btn = group.querySelector('.buttonn, .buttonn2');
+            var lnk = group.querySelector('.link, .linkk');
+            if (btn && lnk) {
+                btn.style.transform = 'scale(1)';
+                lnk.style.transform = 'scale(1)';
+            }
+        });
+        button.parentNode.classList.add('active');
+        button.style.transform = 'scale(1.4)';
+        if (link) {
+            link.style.display = 'inline-block';
+            link.style.fontSize = '20px';
+        }
+        if (number) {
+            number.style.fontSize = '20px';
+        }
+    } else {
+        button.parentNode.classList.remove('active');
+        button.style.transform = 'scale(1)';
+    }
+}
+
+// Simulate click on text1 button when the page loads
+window.onload = function() {
+    var text1Button = document.querySelector('button[onclick^="toggleContent(\'music\')"]');
+    if (text1Button) text1Button.click();
+};
+</script>
+
+
+</body>
+</html>
