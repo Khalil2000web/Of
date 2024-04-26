@@ -15,9 +15,17 @@ body {
     /* Your existing CSS styles */
 
     /* Add margin-top to move the navigation buttons down */
-    nav.top-nav,
-    nav.buttom-nav {
+    nav.top-nav {
         margin-top: 25px; /* Adjust the value as needed */
+    }
+</style>
+
+<style>
+    /* Your existing CSS styles */
+
+    /* Add margin-top to move the navigation buttons down */
+    nav.buttom-nav {
+        margin-top: 30px; /* Adjust the value as needed */
     }
 </style>
 
@@ -105,6 +113,28 @@ body {
     nav.bottom-nav ul li a:hover {
       color: white; /* Change color on hover */
     }
+    
+    @media screen and (max-width: 600px) {
+      nav.bottom-nav ul li a {
+        font-size: 12px; /* Adjust the font size for smaller screens */
+      }
+      nav.top-nav ul li a {
+        font-size: 19px; /* Adjust the font size for smaller screens */
+      }
+    
+      nav.bottom-nav ul li a {
+        padding: 40px; /* Add padding to the buttons */
+    }
+    }
+
+    @media screen and (max-width: 400px) {
+      nav.bottom-nav ul li a {
+        font-size: 8px; /* Adjust the font size for smaller screens */
+      }
+        nav.top-nav ul li a {
+        font-size: 15px; /* Adjust the font size for smaller screens */
+      }
+    }  
 </style>
 
 <style>
@@ -133,7 +163,6 @@ body {
         <li><a href="home.html"><b>JOIN</b></a></li> <!-- Left-aligned button -->
     </ul>
     <ul>
-            <li><a href="beenotr.html"><b>BEEN OTR</b></a></li> <!-- Right-aligned button -->
         <li><a href="terms.html"><b>TERMS</b></a></li> <!-- Right-aligned button -->
         <li><a href="privacy.html"><b>PRIVACY</b></a></li> <!-- Right-aligned button -->
     </ul>
