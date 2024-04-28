@@ -18,8 +18,14 @@ body {
     nav.top-nav {
         margin-top: 25px; /* Adjust the value as needed */
     }
-nav.bottom-nav {
-        margin-top: 7px; /* Adjust the value as needed */
+</style>
+
+<style>
+    /* Your existing CSS styles */
+
+    /* Add margin-top to move the navigation buttons down */
+    nav.bottom-nav {
+        margin-top: 5px; /* Adjust the value as needed */
     }
 </style>
 
@@ -152,7 +158,7 @@ nav.bottom-nav {
         <li><a href="music.html">MUSIC</a></li>
         <li><a href="acts.html">ACTS</a></li>
     </ul>
-</nav><br><font color="white" align="center"><h4>2023-24</h4></font><br><br>
+</nav>
 
 <!-- Bottom Navigation Bar -->
 <nav class="bottom-nav">
@@ -312,11 +318,30 @@ body, html {
     opacity: 0.5; /* Reduce opacity of image on hover/touch */
     transform: scale(0.99); /* Reduce size of image on hover/touch */
   }
+
+  @media only screen and (min-width: 768px) { /* Apply only on screens wider than 768px */
+    body {
+      flex-direction: row; /* Arrange circles horizontally */
+      flex-wrap: wrap; /* Allow wrapping of circles */
+    }
+
+    .circle {
+      width: calc(33.33% - 60px); /* Adjust width to fit three circles with space */
+      margin: 30px; /* Space between circles */
+      margin-bottom: 0; /* Remove bottom margin to avoid extra space */
+    }
+  }
 </style>
 
 <a href="film.html" class="circle-link">
   <div class="circle">
     <div class="text-only"><b>INFO</b></div>
+  </div>
+</a>
+
+<a href="" class="circle-link">
+  <div class="circle">
+    <div class="text-only"><b>SOON</b></div>
   </div>
 </a>
 
@@ -329,7 +354,7 @@ body, html {
 
 <a href="trip-i.html" class="circle-link">
   <div class="circle">
-    <img src="039D0385-B12F-47B4-ABD1-465BB994F096.jpeg">
+    <img src="Fl2.AVIF">
     <div class="circle-text"><b>TÜRKIYE</b></div>
   </div>
 </a>
