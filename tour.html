@@ -318,19 +318,6 @@ body, html {
     opacity: 0.5; /* Reduce opacity of image on hover/touch */
     transform: scale(0.99); /* Reduce size of image on hover/touch */
   }
-
-  @media only screen and (min-width: 768px) { /* Apply only on screens wider than 768px */
-    body {
-      flex-direction: row; /* Arrange circles horizontally */
-      flex-wrap: wrap; /* Allow wrapping of circles */
-    }
-
-    .circle {
-      width: calc(33.33% - 60px); /* Adjust width to fit three circles with space */
-      margin: 30px; /* Space between circles */
-      margin-bottom: 0; /* Remove bottom margin to avoid extra space */
-    }
-  }
 </style>
 
 <a href="film.html" class="circle-link">
@@ -339,27 +326,19 @@ body, html {
   </div>
 </a>
 
-<a href="" class="circle-link">
-  <div class="circle">
-    <div class="text-only"><b>SOON</b></div>
-  </div>
-</a>
-
 <a href="trip-ii.html" class="circle-link">
   <div class="circle">
-        <img src="Fl1.AVIF">
+    <img src="Fl1.AVIF">
     <div class="circle-text"><b>BOSNIA & HERZEGOVINA</b></div>
   </div>
 </a>
 
 <a href="trip-i.html" class="circle-link">
   <div class="circle">
-    <img src="Fl2.AVIF">
+    <img src="039D0385-B12F-47B4-ABD1-465BB994F096.jpeg">
     <div class="circle-text"><b>TÜRKIYE</b></div>
   </div>
 </a>
-
-
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
