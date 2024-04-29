@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Page</title>
+    <style>
+        body {
+            font-family: 'Victor Mono';
+            text-align: center;
+        }
+        .underline {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>THIS PAGE IS NOTHING, PLEASE TRY <span class="underline" onclick="goToHomePage()">AGAIN</span></h1>
+    
+    <script>
+        function goToHomePage() {
+            window.location.href = "index.html"; // Change "home.html" to your actual homepage URL
+        }
+    </script>
+</body>
+</html>
