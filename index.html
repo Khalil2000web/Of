@@ -9,6 +9,8 @@ html {
 }
 </style>
 
+
+
   </head>
   <body bgcolor="black">
   <header class"header">
@@ -234,6 +236,25 @@ nav.bottom-nav ul li a {
   <img class="image" src="IMG_7596.jpg">
   <img class="image" src="IMG_7474.jpg">
 </div>
+
+    <style>
+        body {
+            font-family: 'Victor Mono';
+            text-align: center;
+        }
+        .underline {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+
+    <h1>THIS PAGE IS NOTHING, PLEASE TRY <span class="underline" onclick="goToHomePage()">AGAIN</span></h1>
+    
+    <script>
+        function goToHomePage() {
+            window.location.href = "index.html"; // Change "home.html" to your actual homepage URL
+        }
+    </script>
 
 </body>
 </html>
