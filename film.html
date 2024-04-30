@@ -29,7 +29,7 @@
       left: 0; /* Position it at the left */
       width: 100%; /* Take up the full width of the viewport */
       display: flex; /* Use flexbox layout */
-      justify-content: space-around; /* Spac items evenly with more space between them */
+      justify-content: space-around; /* Space items evenly with more space between them */
       align-items: center; /* Center-align the items vertically */
       z-index: 1000; /* Ensure it's above other content */
     }
@@ -44,6 +44,7 @@
       justify-content: space-between; /* Space items evenly */
       align-items: center; /* Center-align the items vertically */
       z-index: 1000; /* Ensure it's above other content */
+      height: 50px; /* Add the desired height */
     }
 
     nav.top-nav ul,
@@ -56,7 +57,7 @@
     nav.top-nav ul li,
     nav.bottom-nav ul li {
       display: inline;
-      margin: 0 5px; /* Add margin to create space between buttons */
+      margin: 0 10px; /* Add margin to create space between buttons */
     }
 
     nav.bottom-nav ul li:first-child {
@@ -64,37 +65,56 @@
     }
 
     nav.top-nav ul li a {
-      font-family: 'Victor Mono'; /* Use Impact font */
+      font-family: Victor Mono, Charcoal, sans-serif; /* Use Impact font */
       font-size: 19px; /* Set font size */
       color: white; /* Change font color to white */
       text-decoration: none;
-      padding: 11px; /* Add padding to the buttons */
+      padding: 16px; /* Add padding to the buttons */
     }
 
     nav.bottom-nav ul li a {
-      font-family: 'Victor Mono'; /* Use Impact font */
+      font-family: Victor Mono, Charcoal, sans-serif; /* Use Impact font */
       font-size: 19px; /* Set font size */
       color: white; /* Change font color to white */
       text-decoration: none;
-      padding: 19px; /* Add padding to the buttons */
+      padding: 20px; /* Add padding to the buttons */
     }
 
-    nav.top-nav ul li a:hover,
-    nav.bottom-nav ul li a:hover {
-      color: white; /* Change color on hover */
-    }
-</style>
-
-<style>
-    nav.bottom-nav {
-      /* Add the desired height */
-      height: 50px;
-    }
-
+    /* Define font size for larger screens (e.g., tablets, computers) */
     nav.bottom-nav ul li a {
-      /* Adjust the font size */
-      font-size: 10px;
+      font-size: 10px; /* Adjust the font size as desired */
     }
+
+    nav.top-nav ul li a {
+       font-size: 19px;     
+    }
+
+    /* Media query for smaller screens like phones */
+    /* Media query for smaller screens like phones */
+    @media screen and (max-width: 600px) {
+      nav.bottom-nav ul li a {
+        font-size: 14px; /* Adjust the font size for smaller screens */
+      }
+      nav.top-nav ul li a {
+        font-size: 19px; /* Adjust the font size for smaller screens */
+      }
+    
+      nav.bottom-nav ul li a {
+        padding: 37px; /* Add padding to the buttons */
+    }
+    }
+
+    @media screen and (max-width: 400px) {
+      nav.bottom-nav ul li a {
+        font-size: 8px; /* Adjust the font size for smaller screens */
+      }
+        nav.top-nav ul li a {
+        font-size: 15px; /* Adjust the font size for smaller screens */
+      }
+        nav.bottom-nav ul li a {
+        padding: 10px; /* Add padding to the buttons */
+    }
+    }  
 </style>
 
 </head>
@@ -112,12 +132,11 @@
     <!-- Bottom Navigation Bar -->
     <nav class="bottom-nav">
         <ul>
-            <li><a href="home.html"><b>JOIN</b></a></li> <!-- Left-aligned button -->
+            <li><a href="home.html">JOIN</a></li> <!-- Left-aligned button -->
         </ul>
         <ul>
-                <li><a href="beenotr.html"><b>BEEN OTR</b></a></li> <!-- Right-aligned button -->
-            <li><a href="terms.html"><b>TERMS</b></a></li> <!-- Right-aligned button -->
-            <li><a href="privacy.html"><b>PRIVACY</b></a></li> <!-- Right-aligned button -->
+            <li><a href="terms.html">TERMS</a></li> <!-- Right-aligned button -->
+            <li><a href="privacy.html">PRIVACY</a></li> <!-- Right-aligned button -->
         </ul>
     </nav>
 
