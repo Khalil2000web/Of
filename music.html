@@ -238,6 +238,7 @@
       justify-content: space-between; /* Space items evenly */
       align-items: center; /* Center-align the items vertically */
       z-index: 1000; /* Ensure it's above other content */
+      height: 50px; /* Add the desired height */
     }
 
     nav.top-nav ul,
@@ -262,7 +263,7 @@
       font-size: 19px; /* Set font size */
       color: white; /* Change font color to white */
       text-decoration: none;
-      padding: 24px; /* Add padding to the buttons */
+      padding: 16px; /* Add padding to the buttons */
     }
 
     nav.bottom-nav ul li a {
@@ -270,25 +271,43 @@
       font-size: 19px; /* Set font size */
       color: white; /* Change font color to white */
       text-decoration: none;
-      padding: 15px; /* Add padding to the buttons */
+      padding: 20px; /* Add padding to the buttons */
     }
 
-    nav.top-nav ul li a:hover,
-    nav.bottom-nav ul li a:hover {
-      color: white; /* Change color on hover */
-    }
-</style>
-
-<style>
-    nav.bottom-nav {
-      /* Add the desired height */
-      height: 50px;
-    }
-
+    /* Define font size for larger screens (e.g., tablets, computers) */
     nav.bottom-nav ul li a {
-      /* Adjust the font size */
-      font-size: 10px;
+      font-size: 10px; /* Adjust the font size as desired */
     }
+
+    nav.top-nav ul li a {
+       font-size: 19px;     
+    }
+
+    /* Media query for smaller screens like phones */
+    @media screen and (max-width: 600px) {
+      nav.bottom-nav ul li a {
+        font-size: 12px; /* Adjust the font size for smaller screens */
+      }
+      nav.top-nav ul li a {
+        font-size: 19px; /* Adjust the font size for smaller screens */
+      }
+    
+      nav.bottom-nav ul li a {
+        padding: 40px; /* Add padding to the buttons */
+    }
+    }
+
+    @media screen and (max-width: 400px) {
+      nav.bottom-nav ul li a {
+        font-size: 8px; /* Adjust the font size for smaller screens */
+      }
+        nav.top-nav ul li a {
+        font-size: 15px; /* Adjust the font size for smaller screens */
+      }
+        nav.bottom-nav ul li a {
+        padding: 10px; /* Add padding to the buttons */
+    }
+    }  
 </style>
 <!-- Top Navigation Bar -->
 <nav class="top-nav">
