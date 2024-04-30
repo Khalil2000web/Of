@@ -97,41 +97,30 @@ body {
     }
 
     /* Media query for smaller screens like phones */
-    @media screen and (max-width: 828px) {
+    @media screen and (max-width: 600px) {
+      nav.bottom-nav ul li a {
+        font-size: 14px; /* Adjust the font size for smaller screens */
+      }
       nav.top-nav ul li a {
         font-size: 19px; /* Adjust the font size for smaller screens */
       }
     
       nav.bottom-nav ul li a {
-        padding: 45px; 
-        font-size: 45px;
+        padding: 37px; /* Add padding to the buttons */
     }
     }
 
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 400px) {
       nav.bottom-nav ul li a {
-        font-size: 38px; /* Adjust the font size for smaller screens */
+        font-size: 8px; /* Adjust the font size for smaller screens */
       }
         nav.top-nav ul li a {
-        font-size: 20px; /* Adjust the font size for smaller screens */
+        font-size: 15px; /* Adjust the font size for smaller screens */
       }
-      nav.top-nav ul li a {
-      padding: 10px; /* Adjust the font size as desired */
+        nav.bottom-nav ul li a {
+        padding: 10px; /* Add padding to the buttons */
     }
     }  
-</style>
-
-<style>
-    nav.bottom-nav {
-      /* Add the desired height */
-      height: 50px;
-    }
-
-    nav.bottom-nav ul li a {
-      /* Adjust the font size */
-      font-size: 10px;
-    }
-</style>
 <!-- Top Navigation Bar -->
 <nav class="top-nav">
     <ul>
