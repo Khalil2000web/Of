@@ -16,7 +16,7 @@
         margin-top: 25px; /* Adjust the value as needed */
     }
         nav.bottom-nav {
-        margin-top: 5px; /* Adjust the value as needed */
+        margin-top: 7px; /* Adjust the value as needed */
     }
 </style>
 
@@ -79,6 +79,18 @@
       text-decoration: none;
       padding: 20px; /* Add padding to the buttons */
     }
+    
+    nav.bottom-nav ul lim a {
+      font-family: Victor Mono, Charcoal, sans-serif; /* Use Impact font */
+      font-size: 19px; /* Set font size */
+      color: white; /* Change font color to white */
+      text-decoration: none;
+      padding: 20px; /* Add padding to the buttons */
+    }
+    
+    nav.bottom-nav ul lim:first-child {
+      margin-right: auto; /* Push the first item to the left */
+    }
 
     /* Define font size for larger screens (e.g., tablets, computers) */
     nav.bottom-nav ul li a {
@@ -101,7 +113,10 @@
     
       nav.bottom-nav ul li a {
         padding: 37px; /* Add padding to the buttons */
-    }
+      }
+      nav.bottom-nav ul lim:first-child {
+        margin-left: 30px; /* Push the first item to the left */
+      }
     }
 
     @media screen and (max-width: 400px) {
