@@ -74,6 +74,7 @@ body {
       justify-content: space-between; /* Space items evenly */
       align-items: center; /* Center-align the items vertically */
       z-index: 1000; /* Ensure it's above other content */
+      height: 50px; /* Add the desired height */
     }
 
     nav.top-nav ul,
@@ -86,7 +87,7 @@ body {
     nav.top-nav ul li,
     nav.bottom-nav ul li {
       display: inline;
-      margin: 0 20px; /* Add margin to create space between buttons */
+      margin: 0 10px; /* Add margin to create space between buttons */
     }
 
     nav.bottom-nav ul li:first-child {
@@ -94,39 +95,41 @@ body {
     }
 
     nav.top-nav ul li a {
-      font-family: Victor MOno, Charcoal, sans-serif; /* Use Impact font */
+      font-family: Victor Mono, Charcoal, sans-serif; /* Use Impact font */
       font-size: 19px; /* Set font size */
       color: white; /* Change font color to white */
       text-decoration: none;
-      padding: 15px; /* Add padding to the buttons */
+      padding: 16px; /* Add padding to the buttons */
     }
 
     nav.bottom-nav ul li a {
-      font-family: Victor MOno, Charcoal, sans-serif; /* Use Impact font */
+      font-family: Victor Mono, Charcoal, sans-serif; /* Use Impact font */
       font-size: 19px; /* Set font size */
       color: white; /* Change font color to white */
       text-decoration: none;
       padding: 20px; /* Add padding to the buttons */
     }
-    
-    nav.buttom-nav ul li a {
-        font-size: 10px;
+
+    /* Define font size for larger screens (e.g., tablets, computers) */
+    nav.bottom-nav ul li a {
+      font-size: 10px; /* Adjust the font size as desired */
     }
-    
+
     nav.top-nav ul li a {
-        font-size: 19px;
+       font-size: 19px;     
     }
-    
+
+    /* Media query for smaller screens like phones */
     @media screen and (max-width: 600px) {
       nav.bottom-nav ul li a {
-        font-size: 60px; /* Adjust the font size for smaller screens */
+        font-size: 12px; /* Adjust the font size for smaller screens */
       }
       nav.top-nav ul li a {
         font-size: 19px; /* Adjust the font size for smaller screens */
       }
     
       nav.bottom-nav ul li a {
-        padding: 36px; /* Add padding to the buttons */
+        padding: 40px; /* Add padding to the buttons */
     }
     }
 
@@ -137,19 +140,10 @@ body {
         nav.top-nav ul li a {
         font-size: 15px; /* Adjust the font size for smaller screens */
       }
+        nav.bottom-nav ul li a {
+        padding: 10px; /* Add padding to the buttons */
+    }
     }  
-</style>
-
-<style>
-    nav.bottom-nav {
-      /* Add the desired height */
-      height: 50px;
-    }
-
-    nav.bottom-nav ul li a {
-      /* Adjust the font size */
-      font-size: 10px;
-    }
 </style>
 <!-- Top Navigation Bar -->
 <nav class="top-nav">
