@@ -159,13 +159,29 @@ body {
             color: black;
         }
     </style>
+    
+    <style>
+  .paragraph {
+    padding-left: 40px; /* Spacing on the left side */
+    padding-right: 40px; /* Spacing on the right side */
+    font-size: 18px;
+  }
+
+  @media screen and (max-width: 600px) {
+    .paragraph {
+      padding-left: 0; /* Remove spacing on smaller screens */
+      padding-right: 0; /* Remove spacing on smaller screens */
+      font-size: 12px;
+    }
+  }
+</style>
 
 <div class="container">
     <b>TERMS & CONDITIONS</b>
 </div><br><br>
 
-<div class="tr">
-<p>LAST UPDATED: MAY 1TH 2024<br>
+<p class="paragraph">
+LAST UPDATED: MAY 1TH 2024<br>
 
 <b>TERMS AND CONDITIONS</b><br>
 
@@ -217,8 +233,7 @@ KHALIIIL RESERVES THE RIGHT TO UPDATE OR MODIFY THESE TERMS AND CONDITIONS AT AN
 <b>11.  CONTACT INFORMATION</b><br>
 
 IF YOU HAVE ANY QUESTIONS OR CONCERNS ABOUT THESE TERMS AND CONDITIONS, PLEASE CONTACT US AT SUPPORT@KHALIIIL.COM.<br>
-
-</div>
+</p>
 
 </body>
 </html>
