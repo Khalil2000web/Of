@@ -216,28 +216,6 @@ html {
   .next-btn {
     right: 140px;
   }
-
-    video::-webkit-media-controls {
-      display: none !important;
-    }
-    .video-container {
-      position: relative;
-      max-width: 600px;
-    }
-    video {
-      width: 100%;
-      height: 100%;
-    }
-    .sound-control {
-      position: absolute;
-      bottom: 10px;
-      right: 10px;
-      background: rgba(0, 0, 0, 0.5);
-      padding: 5px;
-      border-radius: 5px;
-      color: #fff;
-      cursor: pointer;
-    }
 </style>
 
 <div id="overlay">
@@ -246,17 +224,6 @@ html {
   <span class="nav-btn prev-btn">&lt;</span>
   <span class="nav-btn next-btn">&gt;</span>
 </div>
-
-
-<div class="video-container">
-  <video autoplay>
-    <source src="REn2.mov" type="video/mp4">
-  </video>
-  <div class="sound-control" onclick="toggleMute()">
-    <span id="soundIcon">🔊</span>
-  </div>
-</div>
-
 
 <div class="image-container">
 
