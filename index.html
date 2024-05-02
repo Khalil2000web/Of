@@ -65,19 +65,31 @@ html {
     }
 
     @media screen and (max-width: 600px) {
-        nav.top-nav ul li a,
-        nav.bottom-nav ul li a {
-            font-size: 12px; /* Adjust font size for smaller screens */
-            padding: 20px; /* Adjust padding for smaller screens */
-        }
+      nav.bottom-nav ul li a {
+        font-size: 14px; /* Adjust the font size for smaller screens */
+      }
+      nav.top-nav ul li a {
+        padding: 10px;
+        font-size: 19px; /* Adjust the font size for smaller screens */
+      }
+    
+      nav.bottom-nav ul li a {
+        padding: 37px; /* Add padding to the buttons */
+      }
+   
     }
 
-    @media screen and (max-width: 400px) {
-        nav.top-nav ul li a,
+    @media screen and (max-width: 100px) {
+      nav.bottom-nav ul li a {
+        font-size: 60px; /* Adjust the font size for smaller screens */
+      }
+        nav.top-nav ul li a {
+        font-size: 15px; /* Adjust the font size for smaller screens */
+      }
         nav.bottom-nav ul li a {
-            font-size: 10px; /* Further adjust font size for even smaller screens */
-        }
+        padding: 10px; /* Add padding to the buttons */
     }
+    }  
 </style>
 
 <nav class="top-nav">
