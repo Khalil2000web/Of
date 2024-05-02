@@ -243,6 +243,11 @@ html {
 
   <img class="image" src="IMG_7634.jpg">
   <img class="image" src="IMG_7632.jpg">
+
+  <source src="Su.MOV" type="video/mp4">
+</video>
+
+  <img class="image" src="T-1.JPG">
   <img class="image" src="IMG_7607.jpg">
   <img class="image" src="IMG_7608.png">
 
@@ -291,19 +296,6 @@ document.addEventListener('DOMContentLoaded', function() {
     overlayImage.src = images[index].src;
   }
 });
-</script>
-
-<script>
-  function toggleMute() {
-    var video = document.querySelector('video');
-    video.muted = !video.muted;
-    var soundIcon = document.getElementById('soundIcon');
-    if (video.muted) {
-      soundIcon.innerText = '🔇';
-    } else {
-      soundIcon.innerText = '🔊';
-    }
-  }
 </script>
 
 </body>
