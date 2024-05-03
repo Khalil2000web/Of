@@ -12,7 +12,8 @@ html {
   </head>
   <body bgcolor="black">
   <header class"header">
-
+    
+    
 <style>
     nav.top-nav {
         margin-top: 25px; /* Adjust the value as needed */
@@ -40,46 +41,65 @@ html {
 
     nav.top-nav ul,
     nav.bottom-nav ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
     }
 
     nav.top-nav ul li,
     nav.bottom-nav ul li {
-        display: inline;
-        margin: 0 5px; /* Add margin to create space between buttons */
+      display: inline;
+      margin: 0 10px; /* Add margin to create space between buttons */
     }
 
     nav.bottom-nav ul li:first-child {
-        margin-right: auto; /* Push the first item to the left */
+      margin-right: auto; /* Push the first item to the left */
     }
 
-    nav.top-nav ul li a,
+    nav.top-nav ul li a {
+      font-family: Victor Mono, Charcoal, sans-serif; /* Use Impact font */
+      font-size: 19px; /* Set font size */
+      color: white; /* Change font color to white */
+      text-decoration: none;
+      padding: 16px; /* Add padding to the buttons */
+    }
+
     nav.bottom-nav ul li a {
-        font-family: 'Victor Mono', Charcoal, sans-serif; /* Set the font family */
-        font-size: 19px; /* Set font size */
-        color: white; /* Set text color */
-        text-decoration: none; /* Remove underline from links */
-        padding: 26px; /* Add padding around the text */
+      font-family: Victor Mono, Charcoal, sans-serif; /* Use Impact font */
+      font-size: 19px; /* Set font size */
+      color: white; /* Change font color to white */
+      text-decoration: none;
+      padding: 20px; /* Add padding to the buttons */
     }
 
+    /* Define font size for larger screens (e.g., tablets, computers) */
+    nav.bottom-nav ul li a {
+      font-size: 10px; /* Adjust the font size as desired */
+    }
+
+    nav.top-nav ul li a {
+       font-size: 19px;     
+    }
+
+    /* Media query for smaller screens like phones */
+    /* Media query for smaller screens like phones */
     @media screen and (max-width: 600px) {
       nav.bottom-nav ul li a {
         font-size: 12px; /* Adjust the font size for smaller screens */
       }
       nav.top-nav ul li a {
-        padding: 15px;
+         padding: 15px; /* Add padding to the buttons */
         font-size: 19px; /* Adjust the font size for smaller screens */
       }
+    
       nav.bottom-nav ul li a {
         padding: 25px; /* Add padding to the buttons */
-      }
+    }
     }
 
-    @media screen and (max-width: 50px) {
+    @media screen and (max-width: 400px) {
       nav.bottom-nav ul li a {
-        font-size: 10px; /* Adjust the font size for smaller screens */
+        font-size: 8px; /* Adjust the font size for smaller screens */
       }
         nav.top-nav ul li a {
         font-size: 15px; /* Adjust the font size for smaller screens */
