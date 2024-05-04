@@ -25,7 +25,7 @@ body {
 
     /* Add margin-top to move the navigation buttons down */
     nav.bottom-nav {
-        margin-top: 7px; /* Adjust the value as needed */
+        margin-top: 10px; /* Adjust the value as needed */
     }
 </style>
 
@@ -131,7 +131,11 @@ body {
     
       nav.bottom-nav ul li a {
         padding: 37px; /* Add padding to the buttons */
-    }
+      }
+    
+      nav.bottom-nav ul li:first-child {
+        margin-right: 20px /* Push the first item to the left */
+      }
     }
 
     @media screen and (max-width: 400px) {
