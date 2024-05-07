@@ -166,19 +166,19 @@ html, body {
       cursor: pointer; /* Add pointer cursor to indicate clickable */
     }
     
- #overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: black; /* Semi-transparent black background */
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999; /* Ensure overlay is on top of everything */
-    overflow-y: auto; /* Enable scrolling for overlay content */
-    padding: 0px; /* Add padding for spacing */
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Set overlay height to cover the entire viewport */
+  background-color: rgba(0, 0, 0, 0.8); /* Adjust transparency as needed */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  overflow-y: auto; /* Enable scrolling for overlay content */
+  padding: 0px;
 }
 
 body.overlay-open {
@@ -242,7 +242,12 @@ body.overlay-open {
   <img class="image" src="T-1.JPG">
   <img class="image" src="IMG_7607.jpg">
   <img class="image" src="IMG_7608.png">
-  <img src="Bu.GIF" alt="Animated GIF">
+  <img class="image" src="Bu.GIF" alt="Animated GIF">
+    
+<video class="image" autoplay muted playsinline preload="auto">
+  <source src="REn2.mov" type="video/mp4">
+</video>
+    
   <img class="image" src="P.jpeg">
   <img class="image" src="IMG_7474.jpg">
   </div>
@@ -256,7 +261,7 @@ body.overlay-open {
     <span id="close-btn">&times;</span>
   </div>
 
-  <script>
+<script>
   document.addEventListener('DOMContentLoaded', function() {
     const mediaElements = document.querySelectorAll('.image, video');
     const overlay = document.getElementById('overlay');
@@ -269,13 +274,13 @@ body.overlay-open {
         overlayContent.innerHTML = '';
         overlayContent.appendChild(clonedMedia);
         overlay.style.display = 'flex';
-        document.body.style.overflow = 'hidden';
+        document.body.style.overflow = 'hidden'; // Disable scrolling of the main page
       });
     });
 
     closeBtn.addEventListener('click', () => {
       overlay.style.display = 'none';
-      document.body.style.overflow = '';
+      document.body.style.overflow = ''; // Enable scrolling of the main page
     });
   });
 </script>
