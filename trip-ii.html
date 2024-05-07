@@ -121,11 +121,15 @@ html, body {
       position: relative; /* Ensure relative positioning for overlay */
     }
 
-    .image {
+.image {
   scroll-snap-align: start; /* Snap each image to the start */
   flex: 0 0 auto;
   width: 100%;
   cursor: pointer; /* Add pointer cursor to indicate clickable */
+}
+
+.image video {
+  object-fit: contain; /* Ensure videos maintain their aspect ratio */
 }
     
 #overlay {
