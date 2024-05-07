@@ -140,10 +140,12 @@ html {
         }
     }
 
+/* Remove overflow: hidden; to enable scrolling of the main page */
 html, body {
     margin: 0;
     padding: 0;
     height: 100%;
+    /* overflow: hidden; */ /* Remove this line */
 }
 
     .image-container {
@@ -163,21 +165,21 @@ html, body {
       object-fit: contain;
       cursor: pointer; /* Add pointer cursor to indicate clickable */
     }
-
-    #overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: black; /* Semi-transparent black background */
-      display: none;
-      justify-content: center;
-      align-items: center;
-      z-index: 9999; /* Ensure overlay is on top of everything */
-      overflow-y: auto; /* Enable scrolling for overlay content */
-      padding: 0px; /* Add padding for spacing */
-    }
+    
+ #overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black; /* Semi-transparent black background */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Ensure overlay is on top of everything */
+    overflow-y: auto; /* Enable scrolling for overlay content */
+    padding: 0px; /* Add padding for spacing */
+}
 
     #overlay-content {
       width: 100%;
