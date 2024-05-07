@@ -181,6 +181,10 @@ html, body {
     padding: 0px; /* Add padding for spacing */
 }
 
+body.overlay-open {
+  overflow: hidden;
+}
+
     #overlay-content {
       width: 100%;
       height: 100%;
@@ -253,27 +257,27 @@ html, body {
   </div>
 
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const images = document.querySelectorAll('.image');
-      const overlay = document.getElementById('overlay');
-      const overlayContent = document.getElementById('overlay-content');
-      const closeBtn = document.getElementById('close-btn');
+  document.addEventListener('DOMContentLoaded', function() {
+    const images = document.querySelectorAll('.image');
+    const overlay = document.getElementById('overlay');
+    const overlayContent = document.getElementById('overlay-content');
+    const closeBtn = document.getElementById('close-btn');
 
-      images.forEach(image => {
-        image.addEventListener('click', () => {
-          const media = image.cloneNode(true); // Clone the clicked media
-          overlayContent.innerHTML = ''; // Clear previous content
-          overlayContent.appendChild(media); // Add cloned media to overlay
-          overlay.style.display = 'flex'; // Show the overlay
-          document.body.style.overflow = 'hidden'; // Disable scrolling of the main page
-        });
-      });
-
-      closeBtn.addEventListener('click', () => {
-        overlay.style.display = 'none'; // Hide the overlay
-        document.body.style.overflow = ''; // Enable scrolling of the main page
+    images.forEach(image => {
+      image.addEventListener('click', () => {
+        const media = image.cloneNode(true); // Clone the clicked media
+        overlayContent.innerHTML = ''; // Clear previous content
+        overlayContent.appendChild(media); // Add cloned media to overlay
+        overlay.style.display = 'flex'; // Show the overlay
+        document.body.classList.add('overlay-open'); // Add class to disable scrolling of the main page
       });
     });
-  </script>
+
+    closeBtn.addEventListener('click', () => {
+      overlay.style.display = 'none'; // Hide the overlay
+      document.body.classList.remove('overlay-open'); // Remove class to enable scrolling of the main page
+    });
+  });
+</script>
 </body>
 </html>
