@@ -258,24 +258,24 @@ body.overlay-open {
 
   <script>
   document.addEventListener('DOMContentLoaded', function() {
-    const images = document.querySelectorAll('.image');
+    const mediaElements = document.querySelectorAll('.media');
     const overlay = document.getElementById('overlay');
     const overlayContent = document.getElementById('overlay-content');
     const closeBtn = document.getElementById('close-btn');
 
-    images.forEach(image => {
-      image.addEventListener('click', () => {
-        const media = image.cloneNode(true); // Clone the clicked media
+    mediaElements.forEach(element => {
+      element.addEventListener('click', () => {
+        const media = element.cloneNode(true); // Clone the clicked media
         overlayContent.innerHTML = ''; // Clear previous content
         overlayContent.appendChild(media); // Add cloned media to overlay
         overlay.style.display = 'flex'; // Show the overlay
-        document.body.classList.add('overlay-open'); // Add class to disable scrolling of the main page
+        document.body.style.overflow = 'hidden'; // Disable scrolling of the main page
       });
     });
 
     closeBtn.addEventListener('click', () => {
       overlay.style.display = 'none'; // Hide the overlay
-      document.body.classList.remove('overlay-open'); // Remove class to enable scrolling of the main page
+      document.body.style.overflow = ''; // Enable scrolling of the main page
     });
   });
 </script>
