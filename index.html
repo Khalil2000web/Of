@@ -19,119 +19,6 @@ html {
   </head>
   <body bgcolor="black">
   <header class"header">
-    
-    
-<style>
-    nav.top-nav {
-        margin-top: 25px; /* Adjust the value as needed */
-        position: fixed; /* Keep the top navigation bar fixed */
-        top: 0; /* Position it at the top */
-        left: 0; /* Position it at the left */
-        width: 100%; /* Take up the full width of the viewport */
-        display: flex; /* Use flexbox layout */
-        justify-content: space-around; /* Space items evenly with more space between them */
-        align-items: center; /* Center-align the items vertically */
-        z-index: 1000; /* Ensure it's above other content */
-    }
-
-    nav.bottom-nav {
-        margin-bottom: 9px; /* This style is overridden by position settings */
-        position: fixed; /* Keep the bottom navigation bar fixed */
-        bottom: 9px; /* Position it 7px up from the bottom */
-        left: 0; /* Position it at the left */
-        width: 100%; /* Take up the full width of the viewport */
-        display: flex; /* Use flexbox layout */
-        justify-content: space-between; /* Space items evenly */
-        align-items: center; /* Center-align the items vertically */
-        z-index: 1000; /* Ensure it's above other content */
-    }
-
-    nav.top-nav ul,
-    nav.bottom-nav ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    nav.top-nav ul li,
-    nav.bottom-nav ul li {
-      display: inline;
-      margin: 0 10px; /* Add margin to create space between buttons */
-    }
-
-    nav.bottom-nav ul li:first-child {
-      margin-right: auto; /* Push the first item to the left */
-    }
-
-    nav.top-nav ul li a {
-      font-family: Victor Mono, Charcoal, sans-serif; /* Use Impact font */
-      font-size: 19px; /* Set font size */
-      color: white; /* Change font color to white */
-      text-decoration: none;
-      padding: 16px; /* Add padding to the buttons */
-    }
-
-    nav.bottom-nav ul li a {
-      font-family: Victor Mono, Charcoal, sans-serif; /* Use Impact font */
-      font-size: 19px; /* Set font size */
-      color: white; /* Change font color to white */
-      text-decoration: none;
-      padding: 20px; /* Add padding to the buttons */
-    }
-
-    /* Define font size for larger screens (e.g., tablets, computers) */
-    nav.bottom-nav ul li a {
-      font-size: 10px; /* Adjust the font size as desired */
-    }
-
-    nav.top-nav ul li a {
-       font-size: 19px;     
-    }
-
-    /* Media query for smaller screens like phones */
-    /* Media query for smaller screens like phones */
-    @media screen and (max-width: 600px) {
-      nav.bottom-nav ul li a {
-        font-size: 12px; /* Adjust the font size for smaller screens */
-        padding: 21px; /* Add padding to the buttons */
-      }
-      nav.top-nav ul li a {
-         padding: 15px; /* Add padding to the buttons */
-        font-size: 19px; /* Adjust the font size for smaller screens */
-      }
-    }
-
-    @media screen and (max-width: 400px) {
-      nav.bottom-nav ul li a {
-        font-size: 8px; /* Adjust the font size for smaller screens */
-      }
-        nav.top-nav ul li a {
-        font-size: 15px; /* Adjust the font size for smaller screens */
-      }
-        nav.bottom-nav ul li a {
-        padding: 10px; /* Add padding to the buttons */
-    }
-    }  
-</style>
-
-<nav class="top-nav">
-    <ul>
-        <li><a href="music.html">MUSIC</a></li>
-        <li><a href="tour.html">TOURS</a></li>
-        <li><a href="acts.html">ACTS</a></li>
-    </ul>
-</nav>
-
-<nav class="bottom-nav">
-    <ul>
-        <li><a href="home.html">JOIN</a></li> <!-- Left-aligned button -->
-    </ul>
-    <ul>
-        <li><a href="beenotr.html">BEEN OTR</a></li> <!-- Right-aligned button -->
-        <li><a href="terms.html">TERMS</a></li> <!-- Right-aligned button -->
-        <li><a href="privacy.html">PRIVACY</a></li> <!-- Right-aligned button -->
-    </ul>
-</nav>
 
 <font color="white">
 <style>
@@ -175,9 +62,6 @@ html {
 </font>
 
 <style>
-    html {
-      font-family: 'Victor Mono';font-size: 9px; /* Default font-size for desktop */
-    }
     nav.top-nav {
         margin-top: 25px;
         position: fixed;
@@ -340,14 +224,23 @@ html {
 
   <!-- Your main content container -->
   <div class="image-container">
-    <!-- Add your images, videos, or GIFs here with the "image" class -->
-    <!-- For example: -->
-    <img class="image" src="IMG_7476.jpg" alt="Image 1">
-    <img class="image" src="IMG_2196.JPG" alt="Image 2">
-    <video class="image" controls autoplay muted>
-      <source src="REn2.mov" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+
+<video autoplay muted loop playsinline preload="auto">
+  <source src="Y6.mov" type="video/mp4">
+</video>
+
+  <img class="image" src="IMG_7634.jpg">
+  <img class="image" src="IMG_7632.jpg">
+    
+  <img src="St.GIF" alt="Animated GIF">
+  <img src="Su.GIF" alt="Animated GIF">
+
+  <img class="image" src="T-1.JPG">
+  <img class="image" src="IMG_7607.jpg">
+  <img class="image" src="IMG_7608.png">
+  <img src="Bu.GIF" alt="Animated GIF">
+  <img class="image" src="P.jpeg">
+  <img class="image" src="IMG_7474.jpg">
   </div>
 
   <!-- Overlay for displaying clicked media -->
@@ -382,17 +275,6 @@ html {
       });
     });
   </script>
-
-<div id="overlay">
-  <img id="overlay-image">
-  <span class="close-btn" id="close-btn">&times;</span>
-  <span class="nav-btn prev-btn">&lt;</span>
-  <span class="nav-btn next-btn">&gt;</span>
-</div>
-
-<div class="image-container">
-
-
 
 </body>
 </html>
