@@ -305,5 +305,30 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
+<script>
+  const overlay = document.getElementById('overlay');
+  const prevBtn = document.querySelector('.prev-btn');
+  const nextBtn = document.querySelector('.next-btn');
+
+  function toggleNavButtons() {
+    if (overlay.style.display === 'none') {
+      prevBtn.style.display = 'none';
+      nextBtn.style.display = 'none';
+    } else {
+      prevBtn.style.display = 'block';
+      nextBtn.style.display = 'block';
+    }
+  }
+
+  toggleNavButtons(); // Initial state
+
+  document.getElementById('close-btn').addEventListener('click', () => {
+    overlay.style.display = 'none';
+    toggleNavButtons();
+  });
+
+  // Add functionality to display the next and previous images...
+</script>
+
 </body>
 </html>
