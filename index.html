@@ -275,6 +275,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const closeBtn = document.getElementById('close-btn');
   const prevBtn = document.querySelector('.prev-btn');
   const nextBtn = document.querySelector('.next-btn');
+  const mainNavLinks = document.querySelectorAll('.main-nav-link'); // Update this selector to match your main navigation links
   let currentIndex = 0;
 
   images.forEach((image, index) => {
@@ -282,13 +283,13 @@ document.addEventListener('DOMContentLoaded', function() {
       currentIndex = index;
       showImage(index);
       overlay.style.display = 'flex'; // Show the overlay
-      toggleNavButtons(true); // Show navigation buttons
+      toggleNavAndMainNav(true); // Show navigation buttons and main navigation links
     });
   });
 
   closeBtn.addEventListener('click', () => {
     overlay.style.display = 'none'; // Hide the overlay
-    toggleNavButtons(false); // Hide navigation buttons
+    toggleNavAndMainNav(false); // Hide navigation buttons and main navigation links
   });
 
   prevBtn.addEventListener('click', () => {
@@ -305,13 +306,24 @@ document.addEventListener('DOMContentLoaded', function() {
     overlayImage.src = images[index].src;
   }
 
-  function toggleNavButtons(visible) {
+  // Function to show or hide both navigation buttons and main navigation links
+  function toggleNavAndMainNav(visible) {
     if (visible) {
+      // Show navigation buttons
       prevBtn.style.display = 'block';
       nextBtn.style.display = 'block';
+      // Show main navigation links
+      mainNavLinks.forEach(link => {
+        link.style.display = 'block';
+      });
     } else {
+      // Hide navigation buttons
       prevBtn.style.display = 'none';
       nextBtn.style.display = 'none';
+      // Hide main navigation links
+      mainNavLinks.forEach(link => {
+        link.style.display = 'none';
+      });
     }
   }
 });
