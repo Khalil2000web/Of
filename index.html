@@ -203,6 +203,24 @@ body.overlay-open {
     .main-nav {
       display: none; /* Hide main navigation links by default */
     }
+
+  .nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+    z-index: 10000;
+  }
+
+  #prev-btn {
+    left: 20px;
+  }
+
+  #next-btn {
+    right: 20px;
+  }
   </style>
 </head>
 <body bgcolor="black">
@@ -254,12 +272,15 @@ body.overlay-open {
 
   <!-- Overlay for displaying clicked media -->
   <div id="overlay">
-    <div id="overlay-content">
-      <!-- This is where the clicked media will be displayed -->
-      <!-- The content will be dynamically added here via JavaScript -->
-    </div>
-    <span id="close-btn">&times;</span>
+  <span id="prev-btn" class="nav-btn">&lt;</span>
+  <div id="overlay-content">
+    <!-- This is where the clicked media will be displayed -->
+    <!-- The content will be dynamically added here via JavaScript -->
   </div>
+  <span id="next-btn" class="nav-btn">&gt;</span>
+  <span id="close-btn">&times;</span>
+</div>
+
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
@@ -284,5 +305,45 @@ body.overlay-open {
     });
   });
 </script>
+document.addEventListener('DOMContentLoaded', function() {
+  const mediaElements = document.querySelectorAll('.image, video');
+  const overlay = document.getElementById('overlay');
+  const overlayContent = document.getElementById('overlay-content');
+  const closeBtn = document.getElementById('close-btn');
+  const prevBtn = document.getElementById('prev-btn');
+  const nextBtn = document.getElementById('next-btn');
+
+  let currentIndex = 0;
+
+  mediaElements.forEach((media, index) => {
+    media.addEventListener('click', () => {
+      currentIndex = index;
+      const clonedMedia = media.cloneNode(true);
+      overlayContent.innerHTML = '';
+      overlayContent.appendChild(clonedMedia);
+      overlay.style.display = 'flex';
+      document.body.style.overflow = 'hidden'; // Disable scrolling of the main page
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    overlay.style.display = 'none';
+    document.body.style.overflow = ''; // Enable scrolling of the main page
+  });
+
+  prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + mediaElements.length) % mediaElements.length;
+    const clonedMedia = mediaElements[currentIndex].cloneNode(true);
+    overlayContent.innerHTML = '';
+    overlayContent.appendChild(clonedMedia);
+  });
+
+  nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % mediaElements.length;
+    const clonedMedia = mediaElements[currentIndex].cloneNode(true);
+    overlayContent.innerHTML = '';
+    overlayContent.appendChild(clonedMedia);
+  });
+});
 </body>
 </html>
