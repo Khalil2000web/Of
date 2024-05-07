@@ -24,135 +24,285 @@ body {
   </head>
   <body bgcolor="black">
   <header class"header">
-  <style>
-    /* Your existing CSS styles */
-
-    /* Add margin-top to move the navigation buttons down */
-    nav.top-nav {
-        margin-top: 25px; /* Adjust the value as needed */
-    }
-        nav.bottom-nav {
-        margin-top: 7px; /* Adjust the value as needed */
-    }
-</style>
-
-
 <style>
-    /* Style for the top navigation bar */
     nav.top-nav {
-      position: fixed; /* Keep the top navigation bar fixed */
-      top: 0; /* Position it at the top */
-      left: 0; /* Position it at the left */
-      width: 100%; /* Take up the full width of the viewport */
-      display: flex; /* Use flexbox layout */
-      justify-content: space-around; /* Space items evenly with more space between them */
-      align-items: center; /* Center-align the items vertically */
-      z-index: 1000; /* Ensure it's above other content */
+        margin-top: 25px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        z-index: 1000;
     }
 
-    /* Style for the bottom navigation bar */
     nav.bottom-nav {
-      position: fixed; /* Keep the bottom navigation bar fixed */
-      bottom: 0; /* Position it at the bottom */
-      left: 0; /* Position it at the left */
-      width: 100%; /* Take up the full width of the viewport */
-      display: flex; /* Use flexbox layout */
-      justify-content: space-between; /* Space items evenly */
-      align-items: center; /* Center-align the items vertically */
-      z-index: 1000; /* Ensure it's above other content */
-      height: 50px; /* Add the desired height */
+        margin-bottom: 9px;
+        position: fixed;
+        bottom: 9px;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1000;
     }
 
-    nav.top-nav ul,
-    nav.bottom-nav ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 0;
+    nav.top-nav ul, nav.bottom-nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
     }
 
-    nav.top-nav ul li,
-    nav.bottom-nav ul li {
-      display: inline;
-      margin: 0 10px; /* Add margin to create space between buttons */
+    nav.top-nav ul li, nav.bottom-nav ul li {
+        display: inline;
+        margin: 0 10px;
     }
 
     nav.bottom-nav ul li:first-child {
-      margin-right: auto; /* Push the first item to the left */
+        margin-right: auto;
     }
 
     nav.top-nav ul li a {
-      font-family: Victor Mono, Charcoal, sans-serif; /* Use Impact font */
-      font-size: 19px; /* Set font size */
-      color: white; /* Change font color to white */
-      text-decoration: none;
-      padding: 16px; /* Add padding to the buttons */
+        font-family: 'Victor Mono', Charcoal, sans-serif;
+        font-size: 19px;
+        color: white;
+        text-decoration: none;
+        padding: 16px;
     }
 
     nav.bottom-nav ul li a {
-      font-family: Victor Mono, Charcoal, sans-serif; /* Use Impact font */
-      font-size: 21px; /* Set font size */
-      color: white; /* Change font color to white */
-      text-decoration: none;
-      padding: 20px; /* Add padding to the buttons */
+        font-family: 'Victor Mono', Charcoal, sans-serif;
+        font-size: 11px;
+        color: white;
+        text-decoration: none;
+        padding: 20px;
     }
 
-    /* Define font size for larger screens (e.g., tablets, computers) */
-    nav.bottom-nav ul li a {
-      font-size: 10px; /* Adjust the font size as desired */
-    }
-
-    nav.top-nav ul li a {
-       font-size: 19px;     
-    }
-
-    /* Media query for smaller screens like phones */
     @media screen and (max-width: 600px) {
-      nav.bottom-nav ul li a {
-        font-size: 14px; /* Adjust the font size for smaller screens */
-      }
-      nav.top-nav ul li a {
-        padding: 10px;
-        font-size: 19px; /* Adjust the font size for smaller screens */
-      }
-    
-      nav.bottom-nav ul li a {
-        padding: 37px; /* Add padding to the buttons */
-      }
-   
-    }
-
-    @media screen and (max-width: 100px) {
-      nav.bottom-nav ul li a {
-        font-size: 60px; /* Adjust the font size for smaller screens */
-      }
-        nav.top-nav ul li a {
-        font-size: 15px; /* Adjust the font size for smaller screens */
-      }
         nav.bottom-nav ul li a {
-        padding: 10px; /* Add padding to the buttons */
+            font-size: 12px;
+            padding: 21px;
+        }
+        nav.top-nav ul li a {
+            padding: 15px;
+            font-size: 19px;
+        }
     }
-    }  
-</style>
-<!-- Top Navigation Bar -->
-<nav class="top-nav">
-    <ul>
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="music.html">MUSIC</a></li>
-        <li><a href="tour.html">TOUR</a></li>
-        <li><a href="acts.html">ACTS</a></li>
-    </ul>
-</nav>
 
-<!-- Bottom Navigation Bar -->
-<nav class="bottom-nav">
+    @media screen and (max-width: 400px) {
+        nav.bottom-nav ul li a {
+            font-size: 8px;
+        }
+        nav.top-nav ul li a {
+            font-size: 15px;
+        }
+        nav.bottom-nav ul li a {
+            padding: 10px;
+        }
+    }
+
+/* Remove overflow: hidden; to enable scrolling of the main page */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    /* overflow: hidden; */ /* Remove this line */
+}
+
+    .image-container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto; /* Enable vertical scrolling */
+      scroll-snap-type: y mandatory; /* Snap to the nearest image */
+      position: relative; /* Ensure relative positioning for overlay */
+    }
+
+    .image {
+      scroll-snap-align: start; /* Snap each image to the start */
+      flex: 0 0 auto;
+      width: 100%;
+      object-fit: contain;
+      cursor: pointer; /* Add pointer cursor to indicate clickable */
+    }
+    
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Set overlay height to cover the entire viewport */
+  background-color: black; /* Adjust transparency as needed */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  overflow-y: auto; /* Enable scrolling for overlay content */
+  padding: 0px;
+}
+
+body.overlay-open {
+  overflow: hidden;
+}
+
+#overlay-content {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+}
+
+    #close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      color: #fff;
+      font-size: 40px;
+    }
+
+    /* Add additional styles for your main navigation links here */
+    .main-nav {
+      display: none; /* Hide main navigation links by default */
+    }
+
+  .nav-btn {
+    position: absolute;
+    top: 7%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 40px;
+    cursor: pointer;
+    z-index: 10000;
+  }
+
+  #prev-btn {
+    left: 100px;
+  }
+
+  #next-btn {
+    right: 100px;
+  }
+  </style>
+</head>
+<body bgcolor="black">
+  <!-- Navigation bars -->
+  <nav class="top-nav">
     <ul>
-        <li><a href="home.html">JOIN</a></li> <!-- Left-aligned button -->
+      <li><a href="music.html">MUSIC</a></li>
+      <li><a href="tour.html">TOURS</a></li>
+      <li><a href="acts.html">ACTS</a></li>
+    </ul>
+  </nav>
+
+  <nav class="bottom-nav">
+    <ul>
+      <li><a href="home.html">JOIN</a></li> <!-- Left-aligned button -->
     </ul>
     <ul>
-        <li><a href="terms.html">TERMS</a></li> <!-- Right-aligned button -->
-        <li><a href="privacy.html">PRIVACY</a></li> <!-- Right-aligned button -->
+      <li><a href="beenotr.html">BEEN OTR</a></li> <!-- Right-aligned button -->
+      <li><a href="terms.html">TERMS</a></li> <!-- Right-aligned button -->
+      <li><a href="privacy.html">PRIVACY</a></li> <!-- Right-aligned button -->
     </ul>
-</nav>
+  </nav>
+
+  <!-- Your main content container -->
+  <div class="image-container">
+    
+<video autoplay loop muted playsinline>
+  <source class="image" src="Bo3.mov" type="video/mp4">
+</video>
+
+<video autoplay loop muted playsinline>
+  <source class="image" src="Bo2.mov" type="video/mp4">
+</video>
+
+  <img class="image" src="Du.jpg">
+    
+<video autoplay loop muted playsinline>
+  <source class="image" src="Bo1.MOV" type="video/mp4">
+</video>
+  </div>
+
+  <!-- Overlay for displaying clicked media -->
+  <div id="overlay">
+  <span id="prev-btn" class="nav-btn">&lt;</span>
+  <div id="overlay-content">
+    <!-- This is where the clicked media will be displayed -->
+    <!-- The content will be dynamically added here via JavaScript -->
+  </div>
+  <span id="next-btn" class="nav-btn">&gt;</span>
+  <span id="close-btn">&times;</span>
+</div>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mediaElements = document.querySelectorAll('.image, video');
+    const overlay = document.getElementById('overlay');
+    const overlayContent = document.getElementById('overlay-content');
+    const closeBtn = document.getElementById('close-btn');
+
+    mediaElements.forEach(media => {
+      media.addEventListener('click', () => {
+        const clonedMedia = media.cloneNode(true);
+        overlayContent.innerHTML = '';
+        overlayContent.appendChild(clonedMedia);
+        overlay.style.display = 'flex';
+        document.body.style.overflow = 'hidden'; // Disable scrolling of the main page
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      overlay.style.display = 'none';
+      document.body.style.overflow = ''; // Enable scrolling of the main page
+    });
+  });
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const mediaElements = document.querySelectorAll('.image, video');
+  const overlay = document.getElementById('overlay');
+  const overlayContent = document.getElementById('overlay-content');
+  const closeBtn = document.getElementById('close-btn');
+  const prevBtn = document.getElementById('prev-btn');
+  const nextBtn = document.getElementById('next-btn');
+
+  let currentIndex = 0;
+
+  mediaElements.forEach((media, index) => {
+    media.addEventListener('click', () => {
+      currentIndex = index;
+      const clonedMedia = media.cloneNode(true);
+      overlayContent.innerHTML = '';
+      overlayContent.appendChild(clonedMedia);
+      overlay.style.display = 'flex';
+      document.body.style.overflow = 'hidden'; // Disable scrolling of the main page
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    overlay.style.display = 'none';
+    document.body.style.overflow = ''; // Enable scrolling of the main page
+  });
+
+  prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + mediaElements.length) % mediaElements.length;
+    const clonedMedia = mediaElements[currentIndex].cloneNode(true);
+    overlayContent.innerHTML = '';
+    overlayContent.appendChild(clonedMedia);
+  });
+
+  nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % mediaElements.length;
+    const clonedMedia = mediaElements[currentIndex].cloneNode(true);
+    overlayContent.innerHTML = '';
+    overlayContent.appendChild(clonedMedia);
+  });
+});
+</script>
 
 
 <font color="white">
@@ -185,7 +335,7 @@ body {
         text-decoration: none; /* remove underline from links */
         cursor: pointer; /* change cursor to pointer on hover */
     }
-</style>
+</style>r
 
 <div class="title-container left-title">
   <h1>BOSNIA &</h1>
@@ -193,45 +343,6 @@ body {
 
 <div class="title-container right-title">
   <h1>HERZEGOVINA</h1>
-</div>
-</font>
-
-<style>
-  html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-  }
-
-  .image-container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    overflow-y: auto; /* Enable vertical scrolling */
-    scroll-snap-type: y mandatory; /* Snap to the nearest image */
-  }
-
-  .image {
-    scroll-snap-align: end; /* Snap each image to the start */
-    flex: 0 0 auto;
-    width: 100%;
-    object-fit: contain;
-  }      
-</style>
-
-<div class="image-container">
-<video autoplay loop muted playsinline>
-  <source src="Bo3.mov" type="video/mp4">
-</video>
-
-<video autoplay loop muted playsinline>
-  <source src="Bo2.mov" type="video/mp4">
-</video>
-  <img class="image" src="Du.jpg">
-<video autoplay loop muted playsinline>
-  <source src="Bo1.MOV" type="video/mp4">
-</video>
 </div>
 
 </body>
