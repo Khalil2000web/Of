@@ -185,10 +185,11 @@ body.overlay-open {
   overflow: hidden;
 }
 
-    #overlay-content {
-      width: 100%;
-      height: 100%;
-    }
+#overlay-content {
+  width: 100%;
+  height: 100%;
+  touch-action: none; /* Disable touch actions like zooming */
+}
 
     #close-btn {
       position: absolute;
@@ -305,6 +306,7 @@ body.overlay-open {
     });
   });
 </script>
+<script>
 document.addEventListener('DOMContentLoaded', function() {
   const mediaElements = document.querySelectorAll('.image, video');
   const overlay = document.getElementById('overlay');
@@ -345,5 +347,6 @@ document.addEventListener('DOMContentLoaded', function() {
     overlayContent.appendChild(clonedMedia);
   });
 });
+</script>
 </body>
 </html>
