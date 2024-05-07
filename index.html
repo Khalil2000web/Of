@@ -175,70 +175,213 @@ html {
 </font>
 
 <style>
-  html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-  }
+    html {
+      font-family: 'Victor Mono';font-size: 9px; /* Default font-size for desktop */
+    }
+    nav.top-nav {
+        margin-top: 25px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        z-index: 1000;
+    }
 
-  .image-container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    overflow-y: auto; /* Enable vertical scrolling */
-  }
+    nav.bottom-nav {
+        margin-bottom: 9px;
+        position: fixed;
+        bottom: 9px;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1000;
+    }
 
-  .image {
-    width: 100%;
-    object-fit: contain;
-  }
+    nav.top-nav ul, nav.bottom-nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
 
-  #overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.9); /* Semi-transparent black background */
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 999; /* Ensure overlay is on top of everything */
-  }
+    nav.top-nav ul li, nav.bottom-nav ul li {
+        display: inline;
+        margin: 0 10px;
+    }
 
-  #overlay img {
-    max-width: 100%;
-    object-fit: contain;
-  }
+    nav.bottom-nav ul li:first-child {
+        margin-right: auto;
+    }
 
-  .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    color: #fff;
-    font-size: 24px;
-    z-index: 1000; /* Ensure close button is on top */
-  }
+    nav.top-nav ul li a {
+        font-family: 'Victor Mono', Charcoal, sans-serif;
+        font-size: 19px;
+        color: white;
+        text-decoration: none;
+        padding: 16px;
+    }
 
-  .nav-btn {
-    position: absolute;
-    top: 80px;
-    cursor: pointer;
-    color: #fff;
-    font-size: 24px;
-    z-index: 1000; /* Ensure navigation buttons are on top */
-  }
+    nav.bottom-nav ul li a {
+        font-family: 'Victor Mono', Charcoal, sans-serif;
+        font-size: 11px;
+        color: white;
+        text-decoration: none;
+        padding: 20px;
+    }
 
-  .prev-btn {
-    left: 140px;
-  }
+    @media screen and (max-width: 600px) {
+        nav.bottom-nav ul li a {
+            font-size: 12px;
+            padding: 21px;
+        }
+        nav.top-nav ul li a {
+            padding: 15px;
+            font-size: 19px;
+        }
+    }
 
-  .next-btn {
-    right: 140px;
-  }
-</style>
+    @media screen and (max-width: 400px) {
+        nav.bottom-nav ul li a {
+            font-size: 8px;
+        }
+        nav.top-nav ul li a {
+            font-size: 15px;
+        }
+        nav.bottom-nav ul li a {
+            padding: 10px;
+        }
+    }
+
+    /* Your existing styles */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden; /* Disable scrolling of the main page */
+    }
+
+    .image-container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto; /* Enable vertical scrolling */
+      scroll-snap-type: y mandatory; /* Snap to the nearest image */
+      position: relative; /* Ensure relative positioning for overlay */
+    }
+
+    .image {
+      scroll-snap-align: start; /* Snap each image to the start */
+      flex: 0 0 auto;
+      width: 100%;
+      object-fit: contain;
+      cursor: pointer; /* Add pointer cursor to indicate clickable */
+    }
+
+    #overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: black; /* Semi-transparent black background */
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999; /* Ensure overlay is on top of everything */
+      overflow-y: auto; /* Enable scrolling for overlay content */
+      padding: 0px; /* Add padding for spacing */
+    }
+
+    #overlay-content {
+      width: 100%;
+      height: 100%;
+    }
+
+    #close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      cursor: pointer;
+      color: #fff;
+      font-size: 40px;
+    }
+
+    /* Add additional styles for your main navigation links here */
+    .main-nav {
+      display: none; /* Hide main navigation links by default */
+    }
+  </style>
+</head>
+<body bgcolor="black">
+  <!-- Navigation bars -->
+  <nav class="top-nav">
+    <ul>
+      <li><a href="music.html">MUSIC</a></li>
+      <li><a href="tour.html">TOURS</a></li>
+      <li><a href="acts.html">ACTS</a></li>
+    </ul>
+  </nav>
+
+  <nav class="bottom-nav">
+    <ul>
+      <li><a href="home.html">JOIN</a></li> <!-- Left-aligned button -->
+    </ul>
+    <ul>
+      <li><a href="beenotr.html">BEEN OTR</a></li> <!-- Right-aligned button -->
+      <li><a href="terms.html">TERMS</a></li> <!-- Right-aligned button -->
+      <li><a href="privacy.html">PRIVACY</a></li> <!-- Right-aligned button -->
+    </ul>
+  </nav>
+
+  <!-- Your main content container -->
+  <div class="image-container">
+    <!-- Add your images, videos, or GIFs here with the "image" class -->
+    <!-- For example: -->
+    <img class="image" src="IMG_7476.jpg" alt="Image 1">
+    <img class="image" src="IMG_2196.JPG" alt="Image 2">
+    <video class="image" controls autoplay muted>
+      <source src="REn2.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <!-- Overlay for displaying clicked media -->
+  <div id="overlay">
+    <div id="overlay-content">
+      <!-- This is where the clicked media will be displayed -->
+      <!-- The content will be dynamically added here via JavaScript -->
+    </div>
+    <span id="close-btn">&times;</span>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const images = document.querySelectorAll('.image');
+      const overlay = document.getElementById('overlay');
+      const overlayContent = document.getElementById('overlay-content');
+      const closeBtn = document.getElementById('close-btn');
+
+      images.forEach(image => {
+        image.addEventListener('click', () => {
+          const media = image.cloneNode(true); // Clone the clicked media
+          overlayContent.innerHTML = ''; // Clear previous content
+          overlayContent.appendChild(media); // Add cloned media to overlay
+          overlay.style.display = 'flex'; // Show the overlay
+          document.body.style.overflow = 'hidden'; // Disable scrolling of the main page
+        });
+      });
+
+      closeBtn.addEventListener('click', () => {
+        overlay.style.display = 'none'; // Hide the overlay
+        document.body.style.overflow = ''; // Enable scrolling of the main page
+      });
+    });
+  </script>
 
 <div id="overlay">
   <img id="overlay-image">
@@ -249,85 +392,7 @@ html {
 
 <div class="image-container">
 
-<video autoplay muted loop playsinline preload="auto">
-  <source src="Y6.mov" type="video/mp4">
-</video>
 
-  <img class="image" src="IMG_7634.jpg">
-  <img class="image" src="IMG_7632.jpg">
-    
-  <img src="St.GIF" alt="Animated GIF">
-  <img src="Su.GIF" alt="Animated GIF">
-
-  <img class="image" src="T-1.JPG">
-  <img class="image" src="IMG_7607.jpg">
-  <img class="image" src="IMG_7608.png">
-  <img src="Bu.GIF" alt="Animated GIF">
-  <img class="image" src="P.jpeg">
-  <img class="image" src="IMG_7474.jpg">
-</div>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const images = document.querySelectorAll('.image');
-  const overlay = document.getElementById('overlay');
-  const overlayImage = document.getElementById('overlay-image');
-  const closeBtn = document.getElementById('close-btn');
-  const prevBtn = document.querySelector('.prev-btn');
-  const nextBtn = document.querySelector('.next-btn');
-  const mainNavLinks = document.querySelectorAll('.main-nav-link'); // Update this selector to match your main navigation links
-  let currentIndex = 0;
-
-  images.forEach((image, index) => {
-    image.addEventListener('click', () => {
-      currentIndex = index;
-      showImage(index);
-      overlay.style.display = 'flex'; // Show the overlay
-      toggleNavAndMainNav(true); // Show navigation buttons and main navigation links
-    });
-  });
-
-  closeBtn.addEventListener('click', () => {
-    overlay.style.display = 'none'; // Hide the overlay
-    toggleNavAndMainNav(false); // Hide navigation buttons and main navigation links
-  });
-
-  prevBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + images.length) % images.length;
-    showImage(currentIndex);
-  });
-
-  nextBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % images.length;
-    showImage(currentIndex);
-  });
-
-  function showImage(index) {
-    overlayImage.src = images[index].src;
-  }
-
-  // Function to show or hide both navigation buttons and main navigation links
-  function toggleNavAndMainNav(visible) {
-    if (visible) {
-      // Show navigation buttons
-      prevBtn.style.display = 'block';
-      nextBtn.style.display = 'block';
-      // Show main navigation links
-      mainNavLinks.forEach(link => {
-        link.style.display = 'block';
-      });
-    } else {
-      // Hide navigation buttons
-      prevBtn.style.display = 'none';
-      nextBtn.style.display = 'none';
-      // Hide main navigation links
-      mainNavLinks.forEach(link => {
-        link.style.display = 'none';
-      });
-    }
-  }
-});
-</script>
 
 </body>
 </html>
