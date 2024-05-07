@@ -282,11 +282,13 @@ document.addEventListener('DOMContentLoaded', function() {
       currentIndex = index;
       showImage(index);
       overlay.style.display = 'flex'; // Show the overlay
+      toggleNavButtons(true); // Show navigation buttons
     });
   });
 
   closeBtn.addEventListener('click', () => {
     overlay.style.display = 'none'; // Hide the overlay
+    toggleNavButtons(false); // Hide navigation buttons
   });
 
   prevBtn.addEventListener('click', () => {
@@ -302,32 +304,17 @@ document.addEventListener('DOMContentLoaded', function() {
   function showImage(index) {
     overlayImage.src = images[index].src;
   }
-});
-</script>
 
-<script>
-  const overlay = document.getElementById('overlay');
-  const prevBtn = document.querySelector('.prev-btn');
-  const nextBtn = document.querySelector('.next-btn');
-
-  function toggleNavButtons() {
-    if (overlay.style.display === 'none') {
-      prevBtn.style.display = 'none';
-      nextBtn.style.display = 'none';
-    } else {
+  function toggleNavButtons(visible) {
+    if (visible) {
       prevBtn.style.display = 'block';
       nextBtn.style.display = 'block';
+    } else {
+      prevBtn.style.display = 'none';
+      nextBtn.style.display = 'none';
     }
   }
-
-  toggleNavButtons(); // Initial state
-
-  document.getElementById('close-btn').addEventListener('click', () => {
-    overlay.style.display = 'none';
-    toggleNavButtons();
-  });
-
-  // Add functionality to display the next and previous images...
+});
 </script>
 
 </body>
