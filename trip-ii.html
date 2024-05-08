@@ -1,29 +1,66 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html>
+  <head>
     <title>Khalil</title>
-
-<link href='https://fonts.googleapis.com/css?family=Victor Mono' rel='stylesheet'>
+<meta name="viewport" content="width=device-width, initial-scale=1">    <link href='https://fonts.googleapis.com/css?family=Victor Mono' rel='stylesheet'>
 <style>
-body {
-    font-family: 'Victor Mono';font-size: 10px;
+html {
+    font-family: 'Victor Mono';font-size: 9px; /* Default font-size for desktop */
 }
 </style>
 
     <meta property="og:description" content="The Official Website of Khalil">
     <meta property="og:image" content="924468E4-84B7-46FA-994D-ECDCF49817C4.jpeg">
-    <meta property="og:url" content="www.khaliiil.com">
+    <meta property="og:url" content="https://khaliiil.com">
     <meta property="og:site_name" content="Khaliil">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_US">
     <meta property="og:author" content="Khalil">
-
   </head>
   <body bgcolor="black">
   <header class"header">
+
+<font color="white">
+<style>
+  .title-container {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 999; /* ensure it's on top of other content */
+
+  }
+
+  .left-title {
+    left: 0;
+    padding-left: 90px; /* Adjust as needed */
+  }
+
+  .right-title {
+    right: 0;
+    padding-right: 90px; /* Adjust as needed */
+  }
+
+  .title-container.hidden {
+    display: none; /* hide the container when it has the hidden class */
+  }
+
+  .left-title a,
+  .right-title a {
+    color: inherit; /* inherit text color from parent */
+    text-decoration: none; /* remove underline from links */
+    cursor: pointer; /* change cursor to pointer on hover */
+  }
+</style>
+
+<div class="title-container left-title">
+<h1>BOSNIA &</h1>
+</div>
+
+<div class="title-container right-title">
+<h1>HERZEGOVINA</h1>
+</div>
+</font>
+
 <style>
     nav.top-nav {
         margin-top: 25px;
@@ -91,7 +128,7 @@ body {
         }
     }
 
-    @media screen and (max-width: 40px) {
+    @media screen and (max-width: 400px) {
         nav.bottom-nav ul li a {
             font-size: 8px;
         }
@@ -121,16 +158,13 @@ html, body {
       position: relative; /* Ensure relative positioning for overlay */
     }
 
-.image {
-  scroll-snap-align: start; /* Snap each image to the start */
-  flex: 0 0 auto;
-  width: 100%;
-  cursor: pointer; /* Add pointer cursor to indicate clickable */
-}
-
-.image video {
-  object-fit: contain; /* Ensure videos maintain their aspect ratio */
-}
+    .image {
+      scroll-snap-align: start; /* Snap each image to the start */
+      flex: 0 0 auto;
+      width: 100%;
+      object-fit: contain;
+      cursor: pointer; /* Add pointer cursor to indicate clickable */
+    }
     
 #overlay {
   position: fixed;
@@ -203,7 +237,7 @@ body.overlay-open {
 
   <nav class="bottom-nav">
     <ul>
-      <li><a href="index.html">JOIN</a></li> <!-- Left-aligned button -->
+      <li><a href="home.html">JOIN</a></li> <!-- Left-aligned button -->
     </ul>
     <ul>
       <li><a href="terms.html">TERMS</a></li> <!-- Right-aligned button -->
@@ -213,31 +247,31 @@ body.overlay-open {
 
   <!-- Your main content container -->
   <div class="image-container">
-    
-<video autoplay loop muted playsinline>
-  <source class="image" src="Bo3.mov" type="video/mp4">
+
+<video class="image" autoplay muted loop playsinline preload="auto">
+  <source src="Bo3.mov" type="video/mp4">
 </video>
 
-<video autoplay loop muted playsinline>
-  <source class="image" src="Bo2.mov" type="video/mp4">
+<video class="image" autoplay muted loop playsinline preload="auto">
+  <source src="Bo2.mov" type="video/mp4">
 </video>
 
   <img class="image" src="Du.jpg">
-    
-<video autoplay loop muted playsinline>
-  <source class="image" src="Bo1.MOV" type="video/mp4">
+
+<video class="image" autoplay muted loop playsinline preload="auto">
+  <source src="Bo1.MOV" type="video/mp4">
 </video>
 
   </div>
 
   <!-- Overlay for displaying clicked media -->
   <div id="overlay">
-  <span id="prev-btn" class="nav-btn">&lt;</span>
+  <span id="prev-btn" class="nav-btn"><b>&lt;</b></span>
   <div id="overlay-content">
     <!-- This is where the clicked media will be displayed -->
     <!-- The content will be dynamically added here via JavaScript -->
   </div>
-  <span id="next-btn" class="nav-btn">&gt;</span>
+  <span id="next-btn" class="nav-btn"><b>&gt;</b></span>
   <span id="close-btn">&times;</span>
 </div>
 
@@ -307,47 +341,5 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 </script>
-
-
-<font color="white">
-<style>
-  .title-container {
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 999; /* ensure it's on top of other content */
-  }
-
-  .left-title {
-    left: 0;
-    padding-left: 30px; /* Adjust as needed */
-  }
-
-  .right-title {
-    right: 0;
-    padding-right: 30px; /* Adjust as needed */
-  }
-
-    .left-title a {
-        color: inherit; /* inherit text color from parent */
-        text-decoration: none; /* remove underline from links */
-        cursor: pointer; /* change cursor to pointer on hover */
-    }
-
-    .right-title a {
-        color: inherit; /* inherit text color from parent */
-        text-decoration: none; /* remove underline from links */
-        cursor: pointer; /* change cursor to pointer on hover */
-    }
-</style>
-
-<div class="title-container left-title">
-  <h1>BOSNIA &</h1>
-</div>
-
-<div class="title-container right-title">
-  <h1>HERZEGOVINA</h1>
-</div>
-
 </body>
 </html>
