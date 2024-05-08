@@ -5,9 +5,3 @@ RewriteRule ^([^\.]+)$ $1.html [NC,L]
 # Redirect from .html to non-.html URLs
 RewriteCond %{THE_REQUEST} \.html
 RewriteRule ^(.+)\.html$ /$1 [R=301,L]
-
-ErrorDocument 400 /Error.html
-ErrorDocument 401 /Error.html
-ErrorDocument 403 /Error.html
-ErrorDocument 404 /Error.html
-ErrorDocument 500 /Error.html
