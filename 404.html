@@ -155,43 +155,38 @@ html {
     </ul>
 </nav>
         
-    <style>
-        body {
-            font-family: 'Victor Mono';
-            }
-            
-         .t {   
-            text-align: center;
-            color: black;
-            top: 50px;
-            font-size: 50px;
-        }
-        .underline {
-            text-decoration: underline;
-            cursor: pointer;
-        }
-        
-     @media screen and (max-width: 600px) {
-          t {
-            font-size: 10px;
-            }
+ <style>
+    body {
+        font-family: 'Victor Mono';
     }
-    </style>
+    
+    .t {   
+        text-align: center;
+        color: black;
+        top: 50px;
+        font-size: 50px;
+    }
+    
+    .underline {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+    
+    @media screen and (max-width: 600px) {
+        .t { /* Corrected the selector to target elements with the class .t */
+            font-size: 25px;
+        }
+    }
+</style>
     
 <div class="t"><h1>THIS PAGE IS NOT A THING. TRY <span class="underline" onclick="goToHomePage()">AGAIN</span>.</h1></div>
     
+    <!-- JavaScript function to handle redirection -->
     <script>
         function goToHomePage() {
-            window.location.href = "https://khaliiil.com"; // Change "home.html" to your actual homepage URL
+            window.location.href = "https://khaliiil.com"; // Redirect to the homepage URL
         }
     </script>
-    
-<!-- Removed the JavaScript redirection -->
-<script>
-    setTimeout(function() {
-        window.location.href = "https://khaliiil.com"; // Remove this line
-    }, 5000); // Remove this line
-</script>
     
 </body>
 </html>
