@@ -62,7 +62,7 @@ html {
 </div>
 </font>
 
-How can i make that media who needed scrolling down because of its height to have under it black space that also contains the overlay content scrolling so when a media needed scrolling when i scroll down it doesn't give me the end of the media, it should be a black space under it and i want the ability to adjust the size of this space <style>
+<style>
     nav.top-nav {
         margin-top: 25px;
         position: fixed;
@@ -238,6 +238,7 @@ body.overlay-open, #overlay {
   }
   }
   </style>
+
 </head>
 <body bgcolor="black">
   <!-- Navigation bars -->
@@ -297,31 +298,6 @@ body.overlay-open, #overlay {
   <img class="image" src="P.jpeg">
   <img class="image" src="IMG_7474.jpg">
   </div>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const mediaElements = document.querySelectorAll('.image, video');
-    const overlay = document.getElementById('overlay');
-    const overlayContent = document.getElementById('overlay-content');
-    const closeBtn = document.getElementById('close-btn');
-
-    mediaElements.forEach(media => {
-      media.addEventListener('click', () => {
-        const clonedMedia = media.cloneNode(true);
-        overlayContent.innerHTML = '';
-        overlayContent.appendChild(clonedMedia);
-        overlay.style.display = 'flex';
-        document.body.style.overflow = 'hidden'; // Disable scrolling of the main page
-      });
-    });
-
-    closeBtn.addEventListener('click', () => {
-      overlay.style.display = 'none';
-      document.body.style.overflow = ''; // Enable scrolling of the main page
-    });
-  });
-</script>
-
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
