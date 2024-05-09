@@ -260,9 +260,9 @@ html, body {
     </ul>
   </nav>
 
-<div id="overlay">
+  <div id="overlay">
   <span id="prev-btn" class="nav-btn"><b>&lt;</b></span>
-  <div id="overlay-content" style="height: 300px; overflow-y: scroll;">
+  <div id="overlay-content">
     <!-- This is where the clicked media will be displayed -->
     <!-- The content will be dynamically added here via JavaScript -->
   </div>
@@ -298,6 +298,31 @@ html, body {
   <img class="image" src="P.jpeg">
   <img class="image" src="IMG_7474.jpg">
   </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mediaElements = document.querySelectorAll('.image, video');
+    const overlay = document.getElementById('overlay');
+    const overlayContent = document.getElementById('overlay-content');
+    const closeBtn = document.getElementById('close-btn');
+
+    mediaElements.forEach(media => {
+      media.addEventListener('click', () => {
+        const clonedMedia = media.cloneNode(true);
+        overlayContent.innerHTML = '';
+        overlayContent.appendChild(clonedMedia);
+        overlayContent.innerHTML += '<br>'.repeat(5); // Add 5 <br> elements after the media
+        overlay.style.display = 'flex';
+        document.body.style.overflow = 'hidden'; // Disable scrolling of the main page
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      overlay.style.display = 'none';
+      document.body.style.overflow = ''; // Enable scrolling of the main page
+    });
+  });
+</script>
 
  <script>
   document.addEventListener('DOMContentLoaded', function() {
