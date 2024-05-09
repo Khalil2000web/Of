@@ -296,40 +296,35 @@ html, body {
   <img class="image" src="IMG_7474.jpg">
   </div>
 
- <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const mediaElements = document.querySelectorAll('.image, video');
-    const overlay = document.getElementById('overlay');
-    const overlayContent = document.getElementById('overlay-content');
-    const closeBtn = document.getElementById('close-btn');
+document.addEventListener('DOMContentLoaded', function() {
+  const mediaElements = document.querySelectorAll('.image, video');
+  const overlay = document.getElementById('overlay');
+  const overlayContent = document.getElementById('overlay-content');
+  const closeBtn = document.getElementById('close-btn');
 
-    mediaElements.forEach(media => {
-      media.addEventListener('click', () => {
-        const clonedMedia = media.cloneNode(true);
-        overlayContent.innerHTML = '';
-        overlayContent.appendChild(clonedMedia);
-        overlay.style.display = 'flex';
-        document.body.style.overflow = 'hidden'; // Disable scrolling of the main page
+  mediaElements.forEach(media => {
+    media.addEventListener('click', () => {
+      const clonedMedia = media.cloneNode(true);
+      overlayContent.innerHTML = '';
+      overlayContent.appendChild(clonedMedia);
+      overlay.style.display = 'flex';
+      document.body.style.overflow = 'hidden'; // Disable scrolling of the main page
+
+      // Add scrolling limitation
+      overlayContent.addEventListener('scroll', function() {
+        if (overlayContent.scrollTop === (overlayContent.scrollHeight - overlayContent.offsetHeight)) {
+          // Scrolled to the bottom, prevent further scrolling
+          overlayContent.scrollTop -= 1;
+        }
       });
     });
-
-    closeBtn.addEventListener('click', () => {
-      overlay.style.display = 'none';
-      document.body.style.overflow = ''; // Enable scrolling of the main page
-    });
   });
-</script>
 
-<script>
-    const scrollableContent = document.getElementById('scrollable-content');
-    
-    scrollableContent.addEventListener('scroll', function() {
-        if (scrollableContent.scrollTop === (scrollableContent.scrollHeight - scrollableContent.offsetHeight)) {
-            // Scrolled to the bottom
-            scrollableContent.scrollTop -= 1; // Prevent further scrolling
-        }
-    });
-</script>
+  closeBtn.addEventListener('click', () => {
+    overlay.style.display = 'none';
+    document.body.style.overflow = ''; // Enable scrolling of the main page
+  });
+});
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
