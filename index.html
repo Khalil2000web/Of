@@ -172,7 +172,7 @@ html, body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%; /* Set overlay height to cover the entire viewport */
+  height: 200%; /* Set overlay height to cover the entire viewport plus additional space */
   background-color: black; /* Adjust transparency as needed */
   display: none;
   justify-content: center;
@@ -186,7 +186,15 @@ html, body {
   width: 100%;
   height: 100%;
   overflow-y: auto;
-  margin-bottom: 100px;
+}
+
+#bottom-frame {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px; /* Adjust the height of the bottom frame */
+  background-color: black;
 }
 
     #close-btn {
