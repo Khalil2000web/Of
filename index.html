@@ -166,18 +166,13 @@ html, body {
       object-fit: contain;
       cursor: pointer; /* Add pointer cursor to indicate clickable */
     }
-
-/* Remove the duplicate selector and combine them into one */
-body.overlay-open, #overlay {
-  overflow: hidden;
-}
-
+    
 #overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100%; /* Set overlay height to cover the entire viewport */
   background-color: black; /* Adjust transparency as needed */
   display: none;
   justify-content: center;
@@ -187,20 +182,16 @@ body.overlay-open, #overlay {
   padding: 0px;
 }
 
+/* Remove the duplicate selector and combine them into one */
+body.overlay-open, #overlay {
+  overflow: hidden;
+}
+
 #overlay-content {
   width: 100%;
   height: 100%;
   overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-#black-space {
-  flex: 1; /* Expand to fill remaining space */
-  width: 100%;
-  background-color: black; /* Black color for the space */
+  touch-action: pan-y; /* Allow vertical scrolling while disabling pinch zooming */
 }
 
     #close-btn {
