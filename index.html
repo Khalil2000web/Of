@@ -224,6 +224,11 @@ html, body {
   body.overlay-open #overlay {
   overflow: hidden;
 }
+
+.space-element {
+  height: 100px; /* Adjust height as needed */
+  background-color: black; /* Adjust color as needed */
+}
   
   @media screen and (max-width: 600px) {
       #prev-btn {
@@ -311,9 +316,13 @@ html, body {
         const clonedMedia = media.cloneNode(true);
         overlayContent.innerHTML = '';
         overlayContent.appendChild(clonedMedia);
-        overlayContent.innerHTML += '<br>'.repeat(5); // Add 5 <br> elements after the media
         overlay.style.display = 'flex';
         document.body.style.overflow = 'hidden'; // Disable scrolling of the main page
+        
+        // Add space element after the media
+        const spaceElement = document.createElement('div');
+        spaceElement.classList.add('space-element');
+        overlayContent.appendChild(spaceElement);
       });
     });
 
