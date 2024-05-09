@@ -235,6 +235,15 @@ body.overlay-open {
     padding: 5px;
   }
   }
+  
+  body.overlay-open {
+  overflow: hidden;
+}
+
+#overlay-content {
+  touch-action: none;
+}
+  
   </style>
 </head>
 <body bgcolor="black">
@@ -338,12 +347,14 @@ document.addEventListener('DOMContentLoaded', function() {
       overlayContent.appendChild(clonedMedia);
       overlay.style.display = 'flex';
       document.body.style.overflow = 'hidden'; // Disable scrolling of the main page
+      document.body.classList.add('overlay-open'); // Add class to disable scrolling
     });
   });
 
   closeBtn.addEventListener('click', () => {
     overlay.style.display = 'none';
     document.body.style.overflow = ''; // Enable scrolling of the main page
+    document.body.classList.remove('overlay-open'); // Remove class to enable scrolling
   });
 
   prevBtn.addEventListener('click', () => {
