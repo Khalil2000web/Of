@@ -260,9 +260,9 @@ html, body {
     </ul>
   </nav>
 
-  <div id="overlay">
+<div id="overlay">
   <span id="prev-btn" class="nav-btn"><b>&lt;</b></span>
-  <div id="overlay-content">
+  <div id="overlay-content" style="height: 300px; overflow-y: scroll;">
     <!-- This is where the clicked media will be displayed -->
     <!-- The content will be dynamically added here via JavaScript -->
   </div>
@@ -323,7 +323,16 @@ html, body {
   });
 </script>
 
-
+<script>
+    const scrollableContent = document.getElementById('scrollable-content');
+    
+    scrollableContent.addEventListener('scroll', function() {
+        if (scrollableContent.scrollTop === (scrollableContent.scrollHeight - scrollableContent.offsetHeight)) {
+            // Scrolled to the bottom
+            scrollableContent.scrollTop -= 1; // Prevent further scrolling
+        }
+    });
+</script>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
