@@ -182,7 +182,8 @@ html, body {
   padding: 0px;
 }
 
-body.overlay-open {
+/* Remove the duplicate selector and combine them into one */
+body.overlay-open, #overlay {
   overflow: hidden;
 }
 
@@ -236,11 +237,6 @@ body.overlay-open {
     padding: 5px;
   }
   }
-  
-  body.overlay-open {
-  overflow: hidden;
-}
-  
   </style>
 </head>
 <body bgcolor="black">
