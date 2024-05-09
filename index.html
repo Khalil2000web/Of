@@ -325,6 +325,8 @@ body.overlay-open {
     });
   });
 </script>
+
+
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const mediaElements = document.querySelectorAll('.image, video');
@@ -366,6 +368,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const clonedMedia = mediaElements[currentIndex].cloneNode(true);
     overlayContent.innerHTML = '';
     overlayContent.appendChild(clonedMedia);
+  });
+
+  // Disable scrolling of the main page immediately when the overlay opens
+  overlay.addEventListener('transitionend', () => {
+    if (overlay.style.display === 'flex') {
+      document.body.style.overflow = 'hidden';
+    }
   });
 });
 </script>
