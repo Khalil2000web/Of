@@ -62,7 +62,7 @@ html {
 </div>
 </font>
 
-<style>
+Why when i open videos on the overlay it took sometime to appear opposite other medias <style>
     nav.top-nav {
         margin-top: 25px;
         position: fixed;
@@ -182,16 +182,10 @@ html, body {
   padding: 0px;
 }
 
-/* Remove the duplicate selector and combine them into one */
-body.overlay-open, #overlay {
-  overflow: hidden;
-}
-
 #overlay-content {
   width: 100%;
   height: 100%;
   overflow-y: auto;
-  touch-action: pan-y; /* Allow vertical scrolling while disabling pinch zooming */
 }
 
     #close-btn {
@@ -225,6 +219,10 @@ body.overlay-open, #overlay {
   #next-btn {
     right: 180px;
   }
+  
+  body.overlay-open #overlay {
+  overflow: hidden;
+}
   
   @media screen and (max-width: 600px) {
       #prev-btn {
@@ -299,6 +297,32 @@ body.overlay-open, #overlay {
   <img class="image" src="IMG_7474.jpg">
   </div>
 
+ <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mediaElements = document.querySelectorAll('.image, video');
+    const overlay = document.getElementById('overlay');
+    const overlayContent = document.getElementById('overlay-content');
+    const closeBtn = document.getElementById('close-btn');
+
+    mediaElements.forEach(media => {
+      media.addEventListener('click', () => {
+        const clonedMedia = media.cloneNode(true);
+        overlayContent.innerHTML = '';
+        overlayContent.appendChild(clonedMedia);
+        overlay.style.display = 'flex';
+        document.body.style.overflow = 'hidden'; // Disable scrolling of the main page
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      overlay.style.display = 'none';
+      document.body.style.overflow = ''; // Enable scrolling of the main page
+    });
+  });
+</script>
+
+
+
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const mediaElements = document.querySelectorAll('.image, video');
@@ -317,7 +341,7 @@ document.addEventListener('DOMContentLoaded', function() {
       overlayContent.innerHTML = '';
       overlayContent.appendChild(clonedMedia);
       overlay.style.display = 'flex';
-      document.body.style.overflow = 'hidden'; // Disable scrolling of the main page immediately
+      document.body.style.overflow = 'hidden'; // Disable scrolling of the main page
       document.body.classList.add('overlay-open'); // Add class to disable scrolling
     });
   });
