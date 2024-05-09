@@ -369,13 +369,6 @@ document.addEventListener('DOMContentLoaded', function() {
     overlayContent.innerHTML = '';
     overlayContent.appendChild(clonedMedia);
   });
-
-  // Disable scrolling of the main page immediately when the overlay opens
-  overlay.addEventListener('transitionend', () => {
-    if (overlay.style.display === 'flex') {
-      document.body.style.overflow = 'hidden';
-    }
-  });
 });
 </script>
 </body>
