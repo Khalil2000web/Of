@@ -5,6 +5,6 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^([^\.]+)$ $1.html [NC,L]
 
-# Redirect requests ending with .html to the same URL without the extension
-RewriteCond %{THE_REQUEST} \.html
-RewriteRule ^(.+)\.html$ /$1 [R=301,L]
+# Redirect requests to add .html extension back to the original URL without .html
+RewriteCond %{THE_REQUEST} \s/+(.*?/)?(?:index)?(.*?)\.html[\s?/] [NC]
+RewriteRule ^ /%1%2 [R=302,L,NE]
