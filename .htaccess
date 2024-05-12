@@ -9,6 +9,6 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^([^\.]+)$ $1.html [NC,L]
 
-# Prevent direct access to .html files
+# Block direct access to .html files
 RewriteCond %{THE_REQUEST} \.html
 RewriteRule ^ - [F,L]
