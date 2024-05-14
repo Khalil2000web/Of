@@ -132,6 +132,15 @@ h1 {
         text-decoration: none;
         padding: 20px;
     }
+    
+    .middle-text {
+  font-family: Victor Mono, Charcoal, sans-serif; /* Use Impact font */
+  font-size: 10px; /* Set font size */
+  color: white; /* Change font color to white */
+  padding: 50px; /* Add padding to the text */
+  margin-left: 1000px;
+margin-bottom: 2px;
+}
 
     @media screen and (max-width: 600px) {
         nav.bottom-nav ul li a {
@@ -149,11 +158,11 @@ h1 {
 
     @media screen and (min-width: 601px) {
         nav.bottom-nav ul li a {
-            font-size: 8px;
-            padding: 5px;
+            font-size: 12px;
+            padding: 4px;
         }
         nav.top-nav ul li a {
-            font-size: 15px;
+            font-size: 25px;
         }
     }
 
@@ -259,16 +268,17 @@ body.overlay-open #overlay {
     </ul>
   </nav>
 
-  <nav class="bottom-nav">
+<nav class="bottom-nav">
     <ul>
-      <li><a href="/">JOIN</a></li> <!-- Left-aligned button -->
+        <li><a href="/">JOIN</a></li> <!-- Left-aligned button -->
     </ul>
+    <span class="middle-text">&copy; 2024 KHALIL</span> <!-- Middle text -->
     <ul>
-      <li><a href="/been-otr">BEEN OTR</a></li> <!-- Right-aligned button -->
-      <li><a href="/terms-conditions">TERMS</a></li> <!-- Right-aligned button -->
-      <li><a href="/privacy-policy">PRIVACY</a></li> <!-- Right-aligned button -->
+        <li><a href="/been-otr">BEEN OTR</a></li> <!-- Right-aligned button -->
+        <li><a href="/terms-conditions">TERMS</a></li> <!-- Right-aligned button -->
+        <li><a href="/privacy-policy">PRIVACY</a></li> <!-- Right-aligned button -->
     </ul>
-  </nav>
+</nav>
 
 <div id="overlay">
   <span id="prev-btn" class="nav-btn"><b>&lt;</b></span>
