@@ -103,10 +103,6 @@ body {
       margin: 0 10px; /* Add margin to create space between buttons */
     }
 
-    nav.bottom-nav ul li:first-child {
-      margin-right: 30px; /* Push the first item to the left */
-    }
-
     nav.top-nav ul li a {
       font-family: Victor Mono, Charcoal, sans-serif; /* Use Impact font */
       font-size: 19px; /* Set font size */
@@ -164,7 +160,7 @@ margin-bottom: 2px;
   }
     }
 
-    @media screen and (max-width: 400px) {
+    @media screen and (min-width: 601px) {
       nav.bottom-nav ul li a {
         font-size: 8px; /* Adjust the font size for smaller screens */
       }
@@ -173,6 +169,9 @@ margin-bottom: 2px;
       }
         nav.bottom-nav ul li a {
         padding: 10px; /* Add padding to the buttons */
+    }
+    nav.bottom-nav ul li:first-child {
+      margin-right: auto; /* Push the first item to the left */
     }
     }  
 </style>
