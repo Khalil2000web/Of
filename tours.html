@@ -312,15 +312,29 @@ body, html {
 @media screen and (min-width: 600px) {
   .circle {
     width: calc(33.33% - 20px); /* Adjust width for three circles per row */
+    height: 250px;
+    margin-right: 20px
+    mrgin-bottom: 20px;
   }
 
-  .circle:nth-child(3n + 2) {
-    margin-left: auto; /* Move the middle circle to the center */
-    margin-right: auto;
+  .container {
+    justify-content: space-between; /* Spread circles evenly in each row */
   }
 
   .circle:nth-child(3n + 1) {
-    margin-right: auto; /* Move the first circle to the left */
+    margin-right: auto; /* Align the first circle to the left */
+  }
+
+  .circle:nth-child(3n + 2) {
+    margin: 0 auto; /* Center the middle circle */
+  }
+
+  .circle:nth-child(3n + 3) {
+    margin-left: auto; /* Align the last circle to the right */
+    
+      .circle-text,
+  .text-only {
+    font-size: 17px;
   }
 }
 
