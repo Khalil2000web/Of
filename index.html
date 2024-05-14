@@ -163,12 +163,19 @@ margin-left: 70px;
 
     @media screen and (min-width: 601px) {
         nav.bottom-nav ul li a {
-            font-size: 15px;
-            padding: 3px;
+            font-size: 13px;
+            padding: 4px;
         }
         nav.top-nav ul li a {
             font-size: 22px;
         }
+        nav.bottom-nav ul li:first-child a {
+        margin-right: 20px;
+    }
+    
+        nav.bottom-nav ul li:last-child {
+        margin-left: 20px;
+    }
     }
 
 /* Remove overflow: hidden; to enable scrolling of the main page */
