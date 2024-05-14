@@ -303,22 +303,27 @@ body, html {
     text-align: center;
     font-size: 20px;
     font-family: 'Victor Mono', Charcoal, sans-serif;
-    margin-right: 20px; /* Add space between circles */
-    margin-bottom: 20px; /* Add space between rows of circles */
+    margin-right: 30px; /* Add space between circles */
+    margin-bottom: 30px; /* Add space between rows of circles */
   }
 
   /* Media query for larger screens */
   @media screen and (min-width: 600px) {
     .circle {
-      width: 200px; /* Adjust width for larger screens */
-      height: 200px; /* Adjust height for larger screens */
-      margin-right: 20px; /* Add space between circles */
-      margin-bottom: 20px; /* Add space between rows of circles */
+      width: 250px; /* Adjust width for larger screens */
+      height: 250px; /* Adjust height for larger screens */
+      margin-right: 30px; /* Add space between circles */
+      margin-bottom: 30px; /* Add space between rows of circles */
     }
     
   .container {
     justify-content: flex-start; /* Align circles to the start of the container */
 }
+
+  .circle-text,
+  .text-only {
+    font-size: 16px;
+    }
   }
 
   .circle img {
