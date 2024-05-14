@@ -282,11 +282,13 @@ body, html {
     text-decoration: none; /* Removes underline from links */
   }
 
-  .container {
-    display: flex;
-    flex-wrap: wrap; /* Allow circles to wrap to the next row */
-    justify-content: center; /* Center circles horizontally */
-  }
+.container {
+  display: flex;
+  flex-wrap: wrap; /* Allow circles to wrap to the next row */
+  justify-content: center; /* Center circles horizontally */
+  align-items: center; /* Center circles vertically */
+  margin: 0 auto; /* Center the container horizontally */
+}
 
   .circle {
     width: 330px;
@@ -310,10 +312,15 @@ body, html {
   /* Media query for larger screens */
   @media screen and (min-width: 600px) {
     .circle {
-      width: 200px; /* Adjust width for larger screens */
-      height: 200px; /* Adjust height for larger screens */
+      width: 250px; /* Adjust width for larger screens */
+      height: 250px; /* Adjust height for larger screens */
       margin-right: 20px; /* Add space between circles */
       margin-bottom: 20px; /* Add space between rows of circles */
+    }
+    
+  .circle-text,
+  .text-only {
+    font-size: 12px;
     }
   }
 
