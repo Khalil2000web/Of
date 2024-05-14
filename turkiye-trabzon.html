@@ -65,8 +65,7 @@ body {
 </font>
 
   <style>
-    /* Style for the top navigation bar */
-    nav.top-nav {
+nav.top-nav {
       position: fixed; /* Keep the top navigation bar fixed */
       top: 0; /* Position it at the top */
       left: 0; /* Position it at the left */
@@ -103,10 +102,14 @@ body {
       margin: 0 10px; /* Add margin to create space between buttons */
     }
 
+    nav.bottom-nav ul li:first-child {
+      margin-right: auto; /* Push the first item to the left */
+    }
+
     nav.top-nav ul li a {
       font-family: Victor Mono, Charcoal, sans-serif; /* Use Impact font */
       font-size: 19px; /* Set font size */
-      color: white; /* Change font color to white */
+      color: black; /* Change font color to white */
       text-decoration: none;
       padding: 16px; /* Add padding to the buttons */
     }
@@ -114,7 +117,7 @@ body {
     nav.bottom-nav ul li a {
       font-family: Victor Mono, Charcoal, sans-serif; /* Use Impact font */
       font-size: 21px; /* Set font size */
-      color: white; /* Change font color to white */
+      color: black; /* Change font color to white */
       text-decoration: none;
       padding: 20px; /* Add padding to the buttons */
     }
@@ -155,9 +158,13 @@ margin-bottom: 2px;
         padding: 3px; /* Add padding to the buttons */
     }
     
-    nav.bottom-nav ul:first-child li:first-child a {
-    margin-right: 30px; /* Adjust the margin-right for the first button on larger screens */
-  }
+    nav.bottom-nav ul li:first-child a {
+      margin-right: 40px; /* Push the first item to the left */
+    }
+    
+    nav.bottom-nav ul li:last-child a {
+      margin-right: 40px; /* Push the first item to the left */
+    }
     
     .middle-text {
     display: none;
