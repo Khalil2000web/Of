@@ -36,17 +36,19 @@ body {
     top: 50%;
     transform: translateY(-50%);
     z-index: 999; /* ensure it's on top of other content */
+    font-size: 30px;
+    font-weight: 900;
 
   }
 
   .left-title {
     left: 0;
-    padding-left: 90px; /* Adjust as needed */
+    padding-left: 1000px; /* Adjust as needed */
   }
 
   .right-title {
     right: 0;
-    padding-right: 90px; /* Adjust as needed */
+    padding-right: 100px; /* Adjust as needed */
   }
 
   .title-container.hidden {
@@ -59,6 +61,16 @@ body {
     text-decoration: none; /* remove underline from links */
     cursor: pointer; /* change cursor to pointer on hover */
   }
+  
+      @media screen and (max-width: 600px) {
+        .right-title {
+              padding-right: 80px; /* Adjust as needed */
+              }
+              
+        .right-left {
+              padding-right: 80px; /* Adjust as needed */
+              }
+      }
 </style>
 
 <div class="title-container left-title">
