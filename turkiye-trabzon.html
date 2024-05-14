@@ -65,7 +65,8 @@ body {
 </font>
 
   <style>
-nav.top-nav {
+    /* Style for the top navigation bar */
+    nav.top-nav {
       position: fixed; /* Keep the top navigation bar fixed */
       top: 0; /* Position it at the top */
       left: 0; /* Position it at the left */
@@ -143,51 +144,36 @@ margin-bottom: 2px;
 
     /* Media query for smaller screens like phones */
     @media screen and (max-width: 600px) {
+      nav.bottom-nav {
+        justify-content: center; /* Center-align items */
+      }
+
       nav.bottom-nav ul li a {
         font-size: 14px; /* Adjust the font size for smaller screens */
+        padding: 20px; /* Add padding to the buttons */
       }
-      nav.top-nav ul li a {
-        font-size: 19px; /* Adjust the font size for smaller screens */
+
+      nav.bottom-nav ul li:first-child a {
+        margin-right: 20px; /* Push the first item to the left */
       }
-    
-      nav.bottom-nav ul li a {
-        padding: 5px; /* Add padding to the buttons */
+
+      nav.bottom-nav ul li:last-child a {
+        margin-left: 20px; /* Push the last item to the right */
       }
-    
-    nav.top-nav ul li a {
-        padding: 3px; /* Add padding to the buttons */
-    }
-    
-    nav.bottom-nav ul li:first-child a {
-      margin-right: 50px; /* Push the first item to the left */
-    }
-    
-    nav.bottom-nav ul li:last-child a {
-      margin-left: 10px; /* Push the first item to the left */
-    }
-    
-    nav.bottom-nav ul li:nth-child a {
-      margin-left: 50px; /* Push the first item to the left */
-      margin-right: 50px;
-    }
-    
-    .middle-text {
-    display: none;
-  }
+      
+      .middle-text {
+        display: none;
+      }
     }
 
     @media screen and (min-width: 601px) {
       nav.bottom-nav ul li a {
         font-size: 10px; /* Adjust the font size for smaller screens */
-      }
-        nav.top-nav ul li a {
-        font-size: 15px; /* Adjust the font size for smaller screens */
-      }
-        nav.bottom-nav ul li a {
         padding: 10px; /* Add padding to the buttons */
       }
     }  
-</style>
+  </style>
+
 <!-- Top Navigation Bar -->
 <nav class="top-nav">
   <ul>
