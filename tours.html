@@ -279,39 +279,48 @@ body, html {
   }
 
   .circle-link {
-    text-decoration: none; /* Removes underline from .container {
-  display: flex;
-  flex-wrap: wrap; /* Allow circles to wrap to the next row */
-  justify-content: center; /* Center circles horizontally */
-  align-items: center; /* Center circles vertically */
-  margin: 0 auto; /* Center the container horizontally */
-}
+    text-decoration: none; /* Removes underline from links */
+  }
 
-.circle {
-  width: 100%; /* Take up the full width initially */
-  max-width: 250px; /* Set maximum width for each circle */
-  height: auto;
-  border-radius: 50%;
-  background-color: black;
-  position: relative;
-  border: 3px solid gray; /* Default border color */
-  cursor: pointer;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  font-size: 20px;
-  font-family: 'Victor Mono', Charcoal, sans-serif;
-  margin: 10px; /* Add equal spacing between circles */
-}
+  .container {
+    display: flex;
+    flex-wrap: wrap; /* Allow circles to wrap to the next row */
+    justify-content: center; /* Center circles horizontally */
+  }
 
-/* Media query for larger screens */
-@media screen and (min-width: 600px) {
   .circle {
-    width: calc(33.33% - 20px); /* Adjust width for three circles per row */
+    width: 330px;
+    height: 330px;
+    border-radius: 50%;
+    background-color: black;
+    position: relative;
+    border: 3px solid gray; /* Default border color */
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Victor Mono', Charcoal, sans-serif;
+    margin-right: 20px; /* Add space between circles */
+    margin-bottom: 20px; /* Add space between rows of circles */
+  }
+
+  /* Media query for larger screens */
+  @media screen and (min-width: 600px) {
+    .circle {
+      width: 200px; /* Adjust width for larger screens */
+      height: 200px; /* Adjust height for larger screens */
+      margin-right: 20px; /* Add space between circles */
+      margin-bottom: 20px; /* Add space between rows of circles */
+    }
+    
+  .container {
+    justify-content: flex-start; /* Align circles to the start of the container */
   }
 }
+  }
 
   .circle img {
     width: 100%;
@@ -359,18 +368,6 @@ body, html {
   <a href="/tours-info" class="circle-link">
     <div class="circle">
       <div class="text-only"><b>INFO</b></div>
-    </div>
-  </a>
-
-  <a href="/" class="circle-link">
-    <div class="circle">
-      <div class="text-only">SOON</div>
-    </div>
-  </a>
-
-  <a href="/" class="circle-link">
-    <div class="circle">
-      <div class="text-only"><i>SOON</i></div>
     </div>
   </a>
 
