@@ -77,6 +77,19 @@ body {
       z-index: 1000; /* Ensure it's above other content */
     }
 
+    /* Style for the bottom navigation bar */
+    nav.bottom-nav {
+      position: fixed; /* Keep the bottom navigation bar fixed */
+      bottom: 0; /* Position it at the bottom */
+      left: 0; /* Position it at the left */
+      width: 100%; /* Take up the full width of the viewport */
+      display: flex; /* Use flexbox layout */
+      justify-content: space-between; /* Space items evenly */
+      align-items: center; /* Center-align the items vertically */
+      z-index: 1000; /* Ensure it's above other content */
+      height: 50px; /* Add the desired height */
+    }
+
     nav.top-nav ul,
     nav.bottom-nav ul {
       list-style-type: none;
@@ -90,6 +103,10 @@ body {
       margin: 0 10px; /* Add margin to create space between buttons */
     }
 
+    nav.bottom-nav ul li:first-child {
+      margin-right: 30px; /* Push the first item to the left */
+    }
+
     nav.top-nav ul li a {
       font-family: Victor Mono, Charcoal, sans-serif; /* Use Impact font */
       font-size: 19px; /* Set font size */
@@ -98,43 +115,20 @@ body {
       padding: 16px; /* Add padding to the buttons */
     }
 
-    nav.bottom-nav {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between; /* Space items evenly */
-  align-items: center;
-  z-index: 1000;
-  height: 50px;
-}
-
-nav.bottom-nav ul a {
-  display: flex;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-nav.bottom-nav ul li {
-  margin: 0 5px; /* Adjust margin as needed */
-}
-
-nav.bottom-nav ul:first-child li:last-child {
-  margin-left: auto; /* Push the last item to the right */
-}
-
-nav.bottom-nav ul:last-child li:first-child {
-  margin-right: auto; /* Push the first item to the left */
-}
+    nav.bottom-nav ul li a {
+      font-family: Victor Mono, Charcoal, sans-serif; /* Use Impact font */
+      font-size: 21px; /* Set font size */
+      color: white; /* Change font color to white */
+      text-decoration: none;
+      padding: 20px; /* Add padding to the buttons */
+    }
 
     /* Define font size for larger screens (e.g., tablets, computers) */
-    nav.bottom-nav ul li {
+    nav.bottom-nav ul li a {
       font-size: 10px; /* Adjust the font size as desired */
     }
 
-    nav.top-nav ul li {
+    nav.top-nav ul li a {
        font-size: 19px;     
     }
     
@@ -158,7 +152,7 @@ margin-bottom: 2px;
       }
     
       nav.bottom-nav ul li a {
-        padding: 0px; /* Add padding to the buttons */
+        padding: 37px; /* Add padding to the buttons */
       }
     
     nav.top-nav ul li a {
