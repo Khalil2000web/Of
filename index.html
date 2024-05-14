@@ -29,7 +29,6 @@ body {
   <body bgcolor="black">
   <header class"header">
 
-<font color="white">
 <style>
 .title-container {
     position: fixed;
@@ -38,40 +37,44 @@ body {
     z-index: 999; /* ensure it's on top of other content */
 }
 
-/* Rest of your CSS remains unchanged */
+.left-title, .right-title {
+    font-size: 10px;
+}
 
-  .left-title {
+.left-title {
     left: 0;
     padding-left: 60px; /* Adjust as needed */
-            font-size: 10px;
-  }
+}
 
-  .right-title {
+.right-title {
     right: 0;
     padding-right: 100px; /* Adjust as needed */
-              font-size: 10px;
-  }
+}
 
-  .title-container.hidden {
+.title-container.hidden {
     display: none; /* hide the container when it has the hidden class */
-  }
+}
 
-  .left-title a,
-  .right-title a {
+.left-title a, .right-title a {
     color: inherit; /* inherit text color from parent */
     text-decoration: none; /* remove underline from links */
     cursor: pointer; /* change cursor to pointer on hover */
-  }
+}
+
+h1 {
+    font-size: inherit; /* Inherit font size */
+    font-weight: normal; /* Set font weight to normal */
+    margin: 0; /* Remove default margin */
+}
 </style>
 
 <div class="title-container left-title">
-<a href="/music"><h1>act ii</h1></a>
+    <a href="/music"><span>act ii</span></a>
 </div>
 
 <div class="title-container right-title">
-<a href="/music"><h1>COWBOY CARTER</h1></a>
+    <a href="/music"><span>COWBOY CARTER</span></a>
 </div>
-</font>
 
 <style>
     nav.top-nav {
