@@ -291,8 +291,9 @@ body, html {
 }
 
 .circle {
-  width: 330px;
-  height: 330px;
+  width: calc(33.33% - 20px); /* Adjust width for three circles per row */
+  max-width: 250px; /* Set maximum width for each circle */
+  height: auto;
   border-radius: 50%;
   background-color: black;
   position: relative;
@@ -311,7 +312,7 @@ body, html {
 /* Media query for larger screens */
 @media screen and (min-width: 600px) {
   .circle {
-    width: 250px; /* Adjust width for three circles per row */
+    width: calc(33.33% - 20px); /* Adjust width for three circles per row */
     height: 250px;
     margin-right: 20px
     mrgin-bottom: 20px;
