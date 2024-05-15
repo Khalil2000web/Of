@@ -160,24 +160,15 @@ nav.bottom-nav ul li a {
     nav.bottom-nav ul li a {
         font-size: 12px;
         padding: 4px;
+        align-items: right;
 
     }
     nav.top-nav ul li a {
         font-size: 22px;
     }
-    nav.bottom-nav ul {
-        display: flex;
-        justify-content: space-between; /* Align buttons to left and right */
-        padding: 0 30px; /* Add space from frame */
-    }
-
-    nav.bottom-nav ul li a .first-btn {
-        margin-right: 100px; /* Push first button to left */
-    }
-
-    nav.bottom-nav ul li a .last-btn {
-        margin-left: 100px; /* Push last buttons to right */
-    }
+nav.bottom-nav ul li:first-child {
+    margin-right: auto; /* Push the first item to the left */
+  }
 }
 
 html, body {
@@ -281,11 +272,13 @@ body.overlay-open #overlay {
 
 <nav class="bottom-nav">
     <ul>
-        <li><span class="first-btn"><a href="/">JOIN</a></span></li>
+        <li><a href="/">JOIN</a></li>
+            </ul>
         <span class="middle-text">&copy; 2024 KHALIL</span> <!-- Middle text -->
-        <li><span class="last-btn"><a href="/been-otr">BEEN&nbsp;OTR</a></span></li>
-        <li><span class="last-btn"><a href="/terms-conditions">TERMS</a></span></li>
-        <li><span class="last-btn"><a href="/privacy-policy">PRIVACY</a></span></li>
+        <ul>
+        <li><a href="/been-otr">BEEN&nbsp;OTR</a></li>
+        <li><a href="/terms-conditions">TERMS</a></li>
+        <li><a href="/privacy-policy">PRIVACY</a></li>
     </ul>
 </nav>
 
