@@ -158,7 +158,7 @@ nav.bottom-nav ul li a {
 
 @media screen and (min-width: 601px) {
     nav.bottom-nav ul li a {
-        font-size: 12px;
+        font-size: 14px;
         padding: 4px;
         align-items: right;
 
@@ -166,10 +166,80 @@ nav.bottom-nav ul li a {
     nav.top-nav ul li a {
         font-size: 22px;
     }
-nav.bottom-nav ul li:first-child {
-  padding-right: 50px;
+nav.top-nav {
+    position: fixed; /* Keep the top navigation bar fixed */
+    top: 0; /* Position it at the top */
+    left: 0; /* Position it at the left */
+    width: 100%; /* Take up the full width of the viewport */
+    display: flex; /* Use flexbox layout */
+    justify-content: space-around; /* Space items evenly with more space between them */
+    align-items: center; /* Center-align the items vertically */
+    z-index: 1000; /* Ensure it's above other content */
+  }
+
+  /* Style for the bottom navigation bar */
+  nav.bottom-nav {
+    position: fixed; /* Keep the bottom navigation bar fixed */
+    bottom: 0; /* Position it at the bottom */
+    left: 0; /* Position it at the left */
+    width: 100%; /* Take up the full width of the viewport */
+    display: flex; /* Use flexbox layout */
+    justify-content: space-between; /* Space items evenly */
+    align-items: center; /* Center-align the items vertically */
+    z-index: 1000; /* Ensure it's above other content */
+    height: 50px; /* Add the desired height */
+  }
+
+  nav.top-nav ul,
+  nav.bottom-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  nav.top-nav ul li,
+  nav.bottom-nav ul li {
+    display: inline;
+    margin: 0 10px; /* Add margin to create space between buttons */
+  }
+
+  nav.bottom-nav ul li:first-child {
     margin-right: auto; /* Push the first item to the left */
   }
+
+  nav.top-nav ul li a {
+    font-family: BBManualMonoPro, Charcoal, sans-serif; /* Use Impact font */
+    font-size: 19px; /* Set font size */
+    color: white; /* Change font color to white */
+    text-decoration: none;
+    padding: 16px; /* Add padding to the buttons */
+  }
+
+  nav.bottom-nav ul li a {
+    font-family: BBManualMonoPro, Charcoal, sans-serif; /* Use Impact font */
+    font-size: 19px; /* Set font size */
+    color: white; /* Change font color to white */
+    text-decoration: none;
+    padding: 20px; /* Add padding to the buttons */
+  }
+
+  /* Define font size for larger screens (e.g., tablets, computers) */
+  nav.bottom-nav ul li a {
+    font-size: 10px; /* Adjust the font size as desired */
+  }
+
+  nav.top-nav ul li a {
+    font-size: 19px;     
+  }
+
+.middle-text {
+  font-family: 'BBManualMonoPro'; /* Use Impact font */
+  font-size: 15px; /* Set font size */
+  color: white; /* Change font color to white */
+  padding: 50px; /* Add padding to the text */
+  margin-left: 100px;
+margin-bottom: 2px;
+}
 }
 
 html, body {
