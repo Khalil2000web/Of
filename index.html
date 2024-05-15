@@ -142,15 +142,20 @@ nav.bottom-nav ul li a {
     nav.bottom-nav ul li a {
         font-size: 15px;
         padding: 1px;
-            align-items: center;
+        align-items: center;
     }
+
     nav.top-nav ul li a {
         padding: 8px;
         font-size: 21px;
     }
+
     nav.bottom-nav ul li {
-        display: inline;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
+
     .middle-text {
         display: none;
     }
@@ -337,10 +342,10 @@ body.overlay-open #overlay {
             </ul>
         <span class="middle-text">&copy; 2024 KHALIL</span> <!-- Middle text -->
         <ul>
-        <li><a href="/been-otr">BEEN&nbsp;ROYAL</a></li>
-        <li><a href="/terms-conditions">TERMS</a></li>
-        <li><a href="/privacy-policy">PRIVACY</a></li>
-    </ul>
+    <li><a href="/been-otr">BEEN<br>ROYAL</a></li> <!-- Break words with <br> -->
+    <li><a href="/terms-conditions">TERMS</a></li>
+    <li><a href="/privacy-policy">PRIVACY</a></li>
+</ul>
 </nav>
 
 <div id="overlay">
