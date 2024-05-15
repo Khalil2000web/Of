@@ -52,8 +52,94 @@ body {
 <font color="white">
 
 <style>
-  /* Style for the top navigation bar */
-  nav.top-nav {
+/* Your CSS styles */
+nav.top-nav {
+    margin-top: 14px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1000;
+}
+
+nav.bottom-nav {
+    margin-bottom: 9px;
+    position: fixed;
+    bottom: 13px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+nav.top-nav ul, nav.bottom-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav.top-nav ul li, nav.bottom-nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav.top-nav ul li a {
+    font-family: 'BBManualMonoPro', Charcoal, sans-serif;
+    font-size: 19px;
+    color: black;
+    text-decoration: none;
+    padding: 16px;
+}
+
+nav.bottom-nav ul li a {
+    font-family: 'BBManualMonoPro', Charcoal, sans-serif;
+    font-size: 11px;
+    color: black;
+    text-decoration: none;
+    padding: 20px;
+}
+
+.middle-text {
+    font-family: BBManualMonoPro;
+    font-size: 10px;
+    color: white;
+    padding: 0px;
+    bottom: 3px;
+}
+
+@media screen and (max-width: 600px) {
+    nav.bottom-nav ul li a {
+        font-size: 15px;
+        padding: 1px;
+        align-items: center;
+    }
+
+    nav.top-nav ul li a {
+        padding: 10px;
+        font-size: 19px;
+    }
+
+    .middle-text {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 601px) {
+    nav.bottom-nav ul li a {
+        font-size: 12px;
+        padding: 1px;
+        align-items: right;
+
+    }
+    nav.top-nav ul li a {
+        font-size: 22px;
+    }
+nav.top-nav {
     position: fixed; /* Keep the top navigation bar fixed */
     top: 0; /* Position it at the top */
     left: 0; /* Position it at the left */
@@ -91,95 +177,51 @@ body {
   }
 
   nav.bottom-nav ul li:first-child {
-    margin-right: auto; /* Push the first item to the left */
+    margin-left: 30px;
+  }
+      nav.bottom-nav ul li:last-child {
+    margin-right: 30px;
   }
 
   nav.top-nav ul li a {
     font-family: BBManualMonoPro, Charcoal, sans-serif; /* Use Impact font */
-    font-size: 19px; /* Set font size */
-    color: white; /* Change font color to white */
+    color: black; /* Change font color to white */
     text-decoration: none;
-    padding: 16px; /* Add padding to the buttons */
+
   }
 
   nav.bottom-nav ul li a {
     font-family: BBManualMonoPro, Charcoal, sans-serif; /* Use Impact font */
-    font-size: 19px; /* Set font size */
-    color: white; /* Change font color to white */
+    color: black; /* Change font color to white */
     text-decoration: none;
-    padding: 20px; /* Add padding to the buttons */
-  }
-
-  /* Define font size for larger screens (e.g., tablets, computers) */
-  nav.bottom-nav ul li a {
-    font-size: 10px; /* Adjust the font size as desired */
-  }
-
-  nav.top-nav ul li a {
-    font-size: 19px;     
   }
 
 .middle-text {
   font-family: 'BBManualMonoPro'; /* Use Impact font */
-  font-size: 10px; /* Set font size */
-  color: white; /* Change font color to white */
-  padding: 50px; /* Add padding to the text */
+  font-size: 12px; /* Set font size */
+  color: black; /* Change font color to white */
   margin-left: 100px;
-margin-bottom: 2px;
+margin-bottom: 5px;
 }
-
-  /* Media query for smaller screens like phones */
-  @media screen and (max-width: 600px) {
-    nav.bottom-nav ul li a {
-      font-size: 14px; /* Adjust the font size for smaller screens */
-    }
-    nav.top-nav ul li a {
-      font-size: 19px; /* Adjust the font size for smaller screens */
-      padding: 10px;
-    }
-
-    nav.bottom-nav ul li a {
-      padding: 37px; /* Add padding to the buttons */
-    }
-    
-     .middle-text {
-        display: none; /* Display copyright text on smaller screens */
-      }
-  }
-
-  @media screen and (max-width: 400px) {
-    nav.bottom-nav ul li a {
-      font-size: 8px; /* Adjust the font size for smaller screens */
-    }
-    nav.top-nav ul li a {
-      font-size: 15px; /* Adjust the font size for smaller screens */
-    }
-    nav.bottom-nav ul li a {
-      padding: 10px; /* Add padding to the buttons */
-    }
-  }
+} 
 </style>
-<!-- Top Navigation Bar -->
 <nav class="top-nav">
     <ul>
         <li><a href="/">HOME</a></li>
         <li><a href="/music">MUSIC</a></li>
         <li><a href="/acts">ACTS</a></li>
-      <li><a href="/blog">BLOG</a></li>
+        <li><a href="/blog">BLOG</a></li>
     </ul>
-</nav><br><br><div style="text-align: center;">
-    <font size="1" color="white">2023-24</font>
-</div><br><br><br>
+</nav>
 
-<!-- Bottom Navigation Bar -->
 <nav class="bottom-nav">
     <ul>
-        <li><a href="/">JOIN</a></li> <!-- Left-aligned button -->
+        <li><a href="/">JOIN</a></li>
     </ul>
-    <span class="middle-text">&copy; 2024 KHALIL</span> <!-- Middle text -->
+    <span class="middle-text">&copy; 2024 KHALIL</span>
     <ul>
-        <li><a href="/terms-conditions">TERMS</a></li> <!-- Right-aligned button -->
-        <li><a href="/privacy-policy">PRIVACY</a></li> <!-- Right-aligned button -->
+        <li><a href="/terms-conditions">TERMS</a></li>
+        <li><a href="/privacy-policy">PRIVACY</a></li>
     </ul>
 </nav>
 
