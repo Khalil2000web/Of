@@ -150,11 +150,11 @@ nav.bottom-nav ul li a {
         font-size: 21px;
     }
 
-    nav.bottom-nav ul li {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+.two-words-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
     .middle-text {
         display: none;
@@ -339,13 +339,13 @@ body.overlay-open #overlay {
 <nav class="bottom-nav">
     <ul>
         <li><a href="/">JOIN</a></li>
-            </ul>
-        <span class="middle-text">&copy; 2024 KHALIL</span> <!-- Middle text -->
-        <ul>
-    <li><a href="/been-otr">BEEN<br>ROYAL</a></li> <!-- Break words with <br> -->
-    <li><a href="/terms-conditions">TERMS</a></li>
-    <li><a href="/privacy-policy">PRIVACY</a></li>
-</ul>
+    </ul>
+    <span class="middle-text">&copy; 2024 KHALIL</span>
+    <ul>
+        <li><a href="/been-otr" class="two-words-btn">BEEN ROYAL</a></li> <!-- Add a unique class to the button -->
+        <li><a href="/terms-conditions">TERMS</a></li>
+        <li><a href="/privacy-policy">PRIVACY</a></li>
+    </ul>
 </nav>
 
 <div id="overlay">
