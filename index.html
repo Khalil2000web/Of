@@ -144,7 +144,7 @@ margin-left: 70px;
     @media screen and (max-width: 600px) {
     nav.bottom-nav ul li a {
         font-size: 15px;
-        padding: 0;
+        padding: 8px;
     }
     nav.top-nav ul li a {
         padding: 8px;
@@ -154,7 +154,9 @@ margin-left: 70px;
         display: inline;
     }
 
-    nav.bottom-nav ul li:nth-child(1),
+    nav.bottom-nav ul li:first-child {
+      padding-left: 20px;
+      }
     nav.bottom-nav ul li:nth-child(2) {
         float: left; /* Adjusted to float left */
         margin-right: 5px; /* Adjusted margin */
