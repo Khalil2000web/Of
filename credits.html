@@ -1,0 +1,443 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Kha</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">    <link href='https://fonts.googleapis.com/css?family=Victor Mono' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Victor Mono' rel='stylesheet'>
+<style>
+    body {
+        font-family: 'Victor Mono', sans-serif; /* Ensure fallback is specified */
+        font-size: 16px; /* Base font size */
+    }
+
+    /* Responsive Font Sizes */
+    @media (max-width: 768px) {
+        body {
+            font-size: 14px; /* Increase base font size for small devices */
+        }
+        nav.top-nav ul li a,
+        nav.bottom-nav ul li a {
+            font-size: 16px; /* Increase navigation font size for better visibility */
+        }
+        .special-guests {
+            font-size: 20px; /* Larger font size for special guests section */
+        }
+        .tab {
+            font-size: 14px; /* Larger font size for table descriptions */
+        }
+        .tit {
+            font-size: 18px; /* Larger title font size */
+        }
+    }
+</style>
+
+<style>
+    /* Your existing CSS styles */
+
+    /* Add margin-top to move the navigation buttons down */
+    nav.top-nav {
+        margin-top: 25px; /* Adjust the value as needed */
+    }
+</style>
+
+<style>
+    /* Your existing CSS styles */
+
+    /* Add margin-top to move the navigation buttons down */
+    nav.buttom-nav {
+        margin-buttom: 30px; /* Adjust the value as needed */
+    }
+</style>
+
+  </head>
+  <body bgcolor="black">
+<style>
+    /* Style for the top navigation bar */
+    nav.top-nav {
+      position: fixed; /* Keep the top navigation bar fixed */
+      top: 0; /* Position it at the top */
+      left: 0; /* Position it at the left */
+      width: 100%; /* Take up the full width of the viewport */
+      display: flex; /* Use flexbox layout */
+      justify-content: space-around; /* Space items evenly with more space between them */
+      align-items: center; /* Center-align the items vertically */
+      z-index: 1000; /* Ensure it's above other content */
+    }
+
+    /* Style for the bottom navigation bar */
+    nav.bottom-nav {
+      position: fixed; /* Keep the bottom navigation bar fixed */
+      bottom: 0; /* Position it at the bottom */
+      left: 0; /* Position it at the left */
+      width: 100%; /* Take up the full width of the viewport */
+      display: flex; /* Use flexbox layout */
+      justify-content: space-between; /* Space items evenly */
+      align-items: center; /* Center-align the items vertically */
+      z-index: 1000; /* Ensure it's above other content */
+    }
+
+    nav.top-nav ul,
+    nav.bottom-nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav.top-nav ul li,
+    nav.bottom-nav ul li {
+      display: inline;
+      margin: 0 10px; /* Add margin to create space between buttons */
+    }
+
+    nav.bottom-nav ul li:first-child {
+      margin-right: auto; /* Push the first item to the left */
+    }
+
+    nav.top-nav ul li a,
+    nav.bottom-nav ul li a {
+      font-family: Victor Mono, Charcoal, sans-serif; /* Use Impact font */
+      font-size: 19px; /* Set font size */
+      color: white; /* Change font color to white */
+      text-decoration: none;
+      padding: 11x; /* Add padding to the buttons */
+    }
+
+    nav.top-nav ul li a:hover,
+    nav.bottom-nav ul li a:hover {
+      color: white; /* Change color on hover */
+    }
+</style>
+
+<style>
+    nav.bottom-nav {
+      /* Add the desired height */
+      height: 50px;
+    }
+
+    nav.bottom-nav ul li a {
+      /* Adjust the font size */
+      font-size: 10px;
+    }
+</style>
+<!-- Top Navigation Bar -->
+<nav class="top-nav">
+    <ul>
+        <li><a href="home.html">HOME</a></li>
+        <li><a href=".html">SHOP</a></li>
+        <li><a href="tour.html">TOUR</a></li>
+        <li><a href="music.html">MUSIC</a></li>
+        <li><a href="acts.html">ACTS</a></li>
+    </ul>
+</nav><br><br><br><br><br>
+
+<!-- Bottom Navigation Bar -->
+<nav class="bottom-nav">
+    <ul>
+        <li><a href="#">JOIN</a></li> <!-- Left-aligned button -->
+    </ul>
+    <ul>
+        <li><a href="credits.html"><b>CREDITS</b></a></li> <!-- Right-aligned button -->
+        <li><a href="terms.html"><b>TERMS</b></a></li> <!-- Right-aligned button -->
+        <li><a href="privacy.html"><b>PRIVACY</b></a></li> <!-- Right-aligned button -->
+    </ul>
+</nav>
+
+<style>
+    .special-guests, .tab, .tit {
+        color: white;
+        text-align: center;
+    }
+    .special-guests {
+        font-size: 25px; /* equivalent to <font size="5"> */
+        font-weight: 900;
+    }
+    .tab {
+        font-size: 16px; /* equivalent to <font size="3"> */
+    }
+    .tit {
+      font-size: 20px;
+      font-weight: 900;
+    }
+
+    table {
+        margin-left: auto;
+        margin-right: auto; /* Center table */
+        width: 50%; /* Adjust based on your preference */
+        border-collapse: collapse;
+    }
+    td {
+        border: 1px solid transparent; /* Hide border */
+        padding: 3px; /* Reduced padding for less space between rows */
+        text-align: center; /* Center text within the cell */
+    }
+    .left-column, .right-column {
+        width: 50%; /* Split table into two equal halves */
+    }
+    .left-column {
+        font-size: x-small; /* Smaller font size for left column */
+        text-align: right; /* Right align text in the left column */
+        font-weight: bold;
+    }
+    .right-column {
+        font-weight: bold; /* Bold font for right column */
+        text-align: left; /* Left align text in the right column */
+    }
+</style>
+
+<div class="special-guests">
+    SPECIAL GUESTS<br>
+    <b>RANEEN</b><br>
+    <b>OMAYA</b><br>
+    <b>EMRAN</b><br>
+    <b>AHMAD</b><br>
+    <b>MIRA</b>
+</div>
+<br><br>
+
+<div class="tit">
+<b>DANCERS</b>
+</div>
+
+<div class="tab">
+    <table>
+        <tr>
+            <td class="left-column">DANCE CAPTAIN</td>
+            <td class="right-column">RANEEN</td>
+        </tr>
+        <!-- Additional rows -->
+        <tr>
+            <td class="left-column"></td>
+            <td class="right-column">KHALIL</td>
+        </tr>
+        <tr>
+            <td class="left-column"></td>
+            <td class="right-column">OMAIA</td>
+        </tr>
+        <tr>
+            <td class="left-column"></td>
+            <td class="right-column">MIRA</td>
+        </tr>
+        <tr>
+            <td class="left-column"></td>
+            <td class="right-column">AHMAD</td>
+        </tr>
+        <!-- More rows as needed -->
+    </table><br>
+</div>
+
+<div class="tit">
+<b>SINGERS</b>
+</div>
+
+<div class="tab">
+    <table>
+        <tr>
+            <td class="left-column">HEAD SINGER</td>
+            <td class="right-column">KHALIL</td>
+        </tr>
+        <tr>
+            <td class="left-column">BACKING SINGERS</td>
+            <td class="right-column">OMAIA</td>
+        </tr>
+        <tr>
+            <td class="left-column"></td>
+            <td class="right-column">MIRA</td>
+        </tr>
+        <tr>
+            <td class="left-column"></td>
+            <td class="right-column">AHMAD</td>
+        </tr>
+    </table><br>
+</div>
+
+<div class="tit">
+<b>CREATIVE DIRECTION</b>
+</div>
+
+<div class="tab">
+
+    <table>
+        <tr>
+            <td class="left-column">DIRECTOR</td>
+            <td class="right-column">KHALIL</td>
+        </tr>
+        <tr>
+            <td class="left-column">CO-DIRECTOR</td>
+            <td class="right-column">OMAYA</td>
+        </tr>
+        <tr>
+            <td class="left-column"></td>
+            <td class="right-column">RANEEN</td>
+        </tr>
+    </table><br>
+</div>
+
+<div class="tit">
+<b>MUSIC</b>
+</div>
+
+<div class="tab">
+    <table>
+        <tr>
+            <td class="left-column">EXECUTIVE PRODUCER OF MUSIC</td>
+            <td class="right-column">DAMIEN SMITH</td>
+        </tr>
+        <tr>
+            <td class="left-column">MUSIC DIRECTOR</td>
+            <td class="right-column">KHALIL DIAB</td>
+        </tr>
+        <tr>
+            <td class="left-column"></td>
+            <td class="right-column">BEYONCÈ KNOWLES-CARTER</td>
+        </tr>
+        <tr>
+            <td class="left-column"></td>
+            <td class="right-column">DAMMO FARMER</td>
+        </tr>
+        <tr>
+            <td class="left-column">BACKING VOCALS</td>
+            <td class="right-column">MIRA</td>
+        </tr>
+        <tr>
+            <td class="left-column"></td>
+            <td class="right-column">OMAIA</td>
+        </tr>
+        <tr>
+            <td class="left-column"></td>
+            <td class="right-column">AHMAD</td>
+        </tr>
+        <tr>
+            <td class="left-column"></td>
+            <td class="right-column">EMRAN</td>
+        </tr>
+    </table><br>
+</div>
+
+<div class="tit">
+<b>CHOREOGRAPHY</b>
+</div>
+
+<div class="tab">
+    <table>
+        <tr>
+            <td class="left-column">DIRECTOR OF CHOREOGRAPHY</td>
+            <td class="right-column">RANEEN</td>
+        </tr>
+        <tr>
+            <td class="left-column"></td>
+            <td class="right-column">KHALIL</td>
+        </tr>
+        <tr>
+            <td class="left-column">CHOREOGRAPHERS</td>
+            <td class="right-column">KHALIL</td>
+        </tr>
+        <tr>
+            <td class="left-column"></td>
+            <td class="right-column">RANEEN</td>
+        </tr>
+        <tr>
+            <td class="left-column"></td>
+            <td class="right-column">MIRA</td>
+        </tr>
+    </table><br>
+
+<div class="tit">
+<b>LIVE SHOW AND FILMING</b>
+</div>
+
+<div class="tab">
+     <table>
+     <tr>
+            <td class="left-column">LIVE SHOW DIRECTOR</td>
+            <td class="right-column">KHALIL</td>
+        </tr>
+        <tr>
+            <td class="left-column">LIVE CAMERA DIRECTOR</td>
+            <td class="right-column">OMAIA</td>
+        </tr>
+        <tr>
+            <td class="left-column"></td>
+            <td class="right-column">KHALIL</td>
+        </tr>
+        <tr>
+            <td class="left-column"></td>
+            <td class="right-column">MIRA</td>
+        </tr>
+        <tr>
+            <td class="left-column">LIGHTING DESNER</td>
+            <td class="right-column">KHALIL</td>
+        </tr>
+        <tr>
+            <td class="left-column"></td>
+            <td class="right-column">OMAIA</td>
+        </tr>
+    </table><br>
+</div>
+
+<div class=tit>
+<b>STAGE DESIGN</b>
+</div>
+<div class="tab">
+   <table>
+        <tr>
+            <td class="left-column">STAGE DESIGNERS</td>
+            <td class="right-column">KHALIL</td>
+        </tr>
+        <tr>
+            <td class="left-column"></td>
+            <td class="right-column">OMAIA</td>
+        </tr>
+   </table><br>
+</div>
+
+<div class="tit">
+<b>TOUR VISUALS</b>
+</div>
+
+<div class="tab">
+   <table>
+        <tr>
+            <td class="left-column">TOUR VISUALS PRODUCTION COMPANIES</td>
+            <td class="right-column">PARKWOOD ENTERTAINMENT</td>
+        </tr>
+        <tr>
+            <td class="left-column"></td>
+            <td class="right-column">KHALIL</td>
+        </tr>
+        <tr>
+            <td class="left-column">DIRECTOR</td>
+            <td class="right-column">BEYONCÈ KNOWLES-CARTER</td>
+        </tr>
+        <tr>
+            <td class="left-column"></td>
+            <td class="right-column">KHALIL</td>
+        </tr>
+        <tr>
+            <td class="left-column">ART DIRECTOR</td>
+            <td class="right-column">KELLY SHAMI</td>
+        </tr>
+   </table><br>
+</div>
+
+<div class="tit">
+<b>THANK YOU FRIENDS, FAMILY, AND PARTNERS</b>
+</div><br>
+<div class="ritht-column">
+<b>THANK YOU TO OUR<br>FRIENDS, FAMILY, AND<br>PARTNERS FOR YOUR<br>UNWAVERING SUPPORT<br>DURING OUR CREATIVE<br>JOURNEY WHILE ALLOWING<br>US TO THINK, DANCE,<br>DREAM BIG, AND CREATE<br>OUTSIDE THE BOX. WE DO<br>IT ALL FOR YOU!</b>
+</div><br><br>
+<div class="tit">
+<b>SPECIAL THANKS</b>
+</div><br>
+<div class="ritht-column">
+<b>QUEEN RANEEN<br>OMAIA<br>TALA<br>AHMAD<br>EMRAN<br>MIRA<br>MY MOM<br>MY DAD<br>AMAZON MUSIC<br>BEYONCÈ KNOWLES-CARTER<br>BLUE IVY CARTER<br></b><br><br>
+<div class="tit">
+<b>"ON THE ROYAL I/II/III"<br><br>O⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀T⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀R</b><br><br>
+</div>
+<div class="titht-column">
+<b>WRITTEN BY: KHALIL DIAB</b><br><br><br>
+</div>
+<font align=center color="white" size="2">
+<b>THANK U! - YOUR KHLO</b>
+</font> <br><br><br><br><br>
+  </body>
+</html>
