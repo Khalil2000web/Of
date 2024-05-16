@@ -2,11 +2,22 @@
 <html>
   <head>
     <title>Kha</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">    <link href='https://fonts.googleapis.com/css?family=Victor Mono' rel='stylesheet'>
-    <link href='https://fonts.googleapis.com/css?family=Victor Mono' rel='stylesheet'>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <style>
+@font-face {
+  font-family: 'BBManualMonoPro';
+  src: url('BBManualMonoProTX-Regular.otf') format('opentype');
+  /* Additional font properties (e.g., font-weight, font-style) can be specified here */
+}
+body {
+    font-family: 'BBManualMonoPro';font-size: 10px;
+}
+</style>
+  
 <style>
     body {
-        font-family: 'Victor Mono', sans-serif; /* Ensure fallback is specified */
+        font-family: 'BBManualMonoPro', sans-serif; /* Ensure fallback is specified */
         font-size: 16px; /* Base font size */
     }
 
@@ -95,7 +106,7 @@
 
     nav.top-nav ul li a,
     nav.bottom-nav ul li a {
-      font-family: Victor Mono, Charcoal, sans-serif; /* Use Impact font */
+      font-family: , Charcoal, sans-serif; /* Use Impact font */
       font-size: 19px; /* Set font size */
       color: white; /* Change font color to white */
       text-decoration: none;
