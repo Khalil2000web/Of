@@ -98,6 +98,10 @@ nav.bottom-nav ul li a {
     .middle-text {
         display: none;
     }
+    
+    .nav-bottom.hide-in-overlay {
+    display: none; /* Hide the button when the overlay is active */
+}
 }
 
 @media screen and (min-width: 601px) {
@@ -185,7 +189,7 @@ margin-bottom: 2px;
     </ul>
 </nav><br><br><br><br><br><br><br><br>
 
-<nav class="bottom-nav">
+<nav class="nav-bottom hide-in-overlay">
     <ul>
         <li><a href="/">JOIN</a></li>
     </ul>
@@ -197,66 +201,130 @@ margin-bottom: 2px;
 </nav>
 
 <style>
-.song {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    margin-bottom: 13px;
-    padding: 0 20px; /* Adjust the padding as needed */
-  }
-  .song-number {
-    margin-right: 10px;
-    color: white;
-  }
-.song-name {
-    max-width: calc(100% - 50px); /* Adjust based on your needs */
-    overflow: hidden;
-    word-wrap: break-word; /* This allows long words to break and wrap onto the next line */
-    text-align: right; /* Align the text to the right */
-    white-space: pre-line; /* Preserve line breaks */
-    color: white;
+/* Your CSS styles here */
+
+/* Overlay styles */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9998; /* Adjusted z-index */
+    background-color: black; /* Changed background color */
+    color: white; /* Text color */
 }
 
-@media screen and (max-width: 600px) {
-.song-name,
-  .song-number {
-  font-size: 16px;
-  }
-    .centered-button {
-    font-size: 17px;
-    }
+.overlay-content {
+    padding: 20px;
+    border-radius: 5px;
 }
 
-@media screen and (min-width: 601px) {
-.song-name,
-  .song-number {
-  font-size: 17px;
-  }
-  .song {
-    padding: 0 25px; /* Adjust the padding as needed */
-  }
-  .centered-button {
-    font-size: 19px;
-    }
+.overlay-title {
+    font-size: 24px;
+    margin: 0;
+    text-align: left;
+    color: white; /* Title color */
+}
+
+.overlay-close {
+    position: fixed;
+    bottom: 15px; /* Adjusted position */
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    color: white; /* Close button color */
+}
+
+.buttons-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.overlay-button {
+    display: block;
+    padding: 10px 20px;
+    background-color: transparent; /* Removed background color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 .centered-button {
     position: fixed;
-    top: 10%;
+    top: 10px; /* Adjusted top position */
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
     padding: 10px 20px;
     background-color: transparent;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    z-index: 9999; /* Adjusted z-index */
     text-decoration: none;
 }
+
+.song {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 13px;
+    padding: 0 20px;
+}
+
+.song-number,
+.song-name {
+    color: white;
+}
+
+@media screen and (max-width: 600px) {
+    .song-name,
+    .song-number {
+        font-size: 16px;
+    }
+    .centered-button {
+        font-size: 17px;
+    }
+
+}
+
+@media screen and (min-width: 601px) {
+    .song-name,
+    .song-number {
+        font-size: 17px;
+    }
+    .song {
+        padding: 0 25px;
+    }
+    .centered-button {
+        font-size: 19px;
+    }
+}
+
+.centered-button.hide-in-overlay {
+    display: none; /* Hide the button when the overlay is active */
+}
+
 </style>
 
+<div id="overlay" class="overlay">
+  <span class="overlay-close" onclick="closeOverlay()">X</span> <!-- Close button -->
+  <div class="overlay-content">
+    <h1 id="overlay-title" class="overlay-title"></h1>
+    <div class="buttons-container">
+      <button class="overlay-button">CREDITS</button>
+      <button class="overlay-button">LYRICS</button>
+      <button class="overlay-button">act i    ON THE ROYAL</button>
+    </div>
+  </div>
+</div>
 
-<a href="/credits" class="centered-button">CREDITS</a>
+<a href="/credits" class="centered-button hide-in-overlay" id="credits-button">CREDITS</a>
 
 <div class="song">
   <span class="song-number">1.</span>
@@ -392,6 +460,28 @@ margin-bottom: 2px;
   <span class="song-number">27.</span>
   <span class="song-name">SUMMER RENAISSANCE</span>
 </div><br><br><br><br><br><br><br><br><br>
+
+<script>
+function openOverlay(songNumber, songName) {
+    var overlay = document.getElementById('overlay');
+    var overlayTitle = document.getElementById('overlay-title');
+    
+    overlayTitle.textContent = songNumber + '. ' + songName;
+    overlay.style.display = 'block';
+    document.body.style.overflow = 'hidden'; // Disable scrolling on the main page
+}
+
+function closeOverlay() {
+    var overlay = document.getElementById('overlay');
+    overlay.style.display = 'none';
+    document.body.style.overflow = 'auto'; // Enable scrolling on the main page
+}
+
+document.getElementById('credits-button').addEventListener('click', function() {
+    // Handle credits button click event
+    // Example: window.location.href = '/credits';
+});
+</script>
 
 </body>
 </html>
