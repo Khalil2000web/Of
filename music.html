@@ -201,138 +201,68 @@ margin-bottom: 2px;
 </nav>
 
 <style>
-/* Your CSS styles here */
-
-/* Overlay styles */
-.overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 9998; /* Adjusted z-index */
-    background-color: black; /* Changed background color */
-    color: white; /* Text color */
-}
-
-.overlay-content {
-    padding: 20px;
-    border-radius: 5px;
-}
-
-.overlay-title {
-    font-size: 29px;
-    margin: 0;
-    text-align: left;
-    color: white; /* Title color */
-}
-
-.overlay-close {
-    position: fixed;
-    bottom: 50px; /* Adjusted position */
-    left: 50%;
-    transform: translateX(-50%);
-    cursor: pointer;
-    color: white; /* Close button color */
-    font-size: 30px
-    font-family: sans-serif;
-}
-
-.buttons-container {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.overlay-button {
-    display: block;
-    width: 100%; /* Make the buttons take up the full width */
-    padding: 10px 20px;
-    background-color: transparent; /* Removed background color */
+.song {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 13px;
+    padding: 0 20px; /* Adjust the padding as needed */
+  }
+  .song-number {
+    margin-right: 10px;
     color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-bottom: 20px;
-    text-align: center;
-    font-family: 'BBManualMonoPro';
-    font-size: 20px;
-    padding-top: 90px;
+  }
+.song-name {
+    max-width: calc(100% - 50px); /* Adjust based on your needs */
+    overflow: hidden;
+    word-wrap: break-word; /* This allows long words to break and wrap onto the next line */
+    text-align: right; /* Align the text to the right */
+    white-space: pre-line; /* Preserve line breaks */
+    color: white;
+}
+
+@media screen and (max-width: 600px) {
+.song-name,
+  .song-number {
+  font-size: 16px;
+  }
+    .centered-button {
+    font-size: 17px;
+    }
+}
+
+@media screen and (min-width: 601px) {
+.song-name,
+  .song-number {
+  font-size: 17px;
+  }
+  .song {
+    padding: 0 25px; /* Adjust the padding as needed */
+  }
+  .centered-button {
+    font-size: 19px;
+    }
 }
 
 .centered-button {
     position: fixed;
-    top: 10px; /* Adjusted top position */
+    top: 10%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translate(-50%, -50%);
     padding: 10px 20px;
     background-color: transparent;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    z-index: 9999; /* Adjusted z-index */
     text-decoration: none;
 }
-
-.song {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    margin-bottom: 13px;
-    padding: 0 20px;
-}
-
-.song-number,
-.song-name {
-    color: white;
-}
-
-@media screen and (max-width: 600px) {
-    .song-name,
-    .song-number {
-        font-size: 16px;
-    }
-    .centered-button {
-        font-size: 17px;
-    }
-
-}
-
-@media screen and (min-width: 601px) {
-    .song-name,
-    .song-number {
-        font-size: 17px;
-    }
-    .song {
-        padding: 0 25px;
-    }
-    .centered-button {
-        font-size: 19px;
-    }
-}
-
-.centered-button.hide-in-overlay {
-    display: none; /* Hide the button when the overlay is active */
-}
-
 </style>
 
-<div id="overlay" class="overlay">
-  <span class="overlay-close" onclick="closeOverlay()">X</span> <!-- Close button -->
-  <div class="overlay-content">
-    <h1 id="overlay-title" class="overlay-title"></h1>
-    <div class="buttons-container">
-      <a href="/credits" class="overlay-button">CREDITS</a>
-      <button class="overlay-button">LYRICS</button>
-      <a href="/been-otr" class="overlay-button">act i    ON THE ROYAL</a>
-    </div>
-  </div>
-</div>
 
-<a href="/credits" class="centered-button hide-in-overlay" id="credits-button">CREDITS</a>
+<a href="/credits" class="centered-button">CREDITS</a>
 
-<div class="song" onclick="openOverlay(1, 'HOLY GRAIL')">
+<div class="song">
   <span class="song-number">1.</span>
   <span class="song-name">HOLY GRAIL (intro)</span>
 </div>
@@ -466,28 +396,6 @@ margin-bottom: 2px;
   <span class="song-number">27.</span>
   <span class="song-name">SUMMER RENAISSANCE</span>
 </div><br><br><br><br><br><br><br><br><br>
-
-<script>
-function openOverlay(songNumber, songName) {
-    var overlay = document.getElementById('overlay');
-    var overlayTitle = document.getElementById('overlay-title');
-    
-    overlayTitle.textContent = songNumber + '. ' + songName;
-    overlay.style.display = 'block';
-    document.body.style.overflow = 'hidden'; // Disable scrolling on the main page
-}
-
-function closeOverlay() {
-    var overlay = document.getElementById('overlay');
-    overlay.style.display = 'none';
-    document.body.style.overflow = 'auto'; // Enable scrolling on the main page
-}
-
-document.getElementById('credits-button').addEventListener('click', function() {
-    // Handle credits button click event
-    // Example: window.location.href = '/credits';
-});
-</script>
 
 </body>
 </html>
