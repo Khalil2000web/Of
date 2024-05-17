@@ -349,17 +349,6 @@ margin-bottom: 2px;
             }
         }
     </style>
-    <script>
-        function openOverlay(title, content) {
-            document.getElementById('overlay').style.display = 'block';
-            document.getElementById('overlay-title').innerText = title;
-            document.getElementById('overlay-text').innerHTML = content;
-        }
-
-        function closeOverlay() {
-            document.getElementById('overlay').style.display = 'none';
-        }
-    </script>
 </head>
 <body bgcolor="black">
 
@@ -380,6 +369,17 @@ margin-bottom: 2px;
     <span class="song-name">THE KITTEN CARTER</span>
 </div>
 
+<script>
+    function openOverlay(title, content) {
+        document.getElementById('overlay').style.display = 'block';
+        document.getElementById('overlay-header').innerText = title; // Change to overlay-header
+        document.getElementById('overlay-text').innerHTML = content; // Change to overlay-text
+    }
+
+    function closeOverlay() {
+        document.getElementById('overlay').style.display = 'none';
+    }
+</script>
 
 </body>
 </html>
