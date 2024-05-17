@@ -433,14 +433,16 @@ document.addEventListener('DOMContentLoaded', function() {
       const clonedMedia = media.cloneNode(true);
       overlayContent.innerHTML = '';
       overlayContent.appendChild(clonedMedia);
-      document.body.classList.add('overlay-open'); // Disable scrolling
       overlay.style.display = 'flex';
+      document.body.classList.add('overlay-open'); // Disable scrolling of the main page
+      document.body.style.overflow = 'hidden'; // Disable scrolling
     });
   });
 
   closeBtn.addEventListener('click', () => {
     overlay.style.display = 'none';
-    document.body.classList.remove('overlay-open'); // Enable scrolling
+    document.body.classList.remove('overlay-open'); // Enable scrolling of the main page
+    document.body.style.overflow = ''; // Enable scrolling
   });
 
   prevBtn.addEventListener('click', () => {
