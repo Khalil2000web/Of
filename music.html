@@ -221,6 +221,16 @@ nav.top-nav {
     margin: 0;
     text-align: left;
     color: white; /* Title color */
+    font-weight: 600;
+}
+
+.overlay-title2 {
+    font-size: 19px;
+    margin: 0;
+    text-align: left;
+    color: white; /* Title color */
+    margin-left: 5px;
+    font-weight: 600;
 }
 
 .overlay-close {
@@ -256,7 +266,7 @@ nav.top-nav {
 
 .centered-button {
     position: fixed;
-    top: 25px; /* Adjusted top position */
+    top: 45px; /* Adjusted top position */
     left: 50%;
     transform: translateX(-50%);
     padding: 10px 20px;
@@ -309,7 +319,8 @@ nav.top-nav {
 <div id="overlay" class="overlay">
   <span class="overlay-close" onclick="closeOverlay()">X</span> <!-- Close button -->
   <div class="overlay-content">
-    <h1 id="overlay-title" class="overlay-title"></h1>
+    <p id="overlay-title" class="overlay-title"><p>
+    <p id="overlay-title2" class="overlay-title2"><p>      
     <div class="buttons-container">
       <button class="overlay-button" onclick="window.location.href='/credits'">CREDITS</button>
       <button class="overlay-button" onclick="openLyricsOverlay()">LYRICS</button>
