@@ -224,17 +224,22 @@ margin-bottom: 2px;
             text-align: center;
         }
 
-        .overlay-close {
-            position: fixed;
-            bottom: 7%;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 10000;
-            cursor: pointer;
-            color: white;
-            font-size: 40px;
-            font-family: 'Concert One';
-        }
+.overlay-close {
+    position: fixed;
+    bottom: 7%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10000;
+    cursor: pointer;
+    width: 50px; /* Adjust width as needed */
+    height: 50px; /* Adjust height as needed */
+}
+
+.overlay-close img {
+    display: block; /* Ensure the image is displayed as a block */
+    max-width: 100%; /* Ensure the image is responsive */
+    height: auto; /* Maintain aspect ratio */
+}
 
 .overlay-content {
     padding: 150px 20px 80px; /* Adjusted padding to create space at the top */
@@ -371,7 +376,9 @@ margin-bottom: 2px;
     <div class="fade-top"></div>
     <div class="fade-bottom"></div>
     <div class="overlay-header" id="overlay-title"></div>
-    <span class="overlay-close" onclick="closeOverlay()"><b>X</b></span>
+<div class="overlay-close" onclick="closeOverlay()">
+    <img src="Xbtn.PNG" alt="Close Button">
+</div>
     <div class="black-space-bottom"></div>
     <div class="overlay-content">
         <div id="overlay-text" class="overlay-text"></div>
