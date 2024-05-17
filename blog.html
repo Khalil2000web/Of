@@ -320,14 +320,20 @@ margin-bottom: 2px;
             text-align: right;
         }
         
-        .midle-text {
-  font-family: 'BBManualMonoPro';
-  font-size: 18px;
-  color: white;
-  position: absolute;
-  top: 15%;
-  left: auto; /* Adjust as needed */
-  right: auto;
+.centered-button {
+    position: fixed;
+    top: 50px; /* Adjusted top position */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 14px 14px;
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000; /* Adjusted z-index */
+    text-decoration: none;
+    font-family: 'BBManualMonoPro';
 }
 
         @media screen and (max-width: 600px) {
@@ -371,7 +377,7 @@ margin-bottom: 2px;
         }
     </script>
     
-     <span class="midle-text">THE CARTER'S BLOGS</span>
+<div class="centered-button">THE CARTER'S BLOGS</div>
 
 <div id="overlay" class="overlay">
 <div class="black-space"></div>
