@@ -171,6 +171,10 @@ padding: 0px;
         align-items: right;
     }
     
+      .nav-btn {
+        top: 10%;
+        }
+    
     nav.bottom-nav ul li:nth-child(2) {
 text-align: right;
 }
@@ -283,7 +287,6 @@ html, body {
   z-index: 9999;
   overflow-y: auto; /* Enable scrolling for overlay content */
   padding: 0px;
-    overflow: hidden;
 }
 
 body.overlay-open #overlay {
@@ -295,12 +298,13 @@ body.overlay-open #overlay {
   height: 100%;
   overflow-y: auto;
   touch-action: pan-y;
+  overflow: hidden;
 }
 
  #close-btn {
   position: absolute;
-  top: 1px !important; /* Adjust the pixel value as needed */
-  right: 15px;
+  top: 2% !important; /* Adjust the pixel value as needed */
+  right: 2%;
   cursor: pointer;
   color: #fff;
   font-size: 45px;
