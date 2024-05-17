@@ -198,198 +198,266 @@ nav.top-nav {
 </nav>
 
 <style>
-.song {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    margin-bottom: 13px;
-    padding: 0 20px; /* Adjust the padding as needed */
-  }
-  .song-number {
-    margin-right: 10px;
-    color: white;
-  }
-.song-name {
-    max-width: calc(100% - 50px); /* Adjust based on your needs */
-    overflow: hidden;
-    word-wrap: break-word; /* This allows long words to break and wrap onto the next line */
-    text-align: right; /* Align the text to the right */
-    white-space: pre-line; /* Preserve line breaks */
-    color: white;
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9998; /* Adjusted z-index */
+    background-color: black; /* Changed background color */
+    color: white; /* Text color */
 }
 
-@media screen and (max-width: 600px) {
-.song-name,
-  .song-number {
-  font-size: 16px;
-  }
-    .centered-button {
-    font-size: 17px;
-    }
+.overlay-content {
+    padding: 20px;
+    border-radius: 5px;
 }
 
-@media screen and (min-width: 601px) {
-.song-name,
-  .song-number {
-  font-size: 17px;
-  }
-  .song {
-    padding: 0 25px; /* Adjust the padding as needed */
-  }
-  .centered-button {
-    font-size: 19px;
-    }
+.overlay-title {
+    font-size: 24px;
+    margin: 0;
+    text-align: left;
+    color: white; /* Title color */
+}
+
+.overlay-close {
+    position: fixed;
+    bottom: 100px; /* Adjusted position */
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    color: white; /* Close button color */
+    font-size: 22px;
+}
+
+.buttons-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.overlay-button {
+    display: block;
+    padding: 10px 10px;
+    background-color: transparent; /* Removed background color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 25px;
+    font-size: 24px;
+    padding-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none; /* Removed underline */
 }
 
 .centered-button {
     position: fixed;
-    top: 10%;
+    top: 10px; /* Adjusted top position */
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
     padding: 10px 20px;
     background-color: transparent;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    z-index: 999; /* Adjusted z-index */
     text-decoration: none;
+}
+
+.song {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 13px;
+    padding: 0 20px;
+}
+
+.song-number,
+.song-name {
+    color: white;
+}
+
+@media screen and (max-width: 600px) {
+    .song-name,
+    .song-number {
+        font-size: 16px;
+    }
+    .centered-button {
+        font-size: 17px;
+    }
+}
+
+@media screen and (min-width: 601px) {
+    .song-name,
+    .song-number {
+        font-size: 17px;
+    }
+    .song {
+        padding: 0 25px;
+    }
+    .centered-button {
+        font-size: 19px;
+    }
 }
 </style>
 
+<div id="overlay" class="overlay">
+  <span class="overlay-close" onclick="closeOverlay()">X</span> <!-- Close button -->
+  <div class="overlay-content">
+    <h1 id="overlay-title" class="overlay-title"></h1>
+    <div class="buttons-container">
+      <button class="overlay-button" onclick="window.location.href='/credits'">CREDITS</button>
+      <button class="overlay-button" onclick="openLyricsOverlay()">LYRICS</button>
+      <button class="overlay-button" onclick="window.location.href='/act1'">act i ON THEROYAL</button>
+    </div>
+  </div>
+</div>
 
-<a href="/credits" class="centered-button">CREDITS</a>
+<div id="lyrics-overlay" class="overlay">
+  <span class="overlay-close" onclick="closeLyricsOverlay()">X</span> <!-- Close button -->
+  <div class="overlay-content">
+    <!-- Your lyrics content goes here -->
+  </div>
+</div>
 
-<div class="song">
+<a href="/credits" class="centered-button" id="credits-button">CREDITS</a>
+
+<div class="song" onclick="openOverlay(1, 'HOLY GRAIL (intro)')">
   <span class="song-number">1.</span>
   <span class="song-name">HOLY GRAIL (intro)</span>
 </div>
 
-<div class="song">
+<div class="song" onclick="openOverlay(2, 'CRAZY IN LOVE')">
   <span class="song-number">2.</span>
   <span class="song-name">CRAZY IN LOVE</span>
 </div>
 
-<div class="song">
+<div class="song" onclick="openOverlay(3, 'RUN THIS TOWN')">
   <span class="song-number">3.</span>
   <span class="song-name">RUN THIS TOWN</span>
 </div>
 
-<div class="song">
+<div class="song" onclick="openOverlay(4, 'BABY BOY')">
   <span class="song-number">4.</span>
   <span class="song-name">BABY BOY</span>
 </div>
 
-<div class="song">
+<div class="song" onclick="openOverlay(5, 'COZY')">
   <span class="song-number">5.</span>
   <span class="song-name">COZY</span>
 </div>
 
-<div class="song">
+<div class="song" onclick="openOverlay(6, 'ALIEN SUPERSTAR')">
   <span class="song-number">6.</span>
   <span class="song-name">ALIEN SUPERSTAR</span>
 </div>
 
-<div class="song">
+<div class="song" onclick="openOverlay(7, 'DIVA')">
   <span class="song-number">7.</span>
   <span class="song-name">DIVA</span>
 </div>
 
-<div class="song">
+<div class="song" onclick="openOverlay(8, 'YONCÈ')">
   <span class="song-number">8.</span>
   <span class="song-name">YONCÈ</span>
 </div>
 
-<div class="song">
+<div class="song" onclick="openOverlay(9, 'MI GENTE')">
   <span class="song-number">9.</span>
   <span class="song-name">MI GENTE</span>
 </div>
 
-<div class="song">
+<div class="song" onclick="openOverlay(10, 'SINGLE L..')">
   <span class="song-number">10.</span>
   <span class="song-name">SINGLE L.. (break down)</span>
 </div>
 
-<div class="song">
+<div class="song" onclick="openOverlay(11, 'SWEET ★ HONEY ★ BUCKIIN'')">
   <span class="song-number">11.</span>
   <span class="song-name">SWEET ★ HONEY ★ BUCKIIN'</span>
 </div>
 
-<div class="song">
+<div class="song" onclick="openOverlay(12, '>NAUGHTY BOY')">
   <span class="song-number">12.</span>
   <span class="song-name">NAUGHTY BOY</span>
 </div>
 
-<div class="song">
+<div class="song" onclick="openOverlay(13, 'MOVE')">
   <span class="song-number">13.</span>
   <span class="song-name">MOVE</span>
 </div>
 
-<div class="song">
+<div class="song" onclick="openOverlay(14, 'ENERGY')">
   <span class="song-number">14.</span>
   <span class="song-name">ENERGY</span>
 </div>
 
-<div class="song">
+<div class="song" onclick="openOverlay(15, 'RUN THE WORLD')">
   <span class="song-number">15.</span>
   <span class="song-name">RUN THE WORLD (Feminist, and Fellas) </span>
 </div>
 
-<div class="song">
+<div class="song" onclick="openOverlay(16, 'MY POWER')">
   <span class="song-number">16.</span>
   <span class="song-name">MY POWER</span>
 </div>
 
-<div class="song">
+<div class="song" onclick="openOverlay(17, 'AMERICA HAS A PROBLEM')">
   <span class="song-number">17.</span>
   <span class="song-name">AMERICA HAS A PROBLEM</span>
 </div>
 
-<div class="song">
+<div class="song" onclick="openOverlay(18, 'NO CHURCH IN THE WILD')">
   <span class="song-number">18.</span>
   <span class="song-name">NO CHURCH IN THE WILD</span>
 </div>
 
-<div class="song">
+<div class="song" onclick="openOverlay(19, 'APESHIT')">
   <span class="song-number">19.</span>
   <span class="song-name">APESHIT</span>
 </div>
 
-<div class="song">
+<div class="song" onclick="openOverlay(20, 'PURE/HONEY')">
   <span class="song-number">20.</span>
   <span class="song-name">PURE/HONEY</span>
 </div>
 
-<div class="song">
+<div class="song" onclick="openOverlay(21, 'VIRGO'S GROOVE')">
   <span class="song-number">21.</span>
   <span class="song-name">VIRGO'S GROOVE</span>
 </div>
 
-<div class="song">
+<div class="song" onclick="openOverlay(22, 'CUFF IT')">
   <span class="song-number">22.</span>
   <span class="song-name">CUFF IT</span>
 </div>
 
-<div class="song">
+<div class="song" onclick="openOverlay(23, 'RIVER DEEP MOUMTAIN HIGH')">
   <span class="song-number">23.</span>
   <span class="song-name">RIVER DEEP MOUMTAIN HIGH</span>
 </div>
 
-<div class="song">
+<div class="song" onclick="openOverlay(24, 'PARTY')">
   <span class="song-number">24.</span>
   <span class="song-name">PARTY</span>
 </div>
 
-<div class="song">
+<div class="song" onclick="openOverlay(25, 'SORRY')">
   <span class="song-number">25.</span>
   <span class="song-name">SORRY</span>
 </div>
 
-<div class="song">
+<div class="song" onclick="openOverlay(26, 'ME, MYSELF AND I')">
   <span class="song-number">26.</span>
   <span class="song-name">ME, MYSELF AND I</span>
 </div>
 
-<div class="song">
+<div class="song" onclick="openOverlay(27, 'SUMMER RENAISSANCE')">
   <span class="song-number">27.</span>
   <span class="song-name">SUMMER RENAISSANCE</span>
 </div><br><br><br><br><br><br><br><br><br>
