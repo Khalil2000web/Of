@@ -418,45 +418,45 @@ body.overlay-open {
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-      const mediaElements = document.querySelectorAll('.image, video');
-      const overlay = document.getElementById('overlay');
-      const overlayContent = document.getElementById('overlay-content');
-      const closeBtn = document.getElementById('close-btn');
-      const prevBtn = document.getElementById('prev-btn');
-      const nextBtn = document.getElementById('next-btn');
+  const mediaElements = document.querySelectorAll('.image, video');
+  const overlay = document.getElementById('overlay');
+  const overlayContent = document.getElementById('overlay-content');
+  const closeBtn = document.getElementById('close-btn');
+  const prevBtn = document.getElementById('prev-btn');
+  const nextBtn = document.getElementById('next-btn');
 
-      let currentIndex = 0;
+  let currentIndex = 0;
 
-      mediaElements.forEach((media, index) => {
-        media.addEventListener('click', () => {
-          currentIndex = index;
-          const clonedMedia = media.cloneNode(true);
-          overlayContent.innerHTML = '';
-          overlayContent.appendChild(clonedMedia);
-          overlay.style.display = 'flex';
-          document.body.classList.add('overlay-open'); // Disable scrolling of the main page
-        });
-      });
-
-      closeBtn.addEventListener('click', () => {
-        overlay.style.display = 'none';
-        document.body.classList.remove('overlay-open'); // Enable scrolling of the main page
-      });
-
-      prevBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex - 1 + mediaElements.length) % mediaElements.length;
-        const clonedMedia = mediaElements[currentIndex].cloneNode(true);
-        overlayContent.innerHTML = '';
-        overlayContent.appendChild(clonedMedia);
-      });
-
-      nextBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex + 1) % mediaElements.length;
-        const clonedMedia = mediaElements[currentIndex].cloneNode(true);
-        overlayContent.innerHTML = '';
-        overlayContent.appendChild(clonedMedia);
-      });
+  mediaElements.forEach((media, index) => {
+    media.addEventListener('click', () => {
+      currentIndex = index;
+      const clonedMedia = media.cloneNode(true);
+      overlayContent.innerHTML = '';
+      overlayContent.appendChild(clonedMedia);
+      document.body.classList.add('overlay-open'); // Disable scrolling
+      overlay.style.display = 'flex';
     });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    overlay.style.display = 'none';
+    document.body.classList.remove('overlay-open'); // Enable scrolling
+  });
+
+  prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + mediaElements.length) % mediaElements.length;
+    const clonedMedia = mediaElements[currentIndex].cloneNode(true);
+    overlayContent.innerHTML = '';
+    overlayContent.appendChild(clonedMedia);
+  });
+
+  nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % mediaElements.length;
+    const clonedMedia = mediaElements[currentIndex].cloneNode(true);
+    overlayContent.innerHTML = '';
+    overlayContent.appendChild(clonedMedia);
+  });
+});
 </script>
 </body>
 </html>
