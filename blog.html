@@ -197,54 +197,53 @@ margin-bottom: 2px;
 
 <style>
         .overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 9999; /* Increased z-index */
-    background-color: black;
-    color: white;
-    overflow: hidden;
-}
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 9998;
+            background-color: black;
+            color: white;
+            overflow: hidden; /* Prevents overlay itself from scrolling */
+        }
 
-.overlay-header {
-    position: fixed;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 10000; /* Increased z-index */
-    color: white;
-    font-size: 24px;
-    font-family: 'BBManualMonoPro';
-    text-align: center;
-}
+        .overlay-header {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10000;
+            color: white;
+            font-size: 24px;
+            font-family: 'BBManualMonoPro';
+            text-align: center;
+        }
 
-.overlay-close {
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 10000; /* Increased z-index */
-    cursor: pointer;
-    color: white;
-    font-size: 22px;
-    font-family: 'BBManualMonoPro';
-}
+        .overlay-close {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10000;
+            cursor: pointer;
+            color: white;
+            font-size: 22px;
+            font-family: 'BBManualMonoPro';
+        }
 
 .overlay-content {
-    padding: 150px 20px 80px;
-    background-color: black;
+    padding: 150px 20px 80px; /* Adjusted padding to create space at the top */
+    background-color: black; /* Ensure the background is black */
     text-align: center;
-    max-width: 100%;
+    max-width: 100%; /* Ensure content does not exceed screen width */
     margin: 0 auto;
-    box-sizing: border-box;
-    word-wrap: break-word;
-    overflow-y: auto;
-    max-height: 100%;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    word-wrap: break-word; /* Allow long words to break and wrap to the next line */
+    overflow-y: auto; /* Make the content scrollable */
+    max-height: 100%; /* Ensure the content fits within the overlay */
     font-size: 30px;
-    z-index: 9999; /* Increased z-index */
 }
 
         .fade-top, .fade-bottom {
@@ -320,25 +319,6 @@ margin-bottom: 2px;
         .song-name {
             text-align: right;
         }
-        
-.centered-button {
-    position: fixed;
-    top: 50px; /* Adjusted top position */
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 14px 14px;
-    background-color: transparent;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    z-index: 1000; /* Adjusted z-index */
-    text-decoration: none;
-    font-family: 'BBManualMonoPro';
-    font-size: 18px;
-    padding-left: 10px;
-    padding-right: 10px;
-}
 
         @media screen and (max-width: 600px) {
             .song-name,
@@ -380,8 +360,8 @@ margin-bottom: 2px;
             document.getElementById('overlay').style.display = 'none';
         }
     </script>
-    
-<div class="centered-button">THE CARTER'S BLOGS</div>
+</head>
+<body bgcolor="black">
 
 <div id="overlay" class="overlay">
 <div class="black-space"></div>
@@ -394,10 +374,12 @@ margin-bottom: 2px;
         <div id="overlay-text" class="overlay-text"></div>
     </div>
 </div>
-<div class="song" onclick="openOverlay('CARTER jr', '<p>26 OF JAN 2024<br>WAS ONE OF MOST IMPORTANT AND LOVELY DAY I HAVE EVER HAD<br>IN THIS DAY I GOT MY FIRST KITTEN, IT WAS SUCH A DREAM<br>TO ME,<br>“I HAVE A KITTEN”, MY MOM DID NOT ACCEPT TO HAVE A CAT INSIDE OUR HOUSE BUT I JUST WANTED BECAUSE I REALLY NEED THAT ONE PERSON WHO BE AS MY BEST BROTHER I WOULD HAVE BECAUSE I DONT HAVE ANY BROTHERS AND SISTERS, SO I JUST GOT THAT FRIEND, SON, SISTER, BROTHER AND HIS NAME IS 'CARTER'.<br>CARTER IS MY NEW KITTEN I HAVE GOT EARLY THIS YEAR, HE IS MY BEST FRIEND I WOULD HAVE IN MY LIFE.</p>')">
+
+<div class="song" onclick="openOverlay('THE KITTEN CARTER — CARTER jr', '<p>26 OF JAN 2024<br>WAS ONE OF MOST IMPORTANT AND LOVELY DAY I HAVE EVER HAD<br>IN THIS DAY I GOT MY FIRST KITTEN, IT WAS SUCH A DREAM<br>TO ME,<br>“I HAVE A KITTEN”, MY MOM DID NOT ACCEPT TO HAVE A CAT INSIDE OUR HOUSE BUT I JUST WANTED BECAUSE I REALLY NEED THAT ONE PERSON WHO BE AS MY BEST BROTHER I WOULD HAVE BECAUSE I DONT HAVE ANY BROTHERS AND SISTERS, SO I JUST GOT THAT FRIEND, SON, SISTER, BROTHER AND HIS NAME IS 'CARTER'.<br>CARTER IS MY NEW KITTEN I HAVE GOT EARLY THIS YEAR, HE IS MY BEST FRIEND I WOULD HAVE IN MY LIFE.</p><img src=\'image1.jpg\' alt=\'Image 1\' style=\'width: 200px; height: 150px;\' /><img src=\'image2.jpg\' alt=\'Image 2\' style=\'width: 300px; height: 200px;\' />')">
     <span class="song-number">1.</span>
-    <span class="song-name">THE KITTEN, CARTER</span>
+    <span class="song-name">THE KITTEN CARTER</span>
 </div>
+
 
 </body>
 </html>
