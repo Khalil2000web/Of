@@ -461,6 +461,40 @@ nav.top-nav {
   <span class="song-number">27.</span>
   <span class="song-name">SUMMER RENAISSANCE</span>
 </div><br><br><br><br><br><br><br><br><br>
+  
+  <script>
+function openOverlay(songNumber, songName) {
+    var overlay = document.getElementById('overlay');
+    var overlayTitle = document.getElementById('overlay-title');
+    
+    overlayTitle.textContent = songNumber + '. ' + songName;
+    overlay.style.display = 'block';
+    document.body.style.overflow = 'hidden'; // Disable scrolling on the main page
+}
+
+function closeOverlay() {
+    var overlay = document.getElementById('overlay');
+    overlay.style.display = 'none';
+    document.body.style.overflow = 'auto'; // Enable scrolling on the main page
+}
+
+function openLyricsOverlay() {
+    var overlay = document.getElementById('lyrics-overlay');
+    overlay.style.display = 'block';
+    document.body.style.overflow = 'hidden'; // Disable scrolling on the main page
+}
+
+function closeLyricsOverlay() {
+    var overlay = document.getElementById('lyrics-overlay');
+    overlay.style.display = 'none';
+    document.body.style.overflow = 'auto'; // Enable scrolling on the main page
+}
+
+document.getElementById('credits-button').addEventListener('click', function() {
+    // Handle credits button click event
+    // Example: window.location.href = '/credits';
+});
+</script>
 
 </body>
 </html>
