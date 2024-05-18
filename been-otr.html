@@ -26,6 +26,54 @@ body {
 </style>
 
 <style>
+.title-container {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 999; /* ensure it's on top of other content */
+}
+
+.left-title, .right-title {
+    font-size: 22px;
+    color: white;
+}
+
+.left-title {
+    left: 0;
+    padding-left: 100px; /* Adjust as needed */
+}
+
+.right-title {
+    right: 0;
+    padding-right: 70px; /* Adjust as needed */
+}
+
+.title-container.hidden {
+    display: none; /* hide the container when it has the hidden class */
+}
+
+.left-title a, .right-title a {
+    color: inherit; /* inherit text color from parent */
+    text-decoration: none; /* remove underline from links */
+    cursor: pointer; /* change cursor to pointer on hover */
+}
+
+h1 {
+    font-size: inherit; /* Inherit font size */
+    font-weight: normal; /* Set font weight to normal */
+    margin: 0; /* Remove default margin */
+}
+</style>
+
+<div class="title-container left-title">
+  <span>< BEEN</span>
+</div>
+
+<div class="title-container right-title">
+    <span>ROYAL ></span>
+</div>
+
+<style>
     /* Style for the top navigation bar */
     nav.top-nav {
       position: fixed; /* Keep the top navigation bar fixed */
@@ -122,28 +170,6 @@ body {
     }  
 </style>
 
-</head>
-<body bgcolor="black">
-    <!-- Top Navigation Bar -->
-    <nav class="top-nav">
-        <ul>
-        <li><a href="/">HOME</a></li>
-        <li><a href="/music">MUSIC</a></li>
-        <li><a href="/tours">TOURS</a></li>
-        <li><a href="/acts">ACTS</a></li>
-    </ul>
-</nav>
-
-<nav class="bottom-nav">
-    <ul>
-        <li><a href="/">JOIN</a></li> <!-- Left-aligned button -->
-    </ul>
-    <ul>
-        <li><a href="/terms-conditions">TERMS</a></li> <!-- Right-aligned button -->
-        <li><a href="/privacy-policy">PRIVACY</a></li> <!-- Right-aligned button -->
-    </ul>
-    </nav>
-
   <style>
     body {
       position: relative;
@@ -168,31 +194,28 @@ body {
       object-fit: contain;
     }
   </style>
-  
-    <style>
-    body {
-      position: relative;
-      min-height: 100vh;
-      min-width: 290vw;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: flex-start;
-      overflow-y: hidden;
-    }
-    .image-container {
-      position: absolute;
-      cursor: pointer;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    .image-container img {
-      max-width: 200%;
-      max-height: 100%;
-      object-fit: contain;
-    }
-  </style>
+
+</head>
+<body bgcolor="black">
+    <!-- Top Navigation Bar -->
+    <nav class="top-nav">
+        <ul>
+        <li><a href="/">HOME</a></li>
+        <li><a href="/music">MUSIC</a></li>
+        <li><a href="/tours">TOURS</a></li>
+        <li><a href="/acts">ACTS</a></li>
+    </ul>
+</nav>
+
+<nav class="bottom-nav">
+    <ul>
+        <li><a href="/">JOIN</a></li> <!-- Left-aligned button -->
+    </ul>
+    <ul>
+        <li><a href="/terms-conditions">TERMS</a></li> <!-- Right-aligned button -->
+        <li><a href="/privacy-policy">PRIVACY</a></li> <!-- Right-aligned button -->
+    </ul>
+    </nav>
 
   <div class="image-container" style="right: 9%; top: 13%; width: 150px; height: auto;">
     <img src="IMG_br1.jpg" alt="BEENROYAL_1">
