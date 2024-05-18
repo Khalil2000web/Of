@@ -282,77 +282,62 @@ input[type="submit"] {
 }
 </style>
 
-</head>
-<body>
-
-<div id="protection"21>
-  <h1>Enter Password</h1>
-
-  <form id="loginForm" onsubmit="return validateForm()">
-    <label for="password">PASSWORD:</label><br>
-    <input type="password" id="password" name="password" required><br><br><br><br>
-    <label for="name">NAME:</label><br>
-    <input type="text" id="name" name="name" required><br><br><br>
-    <input type="submit" value="ENTER">
-  </form>
-</div>
-
-<div id="content" style="display: none;">
-
-<div class="title-container left-title">
-<h1>act i</h1>
-</div>
-
-<div class="title-container right-title">
-<h1>OTR</h1>
-</div>
-
-<div class="image-container">
-
-<video autoplay muted loop playsinline>
-  <source src="i.MOV" type="video/mp4">
-</video> 
-
-  <img class="image" src="IMG_7634.jpg">
-
-<video autoplay muted loop playsinline>
-  <source src="ii.MOV" type="video/mp4">
-</video> 
-
-<img class="image" src="IMG_7632.jpg">
-
-<video autoplay muted loop playsinline>
-  <source src="iii.MOV" type="video/mp4">
-</video> 
-
-  <img class="image" src="IMG_7634.jpg">
-
-
-
-
-
-</div>
-
-<script>
-function validateForm() {
-  var password = document.getElementById("password").value;
-  var name = document.getElementById("name").value;
+  <style>
+    body {
+      position: relative;
+      min-height: 100vh;
+      min-width: 290vw;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      overflow-y: hidden;
+    }
+    .image-container {
+      position: absolute;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .image-container img {
+      max-width: 200%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+  </style>
   
-  if (password == "1") {
-    // Show content
-    document.getElementById("content").style.display = "block";
-    
-    // Hide protection elements
-    document.getElementById("protection").style.display = "none";
-    
-    return false; // Prevent form submission
-  } else {
-    // Incorrect password
-    alert("INCORRECT PASSWORD, PLEASE TRY AGAIN, DUMB.");
-    return false;
-  }
-}
-</script>
+    <style>
+    body {
+      position: relative;
+      min-height: 100vh;
+      min-width: 290vw;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      overflow-y: hidden;
+    }
+    .image-container {
+      position: absolute;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .image-container img {
+      max-width: 200%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+  </style>
+
+  <div class="image-container" style="right: 9%; top: 13%; width: 150px; height: auto;">
+    <img src="IMG_br1.jpg" alt="BEENROYAL_1">
+  </div>
+  <div class="image-container" style="right: 12%; top: 56%; width: 250px; height: 90px;">
+    <img src="IMG_br2.jpg" alt="BEENROYAL_2">
+  </div>
 
 </body>
 </html>
