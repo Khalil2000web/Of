@@ -244,47 +244,48 @@ nav.top-nav {
   font-size: 12px; /* Set font size */
   color: white; /* Change font color to white */
   margin-left: 100px;
-margin-bottom: 5px;
+bottom: 3%;
 }
 
 }
 
 html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    /* overflow: hidden; */ /* Remove this line */
 }
 
-.image-container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  overflow-y: auto;
-  scroll-snap-type: y mandatory;
-  position: relative;
-}
+    .image-container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto; /* Enable vertical scrolling */
+      scroll-snap-type: y mandatory; /* Snap to the nearest image */
+      position: relative; /* Ensure relative positioning for overlay */
+    }
 
-.image {
-  scroll-snap-align: start;
-  flex: 0 0 auto;
-  width: 100%;
-  object-fit: contain;
-  cursor: pointer;
-}
-
+    .image {
+      scroll-snap-align: start; /* Snap each image to the start */
+      flex: 0 0 auto;
+      width: 100%;
+      object-fit: contain;
+      cursor: pointer; /* Add pointer cursor to indicate clickable */
+    }
+    
 #overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 400%;
-  background-color: black;
+  height: 200%; /* Set overlay height to cover the entire viewport */
+  background-color: black; /* Adjust transparency as needed */
   display: none;
   justify-content: center;
   align-items: center;
   z-index: 9999;
-  overflow-y: auto;
+  overflow-y: auto; /* Enable scrolling for overlay content */
   padding: 0px;
 }
 
@@ -299,9 +300,9 @@ body.overlay-open #overlay {
   touch-action: pan-y;
 }
 
-#close-btn {
+ #close-btn {
   position: absolute;
-  top: 1%;
+  top: 1%; /* Adjust the pixel value as needed */
   right: 1%;
   cursor: pointer;
   color: #fff;
@@ -310,28 +311,31 @@ body.overlay-open #overlay {
   font-family: 'Victor Mono';
 }
 
-.main-nav {
-  display: none;
-}
+    /* Add additional styles for your main navigation links here */
+    .main-nav {
+      display: none; /* Hide main navigation links by default */
+    }
 
-.nav-btn {
-  position: absolute;
-  top: 6%;
-  transform: translateY(-50%);
-  color: #fff;
-  font-size: 36px;
-  cursor: pointer;
-  z-index: 10000;
-  font-family: 'Victor Mono';
-}
+  .nav-btn {
+    position: absolute;
+    top: 6%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 36px;
+    cursor: pointer;
+    z-index: 10000;
+      font-family: 'Victor Mono';
+  }
 
-#prev-btn {
-  left: 75px;
-}
+  #prev-btn {
+    left: 75px;
+      font-family: 'Victor Mono';
+  }
 
-#next-btn {
-  right: 75px;
-}
+  #next-btn {
+    right: 75px;
+      font-family: 'Victor Mono';
+  }
 </style>
 
 <!-- Navigation bars -->
@@ -415,7 +419,6 @@ body.overlay-open #overlay {
     });
   });
 </script>
-
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const mediaElements = document.querySelectorAll('.image, video');
@@ -434,15 +437,13 @@ document.addEventListener('DOMContentLoaded', function() {
       overlayContent.innerHTML = '';
       overlayContent.appendChild(clonedMedia);
       overlay.style.display = 'flex';
-      document.body.classList.add('overlay-open'); // Disable scrolling of the main page
-      document.body.style.overflow = 'hidden'; // Disable scrolling
+      document.body.style.overflow = 'hidden'; // Disable scrolling of the main page
     });
   });
 
   closeBtn.addEventListener('click', () => {
     overlay.style.display = 'none';
-    document.body.classList.remove('overlay-open'); // Enable scrolling of the main page
-    document.body.style.overflow = ''; // Enable scrolling
+    document.body.style.overflow = ''; // Enable scrolling of the main page
   });
 
   prevBtn.addEventListener('click', () => {
@@ -458,7 +459,7 @@ document.addEventListener('DOMContentLoaded', function() {
     overlayContent.innerHTML = '';
     overlayContent.appendChild(clonedMedia);
   });
-});
+}); 
 </script>
 </body>
 </html>
