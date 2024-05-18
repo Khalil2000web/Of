@@ -279,7 +279,7 @@ html, body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 200%; /* Set overlay height to cover the entire viewport */
+  height: 500%; /* Set overlay height to cover the entire viewport */
   background-color: black; /* Adjust transparency as needed */
   display: none;
   justify-content: center;
@@ -295,19 +295,19 @@ body.overlay-open #overlay {
 
 #overlay-content {
   width: 100%;
-  height: 500%;
+  height: 100%;
   overflow-y: auto;
   touch-action: pan-y;
 }
 
- #close-btn {
+/* Style for the close button */
+#close-btn {
   position: absolute;
-  top: 0%; /* Adjust the pixel value as needed */
-  right: 0%;
+  top: 10px; /* Adjust the position from the top as needed */
+  right: 10px; /* Adjust the position from the right as needed */
   cursor: pointer;
-  color: #fff;
-  font-size: 47px;
-  font-family: 'Victor Mono';
+  width: 30px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
 }
 
     /* Add additional styles for your main navigation links here */
@@ -369,7 +369,7 @@ body.overlay-open #overlay {
     <!-- The content will be dynamically added here via JavaScript -->
   </div>
   <span id="next-btn" class="nav-btn"><b>&gt;</b></span>
-  <span id="close-btn">&times;</span>
+<img id="close-btn" src="Xbtn.PNG" alt="Close">
 </div>
 
   <!-- Your main content container -->
@@ -423,46 +423,46 @@ body.overlay-open #overlay {
   });
 </script>
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  const mediaElements = document.querySelectorAll('.image, video');
-  const overlay = document.getElementById('overlay');
-  const overlayContent = document.getElementById('overlay-content');
-  const closeBtn = document.getElementById('close-btn');
-  const prevBtn = document.getElementById('prev-btn');
-  const nextBtn = document.getElementById('next-btn');
+  document.addEventListener('DOMContentLoaded', function() {
+    const mediaElements = document.querySelectorAll('.image, video');
+    const overlay = document.getElementById('overlay');
+    const overlayContent = document.getElementById('overlay-content');
+    const closeBtn = document.getElementById('close-btn');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
 
-  let currentIndex = 0;
+    let currentIndex = 0;
 
-  mediaElements.forEach((media, index) => {
-    media.addEventListener('click', () => {
-      currentIndex = index;
-      const clonedMedia = media.cloneNode(true);
+    mediaElements.forEach((media, index) => {
+      media.addEventListener('click', () => {
+        currentIndex = index;
+        const clonedMedia = media.cloneNode(true);
+        overlayContent.innerHTML = '';
+        overlayContent.appendChild(clonedMedia);
+        overlay.style.display = 'flex';
+        document.body.style.overflow = 'hidden'; // Disable scrolling of the main page
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      overlay.style.display = 'none';
+      document.body.style.overflow = ''; // Enable scrolling of the main page
+    });
+
+    prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + mediaElements.length) % mediaElements.length;
+      const clonedMedia = mediaElements[currentIndex].cloneNode(true);
       overlayContent.innerHTML = '';
       overlayContent.appendChild(clonedMedia);
-      overlay.style.display = 'flex';
-      document.body.style.overflow = 'hidden'; // Disable scrolling of the main page
+    });
+
+    nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % mediaElements.length;
+      const clonedMedia = mediaElements[currentIndex].cloneNode(true);
+      overlayContent.innerHTML = '';
+      overlayContent.appendChild(clonedMedia);
     });
   });
-
-  closeBtn.addEventListener('click', () => {
-    overlay.style.display = 'none';
-    document.body.style.overflow = ''; // Enable scrolling of the main page
-  });
-
-  prevBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + mediaElements.length) % mediaElements.length;
-    const clonedMedia = mediaElements[currentIndex].cloneNode(true);
-    overlayContent.innerHTML = '';
-    overlayContent.appendChild(clonedMedia);
-  });
-
-  nextBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % mediaElements.length;
-    const clonedMedia = mediaElements[currentIndex].cloneNode(true);
-    overlayContent.innerHTML = '';
-    overlayContent.appendChild(clonedMedia);
-  });
-}); 
 </script>
 </body>
 </html>
