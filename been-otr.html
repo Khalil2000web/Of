@@ -26,105 +26,6 @@ body {
 </style>
 
 <style>
-  html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-  }
-
-  .image-container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    overflow-y: auto; /* Enable vertical scrolling */
-    scroll-snap-type: y mandatory; /* Snap to the nearest image */
-  }
-
-  .image {
-    scroll-snap-align: start; /* Snap each image to the start */
-    flex: 0 0 auto;
-    width: 100%;
-    object-fit: contain;
-  }
-</style>
-
-
-<style>
-  .title-container {
-    position: fixed;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 999; /* ensure it's on top of other content */
-    font-
-  }
-
-  .left-title {
-    left: 0;
-    padding-left: 90px; /* Adjust as needed */
-  }
-
-  .right-title {
-    right: 0;
-    padding-right: 90px; /* Adjust as needed */
-  }
-
-  .title-container.hidden {
-    display: none; /* hide the container when it has the hidden class */
-  }
-
-  .left-title a,
-  .right-title a {
-    color: inherit; /* inherit text color from parent */
-    text-decoration: none; /* remove underline from links */
-    cursor: pointer; /* change cursor to pointer on hover */
-  }
-</style>
-
-<style>
-  body {
-    background-color: black;
-    color: white;
-    font-family: 'BBManualMonoPro', monospace;
-    text-align: center;
-  }
-  #loginForm {
-    margin: 50px auto;
-    max-width: 300px;
-  }
-  label {
-    font-size: 20px;
-  }
-  input[type="password"],
-  input[type="text"],
-  input[type="submit"] {
-    width: 90%; /* Adjust width as needed */
-    padding: 10px;
-    margin-top: 10px;
-    border: 1px solid white; /* Thin border */
-    border-radius: 5px;
-    font-size: 20px;
-    font-family: 'BBManualMonoPro', monospace; /* Set font for inputs */
-  }
-  input[type="submit"] {
-    background-color: #4b4b4b;
-    color: white;
-    cursor: pointer;
-    border: 1px solid white; /* Thin border */
-    font-family: 'BBManualMonoPro'; /* Use parent font */
-  }
-</style>
-
-  <style>
-    nav.top-nav {
-        margin-top: 25px; /* Adjust the value as needed */
-    }
-        nav.bottom-nav {
-        margin-top: 7px; /* Adjust the value as needed */
-    }
-</style>
-
-<style>
     /* Style for the top navigation bar */
     nav.top-nav {
       position: fixed; /* Keep the top navigation bar fixed */
@@ -170,15 +71,15 @@ body {
     nav.top-nav ul li a {
       font-family: BBManualMonoPro, Charcoal, sans-serif; /* Use Impact font */
       font-size: 19px; /* Set font size */
-      color: white; /* Change font color to white */
+      color: black; /* Change font color to white */
       text-decoration: none;
       padding: 16px; /* Add padding to the buttons */
     }
 
     nav.bottom-nav ul li a {
       font-family: BBManualMonoPro, Charcoal, sans-serif; /* Use Impact font */
-      font-size: 19px; /* Set font size */
-      color: white; /* Change font color to white */
+      font-size: 21px; /* Set font size */
+      color: black; /* Change font color to white */
       text-decoration: none;
       padding: 20px; /* Add padding to the buttons */
     }
@@ -193,24 +94,24 @@ body {
     }
 
     /* Media query for smaller screens like phones */
-    /* Media query for smaller screens like phones */
     @media screen and (max-width: 600px) {
       nav.bottom-nav ul li a {
         font-size: 14px; /* Adjust the font size for smaller screens */
       }
       nav.top-nav ul li a {
+        padding: 10px;
         font-size: 19px; /* Adjust the font size for smaller screens */
-        padding: 10px; /* Add padding to the buttons */
       }
     
       nav.bottom-nav ul li a {
         padding: 37px; /* Add padding to the buttons */
-    }
+      }
+   
     }
 
-    @media screen and (max-width: 400px) {
+    @media screen and (max-width: 100px) {
       nav.bottom-nav ul li a {
-        font-size: 8px; /* Adjust the font size for smaller screens */
+        font-size: 60px; /* Adjust the font size for smaller screens */
       }
         nav.top-nav ul li a {
         font-size: 15px; /* Adjust the font size for smaller screens */
@@ -221,14 +122,17 @@ body {
     }  
 </style>
 
-<nav class="top-nav">
+</head>
+<body bgcolor="black">
+    <!-- Top Navigation Bar -->
+    <nav class="top-nav">
         <ul>
         <li><a href="/">HOME</a></li>
         <li><a href="/music">MUSIC</a></li>
         <li><a href="/tours">TOURS</a></li>
         <li><a href="/acts">ACTS</a></li>
     </ul>
-</nav><br><br><br><br><br><br>
+</nav>
 
 <nav class="bottom-nav">
     <ul>
@@ -238,49 +142,7 @@ body {
         <li><a href="/terms-conditions">TERMS</a></li> <!-- Right-aligned button -->
         <li><a href="/privacy-policy">PRIVACY</a></li> <!-- Right-aligned button -->
     </ul>
-</nav>
-
-<style>
-body {
-    background-color: black;
-    color: white;
-    font-family: 'BBManualMonoPro', monospace;
-    text-align: center;
-}
-
-#loginForm {
-    margin: 50px auto;
-    max-width: 300px;
-    text-align: left; /* Align titles to the left */
-}
-
-label {
-    font-size: 20px;
-}
-
-input[type="password"],
-input[type="text"] {
-    width: 100%; /* Make input boxes full width */
-    padding: 10px;
-    margin-top: 10px;
-    border: 1px solid white; /* Add white border */
-    background-color: black; /* Set background color to black */
-    color: white; /* Set text color to white */
-    border-radius: 5px; /* Add rounded corners */
-    font-size: 17px;
-    font-family: 'BBManualMonoPro', monospace;
-}
-input[type="submit"] {
-    width: 100%; /* Make input boxes full width */
-    padding: 10px;
-    margin-top: 10px;
-    border: none; /* Remove the border */
-    background-color: black; /* Set background color to black */
-    border-radius: 0px; /* Add rounded corners */
-    font-size: 20px;
-    font-family: 'BBManualMonoPro', monospace;
-}
-</style>
+    </nav>
 
   <style>
     body {
