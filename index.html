@@ -324,12 +324,11 @@ body.overlay-open #overlay {
     cursor: pointer;
     z-index: 10000;
     font-family: 'Victor Mono';
-    padding-left: 30px;  /* Adjust left padding */
-    padding-right: 30px; /* Adjust right padding */
 }
 
 #prev-btn {
     left: 80px;
+    border: 2px solid blue; /* Initial blue border */
 }
 
 #next-btn {
@@ -394,6 +393,27 @@ body.overlay-open #overlay {
   <img class="image" src="P.jpeg">
   <img class="image" src="IMG_7474.jpg">
   </div>
+  
+  <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const prevBtn = document.getElementById('prev-btn');
+
+    // Check if the 'prevBtnClicked' flag is stored in localStorage
+    if (!localStorage.getItem('prevBtnClicked')) {
+        // Add the blue border initially
+        prevBtn.style.border = '2px solid blue';
+    }
+
+    // Add click event listener to the prevBtn
+    prevBtn.addEventListener('click', function() {
+        // Remove the blue border when clicked
+        prevBtn.style.border = 'none';
+
+        // Store a flag in localStorage to remember the button was clicked
+        localStorage.setItem('prevBtnClicked', 'true');
+    });
+});
+</script>
   
 <script>
   document.addEventListener('DOMContentLoaded', function() {
