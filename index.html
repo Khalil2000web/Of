@@ -315,27 +315,25 @@ body.overlay-open #overlay {
       display: none; /* Hide main navigation links by default */
     }
 
-        .nav-btn {
-            position: absolute;
-            top: 7%;
-            transform: translateY(-50%);
-            color: #fff;
-            font-size: 32px;
-            cursor: pointer;
-            z-index: 10000;
-            font-family: 'Victor Mono';
-            margin-left: 20px;  /* Adjust left margin */
-            margin-right: 20px; /* Adjust right margin */
-        }
+.nav-btn {
+    position: absolute;
+    top: 7%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 32px;
+    cursor: pointer;
+    z-index: 10000;
+    font-family: 'Victor Mono';
+}
 
-        #prev-btn {
-            left: 80px;
-            border: 2px solid transparent; /* Set a default border */
-        }
+#prev-btn {
+    left: 80px;
+    border: 2px solid lightblue; /* Initial blue border */
+}
 
-        #next-btn {
-            right: 80px;
-        }
+#next-btn {
+    right: 80px;
+}
 </style>
 
 <!-- Navigation bars -->
@@ -396,26 +394,26 @@ body.overlay-open #overlay {
   <img class="image" src="IMG_7474.jpg">
   </div>
   
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const prevBtn = document.getElementById('prev-btn');
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const prevBtn = document.getElementById('prev-btn');
 
-        // Check if the 'prevBtnClicked' flag is stored in localStorage
-        if (!localStorage.getItem('prevBtnClicked')) {
-            // Add the blue border initially
-            prevBtn.style.border = '2px solid #275c86';
-        }
+    // Check if the 'prevBtnClicked' flag is stored in localStorage
+    if (!localStorage.getItem('prevBtnClicked')) {
+        // Add the blue border initially
+        prevBtn.style.border = '2px solid blue';
+    }
 
-        // Add click event listener to the prevBtn
-        prevBtn.addEventListener('click', function() {
-            // Remove the border when clicked
-            prevBtn.style.border = '2px solid transparent';
+    // Add click event listener to the prevBtn
+    prevBtn.addEventListener('click', function() {
+        // Remove the blue border when clicked
+        prevBtn.style.border = 'none';
 
-            // Store a flag in localStorage to remember the button was clicked
-            localStorage.setItem('prevBtnClicked', 'true');
-        });
+        // Store a flag in localStorage to remember the button was clicked
+        localStorage.setItem('prevBtnClicked', 'true');
     });
-    </script>
+});
+</script>
   
 <script>
   document.addEventListener('DOMContentLoaded', function() {
