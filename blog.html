@@ -199,179 +199,173 @@ margin-bottom: 2px;
 </nav>
 
 <style>
-        .overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: 9998;
-            background-color: black;
-            color: white;
-            overflow: hidden; /* Prevents overlay itself from scrolling */
-        }
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 9998;
+        background-color: black;
+        color: white;
+        overflow: hidden; /* Prevents overlay itself from scrolling */
+    }
 
+    .overlay-header {
+        position: fixed;
+        top: 4%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10000;
+        color: white;
+        font-family: 'BBManualMonoPro';
+        text-align: center;
+    }
+
+    .overlay-close {
+        position: fixed;
+        bottom: 7%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10000;
+        cursor: pointer;
+        width: 35px; /* Adjust width as needed */
+        height: 35px; /* Adjust height as needed */
+    }
+
+    .overlay-close img {
+        display: block; /* Ensure the image is displayed as a block */
+        max-width: 100%; /* Ensure the image is responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .overlay-content {
+        padding: 150px 20px 80px; /* Adjusted padding to create space at the top */
+        background-color: black; /* Ensure the background is black */
+        text-align: center;
+        max-width: 100%; /* Ensure content does not exceed screen width */
+        margin: 0 auto;
+        box-sizing: border-box; /* Include padding and border in the element's total width and height */
+        word-wrap: break-word; /* Allow long words to break and wrap to the next line */
+        overflow-y: auto; /* Make the content scrollable */
+        max-height: 100%; /* Ensure the content fits within the overlay */
+        font-size: 30px;
+    }
+
+    .fade-top, .fade-bottom {
+        position: fixed; /* Make the fades fixed */
+        left: 0;
+        right: 0;
+        height: 50px;
+        pointer-events: none; /* Allow clicks to pass through */
+        z-index: 9999; /* Ensure they are above the content */
+        border: none; /* Ensure no border is applied */
+        outline: none; /* Ensure no outline is applied */
+    }
+
+    .black-space {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 10%; /* Adjust the height of the black space */
+        background-color: black;
+        z-index: 9999; /* Ensure it's above other content */
+    }
+
+    .fade-top {
+        top: 10%; /* Position the up fade immediately below the black space */
+        left: 2%;
+        right: 2%;
+        height: 90px; /* Adjust the height of the fade */
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    }
+
+    .black-space-bottom {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 14%; /* Adjust the height of the black space */
+        background-color: black;
+        z-index: 9999; /* Ensure it's above other content */
+    }
+
+    .fade-bottom {
+        bottom: 14%; /* Position the down fade immediately above the black space */
+        left: 2%;
+        right: 2%;
+        height: 90px; /* Adjust the height of the fade */
+        background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    }
+
+    .overlay-text img {
+        max-width: 100%;
+        height: auto;
+        margin: 10px 0;
+    }
+
+    .song {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-bottom: 13px;
+        padding: 4px 26px;
+    }
+
+    .song-number,
+    .song-name {
+        color: white;
+    }
+
+    .song-name {
+        text-align: right;
+    }
+
+    .centered-button {
+        position: fixed;
+        top: 50px; /* Adjusted top position */
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 14px 14px;
+        background-color: transparent;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index: 999; /* Adjusted z-index */
+        text-decoration: none;
+        font-family: 'BBManualMonoPro';
+        font-size: 21px;
+        padding-left: 3px;
+    }
+
+    @media screen and (max-width: 600px) {
+        .song-name,
+        .song-number {
+            font-size: 16px;
+        }
         .overlay-header {
-            position: fixed;
-            top: 4%;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 10000;
-            color: white;
-            font-family: 'BBManualMonoPro';
-            text-align: center;
+            font-size: 25px;
+            margin-left: 5px;
+            margin-right: 5px;
         }
+    }
 
-.overlay-close {
-    position: fixed;
-    bottom: 7%;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 10000;
-    cursor: pointer;
-    width: 35px; /* Adjust width as needed */
-    height: 35px; /* Adjust height as needed */
-}
-
-.overlay-close img {
-    display: block; /* Ensure the image is displayed as a block */
-    max-width: 100%; /* Ensure the image is responsive */
-    height: auto; /* Maintain aspect ratio */
-}
-
-.overlay-content {
-    padding: 150px 20px 80px; /* Adjusted padding to create space at the top */
-    background-color: black; /* Ensure the background is black */
-    text-align: center;
-    max-width: 100%; /* Ensure content does not exceed screen width */
-    margin: 0 auto;
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
-    word-wrap: break-word; /* Allow long words to break and wrap to the next line */
-    overflow-y: auto; /* Make the content scrollable */
-    max-height: 100%; /* Ensure the content fits within the overlay */
-    font-size: 30px;
-}
-
-        .fade-top, .fade-bottom {
-            position: fixed; /* Make the fades fixed */
-            left: 0;
-            right: 0;
-            height: 50px;
-            pointer-events: none; /* Allow clicks to pass through */
-            z-index: 9999; /* Ensure they are above the content */
+    @media screen and (min-width: 601px) {
+        .song-name,
+        .song-number {
+            font-size: 17px;
         }
-
-.black-space {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 10%; /* Adjust the height of the black space */
-    background-color: black;
-    z-index: 9999; /* Ensure it's above other content */
-}
-
-.fade-top {
-    position: fixed;
-    top: 10%; /* Position the up fade immediately below the black space */
-    left: 2%;
-    right: 2%;
-    height: 90px; /* Adjust the height of the fade */
-    pointer-events: none;
-    z-index: 9999;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-    border: none; /* Ensure no border is applied */
-    outline: none; /* Ensure no outline is applied */
-}
-
-.black-space-bottom {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 14%; /* Adjust the height of the black space */
-    background-color: black;
-    z-index: 9999; /* Ensure it's above other content */
-}
-
-.fade-bottom {
-    position: fixed;
-    bottom: 13%; /* Position the down fade immediately above the black space */
-    left: 2%;
-    right: 2%;
-    height: 90px; /* Adjust the height of the fade */
-    pointer-events: none;
-    z-index: 9999;
-    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-}
-
-        .overlay-text img {
-            max-width: 100%;
-            height: auto;
-            margin: 10px 0;
-        }
-
         .song {
-            display: flex;
-            align-items: flex-start;
-            justify-content: space-between;
-            margin-bottom: 13px;
-            padding: 4px 26px;
+            padding: 0 25px;
         }
-
-        .song-number,
-        .song-name {
-            color: white;
+        .overlay-header {
+            font-size: 30px;
         }
-
-        .song-name {
-            text-align: right;
-        }
-        
-        .centered-button {
-    position: fixed;
-    top: 50px; /* Adjusted top position */
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 14px 14px;
-    background-color: transparent;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    z-index: 999; /* Adjusted z-index */
-    text-decoration: none;
-    font-family: 'BBManualMonoPro';
-    font-size: 21px;
-    padding-left: 3px;
-}
-
-        @media screen and (max-width: 600px) {
-            .song-name,
-            .song-number {
-                font-size: 16px;
-            }
-            .overlay-header {
-                font-size: 25px;
-                margin-left: 5px
-                margin-right: 5px
-            }
-        }
-
-        @media screen and (min-width: 601px) {
-            .song-name,
-            .song-number {
-                font-size: 17px;
-            }
-            .song {
-                padding: 0 25px;
-            }
-            .overlay-header {
-                font-size: 30px;
-            }
-        }
-    </style>
+    }
+</style>
  <script>
         function openOverlay(title, content) {
             document.getElementById('overlay').style.display = 'flex'; // Change display to flex
