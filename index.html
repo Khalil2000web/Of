@@ -419,7 +419,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let currentIndex = 0;
 
-    // Ensure the page is immediately non-scrollable when the overlay is open
     function disableScroll() {
         document.body.classList.add('no-scroll');
     }
@@ -443,7 +442,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     mediaElements.forEach((media, index) => {
-        media.addEventListener('click', () => openOverlay(index));
+        media.addEventListener('click', () => {
+            disableScroll(); // Immediately disable scrolling
+            openOverlay(index);
+        });
     });
 
     closeBtn.addEventListener('click', closeOverlay);
@@ -458,7 +460,6 @@ document.addEventListener('DOMContentLoaded', function() {
         openOverlay(currentIndex);
     });
 
-    // Ensure no-scroll is applied immediately when the overlay is shown
     overlay.addEventListener('transitionend', () => {
         if (overlay.style.display === 'flex') {
             disableScroll();
