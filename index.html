@@ -419,10 +419,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let currentIndex = 0;
 
-    // Initially disable scrolling to prevent any scrolling before the overlay opens
-    document.body.classList.add('no-scroll');
+    // Ensure the page is immediately non-scrollable when the overlay is open
+    function disableScroll() {
+        document.body.classList.add('no-scroll');
+    }
+
+    function enableScroll() {
+        document.body.classList.remove('no-scroll');
+    }
 
     function openOverlay(index) {
+        disableScroll(); // Disable scrolling before showing the overlay
         currentIndex = index;
         const clonedMedia = mediaElements[currentIndex].cloneNode(true);
         overlayContent.innerHTML = '';
@@ -432,7 +439,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function closeOverlay() {
         overlay.style.display = 'none';
-        document.body.classList.remove('no-scroll'); // Enable scrolling of the main page
+        enableScroll(); // Enable scrolling when the overlay is closed
     }
 
     mediaElements.forEach((media, index) => {
@@ -454,7 +461,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Ensure no-scroll is applied immediately when the overlay is shown
     overlay.addEventListener('transitionend', () => {
         if (overlay.style.display === 'flex') {
-            document.body.classList.add('no-scroll');
+            disableScroll();
         }
     });
 });
