@@ -419,13 +419,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let currentIndex = 0;
 
+    // Initially disable scrolling to prevent any scrolling before the overlay opens
+    document.body.classList.add('no-scroll');
+
     function openOverlay(index) {
         currentIndex = index;
         const clonedMedia = mediaElements[currentIndex].cloneNode(true);
         overlayContent.innerHTML = '';
         overlayContent.appendChild(clonedMedia);
         overlay.style.display = 'flex';
-        document.body.classList.add('no-scroll'); // Disable scrolling of the main page immediately
     }
 
     function closeOverlay() {
@@ -447,6 +449,13 @@ document.addEventListener('DOMContentLoaded', function() {
     nextBtn.addEventListener('click', () => {
         currentIndex = (currentIndex + 1) % mediaElements.length;
         openOverlay(currentIndex);
+    });
+
+    // Ensure no-scroll is applied immediately when the overlay is shown
+    overlay.addEventListener('transitionend', () => {
+        if (overlay.style.display === 'flex') {
+            document.body.classList.add('no-scroll');
+        }
     });
 });
 </script>
