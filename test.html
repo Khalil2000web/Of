@@ -131,13 +131,6 @@
 </div>
 
 <script>
-  function toggleMute() {
-    var video = document.getElementById("myVideo");
-    var button = document.getElementById("muteButton");
-    video.muted = !video.muted;
-    button.innerText = video.muted ? "Unmute" : "Mute";
-  }
-
   document.addEventListener('DOMContentLoaded', function() {
     const mediaElements = document.querySelectorAll('.image, video');
     const overlay = document.getElementById('overlay');
