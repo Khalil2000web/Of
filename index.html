@@ -319,21 +319,21 @@ body.no-scroll {
     transform: translateY(-50%);
     cursor: pointer;
     z-index: 10000;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 #prev-btn {
-    left: 67px;
-    border: 3px solid lightblue; /* Initial blue border */
-    top: 49px;
+    left: 65px;
+    border: 3px solid #275c86; /* Initial blue border */
+    top: 50px;
 }
 
 #next-btn {
-    right: 67px;
-    top: 49px;
+    right: 65px;
+    top: 50px;
 }
 
 .nav-btn img {
@@ -341,7 +341,7 @@ body.no-scroll {
     max-width: 100%;
     height: auto;
     /* Adjust width and height if needed */
-    width: 16px;
+    width: 17px;
 }
 </style>
 
@@ -495,7 +495,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const prevBtn = document.getElementById('prev-btn');
 
     if (!localStorage.getItem('prevBtnClicked')) {
-        prevBtn.style.border = '2px solid blue';
+        prevBtn.style.border = '2px solid #275c86';
     }
 
     prevBtn.addEventListener('click', function() {
