@@ -302,10 +302,17 @@ body.no-scroll {
 
 /* Overlay content */
 #overlay-content {
-    width: 100%;
-    height: 200%;
-    overflow-y: scroll;
-    touch-action: pan-y;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Enables scrolling */
+  touch-action: pan-y;
+  position: relative;
+}
+
+#overlay-content img {
+  max-width: 100%;
+  height: auto; /* Ensure height can exceed container, enabling scrolling */
+  display: block;
 }
 
 /* Close button */
@@ -519,75 +526,64 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
+  function toggleMute() {
+    var video = document.getElementById("myVideo");
+    var button = document.getElementById("muteButton");
+    video.muted = !video.muted;
+    button.innerText = video.muted ? "Unmute" : "Mute";
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
     const mediaElements = document.querySelectorAll('.image, video');
     const overlay = document.getElementById('overlay');
     const overlayContent = document.getElementById('overlay-content');
     const closeBtn = document.getElementById('close-btn');
     const prevBtn = document.getElementById('prev-btn');
     const nextBtn = document.getElementById('next-btn');
-
     let currentIndex = 0;
 
     function disableScroll() {
-        document.body.classList.add('no-scroll');
-        // Prevent touch move on iOS
-        document.addEventListener('touchmove', preventDefault, { passive: false });
+      document.body.classList.add('no-scroll');
     }
 
     function enableScroll() {
-        document.body.classList.remove('no-scroll');
-        // Remove touch move prevention on iOS
-        document.removeEventListener('touchmove', preventDefault, { passive: false });
-    }
-
-    function preventDefault(e) {
-        e.preventDefault();
+      document.body.classList.remove('no-scroll');
     }
 
     function openOverlay(index) {
-        disableScroll(); // Disable scrolling before showing the overlay
-        currentIndex = index;
-        const clonedMedia = mediaElements[currentIndex].cloneNode(true);
-        overlayContent.innerHTML = '';
-        overlayContent.appendChild(clonedMedia);
-        overlay.style.display = 'flex';
+      currentIndex = index;
+      const clonedMedia = mediaElements[currentIndex].cloneNode(true);
+      overlayContent.innerHTML = '';
+      overlayContent.appendChild(clonedMedia);
+      overlay.style.display = 'flex';
+      overlayContent.scrollTop = 0;
+      disableScroll();
     }
 
     function closeOverlay() {
-        overlay.style.display = 'none';
-        enableScroll(); // Enable scrolling when the overlay is closed
+      overlay.style.display = 'none';
+      enableScroll();
     }
 
     mediaElements.forEach((media, index) => {
-        media.addEventListener('click', () => {
-            disableScroll(); // Immediately disable scrolling
-            openOverlay(index);
-        });
+      media.addEventListener('click', () => {
+        openOverlay(index);
+      });
     });
 
     closeBtn.addEventListener('click', closeOverlay);
 
     prevBtn.addEventListener('click', () => {
-        if (currentIndex === 0) {
-            // Do nothing if it's the first media
-            return;
-        }
-        currentIndex = (currentIndex - 1 + mediaElements.length) % mediaElements.length;
-        openOverlay(currentIndex);
+      if (currentIndex === 0) return;
+      currentIndex = (currentIndex - 1 + mediaElements.length) % mediaElements.length;
+      openOverlay(currentIndex);
     });
 
     nextBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex + 1) % mediaElements.length;
-        openOverlay(currentIndex);
+      currentIndex = (currentIndex + 1) % mediaElements.length;
+      openOverlay(currentIndex);
     });
-
-    overlay.addEventListener('transitionend', () => {
-        if (overlay.style.display === 'flex') {
-            disableScroll();
-        }
-    });
-});
+  });
 </script>
 </body>
 </html>
