@@ -536,6 +536,10 @@ document.addEventListener('DOMContentLoaded', function() {
     closeBtn.addEventListener('click', closeOverlay);
 
     prevBtn.addEventListener('click', () => {
+        if (currentIndex === 0) {
+            // Do nothing if it's the first media
+            return;
+        }
         currentIndex = (currentIndex - 1 + mediaElements.length) % mediaElements.length;
         openOverlay(currentIndex);
     });
