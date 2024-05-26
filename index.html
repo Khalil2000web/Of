@@ -250,12 +250,14 @@ bottom: 3%;
 
 }
 
+/* Reset default margin and padding */
 html, body {
     margin: 0;
     padding: 0;
     height: 100%;
 }
 
+/* Container for images */
 .image-container {
     width: 100%;
     height: 100%;
@@ -267,6 +269,7 @@ html, body {
     z-index: 999;
 }
 
+/* Individual images */
 .image {
     scroll-snap-align: start; /* Snap each image to the start */
     flex: 0 0 auto;
@@ -275,12 +278,13 @@ html, body {
     cursor: pointer; /* Add pointer cursor to indicate clickable */
 }
 
+/* Overlay */
 #overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%; /* Set overlay height to cover the entire viewport */
+    height: 100%; /* Cover the entire viewport */
     background-color: black; /* Adjust transparency as needed */
     display: none;
     justify-content: center;
@@ -290,10 +294,12 @@ html, body {
     padding: 0;
 }
 
+/* Prevent scrolling when overlay is active */
 body.no-scroll {
     overflow: hidden;
 }
 
+/* Overlay content */
 #overlay-content {
     width: 100%;
     height: 100%;
@@ -301,19 +307,22 @@ body.no-scroll {
     touch-action: pan-y;
 }
 
+/* Close button */
 #close-btn {
     position: absolute;
-    top: 10px; /* Adjust the position from the top as needed */
-    right: 10px; /* Adjust the position from the right as needed */
+    top: 10px; /* Adjust position from the top as needed */
+    right: 10px; /* Adjust position from the right as needed */
     cursor: pointer;
-    width: 30px; /* Adjust the width as needed */
+    width: 30px; /* Adjust width as needed */
     height: auto; /* Maintain aspect ratio */
 }
 
+/* Navigation buttons */
 .main-nav {
     display: none; /* Hide main navigation links by default */
 }
 
+/* Common styles for navigation buttons */
 .nav-btn {
     position: absolute;
     transform: translateY(-50%);
@@ -325,17 +334,20 @@ body.no-scroll {
     padding-bottom: 5px;
 }
 
+/* Previous button */
 #prev-btn {
     left: 65px;
     border: 3px solid #275c86; /* Initial blue border */
     top: 50px;
 }
 
+/* Next button */
 #next-btn {
     right: 65px;
     top: 50px;
 }
 
+/* Styling for navigation button images */
 .nav-btn img {
     display: block;
     max-width: 100%;
@@ -518,10 +530,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function disableScroll() {
         document.body.classList.add('no-scroll');
+        // Prevent touch move on iOS
+        document.addEventListener('touchmove', preventDefault, { passive: false });
     }
 
     function enableScroll() {
         document.body.classList.remove('no-scroll');
+        // Remove touch move prevention on iOS
+        document.removeEventListener('touchmove', preventDefault, { passive: false });
+    }
+
+    function preventDefault(e) {
+        e.preventDefault();
     }
 
     function openOverlay(index) {
