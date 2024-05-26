@@ -318,11 +318,8 @@ body.no-scroll {
     position: absolute;
     top: 7%;
     transform: translateY(-50%);
-    color: #fff;
-    font-size: 32px;
     cursor: pointer;
     z-index: 10000;
-    font-family: 'Victor Mono';
     padding-left: 15px;
     padding-right: 15px;
 }
@@ -334,6 +331,14 @@ body.no-scroll {
 
 #next-btn {
     right: 80px;
+}
+
+.nav-btn img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    /* Adjust width and height if needed */
+    width: 32px;
 }
 </style>
 
@@ -440,12 +445,16 @@ PRIVACY
 </nav>
 
 <div id="overlay">
-  <span id="prev-btn" class="nav-btn"><b style="font-weight: 900;">&lt;</b></span>
+<span id="prev-btn" class="nav-btn">
+    <img src="prev.png" alt="Previous">
+</span>
   <div id="overlay-content">
     <!-- This is where the clicked media will be displayed -->
     <!-- The content will be dynamically added here via JavaScript -->
   </div>
-  <span id="next-btn" class="nav-btn"><b style="font-weight: 900;">&gt;</b></span>
+<span id="next-btn" class="nav-btn">
+    <img src="next.png" alt="Next">
+</span>
 <img id="close-btn" src="Xbtn.PNG" alt="Close">
 </div>
 
