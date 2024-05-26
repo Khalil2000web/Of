@@ -295,8 +295,9 @@ html, body {
 }
 
 /* Prevent scrolling when overlay is active */
-body.no-scroll {
-    overflow: hidden;
+/* Add this CSS to your existing styles */
+.no-scroll {
+    overflow: hidden !important; /* Override default overflow property */
 }
 
 /* Overlay content */
@@ -538,14 +539,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const nextBtn = document.getElementById('next-btn');
 
     let currentIndex = 0;
-    let isOverlayOpened = false;
 
     function disableScroll() {
-        document.body.classList.add('no-scroll');
+        document.body.classList.add('no-scroll'); // Add class to disable scrolling
     }
 
     function enableScroll() {
-        document.body.classList.remove('no-scroll');
+        document.body.classList.remove('no-scroll'); // Remove class to enable scrolling
     }
 
     function openOverlay(index) {
@@ -556,14 +556,12 @@ document.addEventListener('DOMContentLoaded', function() {
         overlayContent.appendChild(clonedMedia);
         overlay.style.display = 'flex';
         overlayContent.style.overflowY = 'auto'; // Enable scrolling for overlay content only
-        isOverlayOpened = true;
     }
 
     function closeOverlay() {
         overlay.style.display = 'none';
         enableScroll(); // Enable scrolling when the overlay is closed
         overlayContent.style.overflowY = 'hidden'; // Disable scrolling for overlay content
-        isOverlayOpened = false;
     }
 
     mediaElements.forEach((media, index) => {
@@ -591,6 +589,8 @@ document.addEventListener('DOMContentLoaded', function() {
     overlay.addEventListener('transitionend', () => {
         if (overlay.style.display === 'flex') {
             disableScroll();
+        } else {
+            enableScroll();
         }
     });
 });
