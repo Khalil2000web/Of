@@ -538,6 +538,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const nextBtn = document.getElementById('next-btn');
 
     let currentIndex = 0;
+    let isOverlayOpened = false;
 
     function disableScroll() {
         document.body.classList.add('no-scroll');
@@ -548,24 +549,25 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function openOverlay(index) {
+        disableScroll(); // Disable scrolling before showing the overlay
         currentIndex = index;
         const clonedMedia = mediaElements[currentIndex].cloneNode(true);
         overlayContent.innerHTML = '';
         overlayContent.appendChild(clonedMedia);
         overlay.style.display = 'flex';
         overlayContent.style.overflowY = 'auto'; // Enable scrolling for overlay content only
-        overlayContent.scrollTop = 0; // Set scroll position to top
+        isOverlayOpened = true;
     }
 
     function closeOverlay() {
         overlay.style.display = 'none';
         enableScroll(); // Enable scrolling when the overlay is closed
         overlayContent.style.overflowY = 'hidden'; // Disable scrolling for overlay content
+        isOverlayOpened = false;
     }
 
     mediaElements.forEach((media, index) => {
         media.addEventListener('click', () => {
-            disableScroll(); // Immediately disable scrolling
             openOverlay(index);
         });
     });
