@@ -12,7 +12,7 @@
         overflow-y: hidden;
       }
       .cover {
-        width: 200%;
+        width: 350%;
         height: 100%;
         background-color: black;
         display: flex;
@@ -21,25 +21,145 @@
         position: relative;
         z-index: 100;
       }
-      .media {
-        position: absolute; /* Position the image absolutely */
+      .m1 {
+        position: absolute;
         z-index: 101;
         max-width: 100%;
         max-height: 100%;
+        width: auto;
+        height: 35.9%;
+        right: 4%;
+        top: 12%;
       }
-            @media screen and (max-width: 600px) {
-      .cover {
-        width:300%;
+      .m2 {
+        position: absolute;
+        z-index: 101;
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: 9.9%;
+        right: 5%;
+        bottom: 32%;
+        z-index: 102;
+      }
+      .m3 {
+        position: absolute;
+        z-index: 101;
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: 39.9%;
+        right: 20%;
+        top: 50%;
+      }
+
+        .m4 {
+        position: absolute;
+        z-index: 101;
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: 39.9%;
+        right: 20%;
+        top: 50%;
+        }
+
+        .m5 {
+        position: absolute;
+        z-index: 101;
+        max-width: 100%;
+        max-height: 100%;
+        width: 70%;
+        height: auto;
+        right: 30%;
+        top: 5%;
+        }
+
+        .m6 {
+        position: absolute;
+        z-index: 101;
+        max-width: 100%;
+        max-height: 100%;
+        width: 70%;
+        height: auto;
+        right: 30%;
+        top: 5%;
+        }
+
+        .m7 {
+        position: absolute;
+        z-index: 101;
+        max-width: 100%;
+        max-height: 100%;
+        width: 70%;
+        height: auto;
+        right: 30%;
+        top: 5%;
+        }
+
+      @media screen and (max-width: 600px) {
+        .cover {
+        }
+        .m1 {
+          right: 1%;
+          top: 8%; /* Re-add top positioning if needed */
+          width:30%;
+          height: auto;
+        }
+        .m2 {
+          right: 3%;
+          bottom: 3%;
+          top: auto; /* Re-add top positioning if needed */
+          width:30%;
+          height: auto;
+        }
+        .m3 {
+          right: 21%;
+          bottom: 24.9%;
+          top: auto; /* Ensure top is set to auto to avoid conflicts */
+        }
+        .m4 {
+          right: 5%;
+          bottom: 16%;
+          top: auto; /* Re-add top positioning if needed */
+          width:15%;
+          height: auto;
+        }
+
+        .m5 {
+        width: 30%;
+        height: auto;
+        right: 44%;
+        top: 6%;
+        }
+
+        .m6 {
+        width: auto;
+        height: 40%;
+        right: 49%;
+        top: auto;
+        bottom: 5%;
+        }
+
+        .m7 {
+        width: auto;
+        height: 40%;
+        right: 67.9%;
+        top: auto;
+        bottom: 9%;
         }
       }
     </style>
   </head>
   <body>
     <div class="cover">
-    <img class="media" src="IMG_250292E22B15-1.JPEG" style="width: auto; height: 35.9%; right:4%; top: 12%;">
-    <img class="media" src="Br2.jpg" style="width: auto; height: 9.9%; right:8%; bottom: 32%; z-index:102;">
-    <img class="media" src="Br3.JPEG" style="width: auto; height: 39.9%; right:31%; top: 30%;">
-
+      <img class="m1" src="IMG_250292E22B15-1.JPEG" alt="Image 1">
+      <img class="m2" src="Br2.jpg" alt="Image 2">
+      <img class="m3" src="Br3.JPEG" alt="Image 3">
+      <img class="m4" src="Br8.GIF">
+      <img class="m5" src="Br4.GIF">
+      <img class="m6" src="Br6.jpg">
+      <img class="m7" src="Br7.GIF">
     </div>
   </body>
 </html>
