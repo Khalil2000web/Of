@@ -15,7 +15,54 @@
     <meta property="og:locale" content="en_US">
     <meta property="og:author" content="Khalil">
     <link rel="icon" href="Icon2.PNG">
-  </head>
+      
+<style>
+.title-container {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2000; /* ensure it's on top of other content */
+}
+
+.left-title, .right-title {
+    font-size: 22px;
+    color: white;
+}
+
+.left-title {
+    left: 0;
+    padding-left: 100px; /* Adjust as needed */
+}
+
+.right-title {
+    right: 0;
+    padding-right: 70px; /* Adjust as needed */
+}
+
+.title-container.hidden {
+    display: none; /* hide the container when it has the hidden class */
+}
+
+.left-title a, .right-title a {
+    color: inherit; /* inherit text color from parent */
+    text-decoration: none; /* remove underline from links */
+    cursor: pointer; /* change cursor to pointer on hover */
+}
+
+h1 {
+    font-size: inherit; /* Inherit font size */
+    font-weight: normal; /* Set font weight to normal */
+    margin: 0; /* Remove default margin */
+}
+</style>
+
+<div class="title-container left-title">
+    <span>&lt BEEN</span>
+</div>
+
+<div class="title-container right-title">
+    <span>MAJESTIC &gt</span>
+</div>
       
     <style>
       html, body {
