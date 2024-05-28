@@ -31,7 +31,7 @@
 
 .left-title {
     left: 0;
-    padding-left: 100px; /* Adjust as needed */
+    padding-left: 70px; /* Adjust as needed */
 }
 
 .right-title {
@@ -54,14 +54,42 @@ h1 {
     font-weight: normal; /* Set font weight to normal */
     margin: 0; /* Remove default margin */
 }
+
+    .narrow-angle-l {
+        font-size: 23px; /* Adjust size as needed */
+        font-family: 'Arial', sans-serif; /* Use a suitable font */
+    color: inherit; /* inherit text color from parent */
+    text-decoration: none; /* remove underline from links */
+    cursor: pointer; /* change cursor to pointer on hover */
+    padding-left: 70px; /* Adjust as needed */
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2000; /* ensure it's on top of other content */
+    }
+    
+        .narrow-angle-r {
+       font-size: 22px; /* Adjust size as needed */
+        font-family: 'Arial', sans-serif; /* Use a suitable font */
+    color: inherit; /* inherit text color from parent */
+    text-decoration: none; /* remove underline from links */
+    cursor: pointer; /* change cursor to pointer on hover */
+    padding-right: 70px; /* Adjust as needed */
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2000; /* ensure it's on top of other content */
+    }
 </style>
 
 <div class="title-container left-title">
     <span>&lt BEEN</span>
+<p class="narrow-angle-l">&#9001;</p>
 </div>
 
 <div class="title-container right-title">
     <span>MAJESTIC &gt</span>
+<p class="narrow-angle-r">&#9001;</p>
 </div>
       
     <style>
