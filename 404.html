@@ -6,12 +6,12 @@
     <title>Khalil</title>
     <style>
         @font-face {
-            font-family: 'BBManualMonoPro';
-            src: url('/BBManualMonoProTX-Regular.otf') format('opentype');
+            font-family: 'BB Manual Mono Pro TX';
+            src: url('BBManualMonoProTX-Regular.woff2') format('opentype');
             /* Additional font properties (e.g., font-weight, font-style) can be specified here */
         }
         body {
-            font-family: 'BBManualMonoPro';
+            font-family: 'BB Manual Mono Pro TX';
             font-size: 10px;
         }
     </style>
@@ -79,7 +79,7 @@ nav.top-nav ul li, nav.bottom-nav ul li {
 }
 
 nav.top-nav ul li a {
-    font-family: 'BBManualMonoPro', Charcoal, sans-serif;
+    font-family: 'BB Manual Mono Pro TX', sans-serif;
     font-size: 19px;
     color: black;
     text-decoration: none;
@@ -87,7 +87,7 @@ nav.top-nav ul li a {
 }
 
 nav.bottom-nav ul li a {
-    font-family: 'BBManualMonoPro', Charcoal, sans-serif;
+    font-family: 'BB Manual Mono Pro TX', sans-serif;
     font-size: 11px;
     color: black;
     text-decoration: none;
@@ -95,7 +95,7 @@ nav.bottom-nav ul li a {
 }
 
 .middle-text {
-    font-family: 'BBManualMonoPro';
+    font-family: 'BB Manual Mono Pro TX';
     font-size: 10px;
     color: white;
     padding: 0px;
@@ -172,23 +172,15 @@ nav.bottom-nav ul li a {
     }
 
     nav.top-nav ul li a {
-        font-family: 'BBManualMonoPro', Charcoal, sans-serif;
+        font-family: 'BB Manual Mono Pro TX', sans-serif;
         color: black;
         text-decoration: none;
     }
 
     nav.bottom-nav ul li a {
-        font-family: 'BBManualMonoPro', Charcoal, sans-serif;
+        font-family: 'BB Manual Mono Pro TX', sans-serif;
         color: black;
         text-decoration: none;
-    }
-
-    .middle-text {
-        font-family: 'BBManualMonoPro';
-        font-size: 12px;
-        color: black;
-        margin-left: 100px;
-        margin-bottom: 5px;
     }
 }
 </style>
@@ -312,6 +304,8 @@ PRIVACY
         top: 50px;
         font-size: 120px;
         font-weight: normal;
+        text-decoration: underline;
+        cursor: pointer;
     }
 
     a:visited {
@@ -332,7 +326,7 @@ PRIVACY
 <div style="text-align: center;">
     <font color="black" size="5"><b>ERROR</b></font><br>
 </div><br><br><br><br>
-<div class="t">THIS PAGE IS NOT A THING. TRY <ti><a href="/">AGAIN</a></ti>.</div>
+<div class="t">THIS PAGE IS NOT A THING. TRY <ti><a style="text-decoration: underline;cursor: pointer;" href="/">AGAIN</a></ti>.</div>
 
 <!-- JavaScript function to handle redirection -->
 <script>
