@@ -119,6 +119,36 @@
           bottom: 9%;
         }
       }
+      
+      .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: none;
+        justify-content: center;
+        background: rgba(0, 0, 0, 0.7);
+        align-items: center;
+        z-index: 1000;
+      }
+
+      .overlay img {
+        max-width: 90%;
+        max-height: 90%;
+        z-index: 1001;
+      }
+
+      .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: white;
+        cursor: pointer;
+        z-index: 999;
+        width: 30px;
+        height: auto;
+      }
     </style>
   </head>
   
@@ -217,13 +247,29 @@ PRIVACY
   
   <body>
     <div class="cover">
-      <img class="m1" src="IMG_250292E22B15-1.JPEG" alt="Image 1">
-      <img class="m2" src="Br2.jpg" alt="Image 2">
-      <img class="m3" src="Br3.JPEG" alt="Image 3">
-      <img class="m4" src="Br8.GIF" alt="Image 4">
-      <img class="m5" src="Br4.GIF" alt="Image 5">
-      <img class="m6" src="Br6.jpg" alt="Image 6">
-      <img class="m7" src="Br7.GIF" alt="Image 7">
+      <img class="m1" src="IMG_250292E22B15-1.JPEG" onclick="openOverlay(this)>
+      <img class="m2" src="Br2.jpg" alt="Image 2" onclick="openOverlay(this)>
+      <img class="m3" src="Br3.JPEG" alt="Image 3" onclick="openOverlay(this)>
+      <img class="m4" src="Br8.GIF" alt="Image 4" onclick="openOverlay(this)>
+      <img class="m5" src="Br4.GIF" alt="Image 5" onclick="openOverlay(this)>
+      <img class="m6" src="Br6.jpg" alt="Image 6" onclick="openOverlay(this)>
+      <img class="m7" src="Br7.GIF" alt="Image 7" onclick="openOverlay(this)>
     </div>
+        <div class="overlay" id="overlay">
+      <img class="close-btn" src="Xbtn.PNG" alt="Close" onclick="closeOverlay('overlay')">
+      <img id="overlay-img" src="">
+    </div>
+    <script>
+      function openOverlay(element) {
+        document.getElementById('overlay-img').src = element.src;
+        document.getElementById('overlay').style.display = 'flex';
+        document.body.classList.add('disabled');
+      }
+
+      function closeOverlay() {
+        document.getElementById('overlay').style.display = 'none';
+        document.body.classList.remove('disabled');
+      }
+    </script>
   </body>
 </html>
