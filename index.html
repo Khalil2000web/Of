@@ -282,7 +282,7 @@ bottom: 3%;
       top: 0;
       left: 0;
       width: 100%;
-      height: 1000px;
+      height: 1000px; /* Set to a specific height for demonstration purposes */
       background-color: black;
       display: none;
       justify-content: center;
@@ -292,10 +292,14 @@ bottom: 3%;
       padding: 0;
     }
 
+    body.no-scroll {
+      overflow: hidden;
+    }
+
     #overlay-content {
       width: 100%;
       height: 100%;
-      overflow-y: scroll;
+      overflow-y: auto;
       touch-action: pan-y;
       position: relative;
     }
@@ -315,39 +319,39 @@ bottom: 3%;
       height: auto;
     }
 
-/* Common styles for navigation buttons */
-.nav-btn {
-    position: absolute;
-    transform: translateY(-50%);
-    cursor: pointer;
-    z-index: 10000;
-    padding-left: 16px;
-    padding-right: 16px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
+    /* Common styles for navigation buttons */
+    .nav-btn {
+        position: absolute;
+        transform: translateY(-50%);
+        cursor: pointer;
+        z-index: 10000;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
 
-/* Previous button */
-#prev-btn {
-    left: 65px;
-    border: 3px solid #275c86; /* Initial blue border */
-    top: 50px;
-}
+    /* Previous button */
+    #prev-btn {
+        left: 65px;
+        border: 3px solid #275c86; /* Initial blue border */
+        top: 50px;
+    }
 
-/* Next button */
-#next-btn {
-    right: 65px;
-    top: 50px;
-}
+    /* Next button */
+    #next-btn {
+        right: 65px;
+        top: 50px;
+    }
 
-/* Styling for navigation button images */
-.nav-btn img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    /* Adjust width and height if needed */
-    width: 17px;
-}
+    /* Styling for navigation button images */
+    .nav-btn img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        /* Adjust width and height if needed */
+        width: 17px;
+    }
 </style>
 
 <style>
