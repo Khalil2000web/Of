@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Victor+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+<style>
+@font-face {
+  font-family: 'BB Manual Mono Pro TX';
+  src: url('BBManualMonoProTX-Regular.woff2') format('woff2');
+  /* Additional font properties (e.g., font-weight, font-style) can be specified here */
+}
+body {
+    font-family: 'BB Manual Mono Pro TX';
+}
+</style>
+
+    <meta charset="UTF-8">
+    <meta name="description" content="The Official Website of Khalil">
+    <meta property="og:description" content="The Official Website of Khalil">
+    <meta property="og:image" content="924468E4-84B7-46FA-994D-ECDCF49817C4.jpeg">
+    <meta property="og:url" content="https://khaliiil.com">
+    <meta property="og:site_name" content="Khaliil">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:author" content="Khalil">
+    <link rel="icon" href="Icon2.PNG">
+
+    <style>
+        body {
+            background-color: black;
+            font-family: 'BB Manual Mono Pro TX';
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .title {
+            font-size: 20px;
+            color: white;
+            margin-bottom: 20px;
+            width: 100%;
+            text-align: left;
+            padding-left: 10px; /* Adjust padding as needed */
+        }
+
+        .input-container {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            font-family: 'BB Manual Mono Pro TX';
+            font-size: 16px;
+            background-color: black;
+            border: 1px solid #969696;
+            color: white;
+            box-sizing: border-box;
+            border-radius: 0;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            font-family: 'BB Manual Mono Pro TX';
+            font-size: 16px;
+            background-color: #c63528;
+            color: #969696;
+            border: none;
+            cursor: pointer;
+            border-radius: 0;
+        }
+
+        button:hover {
+            background-color: darkred;
+        }
+
+        button:focus {
+            outline: none;
+        }
+
+        hr {
+            width: 100%;
+            border: 0;
+            border-top: 1px solid gray;
+            margin: 20px 0;
+        }
+
+        .details-container {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+            color: white;
+            padding: 0 10px; /* Align with padding of title and inputs */
+        }
+
+        .details-text {
+            font-size: 14px;
+        }
+
+        .details-content {
+            display: none;
+            width: 100%;
+            font-size: 14px;
+            color: white;
+            padding-left: 10px;
+            margin-top: 10px;
+            transition: max-height 0.3s ease-out;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <form id="subscribe-form" method="POST" action="/subscribe">
+        <div class="title">SUBSCRIBE FOR NEW UPDATES</div>
+        <div class="input-container">
+            <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
+        </div>
+        <button type="submit">SUBSCRIBE</button>
+        <hr>
+        <div class="details-container" onclick="toggleDetails()">
+            <span class="details-text">DETAILS</span>
+            <span class="toggle-sign">+</span>
+        </div>
+        <div class="details-content">
+            <p>WELCOME TO KHALIIIL.COM!<br>BY PROVIDING YOUR EMAIL, YOU’LL STAY<br>INFORMED ABOUT THE LATEST UPDATES, EVENTS, AND IMPORTANT INFORMATION.<br><br>WE’RE EXCITED TO HAVE YOU JOIN US ON THIS JOURNEY AND LOOK FORWARD TO KEEPING YOU IN THE LOOP EVERY STEP OF THE WAY. REST ASSURED, YOUR INFORMATION IS SAFE WITH US, AND WE’LL ONLY USE IT TO ENHANCE YOUR EXPERIENCE WITHIN OUR COMMUNITY.<br><br>KHALIL DIAB.</p>
+        </div>
+    </form>
+
+    <script>
+        function toggleDetails() {
+            const toggleSign = document.querySelector('.toggle-sign');
+            const detailsContent = document.querySelector('.details-content');
+            
+            if (toggleSign.textContent === '+') {
+                toggleSign.textContent = '-';
+                detailsContent.style.display = 'block';
+            } else {
+                toggleSign.textContent = '+';
+                detailsContent.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
