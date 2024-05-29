@@ -66,6 +66,94 @@ z-index: 2000; /* Adjust the z-index value as needed */
 <style type="text/css" id="CookieConsentStateDisplayStyles">.cookieconsent-optin-preferences,.cookieconsent-optin-statistics,.cookieconsent-optin-marketing,.cookieconsent-optin{display:none;}.cookieconsent-optout-preferences,.cookieconsent-optout-statistics,.cookieconsent-optout-marketing,.cookieconsent-optout{display:block;display:initial;}</style>
 
 <style>
+/* Your CSS styles */
+nav.top-nav {
+    margin-top: 13px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1000;
+}
+
+nav.bottom-nav {
+    margin-bottom: 9px;
+    position: fixed;
+    bottom: 13px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+nav.top-nav ul, nav.bottom-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav.top-nav ul li, nav.bottom-nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav.top-nav ul li a {
+    font-family: 'BB Manual Mono Pro TX', sans-serif;
+    font-size: 19px;
+    color: white;
+    text-decoration: none;
+    padding: 16px;
+}
+
+nav.bottom-nav ul li a {
+    font-family: 'BB Manual Mono Pro TX', sans-serif;
+    font-size: 11px;
+    color: white;
+    text-decoration: none;
+}
+
+.middle-text {
+    font-family: BB Manual Mono Pro TX;
+    font-size: 10px;
+    color: white;
+    padding: 0px;
+    margin-bottom: 2px;
+}
+
+@media screen and (max-width: 600px) {
+    nav.bottom-nav ul li a {
+        font-size: 16px;
+        text-align: center;
+        padding: 50px;
+    }
+
+    nav.top-nav ul li a {
+        padding: 6px;
+        font-size: 20px;
+    }
+nav.bottom-nav ul li:first-child a {
+    float: left;
+    margin-left: 14px; /* Adjust the margin as needed */
+    padding: 0;
+}
+
+nav.bottom-nav ul li a:last-child {
+align-items: right;
+padding: 0px;
+}
+    
+  .middle-text {
+    display: none;
+    }
+}
+</style>
+
+<style>
 .title-container {
     position: fixed;
     top: 50%;
@@ -81,13 +169,13 @@ z-index: 2000; /* Adjust the z-index value as needed */
   }
 
 .left-title, .right-title {
-    font-size: 22px;
+    font-size: 18px;
     color: white;
 }
 
 .left-title {
     left: 0;
-    padding-left: 100px; /* Adjust as needed */
+    padding-left: 700px; /* Adjust as needed */
 }
 
 .right-title {
@@ -190,7 +278,7 @@ h1 {
         hr {
             width: 100%;
             border: 0;
-            border-top: 1px solid gray;
+            border-top: 1px solid #969696;
             margin: 20px 0;
         }
 
