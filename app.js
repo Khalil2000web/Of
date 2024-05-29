@@ -87,7 +87,7 @@ async function getLatestUpdates() {
 
 // Serve the subscription form
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
+    res.sendFile(path.join(__dirname, 'join.html'));
 });
 
 // Example route to manually trigger email sending
