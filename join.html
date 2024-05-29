@@ -65,8 +65,60 @@ z-index: 2000; /* Adjust the z-index value as needed */
 <style data-emotion="css gf4rj5" data-s="">.css-gf4rj5{padding:0 0.75rem 1.75rem;}</style>
 <style type="text/css" id="CookieConsentStateDisplayStyles">.cookieconsent-optin-preferences,.cookieconsent-optin-statistics,.cookieconsent-optin-marketing,.cookieconsent-optin{display:none;}.cookieconsent-optout-preferences,.cookieconsent-optout-statistics,.cookieconsent-optout-marketing,.cookieconsent-optout{display:block;display:initial;}</style>
 
+<style>
+.title-container {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2000; /* ensure it's on top of other content */
     
+}
 
+@media screen and (max-width: 600px) {
+  .title-container {
+    display: none;
+    }
+  }
+
+.left-title, .right-title {
+    font-size: 22px;
+    color: white;
+}
+
+.left-title {
+    left: 0;
+    padding-left: 100px; /* Adjust as needed */
+}
+
+.right-title {
+    right: 0;
+    padding-right: 70px; /* Adjust as needed */
+}
+
+.title-container.hidden {
+    display: none; /* hide the container when it has the hidden class */
+}
+
+.left-title a, .right-title a {
+    color: inherit; /* inherit text color from parent */
+    text-decoration: none; /* remove underline from links */
+    cursor: pointer; /* change cursor to pointer on hover */
+}
+
+h1 {
+    font-size: inherit; /* Inherit font size */
+    font-weight: normal; /* Set font weight to normal */
+    margin: 0; /* Remove default margin */
+}
+</style>
+
+<div class="title-container left-title">
+    <span>JOIN</span>
+</div>
+
+<div class="title-container right-title">
+    <span>KHALIIL.COM</span>
+</div>
 
     <style>
         body {
@@ -183,6 +235,67 @@ z-index: 2000; /* Adjust the z-index value as needed */
             <p>WELCOME TO KHALIIIL.COM!<br>BY PROVIDING YOUR EMAIL, YOU’LL STAY<br>INFORMED ABOUT THE LATEST UPDATES, EVENTS, AND IMPORTANT INFORMATION.<br><br>WE’RE EXCITED TO HAVE YOU JOIN US ON THIS JOURNEY AND LOOK FORWARD TO KEEPING YOU IN THE LOOP EVERY STEP OF THE WAY. REST ASSURED, YOUR INFORMATION IS SAFE WITH US, AND WE’LL ONLY USE IT TO ENHANCE YOUR EXPERIENCE WITHIN OUR COMMUNITY.<br><br>KHALIL DIAB.</p>
         </div>
     </form>
+    
+    <div>
+<div class="css-nkyjj6" id="desktop-footer">
+<a href="https://khaliiil.com/join">
+<p class="chakra-text css-1p6wh2o">
+JOIN
+</p>
+</a>
+<p class="chakra-text css-19ugvly">
+© 2024 KHALIL
+</p>
+<div class="css-n4rzf0">
+<a href="https://khaliiil.com/BeenMajestic">
+<p class="chakra-text css-wfwtac">
+BEEN MAJESTIC
+</p>
+</a><a href="https://khaliiil.com/terms-conditions">
+<p class="chakra-text css-wfwtac">
+TERMS
+</p>
+</a><a href="https://khaliiil.com/privacy-policy">
+<p class="chakra-text css-1p6wh2o">
+PRIVACY
+</p>
+</a>
+</div>
+</div>
+<div id="mobile-footer" class="footer_mobile-footer__ZUP4j css-1ozbijy">
+<a href="https://khaliiil.com/join">
+<p class="chakra-text css-gf4rj5">
+JOIN
+</p>
+</a><a href="https://khaliiil.com/BeenMajestic">
+<p class="chakra-text css-gf4rj5">
+BEEN MAJESTIC
+</p>
+</a><a href="https://khaliiil.com/terms-conditions">
+<p class="chakra-text css-gf4rj5">
+TERMS
+</p>
+</a><a href="https://khaliiil.com/privacy-policy">
+<p class="chakra-text css-gf4rj5">
+PRIVACY
+</p>
+</a>
+</div>
+</div>
+</div>
+<span id="__chakra_env" hidden=""></span>
+</div>
+
+<!-- Navigation bars -->
+<nav class="top-nav">
+    <ul>
+        <li><a href="/">HOME</a></li>
+        <li><a href="/music">MUSIC</a></li>
+        <li><a href="/tours">TOURS</a></li>
+        <li><a href="/acts">ACTS</a></li>
+        <li><a href="/blog">BLOG</a></li>
+    </ul>
+</nav>
 
     <script>
         function toggleDetails() {
