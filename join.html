@@ -218,6 +218,7 @@ h1 {
             align-items: center;
             height: 100vh;
             margin: 0;
+            overflow: hidden;
         }
 
         form {
@@ -297,16 +298,22 @@ h1 {
             font-size: 15px;
         }
 
-        .details-content {
-            display: none;
-            width: 100%;
-            font-size: 12px;
-            color: white;
-            padding-left: 10px;
-            margin-top: 10px;
-            transition: max-height 0.3s ease-out;
-            overflow: hidden;
-        }
+.details-content {
+    display: none;
+    width: 100%;
+    font-size: 12px;
+    color: white;
+    padding-left: 10px;
+    margin-top: 10px;
+    transition: max-height 0.3s ease-out;
+    overflow: auto;
+    max-height: 0;
+}
+
+.details-content.open {
+    display: block;
+    max-height: 200px; /* or any appropriate max-height */
+}
     </style>
 </head>
 <body>
@@ -389,17 +396,17 @@ PRIVACY
 
     <script>
         function toggleDetails() {
-            const toggleSign = document.querySelector('.toggle-sign');
-            const detailsContent = document.querySelector('.details-content');
-            
-            if (toggleSign.textContent === '+') {
-                toggleSign.textContent = '-';
-                detailsContent.style.display = 'block';
-            } else {
-                toggleSign.textContent = '+';
-                detailsContent.style.display = 'none';
-            }
-        }
+    const toggleSign = document.querySelector('.toggle-sign');
+    const detailsContent = document.querySelector('.details-content');
+    
+    if (toggleSign.textContent === '+') {
+        toggleSign.textContent = '-';
+        detailsContent.classList.add('open');
+    } else {
+        toggleSign.textContent = '+';
+        detailsContent.classList.remove('open');
+    }
+}
     </script>
 </body>
 </html>
