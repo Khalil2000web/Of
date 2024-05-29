@@ -210,26 +210,27 @@ h1 {
 </div>
 
     <style>
-        body {
-            background-color: black;
-            font-family: 'BB Manual Mono Pro TX';
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            overflow: hidden;
-        }
+body {
+    background-color: black;
+    font-family: 'BB Manual Mono Pro TX';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Prevent body overflow */
+}
 
-        form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-            max-width: 400px;
-            padding: 20px;
-            box-sizing: border-box;
-        }
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden; /* Prevent form overflow */
+}
 
         .title {
             font-size: 20px;
@@ -312,7 +313,12 @@ h1 {
 
 .details-content.open {
     display: block;
-    max-height: 200px; /* or any appropriate max-height */
+    max-height: 200px; /* Or any appropriate max-height */
+}
+
+html, body {
+    height: 100%;
+    overflow-y: auto; /* Allow vertical scrolling */
 }
     </style>
 </head>
@@ -394,19 +400,19 @@ PRIVACY
     </ul>
 </nav>
 
-    <script>
+   <script>
         function toggleDetails() {
-    const toggleSign = document.querySelector('.toggle-sign');
-    const detailsContent = document.querySelector('.details-content');
-    
-    if (toggleSign.textContent === '+') {
-        toggleSign.textContent = '-';
-        detailsContent.classList.add('open');
-    } else {
-        toggleSign.textContent = '+';
-        detailsContent.classList.remove('open');
-    }
-}
+            const toggleSign = document.querySelector('.toggle-sign');
+            const detailsContent = document.querySelector('.details-content');
+            
+            if (toggleSign.textContent === '+') {
+                toggleSign.textContent = '-';
+                detailsContent.classList.add('open');
+            } else {
+                toggleSign.textContent = '+';
+                detailsContent.classList.remove('open');
+            }
+        }
     </script>
 </body>
 </html>
