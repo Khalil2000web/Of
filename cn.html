@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Concert</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: black;
+        }
+        #container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+        }
+        #videoContainer {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        #liveFeed {
+            position: absolute;
+            top: 10%;
+            left: 10%;
+            width: 30%;
+            height: 30%;
+            border: 2px solid white;
+            display: none;
+        }
+        video {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <video id="visuals" autoplay muted>
+            <source src="your-visuals-video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div id="liveFeed">
+            <video id="liveVideo" autoplay playsinline></video>
+        </div>
+    </div>
+    <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+    const visuals = document.getElementById('visuals');
+    const liveFeed = document.getElementById('liveFeed');
+    const liveVideo = document.getElementById('liveVideo');
+
+    // Set the times (in seconds) when the live feed should be displayed
+    const showTimes = [
+        { start: 10, end: 20 },
+        { start: 40, end: 50 }
+    ];
+
+    // Function to start the camera feed
+    function startCamera() {
+        if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+            navigator.mediaDevices.getUserMedia({ video: true }).then(stream => {
+                liveVideo.srcObject = stream;
+            }).catch(error => {
+                console.error("Error accessing the camera: ", error);
+            });
+        }
+    }
+
+    visuals.addEventListener('timeupdate', () => {
+        const currentTime = visuals.currentTime;
+        let showLive = false;
+
+        showTimes.forEach(time => {
+            if (currentTime >= time.start && currentTime <= time.end) {
+                showLive = true;
+            }
+        });
+
+        if (showLive) {
+            liveFeed.style.display = 'block';
+            startCamera();
+        } else {
+            liveFeed.style.display = 'none';
+        }
+    });
+
+    visuals.play();
+});
+    </script>
+</body>
+</html>
