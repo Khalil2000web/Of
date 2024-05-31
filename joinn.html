@@ -1,25 +1,39 @@
-<!-- index.html -->
+<!-- join.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Email Collector</title>
+    <title>Join Page</title>
 </head>
 <body>
-    <input type="email" id="emailInput" placeholder="Enter an email">
-    <button onclick="addEmail()">Add Email</button>
+    <div id="subscribeMessage"></div>
+    <button id="redirectBtn" style="display:none;">Go to My Account</button>
+    <br><br>
+    <input type="email" id="emailInput" placeholder="Enter your email">
+    <button id="subscribeBtn">Subscribe</button>
 
     <script>
-        function addEmail() {
-            var newEmail = document.getElementById("emailInput").value;
-            var emails = JSON.parse(localStorage.getItem("emails")) || [];
-            emails.push(newEmail);
-            localStorage.setItem("emails", JSON.stringify(emails));
-            document.getElementById("emailInput").value = "";
-            alert("Your email has been added.");
-            window.location.href = "http://khaliiil.com"; // Replace "your_url_here" with your desired URL
+        var emails = JSON.parse(localStorage.getItem("emails")) || [];
+        var userEmail = "user@email.com"; // Replace with the user's email
+
+        if (emails.includes(userEmail)) {
+            document.getElementById("subscribeMessage").textContent = "You have already subscribed.";
+            document.getElementById("redirectBtn").style.display = "block";
+        } else {
+            document.getElementById("subscribeMessage").textContent = "You haven't subscribed yet.";
+            document.getElementById("subscribeBtn").addEventListener("click", function() {
+                var newEmail = document.getElementById("emailInput").value;
+                emails.push(newEmail);
+                localStorage.setItem("emails", JSON.stringify(emails));
+                document.getElementById("emailInput").value = "";
+                alert("Thank you for subscribing!");
+            });
         }
+
+        document.getElementById("redirectBtn").onclick = function() {
+            window.location.href = "your_url_here"; // Replace "your_url_here" with your desired URL
+        };
     </script>
 </body>
 </html>
