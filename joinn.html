@@ -4,19 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Name Collector</title>
+    <title>Email Collector</title>
 </head>
 <body>
-    <input type="text" id="nameInput" placeholder="Enter a name">
-    <button onclick="addName()">Add Name</button>
+    <input type="email" id="emailInput" placeholder="Enter an email">
+    <button onclick="addEmail()">Add Email</button>
 
     <script>
-        function addName() {
-            var newName = document.getElementById("nameInput").value;
-            var names = JSON.parse(localStorage.getItem("names")) || [];
-            names.push(newName);
-            localStorage.setItem("names", JSON.stringify(names));
-            document.getElementById("nameInput").value = "";
+        function addEmail() {
+            var newEmail = document.getElementById("emailInput").value;
+            var emails = JSON.parse(localStorage.getItem("emails")) || [];
+            emails.push(newEmail);
+            localStorage.setItem("emails", JSON.stringify(emails));
+            document.getElementById("emailInput").value = "";
         }
     </script>
 </body>
