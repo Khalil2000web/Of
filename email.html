@@ -1,35 +1,24 @@
+<!-- list.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Email List</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        h1 {
-            color: #333;
-        }
-        pre {
-            background: #f4f4f4;
-            padding: 20px;
-            border: 1px solid #ddd;
-        }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name List</title>
 </head>
 <body>
-    <h1>Subscribed Emails</h1>
-    <pre id="email-list"></pre>
+    <h1>List of Names</h1>
+    <ul id="nameList"></ul>
 
     <script>
-        async function fetchEmails() {
-            const response = await fetch('/get-emails');
-            const emails = await response.json();
-            document.getElementById('email-list').textContent = emails.join('\n');
-        }
+        var names = JSON.parse(localStorage.getItem("names")) || [];
+        var nameList = document.getElementById("nameList");
 
-        fetchEmails();
+        names.forEach(function(name) {
+            var listItem = document.createElement("li");
+            listItem.textContent = name;
+            nameList.appendChild(listItem);
+        });
     </script>
 </body>
 </html>
