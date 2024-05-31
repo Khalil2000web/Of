@@ -1,4 +1,3 @@
-<!-- join.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +7,7 @@
 </head>
 <body>
     <div id="subscribeMessage"></div>
-    <button id="redirectBtn" style="display:none;">Go to My Account</button>
+    <button id="redirectBtn" style="display:none;">Go to Home Page</button>
     <br><br>
     <input type="email" id="emailInput" placeholder="Enter your email">
     <button id="subscribeBtn">Subscribe</button>
@@ -20,19 +19,26 @@
         if (emails.includes(userEmail)) {
             document.getElementById("subscribeMessage").textContent = "You have already subscribed.";
             document.getElementById("redirectBtn").style.display = "block";
+            document.getElementById("emailInput").style.display = "none";
+            document.getElementById("subscribeBtn").style.display = "none";
         } else {
-            document.getElementById("subscribeMessage").textContent = "You haven't subscribed yet.";
             document.getElementById("subscribeBtn").addEventListener("click", function() {
                 var newEmail = document.getElementById("emailInput").value;
-                emails.push(newEmail);
-                localStorage.setItem("emails", JSON.stringify(emails));
-                document.getElementById("emailInput").value = "";
-                alert("Thank you for subscribing!");
+                if (emails.includes(newEmail)) {
+                    alert("Your email has already been sent.");
+                } else {
+                    emails.push(newEmail);
+                    localStorage.setItem("emails", JSON.stringify(emails));
+                    document.getElementById("emailInput").style.display = "none";
+                    document.getElementById("subscribeBtn").style.display = "none";
+                    document.getElementById("subscribeMessage").textContent = "Thank you for subscribing!";
+                    document.getElementById("redirectBtn").style.display = "block";
+                }
             });
         }
 
         document.getElementById("redirectBtn").onclick = function() {
-            window.location.href = "your_url_here"; // Replace "your_url_here" with your desired URL
+            window.location.href = "your_homepage_url_here"; // Replace "your_homepage_url_here" with your home page URL
         };
     </script>
 </body>
