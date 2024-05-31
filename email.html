@@ -4,20 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Name List</title>
+    <title>Email List</title>
 </head>
 <body>
-    <h1>List of Names</h1>
-    <ul id="nameList"></ul>
+    <h1>List of Emails</h1>
+    <ul id="emailList"></ul>
 
     <script>
-        var names = JSON.parse(localStorage.getItem("names")) || [];
-        var nameList = document.getElementById("nameList");
+        var emails = JSON.parse(localStorage.getItem("emails")) || [];
+        var emailList = document.getElementById("emailList");
 
-        names.forEach(function(name) {
+        emails.forEach(function(email) {
             var listItem = document.createElement("li");
-            listItem.textContent = name;
-            nameList.appendChild(listItem);
+            listItem.textContent = email;
+            emailList.appendChild(listItem);
         });
     </script>
 </body>
