@@ -9,8 +9,10 @@
     <div id="subscribeMessage"></div>
     <button id="redirectBtn" style="display:none;">Go to Home Page</button>
     <br><br>
-    <input type="email" id="emailInput" placeholder="Enter your email">
-    <button id="subscribeBtn">Subscribe</button>
+    <form id="emailForm">
+        <input type="email" id="emailInput" placeholder="Enter your email" required>
+        <button id="subscribeBtn" type="submit">Subscribe</button>
+    </form>
 
     <script>
         var emails = JSON.parse(localStorage.getItem("emails")) || [];
@@ -22,7 +24,8 @@
             document.getElementById("emailInput").style.display = "none";
             document.getElementById("subscribeBtn").style.display = "none";
         } else {
-            document.getElementById("subscribeBtn").addEventListener("click", function() {
+            document.getElementById("emailForm").addEventListener("submit", function(event) {
+                event.preventDefault(); // Prevent form submission
                 var newEmail = document.getElementById("emailInput").value;
                 if (emails.includes(newEmail)) {
                     alert("Your email has already been sent.");
@@ -38,7 +41,7 @@
         }
 
         document.getElementById("redirectBtn").onclick = function() {
-            window.location.href = "your_homepage_url_here"; // Replace "your_homepage_url_here" with your home page URL
+            window.location.href = "http://khaliiil.com"; // Replace "your_homepage_url_here" with your home page URL
         };
     </script>
 </body>
