@@ -29,6 +29,9 @@
                 var newEmail = document.getElementById("emailInput").value;
                 if (emails.includes(newEmail)) {
                     alert("Your email has already been sent.");
+                    setTimeout(function() {
+                        window.location.href = "your_homepage_url_here"; // Replace "your_homepage_url_here" with your home page URL
+                    }, 3000); // 3000 milliseconds = 3 seconds
                 } else {
                     emails.push(newEmail);
                     localStorage.setItem("emails", JSON.stringify(emails));
@@ -41,7 +44,7 @@
         }
 
         document.getElementById("redirectBtn").onclick = function() {
-            window.location.href = "http://khaliiil.com"; // Replace "your_homepage_url_here" with your home page URL
+            window.location.href = "your_homepage_url_here"; // Replace "your_homepage_url_here" with your home page URL
         };
     </script>
 </body>
