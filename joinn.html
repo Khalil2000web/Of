@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Join Page</title>
+    <style>
+        body {
+            background-color: black;
+            font-family: 'BB Manual Mono Pro TX';
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .title {
+            font-size: 20px;
+            color: white;
+            margin-bottom: 20px;
+            width: 100%;
+            text-align: left;
+            padding-left: 10px;
+        }
+        .input-container {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            background-color: black;
+            border: 1px solid #969696;
+            color: white;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            background-color: #c63528;
+            color: #969696;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: darkred;
+        }
+        button:focus {
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <form id="subscribe-form">
+        <div class="title">SUBSCRIBE FOR NEW UPDATES</div>
+        <div class="input-container">
+            <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
+        </div>
+        <button type="submit">SUBSCRIBE</button>
+    </form>
+
+    <script>
+        document.getElementById('subscribe-form').addEventListener('submit', async function(event) {
+            event.preventDefault();
+            const email = document.getElementById('email').value;
+
+            try {
+                const response = await fetch('/subscribe', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ email })
+                });
+
+                if (response.ok) {
+                    alert('You have been joined khaliil.com');
+                    window.location.href = '/';
+                } else {
+                    alert('There was an error. Please try again.');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('There was an error. Please try again.');
+            }
+        });
+    </script>
+</body>
+</html>
