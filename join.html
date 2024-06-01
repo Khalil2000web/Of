@@ -209,135 +209,155 @@ h1 {
     <span>KHALIIIL.COM</span>
 </div>
 
-    <style>
+<style>
+@font-face {
+  font-family: 'BB Manual Mono Pro TX';
+  src: url('BBManualMonoProTX-Regular.woff2') format('woff2');
+  /* Additional font properties (e.g., font-weight, font-style) can be specified here */
+}
 body {
+    overflow-y: auto;
+}
+
+.emailInput {
+    position: absolute;
+    top: 19%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    width: calc(100% - 52px);
+    height: 29px;
     background-color: black;
-    font-family: 'BB Manual Mono Pro TX';
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    overflow: hidden; /* Prevent body overflow */
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    max-width: 400px;
-    padding: 20px;
-    box-sizing: border-box;
-    overflow: hidden; /* Prevent form overflow */
-}
-
-        .title {
-            font-size: 20px;
-            color: white;
-            margin-bottom: 20px;
-            width: 100%;
-            text-align: left;
-            padding-left: 10px; /* Adjust padding as needed */
-        }
-
-        .input-container {
-            width: 100%;
-            margin-bottom: 20px;
-        }
-
-        input[type="email"] {
-            width: 100%;
-            padding: 10px;
-            font-family: 'BB Manual Mono Pro TX';
-            font-size: 16px;
-            background-color: black;
-            border: 1px solid #969696;
-            color: white;
-            box-sizing: border-box;
-            border-radius: 0;
-        }
-
-        button {
-            width: 100%;
-            padding: 10px;
-            font-family: 'BB Manual Mono Pro TX';
-            font-size: 16px;
-            background-color: #c63528;
-            color: #969696;
-            border: none;
-            cursor: pointer;
-            border-radius: 0;
-        }
-
-        button:hover {
-            background-color: darkred;
-        }
-
-        button:focus {
-            outline: none;
-        }
-
-        hr {
-            width: 100%;
-            border: 0;
-            border-top: 1px solid #969696;
-            margin: 20px 0;
-        }
-
-        .details-container {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            cursor: pointer;
-            color: white;
-            padding: 0 10px; /* Align with padding of title and inputs */
-            font-size: 15px;
-        }
-
-        .details-text {
-            font-size: 15px;
-        }
-
-.details-content {
-    display: none;
-    width: 100%;
-    font-size: 12px;
+    border: 1px solid #969696;
+    border-radius: 0;
     color: white;
-    padding-left: 10px;
-    margin-top: 10px;
-    transition: max-height 0.3s ease-out;
-    overflow: auto;
-    max-height: 0;
+    font-family: 'BB Manual Mono Pro TX';
+    font-size: 15px;
 }
 
-.details-content.open {
-    display: block;
-    max-height: 200px; /* Or any appropriate max-height */
+.subscribeBtn {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 40px);
+    height: 29px;
+    background-color: #c63528;
+    border: 1px solid #969696;
+    border-radius: 0;
+    color: #969696;
+    font-family: 'BB Manual Mono Pro TX';
+    font-size: 18px;
+}
+.redirectBtn {
+    position: absolute;
+    bottom: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    color: white;
+    font-family: 'BB Manual Mono Pro TX';
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-size: 25px;
+}
+.p1 {
+  position: absolute;
+  color: white;
+  font-size: 15px;
+  text-align: left;
+  bottom: 15%;
+  left: 0;
+  right: 0;
+  padding-left: 5%;
+  padding-right: 5%;
+  margin: auto;
+  word-wrap: break-word; /* Add this line */
+    font-family: 'BB Manual Mono Pro TX';
 }
 
-html, body {
-    height: 100%;
-    overflow-y: auto; /* Allow vertical scrolling */
+
+@media screen and (min-width: 601px) {
+.emailInput {
+    width: calc(100% - 21.20%);
 }
-    </style>
-</head>
-<body>
-<form method="POST" action="/subscribe">
-        <div class="title">SUBSCRIBE FOR NEW UPDATES</div>
-        <div class="input-container">
-            <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
-        </div>
-        <button type="submit">SUBSCRIBE</button>
-        <hr>
-        <div class="details-container" onclick="toggleDetails()">
-            <span class="details-text">DETAILS</span>
-            <span class="toggle-sign">+</span>
-        </div>
-        <div class="details-content">
-            <p>WELCOME TO KHALIIIL.COM!<br>BY PROVIDING YOUR EMAIL, YOU’LL STAY<br>INFORMED ABOUT THE LATEST UPDATES, EVENTS, AND IMPORTANT INFORMATION.<br><br>WE’RE EXCITED TO HAVE YOU JOIN US ON THIS JOURNEY AND LOOK FORWARD TO KEEPING YOU IN THE LOOP EVERY STEP OF THE WAY. REST ASSURED, YOUR INFORMATION IS SAFE WITH US, AND WE’LL ONLY USE IT TO ENHANCE YOUR EXPERIENCE WITHIN OUR COMMUNITY.<br><br>KHALIL DIAB.<br>★</p>
-        </div>
-    </form><br><br><br><br><br><br>
+.subscribeBtn {
+    width: calc(100% - 19%);
+    }
+    .p1 {
+        padding-right: 71px;
+        padding-left: 71px;
+    }
+}    
+@media screen and (max-width: 600px) {
+.p1 {
+    top:30%;
+    bottom: auto;
+}
+    }
+
+</style>
+
+    <div id="subscribeMessage"></div>
+    <button class="redirectBtn" id="redirectBtn" style="display:none;">GO TO HOME PAGE</button>
+    <br><br>
+    <form id="emailForm">
+        <input class="emailInput" type="email" id="emailInput" placeholder="Enter Your Email" required>
+        <button class="subscribeBtn" id="subscribeBtn" type="submit">SUBSCRIBE</button>
+    </form>
+    <div class="p1" id="p1">
+<p>
+WELCOME TO THE JOIN PAGE OF KHALIIIL.COM! WE'RE THRILLED TO HAVE YOU CONSIDERING JOINING OUR COMMUNITY. THIS PAGE IS YOUR GATEWAY TO STAYING CONNECTED WITH US AND RECEIVING THE LATEST UPDATES AND EXCLUSIVE CONTENT. SIMPLY ENTER YOUR EMAIL ADDRESS IN THE FORM PROVIDED, AND YOU'RE ALL SET! WE PRIORITIZE YOUR PRIVACY AND ENSURE THAT YOUR EMAIL ADDRESS IS SECURELY COPIED TO OUR PROTECTED DATABASE, WHERE ONLY WE HAVE ACCESS TO IT.
+
+ONCE YOU'VE ENTERED YOUR EMAIL, IT GETS TRANSFERRED TO A SECURE PAGE THAT IS PROTECTED BY A PASSWORD KNOWN ONLY TO US. THIS ENSURES THAT YOUR INFORMATION REMAINS CONFIDENTIAL AND SAFE FROM UNAUTHORIZED ACCESS. WE TAKE SECURITY SERIOUSLY AND ARE COMMITTED TO PROTECTING YOUR PERSONAL DATA.
+
+WHEN WE HAVE EXCITING NEWS OR IMPORTANT UPDATES TO SHARE, WE USE THE EMAIL ADDRESSES COLLECTED TO SEND OUT OUR NEWSLETTERS. REST ASSURED, WE ONLY SEND UPDATES THAT ARE RELEVANT AND VALUABLE TO YOU. OUR GOAL IS TO KEEP YOU INFORMED AND ENGAGED WITHOUT OVERWHELMING YOUR INBOX. THANK YOU FOR JOINING US AT KHALIIIL.COM, AND WE LOOK FORWARD TO KEEPING YOU UPDATED!
+</p>
+    </div>
+
+    <script>
+        var emails = JSON.parse(localStorage.getItem("emails")) || [];
+        var userEmail = "user@email.com"; // Replace with the user's email
+
+        if (emails.includes(userEmail)) {
+            document.getElementById("subscribeMessage").textContent = "You have already subscribed.";
+            document.getElementById("redirectBtn").style.display = "block";
+            document.getElementById("emailInput").style.display = "none";
+            document.getElementById("subscribeBtn").style.display = "none";
+        } else {
+            document.getElementById("emailForm").addEventListener("submit", function(event) {
+                event.preventDefault(); // Prevent form submission
+                var newEmail = document.getElementById("emailInput").value;
+                if (emails.includes(newEmail)) {
+                    alert("Your email has already been sent.");
+                    setTimeout(function() {
+                        window.location.href = "http://khaliiil.com"; // Replace "your_homepage_url_here" with your home page URL
+                    }, 100); // 1000 milliseconds = 1 second
+                } else {
+                    emails.push(newEmail);
+                    localStorage.setItem("emails", JSON.stringify(emails));
+                    document.getElementById("emailInput").style.display = "none";
+                    document.getElementById("subscribeBtn").style.display = "none";
+                    document.getElementById("p1").style.display = "none";
+document.getElementById("subscribeMessage").textContent = "Thank you for subscribing!";
+document.getElementById("subscribeMessage").style.position = "absolute";
+document.getElementById("subscribeMessage").style.top = "50%";
+document.getElementById("subscribeMessage").style.left = "50%";
+document.getElementById("subscribeMessage").style.transform = "translate(-50%, -50%)";
+document.getElementById("subscribeMessage").style.color = "white";
+document.getElementById("subscribeMessage").style.fontFamily = "'BB Manual Mono Pro TX'";
+document.getElementById("subscribeMessage").style.fontSize = "28px";
+document.getElementById("subscribeMessage").style.textAlign = "center";
+document.getElementById("redirectBtn").style.display = "block";
+                }
+            });
+        }
+
+        document.getElementById("redirectBtn").onclick = function() {
+            window.location.href = "http://khaliiil.com"; // Replace "your_homepage_url_here" with your home page URL
+        };
+    </script>
     
     <div>
 <div class="css-nkyjj6" id="desktop-footer">
@@ -399,20 +419,5 @@ PRIVACY
         <li><a href="/blog">BLOG</a></li>
     </ul>
 </nav>
-
-   <script>
-        function toggleDetails() {
-            const toggleSign = document.querySelector('.toggle-sign');
-            const detailsContent = document.querySelector('.details-content');
-            
-            if (toggleSign.textContent === '+') {
-                toggleSign.textContent = '-';
-                detailsContent.classList.add('open');
-            } else {
-                toggleSign.textContent = '+';
-                detailsContent.classList.remove('open');
-            }
-        }
-    </script>
 </body>
 </html>
