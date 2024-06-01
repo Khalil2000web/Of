@@ -221,7 +221,7 @@ body {
 
 .emailInput {
     position: absolute;
-    top: 90%;
+    top: 75%; /* Adjusted top value */
     right: 50%;
     transform: translate(50%, -50%);
     width: calc(100% - 52px);
@@ -236,7 +236,7 @@ body {
 
 .subscribeBtn {
     position: absolute;
-    top: 110%;
+    top: 85%; /* Adjusted top value */
     left: 50%;
     transform: translate(-50%, -50%);
     width: calc(100% - 40px);
@@ -248,6 +248,7 @@ body {
     font-family: 'BB Manual Mono Pro TX';
     font-size: 18px;
 }
+
 .redirectBtn {
     position: absolute;
     bottom: 35px;
@@ -262,40 +263,41 @@ body {
     padding-bottom: 2px;
     font-size: 25px;
 }
+
 .p1 {
-  position: absolute;
-  color: white;
-  font-size: 15px;
-  text-align: left;
-  bottom: 15%;
-  left: 0;
-  right: 0;
-  padding-left: 5%;
-  padding-right: 5%;
-  margin: auto;
-  word-wrap: break-word; /* Add this line */
+    position: absolute;
+    color: white;
+    font-size: 15px;
+    text-align: left;
+    bottom: 15%;
+    left: 0;
+    right: 0;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin: auto;
+    word-wrap: break-word; /* This line helps with text wrapping */
     font-family: 'BB Manual Mono Pro TX';
 }
 
-
 @media screen and (min-width: 601px) {
-.emailInput {
-    width: calc(100% - 21.20%);
-}
-.subscribeBtn {
-    width: calc(100% - 19%);
+    .emailInput {
+        width: calc(100% - 21.20%);
+    }
+    .subscribeBtn {
+        width: calc(100% - 19%);
     }
     .p1 {
         padding-right: 71px;
         padding-left: 71px;
     }
-}    
-@media screen and (max-width: 600px) {
-.p1 {
-    top: auto;
-    bottom: 5%;
 }
+
+@media screen and (max-width: 600px) {
+    .p1 {
+        top: auto;
+        bottom: 5%;
     }
+}
 
 </style>
 
