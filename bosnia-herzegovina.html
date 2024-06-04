@@ -368,5 +368,36 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 </script>
+
+<script>
+let scrollPosition = 0;
+
+function preventScroll(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    return false;
+}
+
+function openOverlay() {
+    scrollPosition = window.pageYOffset;
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${scrollPosition}px`;
+    document.addEventListener('wheel', preventScroll, { passive: false });
+    document.addEventListener('touchmove', preventScroll, { passive: false });
+    document.addEventListener('keydown', preventScroll, { passive: false });
+    // Your logic to show the overlay
+}
+
+function closeOverlay() {
+    document.body.style.position = '';
+    document.body.style.top = '';
+    window.scrollTo(0, scrollPosition);
+    document.removeEventListener('wheel', preventScroll, { passive: false });
+    document.removeEventListener('touchmove', preventScroll, { passive: false });
+    document.removeEventListener('keydown', preventScroll, { passive: false });
+    // Your logic to hide the overlay
+}
+</script>
+
 </body>
 </html>
