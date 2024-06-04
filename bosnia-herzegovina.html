@@ -159,10 +159,6 @@ html, body {
     /* overflow: hidden; */ /* Remove this line */
 }
 
-body.overflow-hidden {
-  overflow: hidden;
-}
-
     .image-container {
       width: 100%;
       height: 100%;
@@ -305,6 +301,29 @@ body.overflow-hidden {
     });
   });
 </script>
+} <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mediaElements = document.querySelectorAll('.image, video');
+    const overlay = document.getElementById('overlay');
+    const overlayContent = document.getElementById('overlay-content');
+    const closeBtn = document.getElementById('close-btn');
+
+    mediaElements.forEach(media => {
+      media.addEventListener('click', () => {
+        const clonedMedia = media.cloneNode(true);
+        overlayContent.innerHTML = '';
+        overlayContent.appendChild(clonedMedia);
+        overlay.style.display = 'flex';
+        document.body.style.overflow = 'hidden'; // Disable scrolling of the main page
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      overlay.style.display = 'none';
+      document.body.style.overflow = ''; // Enable scrolling of the main page
+    });
+  });
+</script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const mediaElements = document.querySelectorAll('.image, video');
@@ -323,15 +342,13 @@ document.addEventListener('DOMContentLoaded', function() {
       overlayContent.innerHTML = '';
       overlayContent.appendChild(clonedMedia);
       overlay.style.display = 'flex';
-      setTimeout(() => {
-        document.body.classList.add('overflow-hidden');
-      }, 1000); // Disable scrolling of the main page after 1 second
+      document.body.style.overflow = 'hidden'; // Disable scrolling of the main page
     });
   });
 
   closeBtn.addEventListener('click', () => {
     overlay.style.display = 'none';
-    document.body.classList.remove('overflow-hidden'); // Enable scrolling of the main page
+    document.body.style.overflow = ''; // Enable scrolling of the main page
   });
 
   prevBtn.addEventListener('click', () => {
