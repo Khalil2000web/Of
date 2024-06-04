@@ -188,7 +188,7 @@ html, body {
   justify-content: center;
   align-items: center;
   z-index: 9999;
-  overflow-y: auto; /* Enable scrolling for overlay content */
+  overflow-y: none; /* Enable scrolling for overlay content */
   padding: 0px;
 }
 
@@ -199,7 +199,7 @@ html, body {
 }
 
     #close-btn {
-      position: fixed;
+      position: absolute;
       top: 5px;
       right: 10px;
       cursor: pointer;
@@ -214,7 +214,7 @@ html, body {
     }
 
   .nav-btn {
-    position: fixed;
+    position: absolute;
     top: 9%;
     transform: translateY(-50%);
     color: #fff;
