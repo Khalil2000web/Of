@@ -379,42 +379,52 @@ function preventScroll(event) {
 }
 
 function openOverlay() {
+    // Capture current scroll position
     scrollPosition = window.pageYOffset;
+    // Fix the body in place
     document.body.style.position = 'fixed';
     document.body.style.top = `-${scrollPosition}px`;
-
+    
     // Prevent various types of scroll events
-    document.addEventListener('wheel', preventScroll, { passive: false });
-    document.addEventListener('touchmove', preventScroll, { passive: false });
-    document.addEventListener('keydown', preventScroll, { passive: false });
-    document.addEventListener('scroll', preventScroll, { passive: false });
-
-    // Additional event listeners to catch more scroll events
-    document.addEventListener('mousewheel', preventScroll, { passive: false });
-    document.addEventListener('DOMMouseScroll', preventScroll, { passive: false });
-    document.addEventListener('MozMousePixelScroll', preventScroll, { passive: false });
-    window.addEventListener('scroll', preventScroll, { passive: false });
-
+    addScrollListeners();
+    
     // Your logic to show the overlay
+    document.querySelector('.overlay').style.display = 'block'; // Assuming overlay element
 }
 
 function closeOverlay() {
+    // Reset body position
     document.body.style.position = '';
     document.body.style.top = '';
     window.scrollTo(0, scrollPosition);
 
-    // Remove all scroll prevention event listeners
+    // Remove scroll prevention listeners
+    removeScrollListeners();
+
+    // Your logic to hide the overlay
+    document.querySelector('.overlay').style.display = 'none'; // Assuming overlay element
+}
+
+function addScrollListeners() {
+    document.addEventListener('wheel', preventScroll, { passive: false });
+    document.addEventListener('touchmove', preventScroll, { passive: false });
+    document.addEventListener('keydown', preventScroll, { passive: false });
+    document.addEventListener('scroll', preventScroll, { passive: false });
+    document.addEventListener('mousewheel', preventScroll, { passive: false });
+    document.addEventListener('DOMMouseScroll', preventScroll, { passive: false });
+    document.addEventListener('MozMousePixelScroll', preventScroll, { passive: false });
+    window.addEventListener('scroll', preventScroll, { passive: false });
+}
+
+function removeScrollListeners() {
     document.removeEventListener('wheel', preventScroll, { passive: false });
     document.removeEventListener('touchmove', preventScroll, { passive: false });
     document.removeEventListener('keydown', preventScroll, { passive: false });
     document.removeEventListener('scroll', preventScroll, { passive: false });
-
     document.removeEventListener('mousewheel', preventScroll, { passive: false });
     document.removeEventListener('DOMMouseScroll', preventScroll, { passive: false });
     document.removeEventListener('MozMousePixelScroll', preventScroll, { passive: false });
     window.removeEventListener('scroll', preventScroll, { passive: false });
-
-    // Your logic to hide the overlay
 }
 
 // Optional: Apply the scroll lock logic on page load if necessary
