@@ -382,9 +382,19 @@ function openOverlay() {
     scrollPosition = window.pageYOffset;
     document.body.style.position = 'fixed';
     document.body.style.top = `-${scrollPosition}px`;
+
+    // Prevent various types of scroll events
     document.addEventListener('wheel', preventScroll, { passive: false });
     document.addEventListener('touchmove', preventScroll, { passive: false });
     document.addEventListener('keydown', preventScroll, { passive: false });
+    document.addEventListener('scroll', preventScroll, { passive: false });
+
+    // Additional event listeners to catch more scroll events
+    document.addEventListener('mousewheel', preventScroll, { passive: false });
+    document.addEventListener('DOMMouseScroll', preventScroll, { passive: false });
+    document.addEventListener('MozMousePixelScroll', preventScroll, { passive: false });
+    window.addEventListener('scroll', preventScroll, { passive: false });
+
     // Your logic to show the overlay
 }
 
@@ -392,12 +402,32 @@ function closeOverlay() {
     document.body.style.position = '';
     document.body.style.top = '';
     window.scrollTo(0, scrollPosition);
+
+    // Remove all scroll prevention event listeners
     document.removeEventListener('wheel', preventScroll, { passive: false });
     document.removeEventListener('touchmove', preventScroll, { passive: false });
     document.removeEventListener('keydown', preventScroll, { passive: false });
+    document.removeEventListener('scroll', preventScroll, { passive: false });
+
+    document.removeEventListener('mousewheel', preventScroll, { passive: false });
+    document.removeEventListener('DOMMouseScroll', preventScroll, { passive: false });
+    document.removeEventListener('MozMousePixelScroll', preventScroll, { passive: false });
+    window.removeEventListener('scroll', preventScroll, { passive: false });
+
     // Your logic to hide the overlay
 }
-</script>
 
+// Optional: Apply the scroll lock logic on page load if necessary
+window.addEventListener('load', () => {
+    if (overlayShouldBeOpen()) { // Your condition to check if overlay should be open
+        openOverlay();
+    }
+});
+
+function overlayShouldBeOpen() {
+    // Your logic to determine if overlay should be open on load
+    return true; // or false based on your condition
+}
+</script>
 </body>
 </html>
