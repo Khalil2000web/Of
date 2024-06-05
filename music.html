@@ -468,7 +468,7 @@ nav.top-nav {
         </div>
     </div>
 
-<div class="song" onclick="openOverlay(1, 'HOLY GRAIL (Intro)', '<br><br><br><br>song by: Jay-Z<br><br><br><br><br><br><br><br>', 'Crazy in Love credits...', [{src: 'apple-512.png', link: ''}, {src: 'spotify-512.png', link: 'icon4-link'}, {src: 'amazon-512.png', link: ''}, {src: 'soundcloud-512.png', link: ''}])">
+<div class="song" onclick="openOverlay(1, 'HOLY GRAIL (Intro)', '<br><br><br><br>song by: Jay-Z<br><br><br><br><br><br><br><br>', 'Crazy in Love credits...', [{src: 'apple-512.png', link: ''}, {src: 'spotify-512.png', link: 'icon4-link'}, {src: 'amazon-512.png', link: ''}, {src: 'soundcloud-512.png', link: '', style: 'height: 27px;'}])">
     <span class="song-number">1.</span>
     <span class="song-name">HOLY GRAIL (Intro)</span>
 </div>
@@ -490,53 +490,56 @@ nav.top-nav {
 
 <script>
     function openOverlay(songNumber, songName, songLyrics, songCredits, iconsData) {
-        var overlay = document.getElementById('overlay');
-        var overlayTitle = document.getElementById('overlay-title');
-        var lyricsContent = document.getElementById('lyrics-content');
-        var creditsContent = document.getElementById('credits-content');
-        var iconsContainer = document.getElementById('icons-container');
+    var overlay = document.getElementById('overlay');
+    var overlayTitle = document.getElementById('overlay-title');
+    var lyricsContent = document.getElementById('lyrics-content');
+    var creditsContent = document.getElementById('credits-content');
+    var iconsContainer = document.getElementById('icons-container');
 
-        overlayTitle.textContent = songNumber + '. ' + songName;
-        lyricsContent.innerHTML = '<p>' + songLyrics + '</p>';
-        creditsContent.innerHTML = '<p>' + songCredits + '</p>';
+    overlayTitle.textContent = songNumber + '. ' + songName;
+    lyricsContent.innerHTML = '<p>' + songLyrics + '</p>';
+    creditsContent.innerHTML = '<p>' + songCredits + '</p>';
 
-        // Clear any existing icons
-        iconsContainer.innerHTML = '';
+    // Clear any existing icons
+    iconsContainer.innerHTML = '';
 
-        // Add new icons with links
-        iconsData.forEach(function(icon) {
-            var link = document.createElement('a');
-            link.href = icon.link; // Add the link for the icon
-            var img = document.createElement('img');
-            img.src = icon.src; // Add the src for the icon
-            link.appendChild(img);
-            iconsContainer.appendChild(link);
-        });
+    // Add new icons with links
+    iconsData.forEach(function(icon) {
+        var link = document.createElement('a');
+        link.href = icon.link; // Add the link for the icon
+        var img = document.createElement('img');
+        img.src = icon.src; // Add the src for the icon
+        if (icon.style) {
+            img.style.cssText = icon.style; // Apply inline styles if provided
+        }
+        link.appendChild(img);
+        iconsContainer.appendChild(link);
+    });
 
-        overlay.style.display = 'block';
-        document.body.style.overflow = 'hidden'; // Disable scrolling on the main page
-        showLyrics(); // Show lyrics by default
-    }
+    overlay.style.display = 'block';
+    document.body.style.overflow = 'hidden'; // Disable scrolling on the main page
+    showLyrics(); // Show lyrics by default
+}
 
-    function closeOverlay() {
-        var overlay = document.getElementById('overlay');
-        overlay.style.display = 'none';
-        document.body.style.overflow = 'auto'; // Enable scrolling on the main page
-    }
+function closeOverlay() {
+    var overlay = document.getElementById('overlay');
+    overlay.style.display = 'none';
+    document.body.style.overflow = 'auto'; // Enable scrolling on the main page
+}
 
-    function showLyrics() {
-        document.getElementById('lyrics-content').classList.remove('hidden');
-        document.getElementById('credits-content').classList.add('hidden');
-        document.getElementById('lyrics-button').classList.add('active');
-        document.getElementById('credits-button').classList.remove('active');
-    }
+function showLyrics() {
+    document.getElementById('lyrics-content').classList.remove('hidden');
+    document.getElementById('credits-content').classList.add('hidden');
+    document.getElementById('lyrics-button').classList.add('active');
+    document.getElementById('credits-button').classList.remove('active');
+}
 
-    function showCredits() {
-        document.getElementById('lyrics-content').classList.add('hidden');
-        document.getElementById('credits-content').classList.remove('hidden');
-        document.getElementById('lyrics-button').classList.remove('active');
-        document.getElementById('credits-button').classList.add('active');
-    }
+function showCredits() {
+    document.getElementById('lyrics-content').classList.add('hidden');
+    document.getElementById('credits-content').classList.remove('hidden');
+    document.getElementById('lyrics-button').classList.remove('active');
+    document.getElementById('credits-button').classList.add('active');
+}
 </script>
 
 </body>
