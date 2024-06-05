@@ -184,7 +184,7 @@ nav.top-nav {
         <li><a href="/acts">ACTS</a></li>
         <li><a href="/blog">BLOG</a></li>
     </ul>
-</nav><br><br><br>
+</nav><br><br><br><br>br><br>
 
 <nav class="bottom-nav">
     <ul>
@@ -317,13 +317,14 @@ nav.top-nav {
         }
 
             .icons {
-                flex-direction: row; /* Arrange icons horizontally */
-                justify-content: flex-start; /* Align to the start */
-                gap: 200px; /* Space between icons */
-                padding-top: 10px; /* Ensure no extra padding */
-                margin-top: 10px; /* Add space below the song name */
-                padding-left: 48px;
-            }
+    display: flex; /* Enable flexbox layout */
+    flex-direction: row; /* Arrange icons horizontally */
+    justify-content: flex-start; /* Align to the start */
+    gap: 20px; /* Space between icons */
+    padding-top: 10px; /* Ensure no extra padding */
+    margin-top: 10px; /* Add space below the song name */
+    padding-left: 48px;
+}
 
             .icons a {
                 margin-bottom: 0; /* Reset any margin */
