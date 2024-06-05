@@ -18,14 +18,14 @@
 
 
 <style>
-@font-face {
-  font-family: 'BBManualMonoPro';
-  src: url('BBManualMonoProTX-Regular.otf') format('opentype');
-  /* Additional font properties (e.g., font-weight, font-style) can be specified here */
-}
-body {
-    font-family: 'BBManualMonoPro';font-size: 10px;
-}
+        @font-face {
+            font-family: 'BB Manual Mono Pro TX';
+            src: url('BBManualMonoProTX-Regular.woff2') format('woff2');
+            /* Additional font properties (e.g., font-weight, font-style) can be specified here */
+        }
+        body {
+            font-family: 'BB Manual Mono Pro TX'; font-size: 10px;
+        }
 </style>
 </head>
 <body bgcolor="black">
@@ -197,119 +197,175 @@ nav.top-nav {
     </ul>
 </nav>
 
-<style>
+    <style>
+h
 
-.overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 9998; /* Adjusted z-index */
-    background-color: black; /* Changed background color */
-    color: white; /* Text color */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 9998;
+            background-color: black;
+            color: white;
+            overflow-y: auto; /* Enable vertical scrolling for overflow content */
+        }
+
+        .overlay-footer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: black;
+            z-index: 9999; /* Ensure it is above other content */
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .overlay-title-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        .overlay-title {
+            font-size: 24px;
+            margin: 0;
+            text-align: left;
+            color: white;
+            font-weight: 600;
+            font-family: 'BB Manual Mono Pro TX';
+            padding-right: 26px;
+            word-wrap: break-word; /* Ensure long lines break */
+        }
+
+.tab-buttons {
+    font-size: 16px; /* Reduced font size */
+    margin: 10px; /* Reset margin to remove space above the buttons */
+    text-align: left; /* Align buttons to the left */
+    color: white;
+    font-weight: 600;
+    font-family: 'BB Manual Mono Pro TX';
+    padding-left: 20px; /* Adjust padding-left to align buttons with song name */
+}
+
+.tab-buttons button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px; /* Reduced font size */
+    font-family: 'BB Manual Mono Pro TX';
+    cursor: pointer;
+}
+
+        .tab-buttons button.active {
+            text-decoration: underline;
+        }
+
+.content-section {
+    margin-top: 20px;
+    font-size: 18px; /* Larger font size */
+    text-align: center; /* Align text to the left */
+    word-wrap: break-word; /* Ensure long lines break */
+    font-family: 'BB Manual Mono Pro TX';
+    padding-left: 20px; /* Adjust padding-left to match song name */
+    position: relative;
+    z-index: 0;
 }
 
 .overlay-content {
     padding: 20px;
     border-radius: 5px;
+    position: relative;
+    z-index: 1;
+    margin-top: 150px; /* Adjusted to make space for the fixed footer */
+    display: flex; /* Ensure lyrics and credits are displayed in one column */
+    flex-direction: column; /* Ensure lyrics and credits are displayed in one column */
 }
 
-.overlay-title {
-    font-size: 24px;
-    margin: 0;
-    text-align: left;
-    color: white; /* Title color */
-    font-weight: 600;
-    font-family: 'BBManualMonoPro';
-}
+        .hidden {
+            display: none;
+        }
 
-.overlay-title2 {
-    font-size: 19px;
-    margin: 0;
-    text-align: left;
-    color: white; /* Title color */
-    margin-left: 5px;
-    font-weight: 600;
-    font-family: 'BBManualMonoPro';
-}
+        .song {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin-bottom: 13px;
+            padding-left: 26px;
+            padding-right: 26px;
+            padding-top: 4px;
+            padding-bottom: 4px;
+        }
 
-.overlay-close {
-    position: fixed;
-    bottom: 120px; /* Adjusted position */
-    left: 50%;
-    transform: translateX(-50%);
-    cursor: pointer;
-    color: white; /* Close button color */
-    font-size: 22px;
-    font-family: 'BBManualMonoPro';
-}
+        .song-number,
+        .song-name {
+            color: white;
+        }
 
-.buttons-container {
-    text-align: center;
-    margin-top: 20px;
-}
+        .song-number {
+            padding-left: 20px;
+        }
 
-.overlay-button {
-    display: block;
-    padding: 10px 10px;
-    background-color: transparent; /* Removed background color */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-bottom: 25px;
-    font-size: 24px;
-    padding-top: 70px;
-    margin-left: auto;
-    margin-right: auto;
-    text-decoration: none; /* Removed underline */
-    font-family: 'BBManualMonoPro';
-}
+        .song-name {
+            text-align: right;
+            padding-right: 20px;
+            word-wrap: break-word; /* Ensure long lines break */
+        }
 
-.centered-button {
-    position: fixed;
-    top: 50px; /* Adjusted top position */
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 14px 14px;
-    background-color: transparent;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    z-index: 999; /* Adjusted z-index */
-    text-decoration: none;
-    font-family: 'BBManualMonoPro';
-}
+            .icons {
+                flex-direction: row; /* Arrange icons horizontally */
+                justify-content: flex-start; /* Align to the start */
+                gap: 20px; /* Space between icons */
+                padding-top: 10px; /* Ensure no extra padding */
+                margin-top: 10px; /* Add space below the song name */
+                padding-left: 48px;
+            }
 
-.song {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    margin-bottom: 13px;
-    padding: 4px 26px;
-}
+            .icons a {
+                margin-bottom: 0; /* Reset any margin */
+                    text-decoration: none;
+        }
 
-.song-number,
-.song-name {
-    color: white;
-}
+        .icons img {
+            width: 24px;
+            height: 24px;
+        }
 
-.song-name {
-    text-align: right;
-    }
+        /* Responsive styles */
+        @media screen and (max-width: 600px) {
+            .song-name,
+            .song-number {
+                font-size: 16px;
+            }
+            .centered-button {
+                font-size: 17px;
+            }
 
-@media screen and (max-width: 600px) {
-    .song-name,
-    .song-number {
-        font-size: 16px;
-    }
-    .centered-button {
-        font-size: 17px;
-    }
-}
+            .overlay-title-container {
+                display: block;
+                text-align: left;
+                padding-right: 26px;
+            }
+
+            .overlay-close {
+                position: fixed;
+                bottom: 120px;
+                left: 50%;
+                transform: translateX(-50%);
+                margin-top: 20px;
+                width: 24px;
+            }
+
+            .overlay-title {
+                max-width: calc(100% - 52px); /* Ensure title doesn't exceed screen width */
+            }
+        }
 
 @media screen and (min-width: 601px) {
     .song-name,
@@ -317,203 +373,159 @@ nav.top-nav {
         font-size: 17px;
     }
     .song {
-        padding: 0 25px;
+        padding: 0 18px;
     }
     .centered-button {
         font-size: 19px;
     }
-}
-</style>
 
-<div id="overlay" class="overlay">
-  <span class="overlay-close" onclick="closeOverlay()">X</span> <!-- Close button -->
-  <div class="overlay-content">
-    <p id="overlay-title" class="overlay-title"><p>
-    <p id="overlay-title2" class="overlay-title2"><p>      
-    <div class="buttons-container">
-      <button class="overlay-button" onclick="window.location.href='/credits'">CREDITS</button>
-      <button class="overlay-button" onclick="openLyricsOverlay()">LYRICS</button>
-      <a class="overlay-button" onclick="window.location.href='/act1'">act i ON THE ROYAL</a>
+    .overlay-title-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+        .overlay-close {
+            position: fixed;
+            bottom: 7%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10000;
+            cursor: pointer;
+            width: 35px; /* Adjust width as needed */
+            height: 35px; /* Adjust height as needed */
+        }
+
+        .overlay-close img {
+            display: block; /* Ensure the image is displayed as a block */
+            max-width: 100%; /* Ensure the image is responsive */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        .fade-top, .fade-bottom {
+            position: fixed; /* Make the fades fixed */
+            left: 0;
+            right: 0;
+            height: 50px;
+            pointer-events: none; /* Allow clicks to pass through */
+            z-index: 9999; /* Ensure they are above the content */
+            border: none; /* Ensure no border is applied */
+            outline: none; /* Ensure no outline is applied */
+        }
+
+        .fade-top {
+            top: 111px; /* Position the up fade immediately below the black space */
+            left: 1%;
+            right: 1%;
+            height: 57px; /* Adjust the height of the fade */
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+        }
+
+        .black-space-bottom {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 14%; /* Adjust the height of the black space */
+            background-color: black;
+            z-index: 9999; /* Ensure it's above other content */
+        }
+
+        .fade-bottom {
+            bottom: 14%; /* Position the down fade immediately above the black space */
+            left: 1%;
+            right: 1%;
+            height: 57px; /* Adjust the height of the fade */
+            background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+        }
+
+    </style>
+</head>
+<body bgcolor="black"><br><br><br><br><br><br>
+
+    <div id="overlay" class="overlay">
+        <div class="overlay-footer">
+            <div class="overlay-title-container">
+                <p id="overlay-title" class="overlay-title"></p>
+                <div id="icons-container" class="icons">
+                    <!-- Icons will be inserted here dynamically -->
+                </div>
+            </div>
+            <div class="tab-buttons">
+                <button id="lyrics-button" class="active" onclick="showLyrics()">LYRICS</button>/<button id="credits-button" onclick="showCredits()">CREDITS</button>
+            </div>
+        </div>
+        <div class="overlay-content">
+            <div class="fade-top"></div>
+            <div class="fade-bottom"></div>
+            <div class="black-space-bottom"></div>
+            <div id="lyrics-content" class="content-section">
+                <!-- Lyrics content will be inserted here dynamically -->
+            </div>
+            <div id="credits-content" class="content-section hidden">
+                <!-- Credits content will be inserted here dynamically -->
+            </div>
+        </div>
+        <div class="overlay-close" onclick="closeOverlay()">
+            <img src="Xbtn.PNG" alt="Close Button">
+        </div>
     </div>
-  </div>
+
+<div class="song" onclick="openOverlay(2, 'CRAZY IN LOVE', 'WHEN I TALK TO MY FRIENDS SO QUIETLU (WHO HE THNK HE IS?)<br><br><br>LOOK AT WHAT YOU DID TO ME<br><br><br>TENNIS SHOWS, DONT EVEN NEED TO BUY A NEW DRESS<br><br><br>IF YOU AINT THERE, AINT NOBODY ELSE TO IMPRESS<br><br><br>ITS THE WAY THAT YOU KNOW WHAT I THOUGHT I KNEW<br><br><br>ITS THE BEAT THAT MY HEART SKIPSWHEN I AM WITH YOU<br><br><br>BUT I STILL DONT UNDERSTAND<br><br><br>JUST HOW YOUR LOVE CAN DO WHAT NO ONE ELSE CAN<br><br><br><br>song by: Beyoncé<br><br><br><br><br><br><br><br>', 'Crazy in Love credits...', [{src: 'apple.PNG', link: 'https://khaliiil.com'}, {src: 'spo.PNG', link: 'icon4-link'}])">
+    <span class="song-number">2.</span>
+    <span class="song-name">CRAZY IN LOVE</span>
 </div>
 
-<div id="lyrics-overlay" class="overlay">
-  <span class="overlay-close" onclick="closeLyricsOverlay()">X</span> <!-- Close button -->
-  <div class="overlay-content">
-    <!-- Your lyrics content goes here -->
-  </div>
-</div>
+<script>
+    function openOverlay(songNumber, songName, songLyrics, songCredits, iconsData) {
+        var overlay = document.getElementById('overlay');
+        var overlayTitle = document.getElementById('overlay-title');
+        var lyricsContent = document.getElementById('lyrics-content');
+        var creditsContent = document.getElementById('credits-content');
+        var iconsContainer = document.getElementById('icons-container');
 
-<a href="/credits" class="centered-button" id="credits-button">CREDITS</a>
+        overlayTitle.textContent = songNumber + '. ' + songName;
+        lyricsContent.innerHTML = '<p>' + songLyrics + '</p>';
+        creditsContent.innerHTML = '<p>' + songCredits + '</p>';
 
-<div class="song" onclick="openOverlay(1, 'HOLY GRAIL (intro)')">
-  <span class="song-number">1.</span>
-  <span class="song-name">HOLY GRAIL (intro)</span>
-</div>
+        // Clear any existing icons
+        iconsContainer.innerHTML = '';
 
-<div class="song" onclick="openOverlay(2, 'CRAZY IN LOVE')">
-  <span class="song-number">2.</span>
-  <span class="song-name">CRAZY IN LOVE</span>
-</div>
+        // Add new icons with links
+        iconsData.forEach(function(icon) {
+            var link = document.createElement('a');
+            link.href = icon.link; // Add the link for the icon
+            var img = document.createElement('img');
+            img.src = icon.src; // Add the src for the icon
+            link.appendChild(img);
+            iconsContainer.appendChild(link);
+        });
 
-<div class="song" onclick="openOverlay(3, 'RUN THIS TOWN')">
-  <span class="song-number">3.</span>
-  <span class="song-name">RUN THIS TOWN</span>
-</div>
+        overlay.style.display = 'block';
+        document.body.style.overflow = 'hidden'; // Disable scrolling on the main page
+        showLyrics(); // Show lyrics by default
+    }
 
-<div class="song" onclick="openOverlay(4, 'BABY BOY')">
-  <span class="song-number">4.</span>
-  <span class="song-name">BABY BOY</span>
-</div>
+    function closeOverlay() {
+        var overlay = document.getElementById('overlay');
+        overlay.style.display = 'none';
+        document.body.style.overflow = 'auto'; // Enable scrolling on the main page
+    }
 
-<div class="song" onclick="openOverlay(5, 'COZY')">
-  <span class="song-number">5.</span>
-  <span class="song-name">COZY</span>
-</div>
+    function showLyrics() {
+        document.getElementById('lyrics-content').classList.remove('hidden');
+        document.getElementById('credits-content').classList.add('hidden');
+        document.getElementById('lyrics-button').classList.add('active');
+        document.getElementById('credits-button').classList.remove('active');
+    }
 
-<div class="song" onclick="openOverlay(6, 'ALIEN SUPERSTAR')">
-  <span class="song-number">6.</span>
-  <span class="song-name">ALIEN SUPERSTAR</span>
-</div>
-
-<div class="song" onclick="openOverlay(7, 'DIVA')">
-  <span class="song-number">7.</span>
-  <span class="song-name">DIVA</span>
-</div>
-
-<div class="song" onclick="openOverlay(8, 'YONCÉ')">
-  <span class="song-number">8.</span>
-  <span class="song-name">YONCÉ</span>
-</div>
-
-<div class="song" onclick="openOverlay(9, 'MI GENTE')">
-  <span class="song-number">9.</span>
-  <span class="song-name">MI GENTE</span>
-</div>
-
-<div class="song" onclick="openOverlay(10, 'SINGLE L..')">
-  <span class="song-number">10.</span>
-  <span class="song-name">SINGLE L.. (break down)</span>
-</div>
-
-<div class="song" onclick="openOverlay(11, 'SWEET ★ HONEY ★ BUCKIIN')">
-  <span class="song-number">11.</span>
-  <span class="song-name">SWEET ★ HONEY ★ BUCKIIN'</span>
-</div>
-
-<div class="song" onclick="openOverlay(12, '>NAUGHTY BOY')">
-  <span class="song-number">12.</span>
-  <span class="song-name">NAUGHTY BOY</span>
-</div>
-
-<div class="song" onclick="openOverlay(13, 'MOVE')">
-  <span class="song-number">13.</span>
-  <span class="song-name">MOVE</span>
-</div>
-
-<div class="song" onclick="openOverlay(14, 'ENERGY')">
-  <span class="song-number">14.</span>
-  <span class="song-name">ENERGY</span>
-</div>
-
-<div class="song" onclick="openOverlay(15, 'RUN THE WORLD')">
-  <span class="song-number">15.</span>
-  <span class="song-name">RUN THE WORLD (Feminist,<br>and Fellas) </span>
-</div>
-
-<div class="song" onclick="openOverlay(16, 'MY POWER')">
-  <span class="song-number">16.</span>
-  <span class="song-name">MY POWER</span>
-</div>
-
-<div class="song" onclick="openOverlay(17, 'AMERICA HAS A PROBLEM')">
-  <span class="song-number">17.</span>
-  <span class="song-name">AMERICA HAS A PROBLEM</span>
-</div>
-
-<div class="song" onclick="openOverlay(18, 'NO CHURCH IN THE WILD')">
-  <span class="song-number">18.</span>
-  <span class="song-name">NO CHURCH IN THE WILD</span>
-</div>
-
-<div class="song" onclick="openOverlay(19, 'APESHIT')">
-  <span class="song-number">19.</span>
-  <span class="song-name">APESHIT</span>
-</div>
-
-<div class="song" onclick="openOverlay(20, 'PURE/HONEY')">
-  <span class="song-number">20.</span>
-  <span class="song-name">PURE/HONEY</span>
-</div>
-
-<div class="song" onclick="openOverlay(21, 'VIRGO'S GROOVE')">
-  <span class="song-number">21.</span>
-  <span class="song-name">VIRGO'S GROOVE</span>
-</div>
-
-<div class="song" onclick="openOverlay(22, 'CUFF IT')">
-  <span class="song-number">22.</span>
-  <span class="song-name">CUFF IT</span>
-</div>
-
-<div class="song" onclick="openOverlay(23, 'RIVER DEEP MOUMTAIN HIGH')">
-  <span class="song-number">23.</span>
-  <span class="song-name">RIVER DEEP MOUMTAIN HIGH</span>
-</div>
-
-<div class="song" onclick="openOverlay(24, 'PARTY')">
-  <span class="song-number">24.</span>
-  <span class="song-name">PARTY</span>
-</div>
-
-<div class="song" onclick="openOverlay(25, 'SORRY')">
-  <span class="song-number">25.</span>
-  <span class="song-name">SORRY</span>
-</div>
-
-<div class="song" onclick="openOverlay(26, 'ME, MYSELF AND I')">
-  <span class="song-number">26.</span>
-  <span class="song-name">ME, MYSELF AND I</span>
-</div>
-
-<div class="song" onclick="openOverlay(27, 'SUMMER RENAISSANCE')">
-  <span class="song-number">27.</span>
-  <span class="song-name">SUMMER RENAISSANCE</span>
-</div><br><br><br><br><br><br><br><br><br>
-  
-  <script>
-function openOverlay(songNumber, songName) {
-    var overlay = document.getElementById('overlay');
-    var overlayTitle = document.getElementById('overlay-title');
-    
-    overlayTitle.textContent = songNumber + '. ' + songName;
-    overlay.style.display = 'block';
-    document.body.style.overflow = 'hidden'; // Disable scrolling on the main page
-}
-
-function closeOverlay() {
-    var overlay = document.getElementById('overlay');
-    overlay.style.display = 'none';
-    document.body.style.overflow = 'auto'; // Enable scrolling on the main page
-}
-
-function openLyricsOverlay() {
-    var overlay = document.getElementById('lyrics-overlay');
-    overlay.style.display = 'block';
-    document.body.style.overflow = 'hidden'; // Disable scrolling on the main page
-}
-
-function closeLyricsOverlay() {
-    var overlay = document.getElementById('lyrics-overlay');
-    overlay.style.display = 'none';
-    document.body.style.overflow = 'auto'; // Enable scrolling on the main page
-}
-
-document.getElementById('credits-button').addEventListener('click', function() {
-    // Handle credits button click event
-    // Example: window.location.href = '/credits';
-});
+    function showCredits() {
+        document.getElementById('lyrics-content').classList.add('hidden');
+        document.getElementById('credits-content').classList.remove('hidden');
+        document.getElementById('lyrics-button').classList.remove('active');
+        document.getElementById('credits-button').classList.add('active');
+    }
 </script>
 
 </body>
