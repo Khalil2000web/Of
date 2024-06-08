@@ -359,17 +359,23 @@ body, html {
     color: gray; /* Default text color for text-only circles */
   }
 
-  .circle:hover .circle-text,
   .circle:hover .text-only,
-  .circle.touched .circle-text,
   .circle.touched .text-only {
     display: block;
     color: white !important; /* Text color on hover/touch */
   }
+  
+    .circle.touched .circle-text,
+    .circle:hover .circle-text {
+      border: 2px solid white;
+      }
+      .circle-text, .circle-text {
+        border:none;
+      }
 
   .circle:hover,
   .circle.touched {
-    border: 3px solid white; /* Border color on hover/touch */
+    border: 2px solid white; /* Border color on hover/touch */
   }
 
   .circle:hover img,
