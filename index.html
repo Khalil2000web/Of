@@ -469,7 +469,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <div class="image-container">
   
-  <img class="image" src="https://khaliiil.com/Y6.GIF" alt="Animated GIF">
+  <img class="image" src="https://khaliiil.com/Y6.GIF" alt="Animated GIF" oncontextmenu="return false;>
 
  <a href="https://khaliiil.com/BeenMajestic"><img class="image" src="https://khaliiil.com/BRO.GIF" alt="ALWAYS_BEEN_ROYAL"></a>
 
@@ -507,6 +507,14 @@ document.addEventListener('DOMContentLoaded', function() {
   </span>
   <img id="close-btn" src="Xbtn.PNG" alt="Close">
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+    document.querySelectorAll('img').forEach((img) => {
+      img.oncontextmenu = function() { return false; };
+    });
+  });
+</script>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
