@@ -159,122 +159,126 @@ PRIVACY
         }
     </script>
   
-  <body>
   <style>
 html, body {
         width: 100%;
         height: 100%;
         margin: 0;
-        padding: 0;
-        overflow-y: hidden;
-      }
+        padding<style>
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow-y: hidden;
+    }
+    .cover {
+      width: 550%;
+      height: 102%;
+      background-color: black;
+      display: flex;
+      flex-direction: row;
+      overflow-y: hidden;
+      position: relative;
+      z-index: 100;
+    }
+    .m1, .m2, .m3, .m4, .m5, .m6, .m7 {
+      position: absolute;
+      z-index: 101;
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+    }
+    .m1 {
+      height: 33.9%;
+      right: 4%;
+      top: 2%;
+    }
+    .m2 {
+      height: 9.9%;
+      right: 5%;
+      bottom: 32%;
+      z-index: 102;
+    }
+    .m3 {
+      height: 39.9%;
+      right: 20%;
+      top: 50%;
+    }
+    .m4 {
+      height: 39.9%;
+      right: 20%;
+      top: 50%;
+    }
+    .m5 {
+      width: 70%;
+      height: auto;
+      right: 30%;
+      top: 5%;
+    }
+    .m6 {
+      width: 10%;
+      height: auto;
+      right: 30%;
+      top: 5%;
+    }
+    .m7 {
+      width: 20%;
+      height: auto;
+      right: 30%;
+      top: 5%;
+    }
+    @media screen and (max-width: 600px) {
       .cover {
-        width: 550%;
-        height: 102%;
-        background-color: black;
-        display: flex;
-        flex-direction: row;
-        overflow-y: hidden;
-        position: relative;
-        z-index: 100;
-      }
-      .m1, .m2, .m3, .m4, .m5, .m6, .m7 {
-        position: absolute;
-        z-index: 101;
-        max-width: 100%;
-        max-height: 100%;
-        width: auto;
+        width: 300%;
+        flex-direction: column;
       }
       .m1 {
-        height: 33.9%;
-        right: 4%;
-        top: 2%;
+        right: 1%;
+        top: 8%;
+        width: 30%;
+        height: auto;
       }
       .m2 {
-        height: 9.9%;
-        right: 5%;
-        bottom: 32%;
-        z-index: 102;
+        right: 3%;
+        bottom: 3%;
+        width: 30%;
+        height: auto;
+        top: auto;
       }
       .m3 {
-        height: 39.9%;
-        right: 20%;
-        top: 50%;
+        right: 21%;
+        bottom: 24.9%;
+        top: auto;
       }
       .m4 {
-        height: 39.9%;
-        right: 20%;
-        top: 50%;
+        right: 5%;
+        bottom: 16%;
+        width: 15%;
+        height: auto;
+        top: auto;
       }
       .m5 {
-        width: 70%;
+        width: 30%;
         height: auto;
-        right: 30%;
-        top: 5%;
+        right: 44%;
+        top: 6%;
       }
       .m6 {
-        width: 10%;
-        height: auto;
-        right: 30%;
-        top: 5%;
+        width: auto;
+        height: 40%;
+        right: 49%;
+        top: auto;
+        bottom: 5%;
       }
       .m7 {
-        width: 20%;
-        height: auto;
-        right: 30%;
-        top: 5%;
+        width: auto;
+        height: 40%;
+        right: 67.9%;
+        top: auto;
+        bottom: 9%;
       }
-      @media screen and (max-width: 600px) {
-        .cover {
-          width: 300%;
-          flex-direction: column;
-        }
-        .m1 {
-          right: 1%;
-          top: 8%;
-          width: 30%;
-          height: auto;
-        }
-        .m2 {
-          right: 3%;
-          bottom: 3%;
-          width: 30%;
-          height: auto;
-          top: auto;
-        }
-        .m3 {
-          right: 21%;
-          bottom: 24.9%;
-          top: auto;
-        }
-        .m4 {
-          right: 5%;
-          bottom: 16%;
-          width: 15%;
-          height: auto;
-          top: auto;
-        }
-        .m5 {
-          width: 30%;
-          height: auto;
-          right: 44%;
-          top: 6%;
-        }
-        .m6 {
-          width: auto;
-          height: 40%;
-          right: 49%;
-          top: auto;
-          bottom: 5%;
-        }
-        .m7 {
-          width: auto;
-          height: 40%;
-          right: 67.9%;
-          top: auto;
-          bottom: 9%;
-        }
-      }
+    }
     .overlay {
       display: none;
       position: fixed;
@@ -301,31 +305,34 @@ html, body {
       z-index: 201;
     }
   </style>
+</head>
+<body>
 
-    <div class="cover">
-      <img class="m1" src="IMG_250292E22B15-1.JPEG">
-      <img class="m2" src="Br2.jpg" alt="Image 2">
-      <img class="m3" src="Br3.JPEG" alt="Image 3">
-      <img class="m4" src="Br8.GIF" alt="Image 4">
-      <img class="m5" src="Br4.GIF" alt="Image 5">
-      <img class="m6" src="Br6.jpg" alt="Image 6">
-      <img class="m7" src="Br7.GIF" alt="Image 7">
-    </div>
+  <div class="cover">
+    <img class="m1" src="IMG_250292E22B15-1.JPEG" onclick="openOverlay(this.src)">
+    <img class="m2" src="Br2.jpg" alt="Image 2" onclick="openOverlay(this.src)">
+    <img class="m3" src="Br3.JPEG" alt="Image 3" onclick="openOverlay(this.src)">
+    <img class="m4" src="Br8.GIF" alt="Image 4" onclick="openOverlay(this.src)">
+    <img class="m5" src="Br4.GIF" alt="Image 5" onclick="openOverlay(this.src)">
+    <img class="m6" src="Br6.jpg" alt="Image 6" onclick="openOverlay(this.src)">
+    <img class="m7" src="Br7.GIF" alt="Image 7" onclick="openOverlay(this.src)">
+  </div>
 
-<div class="overlay" id="overlay">
-  <img src="Xbtn.PNG" class="close-btn" onclick="closeOverlay()">
-  <img id="overlay-img" src="">
-</div>
+  <div class="overlay" id="overlay">
+    <img src="Xbtn.PNG" class="close-btn" onclick="closeOverlay()">
+    <img id="overlay-img" src="">
+  </div>
 
-<script>
-  function openOverlay(src) {
-    document.getElementById('overlay-img').src = src;
-    document.getElementById('overlay').style.display = 'flex';
-  }
+  <script>
+    function openOverlay(src) {
+      document.getElementById('overlay-img').src = src;
+      document.getElementById('overlay').style.display = 'flex';
+    }
 
-  function closeOverlay() {
-    document.getElementById('overlay').style.display = 'none';
-  }
-</script>
+    function closeOverlay() {
+      document.getElementById('overlay').style.display = 'none';
+    }
+  </script>
+
   </body>
 </html>
