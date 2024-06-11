@@ -266,101 +266,6 @@ bottom: 3%;
 
 }
 </style>
-<style>
-html, body {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-        }
-
-        .image-container {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            overflow-y: auto; /* Enable vertical scrolling */
-            scroll-snap-type: y mandatory; /* Snap to the nearest image */
-            position: relative; /* Ensure relative positioning for overlay */
-            z-index: 999;
-        }
-
-        .image {
-            scroll-snap-align: start; /* Snap each image to the start */
-            flex: 0 0 auto;
-            width: 100%;
-            object-fit: contain;
-            cursor: pointer; /* Add pointer cursor to indicate clickable */
-        }
-
-        #overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%; /* Set overlay height to cover the entire viewport */
-            background-color: black; /* Adjust transparency as needed */
-            display: none;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-            overflow-y: auto;
-            padding: 0;
-        }
-
-        body.no-scroll {
-            overflow: hidden;
-        }
-
-        #overlay-content {
-            width: 100%;
-            height: 100%;
-            overflow-y: auto;
-            touch-action: pan-y;
-        }
-
-        #close-btn {
-            position: absolute;
-            top: 10px; /* Adjust the position from the top as needed */
-            right: 10px; /* Adjust the position from the right as needed */
-            cursor: pointer;
-            width: 30px; /* Adjust the width as needed */
-            height: auto; /* Maintain aspect ratio */
-        }
-
-        .main-nav {
-            display: none; /* Hide main navigation links by default */
-        }
-
-        .nav-btn {
-            position: absolute;
-            transform: translateY(-50%);
-            cursor: pointer;
-            z-index: 10000;
-            padding-left: 16px;
-            padding-right: 16px;
-            padding-top: 5px;
-            padding-bottom: 5px;
-        }
-
-        #prev-btn {
-            left: 65px;
-            border: 3px solid #275c86; /* Initial blue border */
-            top: 50px;
-        }
-
-        #next-btn {
-            right: 65px;
-            top: 50px;
-        }
-
-        .nav-btn img {
-            display: block;
-            max-width: 100%;
-            height: auto;
-            /* Adjust width and height if needed */
-            width: 17px;
-        }
-</style>
 
 <style>
   /* Ensure the body background color is black */
@@ -463,25 +368,129 @@ PRIVACY
         <li><a href="https://www.khaliiil.com/">BLOG</a></li>
     </ul>
 </nav>
-  
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const prevBtn = document.getElementById('prev-btn');
 
-    if (!localStorage.getItem('prevBtnClicked')) {
-        prevBtn.style.border = '2px solid #275c86';
-    }
+    
+<style>
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
 
-    prevBtn.addEventListener('click', function() {
-        prevBtn.style.border = 'none';
-        localStorage.setItem('prevBtnClicked', 'true');
-    });
-});
-</script>
+.image-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    scroll-snap-type: y mandatory;
+    position: relative;
+    z-index: 999;
+}
 
-<div class="image-container">
-  
-  <img class="image" src="https://khaliiil.com/Y6.GIF" alt="Animated GIF" oncontextmenu="return false;>
+.image {
+    scroll-snap-align: start;
+    flex: 0 0 auto;
+    width: 100%;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+}
+
+.mute-btn, .unmute-btn {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    cursor: pointer;
+    z-index: 10;
+    width: 20px;
+    height: auto;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    overflow-y: auto;
+    padding: 0;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+#overlay-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#overlay-content video {
+    width: 100%;
+    height: auto;
+}
+
+#close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    width: 30px;
+    height: auto;
+}
+
+.main-nav {
+    display: none;
+}
+
+.nav-btn {
+    position: absolute;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 10000;
+    padding: 5px 16px;
+}
+
+#prev-btn {
+    left: 65px;
+    border: 3px solid #275c86;
+    top: 50px;
+}
+
+#next-btn {
+    right: 65px;
+    top: 50px;
+}
+
+.nav-btn img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    width: 17px;
+}
+</style>
+
+<div class="image-container"
+    
+      <img class="image" src="https://khaliiil.com/Y6.GIF" alt="Animated GIF" oncontextmenu="return false;>
 
  <a href="https://khaliiil.com/BeenMajestic"><img class="image" src="https://khaliiil.com/BRO.GIF" alt="ALWAYS_BEEN_ROYAL"></a>
 
@@ -498,42 +507,33 @@ document.addEventListener('DOMContentLoaded', function() {
   <img class="image" src="IMG_7607.jpg">
   <img class="image" src="IMG_7608.png">
   <img class="image" src="Bu.GIF" alt="Animated GIF">
-    
-<video class="image" autoplay muted controls preload="auto" height="290">
-  <source src="REn2.mov" type="video/mp4">
-</video>
-    
-  <img class="image" src="P.jpeg">
-  <img class="image" src="IMG_7474.jpg">
+
+    <div class="video-container">
+        <video class="image" autoplay muted preload="auto" height="1000">
+            <source src="REn2.mov" type="video/mp4">
+        </video>
+        <img src="on.PNG" class="mute-btn" style="display: none;">
+        <img src="off.PNG" class="unmute-btn">
+    </div>
+
+    <img class="image" src="P.jpeg">
+    <img class="image" src="IMG_7474.jpg">
 </div>
 
 <div id="overlay">
-
-  <span id="prev-btn" class="nav-btn">
-    <img src="prev.PNG" alt="Previous">
-  </span>
-  <div id="overlay-content">
-  </div>
-  <span id="next-btn" class="nav-btn">
-    <img src="next.PNG" alt="Next">
-  </span>
-  <img id="close-btn" src="Xbtn.PNG" alt="Close">
+    <span id="prev-btn" class="nav-btn">
+        <img src="prev.PNG" alt="Previous">
+    </span>
+    <div id="overlay-content"></div>
+    <span id="next-btn" class="nav-btn">
+        <img src="next.PNG" alt="Next">
+    </span>
+    <img id="close-btn" src="Xbtn.PNG" alt="Close">
 </div>
 
 <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-            document.querySelectorAll('img').forEach((img) => {
-                img.addEventListener('contextmenu', function(event) {
-                    event.preventDefault();
-                });
-                img.draggable = false; // Disable dragging of images
-            });
-        });
-    </script>
-
-<script>
 document.addEventListener('DOMContentLoaded', function() {
-    const mediaElements = document.querySelectorAll('.image, video');
+    const mediaElements = document.querySelectorAll('.image, .video-container video');
     const overlay = document.getElementById('overlay');
     const overlayContent = document.getElementById('overlay-content');
     const closeBtn = document.getElementById('close-btn');
@@ -541,6 +541,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const nextBtn = document.getElementById('next-btn');
 
     let currentIndex = 0;
+    let currentlyUnmutedVideo = null;
 
     function disableScroll() {
         document.body.classList.add('no-scroll');
@@ -551,22 +552,74 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function openOverlay(index) {
-        disableScroll(); // Disable scrolling before showing the overlay
+        disableScroll();
         currentIndex = index;
         const clonedMedia = mediaElements[currentIndex].cloneNode(true);
-        overlayContent.innerHTML = '';
-        overlayContent.appendChild(clonedMedia);
+
+        if (clonedMedia.tagName === 'VIDEO') {
+            clonedMedia.currentTime = mediaElements[currentIndex].currentTime;
+            clonedMedia.muted = mediaElements[currentIndex].muted;
+            clonedMedia.autoplay = true;
+            clonedMedia.controls = false;
+
+            const videoContainer = document.createElement('div');
+            videoContainer.classList.add('video-container');
+            videoContainer.appendChild(clonedMedia);
+
+            const muteBtn = document.createElement('img');
+            muteBtn.src = 'on.PNG';
+            muteBtn.classList.add('mute-btn');
+            muteBtn.style.display = clonedMedia.muted ? 'none' : 'block';
+
+            const unmuteBtn = document.createElement('img');
+            unmuteBtn.src = 'off.PNG';
+            unmuteBtn.classList.add('unmute-btn');
+            unmuteBtn.style.display = clonedMedia.muted ? 'block' : 'none';
+
+            videoContainer.appendChild(muteBtn);
+            videoContainer.appendChild(unmuteBtn);
+
+            muteBtn.addEventListener('click', () => {
+                clonedMedia.muted = true;
+                muteBtn.style.display = 'none';
+                unmuteBtn.style.display = 'block';
+            });
+
+            unmuteBtn.addEventListener('click', () => {
+                if (currentlyUnmutedVideo) {
+                    currentlyUnmutedVideo.muted = true;
+                    const previousMuteBtn = currentlyUnmutedVideo.parentElement.querySelector('.mute-btn');
+                    const previousUnmuteBtn = currentlyUnmutedVideo.parentElement.querySelector('.unmute-btn');
+                    previousMuteBtn.style.display = 'none';
+                    previousUnmuteBtn.style.display = 'block';
+                }
+                clonedMedia.muted = false;
+                currentlyUnmutedVideo = clonedMedia;
+                muteBtn.style.display = 'block';
+                unmuteBtn.style.display = 'none';
+            });
+
+            overlayContent.innerHTML = '';
+            overlayContent.appendChild(videoContainer);
+        } else {
+            overlayContent.innerHTML = '';
+            overlayContent.appendChild(clonedMedia);
+        }
+
         overlay.style.display = 'flex';
     }
 
     function closeOverlay() {
         overlay.style.display = 'none';
-        enableScroll(); // Enable scrolling when the overlay is closed
+        enableScroll();
+        if (currentlyUnmutedVideo) {
+            currentlyUnmutedVideo.pause();
+        }
     }
 
     mediaElements.forEach((media, index) => {
         media.addEventListener('click', () => {
-            disableScroll(); // Immediately disable scrolling
+            disableScroll();
             openOverlay(index);
         });
     });
@@ -575,7 +628,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     prevBtn.addEventListener('click', () => {
         if (currentIndex === 0) {
-            // Do nothing if it's the first media
             return;
         }
         currentIndex = (currentIndex - 1 + mediaElements.length) % mediaElements.length;
@@ -592,7 +644,54 @@ document.addEventListener('DOMContentLoaded', function() {
             disableScroll();
         }
     });
+
+    document.querySelectorAll('.mute-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const video = this.parentElement.querySelector('video');
+            video.muted = true;
+            this.style.display = 'none';
+            this.nextElementSibling.style.display = 'block';
+        });
+    });
+
+    document.querySelectorAll('.unmute-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            if (currentlyUnmutedVideo) {
+                currentlyUnmutedVideo.muted = true;
+                const previousMuteBtn = currentlyUnmutedVideo.parentElement.querySelector('.mute-btn');
+                const previousUnmuteBtn = currentlyUnmutedVideo.parentElement.querySelector('.unmute-btn');
+                previousMuteBtn.style.display = 'none';
+                previousUnmuteBtn.style.display = 'block';
+            }
+            const video = this.parentElement.querySelector('video');
+            video.muted = false;
+            currentlyUnmutedVideo = video;
+            this.style.display = 'none';
+            this.previousElementSibling.style.display = 'block';
+        });
+    });
+
+    // Autoplay and mute all videos on page load
+    document.querySelectorAll('video').forEach(video => {
+        video.autoplay = true;
+        video.muted = true;
+        video.load(); // Reload the video to apply the autoplay and muted attributes
+    });
 });
 </script>
+
+
+<script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelectorAll('img').forEach((img) => {
+                img.addEventListener('contextmenu', function(event) {
+                    event.preventDefault();
+                });
+                img.draggable = false; // Disable dragging of images
+            });
+        });
+    </script>
+
+
 </body>
 </html>
