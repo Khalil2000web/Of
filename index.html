@@ -509,7 +509,7 @@ body.no-scroll {
   <img class="image" src="Bu.GIF" alt="Animated GIF">
 
     <div class="video-container">
-        <video class="image" autoplay muted preload="auto" height="1000">
+        <video class="image" autoplay muted preload="auto">
             <source src="REn2.mov" type="video/mp4">
         </video>
         <img src="on.png" class="mute-btn" style="display: none;">
@@ -560,7 +560,7 @@ document.addEventListener('DOMContentLoaded', function() {
             clonedMedia.currentTime = mediaElements[currentIndex].currentTime;
             clonedMedia.muted = mediaElements[currentIndex].muted;
             clonedMedia.autoplay = true;
-            clonedMedia.controls = false;
+            clonedMedia.removeAttribute('controls');
 
             const videoContainer = document.createElement('div');
             videoContainer.classList.add('video-container');
@@ -675,23 +675,11 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('video').forEach(video => {
         video.autoplay = true;
         video.muted = true;
+        video.removeAttribute('controls');
         video.load(); // Reload the video to apply the autoplay and muted attributes
     });
 });
 </script>
-
-
-<script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-            document.querySelectorAll('img').forEach((img) => {
-                img.addEventListener('contextmenu', function(event) {
-                    event.preventDefault();
-                });
-                img.draggable = false; // Disable dragging of images
-            });
-        });
-    </script>
-
 
 </body>
 </html>
