@@ -6,139 +6,139 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-<style>
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
 
-.image-container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    overflow-y: auto;
-    scroll-snap-type: y mandatory;
-    position: relative;
-    z-index: 999;
-}
+        .image-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+            scroll-snap-type: y mandatory;
+            position: relative;
+            z-index: 999;
+        }
 
-.image {
-    scroll-snap-align: start;
-    flex: 0 0 auto;
-    width: 100%;
-    object-fit: contain;
-    cursor: pointer;
-}
+        .image {
+            scroll-snap-align: start;
+            flex: 0 0 auto;
+            width: 100%;
+            object-fit: contain;
+            cursor: pointer;
+        }
 
-.video-container {
-    position: relative;
-    width: 100%;
-}
+        .video-container {
+            position: relative;
+            width: 100%;
+        }
 
-.video-container video {
-    width: 100%;
-    height: auto;
-}
+        .video-container video {
+            width: 100%;
+            height: auto;
+        }
 
-.mute-btn, .unmute-btn {
-    position: absolute;
-    right: 15px;
-    bottom: 15px;
-    cursor: pointer;
-    z-index: 10;
-    width: 20px;
-    height: 20px;
-    margin:10px
-}
+        .mute-btn, .unmute-btn {
+            position: absolute;
+            right: 15px;
+            bottom: 15px;
+            cursor: pointer;
+            z-index: 10;
+            width: 20px;
+            height: 20px;
+            margin: 10px;
+        }
 
-#overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    overflow-y: auto;
-    padding: 0;
-}
+        #overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            overflow-y: auto;
+            padding: 0;
+        }
 
-body.no-scroll {
-    overflow: hidden;
-}
-#overlay-content {
-    width: 100%;
-    height: 100%;
-    overflow-y: auto;
-    touch-action: pan-y;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; /* Align media items to the top */
-}
+        body.no-scroll {
+            overflow: hidden;
+        }
 
-#overlay-content video {
-    width: 100%;
-    height: auto;
-}
+        #overlay-content {
+            width: 100%;
+            height: 100%;
+            overflow-y: auto;
+            touch-action: pan-y;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start; /* Align media items to the top */
+        }
 
-#close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    width: 30px;
-    height: auto;
-}
+        #overlay-content video {
+            width: 100%;
+            height: auto;
+        }
 
-.main-nav {
-    display: none;
-}
+        #close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            width: 30px;
+            height: auto;
+        }
 
-.nav-btn {
-    position: absolute;
-    transform: translateY(-50%);
-    cursor: pointer;
-    z-index: 10000;
-    padding: 5px 16px;
-}
+        .main-nav {
+            display: none;
+        }
 
-#prev-btn {
-    left: 65px;
-    border: 3px solid #275c86;
-    top: 50px;
-}
+        .nav-btn {
+            position: absolute;
+            transform: translateY(-50%);
+            cursor: pointer;
+            z-index: 10000;
+            padding: 5px 16px;
+        }
 
-#next-btn {
-    right: 65px;
-    top: 50px;
-}
+        #prev-btn {
+            left: 65px;
+            border: 3px solid #275c86;
+            top: 50px;
+        }
 
-.nav-btn img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    width: 17px;
-}
-</style>
+        #next-btn {
+            right: 65px;
+            top: 50px;
+        }
+
+        .nav-btn img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            width: 17px;
+        }
+    </style>
+</head>
+<body>
 
 <div class="image-container">
     <img class="image" src="https://khaliiil.com/Y6.GIF" alt="Animated GIF" oncontextmenu="return false;">
-
     <a href="https://khaliiil.com/BeenMajestic"><img class="image" src="https://khaliiil.com/BRO.GIF" alt="ALWAYS_BEEN_ROYAL"></a>
-
     <div class="video-container">
         <video class="image" autoplay muted preload="metadata">
             <source src="https://khaliiil.com/REn2.mov" type="video/mp4">
         </video>
-        <img src="on.PNG" class="mute-btn" style="display: none;">
-        <img src="off.PNG" class="unmute-btn">
+        <img src="on.png" class="mute-btn" style="display: none;">
+        <img src="off.png" class="unmute-btn">
     </div>
-
     <img class="image" src="https://khaliiil.com/P.jpeg">
     <img class="image" src="https://khaliiil.com/IMG_7474.jpg">
 </div>
@@ -154,64 +154,131 @@ body.no-scroll {
     <img id="close-btn" src="Xbtn.PNG" alt="Close">
 </div>
 
-</head>
-<body>
-
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const mediaElements = document.querySelectorAll('.image, .video-container video');
-    const overlay = document.getElementById('overlay');
-    const overlayContent = document.getElementById('overlay-content');
-    const closeBtn = document.getElementById('close-btn');
-    const prevBtn = document.getElementById('prev-btn');
-    const nextBtn = document.getElementById('next-btn');
+    document.addEventListener('DOMContentLoaded', function() {
+        const mediaElements = document.querySelectorAll('.image, .video-container video');
+        const overlay = document.getElementById('overlay');
+        const overlayContent = document.getElementById('overlay-content');
+        const closeBtn = document.getElementById('close-btn');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
 
-    let currentIndex = 0;
-    let currentlyUnmutedVideo = null;
+        let currentIndex = 0;
+        let currentlyUnmutedVideo = null;
 
-    function disableScroll() {
-        document.body.classList.add('no-scroll');
-    }
+        function disableScroll() {
+            document.body.classList.add('no-scroll');
+        }
 
-    function enableScroll() {
-        document.body.classList.remove('no-scroll');
-    }
+        function enableScroll() {
+            document.body.classList.remove('no-scroll');
+        }
 
-    function openOverlay(index) {
-        disableScroll();
-        currentIndex = index;
-        const clonedMedia = mediaElements[currentIndex].cloneNode(true);
+        function openOverlay(index) {
+            disableScroll();
+            currentIndex = index;
+            const clonedMedia = mediaElements[currentIndex].cloneNode(true);
 
-        if (clonedMedia.tagName === 'VIDEO') {
-            clonedMedia.currentTime = mediaElements[currentIndex].currentTime;
-            clonedMedia.muted = mediaElements[currentIndex].muted;
-            clonedMedia.autoplay = true;
-            clonedMedia.controls = false;
+            if (clonedMedia.tagName === 'VIDEO') {
+                clonedMedia.currentTime = mediaElements[currentIndex].currentTime;
+                clonedMedia.muted = mediaElements[currentIndex].muted;
+                clonedMedia.autoplay = true;
+                clonedMedia.controls = false;
 
-            const videoContainer = document.createElement('div');
-            videoContainer.classList.add('video-container');
-            videoContainer.appendChild(clonedMedia);
+                const videoContainer = document.createElement('div');
+                videoContainer.classList.add('video-container');
+                videoContainer.appendChild(clonedMedia);
 
-            const muteBtn = document.createElement('img');
-            muteBtn.src = 'on.PNG';
-            muteBtn.classList.add('mute-btn');
-            muteBtn.style.display = clonedMedia.muted ? 'none' : 'block';
+                const muteBtn = document.createElement('img');
+                muteBtn.src = 'on.png';
+                muteBtn.classList.add('mute-btn');
+                muteBtn.style.display = clonedMedia.muted ? 'none' : 'block';
 
-            const unmuteBtn = document.createElement('img');
-            unmuteBtn.src = 'off.PNG';
-            unmuteBtn.classList.add('unmute-btn');
-            unmuteBtn.style.display = clonedMedia.muted ? 'block' : 'none';
+                const unmuteBtn = document.createElement('img');
+                unmuteBtn.src = 'off.png';
+                unmuteBtn.classList.add('unmute-btn');
+                unmuteBtn.style.display = clonedMedia.muted ? 'block' : 'none';
 
-            videoContainer.appendChild(muteBtn);
-            videoContainer.appendChild(unmuteBtn);
+                videoContainer.appendChild(muteBtn);
+                videoContainer.appendChild(unmuteBtn);
 
-            muteBtn.addEventListener('click', () => {
-                clonedMedia.muted = true;
-                muteBtn.style.display = 'none';
-                unmuteBtn.style.display = 'block';
+                muteBtn.addEventListener('click', () => {
+                    clonedMedia.muted = true;
+                    muteBtn.style.display = 'none';
+                    unmuteBtn.style.display = 'block';
+                });
+
+                unmuteBtn.addEventListener('click', () => {
+                    if (currentlyUnmutedVideo) {
+                        currentlyUnmutedVideo.muted = true;
+                        const previousMuteBtn = currentlyUnmutedVideo.parentElement.querySelector('.mute-btn');
+                        const previousUnmuteBtn = currentlyUnmutedVideo.parentElement.querySelector('.unmute-btn');
+                        previousMuteBtn.style.display = 'none';
+                        previousUnmuteBtn.style.display = 'block';
+                    }
+                    clonedMedia.muted = false;
+                    currentlyUnmutedVideo = clonedMedia;
+                    muteBtn.style.display = 'block';
+                    unmuteBtn.style.display = 'none';
+                });
+
+                overlayContent.innerHTML = '';
+                overlayContent.appendChild(videoContainer);
+            } else {
+                overlayContent.innerHTML = '';
+                overlayContent.appendChild(clonedMedia);
+            }
+
+            overlay.style.display = 'flex';
+        }
+
+        function closeOverlay() {
+            overlay.style.display = 'none';
+            enableScroll();
+            if (currentlyUnmutedVideo) {
+                currentlyUnmutedVideo.pause();
+            }
+        }
+
+        mediaElements.forEach((media, index) => {
+            media.addEventListener('click', () => {
+                disableScroll();
+                openOverlay(index);
             });
+        });
 
-            unmuteBtn.addEventListener('click', () => {
+        closeBtn.addEventListener('click', closeOverlay);
+
+        prevBtn.addEventListener('click', () => {
+            if (currentIndex === 0) {
+                return;
+            }
+            currentIndex = (currentIndex - 1 + mediaElements.length) % mediaElements.length;
+            openOverlay(currentIndex);
+        });
+
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % mediaElements.length;
+            openOverlay(currentIndex);
+        });
+
+        overlay.addEventListener('transitionend', () => {
+            if (overlay.style.display === 'flex') {
+                disableScroll();
+            }
+        });
+
+        document.querySelectorAll('.mute-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const video = this.parentElement.querySelector('video');
+                video.muted = true;
+                this.style.display = 'none';
+                this.nextElementSibling.style.display = 'block';
+            });
+        });
+
+        document.querySelectorAll('.unmute-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
                 if (currentlyUnmutedVideo) {
                     currentlyUnmutedVideo.muted = true;
                     const previousMuteBtn = currentlyUnmutedVideo.parentElement.querySelector('.mute-btn');
@@ -219,91 +286,29 @@ document.addEventListener('DOMContentLoaded', function() {
                     previousMuteBtn.style.display = 'none';
                     previousUnmuteBtn.style.display = 'block';
                 }
-                clonedMedia.muted = false;
-                currentlyUnmutedVideo = clonedMedia;
-                muteBtn.style.display = 'block';
-                unmuteBtn.style.display = 'none';
+                const video = this.parentElement.querySelector('video');
+                video.muted = false;
+                currentlyUnmutedVideo = video;
+                this.style.display = 'none';
+                this.previousElementSibling.style.display = 'block';
             });
-
-            overlayContent.innerHTML = '';
-            overlayContent.appendChild(videoContainer);
-        } else {
-            overlayContent.innerHTML = '';
-            overlayContent.appendChild(clonedMedia);
-        }
-
-        overlay.style.display = 'flex';
-    }
-
-    function closeOverlay() {
-        overlay.style.display = 'none';
-        enableScroll();
-        if (currentlyUnmutedVideo) {
-            currentlyUnmutedVideo.pause();
-        }
-    }
-
-    mediaElements.forEach((media, index) => {
-        media.addEventListener('click', () => {
-            disableScroll();
-            openOverlay(index);
         });
-    });
 
-    closeBtn.addEventListener('click', closeOverlay);
-
-    prevBtn.addEventListener('click', () => {
-        if (currentIndex === 0) {
-            return;
-        }
-        currentIndex = (currentIndex - 1 + mediaElements.length) % mediaElements.length;
-        openOverlay(currentIndex);
-    });
-
-    nextBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex + 1) % mediaElements.length;
-        openOverlay(currentIndex);
-    });
-
-    overlay.addEventListener('transitionend', () => {
-        if (overlay.style.display === 'flex') {
-            disableScroll();
-        }
-    });
-
-    document.querySelectorAll('.mute-btn').forEach(btn => {
-        btn.addEventListener('click', function() {
-            const video = this.parentElement.querySelector('video');
+        // Autoplay and mute all videos on page load
+        document.querySelectorAll('video').forEach(video => {
+            video.autoplay = true;
             video.muted = true;
-            this.style.display = 'none';
-            this.nextElementSibling.style.display = 'block';
+            video.load(); 
+                        });
+        });
+
+        // Autoplay and mute all videos on page load
+        document.querySelectorAll('video').forEach(video => {
+            video.autoplay = true;
+            video.muted = true;
+            video.load(); // Reload the video to apply the autoplay and muted attributes
         });
     });
-
-    document.querySelectorAll('.unmute-btn').forEach(btn => {
-        btn.addEventListener('click', function() {
-            if (currentlyUnmutedVideo) {
-                currentlyUnmutedVideo.muted = true;
-                const previousMuteBtn = currentlyUnmutedVideo.parentElement.querySelector('.mute-btn');
-                const previousUnmuteBtn = currentlyUnmutedVideo.parentElement.querySelector('.unmute-btn');
-                previousMuteBtn.style.display = 'none';
-                previousUnmuteBtn.style.display = 'block';
-            }
-            const video = this.parentElement.querySelector('video');
-            video.muted = false;
-            currentlyUnmutedVideo = video;
-            this.style.display = 'none';
-            this.previousElementSibling.style.display = 'block';
-        });
-    });
-
-    // Autoplay and mute all videos on page load
-    document.querySelectorAll('video').forEach(video => {
-        video.autoplay = true;
-        video.muted = true;
-        video.load(); // Reload the video to apply the autoplay and muted attributes
-    });
-});
 </script>
 </body>
 </html>
