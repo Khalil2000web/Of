@@ -35,75 +35,155 @@ body {
 <style>
 /* Your CSS styles */
 nav.top-nav {
-@@ -70,17 +36,17 @@
+    margin-top: 14px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1000;
+}
+
+nav.bottom-nav {
+    margin-bottom: 9px;
+    position: fixed;
+    bottom: 13px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+nav.top-nav ul, nav.bottom-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav.top-nav ul li, nav.bottom-nav ul li {
+    display: inline;
+    margin: 0 10px;
 }
 
 nav.top-nav ul li a {
-    font-family: 'BBManualMonoPro', Charcoal, sans-serif;
-            font-family: 'BB Manual Mono Pro TX';
+    font-family: 'BB Manual Mono Pro TX', sans-serif;
     font-size: 19px;
-    color: white;
     color: black;
     text-decoration: none;
     padding: 16px;
 }
 
 nav.bottom-nav ul li a {
-    font-family: 'BBManualMonoPro', Charcoal, sans-serif;
-            font-family: 'BB Manual Mono Pro TX';
+    font-family: 'BB Manual Mono Pro TX', sans-serif;
     font-size: 11px;
-    color: white;
     color: black;
     text-decoration: none;
     padding: 20px;
+}
 
+.middle-text {
+    font-family: 'BB Manual Mono Pro TX';
+    font-size: 10px;
+    color: white;
+    padding: 0px;
+    margin-bottom: 1px;
+}
+
+@media screen and (max-width: 600px) {
+    nav.bottom-nav ul li a {
+        font-size: 15px;
+        padding: 1px;
+        align-items: center;
     }
 
     nav.top-nav ul li a {
-        padding: 4px;
-        font-size: 20px;
-        padding: 0.00090px;
+        padding: 3px;
         font-size: 19px;
     }
 
     .middle-text {
-
-  }
-
-  nav.top-nav ul li a {
-    font-family: BBManualMonoPro, Charcoal, sans-serif; /* Use Impact font */
-    color: white; /* Change font color to white */
-            font-family: 'BB Manual Mono Pro TX';
-    color: black; /* Change font color to white */
-    text-decoration: none;
-
-  }
-
-  nav.bottom-nav ul li a {
-    font-family: BBManualMonoPro, Charcoal, sans-serif; /* Use Impact font */
-    color: white; /* Change font color to white */
-            font-family: 'BB Manual Mono Pro TX';
-    color: black; /* Change font color to white */
-    text-decoration: none;
-  }
-
-.middle-text {
-  font-family: 'BBManualMonoPro'; /* Use Impact font */
-            font-family: 'BB Manual Mono Pro TX';
-  font-size: 12px; /* Set font size */
-  color: white; /* Change font color to white */
-  color: black; /* Change font color to white */
-  margin-left: 100px;
-margin-bottom: 2px;
+        display: none;
+    }
 }
-} 
+
+@media screen and (min-width: 601px) {
+    nav.bottom-nav ul li a {
+        font-size: 12px;
+        padding: 1px;
+        align-items: right;
+    }
+    nav.top-nav ul li a {
+        font-size: 22px;
+    }
+    nav.top-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    nav.bottom-nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 1000;
+        height: 50px;
+    }
+
+    nav.top-nav ul,
+    nav.bottom-nav ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav.top-nav ul li,
+    nav.bottom-nav ul li {
+        display: inline;
+        margin: 0 10px;
+    }
+
+    nav.bottom-nav ul li:first-child {
+        margin-left: 30px;
+    }
+    nav.bottom-nav ul li:last-child {
+        margin-right: 30px;
+    }
+
+    nav.top-nav ul li a {
+        font-family: 'BB Manual Mono Pro TX', sans-serif;
+        color: black;
+        text-decoration: none;
+    }
+
+    nav.bottom-nav ul li a {
+        font-family: 'BB Manual Mono Pro TX', sans-serif;
+        color: black;
+        text-decoration: none;
+    }
+}
 </style>
 <nav class="top-nav">
     <ul>
-        <li><a href="/">HOME</a></li>
-        <li><a href="/tours">TOURS</a></li>
-        <li><a href="/music">MUSIC</a></li>
-        <li><a href="/acts">ACTS</a></li>
+        <li><a href="https://www.khaliiil.com/">HOME</a></li>
+        <li><a href="https://shop.khaliiil.com/">SHOP</a></li>
+        <li><a href="https://music.khaliiil.com/">MUSIC</a></li>
+        <li><a href="https://tour.khaliiil.com/">TOURS</a></li>
+        <li><a href="https://www.khaliiil.com//blog">BLOG</a></li>
+    </ul>
+</nav>
 
   <style>
   /* Ensure buttons have a higher z-index */
