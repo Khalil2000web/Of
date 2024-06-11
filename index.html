@@ -42,7 +42,7 @@ body {
 }
 
 .left-title, .right-title {
-    font-size: 19px;
+    font-size: 20px;
     color: white;
     letter-spacing:2px;
 }
@@ -512,8 +512,8 @@ body.no-scroll {
         <video class="image" autoplay muted preload="auto" height="1000">
             <source src="REn2.mov" type="video/mp4">
         </video>
-        <img src="on.PNG" class="mute-btn" style="display: none;">
-        <img src="off.PNG" class="unmute-btn">
+        <img src="on.png" class="mute-btn" style="display: none;">
+        <img src="off.png" class="unmute-btn">
     </div>
 
     <img class="image" src="P.jpeg">
@@ -567,12 +567,12 @@ document.addEventListener('DOMContentLoaded', function() {
             videoContainer.appendChild(clonedMedia);
 
             const muteBtn = document.createElement('img');
-            muteBtn.src = 'on.PNG';
+            muteBtn.src = 'on.png';
             muteBtn.classList.add('mute-btn');
             muteBtn.style.display = clonedMedia.muted ? 'none' : 'block';
 
             const unmuteBtn = document.createElement('img');
-            unmuteBtn.src = 'off.PNG';
+            unmuteBtn.src = 'off.png';
             unmuteBtn.classList.add('unmute-btn');
             unmuteBtn.style.display = clonedMedia.muted ? 'block' : 'none';
 
