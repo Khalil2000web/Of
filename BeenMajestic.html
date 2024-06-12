@@ -54,6 +54,19 @@ h1 {
     font-weight: normal; /* Set font weight to normal */
     margin: 0; /* Remove default margin */
 }
+@media screen and (max-width: 400px) {
+    
+.left-title {
+    left: 0;
+    padding-left: 40px; /* Adjust as needed */
+}
+
+.right-title {
+    right: 0;
+    padding-right: 40px; /* Adjust as needed */
+}
+
+}
 
 </style>
 
@@ -161,7 +174,7 @@ PRIVACY
       height: 100%;
       margin: 0;
       padding: 0;
-      overflow-y: hidden;
+      overflow-y: hidden !important;
       background-color:black;
     }
     .cover {
@@ -174,9 +187,12 @@ PRIVACY
       position: relative;
       z-index: 100;
     }
-    .m1, .m2, .m3, .m4, .m5, .m6, .m7 {
-      position: absolute;
+    .m1, .m2, .m3, .m4, .m5, .m6, .m7, {
       z-index: 101;
+    }
+
+    .m1, .m2, .m3, .m4, .m5, .m6, .m7, .m8 {
+      position: absolute;
       max-width: 100%;
       max-height: 100%;
       width: auto;
@@ -222,60 +238,60 @@ PRIVACY
     }
     @media screen and (max-width: 600px) {
       .cover {
-        width: 300%;
+        width: 500%;
         flex-direction: column;
       }
       .m1 {
         right: 1%;
         top: 8%;
-        width: 30%;
+        width: 20%;
         height: auto;
       }
       .m2 {
         right: 3%;
         bottom: 3%;
-        width: 30%;
+        width: 20%;
         height: auto;
         top: auto;
       }
       .m3 {
-        right: 21%;
+        right: 18%;
         bottom: 24.9%;
         top: auto;
       }
       .m4 {
         right: 5%;
         bottom: 16%;
-        width: 15%;
+        width: 10%;
         height: auto;
         top: auto;
       }
       .m5 {
-        width: 30%;
+        width: 20%;
         height: auto;
-        right: 44%;
-        top: 6%;
+        right: 36%;
+        top: 4%;
       }
       .m6 {
-        width: auto;
-        height: 40%;
-        right: 49%;
+        width: 10.9%;
+        height: auto;
+        right: 40%;
         top: auto;
         bottom: 5%;
       }
       .m7 {
         width: auto;
         height: 40%;
-        right: 67.9%;
+        right: 51.9%;
         top: auto;
-        bottom: 9%;
+        bottom: 15%;
+        z-index:106;
       }
       .m8 {
-        width: auto;
-        height: 20%;
-        right: 73%;
-        top: auto;
-        top: 3%;
+        width: 28%;
+        height: auto;
+        right: 69%;
+        top: 6%;
       }
     }
     .overlay {
@@ -314,18 +330,18 @@ PRIVACY
 <body bgcolor="black">
 
   <div class="cover">
-    <img class="m1" src="IMG_250292E22B15-1.JPEG" onclick="openOverlay(this.src)">
-    <img class="m2" src="Br2.jpg" alt="Image 2" onclick="openOverlay(this.src)">
-    <img class="m3" src="Br3.JPEG" alt="Image 3" onclick="openOverlay(this.src)">
-    <img class="m4" src="Br8.GIF" alt="Image 4" onclick="openOverlay(this.src)">
-    <img class="m5" src="Br4.GIF" alt="Image 5" onclick="openOverlay(this.src)">
-    <img class="m6" src="Br6.jpg" alt="Image 6" onclick="openOverlay(this.src)">
-    <img class="m7" src="Br7.GIF" alt="Image 7" onclick="openOverlay(this.src)">
-    <img class="m8" src="/mediaOf/Bmr.JPG" alt="Image 8" onclick="openOverlay(this.src)">
+    <img class="m1" src="https://khaliiil.com/IMG_250292E22B15-1.JPEG" onclick="openOverlay(this.src)">
+    <img class="m2" src="https://khaliiil.com/Br2.jpg" alt="Image 2" onclick="openOverlay(this.src)">
+    <img class="m3" src="https://khaliiil.com/Br3.JPEG" alt="Image 3" onclick="openOverlay(this.src)">
+    <img class="m4" src="https://khaliiil.com/Br8.GIF" alt="Image 4" onclick="openOverlay(this.src)">
+    <img class="m5" src="https://khaliiil.com/Br4.GIF" alt="Image 5" onclick="openOverlay(this.src)">
+    <img class="m6" src="https://khaliiil.com/Br6.jpg" alt="Image 6" onclick="openOverlay(this.src)">
+    <img class="m7" src="https://khaliiil.com/Br7.GIF" alt="Image 7" onclick="openOverlay(this.src)">
+    <img class="m8" src="https://khaliiil.com/mediaOf/Bmr.JPG" alt="Image 8" onclick="openOverlay(this.src)">
   </div>
 
   <div class="overlay" id="overlay">
-    <img src="Xbtn.PNG" class="close-btn" onclick="closeOverlay()">
+    <img src="https://khaliiil.com/Xbtn.PNG" class="close-btn" onclick="closeOverlay()">
     <img id="overlay-img" src="">
   </div>
 
