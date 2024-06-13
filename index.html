@@ -484,12 +484,17 @@ html, body {
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
 
     if (!localStorage.getItem('prevBtnClicked')) {
         prevBtn.style.border = '2px solid #275c86';
     }
 
     prevBtn.addEventListener('click', function() {
+        prevBtn.style.border = 'none';
+        localStorage.setItem('prevBtnClicked', 'true');
+    });
+        nextBtn.addEventListener('click', function() {
         prevBtn.style.border = 'none';
         localStorage.setItem('prevBtnClicked', 'true');
     });
