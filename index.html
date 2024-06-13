@@ -400,10 +400,18 @@ html, body {
             flex: 0 0 auto;
             width: 100%;
             object-fit: contain;
-            cursor: pointer; /* Add pointer cursor to indicate clickable */
-                -webkit-touch-callout: none; /* Disable the context menu on tap and hold */
-    pointer-events: auto; /* Ensure the image remains clickable */
-
+            cursor: pointer;
+ -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: auto;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+    -webkit-touch-callout: none;
         }
 
         #overlay {
