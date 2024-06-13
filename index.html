@@ -431,6 +431,7 @@ html, body {
 
         body.no-scroll {
             overflow: hidden;
+            pointer-events: none !important;
         }
 
         #overlay-content {
@@ -598,7 +599,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function disableScroll() {
         document.body.classList.add('no-scroll');
-        document.body.style.pointerEvents = 'none';
     }
 
     function enableScroll() {
