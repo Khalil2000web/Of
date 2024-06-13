@@ -300,6 +300,7 @@ PRIVACY
         color: white;
         font-family: 'BB Manual Mono Pro TX';
         text-align: center;
+        width:100%;
     }
 
     .overlay-close {
@@ -309,14 +310,25 @@ PRIVACY
         transform: translateX(-50%);
         z-index: 10000;
         cursor: pointer;
-        width: 35px; /* Adjust width as needed */
-        height: 35px; /* Adjust height as needed */
+        width: 30px; /* Adjust width as needed */
+        height: 30px; /* Adjust height as needed */
     }
 
     .overlay-close img {
         display: block; /* Ensure the image is displayed as a block */
         max-width: 100%; /* Ensure the image is responsive */
         height: auto; /* Maintain aspect ratio */
+         -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: auto;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+    -webkit-touch-callout: none;
     }
 
     .overlay-content {
