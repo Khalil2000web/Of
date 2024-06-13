@@ -401,6 +401,9 @@ html, body {
             width: 100%;
             object-fit: contain;
             cursor: pointer; /* Add pointer cursor to indicate clickable */
+                -webkit-touch-callout: none; /* Disable the context menu on tap and hold */
+    pointer-events: auto; /* Ensure the image remains clickable */
+}
         }
 
         #overlay {
