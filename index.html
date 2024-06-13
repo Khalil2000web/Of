@@ -598,6 +598,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function disableScroll() {
         document.body.classList.add('no-scroll');
+        document.body.style.pointerEvents = 'none';
     }
 
     function enableScroll() {
@@ -611,6 +612,7 @@ document.addEventListener('DOMContentLoaded', function() {
         overlayContent.innerHTML = '';
         overlayContent.appendChild(clonedMedia);
         overlay.style.display = 'flex';
+        document.body.style.pointerEvents = 'none';
     }
 
     function closeOverlay() {
