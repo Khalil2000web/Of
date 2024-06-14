@@ -337,7 +337,8 @@ html, body {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-            -webkit-overflow-scrolling: touch !important; /* Enable smooth scrolling */
+        -webkit-overflow-scrolling: touch !important; /* Enable smooth scrolling */
+        overflow-y:none;
     }
     100% {
         width: 100%;
@@ -345,6 +346,8 @@ html, body {
         top: 0;
         left: 0;
         transform: none;
+        -webkit-overflow-scrolling: touch !important; /* Enable smooth scrolling */
+        overflow-y:none;
     }
 }
 
@@ -359,7 +362,7 @@ html, body {
     justify-content: center;
     align-items: center;
     z-index: 9999;
-    overflow-y: auto;
+    overflow-y: none;
     padding: 0;
     scroll-padding-top: 50px;
     animation: expandOverlay 0.1s ease forwards; /* Change duration to 1s */
@@ -367,7 +370,8 @@ html, body {
 }
 
 body.no-scroll {
-    overflow: hidden;
+    overflow: none;
+        -webkit-overflow-scrolling: touch !important; /* Enable smooth scrolling */
 }
 
 #overlay-content {
