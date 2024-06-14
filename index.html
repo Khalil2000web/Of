@@ -190,91 +190,6 @@ padding: 0px;
     display: none;
     }
 }
-
-@media screen and (min-width: 601px) {
-    nav.bottom-nav ul li a {
-        font-size: 12px;
-        padding: 1px;
-        align-items: right;
-    }
-    
-      .nav-btn {
-        top: 10%;
-        }
-    
-    nav.bottom-nav ul li:nth-child(2) {
-text-align: right;
-}
-    
-    nav.top-nav ul li a {
-        font-size: 18px;
-    }
-nav.top-nav {
-    position: fixed; /* Keep the top navigation bar fixed */
-    top: 0; /* Position it at the top */
-    left: 0; /* Position it at the left */
-    width: 100%; /* Take up the full width of the viewport */
-    display: flex; /* Use flexbox layout */
-    justify-content: space-around; /* Space items evenly with more space between them */
-    align-items: center; /* Center-align the items vertically */
-    z-index: 1000; /* Ensure it's above other content */
-  }
-
-  /* Style for the bottom navigation bar */
-  nav.bottom-nav {
-    position: fixed; /* Keep the bottom navigation bar fixed */
-    bottom: 0; /* Position it at the bottom */
-    left: 0; /* Position it at the left */
-    width: 100%; /* Take up the full width of the viewport */
-    display: flex; /* Use flexbox layout */
-    justify-content: space-between; /* Space items evenly */
-    align-items: center; /* Center-align the items vertically */
-    z-index: 1000; /* Ensure it's above other content */
-    height: 50px; /* Add the desired height */
-  }
-
-  nav.top-nav ul,
-  nav.bottom-nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  nav.top-nav ul li,
-  nav.bottom-nav ul li {
-    display: inline;
-    margin: 0 10px; /* Add margin to create space between buttons */
-  }
-
-  nav.bottom-nav ul li:first-child {
-    margin-left: 30px;
-  }
-      nav.bottom-nav ul li:last-child {
-    margin-right: 30px;
-  }
-
-  nav.top-nav ul li a {
-    font-family: BB Manual Mono Pro TX, sans-serif; /* Use Impact font */
-    color: white; /* Change font color to white */
-    text-decoration: none;
-
-  }
-
-  nav.bottom-nav ul li a {
-    font-family: BB Manual Mono Pro TX, sans-serif; /* Use Impact font */
-    color: white; /* Change font color to white */
-    text-decoration: none;
-  }
-
-.middle-text {
-  font-family: 'BB Manual Mono Pro TX'; /* Use Impact font */
-  font-size: 12px; /* Set font size */
-  color: white; /* Change font color to white */
-  margin-left: 100px;
-bottom: 3%;
-}
-
-}
 </style>
 
  <style>
@@ -373,7 +288,7 @@ PRIVACY
         <li><a href="https://music.khaliiil.com">MUSIC</a></li>
         <li><a href="https://shop.khaliiil.com">SHOP</a></li>
         <li><a href="https://tour.khaliiil.com">TOURS</a></li>
-        <li><a href="https://www.khaliiil.com/">BLOG</a></li>
+        <li><a href="https://www.khaliiil.com/blog">BLOG</a></li>
     </ul>
 </nav>
     
@@ -431,6 +346,7 @@ PRIVACY
 
         body.no-scroll {
             overflow: hidden;
+            -webkit-overflow-scrolling: touch;
         }
 
         #overlay-content {
