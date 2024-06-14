@@ -331,12 +331,13 @@ PRIVACY
     }
 
     @keyframes expandOverlay {
-        80% {
+        90% {
             width: 0;
             height: 0;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            -webkit-overflow-scrolling: none !important;
         }
         100% {
             width: 100%;
@@ -344,6 +345,7 @@ PRIVACY
             top: 0;
             left: 0;
             transform: none;
+            -webkit-overflow-scrolling: none !important;
         }
     }
 
@@ -361,12 +363,13 @@ PRIVACY
         overflow-y: auto;
         padding: 0;
         scroll-padding-top: 50px;
-        animation: expandOverlay 0.900s ease forwards; /* Change duration to 1s */
+        animation: expandOverlay 0.700s ease forwards; /* Change duration to 1s */
         -webkit-overflow-scrolling: none !important; /* Disable smooth scrolling */
     }
 
     body.no-scroll {
         overflow: hidden;
+        -webkit-overflow-scrolling: none !important;
     }
 
     #overlay-content {
