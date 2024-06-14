@@ -1,24 +1,17 @@
-<!doctype html>
-<html>
-  <head>
-    <title>
-      Khalil
-    </title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Victor+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-  
-  
-    <link href="https://cdn.jsdelivr.net/npm/@fontsource/inter@3&display=swap" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery</title>
+  <link href="https://cdn.jsdelivr.net/npm/@fontsource/inter@3&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react-scripts/4.0.3/react-scripts.min.js" integrity="sha512-R0Xj49Nfj99l6yrHdqS0L/VG/xzQ7nv8PPU2J5PKpL/lnh3X76UQVDsFgYBC0PPIQMyZI4Xenp52h1h2KlFDxw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@chakra-ui/core/dist/css/chakra.min.css">
   
   
-    <header class"header">
-<style>
+  <style>
 @font-face {
   font-family: 'BB Manual Mono Pro TX';
   src: url('BBManualMonoProTX-Regular.woff2') format('woff2');
@@ -58,6 +51,8 @@ body {
     top: 50%;
     transform: translateY(-50%);
     z-index: 2000; /* ensure it's on top of other content */
+        font-family: 'BB Manual Mono Pro TX';
+
 }
 
 .left-title, .right-title {
@@ -113,7 +108,7 @@ h1 {
 <style>
 /* Your CSS styles */
 nav.top-nav {
-    margin-top: 13px;
+    margin-top: 14px;
     position: fixed;
     top: 0;
     left: 0;
@@ -122,9 +117,6 @@ nav.top-nav {
     justify-content: space-around;
     align-items: center;
     z-index: 1000;
-    margin-bottom:13px
-    margin-left:7px;
-    margin-right:7px;
 }
 
 nav.bottom-nav {
@@ -151,7 +143,7 @@ nav.top-nav ul li, nav.bottom-nav ul li {
 }
 
 nav.top-nav ul li a {
-    font-family: 'BB Manual Mono Pro TX', sans-serif;
+            font-family: 'BB Manual Mono Pro TX';
     font-size: 19px;
     color: white;
     text-decoration: none;
@@ -159,47 +151,318 @@ nav.top-nav ul li a {
 }
 
 nav.bottom-nav ul li a {
-    font-family: 'BB Manual Mono Pro TX', sans-serif;
+            font-family: 'BB Manual Mono Pro TX';
     font-size: 11px;
     color: white;
     text-decoration: none;
-}
-
-.middle-text {
-    font-family: BB Manual Mono Pro TX;
-    font-size: 10px;
-    color: white;
-    padding: 0px;
-    margin-bottom: 2px;
+    padding: 20px;
 }
 
 @media screen and (max-width: 600px) {
     nav.bottom-nav ul li a {
-        font-size: 16px;
-        text-align: center;
-        padding: 50px;
+        font-size: 15px;
+        padding: 12px;
+        align-items: center;
     }
 
     nav.top-nav ul li a {
-        padding: 6px;
-        font-size: 20px;
+        padding: 0.00090px;
+        font-size: 19px;
     }
-nav.bottom-nav ul li:first-child a {
-    float: left;
-    margin-left: 14px; /* Adjust the margin as needed */
-    padding: 0;
+
+    .middle-text {
+        display: none;
+    }
 }
 
-nav.bottom-nav ul li a:last-child {
-align-items: right;
-padding: 0px;
-}
-    
-  .middle-text {
-    display: none;
+@media screen and (min-width: 601px) {
+    nav.bottom-nav ul li a {
+        font-size: 12px;
+        padding: 1px;
+        align-items: right;
+
     }
+    nav.top-nav ul li a {
+        font-size: 22px;
+    }
+nav.top-nav {
+    position: fixed; /* Keep the top navigation bar fixed */
+    top: 0; /* Position it at the top */
+    left: 0; /* Position it at the left */
+    width: 100%; /* Take up the full width of the viewport */
+    display: flex; /* Use flexbox layout */
+    justify-content: space-around; /* Space items evenly with more space between them */
+    align-items: center; /* Center-align the items vertically */
+    z-index: 1000; /* Ensure it's above other content */
+  }
+
+  /* Style for the bottom navigation bar */
+  nav.bottom-nav {
+    position: fixed; /* Keep the bottom navigation bar fixed */
+    bottom: 0; /* Position it at the bottom */
+    left: 0; /* Position it at the left */
+    width: 100%; /* Take up the full width of the viewport */
+    display: flex; /* Use flexbox layout */
+    justify-content: space-between; /* Space items evenly */
+    align-items: center; /* Center-align the items vertically */
+    z-index: 1000; /* Ensure it's above other content */
+    height: 50px; /* Add the desired height */
+  }
+
+  nav.top-nav ul,
+  nav.bottom-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  nav.top-nav ul li,
+  nav.bottom-nav ul li {
+    display: inline;
+    margin: 0 10px; /* Add margin to create space between buttons */
+  }
+
+  nav.bottom-nav ul li:first-child {
+    margin-left: 30px;
+  }
+      nav.bottom-nav ul li:last-child {
+    margin-right: 30px;
+  }
+
+  nav.top-nav ul li a {
+            font-family: 'BB Manual Mono Pro TX';
+    color: white; /* Change font color to white */
+    text-decoration: none;
+
+  }
+
+  nav.bottom-nav ul li a {
+            font-family: 'BB Manual Mono Pro TX';
+    color: white; /* Change font color to white */
+    text-decoration: none;
+  }
+
+.middle-text {
+            font-family: 'BB Manual Mono Pro TX';
+  font-size: 12px; /* Set font size */
+  color: black; /* Change font color to white */
+  margin-left: 100px;
+margin-bottom: 2px;
 }
+} 
 </style>
+
+</head>
+<body bgcolor="black">
+    <!-- Top Navigation Bar -->
+    <nav class="top-nav">
+        <ul>
+        <li><a href="https://www.khaliiil.com">HOME</a></li>        <li><a href="https://shop.khaliiil.com">SHOP</a></li>
+        <li><a href="https://music.khaliiil.com">MUSIC</a></li>
+                <li><a href="https://tour.khaliiil.com/">TOUR</a></li>
+        <li><a href="https://www.khaliiil.com/">BLOG</a></li>
+
+    </ul>
+</nav>
+  
+<style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    .image-container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto; /* Enable vertical scrolling */
+      position: relative; /* Ensure relative positioning for overlay */
+      z-index: 999;
+    }
+
+    .image {
+      flex: 0 0 auto;
+      width: 100%;
+      object-fit: contain;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      pointer-events: auto;
+      -webkit-user-drag: none;
+      -khtml-user-drag: none;
+      -moz-user-drag: none;
+      -o-user-drag: none;
+      user-drag: none;
+      -webkit-touch-callout: none;
+    }
+
+    #overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    body.no-scroll {
+      overflow: hidden;
+    }
+
+    #overlay-content {
+      width: 100%;
+      height: 100%;
+      overflow:auto;
+    }
+
+    #close-btn {
+      position: absolute;
+      top: 10px; /* Adjust the position from the top as needed */
+      right: 10px; /* Adjust the position from the right as needed */
+      cursor: pointer;
+      width: 30px; /* Adjust the width as needed */
+    }
+
+    .nav-btn {
+      position: absolute;
+      cursor: pointer;
+      z-index: 10000;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      pointer-events: auto;
+      -webkit-user-drag: none;
+      -khtml-user-drag: none;
+      -moz-user-drag: none;
+      -o-user-drag: none;
+      user-drag: none;
+      -webkit-touch-callout: none;
+    }
+
+    #prev-btn {
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    #next-btn {
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .nav-btn img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      width: 30px; /* Adjust the width as needed */
+    }
+  </style>
+
+  <div class="image-container">
+    <img class="image" src="https://khaliiil.com/Y6.GIF" alt="Animated GIF">
+    <img class="image" src="https://khaliiil.com/BRO.GIF" alt="Animated GIF">
+    <img class="image" src="IMG_7634.jpg">
+    <img class="image" src="IMG_7632.jpg">
+    <img class="image" src="St.GIF" alt="Animated GIF">
+    <img class="image" src="Su.GIF" alt="Animated GIF">
+    <img class="image" src="Cl.GIF" alt="Animated GIF">
+    <img class="image" src="T-1.JPG" style="scroll-padding-bottom: 50px;">
+    <img class="image" src="IMG_7607.jpg">
+    <img class="image" src="IMG_7608.png">
+    <img class="image" src="Bu.GIF" alt="Animated GIF">
+    <img class="image" src="P.jpeg">
+    <img class="image" src="IMG_7474.jpg">
+  </div>
+
+  <div id="overlay">
+    <span id="prev-btn" class="nav-btn">
+      <img src="https://khaliiil.com/prev.PNG" alt="Previous">
+    </span>
+    <div id="overlay-content"></div>
+    <span id="next-btn" class="nav-btn">
+      <img src="https://khaliiil.com/next.PNG" alt="Next">
+    </span>
+    <img id="close-btn" src="https://khaliiil.com/Xbtn.PNG" alt="Close">
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const mediaElements = document.querySelectorAll('.image');
+      const overlay = document.getElementById('overlay');
+      const overlayContent = document.getElementById('overlay-content');
+      const closeBtn = document.getElementById('close-btn');
+      const prevBtn = document.getElementById('prev-btn');
+      const nextBtn = document.getElementById('next-btn');
+
+      let currentIndex = 0;
+
+      function disableScroll() {
+        document.body.classList.add('no-scroll');
+      }
+
+      function enableScroll() {
+        document.body.classList.remove('no-scroll');
+      }
+
+      function openOverlay(index) {
+        disableScroll();
+        currentIndex = index;
+        const clonedMedia = mediaElements[currentIndex].cloneNode(true);
+        overlayContent.innerHTML = '';
+        overlayContent.appendChild(clonedMedia);
+        overlay.style.display = 'flex';
+      }
+
+      function closeOverlay() {
+        overlay.style.display = 'none';
+        enableScroll();
+      }
+
+      mediaElements.forEach((media, index) => {
+        media.addEventListener('click', () => {
+          openOverlay(index);
+        });
+      });
+
+      closeBtn.addEventListener('click', closeOverlay);
+
+      prevBtn.addEventListener('click', () => {
+        if (currentIndex === 0) {
+          currentIndex = mediaElements.length - 1;
+        } else {
+          currentIndex -= 1;
+        }
+        openOverlay(currentIndex);
+      });
+
+      nextBtn.addEventListener('click', () => {
+        if (currentIndex === mediaElements.length - 1) {
+          currentIndex = 0;
+        } else {
+          currentIndex += 1;
+        }
+        openOverlay(currentIndex);
+      });
+    });
+  </script>
+
+
+
+
+
+
 
  <style>
   /* Ensure buttons have a higher z-index */
@@ -288,229 +551,6 @@ PRIVACY
 </div>
 <span id="__chakra_env" hidden=""></span>
 </div>
-
-</head>
-<body>
-
-<nav class="top-nav">
-    <ul>
-        <li><a href="https://music.khaliiil.com">MUSIC</a></li>
-        <li><a href="https://shop.khaliiil.com">SHOP</a></li>
-        <li><a href="https://tour.khaliiil.com">TOURS</a></li>
-        <li><a href="https://www.khaliiil.com/blog">BLOG</a></li>
-    </ul>
-</nav>
-    
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      font-family: 'Inter', sans-serif;
-      scroll-behavior: smooth;
-    }
-
-    .image-container {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      overflow-y: auto; /* Enable vertical scrolling */
-      position: relative; /* Ensure relative positioning for overlay */
-      z-index: 999;
-    }
-
-    .image {
-      flex: 0 0 auto;
-      width: 100%;
-      object-fit: contain;
-      cursor: pointer;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-      pointer-events: auto;
-      -webkit-user-drag: none;
-      -khtml-user-drag: none;
-      -moz-user-drag: none;
-      -o-user-drag: none;
-      user-drag: none;
-      -webkit-touch-callout: none;
-    }
-
-    #overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: black;
-      display: none;
-      justify-content: center;
-      align-items: center;
-      z-index: 9999;
-    }
-
-    body.no-scroll {
-      overflow: hidden;
-    }
-
-    #overlay-content {
-      width: 100%;
-      height: 100%;
-      overflow-y: auto;
-    }
-
-    #close-btn {
-      position: absolute;
-      top: 10px; /* Adjust the position from the top as needed */
-      right: 10px; /* Adjust the position from the right as needed */
-      cursor: pointer;
-      width: 30px; /* Adjust the width as needed */
-    }
-
-    .nav-btn {
-      position: absolute;
-      cursor: pointer;
-      z-index: 10000;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-      pointer-events: auto;
-      -webkit-user-drag: none;
-      -khtml-user-drag: none;
-      -moz-user-drag: none;
-      -o-user-drag: none;
-      user-drag: none;
-      -webkit-touch-callout: none;
-    }
-
-    #prev-btn {
-      left: 10px;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-
-    #next-btn {
-      right: 10px;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-
-    .nav-btn img {
-      display: block;
-      max-width: 100%;
-      height: auto;
-      width: 30px; /* Adjust the width as needed */
-    }
-  </style>
-
-  <div class="image-container">
-    <img class="image" src="https://khaliiil.com/Y6.GIF" alt="Animated GIF">
-    <img class="image" src="https://khaliiil.com/BRO.GIF" alt="Animated GIF">
-    <img class="image" src="IMG_7634.jpg">
-    <img class="image" src="IMG_7632.jpg">
-    <img class="image" src="St.GIF" alt="Animated GIF">
-    <img class="image" src="Su.GIF" alt="Animated GIF">
-    <img class="image" src="Cl.GIF" alt="Animated GIF">
-    <img class="image" src="T-1.JPG" style="scroll-padding-bottom: 50px;">
-    <img class="image" src="IMG_7607.jpg">
-    <img class="image" src="IMG_7608.png">
-    <img class="image" src="Bu.GIF" alt="Animated GIF">
-    <img class="image" src="P.jpeg">
-    <img class="image" src="IMG_7474.jpg">
-  </div>
-
-  <div id="overlay">
-    <span id="prev-btn" class="nav-btn">
-      <img src="prev.PNG" alt="Previous">
-    </span>
-    <div id="overlay-content"></div>
-    <span id="next-btn" class="nav-btn">
-      <img src="next.PNG" alt="Next">
-    </span>
-    <img id="close-btn" src="Xbtn.PNG" alt="Close">
-  </div>
-
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const mediaElements = document.querySelectorAll('.image');
-      const overlay = document.getElementById('overlay');
-      const overlayContent = document.getElementById('overlay-content');
-      const closeBtn = document.getElementById('close-btn');
-      const prevBtn = document.getElementById('prev-btn');
-      const nextBtn = document.getElementById('next-btn');
-
-      let currentIndex = 0;
-
-      function disableScroll() {
-        document.body.classList.add('no-scroll');
-      }
-
-      function enableScroll() {
-        document.body.classList.remove('no-scroll');
-      }
-
-      function openOverlay(index) {
-        disableScroll();
-        currentIndex = index;
-        const clonedMedia = mediaElements[currentIndex].cloneNode(true);
-        overlayContent.innerHTML = '';
-        overlayContent.appendChild(clonedMedia);
-        overlay.style.display = 'flex';
-      }
-
-      function closeOverlay() {
-        overlay.style.display = 'none';
-        enableScroll();
-      }
-      
-          document.addEventListener('DOMContentLoaded', function() {
-        const prevBtn = document.getElementById('prev-btn');
-        const nextBtn = document.getElementById('next-btn');
-
-        if (!localStorage.getItem('prevBtnClicked')) {
-            prevBtn.style.border = '2px solid #275c86';
-        }
-
-        prevBtn.addEventListener('click', function() {
-            prevBtn.style.border = 'none';
-            localStorage.setItem('prevBtnClicked', 'true');
-        });
-
-        nextBtn.addEventListener('click', function() {
-            prevBtn.style.border = 'none';
-            localStorage.setItem('prevBtnClicked', 'true');
-        });
-
-      mediaElements.forEach((media, index) => {
-        media.addEventListener('click', () => {
-          openOverlay(index);
-        });
-      });
-
-      closeBtn.addEventListener('click', closeOverlay);
-
-      prevBtn.addEventListener('click', () => {
-        if (currentIndex === 0) {
-          currentIndex = mediaElements.length - 1;
-        } else {
-          currentIndex -= 1;
-        }
-        openOverlay(currentIndex);
-      });
-
-      nextBtn.addEventListener('click', () => {
-        if (currentIndex === mediaElements.length - 1) {
-          currentIndex = 0;
-        } else {
-          currentIndex += 1;
-        }
-        openOverlay(currentIndex);
-      });
-    });
-  </script>
 
 </body>
 </html>
