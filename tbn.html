@@ -8,7 +8,8 @@
   <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react-scripts/4.0.3/react-scripts.min.js" integrity="sha512-R0Xj49Nfj99l6yrHdqS0L/VG/xzQ7nv8PPU2J5PKpL/lnh3X76UQVDsFgYBC0PPIQMyZI4Xenp52h1h2KlFDxw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@chakra-ui/core/dist/chakra-ui.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@chakra-ui/react@1.6.5/dist/chakra-ui.min.js" integrity="sha512-4Stp/N0IzKEg5kegM0P+xtStcvgPYeY1u5l3c5Ub0o5enPXG7qv9TB3tfzsvTz5ejoCTdmEvmIpRZ8v4oRQs5g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@chakra-ui/react@1.6.5/dist/chakra-ui.min.css">
   <style>
     html, body {
       margin: 0;
@@ -106,7 +107,7 @@
 <body>
   <div id="root"></div>
   <script type="text/babel">
-    const { useState, useEffect } = React;
+    const { useState } = React;
     const { ChakraProvider, useLockBodyScroll } = window["@chakra-ui/react"];
 
     const ImageGallery = () => {
@@ -140,48 +141,50 @@
       };
 
       const prevImage = () => {
-        setCurrentIndex((prevIndex) =>
-          prevIndex === 0 ? mediaElements.length - 1 : prevIndex - 1
-        );
+        const newIndex = (currentIndex === 0) ? mediaElements.length - 1 : currentIndex - 1;
+        setCurrentIndex(newIndex);
       };
 
       const nextImage = () => {
-        setCurrentIndex((prevIndex) =>
-          prevIndex === mediaElements.length - 1 ? 0 : prevIndex + 1
-        );
+        const newIndex = (currentIndex === mediaElements.length - 1) ? 0 : currentIndex + 1;
+        setCurrentIndex(newIndex);
       };
 
       return (
-        <ChakraProvider>
-          <div>
-            {mediaElements.map((src, index) => (
-              <img
-                key={index}
-                className="image"
-                src={src}
-                alt={`Image ${index}`}
-                onClick={() => openOverlay(index)}
-              />
-            ))}
-
-            <div id="overlay" className={isOverlayOpen ? 'open' : ''}>
+        <>
+          {mediaElements.map((src, index) => (
+            <img
+              key={index}
+              className="image"
+              src={src}
+              alt={`Image ${index + 1}`}
+              onClick={() => openOverlay(index)}
+            />
+          ))}
+          {isOverlayOpen && (
+            <div id="overlay" className="open">
               <span id="prev-btn" className="nav-btn" onClick={prevImage}>
                 <img src="https://khaliiil.com/prev.PNG" alt="Previous" />
               </span>
               <div id="overlay-content">
-                <img src={mediaElements[currentIndex]} alt={`Image ${currentIndex}`} />
+                <img src={mediaElements[currentIndex]} alt={`Overlay ${currentIndex + 1}`} />
               </div>
               <span id="next-btn" className="nav-btn" onClick={nextImage}>
                 <img src="https://khaliiil.com/next.PNG" alt="Next" />
               </span>
               <img id="close-btn" src="https://khaliiil.com/Xbtn.PNG" alt="Close" onClick={closeOverlay} />
             </div>
-          </div>
-        </ChakraProvider>
+          )}
+        </>
       );
     };
 
-    ReactDOM.render(<ImageGallery />, document.getElementById('root'));
+    ReactDOM.render(
+      <ChakraProvider>
+        <ImageGallery />
+      </ChakraProvider>,
+      document.getElementById('root')
+    );
   </script>
 </body>
 </html>
