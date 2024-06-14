@@ -361,12 +361,13 @@ html, body {
     overflow-y: auto;
     padding: 0;
     scroll-padding-top: 50px;
-    animation: expandOverlay 0.5s ease forwards; /* Expand animation */
+    animation: expandOverlay 0.1s ease forwards; /* Change duration to 1s */
     -webkit-overflow-scrolling: touch !important; /* Enable smooth scrolling */
 }
 
 body.no-scroll {
     overflow: hidden;
+        -webkit-overflow-scrolling: touch !important; /* Enable smooth scrolling */
 }
 
 #overlay-content {
@@ -520,6 +521,7 @@ document.addEventListener('DOMContentLoaded', function() {
         overlayContent.innerHTML = '';
         overlayContent.appendChild(clonedMedia);
         overlay.style.display = 'flex';
+        overlay.style.animationPlayState = 'running'; // Ensure the animation runs
     }
 
     function closeOverlay() {
