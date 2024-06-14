@@ -331,7 +331,7 @@ html, body {
 }
 
 @keyframes expandOverlay {
-    95% {
+    90% {
         width: 0;
         height: 0;
         top: 50%;
@@ -367,7 +367,6 @@ html, body {
 
 body.no-scroll {
     overflow: hidden;
-        -webkit-overflow-scrolling: touch !important; /* Enable smooth scrolling */
 }
 
 #overlay-content {
@@ -522,6 +521,7 @@ document.addEventListener('DOMContentLoaded', function() {
         overlayContent.appendChild(clonedMedia);
         overlay.style.display = 'flex';
         overlay.style.animationPlayState = 'running'; // Ensure the animation runs
+        overlay.style.webkitOverflowScrolling = 'touch'; // Enable smooth scrolling
     }
 
     function closeOverlay() {
