@@ -361,8 +361,8 @@ html, body {
     overflow-y: auto;
     padding: 0;
     scroll-padding-top: 50px;
-    animation: expandOverlay 2s ease forwards; /* Expand animation */
-    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling */
+    animation: expandOverlay 0.5s ease forwards; /* Expand animation */
+    -webkit-overflow-scrolling: touch !important; /* Enable smooth scrolling */
 }
 
 body.no-scroll {
@@ -481,82 +481,82 @@ body.no-scroll {
 </div>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const prevBtn = document.getElementById('prev-btn');
-        const nextBtn = document.getElementById('next-btn');
+document.addEventListener('DOMContentLoaded', function() {
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
 
-        if (!localStorage.getItem('prevBtnClicked')) {
-            prevBtn.style.border = '2px solid #275c86';
-        }
+    if (!localStorage.getItem('prevBtnClicked')) {
+        prevBtn.style.border = '2px solid #275c86';
+    }
 
-        prevBtn.addEventListener('click', function() {
-            prevBtn.style.border = 'none';
-            localStorage.setItem('prevBtnClicked', 'true');
-        });
-        nextBtn.addEventListener('click', function() {
-            prevBtn.style.border = 'none';
-            localStorage.setItem('prevBtnClicked', 'true');
-        });
+    prevBtn.addEventListener('click', function() {
+        prevBtn.style.border = 'none';
+        localStorage.setItem('prevBtnClicked', 'true');
+    });
+    nextBtn.addEventListener('click', function() {
+        prevBtn.style.border = 'none';
+        localStorage.setItem('prevBtnClicked', 'true');
+    });
 
-        const mediaElements = document.querySelectorAll('.image, video');
-        const overlay = document.getElementById('overlay');
-        const overlayContent = document.getElementById('overlay-content');
-        const closeBtn = document.getElementById('close-btn');
+    const mediaElements = document.querySelectorAll('.image, video');
+    const overlay = document.getElementById('overlay');
+    const overlayContent = document.getElementById('overlay-content');
+    const closeBtn = document.getElementById('close-btn');
 
-        let currentIndex = 0;
+    let currentIndex = 0;
 
-        function disableScroll() {
-            document.body.classList.add('no-scroll');
-        }
+    function disableScroll() {
+        document.body.classList.add('no-scroll');
+    }
 
-        function enableScroll() {
-            document.body.classList.remove('no-scroll');
-        }
+    function enableScroll() {
+        document.body.classList.remove('no-scroll');
+    }
 
-        function openOverlay(index) {
-            disableScroll(); // Disable scrolling before showing the overlay
-            currentIndex = index;
-            const clonedMedia = mediaElements[currentIndex].cloneNode(true);
-            overlayContent.innerHTML = '';
-            overlayContent.appendChild(clonedMedia);
-            overlay.style.display = 'flex';
-        }
+    function openOverlay(index) {
+        disableScroll(); // Disable scrolling before showing the overlay
+        currentIndex = index;
+        const clonedMedia = mediaElements[currentIndex].cloneNode(true);
+        overlayContent.innerHTML = '';
+        overlayContent.appendChild(clonedMedia);
+        overlay.style.display = 'flex';
+    }
 
-        function closeOverlay() {
-            overlay.style.display = 'none';
-            enableScroll(); // Enable scrolling when the overlay is closed
-        }
+    function closeOverlay() {
+        overlay.style.display = 'none';
+        enableScroll(); // Enable scrolling when the overlay is closed
+    }
 
-        mediaElements.forEach((media, index) => {
-            media.addEventListener('click', () => {
-                disableScroll(); // Immediately disable scrolling
-                openOverlay(index);
-            });
-        });
-
-        closeBtn.addEventListener('click', closeOverlay);
-
-        prevBtn.addEventListener('click', () => {
-            if (currentIndex === 0) {
-                // Do nothing if it's the first media
-                return;
-            }
-            currentIndex = (currentIndex - 1 + mediaElements.length) % mediaElements.length;
-            openOverlay(currentIndex);
-        });
-
-        nextBtn.addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % mediaElements.length;
-            openOverlay(currentIndex);
-        });
-
-        document.querySelectorAll('img').forEach((img) => {
-            img.addEventListener('contextmenu', function(event) {
-                event.preventDefault();
-            });
-            img.draggable = false; // Disable dragging of images
+    mediaElements.forEach((media, index) => {
+        media.addEventListener('click', () => {
+            disableScroll(); // Immediately disable scrolling
+            openOverlay(index);
         });
     });
+
+    closeBtn.addEventListener('click', closeOverlay);
+
+    prevBtn.addEventListener('click', () => {
+        if (currentIndex === 0) {
+            // Do nothing if it's the first media
+            return;
+        }
+        currentIndex = (currentIndex - 1 + mediaElements.length) % mediaElements.length;
+        openOverlay(currentIndex);
+    });
+
+    nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % mediaElements.length;
+        openOverlay(currentIndex);
+    });
+
+    document.querySelectorAll('img').forEach((img) => {
+        img.addEventListener('contextmenu', function(event) {
+            event.preventDefault();
+        });
+        img.draggable = false; // Disable dragging of images
+    });
+});
 </script>
 
 </body>
