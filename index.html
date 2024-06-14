@@ -338,6 +338,7 @@ PRIVACY
             left: 50%;
             transform: translate(-50%, -50%);
             -webkit-overflow-scrolling: none !important;
+            overflow:none;
         }
         100% {
             width: 100%;
@@ -346,6 +347,7 @@ PRIVACY
             left: 0;
             transform: none;
             -webkit-overflow-scrolling: none !important;
+                        overflow:none;
         }
     }
 
@@ -360,16 +362,20 @@ PRIVACY
         justify-content: center;
         align-items: center;
         z-index: 9999;
-        overflow-y: auto;
+        overflow-y: none;
+                overflow: none;
         padding: 0;
         scroll-padding-top: 50px;
         animation: expandOverlay 0.700s ease forwards; /* Change duration to 1s */
         -webkit-overflow-scrolling: none !important; /* Disable smooth scrolling */
+                -webkit-overflow-scrolling: none !important; /* Disable smooth scrolling */
     }
 
     body.no-scroll {
-        overflow: hidden;
+        overflow: none;
         -webkit-overflow-scrolling: none !important;
+                    overflow-y:none;
+                            -webkit-overflow-scrolling: none !important; /* Disable smooth scrolling */
     }
 
     #overlay-content {
