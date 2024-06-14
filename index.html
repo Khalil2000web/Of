@@ -367,6 +367,7 @@ html, body {
 
 body.no-scroll {
     overflow: none;
+            -webkit-overflow-scrolling: touch !important; /* Enable smooth scrolling */
 }
 
 #overlay-content {
@@ -521,7 +522,7 @@ document.addEventListener('DOMContentLoaded', function() {
         overlayContent.appendChild(clonedMedia);
         overlay.style.display = 'flex';
         overlay.style.animationPlayState = 'running'; // Ensure the animation runs
-        overlay.style.webkitOverflowScrolling = 'touch'; // Enable smooth scrolling
+        overlay.style.webkitOverflowScrolling = 'none'; // Enable smooth scrolling
     }
 
     function closeOverlay() {
