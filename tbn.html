@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery</title>
+  <link href="https://cdn.jsdelivr.net/npm/@fontsource/inter@3&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react-scripts/4.0.3/react-scripts.min.js" integrity="sha512-R0Xj49Nfj99l6yrHdqS0L/VG/xzQ7nv8PPU2J5PKpL/lnh3X76UQVDsFgYBC0PPIQMyZI4Xenp52h1h2KlFDxw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@chakra-ui/core/dist/css/chakra.min.css">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    .image {
+      width: 100%;
+      object-fit: contain;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      pointer-events: auto;
+      -webkit-user-drag: none;
+      -khtml-user-drag: none;
+      -moz-user-drag: none;
+      -o-user-drag: none;
+      user-drag: none;
+      -webkit-touch-callout: none;
+    }
+
+    #overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
+
+    body.no-scroll {
+      overflow: hidden;
+    }
+
+    #overlay-content {
+      width: 100%;
+      height: 100%;
+    }
+
+    #close-btn {
+      position: absolute;
+      top: 10px; /* Adjust the position from the top as needed */
+      right: 10px; /* Adjust the position from the right as needed */
+      cursor: pointer;
+      width: 30px; /* Adjust the width as needed */
+    }
+
+    .nav-btn {
+      position: absolute;
+      cursor: pointer;
+      z-index: 10000;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      pointer-events: auto;
+      -webkit-user-drag: none;
+      -khtml-user-drag: none;
+      -moz-user-drag: none;
+      -o-user-drag: none;
+      user-drag: none;
+      -webkit-touch-callout: none;
+    }
+
+    #prev-btn {
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    #next-btn {
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .nav-btn img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      width: 30px; /* Adjust the width as needed */
+    }
+  </style>
+</head>
+<body>
+  <img class="image" src="https://khaliiil.com/Y6.GIF" alt="Animated GIF">
+  <img class="image" src="https://khaliiil.com/BRO.GIF" alt="Animated GIF">
+  <img class="image" src="IMG_7634.jpg">
+  <img class="image" src="IMG_7632.jpg">
+  <img class="image" src="St.GIF" alt="Animated GIF">
+  <img class="image" src="Su.GIF" alt="Animated GIF">
+  <img class="image" src="Cl.GIF" alt="Animated GIF">
+  <img class="image" src="T-1.JPG" style="scroll-padding-bottom: 50px;">
+  <img class="image" src="IMG_7607.jpg">
+  <img class="image" src="IMG_7608.png">
+  <img class="image" src="Bu.GIF" alt="Animated GIF">
+  <img class="image" src="P.jpeg">
+  <img class="image" src="IMG_7474.jpg">
+
+  <div id="overlay">
+    <span id="prev-btn" class="nav-btn">
+      <img src="https://khaliiil.com/prev.PNG" alt="Previous">
+    </span>
+    <div id="overlay-content"></div>
+    <span id="next-btn" class="nav-btn">
+      <img src="https://khaliiil.com/next.PNG" alt="Next">
+    </span>
+    <img id="close-btn" src="https://khaliiil.com/Xbtn.PNG" alt="Close">
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const mediaElements = document.querySelectorAll('.image');
+      const overlay = document.getElementById('overlay');
+      const overlayContent = document.getElementById('overlay-content');
+      const closeBtn = document.getElementById('close-btn');
+      const prevBtn = document.getElementById('prev-btn');
+      const nextBtn = document.getElementById('next-btn');
+
+      let currentIndex = 0;
+
+      function disableScroll() {
+        document.body.classList.add('no-scroll');
+      }
+
+      function enableScroll() {
+        document.body.classList.remove('no-scroll');
+      }
+
+      function openOverlay(index) {
+        disableScroll();
+        currentIndex = index;
+        const clonedMedia = mediaElements[currentIndex].cloneNode(true);
+        overlayContent.innerHTML = '';
+        overlayContent.appendChild(clonedMedia);
+        overlay.style.display = 'flex';
+      }
+
+      function closeOverlay() {
+        overlay.style.display = 'none';
+        enableScroll();
+      }
+
+      mediaElements.forEach((media, index) => {
+        media.addEventListener('click', () => {
+          openOverlay(index);
+        });
+      });
+
+      closeBtn.addEventListener('click', closeOverlay);
+
+      prevBtn.addEventListener('click', () => {
+        if (currentIndex === 0) {
+          currentIndex = mediaElements.length - 1;
+        } else {
+          currentIndex -= 1;
+        }
+        openOverlay(currentIndex);
+      });
+
+      nextBtn.addEventListener('click', () => {
+        if (currentIndex === mediaElements.length - 1) {
+          currentIndex = 0;
+        } else {
+          currentIndex += 1;
+        }
+        openOverlay(currentIndex);
+      });
+    });
+  </script>
+</body>
+</html>
