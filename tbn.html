@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Image Gallery</title>
-  <link href="https://cdn.jsdelivr.net/npm/@fontsource/inter@3&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@fontsource/inter@3.13.2/index.min.css" rel="stylesheet">
   <script src="https://unpkg.com/react@17/umd/react.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js" crossorigin></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/react-scripts/4.0.3/react-scripts.min.js" integrity="sha512-R0Xj49Nfj99l6yrHdqS0L/VG/xzQ7nv8PPU2J5PKpL/lnh3X76UQVDsFgYBC0PPIQMyZI4Xenp52h1h2KlFDxw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@chakra-ui/core/dist/css/chakra.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@chakra-ui/core/dist/chakra-ui.min.css">
   <style>
     html, body {
       margin: 0;
@@ -19,6 +19,7 @@
     }
 
     .image {
+      flex: 0 0 auto;
       width: 100%;
       object-fit: contain;
       cursor: pointer;
@@ -48,8 +49,8 @@
       z-index: 9999;
     }
 
-    body.no-scroll {
-      overflow: hidden;
+    #overlay.open {
+      display: flex;
     }
 
     #overlay-content {
@@ -103,90 +104,84 @@
   </style>
 </head>
 <body>
-  <img class="image" src="https://khaliiil.com/Y6.GIF" alt="Animated GIF">
-  <img class="image" src="https://khaliiil.com/BRO.GIF" alt="Animated GIF">
-  <img class="image" src="IMG_7634.jpg">
-  <img class="image" src="IMG_7632.jpg">
-  <img class="image" src="St.GIF" alt="Animated GIF">
-  <img class="image" src="Su.GIF" alt="Animated GIF">
-  <img class="image" src="Cl.GIF" alt="Animated GIF">
-  <img class="image" src="T-1.JPG" style="scroll-padding-bottom: 50px;">
-  <img class="image" src="IMG_7607.jpg">
-  <img class="image" src="IMG_7608.png">
-  <img class="image" src="Bu.GIF" alt="Animated GIF">
-  <img class="image" src="P.jpeg">
-  <img class="image" src="IMG_7474.jpg">
+  <div id="root"></div>
+  <script type="text/babel">
+    const { useState, useEffect } = React;
+    const { ChakraProvider, useLockBodyScroll } = window["@chakra-ui/react"];
 
-  <div id="overlay">
-    <span id="prev-btn" class="nav-btn">
-      <img src="https://khaliiil.com/prev.PNG" alt="Previous">
-    </span>
-    <div id="overlay-content"></div>
-    <span id="next-btn" class="nav-btn">
-      <img src="https://khaliiil.com/next.PNG" alt="Next">
-    </span>
-    <img id="close-btn" src="https://khaliiil.com/Xbtn.PNG" alt="Close">
-  </div>
+    const ImageGallery = () => {
+      const [isOverlayOpen, setIsOverlayOpen] = useState(false);
+      const [currentIndex, setCurrentIndex] = useState(0);
+      const mediaElements = [
+        "https://khaliiil.com/Y6.GIF",
+        "https://khaliiil.com/BRO.GIF",
+        "IMG_7634.jpg",
+        "IMG_7632.jpg",
+        "St.GIF",
+        "Su.GIF",
+        "Cl.GIF",
+        "T-1.JPG",
+        "IMG_7607.jpg",
+        "IMG_7608.png",
+        "Bu.GIF",
+        "P.jpeg",
+        "IMG_7474.jpg"
+      ];
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const mediaElements = document.querySelectorAll('.image');
-      const overlay = document.getElementById('overlay');
-      const overlayContent = document.getElementById('overlay-content');
-      const closeBtn = document.getElementById('close-btn');
-      const prevBtn = document.getElementById('prev-btn');
-      const nextBtn = document.getElementById('next-btn');
+      useLockBodyScroll(isOverlayOpen);
 
-      let currentIndex = 0;
+      const openOverlay = (index) => {
+        setCurrentIndex(index);
+        setIsOverlayOpen(true);
+      };
 
-      function disableScroll() {
-        document.body.classList.add('no-scroll');
-      }
+      const closeOverlay = () => {
+        setIsOverlayOpen(false);
+      };
 
-      function enableScroll() {
-        document.body.classList.remove('no-scroll');
-      }
+      const prevImage = () => {
+        setCurrentIndex((prevIndex) =>
+          prevIndex === 0 ? mediaElements.length - 1 : prevIndex - 1
+        );
+      };
 
-      function openOverlay(index) {
-        disableScroll();
-        currentIndex = index;
-        const clonedMedia = mediaElements[currentIndex].cloneNode(true);
-        overlayContent.innerHTML = '';
-        overlayContent.appendChild(clonedMedia);
-        overlay.style.display = 'flex';
-      }
+      const nextImage = () => {
+        setCurrentIndex((prevIndex) =>
+          prevIndex === mediaElements.length - 1 ? 0 : prevIndex + 1
+        );
+      };
 
-      function closeOverlay() {
-        overlay.style.display = 'none';
-        enableScroll();
-      }
+      return (
+        <ChakraProvider>
+          <div>
+            {mediaElements.map((src, index) => (
+              <img
+                key={index}
+                className="image"
+                src={src}
+                alt={`Image ${index}`}
+                onClick={() => openOverlay(index)}
+              />
+            ))}
 
-      mediaElements.forEach((media, index) => {
-        media.addEventListener('click', () => {
-          openOverlay(index);
-        });
-      });
+            <div id="overlay" className={isOverlayOpen ? 'open' : ''}>
+              <span id="prev-btn" className="nav-btn" onClick={prevImage}>
+                <img src="https://khaliiil.com/prev.PNG" alt="Previous" />
+              </span>
+              <div id="overlay-content">
+                <img src={mediaElements[currentIndex]} alt={`Image ${currentIndex}`} />
+              </div>
+              <span id="next-btn" className="nav-btn" onClick={nextImage}>
+                <img src="https://khaliiil.com/next.PNG" alt="Next" />
+              </span>
+              <img id="close-btn" src="https://khaliiil.com/Xbtn.PNG" alt="Close" onClick={closeOverlay} />
+            </div>
+          </div>
+        </ChakraProvider>
+      );
+    };
 
-      closeBtn.addEventListener('click', closeOverlay);
-
-      prevBtn.addEventListener('click', () => {
-        if (currentIndex === 0) {
-          currentIndex = mediaElements.length - 1;
-        } else {
-          currentIndex -= 1;
-        }
-        openOverlay(currentIndex);
-      });
-
-      nextBtn.addEventListener('click', () => {
-        if (currentIndex === mediaElements.length - 1) {
-          currentIndex = 0;
-        } else {
-          currentIndex += 1;
-        }
-        openOverlay(currentIndex);
-      });
-    });
+    ReactDOM.render(<ImageGallery />, document.getElementById('root'));
   </script>
 </body>
 </html>
