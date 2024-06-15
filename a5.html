@@ -276,7 +276,7 @@ margin-bottom: 2px;
     flex-direction: column;
     overflow-y: auto; /* Enable vertical scrolling */
     scroll-snap-type: y mandatory; /* Snap to the nearest image */
-    position: relative; /* Ensure relative positioning for overlay */
+    position: fixed; /* Ensure relative positioning for overlay */
     z-index: 1;
     }
 
@@ -321,19 +321,14 @@ margin-bottom: 2px;
       overflow:auto;
     }
 
-    #close-btn {
-      position: absolute;
-      top: 10px; /* Adjust the position from the top as needed */
-      right: 10px; /* Adjust the position from the right as needed */
-      cursor: pointer;
-      width: 30px; /* Adjust the width as needed */
-    }
-
-    .nav-btn {
-      position: absolute;
-      cursor: pointer;
-      z-index: 10000;
- -webkit-user-select: none;  /* Safari */
+  #close-btn {
+    position: absolute;
+    top: 10px; /* Adjust the position from the top as needed */
+    right: 10px; /* Adjust the position from the right as needed */
+    cursor: pointer;
+    width: 30px; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+-webkit-user-select: none;  /* Safari */
         -moz-user-select: none;     /* Firefox */
         -ms-user-select: none;      /* Internet Explorer */
         user-select: none;          /* Standard */
@@ -353,38 +348,80 @@ margin-bottom: 2px;
         /* Touch Callout */
         /* Disable the callout that appears when you long-press a link on iOS */
         -webkit-touch-callout: none;
-    }
+}
 
-    #prev-btn {
-      left: 10px;
-      top: 50%;
-      transform: translateY(-50%);
-    }
+.main-nav {
+    display: none; /* Hide main navigation links by default */
+}
 
-    #next-btn {
-      right: 10px;
-      top: 50%;
-      transform: translateY(-50%);
-    }
+.nav-btn {
+    position: absolute;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 10000;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+-webkit-user-select: none;  /* Safari */
+        -moz-user-select: none;     /* Firefox */
+        -ms-user-select: none;      /* Internet Explorer */
+        user-select: none;          /* Standard */
 
-    .nav-btn img {
-      display: block;
-      max-width: 100%;
-      height: auto;
-      width: 30px; /* Adjust the width as needed */
-    }
+        /* Pointer Events */
+        /* Allow pointer events */
+        pointer-events: auto;       /* Standard */
 
-    @media screen and (min-width: 601px) {
+        /* User Drag */
+        /* Disable dragging of content */
+        -webkit-user-drag: none;    /* Safari */
+        -khtml-user-drag: none;     /* KHTML */
+        -moz-user-drag: none;       /* Firefox */
+        -o-user-drag: none;         /* Opera */
+        user-drag: none;            /* Standard */
 
-    #prev-btn {
-      left: 100px;
-      top: 50%;
-    }
+        /* Touch Callout */
+        /* Disable the callout that appears when you long-press a link on iOS */
+        -webkit-touch-callout: none;
+}
 
-    #next-btn {
-      right: 100px;
-      top: 50%;
-    }
+#prev-btn {
+    left: 65px;
+    border: 3px solid #275c86; /* Initial blue border */
+    top: 50px;
+}
+
+#next-btn {
+    right: 65px;
+    top: 50px;
+}
+
+.nav-btn img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    /* Adjust width and height if needed */
+    width: 17px;
+-webkit-user-select: none;  /* Safari */
+        -moz-user-select: none;     /* Firefox */
+        -ms-user-select: none;      /* Internet Explorer */
+        user-select: none;          /* Standard */
+
+        /* Pointer Events */
+        /* Allow pointer events */
+        pointer-events: auto;       /* Standard */
+
+        /* User Drag */
+        /* Disable dragging of content */
+        -webkit-user-drag: none;    /* Safari */
+        -khtml-user-drag: none;     /* KHTML */
+        -moz-user-drag: none;       /* Firefox */
+        -o-user-drag: none;         /* Opera */
+        user-drag: none;            /* Standard */
+
+        /* Touch Callout */
+        /* Disable the callout that appears when you long-press a link on iOS */
+        -webkit-touch-callout: none;
 }
   </style>
 
