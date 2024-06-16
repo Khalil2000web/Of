@@ -406,11 +406,45 @@ margin-bottom: 2px;
         /* Disable the callout that appears when you long-press a link on iOS */
         -webkit-touch-callout: none;
 }
+
+
+
+.conditional-br {
+            display: none;
+        }
+
+        #overlay.show-br .conditional-br {
+            display: block;
+        }
+
   </style>
 
 
+<script
+      function showOverlay(img) {
+            const overlay = document.getElementById('overlay');
+            const brContainer = document.getElementById('br-container');
+            const brCount = img.getAttribute('data-br-count');
+
+            // Clear any existing <br> tags
+            brContainer.innerHTML = '';
+
+            // Add the specified number of <br> tags
+            for (let i = 0; i < brCount; i++) {
+                brContainer.innerHTML += '<br>';
+            }
+
+            overlay.style.display = 'flex';
+        }
+</script>
+
 
 <div class="image-container">
+  
+  
+        <img src="T-1.JPG" alt="Sample Image" class="image" data-br-count="7">
+  
+  
   
   
   <div class="title-container left-title">
