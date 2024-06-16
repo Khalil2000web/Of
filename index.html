@@ -407,45 +407,13 @@ margin-bottom: 2px;
         -webkit-touch-callout: none;
 }
 
-
-
-.conditional-br {
-            display: none;
-        }
-
-        #overlay.show-br .conditional-br {
-            display: block;
-        }
-
   </style>
 
 
-<script
-      function showOverlay(img) {
-            const overlay = document.getElementById('overlay');
-            const brContainer = document.getElementById('br-container');
-            const brCount = img.getAttribute('data-br-count');
 
-            // Clear any existing <br> tags
-            brContainer.innerHTML = '';
-
-            // Add the specified number of <br> tags
-            for (let i = 0; i < brCount; i++) {
-                brContainer.innerHTML += '<br>';
-            }
-
-            overlay.style.display = 'flex';
-        }
-</script>
 
 
 <div class="image-container">
-  
-  
-        <img src="T-1.JPG" alt="Sample Image" class="image" data-br-count="7">
-  
-  
-  
   
   <div class="title-container left-title">
     <a href="https://music.khaliiil.com"><span>act ii</span></a>
@@ -465,7 +433,7 @@ margin-bottom: 2px;
 </nav>
 
 
-    <img class="image" src="IMG_7634.jpg" alt="media_home_9011">
+    <img class="image" src="IMG_7634.jpg" alt="media_home_9011" <br><br><br><br>   >
     <img class="image" src="IMG_7632.jpg" alt="media_home_9010">
     <img class="image" src="St.GIF" alt="media_home_9009">
     <img class="image" src="Su.GIF" alt="media_home_9008">
