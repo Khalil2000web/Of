@@ -5,67 +5,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Overlay with Conditional Line Breaks</title>
     <style>
-        #overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: black;
-            display: none;
-            justify-content: center;
-            align-items: center;
-            z-index: 9999;
-        }
-
-        #overlay-content {
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
+        .video-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+.sound-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
     </style>
 </head>
 <body>
-    <div class="image-container">
-        <img src="your-image.jpg" alt="Sample Image" class="image" onclick="showOverlay(this)" data-br-count="2">
-        <img src="another-image.jpg" alt="Another Image" class="image" onclick="showOverlay(this)" data-br-count="0">
-    </div>
-
-    <div id="overlay">
-        <div id="overlay-content">
-            <p>Overlay Text</p>
-            <div id="br-container"></div>
-            <p>More Overlay Text</p>
-        </div>
-        <img src="close-icon.png" alt="Close" id="close-btn" onclick="hideOverlay()">
-    </div>
+<div class="video-container">
+    <video id="video" width="100%" height="auto" muted autoplay loop>
+        <source src="https://www.khaliiil.com/REn2.mov" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <img id="sound-toggle" class="sound-icon" src="sound-off.png" alt="Sound Toggle" onclick="toggleSound()">
+</div>
 
     <script>
-        function showOverlay(img) {
-            const overlay = document.getElementById('overlay');
-            const brContainer = document.getElementById('br-container');
-            const brCount = img.getAttribute('data-br-count');
+        var video = document.getElementById("video");
+var soundToggle = document.getElementById("sound-toggle");
 
-            // Clear any existing <br> tags
-            brContainer.innerHTML = '';
-
-            // Add the specified number of <br> tags
-            for (let i = 0; i < brCount; i++) {
-                brContainer.innerHTML += '<br>';
-            }
-
-            overlay.style.display = 'flex';
-        }
-
-        function hideOverlay() {
-            const overlay = document.getElementById('overlay');
-            overlay.style.display = 'none';
-        }
+function toggleSound() {
+    if (video.muted) {
+        video.muted = false;
+        soundToggle.src = "sound-on.png"; // Change to the sound on icon
+    } else {
+        video.muted = true;
+        soundToggle.src = "sound-off.png"; // Change to the sound off icon
+    }
+}
     </script>
 </body>
 </html>
