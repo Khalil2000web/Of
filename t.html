@@ -26,7 +26,7 @@
       <source src="https://www.khaliiil.com/REn2.mov" type="video/mp4">
       Your browser does not support the video tag.
     </video>
-    <img id="sound-toggle" src="sound_off_icon.png" alt="Sound Off" onclick="toggleSound()">
+    <img id="sound-toggle" src="off.png" alt="Sound Off" onclick="toggleSound()">
   </div>
 
   <script>
@@ -36,11 +36,11 @@
     function toggleSound() {
       if (video.muted) {
         video.muted = false;
-        soundToggle.src = 'sound_on_icon.png';
+        soundToggle.src = 'on.png';
         soundToggle.alt = 'Sound On';
       } else {
         video.muted = true;
-        soundToggle.src = 'sound_off_icon.png';
+        soundToggle.src = 'off.png';
         soundToggle.alt = 'Sound Off';
       }
     }
