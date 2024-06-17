@@ -22,25 +22,20 @@
     </style>
 </head>
 <body>
-<div class="video-container">
-    <video id="video" width="100%" height="auto" muted>
-        <source src="https://www.khaliiil.com/REn2.mov" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <img id="sound-toggle" class="sound-icon" src="sound-off.png" alt="Sound Toggle" onclick="toggleSound()">
-</div>
+<video id="video" width="100%" height="auto" muted>
+    <source src="your-video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
 
     <script>
-        var video = document.getElementById("video");
-var soundToggle = document.getElementById("sound-toggle");
-
-function toggleSound() {
+     function toggleSound() {
+    var video = document.getElementById("video");
     if (video.muted) {
         video.muted = false;
-        soundToggle.src = "sound-on.png"; // Change to the sound on icon
+        document.getElementById("sound-toggle").src = "sound-on.png";
     } else {
         video.muted = true;
-        soundToggle.src = "sound-off.png"; // Change to the sound off icon
+        document.getElementById("sound-toggle").src = "sound-off.png";
     }
 }
     </script>
