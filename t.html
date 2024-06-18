@@ -1,49 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Custom Video Player</title>
-  <style>
-    #video-container {
-      position: relative;
-      width: 100%;
-    }
-    #video {
-      width: 100%;
-    }
-    #sound-toggle {
-      position: absolute;
-      bottom: 10px;
-      right: 10px;
-      cursor: pointer;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image with Text Wrap</title>
+    
+<style>
+.container {
+    display: flex;
+    align-items: flex-start;
+}
+
+.left-image {
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    max-width: 100px; /* Adjust the size of the image as needed */
+}
+
+p {
+    text-align: justify;
+}
+</style>
+
 </head>
 <body>
-  <div id="video-container">
-    <video id="video" autoplay muted loop>
-      <source src="https://www.khaliiil.com/REn2.mov" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <img id="sound-toggle" src="off.png" alt="Sound Off" onclick="toggleSound()">
-  </div>
-
-  <script>
-    const video = document.getElementById('video');
-    const soundToggle = document.getElementById('sound-toggle');
-
-    function toggleSound() {
-      if (video.muted) {
-        video.muted = false;
-        soundToggle.src = 'on.png';
-        soundToggle.alt = 'Sound On';
-      } else {
-        video.muted = true;
-        soundToggle.src = 'off.png';
-        soundToggle.alt = 'Sound Off';
-      }
-    }
-  </script>
+    <div class="container">
+        <img src="Br2.jpg" alt="Description of Image" class="left-image">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+    </div>
 </body>
 </html>
