@@ -282,36 +282,17 @@ margin-bottom: 2px;
     }
 
 #overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  display: none;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
-  overflow: auto; /* Ensure the overlay can be scrolled if content overflows */
-  animation: scaleOverlay 0.70s step-end forwards; /* No animation by default */
-}
-
-@keyframes scaleOverlay {
-  0% {
-    width: 94vw;
-    height: 94vh;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Maintain center */
-  }
-  100% {
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    transform: translate(0, 0); /* Remove translate for full screen */
-  }
-}
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+    }
     
 
     body.no-scroll {
