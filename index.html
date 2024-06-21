@@ -292,7 +292,7 @@ margin-bottom: 2px;
       justify-content: center;
       align-items: center;
       z-index: 9999;
-      animation: scaleOverlay 2s step-end forwards;
+  animation: scaleOverlay 2s step-end forwards;
 }
 
 /* Keyframes for the scaling animation */
@@ -300,12 +300,16 @@ margin-bottom: 2px;
   0% {
     width: 80vw;
     height: 80vh;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%); /* Maintain center */
   }
   100% {
     width: 100vw;
     height: 100vh;
-    transform: translate(-50%, -50%); /* Maintain center */
+    top: 0;
+    left: 0;
+    transform: translate(0, 0); /* Remove translate for full screen */
   }
 }
     
