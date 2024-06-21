@@ -281,22 +281,7 @@ margin-bottom: 2px;
       -webkit-touch-callout: none;
     }
 
-
-    @keyframes openOverlay {
-      0% {
-        transform: scale(0.8);
-        opacity: 0;
-      }
-      50% {
-        transform: scale(0.8);
-        opacity: 1;
-      }
-      100% {
-        transform: scale(1);
-      }
-    }
-
-    #overlay {
+#overlay {
       position: fixed;
       top: 0;
       left: 0;
@@ -307,15 +292,7 @@ margin-bottom: 2px;
       justify-content: center;
       align-items: center;
       z-index: 9999;
-      transform: scale(0.8);
-      opacity: 0;
     }
-
-    .overlay-show {
-      display: flex;
-      animation: openOverlay 1.5s forwards; /* Adjust the duration as needed */
-    }
-
 
     body.no-scroll {
       overflow: hidden;
