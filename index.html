@@ -282,18 +282,35 @@ margin-bottom: 2px;
     }
 
 
-    #overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: black;
-      display: none;
-      justify-content: center;
-      align-items: center;
-      z-index: 9999;
-    }
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: flex; /* Changed from 'none' to 'flex' to show the overlay */
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  transform: scale(0.8); /* Start from 80% */
+  opacity: 0; /* Start fully transparent */
+  animation: openOverlay 0.5s forwards; /* Adjust the duration as needed */
+}
+
+@keyframes openOverlay {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 
     body.no-scroll {
       overflow: hidden;
