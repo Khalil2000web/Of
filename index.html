@@ -282,21 +282,20 @@ margin-bottom: 2px;
     }
 
 #overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: black;
-      display: none;
-      justify-content: center;
-      align-items: center;
-      z-index: 9999;
-  animation: scaleOverlay 0.080s step-end forwards;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: none; /* No animation by default */
 }
 
-/* Keyframes for the scaling animation */
-@keyframes scaleOverlay {
+@keyframes scaleOverlayOpen {
   0% {
     width: 94vw;
     height: 94vh;
@@ -310,8 +309,34 @@ margin-bottom: 2px;
     top: 0;
     left: 0;
     transform: translate(0, 0); /* Remove translate for full screen */
-    overflow:auto;
+    overflow: auto;
   }
+}
+
+@keyframes scaleOverlayClose {
+  0% {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0); /* Full screen */
+  }
+  100% {
+    width: 94vw;
+    height: 94vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Back to center */
+  }
+}
+
+#overlay.open {
+  display: flex;
+  animation: scaleOverlayOpen 0.080s step-end forwards;
+}
+
+#overlay.close {
+  animation: scaleOverlayClose 0.080s step-end forwards;
 }
     
 
@@ -531,68 +556,75 @@ PRIVACY
     <img id="close-btn" src="https://khaliiil.com/Xbtn.PNG" alt="Close">
   </div>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const mediaElements = document.querySelectorAll('.image');
-      const overlay = document.getElementById('overlay');
-      const overlayContent = document.getElementById('overlay-content');
-      const closeBtn = document.getElementById('close-btn');
-      const prevBtn = document.getElementById('prev-btn');
-      const nextBtn = document.getElementById('next-btn');
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const mediaElements = document.querySelectorAll('.image');
+  const overlay = document.getElementById('overlay');
+  const overlayContent = document.getElementById('overlay-content');
+  const closeBtn = document.getElementById('close-btn');
+  const prevBtn = document.getElementById('prev-btn');
+  const nextBtn = document.getElementById('next-btn');
 
-      let currentIndex = 0;
+  let currentIndex = 0;
 
-      function disableScroll() {
-        document.body.classList.add('no-scroll');
-      }
+  function disableScroll() {
+    document.body.classList.add('no-scroll');
+  }
 
-      function enableScroll() {
-        document.body.classList.remove('no-scroll');
-      }
+  function enableScroll() {
+    document.body.classList.remove('no-scroll');
+  }
 
-      function openOverlay(index) {
-        disableScroll();
-        currentIndex = index;
-        const clonedMedia = mediaElements[currentIndex].cloneNode(true);
-        overlayContent.innerHTML = '';
-        overlayContent.appendChild(clonedMedia);
-        overlay.style.display = 'flex';
-        overlay.classList.add('overlay-show');
-      }
+  function openOverlay(index) {
+    disableScroll();
+    currentIndex = index;
+    const clonedMedia = mediaElements[currentIndex].cloneNode(true);
+    overlayContent.innerHTML = '';
+    overlayContent.appendChild(clonedMedia);
+    overlay.classList.remove('close');
+    overlay.classList.add('open');
+    overlay.style.display = 'flex'; // Ensure the overlay is visible
+  }
 
-      function closeOverlay() {
+  function closeOverlay() {
+    overlay.classList.remove('open');
+    overlay.classList.add('close');
+    overlay.addEventListener('animationend', function handleAnimationEnd() {
+      if (overlay.classList.contains('close')) {
         overlay.style.display = 'none';
         enableScroll();
       }
-
-      mediaElements.forEach((media, index) => {
-        media.addEventListener('click', () => {
-          openOverlay(index);
-        });
-      });
-
-      closeBtn.addEventListener('click', closeOverlay);
-
-      prevBtn.addEventListener('click', () => {
-        if (currentIndex === 0) {
-          currentIndex = mediaElements.length - 1;
-        } else {
-          currentIndex -= 1;
-        }
-        openOverlay(currentIndex);
-      });
-
-      nextBtn.addEventListener('click', () => {
-        if (currentIndex === mediaElements.length - 1) {
-          currentIndex = 0;
-        } else {
-          currentIndex += 1;
-        }
-        openOverlay(currentIndex);
-      });
+      overlay.removeEventListener('animationend', handleAnimationEnd);
     });
-  </script>
+  }
 
+  mediaElements.forEach((media, index) => {
+    media.addEventListener('click', () => {
+      openOverlay(index);
+    });
+  });
+
+  closeBtn.addEventListener('click', closeOverlay);
+
+  prevBtn.addEventListener('click', () => {
+    if (currentIndex === 0) {
+      currentIndex = mediaElements.length - 1;
+    } else {
+      currentIndex -= 1;
+    }
+    openOverlay(currentIndex);
+  });
+
+  nextBtn.addEventListener('click', () => {
+    if (currentIndex === mediaElements.length - 1) {
+      currentIndex = 0;
+    } else {
+      currentIndex += 1;
+    }
+    openOverlay(currentIndex);
+  });
+});
+</script>
 
 
 <script>
