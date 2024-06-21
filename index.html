@@ -282,21 +282,21 @@ margin-bottom: 2px;
     }
 
 #overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: black;
-      display: none;
-      justify-content: center;
-      align-items: center;
-      z-index: 9999;
-  animation: scaleOverlay 0.080s step-end forwards;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  overflow: auto; /* Ensure the overlay can be scrolled if content overflows */
+  animation: none; /* No animation by default */
 }
 
-/* Keyframes for the scaling animation */
-@keyframes scaleOverlay {
+@keyframes scaleOverlayOpen {
   0% {
     width: 94vw;
     height: 94vh;
@@ -310,7 +310,6 @@ margin-bottom: 2px;
     top: 0;
     left: 0;
     transform: translate(0, 0); /* Remove translate for full screen */
-    overflow:auto;
   }
 }
     
@@ -322,7 +321,7 @@ margin-bottom: 2px;
     #overlay-content {
       width: 100%;
       height: 100%;
-      overflow:scroll;
+      overflow:auto;
     }
 
   #close-btn {
