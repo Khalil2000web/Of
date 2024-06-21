@@ -292,7 +292,6 @@ margin-bottom: 2px;
   justify-content: center;
   align-items: center;
   z-index: 9999;
-  overflow: auto;
   animation: none; /* No animation by default */
 }
 
@@ -323,8 +322,8 @@ margin-bottom: 2px;
     transform: translate(0, 0); /* Full screen */
   }
   100% {
-    width: 94vw;
-    height: 94vh;
+    width: 90vw;
+    height: 90vh;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); /* Back to center */
@@ -348,7 +347,7 @@ margin-bottom: 2px;
     #overlay-content {
       width: 100%;
       height: 100%;
-      overflow:auto;
+      overflow:scroll;
     }
 
   #close-btn {
