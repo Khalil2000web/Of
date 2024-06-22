@@ -5,15 +5,14 @@
     <script>
         function checkPassword() {
             var password = document.getElementById("password").value;
-            var hashedPassword = "your_hashed_password_here"; // Replace with a hashed version of your password
+            var hashedPassword = "123456"; // Replace this with your hashed password
 
-            // Simple hashing function for demonstration purposes
             function simpleHash(str) {
                 var hash = 0, i, chr;
                 if (str.length === 0) return hash;
                 for (i = 0; i < str.length; i++) {
-                    chr   = str.charCodeAt(i);
-                    hash  = ((hash << 5) - hash) + chr;
+                    chr = str.charCodeAt(i);
+                    hash = ((hash << 5) - hash) + chr;
                     hash |= 0; // Convert to 32bit integer
                 }
                 return hash;
@@ -30,8 +29,4 @@
 <body>
     <form onsubmit="event.preventDefault(); checkPassword();">
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-        <input type="submit" value="Submit">
-    </form>
-</body>
-</html>
+        <input type="​⬤
