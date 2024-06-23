@@ -432,6 +432,37 @@ video::-webkit-media-controls-volume-slider-container {
   display: none !important;
 }
 
+/* styles.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 640px; /* Adjust as needed */
+    margin: auto;
+}
+
+video {
+    width: 100%;
+    height: auto;
+}
+
+#loader-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8); /* Optional: semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensures the loader is on top */
+}
+
 .loader {
     border: 16px solid #f3f3f3; /* Light grey */
     border-top: 16px solid #3498db; /* Blue */
@@ -439,12 +470,6 @@ video::-webkit-media-controls-volume-slider-container {
     width: 120px;
     height: 120px;
     animation: spin 2s linear infinite;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: transparent;
 }
 
 @keyframes spin {
@@ -486,10 +511,12 @@ video::-webkit-media-controls-volume-slider-container {
     <img class="media" src="https://www.khaliiil.com/Bu.GIF" alt="media_home_9003">
       
         <div class="media">
-    <video src="https://www.khaliiil.com/REn2.mov" alt="media_home_9009" autoplay loop muted playsinline controls="false"></video>
+    <video id="myVideo" src="https://www.khaliiil.com/REn2.mov" alt="media_home_9009" autoplay loop muted playsinline controls="false"></video>
     <img style="filter: grayscale(100%) invert(100%);" src="volume-mute.png" class="sound-icon sound-off-icon" alt="Sound Off">
     <img style="filter: grayscale(100%) invert(100%);" src="volume.png" class="sound-icon sound-on-icon" alt="Sound On">
-      <div class="loader"></div>
+        <div id="loader-wrapper">
+            <div class="loader"></div>
+        </div>
   </div>
       
     <img class="media" src="https://www.khaliiil.com/mediaOf/5a67e1ae-0c7b-494c-8440-3eb7d7f35ac9.jpeg" alt="media_home_9002">
@@ -557,6 +584,34 @@ PRIVACY
   </span>
   <img id="close-btn" src="https://khaliiil.com/Xbtn.PNG" alt="Close">
 </div>
+
+<script>
+// script.js
+document.addEventListener("DOMContentLoaded", function() {
+    const video = document.getElementById("myVideo");
+    const loaderWrapper = document.getElementById("loader-wrapper");
+
+    function showLoader() {
+        loaderWrapper.style.display = "flex";
+    }
+
+    function hideLoader() {
+        loaderWrapper.style.display = "none";
+    }
+
+    // Show loader when video is loading or buffering
+    video.addEventListener("waiting", showLoader);
+    video.addEventListener("seeking", showLoader);
+
+    // Hide loader when video can play
+    video.addEventListener("canplay", hideLoader);
+    video.addEventListener("canplaythrough", hideLoader);
+    video.addEventListener("playing", hideLoader);
+
+    // Initial state
+    showLoader(); // Show loader initially until the video can play
+});
+</script>
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
