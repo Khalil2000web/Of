@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Khalil</title>
 
+
+
   
   <style>
 @font-face {
@@ -92,8 +94,138 @@ h1 {
 }
 </style>
 
+
+  <style>
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'BB Manual Mono Pro TX';
+  scroll-behavior: smooth;
+  color: white;
+}
+
+.media-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  position: fixed;
+  z-index: 1;
+}
+
+.media {
+  position: relative;
+  flex: 0 0 auto;
+  width: 100%;
+  cursor: pointer;
+  user-select: none;
+  pointer-events: auto;
+  user-drag: none;
+  -webkit-touch-callout: none;
+}
+
+.media video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.sound-icon {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.sound-off-icon {
+  display: block;
+}
+
+.sound-on-icon {
+  display: none;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  touch-action: pan-x pan-y;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+#overlay-content {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  padding-bottom: 30%;
+  position: fixed;
+  touch-action: pan-x pan-y;
+}
+
+#close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  width: 30px;
+  height: auto;
+  user-select: none;
+  pointer-events: auto;
+  user-drag: none;
+  -webkit-touch-callout: none;
+}
+
+.nav-btn {
+  position: absolute;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 10000;
+  padding: 5px 16px;
+  user-select: none;
+  pointer-events: auto;
+  user-drag: none;
+  -webkit-touch-callout: none;
+}
+
+#prev-btn {
+  left: 65px;
+  border: 3px solid #275c86;
+  top: 50px;
+}
+
+#next-btn {
+  right: 65px;
+  top: 50px;
+}
+
+.nav-btn img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  width: 17px;
+  user-select: none;
+  pointer-events: auto;
+  user-drag: none;
+  -webkit-touch-callout: none;
+}  </style>
+
+
 <style>
-/* Your CSS styles */
 nav.top-nav {
     margin-top: 14px;
     position: fixed;
@@ -242,185 +374,10 @@ margin-bottom: 2px;
 
 </head>
 <body bgcolor="black">
-  
-<style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      font-family: 'BB Manual Mono Pro TX';
-      scroll-behavior: smooth;
-      color:white;
-    }
 
-    .image-container {
-   width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    overflow-y: auto; /* Enable vertical scrolling */
-    position: fixed; /* Ensure relative positioning for overlay */
-    z-index: 1;
-    }
-
-    .image {
-      flex: 0 0 auto;
-      width: 100%;
-      object-fit: contain;
-      cursor: pointer;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-      pointer-events: auto;
-      -webkit-user-drag: none;
-      -khtml-user-drag: none;
-      -moz-user-drag: none;
-      -o-user-drag: none;
-      user-drag: none;
-      -webkit-touch-callout: none;
-    }
-
-#overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: black;
-      display: none;
-      justify-content: center;
-      align-items: center;
-      z-index: 9999;
-      touch-action: pan-x pan-y;
-    }
-    
-
-    body.no-scroll {
-      overflow: hidden;
-    }
-
-    #overlay-content {
-      width: 100%;
-      height: 100%;
-      overflow:auto;
-      padding-bottom:30%;
-      position:fixed;
-      touch-action: pan-x pan-y;
-    }
-
-  #close-btn {
-    position: absolute;
-    top: 10px; /* Adjust the position from the top as needed */
-    right: 10px; /* Adjust the position from the right as needed */
-    cursor: pointer;
-    width: 30px; /* Adjust the width as needed */
-    height: auto; /* Maintain aspect ratio */
--webkit-user-select: none;  /* Safari */
-        -moz-user-select: none;     /* Firefox */
-        -ms-user-select: none;      /* Internet Explorer */
-        user-select: none;          /* Standard */
-
-        /* Pointer Events */
-        /* Allow pointer events */
-        pointer-events: auto;       /* Standard */
-
-        /* User Drag */
-        /* Disable dragging of content */
-        -webkit-user-drag: none;    /* Safari */
-        -khtml-user-drag: none;     /* KHTML */
-        -moz-user-drag: none;       /* Firefox */
-        -o-user-drag: none;         /* Opera */
-        user-drag: none;            /* Standard */
-
-        /* Touch Callout */
-        /* Disable the callout that appears when you long-press a link on iOS */
-        -webkit-touch-callout: none;
-}
-
-.main-nav {
-    display: none; /* Hide main navigation links by default */
-}
-
-.nav-btn {
-    position: absolute;
-    transform: translateY(-50%);
-    cursor: pointer;
-    z-index: 10000;
-    padding-left: 16px;
-    padding-right: 16px;
-    padding-top: 5px;
-    padding-bottom: 5px;
--webkit-user-select: none;  /* Safari */
-        -moz-user-select: none;     /* Firefox */
-        -ms-user-select: none;      /* Internet Explorer */
-        user-select: none;          /* Standard */
-
-        /* Pointer Events */
-        /* Allow pointer events */
-        pointer-events: auto;       /* Standard */
-
-        /* User Drag */
-        /* Disable dragging of content */
-        -webkit-user-drag: none;    /* Safari */
-        -khtml-user-drag: none;     /* KHTML */
-        -moz-user-drag: none;       /* Firefox */
-        -o-user-drag: none;         /* Opera */
-        user-drag: none;            /* Standard */
-
-        /* Touch Callout */
-        /* Disable the callout that appears when you long-press a link on iOS */
-        -webkit-touch-callout: none;
-}
-
-#prev-btn {
-    left: 65px;
-    border: 3px solid #275c86; /* Initial blue border */
-    top: 50px;
-        position: absolute;
-}
-
-#next-btn {
-    right: 65px;
-    top: 50px;
-        position: absolute;
-}
-
-.nav-btn img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    /* Adjust width and height if needed */
-    width: 17px;
--webkit-user-select: none;  /* Safari */
-        -moz-user-select: none;     /* Firefox */
-        -ms-user-select: none;      /* Internet Explorer */
-        user-select: none;          /* Standard */
-
-        /* Pointer Events */
-        /* Allow pointer events */
-        pointer-events: auto;       /* Standard */
-
-        /* User Drag */
-        /* Disable dragging of content */
-        -webkit-user-drag: none;    /* Safari */
-        -khtml-user-drag: none;     /* KHTML */
-        -moz-user-drag: none;       /* Firefox */
-        -o-user-drag: none;         /* Opera */
-        user-drag: none;            /* Standard */
-
-        /* Touch Callout */
-        /* Disable the callout that appears when you long-press a link on iOS */
-        -webkit-touch-callout: none;
-}
-
-  </style>
+<div class="media-container">
 
 
-
-
-
-<div class="image-container">
   
   <div class="title-container left-title">
     <a href="https://music.khaliiil.com"><span>act ii</span></a>
@@ -439,14 +396,18 @@ margin-bottom: 2px;
     </ul>
 </nav>
 
-
-    <img class="image" src="https://www.khaliiil.com/IMG_7634.jpg" alt="media_home_9011">
-    <img class="image" src="https://www.khaliiil.com/IMG_7632.jpg" alt="media_home_9010">
-    <img class="image" src="https://www.khaliiil.com/St.GIF" alt="media_home_9009">
-    <img class="image" src="https://www.khaliiil.com/Cl.GIF" alt="media_home_9007">
-    <img class="image" src="https://www.khaliiil.com/T-1.JPG" alt="media_home_9006">
-    <img class="image" src="https://www.khaliiil.com/Bu.GIF" alt="media_home_9003">
-    <img class="image" src="https://www.khaliiil.com/mediaOf/5a67e1ae-0c7b-494c-8440-3eb7d7f35ac9.jpeg" alt="media_home_9002">
+  <div class="media">
+    <video src="https://www.khaliiil.com/REn2.mov" alt="media_home_9009" autoplay loop muted></video>
+    <img style="filter: grayscale(100%) invert(100%);" src="volume-mute.png" class="sound-icon sound-off-icon" alt="Sound Off">
+    <img style="filter: grayscale(100%) invert(100%);" src="volume.png" class="sound-icon sound-on-icon" alt="Sound On">
+  </div>
+    <img class="media" src="https://www.khaliiil.com/IMG_7634.jpg" alt="media_home_9011">
+    <img class="media" src="https://www.khaliiil.com/IMG_7632.jpg" alt="media_home_9010">
+    <img class="media" src="https://www.khaliiil.com/St.GIF" alt="media_home_9009">
+    <img class="media" src="https://www.khaliiil.com/Cl.GIF" alt="media_home_9007">
+    <img class="media" src="https://www.khaliiil.com/T-1.JPG" alt="media_home_9006">
+    <img class="media" src="https://www.khaliiil.com/Bu.GIF" alt="media_home_9003">
+    <img class="media" src="https://www.khaliiil.com/mediaOf/5a67e1ae-0c7b-494c-8440-3eb7d7f35ac9.jpeg" alt="media_home_9002">
       
 
 <div>
@@ -501,82 +462,158 @@ PRIVACY
 
 </div>
 
-
-
 <div id="overlay">
-    <span id="prev-btn" class="nav-btn">
-      <img src="https://khaliiil.com/prev.PNG" alt="Previous">
-    </span>
-    <div id="overlay-content"></div>
-    <span id="next-btn" class="nav-btn">
-      <img src="https://khaliiil.com/next.PNG" alt="Next">
-    </span>
-    <img id="close-btn" src="https://khaliiil.com/Xbtn.PNG" alt="Close">
-  </div>
-
-
+  <span id="prev-btn" class="nav-btn">
+    <img src="https://khaliiil.com/prev.PNG" alt="Previous">
+  </span>
+  <div id="overlay-content"></div>
+  <span id="next-btn" class="nav-btn">
+    <img src="https://khaliiil.com/next.PNG" alt="Next">
+  </span>
+  <img id="close-btn" src="https://khaliiil.com/Xbtn.PNG" alt="Close">
+</div>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const mediaElements = document.querySelectorAll('.image');
-      const overlay = document.getElementById('overlay');
-      const overlayContent = document.getElementById('overlay-content');
-      const closeBtn = document.getElementById('close-btn');
-      const prevBtn = document.getElementById('prev-btn');
-      const nextBtn = document.getElementById('next-btn');
+  document.addEventListener('DOMContentLoaded', function() {
+    const mediaElements = document.querySelectorAll('.media');
+    const overlay = document.getElementById('overlay');
+    const overlayContent = document.getElementById('overlay-content');
+    const closeBtn = document.getElementById('close-btn');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
 
-      let currentIndex = 0;
+    let currentIndex = 0;
+    let currentOverlayVideo = null;
 
-      function disableScroll() {
-        document.body.classList.add('no-scroll');
-      }
+    function disableScroll() {
+      document.body.classList.add('no-scroll');
+    }
 
-      function enableScroll() {
-        document.body.classList.remove('no-scroll');
-      }
+    function enableScroll() {
+      document.body.classList.remove('no-scroll');
+    }
 
-      function openOverlay(index) {
-        disableScroll();
-        currentIndex = index;
-        const clonedMedia = mediaElements[currentIndex].cloneNode(true);
-        overlayContent.innerHTML = '';
-        overlayContent.appendChild(clonedMedia);
-        overlay.style.display = 'flex';
-        overlay.classList.add('overlay-show');
-      }
+    function muteAllVideos() {
+      mediaElements.forEach(media => {
+        if (media.querySelector('video')) {
+          const video = media.querySelector('video');
+          video.muted = true;
+          const soundOffIcon = media.querySelector('.sound-off-icon');
+          const soundOnIcon = media.querySelector('.sound-on-icon');
+          soundOffIcon.style.display = 'block';
+          soundOnIcon.style.display = 'none';
+          video.play();  // Ensure video keeps playing
+        }
+      });
+    }
 
-      function closeOverlay() {
-        overlay.style.display = 'none';
-        enableScroll();
-      }
+    function playAllVideos() {
+      mediaElements.forEach(media => {
+        if (media.querySelector('video')) {
+          const video = media.querySelector('video');
+          video.play();
+        }
+      });
+    }
 
-      mediaElements.forEach((media, index) => {
-        media.addEventListener('click', () => {
-          openOverlay(index);
+    function openOverlay(index) {
+      disableScroll();
+      currentIndex = index;
+      const clonedMedia = mediaElements[currentIndex].cloneNode(true);
+      overlayContent.innerHTML = '';
+      overlayContent.appendChild(clonedMedia);
+      overlay.style.display = 'flex';
+      overlay.classList.add('overlay-show');
+
+      // Mute all main page videos when overlay is opened
+      muteAllVideos();
+
+      if (clonedMedia.querySelector('video')) {
+        const video = clonedMedia.querySelector('video');
+        const soundOffIcon = clonedMedia.querySelector('.sound-off-icon');
+        const soundOnIcon = clonedMedia.querySelector('.sound-on-icon');
+
+        video.muted = true;
+        soundOffIcon.style.display = 'block';
+        soundOnIcon.style.display = 'none';
+
+        soundOffIcon.addEventListener('click', () => {
+          video.muted = false;
+          soundOffIcon.style.display = 'none';
+          soundOnIcon.style.display = 'block';
         });
-      });
 
-      closeBtn.addEventListener('click', closeOverlay);
+        soundOnIcon.addEventListener('click', () => {
+          video.muted = true;
+          soundOffIcon.style.display = 'block';
+          soundOnIcon.style.display = 'none';
+        });
 
-      prevBtn.addEventListener('click', () => {
-        if (currentIndex === 0) {
-          currentIndex = mediaElements.length - 1;
-        } else {
-          currentIndex -= 1;
+        currentOverlayVideo = video;
+        video.play();
+      }
+    }
+
+    function closeOverlay() {
+      overlay.style.display = 'none';
+      enableScroll();
+      if (currentOverlayVideo) {
+        currentOverlayVideo.muted = true;
+        currentOverlayVideo = null;
+      }
+      playAllVideos();  // Ensure main page videos continue playing
+    }
+
+    mediaElements.forEach((media, index) => {
+      if (media.querySelector('video')) {
+        const video = media.querySelector('video');
+        const soundOffIcon = media.querySelector('.sound-off-icon');
+        const soundOnIcon = media.querySelector('.sound-on-icon');
+
+        video.play();
+
+        soundOffIcon.addEventListener('click', () => {
+          muteAllVideos();
+          video.muted = false;
+          soundOffIcon.style.display = 'none';
+          soundOnIcon.style.display = 'block';
+        });
+
+        soundOnIcon.addEventListener('click', () => {
+          video.muted = true;
+          soundOffIcon.style.display = 'block';
+          soundOnIcon.style.display = 'none';
+        });
+      }
+
+      media.addEventListener('click', (event) => {
+        if (event.target !== media.querySelector('.sound-off-icon') && event.target !== media.querySelector('.sound-on-icon')) {
+          openOverlay(index);
         }
-        openOverlay(currentIndex);
-      });
-
-      nextBtn.addEventListener('click', () => {
-        if (currentIndex === mediaElements.length - 1) {
-          currentIndex = 0;
-        } else {
-          currentIndex += 1;
-        }
-        openOverlay(currentIndex);
       });
     });
-  </script>
+
+    closeBtn.addEventListener('click', closeOverlay);
+
+    prevBtn.addEventListener('click', () => {
+      if (currentIndex === 0) {
+        currentIndex = mediaElements.length - 1;
+      } else {
+        currentIndex -= 1;
+      }
+      openOverlay(currentIndex);
+    });
+
+    nextBtn.addEventListener('click', () => {
+      if (currentIndex === mediaElements.length - 1) {
+        currentIndex = 0;
+      } else {
+        currentIndex += 1;
+      }
+      openOverlay(currentIndex);
+    });
+  });
+</script>
 
 
 <script>
@@ -599,7 +636,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
-
 
 
  <style>
@@ -639,6 +675,9 @@ z-index: 2000; /* Adjust the z-index value as needed */
 <style data-emotion="css 1ozbijy" data-s="">.css-1ozbijy{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;-webkit-align-items:flex-end;-webkit-box-align:flex-end;-ms-flex-align:flex-end;align-items:flex-end;-webkit-box-pack:space-around;-ms-flex-pack:space-around;-webkit-justify-content:space-around;justify-content:space-around;font-size:16px;color:var(--chakra-colors-black);position:fixed;width:100%;bottom:calc(var(--chakra-space-2) * -1);padding:1.25rem 3rem 0;}@media screen and (min-width: 30em){.css-1ozbijy{-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}}@media screen and (min-width: 48em){.css-1ozbijy{display:none;font-size:11px;padding:1.5rem;}}</style>
 <style data-emotion="css gf4rj5" data-s="">.css-gf4rj5{padding:0 0.75rem 1.75rem;}</style>
 <style type="text/css" id="CookieConsentStateDisplayStyles">.cookieconsent-optin-preferences,.cookieconsent-optin-statistics,.cookieconsent-optin-marketing,.cookieconsent-optin{display:none;}.cookieconsent-optout-preferences,.cookieconsent-optout-statistics,.cookieconsent-optout-marketing,.cookieconsent-optout{display:block;display:initial;}</style>
+
+
+
 
 </body>
 </html>
