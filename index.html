@@ -511,10 +511,10 @@ PRIVACY
       mediaElements.forEach(media => {
         if (media.querySelector('video')) {
           const video = media.querySelector('video');
-          video.controls = false; // Ensure controls are disabled
+          video.controls = true; // Ensure controls are enabled
+          video.removeAttribute('controlsList'); // Remove controlsList attribute to enable browser controls
           video.setAttribute('webkit-playsinline', ''); // Disable fullscreen on iOS
           video.setAttribute('playsinline', ''); // Disable fullscreen on iOS
-          video.removeAttribute('controls'); // Remove controls if they exist
         }
       });
     }
