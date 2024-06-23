@@ -603,16 +603,20 @@ document.addEventListener("DOMContentLoaded", function() {
         loaderWrapper.style.display = "none";
     }
 
-    // Show loader when video is loading or buffering
-    video.addEventListener("waiting", showLoader);
-    video.addEventListener("seeking", showLoader);
-    video.addEventListener("stalled", showLoader);
-
     // Hide loader when video starts playing
     video.addEventListener("playing", hideLoader);
 
-    // Initial state
-    showLoader(); // Show loader initially until the video can play
+    // Initially show loader until the video starts playing
+    showLoader();
+
+    // Once the video starts playing, remove event listeners for showing the loader
+    video.addEventListener("playing", function() {
+        video.removeEventListener("waiting", showLoader);
+        video.removeEventListener("seeking", showLoader);
+        video.removeEventListener("stalled", showLoader);
+        video.removeEventListener("canplay", hideLoader);
+        video.removeEventListener("canplaythrough", hideLoader);
+    });
 });
 </script>
 
