@@ -511,7 +511,7 @@ PRIVACY
       mediaElements.forEach(media => {
         if (media.querySelector('video')) {
           const video = media.querySelector('video');
-          video.controls = true; // Ensure controls are enabled
+          video.controls = false; // Ensure controls are disabled
           video.removeAttribute('controlsList'); // Remove controlsList attribute to enable browser controls
           video.setAttribute('webkit-playsinline', ''); // Disable fullscreen on iOS
           video.setAttribute('playsinline', ''); // Disable fullscreen on iOS
@@ -532,8 +532,9 @@ PRIVACY
         video.muted = false;
         currentVideo = video;
         disableVideoControls(); // Ensure controls are disabled in overlay
+      } else {
+        muteAllVideos(); // Mute all main page videos if image is displayed in overlay
       }
-      muteAllVideos(); // Mute all main page videos
     }
 
     function closeOverlay() {
