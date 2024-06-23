@@ -431,6 +431,26 @@ video::-webkit-media-controls-volume-slider,
 video::-webkit-media-controls-volume-slider-container {
   display: none !important;
 }
+
+.loader {
+    border: 16px solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: transparent;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
 </style>
 
 
@@ -469,6 +489,7 @@ video::-webkit-media-controls-volume-slider-container {
     <video src="https://www.khaliiil.com/REn2.mov" alt="media_home_9009" autoplay loop muted playsinline controls="false"></video>
     <img style="filter: grayscale(100%) invert(100%);" src="volume-mute.png" class="sound-icon sound-off-icon" alt="Sound Off">
     <img style="filter: grayscale(100%) invert(100%);" src="volume.png" class="sound-icon sound-on-icon" alt="Sound On">
+      <div class="loader"></div>
   </div>
       
     <img class="media" src="https://www.khaliiil.com/mediaOf/5a67e1ae-0c7b-494c-8440-3eb7d7f35ac9.jpeg" alt="media_home_9002">
