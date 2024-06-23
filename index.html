@@ -473,6 +473,7 @@ PRIVACY
   <img id="close-btn" src="https://khaliiil.com/Xbtn.PNG" alt="Close">
 </div>
 
+
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const mediaElements = document.querySelectorAll('.media');
@@ -483,7 +484,7 @@ PRIVACY
     const nextBtn = document.getElementById('next-btn');
 
     let currentIndex = 0;
-    let currentOverlayVideo = null;
+    let currentVideo = null;
 
     function disableScroll() {
       document.body.classList.add('no-scroll');
@@ -498,20 +499,22 @@ PRIVACY
         if (media.querySelector('video')) {
           const video = media.querySelector('video');
           video.muted = true;
-          const soundOffIcon = media.querySelector('.sound-off-icon');
-          const soundOnIcon = media.querySelector('.sound-on-icon');
+          const soundOffIcon = media.querySelector('.sound-off');
+          const soundOnIcon = media.querySelector('.sound-on');
           soundOffIcon.style.display = 'block';
           soundOnIcon.style.display = 'none';
-          video.play();  // Ensure video keeps playing
         }
       });
     }
 
-    function playAllVideos() {
+    function disableVideoControls() {
       mediaElements.forEach(media => {
         if (media.querySelector('video')) {
           const video = media.querySelector('video');
-          video.play();
+          video.controls = false; // Ensure controls are disabled
+          video.setAttribute('webkit-playsinline', ''); // Disable fullscreen on iOS
+          video.setAttribute('playsinline', ''); // Disable fullscreen on iOS
+          video.removeAttribute('controls'); // Remove controls if they exist
         }
       });
     }
@@ -524,53 +527,31 @@ PRIVACY
       overlayContent.appendChild(clonedMedia);
       overlay.style.display = 'flex';
       overlay.classList.add('overlay-show');
-
-      // Mute all main page videos when overlay is opened
-      muteAllVideos();
-
       if (clonedMedia.querySelector('video')) {
         const video = clonedMedia.querySelector('video');
-        const soundOffIcon = clonedMedia.querySelector('.sound-off-icon');
-        const soundOnIcon = clonedMedia.querySelector('.sound-on-icon');
-
-        video.muted = true;
-        soundOffIcon.style.display = 'block';
-        soundOnIcon.style.display = 'none';
-
-        soundOffIcon.addEventListener('click', () => {
-          video.muted = false;
-          soundOffIcon.style.display = 'none';
-          soundOnIcon.style.display = 'block';
-        });
-
-        soundOnIcon.addEventListener('click', () => {
-          video.muted = true;
-          soundOffIcon.style.display = 'block';
-          soundOnIcon.style.display = 'none';
-        });
-
-        currentOverlayVideo = video;
-        video.play();
+        video.muted = false;
+        currentVideo = video;
+        disableVideoControls(); // Ensure controls are disabled in overlay
       }
+      muteAllVideos(); // Mute all main page videos
     }
 
     function closeOverlay() {
       overlay.style.display = 'none';
       enableScroll();
-      if (currentOverlayVideo) {
-        currentOverlayVideo.muted = true;
-        currentOverlayVideo = null;
+      if (currentVideo) {
+        currentVideo.muted = true;
+        currentVideo = null;
       }
-      playAllVideos();  // Ensure main page videos continue playing
     }
+
+    disableVideoControls(); // Call the function to disable controls on load
 
     mediaElements.forEach((media, index) => {
       if (media.querySelector('video')) {
         const video = media.querySelector('video');
-        const soundOffIcon = media.querySelector('.sound-off-icon');
-        const soundOnIcon = media.querySelector('.sound-on-icon');
-
-        video.play();
+        const soundOffIcon = media.querySelector('.sound-off');
+        const soundOnIcon = media.querySelector('.sound-on');
 
         soundOffIcon.addEventListener('click', () => {
           muteAllVideos();
@@ -586,10 +567,8 @@ PRIVACY
         });
       }
 
-      media.addEventListener('click', (event) => {
-        if (event.target !== media.querySelector('.sound-off-icon') && event.target !== media.querySelector('.sound-on-icon')) {
-          openOverlay(index);
-        }
+      media.addEventListener('click', () => {
+        openOverlay(index);
       });
     });
 
