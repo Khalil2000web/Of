@@ -132,10 +132,11 @@ html, body {
   position: absolute;
   bottom: 10px;
   right: 10px;
-  width: 20px;
+  width: 25px;
   height: auto;
   cursor: pointer;
   z-index: 10;
+  opacity: 0.90;
 }
 
 .sound-off-icon {
@@ -473,6 +474,7 @@ video {
     opacity: 0.73; /* Overall opacity set to 50% */
 }
 
+
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
@@ -503,14 +505,6 @@ video {
         <li><a href="https://www.khaliiil.com/blog">BLOG</a></li>
     </ul>
 </nav>
-
-    <img class="media" src="https://www.khaliiil.com/IMG_7634.jpg" alt="media_home_9011">
-    <img class="media" src="https://www.khaliiil.com/IMG_7632.jpg" alt="media_home_9010">
-    <img class="media" src="https://www.khaliiil.com/St.GIF" alt="media_home_9009">
-    <img class="media" src="https://www.khaliiil.com/Cl.GIF" alt="media_home_9007">
-    <img class="media" src="https://www.khaliiil.com/T-1.JPG" alt="media_home_9006">
-    <img class="media" src="https://www.khaliiil.com/Bu.GIF" alt="media_home_9003">
-      
         <div class="media">
     <video id="myVideo" src="https://www.khaliiil.com/REn2.mov" alt="media_home_9009" autoplay loop muted playsinline controls="false"></video>
     <img style="filter: grayscale(100%) invert(100%);" src="volume-mute.png" class="sound-icon sound-off-icon" alt="Sound Off">
@@ -587,6 +581,7 @@ PRIVACY
 </div>
 
 <script>
+// script.js
 document.addEventListener("DOMContentLoaded", function() {
     const video = document.getElementById("myVideo");
     const loaderWrapper = document.getElementById("loader-wrapper");
@@ -602,10 +597,9 @@ document.addEventListener("DOMContentLoaded", function() {
     // Show loader when video is loading or buffering
     video.addEventListener("waiting", showLoader);
     video.addEventListener("seeking", showLoader);
+    video.addEventListener("stalled", showLoader);
 
-    // Hide loader when video can play or is playing
-    video.addEventListener("canplay", hideLoader);
-    video.addEventListener("canplaythrough", hideLoader);
+    // Hide loader when video starts playing
     video.addEventListener("playing", hideLoader);
 
     // Initial state
