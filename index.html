@@ -464,13 +464,13 @@ video {
 }
 
 .loader {
-    border: 8px solid #94c5f2; /* Light grey with 50% opacity */
-    border-top: 8px solid #a1a09d; /* Blue with 50% opacity */
+    border: 7px solid #94c5f2; /* Light grey with 50% opacity */
+    border-top: 7px solid #a1a09d; /* Blue with 50% opacity */
     border-radius: 50%;
     width: 80px;
     height: 80px;
     animation: spin 2s linear infinite;
-    opacity: 0.5; /* Overall opacity set to 50% */
+    opacity: 0.73; /* Overall opacity set to 50% */
 }
 
 .loader {
@@ -596,7 +596,6 @@ PRIVACY
 </div>
 
 <script>
-// script.js
 document.addEventListener("DOMContentLoaded", function() {
     const video = document.getElementById("myVideo");
     const loaderWrapper = document.getElementById("loader-wrapper");
@@ -613,7 +612,7 @@ document.addEventListener("DOMContentLoaded", function() {
     video.addEventListener("waiting", showLoader);
     video.addEventListener("seeking", showLoader);
 
-    // Hide loader when video can play
+    // Hide loader when video can play or is playing
     video.addEventListener("canplay", hideLoader);
     video.addEventListener("canplaythrough", hideLoader);
     video.addEventListener("playing", hideLoader);
