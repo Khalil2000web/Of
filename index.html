@@ -564,18 +564,6 @@ PRIVACY
       playAllVideos();  // Ensure main page videos continue playing
     }
 
-    function disableVideoControls() {
-  mediaElements.forEach(media => {
-    if (media.querySelector('video')) {
-      const video = media.querySelector('video');
-      video.controls = false; // Ensure controls are disabled
-      video.removeAttribute('controlsList'); // Remove controlsList attribute to prevent controls from being shown
-      video.setAttribute('webkit-playsinline', ''); // Disable fullscreen on iOS
-      video.setAttribute('playsinline', ''); // Disable fullscreen on iOS
-    }
-  });
-}
-
     mediaElements.forEach((media, index) => {
       if (media.querySelector('video')) {
         const video = media.querySelector('video');
@@ -626,7 +614,6 @@ PRIVACY
     });
   });
 </script>
-
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
