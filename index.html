@@ -4,10 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Khalil</title>
-
-
-
-  
   <style>
 @font-face {
   font-family: 'BB Manual Mono Pro TX';
@@ -636,6 +632,9 @@ PRIVACY
         const video = media.querySelector('video');
         const soundOffIcon = media.querySelector('.sound-off-icon');
         const soundOnIcon = media.querySelector('.sound-on-icon');
+
+        // Remove the controls attribute
+        video.removeAttribute('controls');
 
         video.play();
 
