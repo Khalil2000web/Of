@@ -56,12 +56,12 @@ body {
 
 .left-title {
     left: 0;
-    margin-left: 78px; /* Adjust as needed */
+    margin-left: 72px; /* Adjust as needed */
 }
 
 .right-title {
     right: 0;
-    margin-right: 78px; /* Adjust as needed */
+    margin-right: 72px; /* Adjust as needed */
 }
 
 .title-container.hidden {
@@ -467,7 +467,15 @@ video {
     justify-content: center;
     align-items: center;
     z-index: 1000; /* Ensures the loader is on top */
+animation: makeTransparent 2s forwards;
 }
+
+@keyframes makeTransparent {
+    to {
+        background-color: rgba(0, 128, 0, 0); /* Transparent */
+    }
+}
+
 
 .loader {
     border: 7px solid #94c5f2; /* Light grey with 50% opacity */
