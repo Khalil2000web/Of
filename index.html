@@ -615,20 +615,17 @@ PRIVACY
 </div>
 
 <script>
-// script.js
 document.addEventListener("DOMContentLoaded", function() {
     const video = document.getElementById("myVideo");
     const loaderWrapper = document.getElementById("loader-wrapper");
 
     function showLoader() {
-        if (!video.paused && !video.ended) {
-            loaderWrapper.style.display = "none";
-        } else {
-            loaderWrapper.style.display = "flex";
-        }
+        // Show loader when video is buffering, seeking, or stalled
+        loaderWrapper.style.display = "flex";
     }
 
     function hideLoader() {
+        // Hide loader when video is playing
         loaderWrapper.style.display = "none";
     }
 
@@ -642,6 +639,11 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Initially show loader until the video starts playing
     showLoader();
+
+    // Hide loader if the video is already playing (for cases like autoplay)
+    if (!video.paused && !video.ended) {
+        hideLoader();
+    }
 });
 </script>
 
