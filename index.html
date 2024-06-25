@@ -19,14 +19,14 @@ body {
       <meta name="description" content="The Official Website of Khalil">
     <meta property="og:description" content="The Official Website of Khalil">
     <meta property="og:image" content="https://www.khaliiil.com/mediaOf/actii-img.jpg">
-    <meta property="og:url" content="https://www.khaliiil.com">
+    <meta property="og:url" content="https://tour.khaliiil.com">
     <meta property="og:site_name" content="Khaliil">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_US">
     <meta property="og:author" content="Khalil">
-    <link rel="icon" href="https://www.khaliiil.com/system/Icon-bg.png">
+    <link rel="icon" href="https://www.khaliiil.com/mediaOf/actii-icon.jpg">
       
-      <link rel="icon" href="https://www.khaliiil.com/system/Icon-bg.png">
+      <link rel="icon" href="https://www.khaliiil.com/mediaOf/actii-icon.jpg">
 <meta name="URL" content="http://www.khaliiil.com">
 <meta name="twitter:title" content="Khalil">
 <meta name="twitter:description" content="The Official Website of Khalil">
@@ -136,8 +136,7 @@ html, body {
   height: auto;
   cursor: pointer;
   z-index: 10;
-  opacity: 0.86;
-  margin: 5px
+  opacity: 0.90;
 }
 
 .sound-off-icon {
@@ -288,7 +287,7 @@ nav.bottom-nav ul li a {
     }
 
     nav.top-nav ul li a {
-        padding: 4px;
+        padding: 6px;
         font-size: 19px;
     }
 
@@ -373,100 +372,73 @@ margin-bottom: 2px;
 }
 } 
 
+video::-webkit-media-controls {
+  display: none !important;
+}
 
+video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+}
+  video::-webkit-media-controls {
+    display: none !important;
+  }
+  video::-webkit-media-controls {
+  display: none !important;
+}
 
-
-/* For WebKit-based browsers (Chrome, Safari, iOS Safari, and most Android browsers) */
-video::-webkit-media-controls,
-video::-webkit-media-controls-start-playback-button,
 video::-webkit-media-controls-play-button,
+video::-webkit-media-controls-start-playback-button,
 video::-webkit-media-controls-current-time-display,
 video::-webkit-media-controls-time-remaining-display,
 video::-webkit-media-controls-timeline,
 video::-webkit-media-controls-mute-button,
 video::-webkit-media-controls-toggle-closed-captions-button,
-video::-webkit-media-controls-volume-slider,
+video::-webkit-media-controls-volume-slider {
+  display: none !important;
+}
+
 video::-webkit-media-controls-panel,
 video::-webkit-media-controls-panel *,
+video::-webkit-media-controls-panel > * {
+  display: none !important;
+}
+
 video::-webkit-media-controls-overlay-play-button,
 video::-webkit-media-controls-overflow-button,
 video::-webkit-media-controls-enclosure,
+video::-webkit-media-controls-start-playback-button,
 video::-webkit-media-controls-background,
+video::-webkit-media-controls-timeline,
+video::-webkit-media-controls-current-time-display,
+video::-webkit-media-controls-time-remaining-display,
+video::-webkit-media-controls-mute-button,
 video::-webkit-media-controls-volume-slider-container,
+video::-webkit-media-controls-volume-slider {
+  display: none !important;
+}
+
 video::-webkit-media-controls-fullscreen-button,
 video::-webkit-media-controls-rewind-button,
 video::-webkit-media-controls-return-to-realtime-button,
+video::-webkit-media-controls-toggle-closed-captions-button,
 video::-webkit-media-controls-toggle-closed-captions-track-list,
-video::-webkit-media-controls-toggle-play-button,
+video::-webkit-media-controls-toggle-play-button {
+  display: none !important;
+}
+
+video::-webkit-media-controls-play-button,
 video::-webkit-media-controls-pause-button,
 video::-webkit-media-controls-seek-back-button,
 video::-webkit-media-controls-seek-forward-button,
-video::-webkit-media-controls-timeline-container {
+video::-webkit-media-controls-toggle-closed-captions-button,
+video::-webkit-media-controls-timeline,
+video::-webkit-media-controls-timeline-container,
+video::-webkit-media-controls-volume-slider,
+video::-webkit-media-controls-volume-slider-container {
   display: none !important;
 }
 
-/* For Firefox (Gecko-based browsers, including Firefox on Android) */
-video::-moz-media-controls,
-video::-moz-media-controls-start-playback-button,
-video::-moz-media-controls-play-button,
-video::-moz-media-controls-current-time-display,
-video::-moz-media-controls-time-remaining-display,
-video::-moz-media-controls-timeline,
-video::-moz-media-controls-mute-button,
-video::-moz-media-controls-toggle-closed-captions-button,
-video::-moz-media-controls-volume-slider,
-video::-moz-media-controls-panel,
-video::-moz-media-controls-panel *,
-video::-moz-media-controls-overlay-play-button,
-video::-moz-media-controls-overflow-button,
-video::-moz-media-controls-enclosure,
-video::-moz-media-controls-background,
-video::-moz-media-controls-volume-slider-container,
-video::-moz-media-controls-fullscreen-button,
-video::-moz-media-controls-rewind-button,
-video::-moz-media-controls-return-to-realtime-button,
-video::-moz-media-controls-toggle-closed-captions-track-list,
-video::-moz-media-controls-toggle-play-button,
-video::-moz-media-controls-pause-button,
-video::-moz-media-controls-seek-back-button,
-video::-moz-media-controls-seek-forward-button,
-video::-moz-media-controls-timeline-container {
-  display: none !important;
-}
-
-/* For EdgeHTML-based browsers (older versions of Microsoft Edge) */
-video::-ms-media-controls,
-video::-ms-media-controls-start-playback-button,
-video::-ms-media-controls-play-button,
-video::-ms-media-controls-current-time-display,
-video::-ms-media-controls-time-remaining-display,
-video::-ms-media-controls-timeline,
-video::-ms-media-controls-mute-button,
-video::-ms-media-controls-toggle-closed-captions-button,
-video::-ms-media-controls-volume-slider,
-video::-ms-media-controls-panel,
-video::-ms-media-controls-panel *,
-video::-ms-media-controls-overlay-play-button,
-video::-ms-media-controls-overflow-button,
-video::-ms-media-controls-enclosure,
-video::-ms-media-controls-background,
-video::-ms-media-controls-volume-slider-container,
-video::-ms-media-controls-fullscreen-button,
-video::-ms-media-controls-rewind-button,
-video::-ms-media-controls-return-to-realtime-button,
-video::-ms-media-controls-toggle-closed-captions-track-list,
-video::-ms-media-controls-toggle-play-button,
-video::-ms-media-controls-pause-button,
-video::-ms-media-controls-seek-back-button,
-video::-ms-media-controls-seek-forward-button,
-video::-ms-media-controls-timeline-container {
-  display: none !important;
-}
-
-
-
-
-
+/* styles.css */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -519,13 +491,15 @@ video {
 <body bgcolor="black">
 
 <div class="media-container">
+
+
   
   <div class="title-container left-title">
-    <a href="https://music.khaliiil.com"><span>act ii</span></a>
+   <a href="https://music.khaliiil.com"><p>act ii</p></a>
 </div>
 
 <div class="title-container right-title">
-   <a href="https://music.khaliiil.com"><span>RENAISSANCE</span></a>
+   <a href="https://music.khaliiil.com"><p>RENAISSANCE</p></a>
 </div>
 
 <nav class="top-nav">
@@ -537,39 +511,28 @@ video {
     </ul>
 </nav>
 
+    <img class="media" src="https://www.khaliiil.com/IMG_7634.jpg" alt="media_home_9007">
 
-    <img class="media" src="https://www.khaliiil.com/IMG_7634.jpg" alt="media_home_9011">
+    <img class="media" src="https://www.khaliiil.com/IMG_7632.jpg" alt="media_home_9006">
 
-    <img class="media" src="https://www.khaliiil.com/IMG_7632.jpg" alt="media_home_9010">
+    <img class="media" src="https://www.khaliiil.com/St.GIF" alt="media_home_9005">
 
-    <img class="media" src="https://www.khaliiil.com/St.GIF" alt="media_home_9009">
+    <img class="media" src="https://www.khaliiil.com/Cl.GIF" alt="media_home_9004">
 
-    <img class="media" src="Cl.GIF" alt="media_home_9007">
+    <img class="media" src="https://www.khaliiil.com/T-1.JPG" alt="media_home_9003">
 
-    <img class="media" src="https://www.khaliiil.com/T-1.JPG" alt="media_home_9006">
-
-    <img class="media" src="https://www.khaliiil.com/Bu.GIF" alt="media_home_9003">
-  
-             <div class="media">
-    <video id="myVideo" src="https://res.cloudinary.com/dqqkc3gxl/video/upload/v1624494241/3fda38370a09157f5ecc8c918eb0feea.MP4" alt="media_home_9009" autoplay loop muted playsinline controls="false"></video>
+    <img class="media" src="https://www.khaliiil.com/Bu.GIF" alt="media_home_9002">
+      
+                    <div class="media">
+    <video id="myVideo" src="https://khaliiil.com/REn2.mov" alt="media_home_9009" autoplay loop muted playsinline controls="false"></video>
     <img src="system/301CAF29-40D5-46EF-9052-744DFAB51CFB.png" class="sound-icon sound-off-icon" alt="Sound Off">
     <img src="system/1B150123-DCF8-43AD-B87B-938FCEF25245.png" class="sound-icon sound-on-icon" alt="Sound On">
         <div id="loader-wrapper">
             <div class="loader"></div>
         </div>
-
-        <div class="media">
-    <video id="myVideo" src="https://www.khaliiil.com/REn2.mov" alt="media_home_9009" autoplay loop muted playsinline controls="false"></video>
-    <img src="system/301CAF29-40D5-46EF-9052-744DFAB51CFB.png" class="sound-icon sound-off-icon" alt="Sound Off">
-    <img src="system/1B150123-DCF8-43AD-B87B-938FCEF25245.png" class="sound-icon sound-on-icon" alt="Sound On">
-              <div id="loader-wrapper">
-            <div class="loader"></div>
   </div>
       
-    <img class="media" src="https://www.khaliiil.com/mediaOf/5a67e1ae-0c7b-494c-8440-3eb7d7f35ac9.jpeg" alt="media_home_9002">
-
-
-      
+    <img class="media" src="https://www.khaliiil.com/mediaof/5a67elae-0c7b-494c-8440-3eb7d7f35ac9.jpeg" alt="media_home_9000">
 
 <div>
 <div class="css-nkyjj6" id="desktop-footer">
