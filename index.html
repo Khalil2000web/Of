@@ -484,20 +484,13 @@ video {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #151b17; /* Optional: semi-transparent background */
+    background-color: transparent; /* Optional: semi-transparent background */
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1000; /* Ensures the loader is on top */
-animation: makeTransparent 2s forwards;
-}
 
-@keyframes makeTransparent {
-    to {
-        background-color: rgba(0, 128, 0, 0); /* Transparent */
-    }
 }
-
 
 .loader {
     border: 7px solid #94c5f2; /* Light grey with 50% opacity */
