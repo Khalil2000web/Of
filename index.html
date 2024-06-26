@@ -162,9 +162,12 @@ html, body {
   touch-action: pan-x pan-y;
 }
 
-body.no-scroll {
-  overflow: hidden;
-}
+.no-scroll {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+  }
+  
 @media screen and (min-width: 610px) {
 #overlay-content {
   padding-bottom: 8%;
@@ -670,20 +673,13 @@ document.addEventListener("DOMContentLoaded", function() {
     let currentIndex = 0;
     let currentOverlayVideo = null;
     let lastScrollPosition = 0;
-    let isOverlayOpen = false;
 
     function disableScroll() {
-      lastScrollPosition = window.scrollY;
       document.body.classList.add('no-scroll');
-      document.body.style.top = `-${lastScrollPosition}px`;
-      isOverlayOpen = true;
     }
 
     function enableScroll() {
       document.body.classList.remove('no-scroll');
-      document.body.style.top = '';
-      window.scrollTo(0, lastScrollPosition);
-      isOverlayOpen = false;
     }
 
     function muteAllVideos() {
@@ -760,13 +756,13 @@ document.addEventListener("DOMContentLoaded", function() {
     function closeOverlay() {
       overlay.style.display = 'none';
       mediaContainer.style.display = 'block';
-      restoreScrollPosition(); // Restore last saved scroll position
+      enableScroll();
+      restoreScrollPosition(); // Restore last saved scroll position before displaying the media container
       if (currentOverlayVideo) {
         currentOverlayVideo.muted = true;
         currentOverlayVideo = null;
       }
       playAllVideos();  // Ensure main page videos continue playing
-      enableScroll();
     }
 
     mediaElements.forEach((media, index) => {
@@ -820,13 +816,6 @@ document.addEventListener("DOMContentLoaded", function() {
       }
       openOverlay(currentIndex);
     });
-
-    window.addEventListener('scroll', () => {
-      if (isOverlayOpen) {
-        window.scrollTo(0, lastScrollPosition);
-      }
-    });
-
   });
 </script>
 
