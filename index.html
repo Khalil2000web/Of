@@ -709,7 +709,17 @@ document.addEventListener("DOMContentLoaded", function() {
       });
     }
 
+    function saveScrollPosition() {
+      lastScrollPosition = window.scrollY;
+    }
+
+    function restoreScrollPosition() {
+      window.scrollTo(0, lastScrollPosition);
+    }
+
     function openOverlay(index) {
+      saveScrollPosition(); // Save current scroll position
+      disableScroll();
       currentIndex = index;
       const clonedMedia = mediaElements[currentIndex].cloneNode(true);
       overlayContent.innerHTML = '';
@@ -750,6 +760,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function closeOverlay() {
       overlay.style.display = 'none';
       mediaContainer.style.display = 'block';
+      restoreScrollPosition(); // Restore last saved scroll position
       if (currentOverlayVideo) {
         currentOverlayVideo.muted = true;
         currentOverlayVideo = null;
