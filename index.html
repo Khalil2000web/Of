@@ -101,16 +101,6 @@ html, body {
   color: white;
 }
 
-.media- {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  overflow-y: auto;
-  position: fixed;
-  z-index: 1;
-}
-
 .media {
   position: relative;
   flex: 0 0 auto;
@@ -120,6 +110,12 @@ html, body {
   pointer-events: auto;
   user-drag: none;
   -webkit-touch-callout: none;
+
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  z-index: 1;
 }
 
 .media video {
@@ -499,7 +495,6 @@ animation: makeTransparent 2s forwards;
 <body bgcolor="black">
 
 
-<div class="media-">
 
   
   <div class="title-container left-title">
@@ -602,7 +597,6 @@ PRIVACY
 </div>
 
 
-</div>
 
 
 
