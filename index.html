@@ -670,13 +670,20 @@ document.addEventListener("DOMContentLoaded", function() {
     let currentIndex = 0;
     let currentOverlayVideo = null;
     let lastScrollPosition = 0;
+    let isOverlayOpen = false;
 
     function disableScroll() {
+      lastScrollPosition = window.scrollY;
       document.body.classList.add('no-scroll');
+      document.body.style.top = `-${lastScrollPosition}px`;
+      isOverlayOpen = true;
     }
 
     function enableScroll() {
       document.body.classList.remove('no-scroll');
+      document.body.style.top = '';
+      window.scrollTo(0, lastScrollPosition);
+      isOverlayOpen = false;
     }
 
     function muteAllVideos() {
@@ -702,17 +709,7 @@ document.addEventListener("DOMContentLoaded", function() {
       });
     }
 
-    function saveScrollPosition() {
-      lastScrollPosition = window.scrollY;
-    }
-
-    function restoreScrollPosition() {
-      window.scrollTo(0, lastScrollPosition);
-    }
-
     function openOverlay(index) {
-      saveScrollPosition(); // Save current scroll position
-      disableScroll();
       currentIndex = index;
       const clonedMedia = mediaElements[currentIndex].cloneNode(true);
       overlayContent.innerHTML = '';
@@ -752,14 +749,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function closeOverlay() {
       overlay.style.display = 'none';
-      enableScroll();
       mediaContainer.style.display = 'block';
-      restoreScrollPosition(); // Restore last saved scroll position
       if (currentOverlayVideo) {
         currentOverlayVideo.muted = true;
         currentOverlayVideo = null;
       }
       playAllVideos();  // Ensure main page videos continue playing
+      enableScroll();
     }
 
     mediaElements.forEach((media, index) => {
@@ -813,6 +809,13 @@ document.addEventListener("DOMContentLoaded", function() {
       }
       openOverlay(currentIndex);
     });
+
+    window.addEventListener('scroll', () => {
+      if (isOverlayOpen) {
+        window.scrollTo(0, lastScrollPosition);
+      }
+    });
+
   });
 </script>
 
