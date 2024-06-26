@@ -668,17 +668,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     let currentIndex = 0;
     let currentOverlayVideo = null;
-    let initialScrollPosition = 0;
-
-    // Function to save initial scroll position
-    function saveInitialScrollPosition() {
-      initialScrollPosition = window.scrollY;
-    }
-
-    // Function to restore initial scroll position
-    function restoreScrollPosition() {
-      window.scrollTo(0, initialScrollPosition);
-    }
+    let lastScrollPosition = 0;
 
     function disableScroll() {
       document.body.classList.add('no-scroll');
@@ -711,8 +701,17 @@ document.addEventListener("DOMContentLoaded", function() {
       });
     }
 
+    function saveScrollPosition() {
+      lastScrollPosition = window.scrollY;
+    }
+
+    function restoreScrollPosition() {
+      window.scrollTo(0, lastScrollPosition);
+    }
+
     function openOverlay(index) {
       disableScroll();
+      saveScrollPosition(); // Save current scroll position
       currentIndex = index;
       const clonedMedia = mediaElements[currentIndex].cloneNode(true);
       overlayContent.innerHTML = '';
@@ -754,16 +753,13 @@ document.addEventListener("DOMContentLoaded", function() {
       overlay.style.display = 'none';
       enableScroll();
       mediaContainer.style.display = 'block';
-      restoreScrollPosition(); // Restore initial scroll position
+      restoreScrollPosition(); // Restore last saved scroll position
       if (currentOverlayVideo) {
         currentOverlayVideo.muted = true;
         currentOverlayVideo = null;
       }
       playAllVideos();  // Ensure main page videos continue playing
     }
-
-    // Save initial scroll position when page loads
-    saveInitialScrollPosition();
 
     mediaElements.forEach((media, index) => {
       if (media.querySelector('video')) {
