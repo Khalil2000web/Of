@@ -104,11 +104,11 @@ html, body {
 
 .media-container {
   width:100%;
-  height: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   overflow: auto;
-  position: fixed;
+  position: absolute;
   z-index:1;
 }
 
@@ -716,6 +716,7 @@ document.addEventListener("DOMContentLoaded", function() {
       overlayContent.appendChild(clonedMedia);
       overlay.style.display = 'flex';
       overlay.classList.add('overlay-show');
+      document.querySelector('.media-container').style.display = 'none';
 
       // Mute all main page videos when overlay is opened
       muteAllVideos();
