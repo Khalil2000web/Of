@@ -753,6 +753,7 @@ document.addEventListener("DOMContentLoaded", function() {
       if (currentOverlayVideo) {
         currentOverlayVideo.muted = true;
         currentOverlayVideo = null;
+      document.querySelector('.media-container').style.display = 'flex';
       }
       playAllVideos();  // Ensure main page videos continue playing
     }
