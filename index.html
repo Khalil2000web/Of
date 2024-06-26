@@ -705,16 +705,16 @@ document.addEventListener("DOMContentLoaded", function() {
       });
     }
 
-    function saveScrollPosition() {
-      lastScrollPosition = window.scrollY;
+    function saveContainerScrollPosition() {
+      lastScrollPosition = mediaContainer.scrollTop;
     }
 
-    function restoreScrollPosition() {
-      window.scrollTo(0, lastScrollPosition);
+    function restoreContainerScrollPosition() {
+      mediaContainer.scrollTop = lastScrollPosition;
     }
 
     function openOverlay(index) {
-      saveScrollPosition(); // Save current scroll position
+      saveContainerScrollPosition(); // Save current scroll position
       disableScroll();
       currentIndex = index;
       const clonedMedia = mediaElements[currentIndex].cloneNode(true);
@@ -756,8 +756,8 @@ document.addEventListener("DOMContentLoaded", function() {
     function closeOverlay() {
       overlay.style.display = 'none';
       mediaContainer.style.display = 'block';
+      restoreContainerScrollPosition(); // Restore last saved scroll position before displaying the media container
       enableScroll();
-      restoreScrollPosition(); // Restore last saved scroll position before displaying the media container
       if (currentOverlayVideo) {
         currentOverlayVideo.muted = true;
         currentOverlayVideo = null;
@@ -816,6 +816,7 @@ document.addEventListener("DOMContentLoaded", function() {
       }
       openOverlay(currentIndex);
     });
+
   });
 </script>
 
