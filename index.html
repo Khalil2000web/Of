@@ -656,6 +656,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 </script>
 
+
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const mediaElements = document.querySelectorAll('.media');
@@ -753,6 +754,8 @@ document.addEventListener("DOMContentLoaded", function() {
       overlay.style.display = 'none';
       enableScroll();
       mediaContainer.style.display = 'block';
+      // Optionally, you can remove the following line if you want to maintain the overlay content
+      overlayContent.innerHTML = ''; // Clear overlay content on close
       restoreScrollPosition(); // Restore last saved scroll position
       if (currentOverlayVideo) {
         currentOverlayVideo.muted = true;
@@ -814,6 +817,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   });
 </script>
+
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
