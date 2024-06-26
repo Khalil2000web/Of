@@ -668,7 +668,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const closeBtn = document.getElementById('close-btn');
     const prevBtn = document.getElementById('prev-btn');
     const nextBtn = document.getElementById('next-btn');
-    const mediaContainer = document.querySelector('.media-container'); // Ensure this is defined
 
     let currentIndex = 0;
     let currentOverlayVideo = null;
@@ -712,8 +711,6 @@ document.addEventListener("DOMContentLoaded", function() {
       overlayContent.appendChild(clonedMedia);
       overlay.style.display = 'flex';
       overlay.classList.add('overlay-show');
-      document.querySelector('.main-content').style.display = 'block';
-      mediaContainer.style.overflow = 'hidden';
 
       // Mute all main page videos when overlay is opened
       muteAllVideos();
@@ -745,7 +742,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function closeOverlay() {
-      mediaContainer.style.overflow = 'scroll';
       overlay.style.display = 'none';
       enableScroll();
       if (currentOverlayVideo) {
