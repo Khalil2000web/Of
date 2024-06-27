@@ -703,9 +703,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function openOverlay(index) {
-      mediaContainer.style.position = 'fixed';
-      mediaContainer.style.overflow = 'hidden';
-      media.style.display = 'none';
       disableScroll();
       currentIndex = index;
       const clonedMedia = mediaElements[currentIndex].cloneNode(true);
