@@ -704,7 +704,6 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function openOverlay(index) {
-      mediaContainer.style.display = 'none';
       disableScroll();
       currentIndex = index;
       const clonedMedia = mediaElements[currentIndex].cloneNode(true);
@@ -715,6 +714,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
       // Store current scroll position of media container
       mediaContainerScrollPosition = mediaContainer.scrollTop;
+
+      // Hide media container
+      mediaContainer.style.display = 'none';
 
       // Mute all main page videos when overlay is opened
       muteAllVideos();
@@ -746,9 +748,11 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function closeOverlay() {
-      mediaContainer.style.display = 'block';
       overlay.style.display = 'none';
       enableScroll();
+
+      // Show media container
+      mediaContainer.style.display = 'block';
 
       // Restore scroll position of media container
       mediaContainer.scrollTop = mediaContainerScrollPosition;
