@@ -704,7 +704,6 @@ document.addEventListener("DOMContentLoaded", function() {
     
     function openOverlay(index) {
   const mediaContainer = document.querySelector('.media-container');
-  mediaContainer.style.display = 'block';
   mediaContainer.style.position = 'fixed'; // Set position to fixed
   mediaContainer.style.top = '0'; // Position it at the top-left corner
   mediaContainer.style.left = '0'; // Position it at the top-left corner
@@ -745,12 +744,9 @@ document.addEventListener("DOMContentLoaded", function() {
     video.play();
   }
 }
-    
-    
 
     function closeOverlay() {
       const mediaContainer = document.querySelector('.media-container');
-  mediaContainer.style.display = 'block';
   mediaContainer.style.position = 'absolute';
       document.querySelector('.media').style.display = 'block';
       overlay.style.display = 'none';
