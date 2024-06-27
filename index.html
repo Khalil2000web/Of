@@ -666,9 +666,11 @@ document.addEventListener("DOMContentLoaded", function() {
     const closeBtn = document.getElementById('close-btn');
     const prevBtn = document.getElementById('prev-btn');
     const nextBtn = document.getElementById('next-btn');
+    const mediaContainer = document.querySelector('.media-container');
 
     let currentIndex = 0;
     let currentOverlayVideo = null;
+    let mediaContainerScrollPosition = 0;
 
     function disableScroll() {
       document.body.classList.add('no-scroll');
@@ -710,6 +712,9 @@ document.addEventListener("DOMContentLoaded", function() {
       overlay.style.display = 'flex';
       overlay.classList.add('overlay-show');
 
+      // Store current scroll position of media container
+      mediaContainerScrollPosition = mediaContainer.scrollTop;
+
       // Mute all main page videos when overlay is opened
       muteAllVideos();
 
@@ -742,6 +747,10 @@ document.addEventListener("DOMContentLoaded", function() {
     function closeOverlay() {
       overlay.style.display = 'none';
       enableScroll();
+
+      // Restore scroll position of media container
+      mediaContainer.scrollTop = mediaContainerScrollPosition;
+
       if (currentOverlayVideo) {
         currentOverlayVideo.muted = true;
         currentOverlayVideo = null;
