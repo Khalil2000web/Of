@@ -703,6 +703,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function openOverlay(index) {
+      mediaContainer.style.display = 'none';
       disableScroll();
       currentIndex = index;
       const clonedMedia = mediaElements[currentIndex].cloneNode(true);
@@ -741,6 +742,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function closeOverlay() {
+      mediaContainer.style.display = 'block';
       overlay.style.display = 'none';
       enableScroll();
       if (currentOverlayVideo) {
