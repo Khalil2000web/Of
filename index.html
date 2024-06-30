@@ -6,6 +6,8 @@
   <title>Khalil</title>
   <style>@font-face {font-family: 'BB Manual Mono Pro TX';src: url('https://www.khaliiil.com/BBManualMonoProTX-Regular.woff2') format('woff2');}body {font-family: 'BB Manual Mono Pro TX';}</style>
 
+<script src="https://www.youtube.com/iframe_api"></script>
+
     <meta charset="UTF-8">
       <meta name="description" content="The Official Website of Khalil">
     <meta property="og:description" content="The Official Website of Khalil">
@@ -512,7 +514,7 @@ video {
 
     <img class="media" src="mediaOf/26-6-o-m-24.GIF" alt="media_home_9008">
 
-<iframe class="media" width="auto" height="315" src="https://www.youtube.com/embed/OyS7cPzSO1g?si=o7K1Wtog48l476aB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+<iframe class="media" width="auto" height="315" src="https://www.youtube.com/embed/OyS7cPzSO1g?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
     <img class="media" src="https://www.khaliiil.com/IMG_7634.jpg" alt="media_home_9007">
 
@@ -646,6 +648,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
   let currentIndex = 0;
   let currentOverlayVideo = null;
+  let player;
+
+  function onYouTubeIframeAPIReady() {
+    // Initialize YouTube Player
+    player = new YT.Player('yt-player', {
+      events: {
+        'onReady': onPlayerReady
+      }
+    });
+  }
+
+  function onPlayerReady(event) {
+    // The player is ready
+  }
 
   function disableScroll() {
     document.body.classList.add('no-scroll');
@@ -653,12 +669,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
   function enableScroll() {
     document.body.classList.remove('no-scroll');
-  }
-
-  function playVideoWhenReady(video) {
-    video.addEventListener('canplay', () => {
-      video.play();
-    });
   }
 
   function muteAllVideos() {
@@ -680,7 +690,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const video = media.querySelector('video');
       if (video) {
         video.muted = false; // Unmute videos if needed
-        playVideoWhenReady(video);
+        video.play();
       }
     });
   }
@@ -696,68 +706,30 @@ document.addEventListener('DOMContentLoaded', function() {
 
     muteAllVideos();
 
-    const video = clonedMedia.querySelector('video');
-    if (video) {
-      const soundOffIcon = clonedMedia.querySelector('.sound-off-icon');
-      const soundOnIcon = clonedMedia.querySelector('.sound-on-icon');
-
-      video.muted = true;
-      soundOffIcon.style.display = 'block';
-      soundOnIcon.style.display = 'none';
-
-      soundOffIcon.addEventListener('click', () => {
-        video.muted = false;
-        soundOffIcon.style.display = 'none';
-        soundOnIcon.style.display = 'block';
+    const iframe = clonedMedia.querySelector('iframe');
+    if (iframe) {
+      iframe.id = 'yt-player';
+      player = new YT.Player('yt-player', {
+        events: {
+          'onReady': (event) => event.target.playVideo()
+        }
       });
-
-      soundOnIcon.addEventListener('click', () => {
-        video.muted = true;
-        soundOffIcon.style.display = 'block';
-        soundOnIcon.style.display = 'none';
-      });
-
-      currentOverlayVideo = video;
-      playVideoWhenReady(video);
     }
   }
 
   function closeOverlay() {
     overlay.style.display = 'none';
     enableScroll();
-    if (currentOverlayVideo) {
-      currentOverlayVideo.muted = true;
-      currentOverlayVideo = null;
+    if (player) {
+      player.stopVideo();
+      player = null;
     }
     playAllVideos();
   }
 
   mediaElements.forEach((media, index) => {
-    if (media.querySelector('video')) {
-      const video = media.querySelector('video');
-      const soundOffIcon = media.querySelector('.sound-off-icon');
-      const soundOnIcon = media.querySelector('.sound-on-icon');
-
-      video.removeAttribute('controls');
-
-      playVideoWhenReady(video);
-
-      soundOffIcon.addEventListener('click', () => {
-        muteAllVideos();
-        video.muted = false;
-        soundOffIcon.style.display = 'none';
-        soundOnIcon.style.display = 'block';
-      });
-
-      soundOnIcon.addEventListener('click', () => {
-        video.muted = true;
-        soundOffIcon.style.display = 'block';
-        soundOnIcon.style.display = 'none';
-      });
-    }
-
     media.addEventListener('click', (event) => {
-      if (event.target !== media.querySelector('.sound-off-icon') && event.target !== media.querySelector('.sound-on-icon')) {
+      if (event.target.tagName !== 'BUTTON') {
         openOverlay(index);
       }
     });
@@ -785,6 +757,12 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
+<script>
+function onYouTubeIframeAPIReady() {
+  // This function will be called when the API is ready
+  // You don't need to initialize the player here because it's handled in the existing script
+}
+</script>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
