@@ -3,94 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms and Conditions</title>
-    <style>
- @font-face {
-            font-family: 'BB Manual Mono Pro TX';
-            src: url('https://music.khaliiil.com/BBManualMonoProTX-Regular 2.woff2') format('woff2');
-            /* Additional font properties (e.g., font-weight, font-style) can be specified here */
-        }
-        body {
-font-family: 'BB Manual Mono Pro TX'; 
-        }
+    <title>Website Design</title>
 
+    <style>
+        @font-face {
+            font-family: 'BB Manual Mono Pro TX';
+            src: url('https://www.khaliiil.com/BBManualMonoProTX-Regular.woff2') format('woff2');
+        }
         body {
-font-family: 'BB Manual Mono Pro TX'; 
-            background: #000;
-            color: #333;
+            font-family: 'BB Manual Mono Pro TX';
             margin: 0;
             padding: 0;
+            background-color: black;
+            color: white;
         }
-
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px;
+        header {
+            position: fixed;
+            background: transparent;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            z-index: 1;
         }
-
-        .header {
-            background: #000;
-            border: none;
-            color: #fff;
-            padding: 40px 0;
-            text-align: center;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
+        header a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
         }
-
-        .header h1 {
-            margin: 0;
-            font-size: 2.5rem;
+        header a:hover {
+            color: #ff0000;
         }
-
-        .section {
-            background: #000;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-            color:#fff;
+        footer {
+            background: black;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            box-sizing: border-box;
+            padding-left: 30px;
+            padding-right: 30px;
+            flex-wrap: wrap;
+            align-items: center;
         }
-
-        .section h2 {
-            color: #fff;
-            margin-top: 0;
-            border-bottom: 1.9px solid gray;
-            padding-bottom: 5px;
+        footer a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 10px;
         }
-
-        .section p {
-            line-height: 1.6;
-            margin: 15px 0;
+        footer a:hover {
+            color: gray;
         }
-
-        .footer {
-            text-align: center;
-            padding: 20px;
-            background: #000;
-            color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            margin-top: 20px;
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 1em;
+            padding-bottom: 60px; /* Space for the fixed footer */
+            box-sizing: border-box;
         }
-
-        h2 {
-        font-family: 'BBManualMonoProTX';
-        font-size:14px;
-        font-weight:400;
+        .gallery-item {
+            flex: 1 1 calc(33.33% - 1em); /* Three items per row on large screens */
+            margin: 0.5em;
+            box-sizing: border-box;
         }
-
+        .gallery-item img {
+            width: 100%;
+            display: block;
+            border-radius: 6px;
+        }
+        @media (max-width: 1024px) {
+            .gallery-item {
+                flex: 1 1 calc(50% - 3em); /* Two items per row on medium screens */
+            }
+        }
         @media (max-width: 768px) {
-            .header h1 {
-                font-size: 2rem;
-            }
-
-            .section h2 {
-                font-size: 1.5rem;
+            .gallery-item {
+                flex: 1 1 calc(50% - 2em); /* Single column on small screens */
             }
         }
-
 
         nav.top-nav {
             margin-top: 14px;
@@ -144,57 +138,29 @@ font-family: 'BB Manual Mono Pro TX';
         }
 
         @media screen and (max-width: 600px) {
-                    footer {
-            padding-left: 40px;
-            padding-right: 40px;
+            nav.bottom-nav ul li a {
+                font-size: 15px;
+                padding: 12px;
+                align-items: center;
             }
 
             nav.top-nav ul li a {
                 padding: 5px;
                 font-size: 20.8px;
             }
-        }
 
-                @media screen and (max-width: 500px) {
-            nav.top-nav ul li a {
-                padding: 0px;
-                font-size: 17.8px;
+            .middle-text {
+                display: none !important;
             }
-            }
-
-                    footer {
-            background: black;
-            color: white;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            box-sizing: border-box;
-            padding-left: 50px;
-            padding-right: 50px;
-            flex-wrap: wrap;
-            align-items: center;
         }
-        footer a {
-            color: white;
-            text-decoration: none;
-            padding: 5px 10px;
-        }
-        @font-face {
-    font-family: 'BBManualMonoProTX';
-    src: url('https://music.khaliiil.com/BBManualMonoProTX-SemiBold.woff2') format('woff2')
-}
-
     </style>
+
 </head>
-<body bgcolor="black">
+<body>
 
     <nav class="top-nav">
         <ul>
-            <li><a href="https://www.khaliiil.com">HOME</a></li>
-            <li><a href="https://www.khaliiil.com">SHOP</a></li>
+            <li><a href="https://www.khaliiil.com">ROYAL</a></li>
             <li><a href="https://music.khaliiil.com/">MUSIC</a></li>
             <li><a href="https://tour.khaliiil.com/">TOUR</a></li>
             <li><a href="https://www.khaliiil.com/blog">BLOG</a></li>
@@ -202,36 +168,40 @@ font-family: 'BB Manual Mono Pro TX';
     </nav>
     <br><br>
 
-    <div class="container">
-        <div class="header">
-            <h1>Terms and Conditions</h1>
-        </div>
+    <main>
+        <!-- Example content for an image gallery page -->
+        <section class="gallery">
+            <div class="gallery-item">
+                <img src="https://www.khaliiil.com/mediaOf/26-6-o-m-24.GIF" alt="Image 1">
+            </div>
+            <div class="gallery-item">
+                <img src="https://www.khaliiil.com/IMG_7634.jpg" alt="Image 2">
+            </div>
+            <div class="gallery-item">
+                <img src="https://www.khaliiil.com/IMG_7632.jpg" alt="Image 3">
+            </div>
+            <div class="gallery-item">
+                <img src="https://www.khaliiil.com/St.GIF" alt="Image 1">
+            </div>
+            <div class="gallery-item">
+                <img src="https://www.khaliiil.com/Cl.GIF" alt="Image 2">
+            </div>
+            <div class="gallery-item">
+                <img src="https://www.khaliiil.com/T-1.JPG" alt="Image 3">
+            </div>
+            <div class="gallery-item">
+                <img src="https://www.khaliiil.com/Bu.GIF" alt="Image 1">
+            </div>
+            <div class="gallery-item">
+                <img src="https://www.khaliiil.com/mediaOf/" alt="Image 2">
+            </div>
+        </section>
+    </main>
 
-        <div class="section">
-            <h2>Introduction!</h2>
-            <p>Effective Date: Jule 2, 2024</p>
-            <p>Welcome to khaliiil.com. Your use of this website is subject to the following terms and conditions. By accessing or using any website owned or operated by khalil, including the website found at www.khaliiiil.com and its associated subdomains, you agree to abide by the following terms and conditions. these terms govern your usage and access to the website, encompassing all its offerings, features, content, materials, products, and services. welcome to khaliiil.com. your use of this website is subject to the following terms and conditions. by accessing or using any website owned or operated by khalil, including the website found at www.khaliiiil.com and its associated subdomains, you agree to abide by the following terms and conditions. these terms govern your usage and access to the website, encompassing all its offerings, features, content, materials, products, and services. if you disagree with these terms, please refrain from accessing or using the websites. If you disagree with these terms, please refrain from accessing or using the websites.</p>
-        </div>
-
-        <div class="section">
-            <h2>1. User Interaction</h2>
-            <p>Users are encouraged to explore the diverse content shared on the website, ranging from personal events and activities to music choices and creative endeavors. Your engagement and interaction with the content are valued and appreciated.</p>
-        </div>
-
-        <div class="section">
-            <h2>2. User Privacy</h2>
-            <p>All bookings are subject to availability and confirmation. Payment must be made in full at the time of booking.</p>
-        </div>
-
-        <!-- Add more sections as needed -->
-
-        <div class="footer">
-            <p>&copy; 2024 KHALIIIL. All rights reserved.</p>
-        </div>
-    </div><br><br><br>
-        <footer>
+    <footer>
         <a style="margin-bottom:9px;" href="#terms">TERMS</a>
         <a style="margin-bottom:9px;" href="#privacy">PRIVACY</a>
+        <div style="flex: 1; text-align: right;margin-bottom:9px;">© 2024 KHALIL</div>
     </footer>
 </body>
 </html>
