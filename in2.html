@@ -5,137 +5,338 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website Design</title>
 
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="description" content="The Official Website of Khalil">
+    <meta property="og:description" content="The Official Website of Khalil">
+    <meta property="og:image" content="https://www.khaliiil.com/mediaOf/actii-img.jpg">
+    <meta property="og:url" content="https://tour.khaliiil.com">
+    <meta property="og:site_name" content="Khaliil">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:author" content="Khalil">
+    <link rel="icon" href="https://www.khaliiil.com/mediaOf/actii-icon.jpg">
+    <meta name="URL" content="http://www.khaliiil.com">
+    <meta name="twitter:title" content="Khalil">
+    <meta name="twitter:description" content="The Official Website of Khalil">
+    <meta property="og:title" content="Khalil">
+    <meta property="og:description" content="The Official Website of Khalil">
+    <meta property="og:site_name" content="Khalil">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.khaliiil.com/">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="copyright" content="2024">
+
+    <!-- CSS Styles -->
     <style>
-        @font-face {
+     @font-face {
             font-family: 'BB Manual Mono Pro TX';
             src: url('https://www.khaliiil.com/BBManualMonoProTX-Regular.woff2') format('woff2');
+            /* Additional font properties (e.g., font-weight, font-style) can be specified here */
         }
-        body {
-            font-family: 'BB Manual Mono Pro TX';
-            margin: 0;
-            padding: 0;
-            background-color: black;
-            color: white;
-        }
-        header {
-            position: fixed;
-            background: transparent;
-            color: white;
-            padding: 10px 20px;
-            display: flex;
-            justify-content: center;
-            width: 100%;
-            z-index: 1;
-        }
-        header a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-        }
-        header a:hover {
-            color: #ff0000;
-        }
-        footer {
-            background: black;
-            color: white;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            box-sizing: border-box;
-            padding-left: 30px;
-            padding-right: 30px;
-            flex-wrap: wrap;
-            align-items: center;
-        }
-        footer a {
-            color: white;
-            text-decoration: none;
-            padding: 5px 10px;
-        }
-        footer a:hover {
-            color: gray;
-        }
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            padding: 1em;
-            padding-bottom: 60px; /* Space for the fixed footer */
-            box-sizing: border-box;
-        }
-        .gallery-item {
-            flex: 1 1 calc(33.33% - 1em); /* Three items per row on large screens */
-            margin: 0.5em;
-            box-sizing: border-box;
-        }
-        .gallery-item img {
-            width: 100%;
-            display: block;
-            border-radius: 6px;
-        }
-        @media (max-width: 1024px) {
-            .gallery-item {
-                flex: 1 1 calc(50% - 3em); /* Two items per row on medium screens */
-            }
-        }
-        @media (max-width: 768px) {
-            .gallery-item {
-                flex: 1 1 calc(50% - 2em); /* Single column on small screens */
-            }
-        }
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'BB Manual Mono Pro TX';
+    scroll-behavior: smooth;
+    color: white;
+    background-color: black;
+}
 
-        nav.top-nav {
-            margin-top: 14px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            z-index: 1000;
-        }
+.media {
+    position: relative;
+    flex: 0 0 auto;
+    width: 100%;
+    cursor: pointer;
+    user-select: none;
+    pointer-events: auto;
+    user-drag: none;
+}
 
-        nav.bottom-nav {
-            margin-bottom: 9px;
-            position: fixed;
-            bottom: 13px;
-            left: 0;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
+.media video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
 
-        nav.top-nav ul, nav.bottom-nav ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
+.sound-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    margin: 5px;
+    width: 19px;
+    height: auto;
+    cursor: pointer;
+    z-index: 10;
+    opacity: 0.90;
+}
 
-        nav.top-nav ul li, nav.bottom-nav ul li {
-            display: inline;
-            margin: 0 10px;
-        }
+.sound-off-icon {
+    display: block;
+}
 
-        nav.top-nav ul li a {
-            font-family: 'BB Manual Mono Pro TX';
-            font-size: 19px;
-            color: white;
-            text-decoration: none;
-            padding: 16px;
-        }
+.sound-on-icon {
+    display: none;
+}
 
-        nav.bottom-nav ul li a {
-            font-family: 'BB Manual Mono Pro TX';
-            font-size: 11px;
-            color: white;
-            text-decoration: none;
-            padding: 20px;
-        }
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    display: none;
+    justify-content: center;
+    align-items: flex-start; /* Align items to start from the top */
+    z-index: 9999;
+    touch-action: pan-x pan-y;
+    overflow: auto;
+}
+
+body.no-scroll {
+    overflow: hidden;
+}
+
+#overlay-content {
+    background-color: black;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to start from the top */
+    touch-action: pan-x pan-y;
+    padding: 0;
+    overflow: auto;
+    margin-top: 0; /* Remove any margin from top */
+    padding-bottom:10%;
+}
+
+#overlay-content .media {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#overlay-content .media video {
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    width: 30px;
+    height: auto;
+    user-select: none;
+    pointer-events: auto;
+    user-drag: none;
+    -webkit-touch-callout: none;
+    background-color: transparent;
+}
+
+#close-btn:hover {
+    background-color: rgba(128, 128, 128, 0.50);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#close-btn.touched {
+    background-color: rgba(128, 128, 128, 0.50);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.nav-btn:hover {
+    background-color: rgba(128, 128, 128, 0.30);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.nav-btn.touched {
+    background-color: rgba(128, 128, 128, 0.30);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.nav-btn {
+    position: absolute;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 10000;
+    padding: 5px 16px;
+    user-select: none;
+    pointer-events: auto;
+    user-drag: none;
+    -webkit-touch-callout: none;
+}
+
+#prev-btn {
+    left: 50px;
+    top: 65px;
+}
+
+#next-btn {
+    right: 50px;
+    top: 65px;
+}
+@media screen and (min-width:650px) {
+#prev-btn {
+    left: 130px;
+    right:auto;
+    top: 65px;
+}
+
+#next-btn {
+    right: 130px;
+    top: 65px;
+    left:auto;
+}
+}
+
+.nav-btn img {
+    display: block;
+    max-width: 100%;
+    height: 100%;
+    width: 17px;
+    user-select: none;
+    pointer-events: auto;
+    user-drag: none;
+    -webkit-touch-callout: none;
+}
+
+header {
+    position: fixed;
+    background: transparent;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    z-index: 1;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+header a:hover {
+    color: #ff0000;
+}
+
+footer {
+    background: black;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+footer a:hover {
+    color: gray;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1em;
+    padding-bottom: 60px; /* Space for the fixed footer */
+    box-sizing: border-box;
+}
+
+.gallery-item {
+    flex: 1 1 calc(33.33% - 1em); /* Three items per row on large screens */
+    margin: 0.5em;
+    box-sizing: border-box;
+}
+
+.gallery-item img {
+    width: 100%;
+    display: block;
+    border-radius: 6px;
+}
+
+@media (max-width: 1024px) {
+    .gallery-item {
+        flex: 1 1 calc(50% - 3em); /* Two items per row on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery-item {
+        flex: 1 1 calc(50% - 2em); /* Single column on small screens */
+    }
+}
+
+nav.top-nav {
+    margin-top: 14px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1000;
+}
+
+nav.bottom-nav {
+    margin-bottom: 9px;
+    position: fixed;
+    bottom: 13px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+nav.top-nav ul, nav.bottom-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav.top-nav ul li, nav.bottom-nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav.top-nav ul li a {
+    font-family: 'BB Manual Mono Pro TX';
+    font-size: 19px;
+    color: white;
+    text-decoration: none;
+    padding: 16px;
+}
+
+nav.bottom-nav ul li a {
+    font-family: 'BB Manual Mono Pro TX';
+    font-size: 11px;
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+}
 
         @media screen and (max-width: 600px) {
             nav.bottom-nav ul li a {
@@ -154,54 +355,234 @@
             }
         }
     </style>
-
 </head>
-<body>
+ <body>
+<div id="overlay">
+  <span id="prev-btn" class="nav-btn">
+    <img src="https://khaliiil.com/prev.PNG" alt="Previous">
+  </span>
+  <div id="overlay-content"></div>
+  <span id="next-btn" class="nav-btn">
+    <img src="https://khaliiil.com/next.PNG" alt="Next">
+  </span>
+  <img id="close-btn" src="https://khaliiil.com/Xbtn.PNG" alt="Close">
+</div>
 
-    <nav class="top-nav">
-        <ul>
-            <li><a href="https://www.khaliiil.com">ROYAL</a></li>
-            <li><a href="https://music.khaliiil.com/">MUSIC</a></li>
-            <li><a href="https://tour.khaliiil.com/">TOUR</a></li>
-            <li><a href="https://www.khaliiil.com/blog">BLOG</a></li>
-        </ul>
-    </nav>
-    <br><br>
+<nav class="top-nav">
+    <ul>
+        <li><a href="https://www.khaliiil.com">ROYAL</a></li>
+        <li><a href="https://music.khaliiil.com/">MUSIC</a></li>
+        <li><a href="https://tour.khaliiil.com/">TOUR</a></li>
+        <li><a href="https://www.khaliiil.com/blog">BLOG</a></li>
+    </ul>
+</nav>
+<br><br>
+<main>
+    <!-- Example content for an image gallery page -->
+    <section class="gallery">
+        <div class="gallery-item">
+            <img class="media" src="https://www.khaliiil.com/mediaOf/26-6-o-m-24.GIF" alt="Image 1">
+        </div>
+        <div class="gallery-item">
+            <img class="media" src="https://www.khaliiil.com/IMG_7634.jpg" alt="Image 2">
+        </div>
+        <div class="gallery-item">
+            <img class="media" src="https://www.khaliiil.com/IMG_7632.jpg" alt="Image 3">
+        </div>
+        <div class="gallery-item">
+            <img class="media" src="https://www.khaliiil.com/St.GIF" alt="Image 1">
+        </div>
+        <div class="gallery-item">
+            <img class="media" src="https://www.khaliiil.com/Cl.GIF" alt="Image 2">
+        </div>
+        <div class="gallery-item">
+            <img class="media" src="https://www.khaliiil.com/T-1.JPG" alt="Image 3">
+        </div>
+        <div class="gallery-item">
+            <img class="media" src="https://www.khaliiil.com/Bu.GIF" alt="Image 1">
+        </div>
+        <div class="gallery-item">
+            <img class="media" src="https://www.khaliiil.com/mediaOf/" alt="Image 2">
+        </div>
+    </section>
+</main>
 
-    <main>
-        <!-- Example content for an image gallery page -->
-        <section class="gallery">
-            <div class="gallery-item">
-                <img src="https://www.khaliiil.com/mediaOf/26-6-o-m-24.GIF" alt="Image 1">
-            </div>
-            <div class="gallery-item">
-                <img src="https://www.khaliiil.com/IMG_7634.jpg" alt="Image 2">
-            </div>
-            <div class="gallery-item">
-                <img src="https://www.khaliiil.com/IMG_7632.jpg" alt="Image 3">
-            </div>
-            <div class="gallery-item">
-                <img src="https://www.khaliiil.com/St.GIF" alt="Image 1">
-            </div>
-            <div class="gallery-item">
-                <img src="https://www.khaliiil.com/Cl.GIF" alt="Image 2">
-            </div>
-            <div class="gallery-item">
-                <img src="https://www.khaliiil.com/T-1.JPG" alt="Image 3">
-            </div>
-            <div class="gallery-item">
-                <img src="https://www.khaliiil.com/Bu.GIF" alt="Image 1">
-            </div>
-            <div class="gallery-item">
-                <img src="https://www.khaliiil.com/mediaOf/" alt="Image 2">
-            </div>
-        </section>
-    </main>
+<footer>
+    <a style="margin-bottom:9px;" href="https://khaliiil.com/terms-conditions">TERMS</a>
+    <a style="margin-bottom:9px;" href="https://khaliiil.com/privacy-policy">PRIVACY</a>
+    <div style="flex: 1; text-align: right; margin-bottom:9px;">© 2024 KHALIL</div>
+</footer>
 
-    <footer>
-        <a style="margin-bottom:9px;" href="#terms">TERMS</a>
-        <a style="margin-bottom:9px;" href="#privacy">PRIVACY</a>
-        <div style="flex: 1; text-align: right;margin-bottom:9px;">© 2024 KHALIL</div>
-    </footer>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const mediaElements = document.querySelectorAll('.media');
+  const overlay = document.getElementById('overlay');
+  const overlayContent = document.getElementById('overlay-content');
+  const closeBtn = document.getElementById('close-btn');
+  const prevBtn = document.getElementById('prev-btn');
+  const nextBtn = document.getElementById('next-btn');
+
+  let currentIndex = 0;
+  let currentOverlayVideo = null;
+
+  function disableScroll() {
+    document.body.classList.add('no-scroll');
+  }
+
+  function enableScroll() {
+    document.body.classList.remove('no-scroll');
+  }
+
+  function playVideoWhenReady(video) {
+    video.addEventListener('canplay', () => {
+      video.play();
+    });
+  }
+
+  function muteAllVideos() {
+    mediaElements.forEach(media => {
+      const video = media.querySelector('video');
+      if (video) {
+        video.muted = true;
+        video.pause(); // Pause all videos to save resources
+        const soundOffIcon = media.querySelector('.sound-off-icon');
+        const soundOnIcon = media.querySelector('.sound-on-icon');
+        soundOffIcon.style.display = 'block';
+        soundOnIcon.style.display = 'none';
+      }
+    });
+  }
+
+  function playAllVideos() {
+    mediaElements.forEach(media => {
+      const video = media.querySelector('video');
+      if (video) {
+        video.muted = false; // Unmute videos if needed
+        playVideoWhenReady(video);
+      }
+    });
+  }
+
+  function openOverlay(index) {
+    disableScroll();
+    currentIndex = index;
+    const clonedMedia = mediaElements[currentIndex].cloneNode(true);
+    overlayContent.innerHTML = '';
+    overlayContent.appendChild(clonedMedia);
+    overlay.style.display = 'flex';
+    overlay.classList.add('overlay-show');
+
+    muteAllVideos();
+
+    const video = clonedMedia.querySelector('video');
+    if (video) {
+      const soundOffIcon = clonedMedia.querySelector('.sound-off-icon');
+      const soundOnIcon = clonedMedia.querySelector('.sound-on-icon');
+
+      video.muted = true;
+      soundOffIcon.style.display = 'block';
+      soundOnIcon.style.display = 'none';
+
+      soundOffIcon.addEventListener('click', () => {
+        video.muted = false;
+        soundOffIcon.style.display = 'none';
+        soundOnIcon.style.display = 'block';
+      });
+
+      soundOnIcon.addEventListener('click', () => {
+        video.muted = true;
+        soundOffIcon.style.display = 'block';
+        soundOnIcon.style.display = 'none';
+      });
+
+      currentOverlayVideo = video;
+      playVideoWhenReady(video);
+    }
+  }
+
+  function closeOverlay() {
+    overlay.style.display = 'none';
+    enableScroll();
+    if (currentOverlayVideo) {
+      currentOverlayVideo.muted = true;
+      currentOverlayVideo = null;
+    }
+
+    playAllVideos();
+  }
+
+  mediaElements.forEach((media, index) => {
+    if (media.querySelector('video')) {
+      const video = media.querySelector('video');
+      const soundOffIcon = media.querySelector('.sound-off-icon');
+      const soundOnIcon = media.querySelector('.sound-on-icon');
+
+      video.removeAttribute('controls');
+
+      playVideoWhenReady(video);
+
+      soundOffIcon.addEventListener('click', () => {
+        muteAllVideos();
+        video.muted = false;
+        soundOffIcon.style.display = 'none';
+        soundOnIcon.style.display = 'block';
+      });
+
+      soundOnIcon.addEventListener('click', () => {
+        video.muted = true;
+        soundOffIcon.style.display = 'block';
+        soundOnIcon.style.display = 'none';
+      });
+    }
+
+    media.addEventListener('click', (event) => {
+      if (event.target !== media.querySelector('.sound-off-icon') && event.target !== media.querySelector('.sound-on-icon')) {
+        openOverlay(index);
+      }
+    });
+  });
+
+  closeBtn.addEventListener('click', closeOverlay);
+
+  prevBtn.addEventListener('click', () => {
+    if (currentIndex === 0) {
+      currentIndex = mediaElements.length - 1;
+    } else {
+      currentIndex -= 1;
+    }
+    openOverlay(currentIndex);
+  });
+
+  nextBtn.addEventListener('click', () => {
+    if (currentIndex === mediaElements.length - 1) {
+      currentIndex = 0;
+    } else {
+      currentIndex += 1;
+    }
+    openOverlay(currentIndex);
+  });
+});
+</script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+
+    if (!localStorage.getItem('prevBtnClicked')) {
+        prevBtn.style.border = '2px solid #275c86';
+    }
+
+    prevBtn.addEventListener('click', function() {
+        prevBtn.style.border = 'none';
+        localStorage.setItem('prevBtnClicked', 'true');
+    });
+    
+        nextBtn.addEventListener('click', function() {
+        prevBtn.style.border = 'none';
+        localStorage.setItem('prevBtnClicked', 'true');
+    });
+});
+</script>
 </body>
 </html>
