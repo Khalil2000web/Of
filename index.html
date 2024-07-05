@@ -457,65 +457,8 @@ nav.bottom-nav ul li a {
     right:10px;
     text-align:right;
     color:white;
-    position:fixed;
-    padding-right:10px;
-    z-index:10000;
-        }
-
-    .bottom-nav-dis {
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 7px;
-        background-color: transparent;
-        color: white;
-        z-index: 1000;
-        font-size: 12px;
-        text-transform: uppercase;
-    }
-
-    .left {
-        margin-left: 5%;
-        text-decoration: none;
-        color: white;
-    }
-
-    .center {
-        display: flex;
-        align-items: center;
-    }
-
-    .nav-btn-dis {
-        text-decoration: none;
-        background: none;
-        border: none;
-        color: white;
-        cursor: pointer;
-        margin: 0 5px;
-        text-transform: uppercase;
-        font-size: 12px;
-    }
-
-    .separator {
-        color: white;
-        font-size: 12px;
-        padding:5px 5px;
-    }
-
-    .right {
-        margin-right: 5%;
-        text-decoration: none;
-        color: white;
-        }
-
-    @media screen and (max-width: 768px) {
-        .bottom-nav-dis {
-            display: none;
-        }
-    }
+    z-index: 10000;
+    padding-right: 10px;
                 </style>
                 
 </head>
@@ -528,8 +471,6 @@ nav.bottom-nav ul li a {
   <span id="next-btn" class="nav-btn">
     <img src="https://khaliiil.com/next.PNG" alt="Next">
   </span>
-<div class="tio-1">act ii</div>
-<div class="tio-2">RENAISSANCE</div>
   <img id="close-btn" src="https://khaliiil.com/Xbtn.PNG" alt="Close">
 </div>
 
@@ -571,17 +512,7 @@ nav.bottom-nav ul li a {
         </div>
     </section>
 </main>
-    <nav class="bottom-nav-dis">
-        <a href="http://www.khaliiil.com" class="left">www.khaliiil.com</a>
-        <div class="center">
-            <a href="https://khaliiil.com/terms-conditions" class="nav-btn-dis">Terms & Conditions</a>
-            <span class="separator">/</span>
-            <a href="https://khaliiil.com/privacy-policy" class="nav-btn-dis">Privacy Policy</a>
-        </div>
-        <div class="right">
-            <span>&copy; 2024</span>
-        </div>
-    </nav>
+
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const mediaElements = document.querySelectorAll('.media');
