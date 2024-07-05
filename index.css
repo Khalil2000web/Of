@@ -10,7 +10,7 @@
     position: fixed;
     bottom: 10px;
     width: 100%;
-    display: block;
+    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 7px;
