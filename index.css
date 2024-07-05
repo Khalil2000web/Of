@@ -1,10 +1,4 @@
         body {background-color:black;}
-        
-        .left-dis {
-            margin-left: 1%;
-            text-decoration: none;
-            color: white;
-        }
 
 .bottom-nav-dis {
     position: fixed;
@@ -21,15 +15,6 @@
     text-transform: uppercase;
     font-family: 'BB Manual Mono Pro TX', Arial;
     z-index:1000;
-}
-
-.right-dis {
-    text-decoration: none;
-    color: white;
-    text-align: center;
-    flex: 1; /* This allows the element to grow and take up space */
-    display: flex;
-    justify-content: center;
 }
 
         .center-nav-dis {
