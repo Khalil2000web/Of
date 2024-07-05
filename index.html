@@ -27,46 +27,52 @@
         
 <style>
 .bottom-nav-dis {
-        position: fixed;
-        bottom: 10px;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 7px;
-        background-color: transparent;
-        color: white;
-        z-index: 1000;
-        font-size: 12px;
-        text-transform: uppercase;
-        font-family: 'BB Manual Mono Pro TX', Arial;
-    }
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 7px;
+    background-color: transparent;
+    color: white;
+    z-index: 1000;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: 'BB Manual Mono Pro TX', Arial;
+}
 
-    .center-dis {
-        display: flex;
-        align-items: center;
-        font-family: 'BB Manual Mono Pro TX', Arial;
-    }
+.center-nav-dis {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    padding: 10px 0;
+    background-color: transparent;
+    z-index: 1000;
+    color: white;
+}
 
-    .nav-btn-dis {
-        text-decoration: none;
-        background: none;
-        border: none;
-        color: white;
-        cursor: pointer;
-        margin: 0 5px;
-        text-transform: uppercase;
-        font-size: 12px;
-        font-family: 'BB Manual Mono Pro TX', Arial;
-    }
+.nav-btn-dis {
+    text-decoration: none;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin: 0 5px;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: 'BB Manual Mono Pro TX', Arial;
+}
 
-    .separator-dis {
-        color: white;
-        font-size: 12px;
-        padding:5px 5px;
-        font-family: 'BB Manual Mono Pro TX', Arial;
-
-    }
+.separator-dis {
+    color: white;
+    font-size: 12px;
+    padding: 5px 5px;
+    font-family: 'BB Manual Mono Pro TX', Arial;
+}
                 @font-face {
         font-family: 'BB Manual Mono Pro TX';
         src: url('https://www.khaliiil.com/BBManualMonoProTX-Regular.woff2') format('woff2');
@@ -556,17 +562,17 @@ nav.bottom-nav ul li a {
     </section>
 </main>
 
-    <div class="center-nav-dis">
-        <a href="https://khaliiil.com/terms-conditions" class="nav-btn-dis">Terms & Conditions</a>
-        <span class="separator-dis">/</span>
-        <a href="https://khaliiil.com/privacy-policy" class="nav-btn-dis">Privacy Policy</a>
-    </div>
+<div class="center-nav-dis">
+    <a href="https://khaliiil.com/terms-conditions" class="nav-btn-dis">Terms & Conditions</a>
+    <span class="separator-dis">/</span>
+    <a href="https://khaliiil.com/privacy-policy" class="nav-btn-dis">Privacy Policy</a>
+</div>
 
-    <nav class="bottom-nav-dis">
-        <div class="right-dis">
-            <span>&copy; khaliiil</span>
-        </div>
-    </nav>
+<nav class="bottom-nav-dis">
+    <div class="right-dis">
+        <span>&copy; khaliiil</span>
+    </div>
+</nav>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
