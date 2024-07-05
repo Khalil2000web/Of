@@ -10,7 +10,7 @@
     position: fixed;
     bottom: 10px;
     width: 100%;
-    display: flex;
+    display: block;
     justify-content: space-between;
     align-items: center;
     padding: 10px 7px;
@@ -56,10 +56,4 @@
             color: white;
             font-size: 12px;
             padding: 5px 5px;
-        }
-
-        @media screen and (max-width: 68px) {
-            .bottom-nav-dis, .center-nav {
-                display: none;
-            }
         }
