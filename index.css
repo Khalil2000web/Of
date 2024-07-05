@@ -1,0 +1,65 @@
+        body {background-color:black;}
+        
+        .left-dis {
+            margin-left: 1%;
+            text-decoration: none;
+            color: white;
+        }
+
+.bottom-nav-dis {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 7px;
+    background-color: transparent;
+    color: white;
+    z-index: 1000;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: 'BB Manual Mono Pro TX', Arial;
+}
+
+.right-dis {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    flex: 1; /* This allows the element to grow and take up space */
+    display: flex;
+    justify-content: center;
+}
+
+        .center-nav-dis {
+            position: fixed;
+            top: 60px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'BB Manual Mono Pro TX', Arial;
+        }
+
+        .nav-btn-dis {
+            text-decoration: none;
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            margin: 0 5px;
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+
+        .separator-dis {
+            color: white;
+            font-size: 12px;
+            padding: 5px 5px;
+        }
+
+        @media screen and (max-width: 68px) {
+            .bottom-nav-dis, .center-nav {
+                display: none;
+            }
+        }
