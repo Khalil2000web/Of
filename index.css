@@ -2,82 +2,11 @@
         font-family: 'BB Manual Mono Pro TX';
         src: url('https://www.khaliiil.com/BBManualMonoProTX-Regular.woff2') format('woff2');
     }
-    body {
-        font-family: 'BB Manual Mono Pro TX', arial;
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-size: 12px;
-        text-transform: uppercase;
-        background-color: black;
-        color: white;
-    }
-
-    .bottom-nav-dis {
-        position: fixed;
-        bottom: 0;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 7px;
-        background-color: transparent;
-        color: white;
-        z-index: 1000;
-        font-size: 12px;
-        text-transform: uppercase;
-    }
-
-    .left {
-        margin-left: 5%;
-        text-decoration: none;
-        color: white;
-    }
-
-    .center {
-        display: flex;
-        align-items: center;
-    }
-
-    .nav-btn {
-        text-decoration: none;
-        background: none;
-        border: none;
-        color: white;
-        cursor: pointer;
-        margin: 0 5px;
-        text-transform: uppercase;
-        font-size: 12px;
-    }
-
-    .separator {
-        color: white;
-        font-size: 12px;
-        padding:5px 5px;
-    }
-
-    .right {
-        margin-right: 5%;
-        text-decoration: none;
-        color: white;
-        }
-
-    @media screen and (max-width: 768px) {
-        .bottom-nav-dis {
-            display: none;
-        }
-    }
-    
-         @font-face {
-            font-family: 'BB Manual Mono Pro TX';
-            src: url('https://www.khaliiil.com/BBManualMonoProTX-Regular.woff2') format('woff2');
-            /* Additional font properties (e.g., font-weight, font-style) can be specified here */
-        }
 html, body {
     margin: 0;
     padding: 0;
     height: 100%;
-    font-family: 'BB Manual Mono Pro TX';
+    font-family: 'BB Manual Mono Pro TX', arial;
     scroll-behavior: smooth;
     color: white;
     background-color: black;
@@ -451,7 +380,7 @@ nav.top-nav ul li, nav.bottom-nav ul li {
 }
 
 nav.top-nav ul li a {
-    font-family: 'BB Manual Mono Pro TX';
+    font-family: 'BB Manual Mono Pro TX', arial;
     font-size: 19px;
     color: white;
     text-decoration: none;
@@ -484,7 +413,7 @@ nav.bottom-nav ul li a {
         }
         
 .tio-1 {
-    font-family: 'BB Manual Mono Pro TX';
+    font-family: 'BB Manual Mono Pro TX', arial;
     font-size: 16.7px;
     bottom: 21px;
     left: 10px; /* Ensure the element starts from the left edge */
@@ -495,7 +424,7 @@ nav.bottom-nav ul li a {
     z-index: 10000;
 }
         .tio-2 {
-    font-family: 'BB Manual Mono Pro TX';
+    font-family: 'BB Manual Mono Pro TX', arial;
     font-size:16.7px;
     bottom:21px;
     right:10px;
