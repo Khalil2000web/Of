@@ -6,30 +6,65 @@
     <title>Your Page Title</title>
     
     <style>
-    body{
-      background-color:black;
-      color:white;
-      font-family: 'BB Manual Mono Pro TX', Arial;
-    }
+        @font-face {
+            font-family: 'BB Manual Mono Pro TX';
+            src: url('https://www.khaliiil.com/BBManualMonoProTX-Regular.woff2') format('woff2');
+        }
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'BB Manual Mono Pro TX', Arial;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-transform:uppercase;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 400px;
+            text-transform:uppercase;
+        }
+        label {
+            width: 100%;
+            margin-bottom: 10px;
+            text-transform:uppercase;
+        }
+        input[type="email"],
+        textarea,
+        button {
+            width: 100%;
+            background-color: black;
+            color: white;
+            border: 1px solid white;
+            border-radius: 5px;
+            padding: 10px;
+            font-family: 'BB Manual Mono Pro TX', Arial;
+            text-transform:uppercase;
+        }
+        button {
+            cursor: pointer;
+            text-transform:uppercase;
+        }
     </style>
   
 </head>
 <body>
  
-<!-- modify this form HTML and place wherever you want your form -->
-<form
-  action="https://formspree.io/f/mldrezaz"
-  method="POST"
->
+<!-- Form HTML -->
+<form action="https://formspree.io/f/mldrezaz" method="POST">
   <label>
     Your email:
-    <input type="email" name="email">
+    <input type="email" name="email" required>
   </label>
   <label>
     Your message:
-    <textarea name="message"></textarea>
+    <textarea name="message" required></textarea>
   </label>
-  <!-- your other form fields go here -->
   <button type="submit">Send</button>
 </form>
 
