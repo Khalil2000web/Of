@@ -89,10 +89,70 @@ li {padding-left: 0px;text-indent: 0;color: white;}
     width: 80%;
 }
 }
+
+
+.bottom-nav-dis {
+    position: fixed;
+    bottom: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 7px;
+    background-color: transparent;
+    color: white;
+    z-index: 1000;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: 'BB Manual Mono Pro TX', Arial;
+}
+
+.center-nav-dis {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    bottom: 10px;
+    padding: 10px 0;
+    background-color: transparent;
+    z-index: 1000;
+    color: white;
+}
+
+.nav-btn-dis {
+    text-decoration: none;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin: 0 5px;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: 'BB Manual Mono Pro TX', Arial;
+}
+
+.separator-dis {
+    color: white;
+    font-size: 12px;
+    padding: 5px 5px;
+    font-family: 'BB Manual Mono Pro TX', Arial;
+}
 </style>
 
 </head>
 <body>
+<div class="center-nav-dis">
+    <a href="https://khaliiil.com/terms-conditions" class="nav-btn-dis">Terms & Conditions</a>
+    <span class="separator-dis">/</span>
+    <a href="https://khaliiil.com/privacy-policy" class="nav-btn-dis">Privacy Policy</a>
+</div>
+
+<nav class="bottom-nav-dis">
+    <div class="right-dis">
+        <span>&copy; khaliiil</span>
+    </div>
+</nav>
 
     <div class="container">
         <h1>Terms and Conditions</h1>
