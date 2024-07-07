@@ -25,63 +25,72 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 80%;
+            width: 100%;
 
             text-transform:uppercase;
         }
+ 
         label {
             width: 80%;
             margin-bottom: 10px;
             text-transform:uppercase;
             line-height:1.2;
         }
+
+        input[type="email"],
         textarea,
         button {
-            width: 80%;
+            width:200px;
+            height:40px;
+        }
+
+        textarea,
+        input[type="email"] {
+            width: 100%;
             background-color: black;
             color: white;
-            border: 1px solid white;
-            border-radius: 5px;
-            padding-right:10px;
-            padding-left:10px;
+            border: 1px solid #fff;
+            border-radius: 4px;
             font-family: 'BB Manual Mono Pro TX', Arial;
             text-transform:uppercase;
+            font-size:13px;
         }
-        
-                input[type="email"]{
-            width: 80%;
-            background-color: black;
-            color: white;
-            border: 1px solid white;
-            border-radius: 5px;
-            padding-right:10px;
-            padding-left:10px;
-            font-family: 'BB Manual Mono Pro TX', Arial;
-        }
-        
-        button {
-            cursor: pointer;
-            text-transform:uppercase;
-            width:80%;
-            padding-right:10px;
-            padding-left:10px;
-        }
+
+.parent {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Ensure parent has some height */
+}
+
+.t-p-i1 {
+    font-family: 'BB Manual Mono Pro TX', Arial;
+    font-size: 17px;
+    color: white;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 80px;
+    text-align: center;
+    text-transform:uppercase;
+    line-height:2.2;
+    position:fixed;
+    width:100%;
+}
     </style>
   
 </head>
 <body>
- 
-<!-- Form HTML -->
+    <div class="t-p-i1">join now!<br>get all of the new updates...</div>
 <form action="https://formspree.io/f/mldrezaz" method="POST">
   <label>
-    Your email:
+    <p class="margin-bottom:7px;">Your email:</p>
     <input type="email" name="email" required>
   </label>
   <label>
-    Your name:
+    <p class="margin-bottom:7px;">Your name:</p>
     <textarea name="message" required></textarea>
   </label>
-  <button style="font-weight:300;font-size:14px;"type="submit">Send</button>
+  <button style="font-weight:300;font-size:14px;width:200px;background-color:black;border:1px solid white;border-radius:4px;font-family: 'BB Manual Mono Pro TX', Arial;"type="submit">SEND</button>
 </form>
 
 </body>
