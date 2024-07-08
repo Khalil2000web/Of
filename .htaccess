@@ -11,4 +11,4 @@ RewriteRule ^([^\.]+)$ $1.html [NC,L]
 
 # Block direct access to URLs ending with .html
 RewriteCond %{THE_REQUEST} \.html
-RewriteRule ^(.+)\.html$ - [F,L]
+RewriteRule ^(.+)\.html$ - [R=404,L]
