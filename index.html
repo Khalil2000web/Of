@@ -525,37 +525,29 @@ document.addEventListener('DOMContentLoaded', (event) => {
    <a href="https://music.khaliiil.com"><p>renaissance</p></a>
 </div>
 
-
+    <img class="media" src="mediaOf/26-6-o-m-24-II.GIF" alt="media_home_9010">
+    <img class="media" src="mediaOf/26-6-o-m-24-III.GIF" alt="media_home_9009">
     <img class="media" src="mediaOf/26-6-o-m-24.GIF" alt="media_home_9008">
-
     <img class="media" src="https://www.khaliiil.com/IMG_7634.jpg" alt="media_home_9007">
-
     <img class="media" src="https://www.khaliiil.com/IMG_7632.jpg" alt="media_home_9006">
-
     <img class="media" src="https://www.khaliiil.com/St.GIF" alt="media_home_9005">
-
     <img class="media" src="https://www.khaliiil.com/Cl.GIF" alt="media_home_9004">
-
     <img class="media" src="https://www.khaliiil.com/T-1.JPG" alt="media_home_9003">
-
     <img class="media" src="https://www.khaliiil.com/Bu.GIF" alt="media_home_9002">
-      
-                    <div class="media">
-    <video id="myVideo" src="https://khaliiil.com/REn2.mov" alt="media_home_9009" autoplay loop muted playsinline controls="false"></video>
+    <div class="media">
+    <video id="myVideo" src="https://khaliiil.com/REn2.mov" alt="video_home" autoplay loop muted playsinline controls="false"></video>
     <img src="system/Css-off.PNG" class="sound-icon sound-off-icon" alt="Sound Off">
     <img src="system/Css-on.PNG" class="sound-icon sound-on-icon" alt="Sound On">
-        <div id="loader-wrapper">
-        </div>
-  </div>
-  
-      
+    <div id="loader-wrapper">
+    </div>
+    </div>
     <img class="media" src="https://www.khaliiil.com/mediaOf/5a67e1ae-0c7b-494c-8440-3eb7d7f35ac9.jpeg" alt="media_home_9000">
 
 <div>
 <div class="css-nkyjj6" id="desktop-footer">
 <a href="https://www.khaliiil.com//">
 <p class="chakra-text css-1p6wh2o">
-JOIN CB
+JOIN CLUB
 </p>
 </a>
 <p class="chakra-text css-19ugvly">
@@ -580,7 +572,7 @@ PRIVACY
 <div id="mobile-footer" class="footer_mobile-footer__ZUP4j css-1ozbijy">
   <a href="https://khaliiil.com/join-club">
 <p class="chakra-text css-gf4rj5">
-JOIN CB
+JOIN
 </p>
 </a>
 <a href="https://www.khaliiil.com/beenstately">
@@ -672,7 +664,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function playVideoWhenReady(video) {
-    video.addEventListener('canplay', () => {
+    video.addEventListener('loadeddata', () => {
       video.play();
     });
   }
@@ -704,18 +696,18 @@ document.addEventListener('DOMContentLoaded', function() {
   function openOverlay(index) {
     disableScroll();
     currentIndex = index;
-    const clonedMedia = mediaElements[currentIndex].cloneNode(true);
+    const media = mediaElements[currentIndex];
     overlayContent.innerHTML = '';
-    overlayContent.appendChild(clonedMedia);
+    overlayContent.appendChild(media.cloneNode(true));
     overlay.style.display = 'flex';
     overlay.classList.add('overlay-show');
 
     muteAllVideos();
 
-    const video = clonedMedia.querySelector('video');
+    const video = overlayContent.querySelector('video');
     if (video) {
-      const soundOffIcon = clonedMedia.querySelector('.sound-off-icon');
-      const soundOnIcon = clonedMedia.querySelector('.sound-on-icon');
+      const soundOffIcon = overlayContent.querySelector('.sound-off-icon');
+      const soundOnIcon = overlayContent.querySelector('.sound-on-icon');
 
       video.muted = true;
       soundOffIcon.style.display = 'block';
@@ -749,14 +741,14 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   mediaElements.forEach((media, index) => {
-    if (media.querySelector('video')) {
-      const video = media.querySelector('video');
+    const video = media.querySelector('video');
+    if (video) {
+      video.autoplay = true;
+      video.muted = true;
+      playVideoWhenReady(video);
+
       const soundOffIcon = media.querySelector('.sound-off-icon');
       const soundOnIcon = media.querySelector('.sound-on-icon');
-
-      video.removeAttribute('controls');
-
-      playVideoWhenReady(video);
 
       soundOffIcon.addEventListener('click', () => {
         muteAllVideos();
@@ -782,20 +774,12 @@ document.addEventListener('DOMContentLoaded', function() {
   closeBtn.addEventListener('click', closeOverlay);
 
   prevBtn.addEventListener('click', () => {
-    if (currentIndex === 0) {
-      currentIndex = mediaElements.length - 1;
-    } else {
-      currentIndex -= 1;
-    }
+    currentIndex = (currentIndex === 0) ? mediaElements.length - 1 : currentIndex - 1;
     openOverlay(currentIndex);
   });
 
   nextBtn.addEventListener('click', () => {
-    if (currentIndex === mediaElements.length - 1) {
-      currentIndex = 0;
-    } else {
-      currentIndex += 1;
-    }
+    currentIndex = (currentIndex === mediaElements.length - 1) ? 0 : currentIndex + 1;
     openOverlay(currentIndex);
   });
 });
