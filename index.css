@@ -1,4 +1,3 @@
-<style>
 @font-face {
   font-family: 'BB Manual Mono Pro TX';
   src: url('https://www.khaliiil.com/BBManualMonoProTX-Regular.woff2') format('woff2');
@@ -69,14 +68,14 @@ nav.bottom-nav {
 @media screen and (max-width: 450px) and (min-width: 301px) {
     .nav-items div a {
         font-size: 20px;
-        margin: 10px;
+        margin: 7px;
     }
 }
 
 @media screen and (max-width: 550px) and (min-width: 451px) {
     .nav-items div a {
         font-size: 21px;
-        margin: 17px;
+        margin: 15px;
     }
 }
 
@@ -114,3 +113,4 @@ nav.bottom-nav {
         margin: 39px;
     }
 }
+
