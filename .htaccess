@@ -10,5 +10,5 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^([^\.]+)$ $1.html [NC,L]
 
 # Block direct access to URLs ending with .html
-RewriteCond %{THE_REQUEST} \.html
+RewriteCond %{ENV:REDIRECT_STATUS} ^$
 RewriteRule ^(.+)\.html$ - [R=404,L]
