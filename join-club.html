@@ -118,7 +118,127 @@ li {
     text-indent: -20px; /* Indents the first line to align with the bullet */
 }
     </style>
-  
+
+
+<style>
+@font-face {
+  font-family: 'BB Manual Mono Pro TX';
+  src: url('https://www.khaliiil.com/BBManualMonoProTX-Regular.woff2') format('woff2');
+}
+body {
+    font-family: 'BB Manual Mono Pro TX';
+}
+nav.top-nav {
+    margin-top: 14px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1000;
+    background-color: none;
+    color:white;
+}
+
+nav.bottom-nav {
+    margin-bottom: 18px;
+    position: fixed;
+    bottom: 13px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.nav-items {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    color:white;
+}
+
+.nav-items div {
+    margin: 0 10px; /* Adjust this margin to control the space between buttons */
+}
+
+.nav-items div a {
+    font-family: 'BB Manual Mono Pro TX';
+    font-size: 19px;
+    color: white;
+    text-decoration: none;
+    padding: 2px;
+}
+
+@media screen and (max-width: 200px) {
+    .nav-items div a {
+        font-size: 17px;
+        margin: 0.9px;
+    }
+}
+
+@media screen and (max-width: 300px) and (min-width: 201px) {
+    .nav-items div a {
+        font-size: 18px;
+        margin: 2px;
+    }
+}
+
+@media screen and (max-width: 450px) and (min-width: 301px) {
+    .nav-items div a {
+        font-size: 19.0px;
+        margin: 1px;
+    }
+}
+
+@media screen and (max-width: 550px) and (min-width: 451px) {
+    .nav-items div a {
+        font-size: 21px;
+        margin: 8px;
+    }
+}
+
+@media screen and (max-width: 660px) and (min-width: 551px) {
+    .nav-items div a {
+        font-size: 21px;
+        margin: 19.99px;
+    }
+}
+
+@media screen and (max-width: 780px) and (min-width: 661px) {
+    .nav-items div a {
+        font-size: 22px;
+        margin: 27px;
+    }
+}
+
+@media screen and (max-width: 900px) and (min-width: 781px) {
+    .nav-items div a {
+        font-size: 22px;
+        margin: 28.8px;
+    }
+}
+
+@media screen and (max-width: 1800px) and (min-width: 901px) {
+    .nav-items div a {
+        font-size: 22px;
+        margin: 290.99px;
+    }
+}
+
+@media screen and (min-width: 961px) {
+    .nav-items div a {
+        font-size: 23.0px;
+        margin: 39px;
+    }
+}
+p{color:white !important;}
+</style>
+
 </head>
 <body>
 <br><br><br><br><br><br><br><br><br><br>
@@ -133,8 +253,18 @@ li {
     <p class="margin-bottom:7px;">Your name:</p>
     <textarea name="message" required></textarea>
   </label>
-  <button style="margin-top:10px;font-weight:300;font-size:14px;width:200px;background-color:black;border:1px solid white;border-radius:4px;font-family: 'BB Manual Mono Pro TX', Arial;"type="submit">SEND</button>
+  <button style="margin-top:10px;font-weight:300;font-size:14px;width:200px;background-color:white;border:1px solid white;border-radius:4px;font-family: 'BB Manual Mono Pro TX', Arial;"type="submit">SEND</button>
 </form>
+
+<nav class="top-nav">
+    <div class="nav-items">
+        <div><a href="https://www.khaliiil.com">HOME</a></div>
+        <div><a href="https://www.khaliiil.com">SHOP</a></div>
+        <div><a href="https://music.khaliiil.com">MUSIC</a></div>
+        <div><a href="https://tour.khaliiil.com">TOUR</a></div>
+        <div><a href="https://www.khaliiil.com/blog">BLOG</a></div>
+    </div>
+</nav>
 
 </body>
 </html>
