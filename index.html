@@ -350,7 +350,6 @@ margin-bottom: 2px;
 } 
 
 
-/* For WebKit-based browsers (Chrome, Safari, etc.) */
 video::-webkit-media-controls,
 video::-webkit-media-controls-start-playback-button,
 video::-webkit-media-controls-play-button,
@@ -377,6 +376,9 @@ video::-webkit-media-controls-seek-back-button,
 video::-webkit-media-controls-seek-forward-button,
 video::-webkit-media-controls-timeline-container {
   display: none !important;
+    z-index:-1000;
+    position:absolute;
+    left:-999999999px;
 }
 
 /* For Firefox (Gecko-based browsers, including Firefox on Android) */
@@ -406,6 +408,9 @@ video::-moz-media-controls-seek-back-button,
 video::-moz-media-controls-seek-forward-button,
 video::-moz-media-controls-timeline-container {
   display: none !important;
+    z-index:-1000;
+        position:absolute;
+    left:-999999999px;
 }
 
 /* For EdgeHTML-based browsers (older versions of Microsoft Edge) */
@@ -435,6 +440,9 @@ video::-ms-media-controls-seek-back-button,
 video::-ms-media-controls-seek-forward-button,
 video::-ms-media-controls-timeline-container {
   display: none !important;
+  z-index:-1000;
+      position:absolute;
+    left:-999999999px;
 }
 
 
