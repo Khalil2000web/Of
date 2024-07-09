@@ -174,15 +174,15 @@ PRIVACY
       height: 100%;
       margin: 0;
       padding: 0;
-      overflow-y: hidden !important;
+      overflow-x: hidden !important;
       background-color:black;
     }
     .cover {
-      width: 550%;
-      height: 100%;
+      width: 100%;
+      height: 550%;
       background-color: black;
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       overflow-y: hidden !important;
       position: relative;
       z-index: 100;
@@ -249,7 +249,8 @@ PRIVACY
     }
     @media screen and (max-width: 600px) {
       .cover {
-        width: 500%;
+        width: 100%;
+        height:500%;
         flex-direction: column;
       }
       .m1 {
