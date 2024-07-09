@@ -1,55 +1,108 @@
-        body {
-            background-color:black;
-        }
-
-.bottom-nav-dis {
+nav.top-nav {
+    margin-top: 14px;
     position: fixed;
-    bottom: 10px;
+    top: 0;
+    left: 0;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    padding: 10px 7px;
-    background-color: transparent;
-    color: white;
     z-index: 1000;
-    font-size: 12px;
-    text-transform: uppercase;
-    font-family: 'BB Manual Mono Pro TX', Arial;
+    background-color: none;
+    color:white;
 }
 
-.right-dis {
-    text-decoration: none;
-    color: white;
-    text-align: center;
-    flex: 1; /* This allows the element to grow and take up space */
+nav.bottom-nav {
+    margin-bottom: 18px;
+    position: fixed;
+    bottom: 13px;
+    left: 0;
+    width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
+    z-index: 1000;
 }
 
-        .center-nav-dis {
-            position: fixed;
-            top: 50px;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: 'BB Manual Mono Pro TX', Arial;
-        }
+.nav-items {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    color:white;
+}
 
-        .nav-btn-dis {
-            text-decoration: none;
-            background: none;
-            border: none;
-            color: white;
-            cursor: pointer;
-            margin: 0 5px;
-            text-transform: uppercase;
-            font-size: 15px;
-        }
+.nav-items div {
+    margin: 0 10px; /* Adjust this margin to control the space between buttons */
+}
 
-        .separator-dis {
-            color: white;
-            font-size: 12px;
-            padding: 5px 5px;
-        }
+.nav-items div a {
+    font-family: 'BB Manual Mono Pro TX';
+    font-size: 19px;
+    color: white;
+    text-decoration: none;
+    padding: 2px;
+}
+
+@media screen and (max-width: 200px) {
+    .nav-items div a {
+        font-size: 17px;
+        margin: 0.9px;
+    }
+}
+
+@media screen and (max-width: 300px) and (min-width: 201px) {
+    .nav-items div a {
+        font-size: 18px;
+        margin: 2px;
+    }
+}
+
+@media screen and (max-width: 450px) and (min-width: 301px) {
+    .nav-items div a {
+        font-size: 18.0px;
+        margin: 2.9px;
+    }
+}
+
+@media screen and (max-width: 550px) and (min-width: 451px) {
+    .nav-items div a {
+        font-size: 21px;
+        margin: 8px;
+    }
+}
+
+@media screen and (max-width: 660px) and (min-width: 551px) {
+    .nav-items div a {
+        font-size: 21px;
+        margin: 19.99px;
+    }
+}
+
+@media screen and (max-width: 780px) and (min-width: 661px) {
+    .nav-items div a {
+        font-size: 22px;
+        margin: 27px;
+    }
+}
+
+@media screen and (max-width: 900px) and (min-width: 781px) {
+    .nav-items div a {
+        font-size: 22px;
+        margin: 28.8px;
+    }
+}
+
+@media screen and (max-width: 1800px) and (min-width: 901px) {
+    .nav-items div a {
+        font-size: 22px;
+        margin: 290.99px;
+    }
+}
+
+@media screen and (min-width: 961px) {
+    .nav-items div a {
+        font-size: 23.0px;
+        margin: 39px;
+    }
+}
