@@ -669,6 +669,8 @@ document.addEventListener('DOMContentLoaded', function() {
   function openOverlay(index) {
     disableScroll();
     currentIndex = index;
+    const mediaContainer = document.querySelector('.media-container');
+container.style.overflow = 'none';
     const clonedMedia = mediaElements[currentIndex].cloneNode(true);
     overlayContent.innerHTML = '';
     overlayContent.appendChild(clonedMedia);
