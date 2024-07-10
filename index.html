@@ -670,8 +670,10 @@ function openOverlay(index) {
     disableScroll();
     currentIndex = index;
     const mediaContainer = document.querySelector('.media-container');
-    container.style.overflow = 'hidden'; // Corrected to 'hidden'
     
+    // Set overflow to hidden
+    document.querySelector('.container').style.overflow = 'hidden';
+
     const clonedMedia = mediaElements[currentIndex].cloneNode(true);
     overlayContent.innerHTML = '';
     overlayContent.appendChild(clonedMedia);
@@ -682,27 +684,27 @@ function openOverlay(index) {
 
     const video = clonedMedia.querySelector('video');
     if (video) {
-      const soundOffIcon = clonedMedia.querySelector('.sound-off-icon');
-      const soundOnIcon = clonedMedia.querySelector('.sound-on-icon');
+        const soundOffIcon = clonedMedia.querySelector('.sound-off-icon');
+        const soundOnIcon = clonedMedia.querySelector('.sound-on-icon');
 
-      video.muted = true;
-      soundOffIcon.style.display = 'block';
-      soundOnIcon.style.display = 'none';
-
-      soundOffIcon.addEventListener('click', () => {
-        video.muted = false;
-        soundOffIcon.style.display = 'none';
-        soundOnIcon.style.display = 'block';
-      });
-
-      soundOnIcon.addEventListener('click', () => {
         video.muted = true;
         soundOffIcon.style.display = 'block';
         soundOnIcon.style.display = 'none';
-      });
 
-      currentOverlayVideo = video;
-      playVideoWhenReady(video);
+        soundOffIcon.addEventListener('click', () => {
+            video.muted = false;
+            soundOffIcon.style.display = 'none';
+            soundOnIcon.style.display = 'block';
+        });
+
+        soundOnIcon.addEventListener('click', () => {
+            video.muted = true;
+            soundOffIcon.style.display = 'block';
+            soundOnIcon.style.display = 'none';
+        });
+
+        currentOverlayVideo = video;
+        playVideoWhenReady(video);
     }
 }
 
