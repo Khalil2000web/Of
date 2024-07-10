@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Khalil</title>
-  <style>@font-face {font-family: 'BB Manual Mono Pro TX';src: url('https://www.khaliiil.com/BBManualMonoProTX-Regular.woff2') format('woff2');}body {font-family: 'BB Manual Mono Pro TX';}</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Khalil</title>
+<style>@font-face {font-family: 'BB Manual Mono Pro TX';src: url('https://www.khaliiil.com/BBManualMonoProTX-Regular.woff2') format('woff2');}body {font-family: 'BB Manual Mono Pro TX';}</style>
 <meta charset="UTF-8">
 <meta name="description" content="The Official Website of Khalil">
 <meta property="og:description" content="The Official Website of Khalil">
@@ -666,11 +666,12 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  function openOverlay(index) {
+function openOverlay(index) {
     disableScroll();
     currentIndex = index;
     const mediaContainer = document.querySelector('.media-container');
-container.style.overflow = 'none';
+    container.style.overflow = 'hidden'; // Corrected to 'hidden'
+    
     const clonedMedia = mediaElements[currentIndex].cloneNode(true);
     overlayContent.innerHTML = '';
     overlayContent.appendChild(clonedMedia);
@@ -703,7 +704,7 @@ container.style.overflow = 'none';
       currentOverlayVideo = video;
       playVideoWhenReady(video);
     }
-  }
+}
 
   function closeOverlay() {
     overlay.style.display = 'none';
