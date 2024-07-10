@@ -12,18 +12,6 @@ nav.top-nav {
     color:white;
 }
 
-nav.bottom-nav {
-    margin-bottom: 18px;
-    position: fixed;
-    bottom: 13px;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-}
-
 .nav-items {
     display: flex;
     list-style-type: none;
@@ -60,7 +48,7 @@ nav.bottom-nav {
 
 @media screen and (max-width: 450px) and (min-width: 301px) {
     .nav-items div a {
-        font-size: 18.0px;
+        font-size: 20.0px;
         margin: 2.9px;
     }
 }
