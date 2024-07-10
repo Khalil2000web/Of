@@ -41,7 +41,7 @@ nav.top-nav {
 
 @media screen and (max-width: 300px) and (min-width: 201px) {
     .nav-items div a {
-        font-size: 18px;
+        font-size: 180px;
         margin: 2px;
     }
 }
