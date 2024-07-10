@@ -241,6 +241,13 @@ html, body {
   touch-action: pan-x pan-y;
   webkit-touch-callout: none; -webkit-user-select: text;
   overflow:none;
+  -webkit-touch-callout: none !important;
+    -webkit-touch-callout: none !important;
+  overflow: hidden; /* Prevents overflow */
+  -webkit-touch-callout: none; /* Disables the callout on long taps */
+  user-select: none; /* Prevents text selection */
+  touch-action: none; /* Disables touch actions */
+  overscroll-behavior: none; /* Prevents overscroll behavior */
 }
 
 body.no-scroll {
@@ -250,7 +257,12 @@ body.no-scroll {
   overflow-y:hidden;
   -webkit-touch-callout: none; 
   -webkit-user-select: none;
-  visibility: hidden;
+  -webkit-touch-callout: none !important;
+  overflow: hidden; /* Prevents overflow */
+  -webkit-touch-callout: none; /* Disables the callout on long taps */
+  user-select: none; /* Prevents text selection */
+  touch-action: none; /* Disables touch actions */
+  overscroll-behavior: none; /* Prevents overscroll behavior */
 }
 @media screen and (min-width: 610px) {
 #overlay-content {
