@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+.title-container {position: fixed;top: 50%;transform: translateY(-50%);z-index: 2000;font-family: 'BB Manual Mono Pro TX';}
+
+.left-title, .right-title {font-size: 20px;color: white;letter-spacing:1.9px;}
+
+.left-title {left: 0;margin-left: 0px;}
+
+.right-title {right: 0;margin-right: 0px;text-transform: uppercase;}
+
+.title-container.hidden {display: none;}
+
+.left-title a, .right-title a {color: inherit;text-decoration: none;cursor: pointer;}
+
+h1 {font-size: inherit;font-weight: normal;margin: 0;}
+
+@media screen and (min-width: 1921px)  {.left-title {padding-left: 320px;}.right-title {padding-right: 320px;}}
+
+@media screen and (min-width: 1000px) and (max-width: 1920px)  {.left-title {padding-left: 200px;}.right-title {padding-right: 200px;}}
+
+@media screen and (min-width: 785px) and (max-width: 999px)  {.left-title {padding-left: 130px;}.right-title {padding-right: 130px;}}
+
+@media screen and (min-width: 600px) and (max-width: 780px)  {.left-title {padding-left: 80px;}.right-title {padding-right: 80px;}}/*l*/
+
+@media screen and (min-width: 401px) and (max-width: 597px)  {.left-title {padding-left: 68px;}.right-title {padding-right: 68px;}}
+
+@media screen and (max-width: 400px) {.left-title {padding-left: 37px;}.right-title {padding-right: 37px;}}
+
+    </style>
+</head>
+<body bgcolor="black">
+
+      <div class="title-container left-title">
+   <p>NEXT UP:</p>
+</div>
+
+<div class="title-container right-title">
+   <p>Germany</p>
+</div>
+    
+</body>
+</html>
