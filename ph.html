@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Number Lookup</title>
+    <script>
+        async function lookupPhoneNumber() {
+            const phoneNumber = document.getElementById('phone_number').value;
+
+            const response = await fetch('/lookup', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ phone_number: phoneNumber })
+            });
+
+            const data = await response.json();
+
+            if (data.error) {
+                alert(data.error);
+            } else {
+                document.getElementById('result').innerText = JSON.stringify(data, null, 2);
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Phone Number Lookup</h1>
+    <input type="text" id="phone_number" placeholder="Enter phone number">
+    <button onclick="lookupPhoneNumber()">Lookup</button>
+    <pre id="result"></pre>
+</body>
+</html>
