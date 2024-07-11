@@ -4,8 +4,8 @@ import os
 
 app = Flask(__name__)
 
-# Replace with your actual Numverify API key
-API_KEY = 'your_numverify_api_key'
+# Replace with your actual AbstractAPI key
+API_KEY = '7dc5a50b1218486b8351285c743d256f'
 
 @app.route('/lookup', methods=['POST'])
 def lookup():
@@ -13,8 +13,8 @@ def lookup():
     if not phone_number:
         return jsonify({'error': 'Phone number is required'}), 400
 
-    # Numverify API endpoint
-    url = f"http://apilayer.net/api/validate?access_key={API_KEY}&number={phone_number}"
+    # AbstractAPI endpoint for phone validation
+    url = f"https://phonevalidation.abstractapi.com/v1/?api_key={API_KEY}&phone={phone_number}"
 
     response = requests.get(url)
     if response.status_code != 200:
@@ -23,10 +23,10 @@ def lookup():
     data = response.json()
     return jsonify({
         'valid': data.get('valid'),
-        'country_name': data.get('country_name'),
-        'location': data.get('location'),
+        'country': data.get('country', {}).get('name'),
+        'location': data.get('location', {}).get('locality'),
         'carrier': data.get('carrier'),
-        'line_type': data.get('line_type')
+        'line_type': data.get('type')
     })
 
 @app.route('/')
