@@ -667,6 +667,13 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function openOverlay(index) {
+     
+var mediaContainers = document.querySelectorAll('.media-container');
+
+mediaContainers.forEach(function(container) {
+    container.style.overflow = 'hidden';
+});
+
     disableScroll();
     currentIndex = index;
     const mediaContainer = document.querySelector('.media-container');
