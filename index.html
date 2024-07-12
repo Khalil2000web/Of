@@ -271,7 +271,15 @@ overflow: hidden;
     overscroll-behavior: none;
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; /* IE and Edge */
+    overscroll-behavior: none !important;
+    -webkit-touch-callout: none; /* Disables the callout on long taps */
+    -webkit-user-select: none; /* Disables text selection on WebKit browsers */
+    user-select: none;
 }
+
+.overlay::-webkit-scrollbar {
+    display: none;
+
 
 @media screen and (min-width: 610px) {
 #overlay-content {
