@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Grid</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Adjust the minimum size as needed */
+            grid-auto-rows: auto;
+            width: 100%;
+            height: 100%;
+        }
+        .grid img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <img src="https://khaliiil.com/mediaOf/J.JPG" alt="media_home_9010">
+        <img src="https://khaliiil.com/mediaOf/26-6-o-m-24-II.JPG" alt="media_home_9010">
+        <img src="https://khaliiil.com/mediaOf/26-6-o-m-24-III.GIF" alt="media_home_9009">
+        <img src="https://khaliiil.com/mediaOf/26-6-o-m-24.GIF" alt="media_home_9008">
+        <img src="image1.jpg" alt="Image 1">
+        <img src="image2.jpg" alt="Image 2">
+        <img src="image3.jpg" alt="Image 3">
+        <img src="image4.jpg" alt="Image 4">
+        <img src="image5.jpg" alt="Image 5">
+        <img src="image6.jpg" alt="Image 6">
+        <img src="image7.jpg" alt="Image 7">
+        <img src="image8.jpg" alt="Image 8">
+        <img src="image9.jpg" alt="Image 9">
+    </div>
+</body>
+</html>
