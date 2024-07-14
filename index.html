@@ -634,6 +634,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+  const images = document.querySelectorAll('.media-container img');
   const mediaElements = document.querySelectorAll('.media');
   const overlay = document.getElementById('overlay');
   const overlayContent = document.getElementById('overlay-content');
@@ -683,7 +684,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function openOverlay(index) {
-     
+     mediaContainer.style.position = 'fixed';
 var mediaContainers = document.querySelectorAll('.media-container');
 
 mediaContainers.forEach(function(container) {
@@ -729,6 +730,7 @@ mediaContainer.style.overflow = 'none';
   }
 
   function closeOverlay() {
+    mediaContainer.style.position = 'absolute';
     overlay.style.display = 'none';
     enableScroll();
     if (currentOverlayVideo) {
