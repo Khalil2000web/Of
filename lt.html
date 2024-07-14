@@ -72,7 +72,7 @@
 
     <div class="overlay" id="overlay">
         <img id="overlay-img" src="" alt="Overlay Image">
-        <img src="https://path/to/close-icon.png" alt="Close" class="close-btn" id="close-btn">
+        <img src="https://khaliiil.com/Xbtn.PNG" alt="C" class="close-btn" id="close-btn">
     </div>
 
     <script>
@@ -85,13 +85,15 @@
             image.addEventListener('click', () => {
                 overlayImg.src = image.src;
                 overlay.style.display = 'flex';
-                document.body.style.overflow = 'hidden'; // Disable scrolling
+                document.body.style.overflow = 'hidden';
+                containerImg.style.position = 'fixed';
             });
         });
 
         closeBtn.addEventListener('click', () => {
             overlay.style.display = 'none';
             document.body.style.overflow = ''; // Enable scrolling
+                containerImg.style.position = 'absolute';
         });
 
         overlay.addEventListener('click', (e) => {
