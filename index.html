@@ -685,7 +685,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function openOverlay(index) {
-     mediaContainer.style.position = 'fixed';
+     mediaContainerImg.style.position = 'fixed';
 var mediaContainers = document.querySelectorAll('.media-container');
 
 mediaContainers.forEach(function(container) {
@@ -731,7 +731,7 @@ mediaContainer.style.overflow = 'none';
   }
 
   function closeOverlay() {
-    mediaContainer.style.position = 'absolute';
+    mediaContainerImg.style.position = 'absolute';
     overlay.style.display = 'none';
     enableScroll();
     if (currentOverlayVideo) {
