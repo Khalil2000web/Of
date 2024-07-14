@@ -3,51 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Grid</title>
+    <title>Image Gallery</title>
     <style>
-        body, html {
+        body {
             margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow: auto;
-            background-color:black;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #fff;
+            overflow-x: hidden; /* Prevent horizontal scroll */
         }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); /* Adjust the minimum size as needed */
-            grid-auto-rows: auto;
-            width: 100%;
-            height: 100%;
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
         }
-        .grid img {
-            width: 100%;
+        .container img {
+            width: 90%;
             height: auto;
-            object-fit: cover;
-            margin: 0;
-            padding: 0;
-            color:whute;
+            margin: 10px;
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: flex-start;
+            overflow: hidden;
+        }
+        .overlay img {
+            margin: 10px;
+            margin-top: 0;
+            max-width: calc(100% - 20px);
+            max-height: calc(100% - 60px); /* Space for the close button */
+        }
+        .close-btn {
+            position: fixed;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
-    <div class="grid">
+    <div class="container">
         <img src="https://khaliiil.com/mediaOf/J.JPG" alt="media_home_9010">
         <img src="https://khaliiil.com/mediaOf/26-6-o-m-24-II.JPG" alt="media_home_9010">
         <img src="https://khaliiil.com/mediaOf/26-6-o-m-24-III.GIF" alt="media_home_9009">
         <img src="https://khaliiil.com/mediaOf/26-6-o-m-24.GIF" alt="media_home_9008">
-        <img src="https://khaliiil.com/mediaOf/J.JPG" alt="media_home_9010">
-        <img src="https://khaliiil.com/mediaOf/26-6-o-m-24-II.JPG" alt="media_home_9010">
-        <img src="https://khaliiil.com/mediaOf/26-6-o-m-24-III.GIF" alt="media_home_9009">
-        <img src="https://khaliiil.com/mediaOf/26-6-o-m-24.GIF" alt="media_home_9008">
-        <img src="https://khaliiil.com/mediaOf/J.JPG" alt="media_home_9010">
-        <img src="https://khaliiil.com/mediaOf/26-6-o-m-24-II.JPG" alt="media_home_9010">
-        <img src="https://khaliiil.com/mediaOf/26-6-o-m-24-III.GIF" alt="media_home_9009">
-        <img src="https://khaliiil.com/mediaOf/26-6-o-m-24.GIF" alt="media_home_9008">
-        <img src="https://khaliiil.com/mediaOf/J.JPG" alt="media_home_9010">
-        <img src="https://khaliiil.com/mediaOf/26-6-o-m-24-II.JPG" alt="media_home_9010">
-        <img src="https://khaliiil.com/mediaOf/26-6-o-m-24-III.GIF" alt="media_home_9009">
-        <img src="https://khaliiil.com/mediaOf/26-6-o-m-24.GIF" alt="media_home_9008">
-        
+        <img src="https://www.khaliiil.com/IMG_7634.jpg" alt="media_home_9007">
+        <img src="https://www.khaliiil.com/IMG_7632.jpg" alt="media_home_9006">
+        <img src="https://www.khaliiil.com/St.GIF" alt="media_home_9005">
+        <img src="https://www.khaliiil.com/Cl.GIF" alt="media_home_9004">
+        <img src="https://www.khaliiil.com/T-1.JPG" alt="media_home_9003">
+        <img src="https://www.khaliiil.com/Bu.GIF" alt="media_home_9002">
     </div>
+
+    <div class="overlay" id="overlay">
+        <img id="overlay-img" src="" alt="Overlay Image">
+        <img src="https://path/to/close-icon.png" alt="Close" class="close-btn" id="close-btn">
+    </div>
+
+    <script>
+        const images = document.querySelectorAll('.container img');
+        const overlay = document.getElementById('overlay');
+        const overlayImg = document.getElementById('overlay-img');
+        const closeBtn = document.getElementById('close-btn');
+
+        images.forEach(image => {
+            image.addEventListener('click', () => {
+                overlayImg.src = image.src;
+                overlay.style.display = 'flex';
+                document.body.style.overflow = 'hidden'; // Disable scrolling
+            });
+        });
+
+        closeBtn.addEventListener('click', () => {
+            overlay.style.display = 'none';
+            document.body.style.overflow = ''; // Enable scrolling
+        });
+
+        overlay.addEventListener('click', (e) => {
+            if (e.target !== overlayImg && e.target !== closeBtn) {
+                overlay.style.display = 'none';
+                document.body.style.overflow = ''; // Enable scrolling
+            }
+        });
+    </script>
 </body>
 </html>
