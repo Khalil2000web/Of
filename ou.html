@@ -4,18 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        .outlined-text {
+        .bold-outline-text {
             font-size: 50px; /* Set your desired font size */
-            color: white; /* Set the color of the text */
+            color: black; /* Set the color of the text */
             text-shadow: 
-                -1px -1px 0 #000,  
-                 1px -1px 0 #000,
-                -1px  1px 0 #000,
-                 1px  1px 0 #000; /* Create the outline effect with black shadow */
+                1px 1px 0 black,
+                -1px 1px 0 black,
+                1px -1px 0 black,
+                -1px -1px 0 black,
+                1px 0px 0 black,
+                -1px 0px 0 black,
+                0px 1px 0 black,
+                0px -1px 0 black; /* Create the bold outline effect */
         }
     </style>
 </head>
 <body>
-    <p class="outlined-text">Outlined Text</p>
+    <p class="bold-outline-text">Bold Outline Text</p>
 </body>
 </html>
