@@ -4,19 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+  @font-face {
+  font-family: 'BB Manual Mono Pro TX';
+  src: url('BBManualMonoProTX-Regular.woff2') format('woff2');}
+  
     .outline-text {
+      font-family: 'BB Manual Mono Pro TX';
       font-size: 40px;
       color: black;
-      -webkit-text-stroke: 0.95px black; /* For WebKit browsers */
+      -webkit-text-stroke: 0.2px black; /* For WebKit browsers */
     }
     .outline-text-fallback {
+      font-family: 'BB Manual Mono Pro TX';
       font-size: 40px;
       color: black;
-      text-shadow: 
-        1px 0 0 black,
-        -1px 0 0 black,
-        0 1px 0 black,
-        0 -1px 0 black;
+text-shadow: 
+        2px 2px 0 black,
+        -2px -2px 0 black,
+        2px -2px 0 black,
+        -2px 2px 0 black,
+        2px 0px 0 black,
+        -2px 0px 0 black,
+        0px 2px 0 black,
+        0px -2px 0 black;
     }
   </style>
   <title>Text Outline Example</title>
