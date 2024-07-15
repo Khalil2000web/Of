@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .outline-text {
+      font-size: 40px;
+      color: black;
+      -webkit-text-stroke: 0.95px black; /* For WebKit browsers */
+    }
+    .outline-text-fallback {
+      font-size: 40px;
+      color: black;
+      text-shadow: 
+        1px 0 0 black,
+        -1px 0 0 black,
+        0 1px 0 black,
+        0 -1px 0 black;
+    }
+  </style>
+  <title>Text Outline Example</title>
+</head>
+<body>
+  <div class="outline-text" id="outlinedText">Outlined Text</div>
+  <div class="outline-text-fallback" id="outlinedTextFallback" style="display: none;">Outlined Text</div>
+
+  <script>
+    // Check for support of -webkit-text-stroke
+    const isWebkitSupported = CSS.supports('-webkit-text-stroke', '0.95px black');
+
+    if (!isWebkitSupported) {
+      // If not supported, hide the WebKit-specific text and show the fallback
+      document.getElementById('outlinedText').style.display = 'none';
+      document.getElementById('outlinedTextFallback').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
