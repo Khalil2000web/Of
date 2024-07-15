@@ -4,22 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-        @font-face {font-family: 'BB Manual Mono Pro TX';src: url('https://www.khaliiil.com/BBManualMonoProTX-Regular.woff2') format('woff2');}
-        .bold-outline-text {
-            font-family: 'BB Manual Mono Pro TX';
+            @font-face {font-family: 'BB Manual Mono Pro TX';src: url('https://www.khaliiil.com/BBManualMonoProTX-Regular.woff2') format('woff2');}
+        .smooth-outline-text {
+                        font-family: 'BB Manual Mono Pro TX';
             font-size: 50px; /* Set your desired font size */
             color: black; /* Set the color of the text */
             text-shadow: 
-                2px 2px 0 black,
-                -2px 2px 0 black,
-                2px -2px 0 black,
-                -2px -2px 0 black;
-            outline: 2px solid black; /* Create the bold outline using outline */
-            outline-offset: -2px; /* Offset the outline to align with the text */
+                0 0 4px black, /* Create a soft shadow for a smoother outline */
+                0 0 4px black,
+                0 0 4px black,
+                0 0 4px black;
+            -webkit-text-stroke: 2px black; /* Stroke for browsers that support it */
+            text-stroke: 2px black; /* Stroke for browsers that support it */
         }
     </style>
 </head>
 <body>
-    <p class="bold-outline-text">Bold Outline Text</p>
+    <p class="smooth-outline-text">Smooth Outline Text</p>
 </body>
 </html>
