@@ -5,48 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modern Webpage</title>
     <style>
-        body {
+        /* Resetting default margin and padding */
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styles */
+        body {
             font-family: 'Arial', sans-serif;
             background-color: #f4f4f4;
         }
+
+        /* Navigation bar styles */
         .navbar {
             background-color: #333;
             overflow: hidden;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            z-index: 1000;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
+
         .navbar ul {
             list-style-type: none;
             margin: 0;
             padding: 0;
             display: flex;
+            justify-content: center;
         }
-        .navbar ul li {
+
+        .navbar li {
             margin: 0 10px;
         }
-        .navbar ul li a {
+
+        .navbar a {
             display: block;
-            color: #fff;
+            color: white;
             text-align: center;
-            padding: 18px 20px;
+            padding: 18px 22px;
             text-decoration: none;
             font-size: 16px;
             transition: background-color 0.3s, color 0.3s;
         }
-        .navbar ul li a:hover {
+
+        .navbar a:hover {
             background-color: #4CAF50;
             color: white;
             border-radius: 4px;
         }
+
+        /* Content area styles */
         .content {
             padding: 20px;
             margin-top: 60px;
+            text-align: center;
+        }
+
+        .content h1 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 18px;
+            color: #666;
+            line-height: 1.6;
         }
     </style>
 </head>
