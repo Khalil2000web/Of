@@ -31,6 +31,66 @@ font-family: 'BB Manual Mono Pro TX';
 src: url('https://khaliiil.com/BBManualMonoProTX-Regular.woff2') format('woff2');
 }
 
+.title-container {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2000; /* ensure it's on top of other content */
+}
+
+.left-title, .right-title {
+    font-size: 20px;
+    color: white;
+}
+
+.left-title {
+    left: 0;
+    padding-left: 60px; /* Adjust as needed */
+}
+
+.right-title {
+    right: 0;
+    padding-right: 60px; /* Adjust as needed */
+}
+
+.title-container.hidden {
+    display: none; /* hide the container when it has the hidden class */
+}
+
+.left-title a, .right-title a {
+    color: inherit; /* inherit text color from parent */
+    text-decoration: none; /* remove underline from links */
+    cursor: pointer; /* change cursor to pointer on hover */
+}
+
+h1 {
+    font-size: inherit; /* Inherit font size */
+    font-weight: normal; /* Set font weight to normal */
+    margin: 0; /* Remove default margin */
+}
+
+.new-text {
+    position: absolute;
+    top: -1em; /* Adjust as needed to position above the left title */
+    left: 60px; /* Match the padding of the left title */
+    font-size: 20px; /* Adjust font size as needed */
+}
+
+@media screen and (min-width: 601px) {
+    .left-title {
+        padding-left: 80px; /* Adjust as needed */
+    }
+
+    .new-text {
+        left: 80px; /* Match the padding of the left title */
+    }
+
+    .right-title {
+        padding-right: 80px; /* Adjust as needed */
+    }
+}
+
+
 body {
   margin: 0;
   font-family: 'BB Manual Mono Pro TX', arial;
