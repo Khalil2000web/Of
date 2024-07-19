@@ -1,96 +1,64 @@
-nav.top-nav {
-    margin-top: 14px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    z-index: 1000;
-    background-color: none;
-    color:white;
+        @font-face {
+            font-family: 'BB Manual Mono Pro TX';
+            src: url('https://music.khaliiil.com/BBManualMonoProTX-Regular 2.woff2') format('woff2');
+            /* Additional font properties (e.g., font-weight, font-style) can be specified here */
+        }
+body {
+  margin: 0;
+  font-family: 'BB Manual Mono Pro TX', arial;
+  text-transform:uppercase;
 }
 
-.nav-items {
-    display: flex;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    color:white;
+.nav-top, .nav-bottom {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }
 
-.nav-items div {
-    margin: 0 10px; /* Adjust this margin to control the space between buttons */
+.nav-top {
+  top: 0;
+  height: 60px;
+  background: none; /* More transparent */
 }
 
-.nav-items div a {
-    font-family: 'BB Manual Mono Pro TX';
-    font-size: 19px;
-    color: white;
-    text-decoration: none;
-    padding: 2px;
+.nav-top .menu {
+  display: flex;
+  gap: 25px;
 }
 
-@media screen and (max-width: 200px) {
-    .nav-items div a {
-        font-size: 17px;
-        margin: 0.9px;
-    }
+.nav-top .menu a {
+  color: black;
+  text-decoration: none;
+  padding-bottom: 5px;
+  font-weight: 300; /* Custom font style */
+  font-size:20px;
 }
 
-@media screen and (max-width: 300px) and (min-width: 201px) {
-    .nav-items div a {
-        font-size: 180px;
-        margin: 2px;
-    }
+.nav-top .menu a:hover {
+  transform: scale(1.2);
 }
 
-@media screen and (max-width: 450px) and (min-width: 301px) {
-    .nav-items div a {
-        font-size: 20.0px;
-        margin: 2.9px;
-    }
+.nav-bottom {
+  bottom: 0;
+  height: 50px;
+  background: none; /* Less transparent */
 }
 
-@media screen and (max-width: 550px) and (min-width: 451px) {
-    .nav-items div a {
-        font-size: 210px;
-        margin: 8px;
-    }
+.nav-bottom .social-icons {
+  display: flex;
+  gap: 20px;
 }
 
-@media screen and (max-width: 660px) and (min-width: 551px) {
-    .nav-items div a {
-        font-size: 21px;
-        margin: 19.99px;
-    }
+.nav-bottom .social-icons a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.2em; /* Custom size for uniqueness */
 }
 
-@media screen and (max-width: 780px) and (min-width: 661px) {
-    .nav-items div a {
-        font-size: 22px;
-        margin: 27px;
-    }
-}
-
-@media screen and (max-width: 900px) and (min-width: 781px) {
-    .nav-items div a {
-        font-size: 22px;
-        margin: 28.8px;
-    }
-}
-
-@media screen and (max-width: 1800px) and (min-width: 901px) {
-    .nav-items div a {
-        font-size: 22px;
-        margin: 290.99px;
-    }
-}
-
-@media screen and (min-width: 961px) {
-    .nav-items div a {
-        font-size: 23.0px;
-        margin: 39px;
-    }
+.nav-bottom .social-icons a:hover {
+    transform:scale(1.2);
 }
