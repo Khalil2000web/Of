@@ -31,7 +31,7 @@ body {
 }
 
 .nav-top .menu a {
-  color: black;
+  color: white;
   text-decoration: none;
   padding-bottom: 5px;
   font-weight: 300; /* Custom font style */
@@ -54,7 +54,7 @@ body {
 }
 
 .nav-bottom .social-icons a {
-  color: black;
+  color: white;
   text-decoration: none;
   font-size: 1.2em; /* Custom size for uniqueness */
 }
