@@ -1,7 +1,4 @@
-        @font-face {
-            font-family: 'BB Manual Mono Pro TX';
-            src: url('https://khaliiil.com/BBManualMonoProTX-Regular 2.woff2') format('woff2');
-        }
+
 body {
   margin: 0;
   font-family: 'BB Manual Mono Pro TX', arial;
