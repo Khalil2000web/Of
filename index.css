@@ -1,7 +1,6 @@
         @font-face {
             font-family: 'BB Manual Mono Pro TX';
-            src: url('https://music.khaliiil.com/BBManualMonoProTX-Regular 2.woff2') format('woff2');
-            /* Additional font properties (e.g., font-weight, font-style) can be specified here */
+            src: url('https://khaliiil.com/BBManualMonoProTX-Regular 2.woff2') format('woff2');
         }
 body {
   margin: 0;
