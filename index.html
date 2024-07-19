@@ -94,6 +94,75 @@ h1 {font-size: inherit;font-weight: normal;margin: 0;}
 @media screen and (max-width: 400px) {.left-title {padding-left: 37px;}.right-title {padding-right: 37px;}}
 
 
+       @font-face {
+            font-family: 'BB Manual Mono Pro TX';
+            src: url('https://music.khaliiil.com/BBManualMonoProTX-Regular 2.woff2') format('woff2');
+            /* Additional font properties (e.g., font-weight, font-style) can be specified here */
+        }
+body {
+  margin: 0;
+  font-family: 'BB Manual Mono Pro TX', arial;
+  text-transform:uppercase;
+}
+
+.nav-top, .nav-bottom {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.nav-top {
+  top: 0;
+  height: 60px;
+  background: none; /* More transparent */
+}
+
+.nav-top .menu {
+  display: flex;
+  gap: 45px;
+}
+
+.nav-top .menu a {
+  color: white;
+  text-decoration: none;
+  padding-bottom: 5px;
+  font-weight: 300; /* Custom font style */
+  font-size:20px;
+}
+
+.nav-top .menu a:hover {
+  transform: scale(1.2);
+}
+
+.nav-bottom {
+  bottom: 0;
+  height: 50px;
+  background: none; /* Less transparent */
+}
+
+.nav-bottom .social-icons {
+  display: flex;
+  gap: 50px;
+}
+
+.nav-bottom .social-icons a {
+  color: white;
+  text-decoration: none;
+  font-size: 1em; /* Custom size for uniqueness */
+}
+
+.nav-bottom .social-icons a:hover {
+    transform:scale(1.2);
+}
+
+
+
+
+
 
 html, body {
   margin: 0;
