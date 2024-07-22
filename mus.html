@@ -9,6 +9,10 @@
 font-family: 'BB Manual Mono Pro TX';
 src: url('https://khaliiil.com/BBManualMonoProTX-Regular.woff2') format('woff2');
 }
+@font-face {
+    font-family: 'BBManualMonoProTX';
+    src: url('https://khaliiil.com/BBManualMonoProTX-SemiBold.woff2') format('woff2');
+}
         body {
 font-family: 'BB Manual Mono Pro TX', arial;
             background-color: #000;
@@ -203,9 +207,10 @@ font-family: 'BB Manual Mono Pro TX', arial;
 .song-row.expanded .song-number,
 .song-row.expanded .song-name {
     font-size: 1.3em; /* Adjust as needed */
-    font-weight: bold; /* Optional for emphasis */
+    font-weight: normal; /* Optional for emphasis */
     border: none;
     margin-top: 5px;
+    font-family: 'BBManualMonoProTX', Arial;
 }
 .expanded-row {
     display: none;
@@ -237,7 +242,7 @@ font-family: 'BB Manual Mono Pro TX', arial;
     padding-right: 25px;
 }
 .buttons button {
-    font-family: 'BB Manual Mono Pro TX';
+    font-family: 'BBManualMonoProTX', Arial;
     margin: 0 0;
     background: none;
     border: none;
@@ -246,20 +251,20 @@ font-family: 'BB Manual Mono Pro TX', arial;
     cursor: pointer;
     font-size: 15px;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 300;
 }
 .buttons button:hover, .buttons button.touched {
-    text-decoration: underline;
-}
+    border-bottom:1px solid white;
+    }
 .buttons p {
     background: none;
     border: none;
     color: #fff;
     padding: 0px 0px;
     cursor: pointer;
-    font-family: 'BB Manual Mono Pro TX', arial;
+    font-family: 'BBManualMonoProTX', Arial;
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 300;
 }
 .buttons span {
     margin: 0 5px;
@@ -789,7 +794,7 @@ font-family: 'BB Manual Mono Pro TX', arial;
     </div>
         <div class="song-row" onclick="toggleExpand(26)">
         <div class="song-number">26.</div>
-        <div class="song-name">summer renaissance</div>
+        <div class="song-name">summer renaissance</div>=
     </div>
     <div class="expanded-row" id="expanded-row-26">
         <div class="icons-row">
