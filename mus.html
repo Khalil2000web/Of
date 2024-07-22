@@ -165,18 +165,18 @@ font-family: 'BB Manual Mono Pro TX', arial;
 
           .fixed-button {
             position: fixed;
-            top: 0;
+            top: 100px;
             left: 50%;
             transform: translateX(-50%);
-            background-color: none; /* Transparent background */
+            background-color: none;
             color: white;
             border: none;
-            padding: 110px 20px;
             font-size: 16px;
             cursor: pointer;
             text-decoration: none;
             z-index: 1000;
             margin:0;
+            padding-top:0;
         }
 
 
@@ -184,115 +184,144 @@ font-family: 'BB Manual Mono Pro TX', arial;
 
 
         .song-row {
-            display: flex;
-            align-items: center;
-            padding: 10px;
-            cursor: pointer;
-            padding-bottom:10px;
-        }
-        .song-number {
-            padding-left: 25px;
-        }
-        .song-name {
-            margin-left: auto;
-            padding-right:25px;
-            text-align:right;
-            word-wrap:break-word;
-        }
-        .song-row.expanded .song-number, 
-.song-row.expanded .song-name {
-    font-size: 1.2em; /* Adjust as needed */
-    font-weight: bold; /* Optional for emphasis */
+    display: flex;
+    align-items: bottom;
+    padding: 10px;
+    cursor: pointer;
+    max-height: 500px; /* Limit for the top frame */
+    overflow-y: hidden; /* Handle overflow for the top frame */
 }
-        .expanded-row {
-            display: none;
-            flex-direction: row;
-            padding: 10px;
-            background: none;
-            padding-top:0;
-        }
-        .icons-row {
-            display: block;
-            margin-right:auto;
-            margin-left:20px;
-        }
-        .icons-row img {
-            padding-left: 5px;
-            height: 23px;
-            width: auto;
-        }
-        .buttons {
-            font-family: 'BB Manual Mono Pro TX', arial;
-            display: flex;
-            align-items: center;
-            margin-left: auto;
-            padding-top:0;
-            margin-top:0;
-            padding-right:25px;
-        }
-        .buttons button {
-            font-family: 'BB Manual Mono Pro TX';
-            margin: 0 0;
-            background: none;
-            border: none;
-            color: #fff;
-            padding: 0px 0px;
-            cursor: pointer;
-            font-size:15px;
-            text-transform:uppercase;
-            text-decoration:underline;
-        }
-        .buttons p {
-            background: none;
-            border: none;
-            color: #fff;
-            padding: 0px 0px;
-            cursor: pointer;
-            font-family: 'BB Manual Mono Pro TX', arial;
-            font-size:1px;
-        }
-        .buttons span {
-            margin: 0 5px;
-        }
-        .overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
-
-        .overlay-content {
+.song-number {
+    padding-left: 25px;
+}
+.song-name {
+    margin-left: auto;
+    padding-right: 25px;
+    text-align: right;
+    word-wrap: break-word;
+}
+.song-row.expanded .song-number,
+.song-row.expanded .song-name {
+    font-size: 1.3em; /* Adjust as needed */
+    font-weight: bold; /* Optional for emphasis */
+    border: none;
+    margin-top: 5px;
+}
+.expanded-row {
+    display: none;
+    flex-direction: row;
+    padding: 10px;
+    background: none;
+    padding-top: 0;
+    flex-grow: 1; /* Allow the bottom frame to auto-size */
+    padding-bottom:40px;
+    padding-top:10.5px;
+}
+.icons-row {
+    display: block;
+    margin-right: auto;
+    margin-left: 20px;
+}
+.icons-row img {
+    padding-left: 5px;
+    height: 23px;
+    width: auto;
+}
+.buttons {
+    font-family: 'BB Manual Mono Pro TX', arial;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    padding-top: 0;
+    margin-top: 0;
+    padding-right: 25px;
+}
+.buttons button {
+    font-family: 'BB Manual Mono Pro TX';
+    margin: 0 0;
+    background: none;
+    border: none;
+    color: #fff;
+    padding: 0px 0px;
+    cursor: pointer;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.buttons button:hover, .buttons button.touched {
+    text-decoration: underline;
+}
+.buttons p {
+    background: none;
+    border: none;
+    color: #fff;
+    padding: 0px 0px;
+    cursor: pointer;
+    font-family: 'BB Manual Mono Pro TX', arial;
+    font-size: 15px;
+    font-weight: 600;
+}
+.buttons span {
+    margin: 0 5px;
+}
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 1);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.overlay-content {
     background: none;
     padding: 30px;
-    max-width: 90%;
-    max-height: 80vh; /* Adjust as needed */
+    max-width: 97%;
+    max-height: 100%; /* Adjust as needed */
     overflow-y: auto; /* Use auto for vertical scrolling */
     position: relative;
     margin-top: 30px;
     text-align: center;
     font-size: 20px;
-    z-index:999;
-    line-height: 2.3; /* Adjusts the space between lines of text */
+    z-index: 999;
+    line-height: 2.5; /* Adjusts the space between lines of text */
+    padding-left:5px;
+    padding-right:5px;
 }
-        .close-btn {
-            position: absolute;
-            top: 0px;
-            right: 0px;
-            margin-top:20px;
-            margin-bottom:600px;
-            margin-right:20px;
-            margin-left:600px;
-            cursor: pointer;
-            max-width:20px;
-            height:auto;
-            z-index:10000;
-        }
+.overlay-content h1{
+    font-size:30px;
+}
+.overlay-content p {
+    margin-top:130px;
+}
+.overlay-content h2 {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    font-size:28px;
+    width:100%;
+    background:black;
+    max-height:100px;
+    padding-top:90px;
+}
+.close-btn {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin-top: 20px;
+    margin-bottom: 600px;
+    margin-right: 20px;
+    margin-left: 600px;
+    cursor: pointer;
+    max-width: 20px;
+    height: auto;
+    z-index: 10000;
+}
 
     </style>
 </head>
@@ -381,6 +410,8 @@ font-family: 'BB Manual Mono Pro TX', arial;
         </div>
         <div class="buttons">
             <button onclick="openOverlay('credits-overlay-3')">Credits</button>
+            <span>/</span>
+            <button onclick="openOverlay('lyrics-overlay-3')">Lyrics</button>
         </div>
     </div>
     <!-- Repeat for each song -->
@@ -486,7 +517,7 @@ font-family: 'BB Manual Mono Pro TX', arial;
     </div>
     <div class="song-row" onclick="toggleExpand(10)">
         <div class="song-number">10.</div>
-        <div class="song-name">mi gente</div>
+        <div class="song-name">sWEET ★ HONEY ★ BUCKIIN'</div>
     </div>
     <div class="expanded-row" id="expanded-row-10">
         <div class="icons-row">
@@ -503,7 +534,7 @@ font-family: 'BB Manual Mono Pro TX', arial;
     </div>
     <div class="song-row" onclick="toggleExpand(11)">
         <div class="song-number">11.</div>
-        <div class="song-name">mi gente</div>
+        <div class="song-name">naughty boy</div>
     </div>
     <div class="expanded-row" id="expanded-row-11">
         <div class="icons-row">
@@ -520,7 +551,7 @@ font-family: 'BB Manual Mono Pro TX', arial;
     </div>
     <div class="song-row" onclick="toggleExpand(12)">
         <div class="song-number">12.</div>
-        <div class="song-name">mi gente</div>
+        <div class="song-name">move</div>
     </div>
     <div class="expanded-row" id="expanded-row-12">
         <div class="icons-row">
@@ -537,7 +568,7 @@ font-family: 'BB Manual Mono Pro TX', arial;
     </div>
     <div class="song-row" onclick="toggleExpand(13)">
         <div class="song-number">13.</div>
-        <div class="song-name">mi gente</div>
+        <div class="song-name">energy</div>
     </div>
     <div class="expanded-row" id="expanded-row-13">
         <div class="icons-row">
@@ -551,9 +582,10 @@ font-family: 'BB Manual Mono Pro TX', arial;
             <span>/</span>
             <button onclick="openOverlay('lyrics-overlay-13')">Lyrics</button>
         </div>
-    </div><div class="song-row" onclick="toggleExpand(14)">
+    </div>
+    <div class="song-row" onclick="toggleExpand(14)">
         <div class="song-number">14.</div>
-        <div class="song-name">mi gente</div>
+        <div class="song-name">run the world</div>
     </div>
     <div class="expanded-row" id="expanded-row-14">
         <div class="icons-row">
@@ -568,29 +600,264 @@ font-family: 'BB Manual Mono Pro TX', arial;
             <button onclick="openOverlay('lyrics-overlay-14')">Lyrics</button>
         </div>
     </div>
+    <div class="song-row" onclick="toggleExpand(15)">
+        <div class="song-number">15.</div>
+        <div class="song-name">my power</div>
+    </div>
+    <div class="expanded-row" id="expanded-row-15">
+        <div class="icons-row">
+            <a href="spotify-link-1" target="_blank"><img src="https://music.khaliiil.com/apple-512.png" alt="apple"></a>
+            <a href="apple-link-1" target="_blank"><img src="https://music.khaliiil.com/spotify-512.png" alt="spotify"></a>
+            <a href="tidal-link-1" target="_blank"><img src="https://music.khaliiil.com/amazon-512.png" alt="amazon"></a>
+            <a href="tidal-link-1" target="_blank"><img src="https://music.khaliiil.com/youtube-512.png" alt="youtube"></a>
+        </div>
+        <div class="buttons">
+            <button onclick="openOverlay('credits-overlay-15')">Credits</button>
+            <span>/</span>
+            <button onclick="openOverlay('lyrics-overlay-15')">Lyrics</button>
+        </div>
+    </div>
+    <div class="song-row" onclick="toggleExpand(16)">
+        <div class="song-number">16.</div>
+        <div class="song-name">america has a problem</div>
+    </div>
+    <div class="expanded-row" id="expanded-row-16">
+        <div class="icons-row">
+            <a href="spotify-link-1" target="_blank"><img src="https://music.khaliiil.com/apple-512.png" alt="apple"></a>
+            <a href="apple-link-1" target="_blank"><img src="https://music.khaliiil.com/spotify-512.png" alt="spotify"></a>
+            <a href="tidal-link-1" target="_blank"><img src="https://music.khaliiil.com/amazon-512.png" alt="amazon"></a>
+            <a href="tidal-link-1" target="_blank"><img src="https://music.khaliiil.com/youtube-512.png" alt="youtube"></a>
+        </div>
+        <div class="buttons">
+            <button onclick="openOverlay('credits-overlay-16')">Credits</button>
+            <span>/</span>
+            <button onclick="openOverlay('lyrics-overlay-16')">Lyrics</button>
+        </div>
+    </div>
+    <div class="song-row" onclick="toggleExpand(17)">
+        <div class="song-number">17.</div>
+        <div class="song-name">no church in the wild</div>
+    </div>
+    <div class="expanded-row" id="expanded-row-17">
+        <div class="icons-row">
+            <a href="spotify-link-1" target="_blank"><img src="https://music.khaliiil.com/apple-512.png" alt="apple"></a>
+            <a href="apple-link-1" target="_blank"><img src="https://music.khaliiil.com/spotify-512.png" alt="spotify"></a>
+            <a href="tidal-link-1" target="_blank"><img src="https://music.khaliiil.com/amazon-512.png" alt="amazon"></a>
+            <a href="tidal-link-1" target="_blank"><img src="https://music.khaliiil.com/youtube-512.png" alt="youtube"></a>
+        </div>
+        <div class="buttons">
+            <button onclick="openOverlay('credits-overlay-17')">Credits</button>
+            <span>/</span>
+            <button onclick="openOverlay('lyrics-overlay-17')">Lyrics</button>
+        </div>
+    </div>
+    <div class="song-row" onclick="toggleExpand(18)">
+        <div class="song-number">18.</div>
+        <div class="song-name">apeshit</div>
+    </div>
+    <div class="expanded-row" id="expanded-row-18">
+        <div class="icons-row">
+            <a href="spotify-link-1" target="_blank"><img src="https://music.khaliiil.com/apple-512.png" alt="apple"></a>
+            <a href="apple-link-1" target="_blank"><img src="https://music.khaliiil.com/spotify-512.png" alt="spotify"></a>
+            <a href="tidal-link-1" target="_blank"><img src="https://music.khaliiil.com/amazon-512.png" alt="amazon"></a>
+            <a href="tidal-link-1" target="_blank"><img src="https://music.khaliiil.com/youtube-512.png" alt="youtube"></a>
+        </div>
+        <div class="buttons">
+            <button onclick="openOverlay('credits-overlay-18')">Credits</button>
+            <span>/</span>
+            <button onclick="openOverlay('lyrics-overlay-18')">Lyrics</button>
+        </div>
+    </div>
+    <div class="song-row" onclick="toggleExpand(19)">
+        <div class="song-number">19.</div>
+        <div class="song-name">pure/honey</div>
+    </div>
+    <div class="expanded-row" id="expanded-row-19">
+        <div class="icons-row">
+            <a href="spotify-link-1" target="_blank"><img src="https://music.khaliiil.com/apple-512.png" alt="apple"></a>
+            <a href="apple-link-1" target="_blank"><img src="https://music.khaliiil.com/spotify-512.png" alt="spotify"></a>
+            <a href="tidal-link-1" target="_blank"><img src="https://music.khaliiil.com/amazon-512.png" alt="amazon"></a>
+            <a href="tidal-link-1" target="_blank"><img src="https://music.khaliiil.com/youtube-512.png" alt="youtube"></a>
+        </div>
+        <div class="buttons">
+            <button onclick="openOverlay('credits-overlay-19')">Credits</button>
+            <span>/</span>
+            <button onclick="openOverlay('lyrics-overlay-19')">Lyrics</button>
+        </div>
+    </div>
+        <div class="song-row" onclick="toggleExpand(20)">
+        <div class="song-number">20.</div>
+        <div class="song-name">virgo's groove</div>
+    </div>
+    <div class="expanded-row" id="expanded-row-20">
+        <div class="icons-row">
+            <a href="spotify-link-1" target="_blank"><img src="https://music.khaliiil.com/apple-512.png" alt="apple"></a>
+            <a href="apple-link-1" target="_blank"><img src="https://music.khaliiil.com/spotify-512.png" alt="spotify"></a>
+            <a href="tidal-link-1" target="_blank"><img src="https://music.khaliiil.com/amazon-512.png" alt="amazon"></a>
+            <a href="tidal-link-1" target="_blank"><img src="https://music.khaliiil.com/youtube-512.png" alt="youtube"></a>
+        </div>
+        <div class="buttons">
+            <button onclick="openOverlay('credits-overlay-20')">Credits</button>
+            <span>/</span>
+            <button onclick="openOverlay('lyrics-overlay-20')">Lyrics</button>
+        </div>
+    </div>
+        <div class="song-row" onclick="toggleExpand(21)">
+        <div class="song-number">21.</div>
+        <div class="song-name">cuff it</div>
+    </div>
+    <div class="expanded-row" id="expanded-row-21">
+        <div class="icons-row">
+            <a href="spotify-link-1" target="_blank"><img src="https://music.khaliiil.com/apple-512.png" alt="apple"></a>
+            <a href="apple-link-1" target="_blank"><img src="https://music.khaliiil.com/spotify-512.png" alt="spotify"></a>
+            <a href="tidal-link-1" target="_blank"><img src="https://music.khaliiil.com/amazon-512.png" alt="amazon"></a>
+            <a href="tidal-link-1" target="_blank"><img src="https://music.khaliiil.com/youtube-512.png" alt="youtube"></a>
+        </div>
+        <div class="buttons">
+            <button onclick="openOverlay('credits-overlay-21')">Credits</button>
+            <span>/</span>
+            <button onclick="openOverlay('lyrics-overlay-21')">Lyrics</button>
+        </div>
+    </div>
+        <div class="song-row" onclick="toggleExpand(22)">
+        <div class="song-number">22.</div>
+        <div class="song-name">river deep mountain high</div>
+    </div>
+    <div class="expanded-row" id="expanded-row-22">
+        <div class="icons-row">
+            <a href="spotify-link-1" target="_blank"><img src="https://music.khaliiil.com/apple-512.png" alt="apple"></a>
+            <a href="apple-link-1" target="_blank"><img src="https://music.khaliiil.com/spotify-512.png" alt="spotify"></a>
+            <a href="tidal-link-1" target="_blank"><img src="https://music.khaliiil.com/amazon-512.png" alt="amazon"></a>
+            <a href="tidal-link-1" target="_blank"><img src="https://music.khaliiil.com/youtube-512.png" alt="youtube"></a>
+        </div>
+        <div class="buttons">
+            <button onclick="openOverlay('credits-overlay-22')">Credits</button>
+            <span>/</span>
+            <button onclick="openOverlay('lyrics-overlay-22')">Lyrics</button>
+        </div>
+    </div>
+        <div class="song-row" onclick="toggleExpand(23)">
+        <div class="song-number">23.</div>
+        <div class="song-name">party</div>
+    </div>
+    <div class="expanded-row" id="expanded-row-23">
+        <div class="icons-row">
+            <a href="spotify-link-1" target="_blank"><img src="https://music.khaliiil.com/apple-512.png" alt="apple"></a>
+            <a href="apple-link-1" target="_blank"><img src="https://music.khaliiil.com/spotify-512.png" alt="spotify"></a>
+            <a href="tidal-link-1" target="_blank"><img src="https://music.khaliiil.com/amazon-512.png" alt="amazon"></a>
+            <a href="tidal-link-1" target="_blank"><img src="https://music.khaliiil.com/youtube-512.png" alt="youtube"></a>
+        </div>
+        <div class="buttons">
+            <button onclick="openOverlay('credits-overlay-23')">Credits</button>
+            <span>/</span>
+            <button onclick="openOverlay('lyrics-overlay-23')">Lyrics</button>
+        </div>
+    </div>
+        <div class="song-row" onclick="toggleExpand(24)">
+        <div class="song-number">24.</div>
+        <div class="song-name">sorry</div>
+    </div>
+    <div class="expanded-row" id="expanded-row-24">
+        <div class="icons-row">
+            <a href="spotify-link-1" target="_blank"><img src="https://music.khaliiil.com/apple-512.png" alt="apple"></a>
+            <a href="apple-link-1" target="_blank"><img src="https://music.khaliiil.com/spotify-512.png" alt="spotify"></a>
+            <a href="tidal-link-1" target="_blank"><img src="https://music.khaliiil.com/amazon-512.png" alt="amazon"></a>
+            <a href="tidal-link-1" target="_blank"><img src="https://music.khaliiil.com/youtube-512.png" alt="youtube"></a>
+        </div>
+        <div class="buttons">
+            <button onclick="openOverlay('credits-overlay-24')">Credits</button>
+            <span>/</span>
+            <button onclick="openOverlay('lyrics-overlay-24')">Lyrics</button>
+        </div>
+    </div>
+        <div class="song-row" onclick="toggleExpand(25)">
+        <div class="song-number">25.</div>
+        <div class="song-name">me, myself and i</div>
+    </div>
+    <div class="expanded-row" id="expanded-row-25">
+        <div class="icons-row">
+            <a href="spotify-link-1" target="_blank"><img src="https://music.khaliiil.com/apple-512.png" alt="apple"></a>
+            <a href="apple-link-1" target="_blank"><img src="https://music.khaliiil.com/spotify-512.png" alt="spotify"></a>
+            <a href="tidal-link-1" target="_blank"><img src="https://music.khaliiil.com/amazon-512.png" alt="amazon"></a>
+            <a href="tidal-link-1" target="_blank"><img src="https://music.khaliiil.com/youtube-512.png" alt="youtube"></a>
+        </div>
+        <div class="buttons">
+            <button onclick="openOverlay('credits-overlay-25')">Credits</button>
+            <span>/</span>
+            <button onclick="openOverlay('lyrics-overlay-25')">Lyrics</button>
+        </div>
+    </div>
+        <div class="song-row" onclick="toggleExpand(26)">
+        <div class="song-number">26.</div>
+        <div class="song-name">summer renaissance</div>
+    </div>
+    <div class="expanded-row" id="expanded-row-26">
+        <div class="icons-row">
+            <a href="spotify-link-1" target="_blank"><img src="https://music.khaliiil.com/apple-512.png" alt="apple"></a>
+            <a href="apple-link-1" target="_blank"><img src="https://music.khaliiil.com/spotify-512.png" alt="spotify"></a>
+            <a href="tidal-link-1" target="_blank"><img src="https://music.khaliiil.com/amazon-512.png" alt="amazon"></a>
+            <a href="tidal-link-1" target="_blank"><img src="https://music.khaliiil.com/youtube-512.png" alt="youtube"></a>
+        </div>
+        <div class="buttons">
+            <button onclick="openOverlay('credits-overlay-26')">Credits</button>
+            <span>/</span>
+            <button onclick="openOverlay('lyrics-overlay-26')">Lyrics</button>
+        </div>
+    </div>
 
     <br><br><br><br><br><br><br>
     <!-- Add more songs here -->
 
     <!-- Credits Overlays -->
+
     <div id="credits-overlay-1" class="overlay">
-        <img src="https://github.com/Dibacarter/Of/raw/main/system/D2F4C472-AD0C-4B13-8920-37AD3DD9EB63.png" class="close-btn" onclick="closeOverlay('credits-overlay-1')">
+            <img src="https://github.com/Dibacarter/Of/raw/main/system/D2F4C472-AD0C-4B13-8920-37AD3DD9EB63.png" class="close-btn" onclick="closeOverlay('credits-overlay-1')">
         <div class="overlay-content">
-        <div>
-        </div>
+            <p>
+            <h1>HOLY GRAIL</h1>
+A SONG BY: JAY-Z FEAT. JUSTIN TIMBERLAKE
+
+SONGWRITERS/COMPOSERS: SHAWN CARTER, JUSTIN TIMBERLAKE, TERIUS NASH, TIMOTHY MOSLEY, JEROME HARMON, ERNEST WILSON, KURT COBAIN, DAVE GROHL, KRIST NOVOSELIC
+
+LABEL: ROC-A-FELLA, ROC NATION, UNIVERSAL
+
+ALBUM: MAGNA CARTA HOLY GRAIL
+
+LENGHT: 5:38 (ALBUM VERSION) - 4:00 (RADIO EDIT)
+
+RELEASE DATE: JULY 4, 2013
+            </p>
         </div>
     </div>
     <div id="credits-overlay-2" class="overlay">
             <img src="https://github.com/Dibacarter/Of/raw/main/system/D2F4C472-AD0C-4B13-8920-37AD3DD9EB63.png" class="close-btn" onclick="closeOverlay('credits-overlay-2')">
         <div class="overlay-content">
-            <p>Credits Content for Song 2</p>
+            <p>
+            <h2>CRAZY IN LOVE</h2>
+A SONG BY: BEYONCÉ FEAT. JAY-Z
+SONGWRITERS/COMPOSERS: BEONCÉ KNOWLES, RICH HARRISON, EUGENE RECORD, SHAWN CARTER<br><br>
+LABEL: COLUMBIA
+ALBUM: DANGEROUSLY IN LOVE
+LENGHT:3:56
+RELEASE DATE: MAY 18, 2003<br><br>
+‘CRAZY IN LOVE‘ BY THE AMERICAN SINGER AND SONGWRITER BEYONCÉ FOR HER DEBUT SOLO STUDIO ALBUM DANGEROUSLY IN LOVE (2003). IT FEATURES A RAP VERSE AND AD-LIBS<br>FROM JAY-Z.
+            </p>
+<button style="position:fixed;top:85px;left:50%;transform:translateX(-50%);background:none;color:white;text-decoration:underline;border:none;font-size:20px;text-transform:uppercase;font-family:'BB Manual Mono Pro TX', Arial;text-underline-offset:3.5px;background:black;" onclick="closeOverlay('credits-overlay-2'); openOverlay('lyrics-overlay-2');">open Lyrics</button>
         </div>
     </div>
         <div id="credits-overlay-3" class="overlay">
         <img src="https://github.com/Dibacarter/Of/raw/main/system/D2F4C472-AD0C-4B13-8920-37AD3DD9EB63.png" class="close-btn" onclick="closeOverlay('credits-overlay-3')">
         <div class="overlay-content">
-        <div>
-        </div>
+        <p>
+    <h1>RUN THIS TOWN</h1>
+A SONG BY: JAY-Z FEAT. RIHANNA AND KANYE WEST
+SONGWRITERS/COMPOSERS: SHAWN CARTER, KANYE WEST, ROBYN FENTY, ERNEST WILSON, JEFF BHASKER, ATHANASIOS ALATAS<br><br>
+LABEL: ROC NATION, ATLANTIC
+ALbUM: THE BLUEPRINT 3
+LENGHT: 4:27 (ALBUM VERSION) - 4:34 (SINGLE VERSION)
+RELEASE DATE: AUGUST 9, 2009<br><br>
+‘RUN THIS TOWN‘ BY AMERICAN RAPPER JAY-Z FEATURING BARBADIAN SINGER RIHANNA AND FELLOW AMERICAN RAPPER KANYE WEST.
+        </p>
         </div>
     </div>
     <div id="credits-overlay-4" class="overlay">
@@ -634,18 +901,13 @@ font-family: 'BB Manual Mono Pro TX', arial;
 
 
     <!-- Lyrics Overlays -->
-    <div id="lyrics-overlay-1" class="overlay">
-                <img src="https://github.com/Dibacarter/Of/raw/main/system/D2F4C472-AD0C-4B13-8920-37AD3DD9EB63.png" class="close-btn" onclick="closeOverlay('lyrics-overlay-2')">
-
-        <div class="overlay-content">
-            <div>Lyrics Content for Song 1</div>
-        </div>
-    </div>
     <div id="lyrics-overlay-2" class="overlay">
                 <img src="https://github.com/Dibacarter/Of/raw/main/system/D2F4C472-AD0C-4B13-8920-37AD3DD9EB63.png" class="close-btn" onclick="closeOverlay('lyrics-overlay-2')">
 
         <div class="overlay-content">
-<p>WHEN I TALK TO MY FRIENDS SO QUIETLU (WHO HE THNK HE IS?)
+<p>
+<h2>crazy in love</h2>
+WHEN I TALK TO MY FRIENDS SO QUIETLU (WHO HE THNK HE IS?)
 LOOK AT WHAT YOU DID TO ME
 TENNIS SHOWS, DON’T EVEN NEED TO BUY A NEW DRESS
 IF YOU AIN'T THERE, AIN'T NOBODY ELSE TO IMPRESS<br>
@@ -654,9 +916,33 @@ IT'S THE BEAT THAT MY HEART SKIPS WHEN I'M WITH YOU
 BUT I STILL DON'T UNDERSTAND
 JUST HOW YOUR LOVE CAN DO WHAT NO ONE ELSE CAN
             </p>
+<button style="position:fixed;top:85px;left:50%;transform:translateX(-50%);background:none;color:white;text-decoration:underline;text-underline-offset:3.5px;border:none;font-size:20px;text-transform:uppercase;font-family:'BB Manual Mono Pro TX', Arial;background:black;" onclick="closeOverlay('lyrics-overlay-2'); openOverlay('credits-overlay-2');">open credits</button>
         </div>
     </div>
-    
+
+    <div id="lyrics-overlay-3" class="overlay">
+        <img src="https://github.com/Dibacarter/Of/raw/main/system/D2F4C472-AD0C-4B13-8920-37AD3DD9EB63.png" class="close-btn" onclick="closeOverlay('lyrics-overlay-3')">
+        <div class="overlay-content">
+        <p>
+        LIFE'S A GAME, BUT IT'S NOT FAIR
+I BREAK THE RULES, SO I DON'T CARE
+SO I KEEP DOIN' MY OWN THANG
+WALKIN' TALL AGAINST THE RAIN
+VICTORY'S WITHIN THE MILE
+ALMOST THERE, DON'T GIVE UP NOW
+ONLY THINGS THAT'S ON MY MIND IS WHO'S GON' RUN THIS TOWN TONIGHT
+HEY, HEY, HEY, HEY
+WHO'S GON' RUN THIS TOWN TONIGHT?
+        </p>
+        </div>
+    </div>
+    <div id="lyrics-overlay-3" class="overlay">
+        <img src="https://github.com/Dibacarter/Of/raw/main/system/D2F4C472-AD0C-4B13-8920-37AD3DD9EB63.png" class="close-btn" onclick="closeOverlay('lyrics-overlay-3')">
+        <div class="overlay-content">
+
+        </div>
+    </div>
+
     <!-- Add more lyrics overlays here -->
 
     <script>
@@ -689,10 +975,12 @@ function toggleExpand(id) {
 
 function openOverlay(id) {
     document.getElementById(id).style.display = 'flex';
+    document.body.style.overflow = 'hidden';
 }
 
 function closeOverlay(id) {
     document.getElementById(id).style.display = 'none';
+    document.body.style.overflow = 'auto';
 }
     </script>
 </body>
