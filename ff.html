@@ -105,6 +105,72 @@
             padding-right:70px;
             }
         }
+        
+        .footert {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    background: none;
+    padding: 10px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.footert a {
+    text-decoration: none;
+}
+
+.footert button {
+    background: none;
+    color: #fff;
+    border: none;
+    padding: 12px 0;
+    margin: 0 auto;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-family: 'BB Manual Mono Pro TX', Arial;
+}
+
+@media (max-width: 799px) {
+    .footert {
+        justify-content: space-between;
+    }
+    .footert button {
+        margin: 10px;
+        margin-bottom: 5px;
+    }
+
+    #m {
+        display: flex;
+    }
+    #d {
+        display: none;
+    }
+}
+
+@media (min-width: 800px) {
+    .footert {
+        justify-content: space-between;
+        padding: 10px 50px;
+    }
+    .footert button {
+        font-size: 16px;
+        margin: 0 20px;
+Width:100%;
+    }
+    #d {
+        display: flex;
+    }
+    #m {
+        display: none;
+    }
+}
+
     </style>
 </head>
 <body>
@@ -133,14 +199,21 @@
             <br><br><br>
         </div>
     </div>
-    <div class="bottom-nav">
-        <a href="https:/khaliiil.com/post">post</a>
-        <a href="https:/khaliiil.com/privacy-policy">Privacy</a>
-        <a href="https:/khaliiil.com/terms-conditions">Terms</a>
-        <a href="https:/khaliiil.com/join-club">sub</a>
+    
+   <div class="footert" id="m">
+        <a href="https://day-kit.com/pages/terms-of-service"><button>terms</button></a>
+        <a href="https://day-kit.com/pages/refund-policy"><button>refunds</button></a>
+        <a href="https://day-kit.com/pages/privacy-policy"><button>privacy</button></a>
+        <a href="https://day-kit.com/pages/contact"><button>contact</button></a>
     </div>
 
-    <!-- Modal structure -->
+    <div class="footert" id="d">
+        <a href="https://day-kit.com/pages/terms-of-service"><button>terms of service</button></a>
+        <a href="https://day-kit.com/pages/refund-policy"><button>refunds policy</button></a>
+        <a href="https://day-kit.com/pages/privacy-policy"><button>privacy policy</button></a>
+        <a href="https://day-kit.com/pages/contact"><button>contact</button></a>
+    </div>
+
     <div id="myModal" class="modal">
         <span class="close" onclick="closeModal()"><img style="top:0;right:0;padding:0;margin:0;max-width:20px;height:auto;" src="https://github.com/Dibacarter/Of/raw/main/system/D2F4C472-AD0C-4B13-8920-37AD3DD9EB63.png"/></span>
         <div class="modal-content" id="modalImageContainer">
