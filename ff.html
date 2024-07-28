@@ -155,14 +155,14 @@
         document.body.style.width = '1px'; // Set body width to 1 pixel
         document.querySelector('.content').style.height = '1px'; // Set content height to 1 pixel
         document.querySelector('.content').style.width = '1px'; // Set content height to 1 pixel
-        document.querySelector('.content').style.position = 'fixed'; // Set content height to 1 pixel
+        document.querySelector('.content').style.overflow = 'hidden'; // Set content height to 1 pixel
     }
     function closeModal() {
         document.getElementById('myModal').style.display = "none";
         document.body.style.width = '100%'; // Reset body width to 100%
         document.querySelector('.content').style.height = 'auto';
         document.querySelector('.content').style.width = '100%';
-        document.querySelector('.content').style.position = 'absolute'; // Set content height to 1 pixel
+        document.querySelector('.content').style.overflow = 'auto'; // Set content height to 1 pixel
     }
 </script>
 
