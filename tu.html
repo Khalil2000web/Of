@@ -1,0 +1,315 @@
+  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khalil</title>
+    <style>
+        @font-face {
+            font-family: 'BB Manual Mono Pro TX';
+            src: url('https://tour.khaliiil.com/BBManualMonoProTX-Regular.woff2') format('woff2');
+        }
+        body {
+            font-family: 'BB Manual Mono Pro TX', arial;
+            margin: 0;
+            padding: 0;
+            background-color: #000; /* Black background */
+            color: #fff; /* White text */
+            text-transform: uppercase;
+        }
+        .top-nav, .bottom-nav {
+            background-color: transparent;
+            overflow: hidden;
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+        .top-nav {
+            top: 0;
+        }
+        .bottom-nav {
+            bottom: 0;
+        }
+        .top-nav a, .bottom-nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .top-nav a:hover, .bottom-nav a:hover {
+            background-color: transparent;
+            color: white;
+        }
+        .content {
+            padding: 16px;
+            margin-top: 50px; /* Adjust according to the height of the top nav */
+            margin-bottom: 50px; /* Adjust according to the height of the bottom nav */
+        }
+        .gallery {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-left:16px;
+            padding-right:16px;
+        }
+        .gallery img {
+            width: 100%;
+            max-width: 100%; /* Ensure images don't exceed 1200px width */
+            height: auto;
+            display: block;
+            cursor: pointer;
+             user-select: none;
+  pointer-events: auto;
+  user-drag: none;
+  -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: auto;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+    -webkit-touch-callout: none;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1001;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow:auto;
+            background-color: rgba(0,0,0,0.8);
+        }
+        .modal-content {
+            margin: 0 auto;
+            display: block;
+            width: 100%;
+            height:auto;
+            padding-bottom:80px;
+            max-width: 100%;
+        }
+        .modal-content img {
+            width: 100%;
+            height: auto;
+             user-select: none;
+  pointer-events: auto;
+  user-drag: none;
+  -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: auto;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+    -webkit-touch-callout: none;
+        }
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            color: #fff;
+            font-size: 35px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close img {
+            margin:10px;
+            border: 1px dashed rgba(255,255,255,0.4);
+            top:0;
+            right:0;
+            padding:10px;
+            margin:10px;;
+            max-width:20px;
+            height:auto;
+        }
+        .copyright {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        @media screen and (min-width:900px) {
+        .gallery {
+            padding-left:70px;
+            padding-right:70px;
+            }
+        }
+          .nav-top {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.nav-top {
+  top: 0;
+  height: 60px;
+  background: none; /* More transparent */
+  text-transform:uppercase;
+}
+
+.nav-top .menu {
+  display: flex;
+  gap: 45px;
+}
+
+.nav-top .menu a {
+  color: white;
+  text-decoration: none;
+  padding-bottom: 5px;
+  font-weight: 300; /* Custom font style */
+  font-size:20px;
+}
+        
+        .footert {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    background: none;
+    padding: 10px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.footert a {
+    text-decoration: none;
+}
+
+.footert button {
+    background: none;
+    color: #fff;
+    border: none;
+    padding: 5px 0;
+    margin: 0 auto;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-family: 'BB Manual Mono Pro TX', Arial;
+}
+
+@media (max-width: 799px) {
+    .footert {
+        justify-content: space-between;
+        padding-left:40px;
+        padding-right:40px;
+    }
+    .footert button {
+        margin: 0 5px;
+        margin-bottom: 5px;
+    }
+
+    #m {
+        display: flex;
+    }
+    #d {
+        display: none;
+    }
+}
+
+@media (min-width: 800px) {
+    .footert {
+        justify-content: space-between;
+        padding: 10px 50px;
+    }
+    .footert button {
+        font-size: 16px;
+        margin: 0 20px;
+Width:100%;
+    }
+    #d {
+        display: flex;
+    }
+    #m {
+        display: none;
+    }
+}
+    </style>
+</head>
+<body>
+
+
+<div class="nav-top">
+    <div class="menu">
+      <a href="https://tour.khaliiil.com/">tour</a>
+      <a href="https://shop.khaliiil.com">store</a>
+      <a href="https://music.khaliiil.com/">music</a>
+      <a href="https://khaliiil.com/blog">blog</a>
+    </div>
+  </div>
+   <div class="footert" id="m">
+        <a href="https://khaliiil.com/terms-conditions">
+        <button>
+        terms
+        </button>
+        </a>
+        <a href="https://khaliiil.com/join-club"><button>join</button></a>
+        <a href="https://khaliiil.com/post"><button>post</button></a>
+        <a href="https://khaliiil.com/privacy-policy"><button>privacy</button></a>
+    </div>
+
+    <div class="footert" id="d">
+        <a href="https://khaliiil.com/terms-conditions"><button>terms & conditions</button></a>
+        <a href="https://khaliiil.com/join-club"><button>join</button></a>
+        <a href="https://khaliiil.com/post"><button>post</button></a>
+        <a href="https://khaliiil.com/privacy-policy"><button>privacy policy</button></a>
+    </div>
+
+
+    <div class="content">
+        <div class="gallery">
+            <img src="https://khaliiil.com/mediaOf/J.JPG" alt="media_home_9010" onclick="openModal(this)">
+            <img src="https://khaliiil.com/mediaOf/26-6-o-m-24-II.JPG" alt="media_home_9010" onclick="openModal(this)">
+            <img src="https://khaliiil.com/mediaOf/26-6-o-m-24-III.GIF" alt="media_home_9009" onclick="openModal(this)">
+            <img src="https://khaliiil.com/mediaOf/26-6-o-m-24.GIF" alt="media_home_9008" onclick="openModal(this)">
+            <img src="https://www.khaliiil.com/IMG_7634.jpg" alt="media_home_9007" onclick="openModal(this)">
+            <img src="https://www.khaliiil.com/IMG_7632.jpg" alt="media_home_9006" onclick="openModal(this)">
+            <img src="https://www.khaliiil.com/St.GIF" alt="media_home_9005" onclick="openModal(this)">
+            <img src="https://www.khaliiil.com/Cl.GIF" alt="media_home_9004" onclick="openModal(this)">
+            <img src="https://www.khaliiil.com/T-1.JPG" alt="media_home_9003" onclick="openModal(this)">
+            <img src="https://www.khaliiil.com/Bu.GIF" alt="media_home_9002" onclick="openModal(this)">
+            <img src="https://www.khaliiil.com/mediaOf/5a67e1ae-0c7b-494c-8440-3eb7d7f35ac9.jpeg" alt="media_home_9000" onclick="openModal(this)">
+        </div>
+        <div class="copyright">
+            © 2024 Khalil
+            <br><br>
+        </div>
+    </div>
+
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()"><img src="https://github.com/Dibacarter/Of/raw/main/system/D2F4C472-AD0C-4B13-8920-37AD3DD9EB63.png"/></span>
+        <div class="modal-content" id="modalImageContainer">
+            <img id="modalImage">
+        </div>
+    </div>
+
+    <script>
+        function openModal(element) {
+            document.getElementById('myModal').style.display = "block";
+            document.getElementById('modalImage').src = element.src;
+            document.body.style.overflow = 'hidden';
+        }
+        function closeModal() {
+            document.getElementById('myModal').style.display = "none";
+            document.body.style.overflow = 'auto';
+        }
+    </script>
+</body>
+</html>
