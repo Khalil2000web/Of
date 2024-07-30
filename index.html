@@ -70,7 +70,6 @@
             margin-bottom: 0; /* Adjust according to the height of the bottom nav */
         }
         .gallery {
-            height:20px;
     padding-top: 0;
     display: flex;
     flex-direction: column;
@@ -118,11 +117,11 @@
             user-select:none;
             user-drag:none;
             touch-action:none;
-            -webkit-touch-callout: none; /* Safari */
--khtml-user-select: none;    /* Konqueror HTML */
--moz-user-select: none;      /* Firefox */
--ms-user-select: none;       /* Internet Explorer/Edge */
-user-select: none;           /* Non-prefixed version, currently supported by Chrome, Opera, and others */
+            -webkit-touch-callout: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
         }
         .modal-content {
             margin: 0 auto;
@@ -163,7 +162,6 @@ user-select: none;           /* Non-prefixed version, currently supported by Chr
         }
         .close img {
             margin:10px;
-            border: 1px solid rgba(255,255,255,0.4);
             top:0;
             border-radius:4px;
             right:0;
@@ -187,7 +185,7 @@ user-select: none;           /* Non-prefixed version, currently supported by Chr
     user-drag: none;
     -webkit-touch-callout: none;
         }
-        .close img:hover {
+        .close img:hover, .close img.touched, .close img.clicked {
             background: rgba(128, 128, 128, 0.3);
             border-radius:5px;
             border: 1px solid rgba(255,255,255,0.4);
@@ -356,82 +354,132 @@ font-size:24px;
 </head>
 <body>
 <div class="nav-top">
-    <div class="menu">
-      <a href="https://tour.khaliiil.com/">TOUR</a>
-      <a href="https://shop.khaliiil.com">SHOP</a>
-      <a href="https://music.khaliiil.com/">MUSIC</a>
-      <a href="https://khaliiil.com/blog">BLOG</a>
-    </div>
-  </div>
-   <div class="footert" id="m">
-        <a href="https://khaliiil.com/join-club">JOIN</a>
-        <a href="https://khaliiil.com/terms-conditions">
-        TERMS
-        </a>
-    <p>&copy;</p>
-        <a href="https://khaliiil.com/posts">POST</a>
-        <a href="https://khaliiil.com/privacy-policy">PRIVACY</a>
-    </div>
+<div class="menu">
+<a href="https://tour.khaliiil.com/">
+TOUR
+</a>
+<a href="https://shop.khaliiil.com">
+SHOP
+</a>
+<a href="https://music.khaliiil.com/">
+MUSIC
+</a>
+<a href="https://khaliiil.com/blog">
+BLOG
+</a>
+</div>
+</div>
+<div class="footert" id="m">
+<a href="https://khaliiil.com/join-club">
+JOIN
+</a>
+<a href="https://khaliiil.com/terms-conditions">
+TERMS
+</a>
+<p>
+&copy;
+</p>
+<a href="https://khaliiil.com/posts">
+POST
+</a>
+<a href="https://khaliiil.com/privacy-policy">
+PRIVACY
+</a>
+</div>
 
 <div class="footert" id="d">
-    <a href="https://khaliiil.com/join-club">JOIN</a>
-    <a href="https://khaliiil.com/terms-conditions">TERMS & CONDITIONS</a>
-    <p>&copy; 2024 KHALIL</p>
-    <a href="https://khaliiil.com/posts">POST</a>
-    <a href="https://khaliiil.com/privacy-policy">PRIVACY POLICY</a>
+<a href="https://khaliiil.com/join-club">
+JOIN
+</a>
+<a href="https://khaliiil.com/terms-conditions">
+TERMS & CONDITIONS
+</a>
+<p>
+&copy; 2024 KHALIL
+</p>
+<a href="https://khaliiil.com/posts">
+POST
+</a>
+<a href="https://khaliiil.com/privacy-policy">
+PRIVACY POLICY
+</a>
 </div>
 
 <div class="container">
 <div class="gallery">
-<img src="https://github.com/Dibacarter/Of/raw/main/mediaOf/6.GIF" loading="lazy" data-modal-style="overflow-y:scroll;" alt="media_home_9016" onclick="openModal(this)">
-<img src="https://github.com/Dibacarter/Of/raw/main/mediaOf/5.jpg" loading="lazy" data-modal-style="overflow-y:auto;" alt="media_home_9015" onclick="openModal(this)">
-<img src="https://github.com/Dibacarter/Of/raw/main/mediaOf/4.jpg" loading="lazy" data-modal-style="overflow-y:scroll;" alt="media_home_9014" onclick="openModal(this)">
-<img src="https://img-cdn.heictojpg.com/jpg/b776fd5d7c04b774/3.jpg" loading="lazy" data-modal-style="overflow-y:auto;" alt="media_home_9013" onclick="openModal(this)">
+<img src="https://github.com/Dibacarter/Of/raw/main/mediaOf/6.GIF" data-modal-style="overflow-y:scroll;" alt="media_home_9016" onclick="openModal(this)">
+<img src="https://github.com/Dibacarter/Of/raw/main/mediaOf/5.jpg" data-modal-style="overflow-y:auto;" alt="media_home_9015" onclick="openModal(this)">
+<img src="https://github.com/Dibacarter/Of/raw/main/mediaOf/4.jpg" data-modal-style="overflow-y:scroll;" alt="media_home_9014" onclick="openModal(this)">
+<img src="https://img-cdn.heictojpg.com/jpg/b776fd5d7c04b774/3.jpg" data-modal-style="overflow-y:auto;" alt="media_home_9013" onclick="openModal(this)">
 <img src="https://khaliiil.com/mediaOf/IMG_6400.jpeg" loading="lazy" data-modal-style="overflow-y:auto;" alt="media_home_9012" onclick="openModal(this)">
-<img src="https://img-cdn.heictojpg.com/jpg/b776fd5d7c04b774/1.jpg" loading="lazy" data-modal-style="overflow-y:auto;" alt="media_home_9011" onclick="openModal(this)">
+<img src="https://img-cdn.heictojpg.com/jpg/b776fd5d7c04b774/1.jpg" data-modal-style="overflow-y:auto;" alt="media_home_9011" onclick="openModal(this)">
 <a href="https://music.khaliiil.com">
 <img loading="lazy" src="https://khaliiil.com/mediaOf/J.JPG" alt="media_home_9010">
 </a>
-<img src="https://khaliiil.com/mediaOf/26-6-o-m-24-II.JPG" loading="lazy" data-modal-style="overflow-y:auto;" alt="media_home_9010" onclick="openModal(this)">
-<img src="https://khaliiil.com/mediaOf/26-6-o-m-24-III.GIF" loading="lazy" data-modal-style="overflow-y:auto;" alt="media_home_9009" onclick="openModal(this)">
-<img src="https://khaliiil.com/mediaOf/26-6-o-m-24.GIF" loading="lazy" data-modal-style="overflow-y:auto;" alt="media_home_9008" onclick="openModal(this)">
-<img src="https://www.khaliiil.com/IMG_7634.jpg" loading="lazy" data-modal-style="overflow-y:auto;" alt="media_home_9007" onclick="openModal(this)">
-<img src="https://www.khaliiil.com/IMG_7632.jpg" loading="lazy" data-modal-style="overflow-y:auto;" alt="media_home_9006" onclick="openModal(this)">
-<img src="https://www.khaliiil.com/St.GIF" loading="lazy" data-modal-style="overflow-y:auto;" alt="media_home_9005" onclick="openModal(this)">
-<img src="https://www.khaliiil.com/Cl.GIF" loading="lazy" data-modal-style="overflow-y:auto;" alt="media_home_9004" onclick="openModal(this)">
-<img src="https://www.khaliiil.com/T-1.JPG" loading="lazy" data-modal-style="overflow-y:scroll;" data-modal-style="overflow-y:auto;touch-action:none;" alt="media_home_9003" onclick="openModal(this)">
-<img src="https://www.khaliiil.com/Bu.GIF" loading="lazy" data-modal-style="overflow-y:auto;" alt="media_home_9002" onclick="openModal(this)">
+<img src="https://khaliiil.com/mediaOf/26-6-o-m-24-II.JPG" data-modal-style="overflow-y:auto;" alt="media_home_9010" onclick="openModal(this)">
+<img src="https://khaliiil.com/mediaOf/26-6-o-m-24-III.GIF" data-modal-style="overflow-y:auto;" alt="media_home_9009" onclick="openModal(this)">
+<img src="https://khaliiil.com/mediaOf/26-6-o-m-24.GIF" data-modal-style="overflow-y:auto;" alt="media_home_9008" onclick="openModal(this)">
+<img src="https://www.khaliiil.com/IMG_7634.jpg" data-modal-style="overflow-y:auto;" alt="media_home_9007" onclick="openModal(this)">
+<img src="https://www.khaliiil.com/IMG_7632.jpg" data-modal-style="overflow-y:auto;" alt="media_home_9006" onclick="openModal(this)">
+<img src="https://www.khaliiil.com/St.GIF" data-modal-style="overflow-y:auto;" alt="media_home_9005" onclick="openModal(this)">
+<img src="https://www.khaliiil.com/Cl.GIF" data-modal-style="overflow-y:auto;" alt="media_home_9004" onclick="openModal(this)">
+<img src="https://www.khaliiil.com/T-1.JPG" data-modal-style="overflow-y:scroll;" data-modal-style="overflow-y:auto;touch-action:none;" alt="media_home_9003" onclick="openModal(this)">
+<img src="https://www.khaliiil.com/Bu.GIF" data-modal-style="overflow-y:auto;" alt="media_home_9002" onclick="openModal(this)">
 <img src="https://www.khaliiil.com/mediaOf/5a67e1ae-0c7b-494c-8440-3eb7d7f35ac9.jpeg" loading="lazy" data-modal-style="overflow-y:auto;" alt="media_home_9000" onclick="openModal(this)">
 </div>
 
-    <div id="myModal" class="modal">
-        <span class="close" onclick="closeModal()"><img src="https://github.com/Dibacarter/Of/raw/main/system/D2F4C472-AD0C-4B13-8920-37AD3DD9EB63.png"/></span>
-        <div class="modal-content" id="modalImageContainer">
-            <img id="modalImage">
-        </div>
-    </div>
+<div id="myModal" class="modal">
+<span class="close" onclick="closeModal()"><img src="https://github.com/Dibacarter/Of/raw/main/system/D2F4C472-AD0C-4B13-8920-37AD3DD9EB63.png"/></span>
+<div class="modal-content" id="modalImageContainer">
+<img id="modalImage">
+</div>
+</div>
 
-   <script>
-   function openModal(element) {
-  var modal = document.getElementById('myModal');
-  var modalImage = document.getElementById('modalImage');
-  modal.style.display = "block";
-  modalImage.src = element.src;
-  modalImage.style = element.getAttribute('data-modal-style');
-  document.body.style.overflow = 'hidden';
-  document.body.style.touchAction = 'none';   // For most modern browsers
+<script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-JavaScript-Templates/3.20.0/js/tmpl.min.js" integrity="sha512-yQJVqoTPFSC73MaslsQaVJ0zHku4Cby3NpQzweSYju+kduWspfF4HmJ3zAo1QGERfsoXdf45q54ph8XTjOlp8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdn.jsdelivr.net/gh/Dibacarter/Of@latest/ff.js">
+function openModal(element) {
+var modal = document.getElementById('myModal');
+var modalImage = document.getElementById('modalImage');
+modal.style.display = "block";
+modalImage.src = element.src;
+modalImage.style = element.getAttribute('data-modal-style');
+document.body.style.overflow = 'hidden';
+document.body.style.touchAction = 'none';   // For most modern browsers
 document.body.style.msTouchAction = 'none'; // For Internet Explorer
 document.body.style.webkitTouchAction = 'none'; // For older versions of Safari (if needed)
+document.querySelector('.gallery').style.overflowY = 'hidden';
 }
-
 function closeModal() {
-  document.getElementById('myModal').style.display = "none";
-  document.body.style.overflow = 'auto';
-  document.body.style.touchAction = '';   // Reset for most modern browsers
+document.getElementById('myModal').style.display = "none";
+document.body.style.overflow = 'auto';
+document.body.style.touchAction = '';   // Reset for most modern browsers
 document.body.style.msTouchAction = ''; // Reset for Internet Explorer
 document.body.style.webkitTouchAction = ''; // Reset for older versions of Safari (if needed)
 }
-    </script>
+</script>
+
+<script>
+function openModal(element) {
+var modal = document.getElementById('myModal');
+var modalImage = document.getElementById('modalImage');
+modal.style.display = "block";
+modalImage.src = element.src;
+modalImage.style = element.getAttribute('data-modal-style');
+document.body.style.overflow = 'hidden';
+document.body.style.touchAction = 'none';   // For most modern browsers
+document.body.style.msTouchAction = 'none'; // For Internet Explorer
+document.body.style.webkitTouchAction = 'none'; // For older versions of Safari (if needed)
+document.querySelector('.gallery').style.overflowY = 'hidden';
+}
+function closeModal() {
+document.getElementById('myModal').style.display = "none";
+document.body.style.overflow = 'auto';
+document.body.style.touchAction = '';   // Reset for most modern browsers
+document.body.style.msTouchAction = ''; // Reset for Internet Explorer
+document.body.style.webkitTouchAction = ''; // Reset for older versions of Safari (if needed)
+}
+</script>
 
 </body>
 </html>
