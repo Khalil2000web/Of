@@ -27,7 +27,7 @@
 <style>
         @font-face {
             font-family: 'BB Manual Mono Pro TX';
-            src: url('https://tour.khaliiil.com/BBManualMonoProTX-Regular.woff2') format('woff2');
+            src: url('https://www.khaliiil.com/BBManualMonoProTX-Regular.woff2') format('woff2');
         }
         body {
             font-family: 'BB Manual Mono Pro TX', arial;
@@ -63,19 +63,18 @@
             color: white;
         }
         .container {
-            width:100%;
-            height:10px;
+            position:absolute;
             padding: 0;
             margin-top: 0; /* Adjust according to the height of the top nav */
             margin-bottom: 0; /* Adjust according to the height of the bottom nav */
+        
         }
         .gallery {
+
     padding-top: 0;
-    display: flex;
     flex-direction: column;
     align-items: center;
-    padding-left: 10px;
-    padding-right: 10px;
+    touch-action:visible;
 }
         .gallery img {
             width: 100%;
@@ -102,9 +101,12 @@
     color:white;
     text-decoration:none;
     cursor: pointer;
+    width:100%;
+    height:auto;
 }
 
         .modal {
+          touch-action:pan-x pan-y;
             display: none;
             position: fixed;
             z-index: 1001;
@@ -131,11 +133,11 @@
             max-width: 100%;
         }
         .modal-content img {
+          overflow:auto;
   width: 100%; /* Default style */
   height: auto; /* Default style */
              user-select: none;
   pointer-events: auto;
-touch-action:none;
   user-drag: none;
   -webkit-user-select: none;
     -moz-user-select: none;
@@ -410,7 +412,7 @@ PRIVACY POLICY
 </div>
 
 <div class="container">
-<div class="gallery">
+<div class="gallery" id="co987">
 <img src="https://github.com/Dibacarter/Of/raw/main/mediaOf/6.GIF" data-modal-style="overflow-y:scroll;" alt="media_home_9016" onclick="openModal(this)">
 <img src="https://github.com/Dibacarter/Of/raw/main/mediaOf/5.jpg" data-modal-style="overflow-y:auto;" alt="media_home_9015" onclick="openModal(this)">
 <img src="https://github.com/Dibacarter/Of/raw/main/mediaOf/4.jpg" data-modal-style="overflow-y:scroll;" alt="media_home_9014" onclick="openModal(this)">
@@ -427,7 +429,7 @@ PRIVACY POLICY
 <img src="https://www.khaliiil.com/IMG_7632.jpg" data-modal-style="overflow-y:auto;" alt="media_home_9006" onclick="openModal(this)">
 <img src="https://www.khaliiil.com/St.GIF" data-modal-style="overflow-y:auto;" alt="media_home_9005" onclick="openModal(this)">
 <img src="https://www.khaliiil.com/Cl.GIF" data-modal-style="overflow-y:auto;" alt="media_home_9004" onclick="openModal(this)">
-<img src="https://www.khaliiil.com/T-1.JPG" data-modal-style="overflow-y:scroll;" data-modal-style="overflow-y:auto;touch-action:none;" alt="media_home_9003" onclick="openModal(this)">
+<img src="https://www.khaliiil.com/T-1.JPG" data-modal-style="overflow:scroll;touch-action:visible;" data-modal-style="overflow-y:auto;touch-action:none;" alt="media_home_9003" onclick="openModal(this)">
 <img src="https://www.khaliiil.com/Bu.GIF" data-modal-style="overflow-y:auto;" alt="media_home_9002" onclick="openModal(this)">
 <img src="https://www.khaliiil.com/mediaOf/5a67e1ae-0c7b-494c-8440-3eb7d7f35ac9.jpeg" loading="lazy" data-modal-style="overflow-y:auto;" alt="media_home_9000" onclick="openModal(this)">
 </div>
@@ -448,7 +450,7 @@ function openModal(element) {
     modalImage.style = element.getAttribute('data-modal-style');
     document.body.style.overflow = 'hidden';
     document.body.style.touchAction = 'none';
-    document.querySelector('.gallery').style.overflowY = 'hidden';
+    document.querySelector('.gallery').style.overflow = 'hidden';
     document.querySelector('.gallery').style.touchAction = 'none';
 }
 
@@ -456,8 +458,9 @@ function closeModal() {
     document.getElementById('myModal').style.display = "none";
     document.body.style.overflow = 'auto';
     document.body.style.touchAction = '';
-    document.querySelector('.gallery').style.overflowY = 'auto';
+    document.querySelector('.gallery').style.overflow = 'auto';
     document.querySelector('.gallery').style.touchAction = '';
+    document.querySelector('.container').style.width = '';
 }
 </script>
 
