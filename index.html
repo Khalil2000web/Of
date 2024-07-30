@@ -190,7 +190,9 @@
             border-radius:5px;
             border: 1px solid rgba(255,255,255,0.4);
         }
-
+        .close img:active {
+            background:none;
+        }
         @media screen and (min-width:900px) {
             .modal-content {
                 padding-bottom:90px;
@@ -435,29 +437,11 @@ PRIVACY POLICY
 </div>
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-JavaScript-Templates/3.20.0/js/tmpl.min.js" integrity="sha512-yQJVqoTPFSC73MaslsQaVJ0zHku4Cby3NpQzweSYju+kduWspfF4HmJ3zAo1QGERfsoXdf45q54ph8XTjOlp8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-<script src="https://cdn.jsdelivr.net/gh/Dibacarter/Of@latest/ff.js">
-function openModal(element) {
-var modal = document.getElementById('myModal');
-var modalImage = document.getElementById('modalImage');
-modal.style.display = "block";
-modalImage.src = element.src;
-modalImage.style = element.getAttribute('data-modal-style');
-document.body.style.overflow = 'hidden';
-document.body.style.touchAction = 'none';   // For most modern browsers
-document.body.style.msTouchAction = 'none'; // For Internet Explorer
-document.body.style.webkitTouchAction = 'none'; // For older versions of Safari (if needed)
-document.querySelector('.gallery').style.overflowY = 'hidden';
-}
-function closeModal() {
-document.getElementById('myModal').style.display = "none";
-document.body.style.overflow = 'auto';
-document.body.style.touchAction = '';   // Reset for most modern browsers
-document.body.style.msTouchAction = ''; // Reset for Internet Explorer
-document.body.style.webkitTouchAction = ''; // Reset for older versions of Safari (if needed)
-}
-</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/javascript-state-machine/3.1.0/state-machine.min.js" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/JavaScript-autoComplete/1.0.4/auto-complete.min.js" integrity="sha512-LwZthDLbb+dritfG9jbFyY1ClYqlkF4I9foqo+783wcl6EPR+kE3uqb0OPsieHt4pFH4HVduwX6rTTDmCaC20g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-JavaScript-Templates/3.20.0/js/tmpl.min.js" integrity="sha512-yQJVqoTPFSC73MaslsQaVJ0zHku4Cby3NpQzweSYju+kduWspfF4HmJ3zAo1QGERfsoXdf45q54ph8XTjOlp8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/gh/Dibacarter/Of@latest/ff.js"></script>
 
 <script>
 function openModal(element) {
