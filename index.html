@@ -44,16 +44,17 @@
             color: white;
         }
         .content {
-            padding: 16px;
-            margin-top: 50px; /* Adjust according to the height of the top nav */
-            margin-bottom: 50px; /* Adjust according to the height of the bottom nav */
+            padding: 0;
+            margin-top: 0; /* Adjust according to the height of the top nav */
+            margin-bottom: 0; /* Adjust according to the height of the bottom nav */
         }
         .gallery {
+            padding-top:0;
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding-left:16px;
-            padding-right:16px;
+            padding-left:25px;
+            padding-right:25px;
         }
         .gallery img {
             width: 100%;
@@ -136,12 +137,7 @@
         .close img:hover {
             background: rgba(128, 128, 128, 0.3);
             border-radius:5px;
-            border:none;
-        }
-        .copyright {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 14px;
+            border: 1px solid rgba(255,255,255,0.4);
         }
 
         @media screen and (min-width:900px) {
@@ -149,8 +145,8 @@
                 padding-bottom:90px;
             }
         .gallery {
-            padding-left:70px;
-            padding-right:70px;
+            padding-left:50px;
+            padding-right:50px;
             }
         }
           .nav-top {
@@ -235,7 +231,7 @@ font-size:24px;
 }
 
         
-        .footert {
+.footert {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -248,11 +244,8 @@ font-size:24px;
     align-items: center;
 }
 
-.footert a {
+.footert a, .footert p {
     text-decoration: none;
-}
-
-.footert button {
     background: none;
     color: #fff;
     border: none;
@@ -265,11 +258,15 @@ font-size:24px;
     font-family: 'BB Manual Mono Pro TX', Arial;
 }
 
+.footert p {
+    margin: 0 10px; /* Add margin if necessary for spacing */
+}
+
 @media (max-width: 799px) {
     .footert {
         justify-content: space-between;
-        padding-left:40px;
-        padding-right:40px;
+        padding-left: 40px;
+        padding-right: 40px;
     }
     .footert button {
         margin: 0 5px;
@@ -292,7 +289,7 @@ font-size:24px;
     .footert button {
         font-size: 16px;
         margin: 0 20px;
-Width:100%;
+        width: 100%;
     }
     #d {
         display: flex;
@@ -301,22 +298,9 @@ Width:100%;
         display: none;
     }
 }
-.copy-r120 {
-    position:fixed;
-    color:white;
-    bottom:50px;
-    left:50%;
-    top:auto;
-    transform: translateX(-50%);
-    font-size:11px;
-}
     </style>
 </head>
 <body>
-
-<div class="copy-r120">
-&copy; 2024 Khalil
-</div>
 
 <div class="nav-top">
     <div class="menu">
@@ -327,23 +311,22 @@ Width:100%;
     </div>
   </div>
    <div class="footert" id="m">
+        <a href="https://khaliiil.com/join-club">join</a>
         <a href="https://khaliiil.com/terms-conditions">
-        <button>
         terms
-        </button>
         </a>
-        <a href="https://khaliiil.com/join-club"><button>join</button></a>
-        <a href="https://khaliiil.com/post"><button>post</button></a>
-        <a href="https://khaliiil.com/privacy-policy"><button>privacy</button></a>
+    <p>&copy;</p>
+        <a href="https://khaliiil.com/post">post</a>
+        <a href="https://khaliiil.com/privacy-policy">privacy</a>
     </div>
 
-    <div class="footert" id="d">
-        <a href="https://khaliiil.com/terms-conditions"><button>terms & conditions</button></a>
-        <a href="https://khaliiil.com/join-club"><button>join</button></a>
-        <a href="https://khaliiil.com/post"><button>post</button></a>
-        <a href="https://khaliiil.com/privacy-policy"><button>privacy policy</button></a>
-    </div>
-
+<div class="footert" id="d">
+    <a href="https://khaliiil.com/join-club">join</a>
+    <a href="https://khaliiil.com/terms-conditions">terms & conditions</a>
+    <p>&copy; 2024 KHALIL</p>
+    <a href="https://khaliiil.com/posts">post</a>
+    <a href="https://khaliiil.com/privacy-policy">privacy policy</a>
+</div>
 
     <div class="content">
         <div class="gallery">
@@ -359,11 +342,6 @@ Width:100%;
             <img src="https://www.khaliiil.com/Bu.GIF" alt="media_home_9002" onclick="openModal(this)">
             <img src="https://www.khaliiil.com/mediaOf/5a67e1ae-0c7b-494c-8440-3eb7d7f35ac9.jpeg" alt="media_home_9000" onclick="openModal(this)">
         </div>
-        <div class="copyright">
-            © 2024 Khalil
-            <br><br>
-        </div>
-    </div>
 
     <div id="myModal" class="modal">
         <span class="close" onclick="closeModal()"><img src="https://github.com/Dibacarter/Of/raw/main/system/D2F4C472-AD0C-4B13-8920-37AD3DD9EB63.png"/></span>
@@ -377,11 +355,54 @@ Width:100%;
             document.getElementById('myModal').style.display = "block";
             document.getElementById('modalImage').src = element.src;
             document.body.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden';
+            document.body.style.overflow = 'hidden';
+
         }
         function closeModal() {
             document.getElementById('myModal').style.display = "none";
             document.body.style.overflow = 'auto';
         }
     </script>
+
 </body>
 </html>
