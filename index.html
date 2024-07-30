@@ -1,3 +1,4 @@
+  
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -154,6 +155,21 @@
             margin:10px;;
             max-width:20px;
             height:auto;
+                        cursor: pointer;
+             user-select: none;
+  pointer-events: auto;
+  user-drag: none;
+  -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: auto;
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+    -webkit-touch-callout: none;
         }
         .close img:hover {
             background: rgba(128, 128, 128, 0.3);
@@ -204,21 +220,10 @@
 .nav-top .menu {
     gap:20px;
 }
-        .gallery {
-    padding-left: 5px;
-    padding-right: 5px;
-}
 }
 @media screen and (min-width:301px) and (max-width:500px) {
 .nav-top .menu {
-    gap:50px;
-}
-.nav-top .menu a {
-font-size:21px;
-}
-.gallery {
-    padding-left: 12px;
-    padding-right: 12px;
+    gap:30px;
 }
 }
 
@@ -228,10 +233,6 @@ font-size:21px;
 }
 .nav-top .menu a {
     font-size:22px;
-}
-        .gallery {
-    padding-left: 14px;
-    padding-right: 14px;
 }
 }
 
@@ -323,7 +324,7 @@ font-size:24px;
         justify-content: space-between;
         padding: 10px 50px;
     }
-    .footert a {
+    .footert button {
         font-size: 16px;
         margin: 0 20px;
         width: 100%;
@@ -366,6 +367,14 @@ font-size:24px;
 
     <div class="container">
         <div class="gallery">
+
+            <img src="https://khaliiil.com/mediaOf/6.GIF" alt="media_home_9016" onclick="openModal(this)">
+            <img src="https://khaliiil.com/mediaOf/5.jpg" alt="media_home_9015" onclick="openModal(this)">
+            <img src="https://khaliiil.com/mediaOf/4.jpg" alt="media_home_9014" onclick="openModal(this)">
+            <img src="https://img-cdn.heictojpg.com/jpg/b776fd5d7c04b774/3.jpg" alt="media_home_9013" onclick="openModal(this)">
+            <img src="https://khaliiil.com/mediaOf/IMG_6400.jpeg" alt="media_home_9012" onclick="openModal(this)">
+            <img src="https://img-cdn.heictojpg.com/jpg/b776fd5d7c04b774/1.jpg" alt="media_home_9011" onclick="openModal(this)">
+
             <img src="https://khaliiil.com/mediaOf/J.JPG" alt="media_home_9010" onclick="openModal(this)">
             <img src="https://khaliiil.com/mediaOf/26-6-o-m-24-II.JPG" alt="media_home_9010" onclick="openModal(this)">
             <img src="https://khaliiil.com/mediaOf/26-6-o-m-24-III.GIF" alt="media_home_9009" onclick="openModal(this)">
@@ -386,62 +395,17 @@ font-size:24px;
         </div>
     </div>
 
-    <script>
+   <script>
         function openModal(element) {
             document.getElementById('myModal').style.display = "block";
             document.getElementById('modalImage').src = element.src;
             document.body.style.overflow = 'hidden';
-            document.body.style.overflow = 'hidden';
-            document.body.style.overflow = 'hidden';
-            document.body.style.overflow = 'hidden';
-            document.body.style.overflow = 'hidden';
-            document.body.style.overflow = 'hidden';
-            document.body.style.overflow = 'hidden';
-            document.body.style.overflow = 'hidden';
-            document.body.style.overflow = 'hidden';
-            document.body.style.overflow = 'hidden';
-            document.body.style.overflow = 'hidden';
-            document.body.style.overflow = 'hidden';
-            document.body.style.overflow = 'hidden';
-            document.body.style.overflow = 'hidden';
-            document.body.style.overflow = 'hidden';
-            document.body.style.overflow = 'hidden';
-            document.body.style.overflow = 'hidden';
-            document.body.style.overflow = 'hidden';
-            document.body.style.overflow = 'hidden';
-            document.body.style.overflow = 'hidden';
-            document.body.style.overflow = 'hidden';
-            document.body.style.overflow = 'hidden';
-            document.body.style.overflow = 'hidden';
-            document.body.style.overflow = 'hidden';
-            document.body.style.overflow = 'hidden';
-            document.body.style.overflow = 'hidden';
-            document.body.style.overflow = 'hidden';
-            document.body.style.overflow = 'hidden';
-            document.body.style.overflow = 'hidden';
-            document.body.style.overflow = 'hidden';
-            document.body.style.overflow = 'hidden';
-            document.body.style.overflow = 'hidden';
-            document.body.style.overflow = 'hidden';
-            document.body.style.overflow = 'hidden';
-            document.body.style.overflow = 'hidden';
-            document.body.style.overflow = 'hidden';
-            document.body.style.overflow = 'hidden';
-            document.body.style.overflow = 'hidden';
-            document.body.style.overflow = 'hidden';
-            document.body.style.overflow = 'hidden';
-            document.body.style.overflow = 'hidden';
-            document.body.style.overflow = 'hidden';
-
         }
         function closeModal() {
             document.getElementById('myModal').style.display = "none";
             document.body.style.overflow = 'auto';
         }
     </script>
-    
-    
-    <script src="https://cdn.jsdelivr.net/gh/Dibacarter/Of@latest/index.js"></script>
 
 </body>
 </html>
