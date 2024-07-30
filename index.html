@@ -1,4 +1,3 @@
-  
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -71,12 +70,13 @@
             margin-bottom: 0; /* Adjust according to the height of the bottom nav */
         }
         .gallery {
+            height:20px;
     padding-top: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-left: 25px;
-    padding-right: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
         .gallery img {
             width: 100%;
@@ -99,6 +99,11 @@
     user-drag: none;
     -webkit-touch-callout: none;
         }
+.gallery a {
+    color:white;
+    text-decoration:none;
+    cursor: pointer;
+}
 
         .modal {
             display: none;
@@ -119,22 +124,20 @@
             max-width: 100%;
         }
         .modal-content img {
-            width: 100%;
-            height: auto;
-             user-select: none;
+  width: 100%; /* Default style */
+  height: auto; /* Default style */
+  user-select: none;
   pointer-events: auto;
   user-drag: none;
   -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    pointer-events: auto;
-    -webkit-user-drag: none;
-    -khtml-user-drag: none;
-    -moz-user-drag: none;
-    -o-user-drag: none;
-    user-drag: none;
-    -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -khtml-user-drag: none;
+  -o-user-drag: none;
+  -webkit-touch-callout: none;
+}
+        .modal-content a {
+            color:white;
         }
         .close {
             position: absolute;
@@ -341,52 +344,52 @@ font-size:24px;
 <body>
 <div class="nav-top">
     <div class="menu">
-      <a href="https://tour.khaliiil.com/">tour</a>
-      <a href="https://shop.khaliiil.com">store</a>
-      <a href="https://music.khaliiil.com/">music</a>
-      <a href="https://khaliiil.com/blog">blog</a>
+      <a href="https://tour.khaliiil.com/">TOUR</a>
+      <a href="https://shop.khaliiil.com">SHOP</a>
+      <a href="https://music.khaliiil.com/">MUSIC</a>
+      <a href="https://khaliiil.com/blog">BLOG</a>
     </div>
   </div>
    <div class="footert" id="m">
-        <a href="https://khaliiil.com/join-club">join</a>
+        <a href="https://khaliiil.com/join-club">JOIN</a>
         <a href="https://khaliiil.com/terms-conditions">
-        terms
+        TERMS
         </a>
     <p>&copy;</p>
-        <a href="https://khaliiil.com/posts">post</a>
-        <a href="https://khaliiil.com/privacy-policy">privacy</a>
+        <a href="https://khaliiil.com/posts">POST</a>
+        <a href="https://khaliiil.com/privacy-policy">PRIVACY</a>
     </div>
 
 <div class="footert" id="d">
-    <a href="https://khaliiil.com/join-club">join</a>
-    <a href="https://khaliiil.com/terms-conditions">terms & conditions</a>
+    <a href="https://khaliiil.com/join-club">JOIN</a>
+    <a href="https://khaliiil.com/terms-conditions">TERMS & CONDITIONS</a>
     <p>&copy; 2024 KHALIL</p>
-    <a href="https://khaliiil.com/posts">post</a>
-    <a href="https://khaliiil.com/privacy-policy">privacy policy</a>
+    <a href="https://khaliiil.com/posts">POST</a>
+    <a href="https://khaliiil.com/privacy-policy">PRIVACY POLICY</a>
 </div>
 
     <div class="container">
         <div class="gallery">
-
-            <img src="https://khaliiil.com/mediaOf/6.GIF" alt="media_home_9016" onclick="openModal(this)">
-            <img src="https://khaliiil.com/mediaOf/5.jpg" alt="media_home_9015" onclick="openModal(this)">
-            <img src="https://khaliiil.com/mediaOf/4.jpg" alt="media_home_9014" onclick="openModal(this)">
-            <img src="https://img-cdn.heictojpg.com/jpg/b776fd5d7c04b774/3.jpg" alt="media_home_9013" onclick="openModal(this)">
-            <img src="https://khaliiil.com/mediaOf/IMG_6400.jpeg" alt="media_home_9012" onclick="openModal(this)">
-            <img src="https://img-cdn.heictojpg.com/jpg/b776fd5d7c04b774/1.jpg" alt="media_home_9011" onclick="openModal(this)">
-
-            <img src="https://khaliiil.com/mediaOf/J.JPG" alt="media_home_9010" onclick="openModal(this)">
-            <img src="https://khaliiil.com/mediaOf/26-6-o-m-24-II.JPG" alt="media_home_9010" onclick="openModal(this)">
-            <img src="https://khaliiil.com/mediaOf/26-6-o-m-24-III.GIF" alt="media_home_9009" onclick="openModal(this)">
-            <img src="https://khaliiil.com/mediaOf/26-6-o-m-24.GIF" alt="media_home_9008" onclick="openModal(this)">
-            <img src="https://www.khaliiil.com/IMG_7634.jpg" alt="media_home_9007" onclick="openModal(this)">
-            <img src="https://www.khaliiil.com/IMG_7632.jpg" alt="media_home_9006" onclick="openModal(this)">
-            <img src="https://www.khaliiil.com/St.GIF" alt="media_home_9005" onclick="openModal(this)">
-            <img src="https://www.khaliiil.com/Cl.GIF" alt="media_home_9004" onclick="openModal(this)">
-            <img src="https://www.khaliiil.com/T-1.JPG" alt="media_home_9003" onclick="openModal(this)">
-            <img src="https://www.khaliiil.com/Bu.GIF" alt="media_home_9002" onclick="openModal(this)">
-            <img src="https://www.khaliiil.com/mediaOf/5a67e1ae-0c7b-494c-8440-3eb7d7f35ac9.jpeg" alt="media_home_9000" onclick="openModal(this)">
-        </div>
+<img src="https://khaliiil.com/mediaOf/6.GIF" data-modal-style="overflow-y:auto;touch-action:none;" alt="media_home_9016" onclick="openModal(this)">
+<img src="https://khaliiil.com/mediaOf/5.jpg" data-modal-style="overflow-y:auto;touch-action:none;" alt="media_home_9015" onclick="openModal(this)">
+<img src="https://khaliiil.com/mediaOf/4.jpg" data-modal-style="overflow-y:auto;touch-action:none;" alt="media_home_9014" onclick="openModal(this)">
+<img src="https://img-cdn.heictojpg.com/jpg/b776fd5d7c04b774/3.jpg" data-modal-style="overflow-y:auto;touch-action:none;" alt="media_home_9013" onclick="openModal(this)">
+<img src="https://khaliiil.com/mediaOf/IMG_6400.jpeg" data-modal-style="overflow-y:auto;touch-action:none;" alt="media_home_9012" onclick="openModal(this)">
+<img src="https://img-cdn.heictojpg.com/jpg/b776fd5d7c04b774/1.jpg" data-modal-style="overflow-y:auto;touch-action:none;" alt="media_home_9011" onclick="openModal(this)">
+<a href="https://music.khaliiil.com">
+<img src="https://khaliiil.com/mediaOf/J.JPG" alt="media_home_9010">
+</a>
+<img src="https://khaliiil.com/mediaOf/26-6-o-m-24-II.JPG" data-modal-style="overflow-y:auto;touch-action:none;" alt="media_home_9010" onclick="openModal(this)">
+<img src="https://khaliiil.com/mediaOf/26-6-o-m-24-III.GIF" data-modal-style="overflow-y:auto;touch-action:none;" alt="media_home_9009" onclick="openModal(this)">
+<img src="https://khaliiil.com/mediaOf/26-6-o-m-24.GIF" data-modal-style="overflow-y:auto;touch-action:none;" alt="media_home_9008" onclick="openModal(this)">
+<img src="https://www.khaliiil.com/IMG_7634.jpg" data-modal-style="overflow-y:auto;touch-action:none;" alt="media_home_9007" onclick="openModal(this)">
+<img src="https://www.khaliiil.com/IMG_7632.jpg" data-modal-style="overflow-y:auto;touch-action:none;" alt="media_home_9006" onclick="openModal(this)">
+<img src="https://www.khaliiil.com/St.GIF"data-modal-style="overflow-y:auto;touch-action:none;" alt="media_home_9005" onclick="openModal(this)">
+<img src="https://www.khaliiil.com/Cl.GIF" data-modal-style="overflow-y:auto;touch-action:none;" alt="media_home_9004" onclick="openModal(this)">
+<img src="https://www.khaliiil.com/T-1.JPG" data-modal-style="overflow-y:auto;touch-action:none;" data-modal-style="overflow-y:auto;touch-action:none;" alt="media_home_9003" onclick="openModal(this)">
+<img src="https://www.khaliiil.com/Bu.GIF" data-modal-style="overflow-y:auto;touch-action:none;" alt="media_home_9002" onclick="openModal(this)">
+<img src="https://www.khaliiil.com/mediaOf/5a67e1ae-0c7b-494c-8440-3eb7d7f35ac9.jpeg" data-modal-style="overflow-y:auto;touch-action:none;" alt="media_home_9000" onclick="openModal(this)">
+</div>
 
     <div id="myModal" class="modal">
         <span class="close" onclick="closeModal()"><img src="https://github.com/Dibacarter/Of/raw/main/system/D2F4C472-AD0C-4B13-8920-37AD3DD9EB63.png"/></span>
@@ -396,15 +399,19 @@ font-size:24px;
     </div>
 
    <script>
-        function openModal(element) {
-            document.getElementById('myModal').style.display = "block";
-            document.getElementById('modalImage').src = element.src;
-            document.body.style.overflow = 'hidden';
-        }
-        function closeModal() {
-            document.getElementById('myModal').style.display = "none";
-            document.body.style.overflow = 'auto';
-        }
+   function openModal(element) {
+  var modal = document.getElementById('myModal');
+  var modalImage = document.getElementById('modalImage');
+  modal.style.display = "block";
+  modalImage.src = element.src;
+  modalImage.style = element.getAttribute('data-modal-style');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('myModal').style.display = "none";
+  document.body.style.overflow = 'auto';
+}
     </script>
 
 </body>
