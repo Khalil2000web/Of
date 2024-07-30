@@ -1,29 +1,18 @@
-
-    function openModal(element) {
-        const modal = document.getElementById('myModal');
-        modal.style.display = "block";
-        document.body.classList.add('modal-open'); // Add class to hide scrollbar and fix body
-        document.getElementById('modalImage').src = element.src;
-
-        // Optionally, ensure viewport resizing is handled correctly
-        handleViewportChange();
-    }
-
-    function closeModal() {
-        const modal = document.getElementById('myModal');
-        modal.style.display = "none";
-        document.body.classList.remove('modal-open'); // Remove class to restore scrollbar and body movement
-
-        // Optionally, handle viewport change restoration
-        handleViewportChange();
-    }
-
-    function handleViewportChange() {
-        // Force a repaint if needed
-        document.body.style.display = 'none';
-        document.body.offsetHeight; // Trigger a reflow
-        document.body.style.display = '';
-    }
-
-    // Optional: Listen for resize events to adjust if necessary
-    window.addEventListener('resize', handleViewportChange);
+function openModal(element) {
+var modal = document.getElementById('myModal');
+var modalImage = document.getElementById('modalImage');
+modal.style.display = "block";
+modalImage.src = element.src;
+modalImage.style = element.getAttribute('data-modal-style');
+document.body.style.overflow = 'hidden';
+document.body.style.touchAction = 'none';   // For most modern browsers
+document.body.style.msTouchAction = 'none'; // For Internet Explorer
+document.body.style.webkitTouchAction = 'none'; // For older versions of Safari (if needed)
+}
+function closeModal() {
+document.getElementById('myModal').style.display = "none";
+document.body.style.overflow = 'auto';
+document.body.style.touchAction = '';   // Reset for most modern browsers
+document.body.style.msTouchAction = ''; // Reset for Internet Explorer
+document.body.style.webkitTouchAction = ''; // Reset for older versions of Safari (if needed)
+}
