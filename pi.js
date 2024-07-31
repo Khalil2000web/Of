@@ -101,9 +101,10 @@ document.addEventListener("DOMContentLoaded", function() {
             currentOverlayVideo.muted = true;
             currentOverlayVideo = null;
         }
-        mediaContainer.style.overflow = 'auto';
         document.body.style.overflow = 'auto';
         document.body.style.touchAction = '';
+        mediaContainer.style.overflow = 'auto';
+        mediaContainer.style.touchAction = '';
         playAllVideos();
     }
 
