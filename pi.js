@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const video = document.getElementById("myVideo");
     const loaderWrapper = document.getElementById("loader-wrapper");
     const mediaElements = document.querySelectorAll('.media');
+    const mediaContainer = document.querySelectorAll('.media-container');
     const overlay = document.getElementById('overlay');
     const overlayContent = document.getElementById('overlay-content');
     const closeBtn = document.getElementById('close-btn');
@@ -60,6 +61,10 @@ document.addEventListener("DOMContentLoaded", function() {
         overlayContent.appendChild(clonedMedia);
         overlay.style.display = 'flex';
         overlay.classList.add('overlay-show');
+        document.body.style.overflow = 'hidden';
+        document.body.style.touchAction = 'none';
+        mediaContainer.style.overflow = 'hidden';
+        mediaContainer.style.touchAction = 'none';
 
         muteAllVideos();
 
@@ -96,6 +101,9 @@ document.addEventListener("DOMContentLoaded", function() {
             currentOverlayVideo.muted = true;
             currentOverlayVideo = null;
         }
+        mediaContainer.style.overflow = 'auto';
+        document.body.style.overflow = 'auto';
+        document.body.style.touchAction = '';
         playAllVideos();
     }
 
