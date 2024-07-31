@@ -10,9 +10,6 @@
             flex-direction: column;
             align-items: center;
         }
-        #volume {
-            margin-top: 10px;
-        }
         #muteButton {
             margin-top: 10px;
         }
@@ -23,7 +20,7 @@
 </head>
 <body>
     <div id="player">
-        <canvas id="videoCanvas" style="width:100%;height:auto;"></canvas>
+        <canvas id="videoCanvas" width="640" height="360"></canvas>
         <button id="muteButton">Mute</button>
     </div>
 
@@ -37,6 +34,8 @@
         video.autoplay = true;
         video.loop = true;
         video.muted = true; // Start muted
+        video.playsInline = true; // Ensure inline playback in Safari
+        video.setAttribute('webkit-playsinline', ''); // Ensure inline playback in Safari
 
         // Hide the default video element
         video.style.display = 'none';
@@ -58,6 +57,9 @@
             video.muted = !video.muted;
             muteButton.textContent = video.muted ? 'Unmute' : 'Mute';
         });
+
+        // Append video to body to ensure it's added to the DOM
+        document.body.appendChild(video);
     </script>
 </body>
 </html>
