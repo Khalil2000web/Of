@@ -498,6 +498,13 @@ PRIVACY POLICY
 <img class="media" src="https://ik.imagekit.io/ybebp19uwa/17.heic?updatedAt=1722438715321" alt="media_home_9026"/>
 <img class="media" src="https://ik.imagekit.io/ybebp19uwa/15.JPG?updatedAt=1722438749536" alt="media_home_9025"/>
 <img class="media" src="https://ik.imagekit.io/ybebp19uwa/14.GIF?updatedAt=1722438818110" alt="media_home_9024"/>
+
+<div class="media">
+<video src="https://ik.imagekit.io/ybebp19uwa/IMG_6947.mov?updatedAt=1722431094298" alt="media_home_9002" autoplay loop muted playsinline controls="false"></video>
+<img src="https://raw.githubusercontent.com/Dibacarter/Of/main/system/Css-off.PNG" class="sound-icon sound-off-icon" alt="Off">
+<img src="https://raw.githubusercontent.com/Dibacarter/Of/main/system/Css-on.PNG" class="sound-icon sound-on-icon" alt="On">
+</div>
+
 <img class="media" src="https://ik.imagekit.io/ybebp19uwa/13.JPG?updatedAt=1722438718083" alt="media_home_9023"/>
 <img class="media" src="https://ik.imagekit.io/ybebp19uwa/12.JPG?updatedAt=1722438717758" alt="media_home_9022"/>
 <img class="media" src="https://ik.imagekit.io/ybebp19uwa/11.JPG?updatedAt=1722438758795" alt="media_home_9021"/>
@@ -521,12 +528,9 @@ PRIVACY POLICY
 <img src="https://ik.imagekit.io/ybebp19uwa/T-1.JPG?updatedAt=1722425268069" class="media" alt="media_home_9003">
 
 <div class="media">
-<video id="myVideo" src="https://ik.imagekit.io/ybebp19uwa/IMG_0844.MOV?updatedAt=1722425583838" alt="media_home_9002" autoplay loop muted playsinline controls="false"></video>
+<video src="https://ik.imagekit.io/ybebp19uwa/IMG_0844.MOV?updatedAt=1722425583838" alt="media_home_9002" autoplay loop muted playsinline controls="false"></video>
 <img src="https://raw.githubusercontent.com/Dibacarter/Of/main/system/Css-off.PNG" class="sound-icon sound-off-icon" alt="Off">
 <img src="https://raw.githubusercontent.com/Dibacarter/Of/main/system/Css-on.PNG" class="sound-icon sound-on-icon" alt="On">
-<div id="loader-wrapper">
-<div class="loader"></div>
-</div>
 </div>
 
 <img src="https://ik.imagekit.io/ybebp19uwa/Bu.GIF?updatedAt=1722425223158" class="media" alt="media_home_9001">
@@ -555,36 +559,6 @@ PRIVACY POLICY
 <img id="close-btn" src="https://ik.imagekit.io/ybebp19uwa/D2F4C472-AD0C-4B13-8920-37AD3DD9EB63.png?updatedAt=1722425833911" alt="Close">
 <div id="overlay-content"></div>
 </div>
-
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    const video = document.getElementById("myVideo");
-    const loaderWrapper = document.getElementById("loader-wrapper");
-
-    function showLoader() {
-        if (!video.paused && !video.ended) {
-            loaderWrapper.style.display = "none";
-        } else {
-            loaderWrapper.style.display = "flex";
-        }
-    }
-
-    function hideLoader() {
-        loaderWrapper.style.display = "none";
-    }
-
-    // Show loader when video is buffering
-    video.addEventListener("waiting", showLoader);
-    video.addEventListener("seeking", showLoader);
-    video.addEventListener("stalled", showLoader);
-
-    // Hide loader when video starts playing
-    video.addEventListener("playing", hideLoader);
-
-    // Initially show loader until the video starts playing
-    showLoader();
-});
-</script>
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
