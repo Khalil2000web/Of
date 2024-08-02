@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Timeline</title>
+
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+.timeline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    overflow-x: auto;
+}
+
+.event {
+    background-color: #444;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.event-content {
+    text-align: center;
+}
+
+.event h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.event p {
+    margin: 5px 0 0;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.overlay-content {
+    background-color: #fff;
+    color: #000;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 80%;
+    max-height: 80%;
+    overflow-y: auto;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+</style>
+
+
+</head>
+<body>
+    <div class="timeline">
+        <div class="event" onclick="showOverlay('event1')">
+            <div class="event-content">
+                <h3>Album Release</h3>
+                <p>March 2020</p>
+            </div>
+        </div>
+        <div class="event" onclick="showOverlay('event2')">
+            <div class="event-content">
+                <h3>World Tour</h3>
+                <p>August 2021</p>
+            </div>
+        </div>
+        <div class="event" onclick="showOverlay('event3')">
+            <div class="event-content">
+                <h3>Award Win</h3>
+                <p>December 2022</p>
+            </div>
+        </div>
+        <!-- Add more events as needed -->
+    </div>
+
+    <div id="overlay" class="overlay" onclick="closeOverlay()">
+        <div class="overlay-content">
+            <span class="close-button" onclick="closeOverlay()">&times;</span>
+            <div id="overlay-details"></div>
+        </div>
+    </div>
+
+    <script>
+function showOverlay(eventId) {
+    const overlay = document.getElementById('overlay');
+    const details = document.getElementById('overlay-details');
+
+    let content = '';
+    switch (eventId) {
+        case 'event1':
+            content = `
+                <h2>Album Release</h2>
+                <p>Details about the album release in March 2020.</p>
+            `;
+            break;
+        case 'event2':
+            content = `
+                <h2>World Tour</h2>
+                <p>Details about the world tour in August 2021.</p>
+            `;
+            break;
+        case 'event3':
+            content = `
+                <h2>Award Win</h2>
+                <p>Details about the award win in December 2022.</p>
+            `;
+            break;
+        // Add more cases as needed
+    }
+
+    details.innerHTML = content;
+    overlay.style.display = 'flex';
+}
+
+function closeOverlay() {
+    const overlay = document.getElementById('overlay');
+    overlay.style.display = 'none';
+}
+    </script>
+</body>
+</html>
