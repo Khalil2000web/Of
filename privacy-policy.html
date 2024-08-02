@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Khalil - PRIVACY</title>
-<meta charset="UTF-8">
 <meta name="description" content="The Official Website of Khalil">
 <meta property="og:description" content="The Official Website of Khalil">
 <meta property="og:image" content="https://www.khaliiil.com/system/7FA53553-2225-48AC-B68C-89172E7E6340.jpeg">
@@ -33,16 +32,11 @@ src: url('https://ik.imagekit.io/ybebp19uwa/BBManualMonoProTX-Regular.woff2?upda
 font-family: 'BBManualMonoTX';
 src: url('https://ik.imagekit.io/ybebp19uwa/BBManualMonoProTX-SemiBold.woff2?updatedAt=1722452612640') format('woff2');
 }
-    body {
-    font-family: 'BB Manual Mono Pro TX', Arial;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: black;
-    color: #FFF;
-    text-transform:uppercase;
+html, body {
+  margin: 0;
+  padding: 0;
+  color:#fff;
 }
-
 .nav-top {
   position: fixed;
   width: 100%;
@@ -66,7 +60,8 @@ src: url('https://ik.imagekit.io/ybebp19uwa/BBManualMonoProTX-SemiBold.woff2?upd
 }
 
 .nav-top .menu a {
-  color: white;
+  font-family:'BB Manual Mono Pro TX',arial;
+  color: #fff;
   text-decoration: none;
   padding-bottom: 5px;
   font-weight: 300; /* Custom font style */
@@ -75,24 +70,24 @@ src: url('https://ik.imagekit.io/ybebp19uwa/BBManualMonoProTX-SemiBold.woff2?upd
 
 @media screen and (max-width:400px) {
 .nav-top .menu {
+    gap:35px;
+}
+.nav-top .menu a {
+  font-size:21px;
+}
+}
+@media screen and (min-width:401px) and (max-width:500px) {
+.nav-top .menu {
     gap:40px;
 }
 .nav-top .menu a {
   font-size:22px;
 }
 }
-@media screen and (min-width:401px) and (max-width:500px) {
-.nav-top .menu {
-    gap:50px;
-}
-.nav-top .menu a {
-  font-size:23px;
-}
-}
 
 @media screen and (min-width:501px) and (max-width:600px) {
 .nav-top .menu {
-    gap:90px;
+    gap:70px;
 }
 .nav-top .menu a {
     font-size:22px;
@@ -101,13 +96,13 @@ src: url('https://ik.imagekit.io/ybebp19uwa/BBManualMonoProTX-SemiBold.woff2?upd
 
 @media screen and (min-width:601px) and (max-width:700px) {
 .nav-top .menu {
-    gap:120px;
+    gap:100px;
 }
 }
 
 @media screen and (min-width:701px) and (max-width:800px) {
 .nav-top .menu {
-    gap:140px;
+    gap:115px;
 }
 .nav-top .menu a {
     font-size:22.6px;
@@ -116,7 +111,7 @@ src: url('https://ik.imagekit.io/ybebp19uwa/BBManualMonoProTX-SemiBold.woff2?upd
 
 @media screen and (min-width:801px) and (max-width:990px) {
 .nav-top .menu {
-    gap:150px;
+    gap:120px;
 }
 .nav-top .menu a {
     font-size:22px;
@@ -124,12 +119,13 @@ src: url('https://ik.imagekit.io/ybebp19uwa/BBManualMonoProTX-SemiBold.woff2?upd
 }
 @media screen and (min-width:1000px) {
 .nav-top .menu {
-    gap:160px;
+    gap:150px;
 }
 .nav-top .menu a {
 font-size:24px;
 }
 }
+
 .footert {
     position: fixed;
     bottom: 0;
@@ -199,66 +195,43 @@ font-size:24px;
 }
 
 .container {
-    font-family: 'BB Manual Mono Pro TX',Arial;
-    width: 98%;
-    margin:0 auto;
-    overflow: auto;
-    padding-left: 130px;
-    padding-right:130px;
-    background: #000;
-    border-radius: 2px;
-}
-
-h1 {
-    font-family: 'BB Manual Mono Pro TX',Arial;
-    text-align: center;
-    margin-bottom: 20px;
-    font-weight:600;
-    color: #fff;
-    width:100%
-}
-
-h2 {
-    font-family: 'BBManualMonoTX',Arial;
-    color: #fff;
-    margin-top: 20px;
-    font-weight:300;
-    font-size:18px;
     width:100%;
-}
-
-p {
-    font-family: 'BB Manual Mono Pro TX',Arial;
-    margin: 10px 0;
-}
-
-section {
-    font-family: 'BB Manual Mono Pro TX',Arial;
-    margin-bottom: 20px;
+    max-width: 100%;
+    margin: 0 auto;
+    background:#000;
+    height:100%;
+    overflow-x:hidden;
+    overflow-y:auto;
+    padding:0;
     color:white;
+    font-family:'BB Manual Mono Pro TX',arial;
 }
-ul {list-style-position: outside;color:white;padding-left: 20px;padding-right: 10px;font-size:15px;}
-
-li {padding-left: 0px;text-indent: 0;color: white;}
-
-@media screen and (max-width:760px) {
-.container {
+.container h1 {
+    color:white;
+    font-weight:300;
+    font-family:'BBManualMonoTX',arial;
+    margin-top:80px;
+    margin-bottom:70px;
+    font-size:27px;
+    text-decoration:underline;
     padding-left:20px;
     padding-right:20px;
 }
+.container p {
+    color:white;
+    margin:0;
+    padding-left:20px;
+    padding-right:20px;
 }
-
-p {color:white !important;}
 </style>
 </head>
 <body>
-
 <div class="nav-top">
 <div class="menu">
 <a href="https://www.khaliiil.com/">
 HOME
 </a>
-<a href="https://tour.khaliiil.com/">
+<a href="https://tour.khaliiil.com">
 TOUR
 </a>
 <a href="https://music.khaliiil.com/">
@@ -270,17 +243,14 @@ BLOG
 </div>
 </div>
 <div class="footert" id="m">
+<a>
+&copy;
+</a>
 <a href="https://khaliiil.com/join-club">
 JOIN
 </a>
 <a href="https://khaliiil.com/terms-conditions">
 TERMS
-</a>
-<p>
-&copy;
-</p>
-<a href="https://khaliiil.com/posts">
-POST
 </a>
 <a href="https://khaliiil.com/privacy-policy">
 PRIVACY
@@ -291,143 +261,97 @@ PRIVACY
 <a href="https://khaliiil.com/join-club">
 JOIN
 </a>
-<p>/</p>
 <a href="https://khaliiil.com/terms-conditions">
 TERMS & CONDITIONS
 </a>
-<p>/</p>
-<p>
+<a>
 &copy; 2024 KHALIL
-</p>
-<p>/</p>
-<a href="https://khaliiil.com/posts">
-POST
 </a>
-<p>/</p>
 <a href="https://khaliiil.com/privacy-policy">
 PRIVACY POLICY
 </a>
 </div>
-    <div class="container">
-    <br><br><br>
-        <h1>PRIVACY POLICY</h1>
-        <p><h2>PRIVACY policy</h2></p>
-        <p>THIS PRIVACY POLICY WAS LAST REVISED AND IS EFFECTIVE AS OF June 19, 2024.</p>
 
-        <section>
-            <h2 style="margin-bottom:1px;margin-top:0;">1. Introduction</h2>
-            <p style="margin-bottom:1px;margin-top:0;">
-THIS PRIVACY POLICY EXPLAINS HOW KHALIIIL.COM COLLECTS, USES, AND PROTECTS PERSONAL INFORMATION WHEN YOU VISIT OUR WEBSITE.        </section>
+<div class="container">
+<h1>
+PRIVACY<br>POLICY
+</h1>
 
-        <section>
-            <h2 style="margin-bottom:0px;">2. INFORMATION WE COLLECT</h2>
-            <h2 style="margin-bottom:1px;margin-top:0;">2.a INFORMATION YOU GIVE US</h2>
-            <p style="margin-bottom:1px;margin-top:0;">
-IN ADDITION TO THE NAME PROVIDED WHEN ACCESSING THE PRIVATE PAGE, USERS MAY HAVE THE OPTION TO VOLUNTARILY PROVIDE THEIR GMAIL ADDRESS FOR EMAIL SUBSCRIPTIONS. THIS INFORMATION IS COLLECTED SOLELY FOR THE PURPOSE OF SENDING UPDATES AND COMMUNICATIONS FROM KHALIIIL.COM AND WILL NOT BE SHARED WITH ANY THIRD PARTIES.
-            </p>
-            <h2 style="margin-bottom:0px;margin-top:0;">
-2.b COMMENTS AND INTERACTIONS
-            </h2>
-            <p style="margin-top:0px;">
-WHEN USERS LEAVE COMMENTS ON BLOG POSTS OR INTERACT WITH THE WEBSITE, WE COLLECT THE DATA SHOWN IN THE COMMENTS FORM, AND ALSO THE USER’S IP ADDRESS AND BROWSER USER AGENT STRING TO HELP SPAM DETECTION.
-            </p>
-        </section>
+<p>
+PRIVACY POLICY<br>
+THIS PRIVACY POLICY WAS LAST REVISED AND IS EFFECTIVE AS OF JUNE 19, 2024.<BR>
+<span style="font-family:'BBManualMonoTX',arial;">
+1. INTRODUCTION -</span> THIS PRIVACY POLICY EXPLAINS HOW KHALIIIL.COM COLLECTS, USES, AND PROTECTS PERSONAL INFORMATION WHEN YOU VISIT OUR WEBSITE.</p>
+<p>
+<span style="text-transform:uppercase;font-family:'BBManualMonoTX',arial;">
+2. INFORMATION WE COLLECT<br>2.A INFORMATION YOU GIVE US -</span> IN ADDITION TO THE NAME PROVIDED WHEN ACCESSING THE PRIVATE PAGE, USERS MAY HAVE THE OPTION TO VOLUNTARILY PROVIDE THEIR GMAIL ADDRESS FOR EMAIL SUBSCRIPTIONS. THIS INFORMATION IS COLLECTED SOLELY FOR THE PURPOSE OF SENDING UPDATES AND COMMUNICATIONS FROM KHALIIIL.COM AND WILL NOT BE SHARED WITH ANY THIRD PARTIES.
+</p>
 
-        <section>
-            <h2 style="margin-bottom:0px;">
-3. HOW DO WE USE YOUR INFORMATION?
-            </h2>
-            <h2 style="margin-bottom:1px;margin-top:0;">
-3.a PERSONAL INFORMATION            </h2>
-            <p style="margin-bottom:1px;margin-top:0;">
-THE NAME PROVIDED IS SOLELY USED FOR IDENTIFICATION PURPOSES TO GRANT ACCESS TO THE PRIVATE PAGE. WE DO NOT SHARE THIS INFORMATION WITH ANY THIRD PARTIES.
-            </p>
-            <h2 style="margin-bottom:1px;margin-top:0;">
-3.b EMAIL ADDRESSES
-            </h2>
-            <p style="margin-bottom:1px;margin-top:0;">
-IF YOU PROVIDE YOUR GMAIL ADDRESS FOR EMAIL SUBSCRIPTIONS, WE WILL USE IT TO SEND YOU UPDATES AND COMMUNICATIONS FROM KHALIIIL.COM.
-            </p>
-            <h2 style="margin-bottom:1px;margin-top:0;">
-3.3 COMMENTS AND INTERACTIONS
-            </h2>
-            <p style="margin-bottom:1px;margin-top:0;">
-COMMENTS AND OTHER INTERACTIONS MAY BE USED TO ENGAGE WITH USERS, RESPOND TO FEEDBACK, AND IMPROVE THE CONTENT ON THE WEBSITE.
-            </p>
-        </section>
+<p>
+<span style="font-family:'BBManualMonoTX',arial;">
+2.B COMMENTS AND INTERACTIONS -</span> WHEN USERS LEAVE COMMENTS ON BLOG POSTS OR INTERACT WITH THE WEBSITE, WE COLLECT THE DATA SHOWN IN THE COMMENTS FORM, AND ALSO THE USER’S IP ADDRESS AND BROWSER USER AGENT STRING TO HELP SPAM DETECTION.</p>
 
-        <section>
-            <h2 style="margin-bottom:0px;">
-4. SHARING YOUR PERSONAL INFORMATION
-            </h2>
-            <p style="margin-bottom:1px;margin-top:0;">
-WE DO NOT SHARE YOUR PERSONAL INFORMATION WITH THIRD PARTIES EXCEPT AS NECESSARY TO COMPLY WITH APPLICABLE LAWS AND REGULATIONS, TO RESPOND TO A SUBPOENA, SEARCH WARRANT OR OTHER LAWFUL REQUEST FOR INFORMATION WE RECEIVE, OR TO OTHERWISE PROTECT OUR RIGHTS.        </section>
+<p>
+<span style="font-family:'BBManualMonoTX',arial;">
+3. HOW DO WE USE YOUR INFORMATION?<br>3.A PERSONAL INFORMATION -</span> THE NAME PROVIDED IS SOLELY USED FOR IDENTIFICATION PURPOSES TO GRANT ACCESS TO THE PRIVATE PAGE. WE DO NOT SHARE THIS INFORMATION WITH ANY THIRD PARTIES.</p>
 
-        <section>
-            <h2 style="margin-bottom:0px;">
-5. CONTENT AND CREDITS
-</h2>
-            <h2 style="margin-bottom:1px;margin-top:0;">5.a PHOTOS</h2>
-            <p style="margin-bottom:1px;margin-top:0;">
-ANY PHOTOS SHARED ON KHALIIIL.COM ARE OWNED BY THE SITE OWNER UNLESS OTHERWISE CREDITED. IF YOU WISH TO USE ANY OF THESE PHOTOS, PLEASE CONTACT US FOR PERMISSION.</p>
-            <h2 style="margin-bottom:1px;margin-top:0;">5.b MUSIC</h2>
-            <p style="margin-bottom:1px;margin-top:0;">
-MUSIC SHARED ON THE SITE INCLUDES PROPER CREDITS AND LINKS TO THE ORIGINAL ARTISTS IN ACCORDANCE WITH COPYRIGHT LAWS. IF YOU NOTICE ANY ERRORS IN CREDITS OR LINKS, PLEASE CONTACT US TO RECTIFY THE ISSUE.</p>
-            <h2 style="margin-bottom:1px;margin-top:0;">
-5.c TRAVEL AND BLOG CONTENT</h2>
-            <p style="margin-bottom:1px;margin-top:0;">
-TRAVEL EXPERIENCES AND BLOG POSTS FEATURED ON KHALIIIL.COM ARE PERSONAL REFLECTIONS OF THE SITE OWNER. THESE STORIES TAKE READERS ON A JOURNEY THROUGH THE EYES OF THE AUTHOR, SHARING INTIMATE DETAILS, INSIGHTS, AND EMOTIONS ENCOUNTERED DURING THEIR TRAVELS. FROM BREATHTAKING LANDSCAPES TO CULTURAL IMMERSIONS, EACH POST OFFERS A UNIQUE PERSPECTIVE AND INVITES READERS TO EXPLORE THE WORLD THROUGH PERSONAL NARRATIVES.</p>
-        </section>
+<p>
+<span style="font-family:'BBManualMonoTX',arial;">
+3.B EMAIL ADDRESSES -</span> IF YOU PROVIDE YOUR GMAIL ADDRESS FOR EMAIL SUBSCRIPTIONS, WE WILL USE IT TO SEND YOU UPDATES AND COMMUNICATIONS FROM KHALIIIL.COM.
+</p>
 
-        <section>
-            <h2 style="margin-bottom:0px;">
-6. SECURITY            </h2>
-            <p style="margin-bottom:1px;margin-top:0;">
-WE TAKE APPROPRIATE MEASURES TO ENSURE THE SECURITY OF YOUR PERSONAL INFORMATION. ACCESS TO THE PRIVATE PAGE IS PROTECTED BY A PASSWORD, AND WE REGULARLY REVIEW OUR SECURITY PROTOCOLS TO SAFEGUARD YOUR DATA. COMMENTS AND OTHER INTERACTIONS ARE MONITORED FOR SPAM AND MALICIOUS ACTIVITY.        </section>
+<p>
+<span style="font-family:'BBManualMonoTX',arial;">
+3.C COMMENTS AND INTERACTIONS -</span> COMMENTS AND OTHER INTERACTIONS MAY BE USED TO ENGAGE WITH USERS, RESPOND TO FEEDBACK, AND IMPROVE THE CONTENT ON THE WEBSITE.</p>
 
-            <section>
-            <h2 style="margin-bottom:1px;margin-top:0;">
-7. YOUR RIGHTS            </h2>
-            <p style="margin-bottom:1px;margin-top:0;">
-YOU HAVE THE RIGHT TO ACCESS PERSONAL INFORMATION WE HOLD ABOUT YOU AND TO ASK THAT YOUR PERSONAL INFORMATION BE CORRECTED, UPDATED, OR DELETED. IF YOU WOULD LIKE TO EXERCISE THIS RIGHT, PLEASE CONTACT US THROUGH THE CONTACT INFORMATION BELOW.            </p>
-        </section>
+<p>
+<span style="font-family:'BBManualMonoTX',arial;">
+4. SHARING YOUR PERSONAL INFORMATION -</span> WE DO NOT SHARE YOUR PERSONAL INFORMATION WITH THIRD PARTIES EXCEPT AS NECESSARY TO COMPLY WITH APPLICABLE LAWS AND REGULATIONS, TO RESPOND TO A SUBPOENA, SEARCH WARRANT OR OTHER LAWFUL REQUEST FOR INFORMATION WE RECEIVE, OR TO OTHERWISE PROTECT OUR RIGHTS.</p>
 
-            <section>
-            <h2 style="margin-bottom:1px;margin-top:0;">
-8. DATA RETENTION            </h2>
-            <p style="margin-bottom:1px;margin-top:0;">
-WHEN YOU PROVIDE US WITH PERSONAL INFORMATION, WE WILL MAINTAIN THIS INFORMATION FOR OUR RECORDS UNLESS AND UNTIL YOU ASK US TO DELETE THIS INFORMATION.            </p>
-        </section>
+<p>
+<span style="font-family:'BBManualMonoTX',arial;">
+5. CONTENT AND CREDITS<br> 5.A PHOTOS</span> ANY PHOTOS SHARED ON KHALIIIL.COM ARE OWNED BY THE SITE OWNER UNLESS OTHERWISE CREDITED. IF YOU WISH TO USE ANY OF THESE PHOTOS, PLEASE CONTACT US FOR PERMISSION.</p>
 
-            <section>
-            <h2 style="margin-bottom:1px;margin-top:0;">
-9. CHILDREN’S PRIVACY            </h2>
-            <p style="margin-bottom:1px;margin-top:0;">
-THE SITE IS INTENDED FOR USERS UNDER THE AGE OF 10. WE TAKE SPECIAL CARE TO PROTECT THE PRIVACY OF YOUNG USERS. WE DO NOT KNOWINGLY COLLECT PERSONAL INFORMATION FROM CHILDREN UNDER 10 WITHOUT PARENTAL CONSENT. IF WE BECOME AWARE THAT WE HAVE INADVERTENTLY RECEIVED PERSONAL INFORMATION FROM A CHILD UNDER THE AGE OF 10 WITHOUT VERIFICATION OF PARENTAL CONSENT, WE WILL DELETE THE INFORMATION FROM OUR RECORDS.            </p>
-        </section>
+<p>
+<span style="font-family:'BBManualMonoTX',arial;">
+5.B MUSIC -</span> MUSIC SHARED ON THE SITE INCLUDES PROPER CREDITS AND LINKS TO THE ORIGINAL ARTISTS IN ACCORDANCE WITH COPYRIGHT LAWS. IF YOU NOTICE ANY ERRORS IN CREDITS OR LINKS, PLEASE CONTACT US TO RECTIFY THE ISSUE.</p>
 
-                    <section>
-            <h2 style="margin-bottom:1px;margin-top:0;">
-10. THIRD-PARTY LINKS            </h2>
-            <p style="margin-bottom:1px;margin-top:0;">
-OCCASIONALLY, AT OUR DISCRETION, WE MAY INCLUDE OR OFFER THIRD-PARTY PRODUCTS OR SERVICES ON OUR WEBSITE. THESE THIRD-PARTY SITES HAVE SEPARATE AND INDEPENDENT PRIVACY POLICIES. WE THEREFORE HAVE NO RESPONSIBILITY OR LIABILITY FOR THE CONTENT AND ACTIVITIES OF THESE LINKED SITES. NONETHELESS, WE SEEK TO PROTECT THE INTEGRITY OF OUR SITE AND WELCOME ANY FEEDBACK ABOUT THESE SITES.            </p>
-        </section>
+<p>
+<span style="font-family:'BBManualMonoTX',arial;">
+5.C TRAVEL AND BLOG CONTENT -</span> TRAVEL EXPERIENCES AND BLOG POSTS FEATURED ON KHALIIIL.COM ARE PERSONAL REFLECTIONS OF THE SITE OWNER. THESE STORIES TAKE READERS ON A JOURNEY THROUGH THE EYES OF THE AUTHOR, SHARING INTIMATE DETAILS, INSIGHTS, AND EMOTIONS ENCOUNTERED DURING THEIR TRAVELS. FROM BREATHTAKING LANDSCAPES TO CULTURAL IMMERSIONS, EACH POST OFFERS A UNIQUE PERSPECTIVE AND INVITES READERS TO EXPLORE THE WORLD THROUGH PERSONAL NARRATIVES.</p>
 
-                    <section>
-            <h2 style="margin-bottom:1px;margin-top:0;">
-11. CHANGES TO THIS PRIVACY POLICY            </h2>
-            <p style="margin-bottom:1px;margin-top:0;">
-WE MAY UPDATE THIS PRIVACY POLICY FROM TIME TO TIME TO REFLECT, FOR EXAMPLE, CHANGES TO OUR PRACTICES OR FOR OTHER OPERATIONAL, LEGAL, OR REGULATORY REASONS. ANY CHANGES WILL BE POSTED ON THIS PAGE, AND THE DATE OF THE LAST UPDATE WILL BE INDICATED AT THE TOP OF THE POLICY.            </p>
-        </section>
+<p>
+<span style="font-family:'BBManualMonoTX',arial;">
+6. SECURITY -</span> WE TAKE APPROPRIATE MEASURES TO ENSURE THE SECURITY OF YOUR PERSONAL INFORMATION. ACCESS TO THE PRIVATE PAGE IS PROTECTED BY A PASSWORD, AND WE REGULARLY REVIEW OUR SECURITY PROTOCOLS TO SAFEGUARD YOUR DATA. COMMENTS AND OTHER INTERACTIONS ARE MONITORED FOR SPAM AND MALICIOUS ACTIVITY.</p>
 
-                    <section>
-            <h2 style="margin-bottom:1px;margin-top:0;">
-12. CONTACT </h2>
-            <p style="margin-bottom:1px;margin-top:0;">
-IF YOU HAVE ANY QUESTIONS OR CONCERNS ABOUT OUR PRIVACY POLICY, PLEASE CONTACT US AT HELP@KHALIIIL.COM.
-            </p>
-        </section>
-<br><br>
+<p>
+<span style="font-family:'BBManualMonoTX',arial;">
+7. YOUR RIGHTS -</span> YOU HAVE THE RIGHT TO ACCESS PERSONAL INFORMATION WE HOLD ABOUT YOU AND TO ASK THAT YOUR PERSONAL INFORMATION BE CORRECTED, UPDATED, OR DELETED. IF YOU WOULD LIKE TO EXERCISE THIS RIGHT, PLEASE CONTACT US THROUGH THE CONTACT INFORMATION BELOW.
+</p>
+
+<p>
+<span style="font-family:'BBManualMonoTX',arial;">
+8. DATA RETENTION -</span> WHEN YOU PROVIDE US WITH PERSONAL INFORMATION, WE WILL MAINTAIN THIS INFORMATION FOR OUR RECORDS UNLESS AND UNTIL YOU ASK US TO DELETE THIS INFORMATION.</p>
+
+<p>
+<span style="font-family:'BBManualMonoTX',arial;">
+9. CHILDREN’S PRIVACY -</span>
+THE SITE IS INTENDED FOR USERS UNDER THE AGE OF 10. WE TAKE SPECIAL CARE TO PROTECT THE PRIVACY OF YOUNG USERS. WE DO NOT KNOWINGLY COLLECT PERSONAL INFORMATION FROM CHILDREN UNDER 10 WITHOUT PARENTAL CONSENT. IF WE BECOME AWARE THAT WE HAVE INADVERTENTLY RECEIVED PERSONAL INFORMATION FROM A CHILD UNDER THE AGE OF 10 WITHOUT VERIFICATION OF PARENTAL CONSENT, WE WILL DELETE THE INFORMATION FROM OUR RECORDS.
+</p>
+<p>
+<span style="font-family:'BBManualMonoTX',arial;">
+10. THIRD-PARTY LINKS -</span> OCCASIONALLY, AT OUR DISCRETION, WE MAY INCLUDE OR OFFER THIRD-PARTY PRODUCTS OR SERVICES ON OUR WEBSITE. THESE THIRD-PARTY SITES HAVE SEPARATE AND INDEPENDENT PRIVACY POLICIES. WE THEREFORE HAVE NO RESPONSIBILITY OR LIABILITY FOR THE CONTENT AND ACTIVITIES OF THESE LINKED SITES. NONETHELESS, WE SEEK TO PROTECT THE INTEGRITY OF OUR SITE AND WELCOME ANY FEEDBACK ABOUT THESE SITES.</p>
+
+<p>
+<span style="font-family:'BBManualMonoTX',arial;">
+11. CHANGES TO THIS PRIVACY POLICY -</span> WE MAY UPDATE THIS PRIVACY POLICY FROM TIME TO TIME TO REFLECT, FOR EXAMPLE, CHANGES TO OUR PRACTICES OR FOR OTHER OPERATIONAL, LEGAL, OR REGULATORY REASONS. ANY CHANGES WILL BE POSTED ON THIS PAGE, AND THE DATE OF THE LAST UPDATE WILL BE INDICATED AT THE TOP OF THE POLICY.</p>
+
+<p>
+<span style="font-family:'BBManualMonoTX',arial;">
+12. CONTACT -</span> IF YOU HAVE ANY QUESTIONS OR CONCERNS ABOUT OUR PRIVACY POLICY, PLEASE CONTACT US AT HELP@KHALIIIL.COM.</p>
+<br><br><br><br><br><br><br><br>
 </div>
+
+
 </body>
 </html>
