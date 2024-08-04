@@ -21,7 +21,7 @@ body {
 .container {
   position:absolute;
   width:100%;
-  height:100%;
+  height:auto;
   background:black;
   padding:0;
   margin:0;
@@ -145,31 +145,41 @@ td {
 <script>
 document.addEventListener("DOMContentLoaded", function() {
     const breadcrumbContainer = document.getElementById('breadcrumb');
-    const pathArray = window.location.pathname.split('/').filter(Boolean);
-    let currentPath = '';
+    const referrer = document.referrer;
+    let breadcrumb = '';
 
-    if (pathArray.length === 0) {
-        breadcrumbContainer.innerHTML = '<a href="https://khaliiil.com">Home</a>';
-        breadcrumbContainer.innerHTML = '<a href="https://tour.khaliiil.com">tour</a>';
+    // Check if referrer is empty or not set
+    if (!referrer) {
+        breadcrumbContainer.style.display = 'none'; // Hide the breadcrumb if no referrer
         return;
     }
 
-    // Always include the home link
-    breadcrumbContainer.innerHTML = '<a href="https://tour.khaliiil.com">Home</a>';
-    breadcrumbContainer.innerHTML = '<a href="https://khaliiil.com">Home</a>';
+    // Determine the breadcrumb based on referrer
+    if (referrer.includes('home')) {
+        breadcrumb = '<a href="https://khaliiil.com">Home</a>';
+    } else if (referrer.includes('tour')) {
+        breadcrumb = '<a href="https://tour.khaliiil.com">Tour</a>';
+    } else if (referrer.includes('music')) {
+        breadcrumb = '<a href="https://music.khaliiil.com">Music</a>';
+    } else {
+        breadcrumbContainer.style.display = 'none'; // Hide the breadcrumb if referrer is unknown
+        return;
+    }
 
-    pathArray.forEach((segment, index) => {
-        currentPath += `/${segment}`;
-        if (index < pathArray.length - 1) {
-            breadcrumbContainer.innerHTML += ` &#9002; <a href="${currentPath}">${capitalizeFirstLetter(segment)}</a>`;
-        } else {
-            breadcrumbContainer.innerHTML += ` &#9002; ${capitalizeFirstLetter(segment)}`;
-        }
-    });
+    // Add the current page name
+    breadcrumb += ` &#9002; ${capitalizeFirstLetter(getPageName())}`;
+
+    breadcrumbContainer.innerHTML = breadcrumb;
 });
 
 function capitalizeFirstLetter(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+function getPageName() {
+    // Extract the page name from the URL
+    const pathArray = window.location.pathname.split('/').filter(Boolean);
+    return pathArray.length > 0 ? capitalizeFirstLetter(pathArray[pathArray.length - 1].replace(/\.html$/, '')) : 'Home';
 }
 </script>
 
