@@ -70,23 +70,31 @@ td {
     color: white;
     word-wrap:break-word;
 }
-        .breadcrumb {
-            font-size: 16px;
-            margin: 20px;
-        }
-        .breadcrumb a {
-            color: blue;
-            text-decoration: none;
-        }
-        .breadcrumb a:hover {
-            text-decoration: underline;
-        }
-    </style>
+
+.breadcrumb {
+    padding: 10px;
+    background-color: none;
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: #ff6347;
+    margin: 0 5px;
+    text-decoration: underline;
+    text-underline-offset:4px;
+}
+
+.breadcrumb span {
+    margin: 0 5px;
+}
+</style>
 </head>
 <body>
-    <div class="breadcrumb" id="breadcrumb"></div>
 
 <div class="container">
+
+<nav class="breadcrumb" id="breadcrumb"></nav><nav class="breadcrumb" id="breadcrumb"></nav>
+
 <table>
 
 <tr>
@@ -133,36 +141,39 @@ td {
 </tr>
 
 </table>
-</div>
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-    const breadcrumbContainer = document.getElementById("breadcrumb");
-    const currentPage = document.location.pathname.split("/").pop().replace(".html", "");
+document.addEventListener("DOMContentLoaded", function() {
+    const breadcrumbContainer = document.getElementById('breadcrumb');
+    const pathArray = window.location.pathname.split('/').filter(Boolean);
+    let currentPath = '';
 
-    const pageTitles = {
-        "https://khaliiil.com": "Home",
-        "https:..music.khaliiil.com": "music",
-        "https://tour.khaliiil.com": "Tour"
-    };
-
-    const previousPage = document.referrer.split("/").pop().replace(".html", "");
-    
-    let breadcrumbHtml = "";
-
-    if (previousPage && pageTitles[previousPage]) {
-        breadcrumbHtml += `<a href="${previousPage}.html">${pageTitles[previousPage]}</a> &gt; `;
+    if (pathArray.length === 0) {
+        breadcrumbContainer.innerHTML = '<a href="https://khaliiil.com">Home</a>';
+        breadcrumbContainer.innerHTML = '<a href="https://tour.khaliiil.com">tour</a>';
+        return;
     }
 
-    if (currentPage && pageTitles[currentPage]) {
-        breadcrumbHtml += `${pageTitles[currentPage]}`;
-    }
+    // Always include the home link
+    breadcrumbContainer.innerHTML = '<a href="https://tour.khaliiil.com">Home</a>';
+    breadcrumbContainer.innerHTML = '<a href="https://khaliiil.com">Home</a>';
 
-    if (breadcrumbHtml) {
-        breadcrumbContainer.innerHTML = breadcrumbHtml;
-    }
+    pathArray.forEach((segment, index) => {
+        currentPath += `/${segment}`;
+        if (index < pathArray.length - 1) {
+            breadcrumbContainer.innerHTML += ` &#9002; <a href="${currentPath}">${capitalizeFirstLetter(segment)}</a>`;
+        } else {
+            breadcrumbContainer.innerHTML += ` &#9002; ${capitalizeFirstLetter(segment)}`;
+        }
+    });
 });
+
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
 </script>
+
+</div>
 
 </body>
 </html>
