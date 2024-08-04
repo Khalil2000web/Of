@@ -143,18 +143,24 @@ td {
 </table>
 
 <script>
+
 document.addEventListener("DOMContentLoaded", function() {
     const breadcrumbContainer = document.getElementById('breadcrumb');
     const referrer = document.referrer;
     let breadcrumb = '';
 
+    // Check if referrer is empty or not set
+    if (!referrer) {
+        breadcrumbContainer.style.display = 'none'; // Hide the breadcrumb if no referrer
+        return;
+    }
+
     // Determine the breadcrumb based on referrer
-    if (referrer.includes('khialiil.com')) {
-        // Assume the user came from the home page if referrer includes the domain
+    if (referrer.includes('https://khaliiil.com')) {
         breadcrumb = '<a href="https://khaliiil.com">Home</a>';
-    } else if (referrer.includes('tour.khialiiil.com')) {
+    } else if (referrer.includes('tour')) {
         breadcrumb = '<a href="https://tour.khaliiil.com">Tour</a>';
-    } else if (referrer.includes('music.khialiiil.com')) {
+    } else if (referrer.includes('music')) {
         breadcrumb = '<a href="https://music.khaliiil.com">Music</a>';
     } else {
         breadcrumbContainer.style.display = 'none'; // Hide the breadcrumb if referrer is unknown
