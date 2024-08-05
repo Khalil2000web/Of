@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Khalil</title>
+<meta name="description" content="The Official Website of Khalil">
+<meta property="og:description" content="The Official Website of Khalil">
+<meta property="og:image" content="https://www.khaliiil.com/system/7FA53553-2225-48AC-B68C-89172E7E6340.jpeg">
+<meta property="og:url" content="https://www.khaliiil.com">
+<meta property="og:site_name" content="Khaliil">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:author" content="Khalil">
+<link rel="icon" type="image/x-icon" href="https://khaliiil.com/system/FF863B55-25CD-41EA-B199-86DC40B5A73F.jpeg">    
+<meta name="URL" content="http://www.khaliiil.com">
+<meta name="twitter:title" content="Khalil">
+<meta name="twitter:description" content="The Official Website of Khalil">
+<meta property="og:title" content="Khalil">
+<meta property="og:description" content="The Official Website of Khalil">
+<meta property="og:site_name" content="Khalil">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.khaliiil.com/">
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<meta name="copyright" content="2024">
+<style>
+@font-face {
+font-family: 'BB Manual Mono Pro TX';
+src: url('https://ik.imagekit.io/ybebp19uwa/BBManualMonoProTX-Regular.woff2?updatedAt=1722424863590') format('woff2');
+}
+        body {
+            font-family: 'BB Manual Mono Pro TX', arial;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+.nav-top {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.nav-top {
+  top: 0;
+  height: 60px;
+  background: none; /* More transparent */
+  text-transform:uppercase;
+}
+
+.nav-top .menu {
+  display: flex;
+  gap: 45px;
+}
+
+.nav-top .menu a {
+  color: white;
+  text-decoration: none;
+  padding-bottom: 5px;
+  font-weight: 300; /* Custom font style */
+  font-size:20px;
+}
+
+@media screen and (max-width:300px) {
+.nav-top .menu {
+    gap:20px;
+}
+}
+@media screen and (min-width:301px) and (max-width:500px) {
+.nav-top .menu {
+    gap:45px;
+}
+.nav-top .menu a {
+  font-size:22px;
+}
+}
+
+@media screen and (min-width:501px) and (max-width:600px) {
+.nav-top .menu {
+    gap:100px;
+}
+.nav-top .menu a {
+    font-size:22px;
+}
+}
+
+@media screen and (min-width:601px) and (max-width:700px) {
+.nav-top .menu {
+    gap:120px;
+}
+}
+
+@media screen and (min-width:701px) and (max-width:800px) {
+.nav-top .menu {
+    gap:105px;
+}
+.nav-top .menu a {
+    font-size:22.6px;
+}
+}
+
+@media screen and (min-width:801px) and (max-width:990px) {
+.nav-top .menu {
+    gap:110px;
+}
+.nav-top .menu a {
+    font-size:22px;
+}
+}
+@media screen and (min-width:1000px) {
+.nav-top .menu {
+    gap:150px;
+}
+.nav-top .menu a {
+font-size:24px;
+}
+}
+
+        
+.footert {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    background: none;
+    padding: 10px;
+    margin: 0 auto;
+    align-items: center;
+    z-index:1000;
+}
+
+.footert a, .footert p {
+    text-decoration: none;
+    background: none;
+    color: #fff;
+    border: none;
+    padding: 5px 0;
+    margin: 0 auto;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: 'BB Manual Mono Pro TX', Arial;
+}
+
+.footert p {
+    margin: 0 10px; /* Add margin if necessary for spacing */
+}
+@media (max-width: 799px) {
+    .footert {
+        justify-content: space-between;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .footert button {
+        margin: 0 5px;
+        margin-bottom: 5px;
+    }
+
+    #m {
+        display: flex;
+    }
+    #d {
+        display: none;
+    }
+}
+
+@media (min-width: 800px) {
+    .footert {
+        justify-content: space-between;
+        padding: 10px 50px;
+    }
+    .footert button {
+        font-size: 16px;
+        margin: 0 20px;
+        width: 100%;
+    }
+    #d {
+        display: flex;
+    }
+    #m {
+        display: none;
+    }
+}
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            justify-content: center;
+            align-items: center;
+            z-index: 3000;
+        }
+
+        .overlay img {
+            max-width: 90%;
+            max-height: 90%;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            pointer-events: auto;
+            -webkit-user-drag: none;
+            -khtml-user-drag: none;
+            -moz-user-drag: none;
+            -o-user-drag: none;
+            user-drag: none;
+            -webkit-touch-callout: none;
+        }
+
+        .close-btn {
+            width: 20px;
+            height: auto;
+            z-index: 3001;
+            margin: 10px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            pointer-events: auto;
+            -webkit-user-drag: none;
+            -khtml-user-drag: none;
+            -moz-user-drag: none;
+            -o-user-drag: none;
+            user-drag: none;
+            -webkit-touch-callout: none;
+        }
+
+        .close-btn:hover,
+        .close-btn.touched {
+            background: gray;
+            opacity: 0.5;
+            border-radius: 2px;
+        }
+
+        .overlay .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+            z-index: 201;
+        }
+
+        .outer-container {
+            width: 100vw;
+            height: 100vh;
+            overflow: auto;
+            position: relative;
+        }
+.inner-container {
+    width: 150vh;
+    height: 150vh; /* Changed from 150vh to 150vw to make it square */
+    background: black;
+    position: relative;
+    touch-action:pan-x pan-y;
+}
+
+        .content {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+            color: darkblue;
+        }
+
+        .tit {
+          color:white;
+          position:absolute;
+          bottom:20px;
+          right:20px;
+          z-index:800;
+        }
+
+        .img {
+            position: absolute;
+            width: 300px;
+            height: auto;
+        }
+
+        .img-1 {
+            bottom: 2%;
+            left: 5%;
+        }
+
+        .img-2 {
+            top: 7%;
+            right: 7%;
+            width:400px;
+            height:auto;
+        }
+
+        .img-3 {
+            top: 30%;
+            left: 5%;
+        }
+
+        .img-4 {
+            bottom: 10%;
+            right: 20%;
+        }
+        .img-5 {
+          top:6%;
+          left:10%;
+        }
+        .img-6 {
+          bottom:23%;
+          left:50%;
+          transform:translateX(-100%);
+          width:200px;
+          height:auto;
+          z-index:50;
+          filter: grayscale(100%);
+        }
+    </style>
+</head>
+<body>
+<div class="nav-top">
+<div class="menu">
+<a href="https://www.khaliiil.com/">
+HOME
+</a>
+<a href="https://music.khaliiil.com/">
+MUSIC
+</a>
+<a href="https://tour.khaliiil.com/">
+TOUR
+</a>
+<a href="https://khaliiil.com/blog">
+BLOG
+</a>
+</div>
+</div>
+<div class="footert" id="m">
+<a href="https://khaliiil.com/join-club">
+JOIN
+</a>
+<a href="https://khaliiil.com/credits">
+CREDITS
+</a>
+<a href="https://khaliiil.com/terms-conditions">
+TERMS
+</a>
+<a href="https://khaliiil.com/privacy-policy">
+PRIVACY
+</a>
+</div>
+
+<div class="footert" id="d">
+<a href="https://khaliiil.com/join-club">
+JOIN
+</a>
+<a href="https://khaliiil.com/terms-conditions">
+TERMS & CONDITIONS
+</a>
+<a>
+&copy; 2024 KHALIL
+</a>
+<a href="https://khaliiil.com/credits">
+credits
+</a>
+<a href="https://khaliiil.com/privacy-policy">
+PRIVACY POLICY
+</a>
+</div>
+
+    <div class="outer-container">
+    
+        <div class="inner-container">
+        <div class="tit">
+        LAST UPDATED: AUG 6, 2024
+        </div>
+            <img src="https://khaliiil.com/Br6.jpg" class="img img-6" alt="Image 6" onclick="openOverlay(this.src)">
+            <img src="https://khaliiil.com/Br7.GIF" class="img img-5" alt="Image 5" onclick="openOverlay(this.src)">
+            <img src="https://khaliiil.com/Br4.GIF" class="img img-4" alt="Image 4" onclick="openOverlay(this.src)">
+            <img src="https://ik.imagekit.io/ybebp19uwa/GMP_U2F2ZUdNQVgwMQ==.gif" class="img img-3" alt="Image 3" onclick="openOverlay(this.src)">
+            <img src="https://khaliiil.com/Br3.JPEG" class="img img-2" alt="Image 2" onclick="openOverlay(this.src)">
+            <img src="https://khaliiil.com/system/7FA53553-2225-48AC-B68C-89172E7E6340.jpeg" class="img img-1" alt="Image 1" onclick="openOverlay(this.src)">
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay">
+        <img src="https://github.com/Dibacarter/Of/raw/main/system/D2F4C472-AD0C-4B13-8920-37AD3DD9EB63.png" class="close-btn" onclick="closeOverlay()">
+        <img id="overlay-img" src="">
+    </div>
+
+    <script>
+        function openOverlay(src) {
+            document.getElementById('overlay-img').src = src;
+            document.getElementById('overlay').style.display = 'flex';
+        }
+
+        function closeOverlay() {
+            document.getElementById('overlay').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
