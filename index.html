@@ -51,7 +51,8 @@ html, body {
 .nav-top {
   top: 0;
   height: 80px;
-  background: none; /* More transparent */
+    /* Define the background with a linear gradient */
+    background: none;
   text-transform:uppercase;
 }
 
@@ -65,15 +66,23 @@ html, body {
   text-decoration: none;
   padding-bottom: 5px;
   font-weight: 300; /* Custom font style */
-  font-size:20px;
+  font-size:30px;
 }
 
-@media screen and (max-width:300px) {
+@media screen and (max-width:400px) {
 .nav-top .menu {
-    gap:20px;
+    gap:40px;
 }
+.nav-top .menu a{
+  font-size:22px;
 }
-@media screen and (min-width:301px) and (max-width:500px) {
+    .footert {
+        justify-content: space-between;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+@media screen and (min-width:401px) and (max-width:500px) {
 .nav-top .menu {
     gap:45px;
 }
@@ -88,6 +97,19 @@ html, body {
 }
 .nav-top .menu a {
     font-size:22px;
+}
+#prev-btn {
+  left: 120px;
+  right:aut0;
+  border: 4px solid #275c86;
+  top: 25px;
+}
+
+#next-btn {
+  right:auto;
+  border: 4px solid #275c86;
+  right: 120px;
+  top: 25px;
 }
 }
 
@@ -148,7 +170,7 @@ font-size:24px;
     border-radius: 5px;
     cursor: pointer;
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: 16px;
     font-family: 'BB Manual Mono Pro TX', Arial;
 }
 
@@ -191,12 +213,6 @@ font-size:24px;
         display: none;
     }
 }
-.co a {
-    color:#ff6347;
-}
-.footert p {
-  color:#ff6347;
-}
 
 .media-container {
   width: 100%;
@@ -236,10 +252,10 @@ font-size:24px;
 
 .sound-icon {
   position: absolute;
-  bottom: 10px;
-  right: 10px;
-  width: 22px;
-  max-width:25px;
+  bottom: 15px;
+  right: 15px;
+  width: 20px;
+  max-width:20px;
   height: auto;
   cursor: pointer;
   z-index: 10;
@@ -299,14 +315,14 @@ body.no-scroll {
   position: fixed;
   touch-action: pan-x pan-y;
 }
-
 #close-btn {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
   cursor: pointer;
   width: 20px;
-  max-width:24px;
+  max-width: 24px;
   height: auto;
   user-select: none;
   pointer-events: auto;
@@ -316,11 +332,12 @@ body.no-scroll {
   -ms-user-select: none;
   user-select: none;
   pointer-events: auto;
-  cursor:pointer;
+  cursor: pointer;
   -webkit-user-drag: none;
   -moz-user-drag: none;
   -ms-user-drag: none;
-  user-drag: none; 
+  user-drag: none;
+  z-index:1009;
 }
 
 .nav-btn {
@@ -336,14 +353,28 @@ body.no-scroll {
 }
 
 #prev-btn {
-  left: 65px;
-  border: 3px solid #275c86;
-  top: 50px;
+  left: 5px;
+  border: 4px solid #275c86;
+  top: 25px;
 }
 
 #next-btn {
-  right: 65px;
-  top: 50px;
+  border: 4px solid #275c86;
+  right: 5px;
+  top: 25px;
+}
+
+.tpe03 {
+  margin:0 auto;
+  padding:0;
+  width:62%;
+  background:rgba(255, 255, 255, 0.100);
+  height:50px;
+  transform:translateX(-50%);
+  left:50%;
+  top:0;
+  position:absolute;
+  z-index:1007;
 }
 
 .nav-btn img {
@@ -472,6 +503,32 @@ video {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
 }
+
+.fade-top, .fade-bottom {
+            position: fixed; /* Make the fades fixed */
+            left: 0;
+            right: 0;
+            pointer-events: none; /* Allow clicks to pass through */
+            z-index: 900; /* Ensure they are above the content */
+            border: none; /* Ensure no border is applied */
+            outline: none; /* Ensure no outline is applied */
+        }
+
+        .fade-top {
+            top: 0; /* Position the up fade immediately below the black space */
+            left: 0;
+            right: 0;
+            height: 110px; /* Adjust the height of the fade */
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+        }
+            .fade-bottom {
+            bottom: 0; /* Position the down fade immediately above the black space */
+            left: 0;
+            right: 0;
+            height: 110px; /* Adjust the height of the fade */
+            background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+        }
+
 .hidden-in-gallery {
     display: none;
 }
@@ -479,25 +536,163 @@ video {
 #overlay .hidden-in-gallery {
     display: block; /* Ensure the image is shown in the overlay */
 }
+.fixed-t-l {
+  position:fixed;
+  color:white;
+  background:none;
+  left:0;
+  padding:0;
+  padding-left:80px;
+  top:80px;
+  z-index:900;
+  font-size:17px;
+  text-decoration:underline;
+  text-underline-offset:3.6px;
+}
+.fixed-t-r {
+    text-underline-offset:3.6px;
+  text-decoration:underline;
+  position:fixed;
+  color:white;
+  background:none;
+  right:0;
+  top:80px;
+  padding:0;
+  margin:0;
+  padding-right:80px;
+  z-index:900;
+  font-size:17px;
+}
+
+  .hover-effect {
+    position: relative;
+    display: inline-block;
+  }
+
+  .hover-effect img {
+    display: block;
+    transition: opacity 0.3s ease;
+  }
+
+  .hover-effect::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color:none;
+    padding: 10px;
+    border-radius: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+  }
+
+  .hover-effect:hover img,
+  .hover-effect:focus img {
+    opacity: 0.6;
+  }
+
+  .hover-effect:hover::after,
+  .hover-effect:focus::after {
+    opacity: 1;
+  }
+
+  #mf {
+    color:white;
+  }
+  #ds .nav-top {
+    height:60px;
+  }
+
+  @media screen and (max-width:550px) {
+    #mf {
+      display:block;
+    }
+    #ds {
+      display:none;
+    }
+  }
+  @media screen and (min-width:551px) {
+    #mf {
+      display:none;
+    }
+    #ds {
+      display:block;
+    }
+
+.fixed-t-l {
+  padding-left:190px;
+  padding-right:auto;
+}
+.fixed-t-r {
+  padding-right:190px;
+  padding-right:auto;
+}
+}
 </style>
 </head>
 <body>
+<div class="fade-top"></div>
+<div class="fade-bottom"></div>
+<a href="https://tour.khaliiil.com">
+<div class="fixed-t-l">
+2024
+</div>
+<div class="fixed-t-r">
+WORLD WIDE
+</div>
+</a>
+<div id="mf">
 <div class="nav-top">
 <div class="menu">
-<a href="https://www.khaliiil.com/snap">
-SNAP<br>pro
-</a>
 <a href="https://music.khaliiil.com/">
+<p>
 MUSIC
+</p>
+</a>
+<a href="https://www.khaliiil.com/snap">
+<p>SNAP<br>pro</p>
 </a>
 <a href="https://tour.khaliiil.com/">
+<p>
 tour
+</p>
 </a>
 <a href="https://khaliiil.com/blog">
+<p>
 BLOG
+</p>
 </a>
 </div>
 </div>
+</div>
+<div id="ds">
+<div class="nav-top">
+<div class="menu">
+<a href="https://music.khaliiil.com/">
+<p>
+MUSIC
+</p>
+</a>
+<a href="https://www.khaliiil.com/snap">
+<p>SNAP PRO</p>
+</a>
+<a href="https://tour.khaliiil.com/">
+<p>
+tour
+</p>
+</a>
+<a href="https://khaliiil.com/blog">
+<p>
+BLOG
+</p>
+</a>
+</div>
+</div>
+</div>
+
 <div class="footert" id="m">
 <a href="https://khaliiil.com/join-club">
 JOIN
@@ -505,7 +700,7 @@ JOIN
 <a href="https://khaliiil.com/terms-conditions">
 TERMS
 </a>
-<a class="co">
+<a>
 &copy;
 </a>
 <a href="https://khaliiil.com/credits">
@@ -523,7 +718,7 @@ JOIN
 <a href="https://khaliiil.com/terms-conditions">
 TERMS & CONDITIONS
 </a>
-<a class="co">
+<a>
 &copy; 2024 KHALIL
 </a>
 <a href="https://khaliiil.com/credits">
@@ -535,7 +730,9 @@ PRIVACY POLICY
 </div>
 
 <div class="media-container">
+<div class="hover-effect" tabindex="0" data-text="GOING BACK HOME">
 <img src="https://ik.imagekit.io/ybebp19uwa/IMG_7947.jpeg?updatedAt=1722876255627" class="media" loading="lazy" alt="media_home_9031" />
+</div>
 <img src="https://ik.imagekit.io/ybebp19uwa/cpm35%202024-07-15%20122420.807%E2%80%AFPM.jpeg?updatedAt=1722876265568" class="media" loading="lazy" alt="media_home_9030" />
 <img src="https://ik.imagekit.io/ybebp19uwa/cpm35%202024-07-16%20121227.217%E2%80%AFPM.jpeg?updatedAt=1722876269736" class="media" loading="lazy" alt="media_home_9029" />
 <img src="https://ik.imagekit.io/ybebp19uwa/cpm35%202024-07-15%20121904.766%E2%80%AFPM.jpeg?updatedAt=1722876274574" class="media" loading="lazy" alt="media_home_9028" />
@@ -549,6 +746,7 @@ PRIVACY POLICY
 <img src="https://ik.imagekit.io/ybebp19uwa/Css-on.PNG?updatedAt=1722516029101" class="sound-icon sound-on-icon" alt="On">
 </div>
 <img class="media" src="https://ik.imagekit.io/ybebp19uwa/13.JPG?updatedAt=1722438718083" alt="media_home_9023"/>
+<img src="https://ik.imagekit.io/ybebp19uwa/4E585A22-EC12-4377-901C-B0B7243A7FE0.jpeg" class="media" loading="lazy" alt="media_home_9033" />
 <img class="media" src="https://ik.imagekit.io/ybebp19uwa/12.JPG?updatedAt=1722438717758" alt="media_home_9022"/>
 <div class="media">
 <video src="https://ik.imagekit.io/ybebp19uwa/copy_91192036-CA66-422A-812A-BD5F9CE6C55A.mov?updatedAt=1722535128486" alt="media_home_9002" autoplay loop muted playsinline controls="false"></video>
@@ -583,13 +781,16 @@ PRIVACY POLICY
 <img src="https://ik.imagekit.io/ybebp19uwa/5a67e1ae-0c7b-494c-8440-3eb7d7f35ac9.jpeg?updatedAt=1722425171680" class="media"/>
 </div>
 <div id="overlay">
+  <div class="tpe03">
   <span id="prev-btn" class="nav-btn">
     <img src="https://raw.githubusercontent.com/Dibacarter/Of/main/prev.PNG" alt="Prev">
   </span>
-  <div id="overlay-content"></div>
+
   <span id="next-btn" class="nav-btn">
     <img src="https://raw.githubusercontent.com/Dibacarter/Of/main/next.PNG" alt="Next">
   </span>
+  </div>
+    <div id="overlay-content"></div>
   <img id="close-btn" src="https://ik.imagekit.io/ybebp19uwa/D2F4C472-AD0C-4B13-8920-37AD3DD9EB63.png?updatedAt=1722425833911" alt="Close">
 </div>
 <script>
@@ -736,25 +937,24 @@ PRIVACY POLICY
     });
   });
 </script>
-
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     const prevBtn = document.getElementById('prev-btn');
     const nextBtn = document.getElementById('next-btn');
 
-    if (!localStorage.getItem('prevBtnClicked')) {
+    if (!localStorage.getItem('btnClicked')) {
         prevBtn.style.border = '2px solid #275c86';
+        nextBtn.style.border = '2px solid #275c86';
     }
 
-    prevBtn.addEventListener('click', function() {
+    function hideBorders() {
         prevBtn.style.border = 'none';
-        localStorage.setItem('prevBtnClicked', 'true');
-    });
-    
-        nextBtn.addEventListener('click', function() {
-        prevBtn.style.border = 'none';
-        localStorage.setItem('prevBtnClicked', 'true');
-    });
+        nextBtn.style.border = 'none';
+        localStorage.setItem('btnClicked', 'true');
+    }
+
+    prevBtn.addEventListener('click', hideBorders);
+    nextBtn.addEventListener('click', hideBorders);
 });
 </script>
 </body>
