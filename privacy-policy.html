@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Khalil</title>
+<title>Khalil - TERMS</title>
 <meta name="description" content="The Official Website of Khalil">
 <meta property="og:description" content="The Official Website of Khalil">
 <meta property="og:image" content="https://www.khaliiil.com/system/7FA53553-2225-48AC-B68C-89172E7E6340.jpeg">
@@ -37,7 +37,9 @@ html, body {
   padding: 0;
   color:#fff;
 }
+
 .nav-top {
+  font-family: 'BB Manual Mono Pro TX',arial;
   position: fixed;
   width: 100%;
   left: 0;
@@ -49,8 +51,8 @@ html, body {
 
 .nav-top {
   top: 0;
-  height: 60px;
-  background: none; /* More transparent */
+  height: 80px;
+  background: none;
   text-transform:uppercase;
 }
 
@@ -60,25 +62,29 @@ html, body {
 }
 
 .nav-top .menu a {
-  font-family:'BB Manual Mono Pro TX',arial;
-  color: #fff;
+  color: white;
   text-decoration: none;
   padding-bottom: 5px;
   font-weight: 300; /* Custom font style */
-  font-size:20px;
+  font-size:30px;
 }
 
 @media screen and (max-width:400px) {
 .nav-top .menu {
-    gap:35px;
+    gap:20px;
 }
-.nav-top .menu a {
+.nav-top .menu a{
   font-size:21px;
 }
+    .footert {
+        justify-content: space-between;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 }
 @media screen and (min-width:401px) and (max-width:500px) {
 .nav-top .menu {
-    gap:40px;
+    gap:32px;
 }
 .nav-top .menu a {
   font-size:22px;
@@ -87,7 +93,7 @@ html, body {
 
 @media screen and (min-width:501px) and (max-width:600px) {
 .nav-top .menu {
-    gap:70px;
+    gap:50px;
 }
 .nav-top .menu a {
     font-size:22px;
@@ -96,13 +102,13 @@ html, body {
 
 @media screen and (min-width:601px) and (max-width:700px) {
 .nav-top .menu {
-    gap:100px;
+    gap:70px;
 }
 }
 
 @media screen and (min-width:701px) and (max-width:800px) {
 .nav-top .menu {
-    gap:115px;
+    gap:90px;
 }
 .nav-top .menu a {
     font-size:22.6px;
@@ -111,7 +117,7 @@ html, body {
 
 @media screen and (min-width:801px) and (max-width:990px) {
 .nav-top .menu {
-    gap:120px;
+    gap:110px;
 }
 .nav-top .menu a {
     font-size:22px;
@@ -126,6 +132,7 @@ font-size:24px;
 }
 }
 
+        
 .footert {
     position: fixed;
     bottom: 0;
@@ -150,14 +157,14 @@ font-size:24px;
     border-radius: 5px;
     cursor: pointer;
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: 16px;
     font-family: 'BB Manual Mono Pro TX', Arial;
 }
 
 .footert p {
     margin: 0 10px; /* Add margin if necessary for spacing */
 }
-@media (max-width: 799px) {
+@media screen and (max-width: 799px) {
     .footert {
         justify-content: space-between;
         padding-left: 40px;
@@ -176,7 +183,11 @@ font-size:24px;
     }
 }
 
-@media (min-width: 800px) {
+@media screen and (min-width: 800px) {
+.container p {
+    padding-left:100px;
+    padding-right:100px;
+}
     .footert {
         justify-content: space-between;
         padding: 10px 50px;
@@ -193,6 +204,54 @@ font-size:24px;
         display: none;
     }
 }
+
+  #mf {
+    color:white;
+  }
+  #ds .nav-top {
+    height:60px;
+  }
+
+  @media screen and (max-width:550px) {
+    #mf {
+      display:block;
+    }
+    #ds {
+      display:none;
+    }
+  }
+  @media screen and (min-width:551px) {
+    #mf {
+      display:none;
+    }
+    #ds {
+      display:block;
+    }
+    }
+    .fade-top, .fade-bottom {
+            position: fixed; /* Make the fades fixed */
+            left: 0;
+            right: 0;
+            pointer-events: none; /* Allow clicks to pass through */
+            z-index: 900; /* Ensure they are above the content */
+            border: none; /* Ensure no border is applied */
+            outline: none; /* Ensure no outline is applied */
+        }
+
+        .fade-top {
+            top: 0; /* Position the up fade immediately below the black space */
+            left: 0;
+            right: 0;
+            height: 110px; /* Adjust the height of the fade */
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+        }
+            .fade-bottom {
+            bottom: 0; /* Position the down fade immediately above the black space */
+            left: 0;
+            right: 0;
+            height: 110px; /* Adjust the height of the fade */
+            background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+        }
 
 .container {
     width:100%;
@@ -218,7 +277,7 @@ font-size:24px;
     padding-right:20px;
 }
 .container p {
-    line-height:1.4;
+  line-height:1.4;
     color:white;
     margin:0;
     padding-left:20px;
@@ -231,22 +290,67 @@ font-size:24px;
 </style>
 </head>
 <body>
+<div class="fade-top"></div>
+<div class="fade-bottom"></div>
+<div id="mf">
 <div class="nav-top">
 <div class="menu">
 <a href="https://www.khaliiil.com/">
+<p>
 HOME
-</a>
-<a href="https://tour.khaliiil.com">
-TOUR
+</p>
 </a>
 <a href="https://music.khaliiil.com/">
+<p>
 MUSIC
+</p>
+</a>
+<a href="https://www.khaliiil.com/snap">
+<p>SNAP<br>pro</p>
+</a>
+<a href="https://tour.khaliiil.com/">
+<p>
+tour
+</p>
 </a>
 <a href="https://khaliiil.com/blog">
+<p>
 BLOG
+</p>
 </a>
 </div>
 </div>
+</div>
+<div id="ds">
+<div class="nav-top">
+<div class="menu">
+<a href="https://www.khaliiil.com/">
+<p>
+HOME
+</p>
+</a>
+<a href="https://music.khaliiil.com/">
+<p>
+MUSIC
+</p>
+</a>
+<a href="https://www.khaliiil.com/snap">
+<p>SNAP PRO</p>
+</a>
+<a href="https://tour.khaliiil.com/">
+<p>
+tour
+</p>
+</a>
+<a href="https://khaliiil.com/blog">
+<p>
+BLOG
+</p>
+</a>
+</div>
+</div>
+</div>
+
 <div class="footert" id="m">
 <a href="https://khaliiil.com/join-club">
 JOIN
@@ -282,6 +386,7 @@ credits
 PRIVACY POLICY
 </a>
 </div>
+
 
 <div class="container">
 <h1>
@@ -362,7 +467,6 @@ THE SITE IS INTENDED FOR USERS UNDER THE AGE OF 10. WE TAKE SPECIAL CARE TO PROT
 12. CONTACT -</span> IF YOU HAVE ANY QUESTIONS OR CONCERNS ABOUT OUR PRIVACY POLICY, PLEASE CONTACT US AT HELP@KHALIIIL.COM.</p>
 <br><br><br><br><br><br><br><br>
 </div>
-
 
 </body>
 </html>
