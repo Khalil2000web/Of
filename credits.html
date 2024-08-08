@@ -238,7 +238,22 @@ document.addEventListener("DOMContentLoaded", function() {
         breadcrumb = '<a href="https://tour.khaliiil.com">Tour</a>';
     } else if (referrer.includes('music')) {
         breadcrumb = '<a href="https://music.khaliiil.com">Music</a>';
-    } else {
+    }  else if (referrer.includes('terms-conditions')) {
+        breadcrumb = '<a href="https://khaliiil.com/terms-conditions">terms</a>';
+    }
+    else if (referrer.includes('privacy-policy')) {
+        breadcrumb = '<a href="https://khaliiil.com/privacy-policy">privacy</a>';
+    }
+    else if (referrer.includes('snap')) {
+        breadcrumb = '<a href="https://khaliiil.com/snap">snap pro</a>';
+    }
+    else if (referrer.includes('join')) {
+        breadcrumb = '<a href="https://khaliiil.com/join-club">join</a>';
+    }
+    else if (referrer.includes('blog')) {
+        breadcrumb = '<a href="https://khaliiil.com/blog">blog</a>';
+    }
+    else {
         breadcrumbContainer.style.display = 'none'; // Hide the breadcrumb if referrer is unknown
         return;
     }
