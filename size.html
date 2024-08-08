@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Dimension Checker</title>
+</head>
+<body>
+    <h2>Upload a video to check its dimensions</h2>
+    <input type="file" id="videoInput" accept="video/*">
+    <p id="dimensions"></p>
+
+    <script>
+        document.getElementById('videoInput').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const video = document.createElement('video');
+                video.preload = 'metadata';
+
+                video.onloadedmetadata = function() {
+                    window.URL.revokeObjectURL(video.src);
+                    const width = video.videoWidth;
+                    const height = video.videoHeight;
+                    document.getElementById('dimensions').innerText = `Width: ${width}px, Height: ${height}px`;
+                };
+
+                video.src = URL.createObjectURL(file);
+            }
+        });
+    </script>
+</body>
+</html>
