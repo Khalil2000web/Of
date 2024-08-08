@@ -232,9 +232,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // Determine the breadcrumb based on referrer
-    if (referrer.includes('https://khaliiil.com')) {
-        breadcrumb = '<a href="https://khaliiil.com">Home</a>';
-    } else if (referrer.includes('tour')) {
+   if (referrer.includes('tour')) {
         breadcrumb = '<a href="https://tour.khaliiil.com">Tour</a>';
     } else if (referrer.includes('music')) {
         breadcrumb = '<a href="https://music.khaliiil.com">Music</a>';
@@ -252,6 +250,9 @@ document.addEventListener("DOMContentLoaded", function() {
     }
     else if (referrer.includes('blog')) {
         breadcrumb = '<a href="https://khaliiil.com/blog">blog</a>';
+    }
+    else if (referrer.includes('https://khaliiil.com')) {
+        breadcrumb = '<a href="https://khaliiil.com/">home</a>';
     }
     else {
         breadcrumbContainer.style.display = 'none'; // Hide the breadcrumb if referrer is unknown
