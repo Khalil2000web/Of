@@ -244,7 +244,7 @@ font-size:24px;
   user-drag: none; 
 }
 
-.media video {
+.media-container video {
   width: 100%;
   height: auto;
   display: block;
@@ -306,7 +306,6 @@ body.no-scroll {
 }
 
 img {
-
   user-select: none;
   pointer-events: auto;
   user-drag: none;
@@ -670,7 +669,6 @@ CREDITS
 TERMS
 </a>
 </div>
-
 <div class="footert" id="d">
 <a href="https://khaliiil.com/join-club">
 JOIN
@@ -697,7 +695,7 @@ PRIVACY POLICY
 <img src="https://ik.imagekit.io/ybebp19uwa/17.heic?updatedAt=1722438715321" alt="media_home_9026"/>
 <img src="https://ik.imagekit.io/ybebp19uwa/15.JPG?updatedAt=1722438749536" alt="media_home_9025"/>
 <img src="https://ik.imagekit.io/ybebp19uwa/14.GIF?updatedAt=1722438818110" alt="media_home_9024"/>
-<div>
+<div class="media">
 <video src="https://ik.imagekit.io/ybebp19uwa/IMG_6947.mov?updatedAt=1722431094298" alt="media_home_9002" autoplay loop muted playsinline controls="false"></video>
 <img src="https://ik.imagekit.io/ybebp19uwa/Css-off.PNG?updatedAt=1722515991871" class="sound-icon sound-off-icon" alt="Off">
 <img src="https://ik.imagekit.io/ybebp19uwa/Css-on.PNG?updatedAt=1722516029101" class="sound-icon sound-on-icon" alt="On">
@@ -705,11 +703,6 @@ PRIVACY POLICY
 <img src="https://ik.imagekit.io/ybebp19uwa/13.JPG?updatedAt=1722438718083" alt="media_home_9023"/>
 <img src="https://ik.imagekit.io/ybebp19uwa/4E585A22-EC12-4377-901C-B0B7243A7FE0.jpeg" loading="lazy" alt="media_home_9033" />
 <img src="https://ik.imagekit.io/ybebp19uwa/12.JPG?updatedAt=1722438717758" alt="media_home_9022"/>
-<div>
-<video src="https://ik.imagekit.io/ybebp19uwa/copy_91192036-CA66-422A-812A-BD5F9CE6C55A.mov?updatedAt=1722535128486" alt="media_home_9002" autoplay loop muted playsinline controls="false"></video>
-<img src="https://ik.imagekit.io/ybebp19uwa/Css-off.PNG?updatedAt=1722515991871" class="sound-icon sound-off-icon" alt="Off">
-<img src="https://ik.imagekit.io/ybebp19uwa/Css-on.PNG?updatedAt=1722516029101" class="sound-icon sound-on-icon" alt="On">
-</div>
 <img src="https://ik.imagekit.io/ybebp19uwa/11.JPG?updatedAt=1722438758795" alt="media_home_9021"/>
 <img src="https://ik.imagekit.io/ybebp19uwa/10.GIF?updatedAt=1722438801137" alt="media_home_9020">
 <img src="https://ik.imagekit.io/ybebp19uwa/8.GIF?updatedAt=1722438792959" alt="media_home_9019">
@@ -717,9 +710,7 @@ PRIVACY POLICY
 <img src="https://ik.imagekit.io/ybebp19uwa/IMG_6596.jpeg?updatedAt=1720707515002" alt="media_home_9017">
 <img src="https://raw.githubusercontent.com/Dibacarter/Of/main/mediaOf/5.jpg" alt="media_home_9016">
 <img src="https://raw.githubusercontent.com/Dibacarter/Of/main/mediaOf/4.jpg" alt="media_home_9015">
-<img src="https://img-cdn.heictojpg.com/jpg/b776fd5d7c04b774/3.jpg" alt="media_home_9014">
 <img src="https://ik.imagekit.io/ybebp19uwa/IMG_6400.jpeg?updatedAt=1722425974382" loading="lazy" alt="media_home_9013">
-<img src="https://img-cdn.heictojpg.com/jpg/b776fd5d7c04b774/1.jpg" alt="media_home_9012">
 <img loading="lazy" src="https://khaliiil.com/mediaOf/J.JPG" alt="media_home_9011">
 <img src="https://khaliiil.com/mediaOf/26-6-o-m-24-II.JPG" alt="media_home_9010">
 <img src="https://khaliiil.com/mediaOf/26-6-o-m-24-III.GIF" alt="media_home_9009">
@@ -730,11 +721,11 @@ PRIVACY POLICY
 <img src="https://www.khaliiil.com/Cl.GIF" alt="media_home_9004">
 <img src="https://ik.imagekit.io/ybebp19uwa/T-1.JPG?updatedAt=1722425268069" alt="media_home_9003">
 <div>
+<div class="media">
 <video src="https://ik.imagekit.io/ybebp19uwa/IMG_0844.MOV?updatedAt=1722425583838" alt="media_home_9002" autoplay loop muted playsinline controls="false"></video>
 <img src="https://ik.imagekit.io/ybebp19uwa/Css-off.PNG?updatedAt=1722515991871" class="sound-icon sound-off-icon" alt="Off">
 <img src="https://ik.imagekit.io/ybebp19uwa/Css-on.PNG?updatedAt=1722516029101" class="sound-icon sound-on-icon" alt="On">
 </div>
-<img src="https://ik.imagekit.io/ybebp19uwa/Bu.GIF?updatedAt=1722425223158" alt="media_home_9001">
 <img src="https://ik.imagekit.io/ybebp19uwa/5a67e1ae-0c7b-494c-8440-3eb7d7f35ac9.jpeg?updatedAt=1722425171680"/>
 </div>
 <div id="overlay">
@@ -793,43 +784,7 @@ PRIVACY POLICY
       });
     }
 
-    function openOverlay(index) {
-      disableScroll();
-      currentIndex = index;
-      const clonedMedia = mediaElements[currentIndex].cloneNode(true);
-      overlayContent.innerHTML = '';
-      overlayContent.appendChild(clonedMedia);
-      overlay.style.display = 'flex';
-      overlay.classList.add('overlay-show');
-
-      // Mute all main page videos when overlay is opened
-      muteAllVideos();
-
-      if (clonedMedia.querySelector('video')) {
-        const video = clonedMedia.querySelector('video');
-        const soundOffIcon = clonedMedia.querySelector('.sound-off-icon');
-        const soundOnIcon = clonedMedia.querySelector('.sound-on-icon');
-
-        video.muted = true;
-        soundOffIcon.style.display = 'block';
-        soundOnIcon.style.display = 'none';
-
-        soundOffIcon.addEventListener('click', () => {
-          video.muted = false;
-          soundOffIcon.style.display = 'none';
-          soundOnIcon.style.display = 'block';
-        });
-
-        soundOnIcon.addEventListener('click', () => {
-          video.muted = true;
-          soundOffIcon.style.display = 'block';
-          soundOnIcon.style.display = 'none';
-        });
-
-        currentOverlayVideo = video;
-        video.play();
-      }
-    }
+    
 
     function closeOverlay() {
       overlay.style.display = 'none';
