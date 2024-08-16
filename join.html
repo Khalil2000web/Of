@@ -239,7 +239,7 @@ input[type="email"] {
     position:absolute;
     outline:none;
     border:1px solid white;
-    background:rgba(74, 106, 64, 0.4);
+    background:rgba(74, 106, 64, 0.1);
     color:white;
     border-radius:0;
     width:100%;
@@ -262,7 +262,7 @@ input[type="name"] {
     height:40px;
     font-family:'BB Manual Mono Pro TX', Arial;
     margin:0 auto;
-    background:rgba(74, 106, 64, 0.4);
+    background:rgba(74, 106, 64, 0.1);
     left:50%;
     transform:translateX(-50%);
     margin-top:70px;
@@ -272,6 +272,7 @@ input[type="name"]::placeholder,
 input[type="email"]::placeholder {
     font-size:17px;
     color:rgba(255, 255, 255, 0.7);
+    letter-spacing:2px;
 }
 
 input:focus {
@@ -280,27 +281,27 @@ input:focus {
 
 .send-btn {
     position:absolute;
-    margin-top:20px;
     font-weight:300;
-    font-size:15px;
-    width:50%;
+    font-size:14.6px;
+    width:70%;
     background-color:black;
     border:1px solid white;
     border-radius:0;
     font-family: 'BB Manual Mono Pro TX', Arial;
     color:white;
     margin:0 auto;
-    padding-bottom:6px;
+    padding-bottom:7px;
     margin-top:150px;
     height:40px;
     left:50%;
     transform:translateX(-50%);
+    letter-spacing:2px;
 }
 
 .send-btn:hover {
     color:white;
-    background:#4A6A40;
-    border:1px solid white;
+    background:#c63527;
+    border:none;
 }
 </style>
 </head>
@@ -332,7 +333,7 @@ BLOG
 </div>
 
 <div class="footert" id="m">
-<a href="https://khaliiil.com/join">
+<a href="https://khaliiil.com/join-club">
 JOIN
 </a>
 <a href="https://khaliiil.com/privacy-policy">
@@ -349,7 +350,7 @@ TERMS
 </a>
 </div>
 <div class="footert" id="d">
-<a href="https://khaliiil.com/join">
+<a href="https://khaliiil.com/join-club">
 JOIN
 </a>
 <a href="https://khaliiil.com/terms-conditions">
@@ -375,7 +376,7 @@ PRIVACY POLICY
 </label>
 
 <label>
-<input type="name" name="name" placeholder="Enter your name" required>
+<input type="name" name="name" placeholder="Enter your name." required>
 </label>
 
 <button class="send-btn" type="submit">SEND</button>
