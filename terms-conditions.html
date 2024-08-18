@@ -34,13 +34,15 @@ src: url('https://ik.imagekit.io/ybebp19uwa/BBManualMonoProTX-SemiBold.woff2?upd
 }
 html, body {
   margin: 0;
-  background:#000;
+  background:#fff;
   padding: 0;
   color:#fff;
 }
-
+body {
+    padding-right:20px;
+    padding-left:20px;
+}
 .nav-top {
-  font-family: 'BB Manual Mono Pro TX',arial;
   position: fixed;
   width: 100%;
   left: 0;
@@ -52,8 +54,9 @@ html, body {
 
 .nav-top {
   top: 0;
-  height: 80px;
-  background: none;
+  height: 60px;
+    /* Define the background with a linear gradient */
+    background: none;
   text-transform:uppercase;
 }
 
@@ -63,7 +66,8 @@ html, body {
 }
 
 .nav-top .menu a {
-  color: white;
+  font-family: 'BB Manual Mono Pro TX',arial;
+  color: #000;
   text-decoration: none;
   padding-bottom: 5px;
   font-weight: 300; /* Custom font style */
@@ -72,10 +76,10 @@ html, body {
 
 @media screen and (max-width:400px) {
 .nav-top .menu {
-    gap:20px;
+    gap:40px;
 }
 .nav-top .menu a{
-  font-size:21px;
+  font-size:22px;
 }
     .footert {
         justify-content: space-between;
@@ -85,7 +89,7 @@ html, body {
 }
 @media screen and (min-width:401px) and (max-width:500px) {
 .nav-top .menu {
-    gap:32px;
+    gap:45px;
 }
 .nav-top .menu a {
   font-size:22px;
@@ -94,22 +98,35 @@ html, body {
 
 @media screen and (min-width:501px) and (max-width:600px) {
 .nav-top .menu {
-    gap:50px;
+    gap:100px;
 }
 .nav-top .menu a {
     font-size:22px;
+}
+#prev-btn {
+  left: 120px;
+  right:aut0;
+  border: 4px solid #275c86;
+  top: 25px;
+}
+
+#next-btn {
+  right:auto;
+  border: 4px solid #275c86;
+  right: 120px;
+  top: 25px;
 }
 }
 
 @media screen and (min-width:601px) and (max-width:700px) {
 .nav-top .menu {
-    gap:70px;
+    gap:105px;
 }
 }
 
 @media screen and (min-width:701px) and (max-width:800px) {
 .nav-top .menu {
-    gap:90px;
+    gap:110px;
 }
 .nav-top .menu a {
     font-size:22.6px;
@@ -118,7 +135,7 @@ html, body {
 
 @media screen and (min-width:801px) and (max-width:990px) {
 .nav-top .menu {
-    gap:110px;
+    gap:120px;
 }
 .nav-top .menu a {
     font-size:22px;
@@ -151,7 +168,7 @@ font-size:24px;
 .footert a, .footert p {
     text-decoration: none;
     background: none;
-    color: #fff;
+    color: #000;
     border: none;
     padding: 5px 0;
     margin: 0 auto;
@@ -165,11 +182,11 @@ font-size:24px;
 .footert p {
     margin: 0 10px; /* Add margin if necessary for spacing */
 }
-@media screen and (max-width: 799px) {
+@media (max-width: 799px) {
     .footert {
         justify-content: space-between;
-        padding-left: 40px;
-        padding-right: 40px;
+        padding-left: 30px;
+        padding-right: 30px;
     }
     .footert button {
         margin: 0 5px;
@@ -184,11 +201,7 @@ font-size:24px;
     }
 }
 
-@media screen and (min-width: 800px) {
-.container p {
-    padding-left:100px;
-    padding-right:100px;
-}
+@media (min-width: 800px) {
     .footert {
         justify-content: space-between;
         padding: 10px 50px;
@@ -206,99 +219,66 @@ font-size:24px;
     }
 }
 
-  #mf {
-    color:white;
-  }
-  #ds .nav-top {
-    height:60px;
-  }
-
-  @media screen and (max-width:550px) {
-    #mf {
-      display:block;
-    }
-    #ds {
-      display:none;
-    }
-  }
-  @media screen and (min-width:551px) {
-    #mf {
-      display:none;
-    }
-    #ds {
-      display:block;
-    }
-    }
-    .fade-top, .fade-bottom {
-            position: fixed; /* Make the fades fixed */
-            left: 0;
-            right: 0;
-            pointer-events: none; /* Allow clicks to pass through */
-            z-index: 900; /* Ensure they are above the content */
-            border: none; /* Ensure no border is applied */
-            outline: none; /* Ensure no outline is applied */
-        }
-
-        .fade-top {
-            top: 0; /* Position the up fade immediately below the black space */
-            left: 0;
-            right: 0;
-            height: 110px; /* Adjust the height of the fade */
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(255, 255, 255, 0));
-        }
-            .fade-bottom {
-            bottom: 0; /* Position the down fade immediately above the black space */
-            left: 0;
-            right: 0;
-            height: 110px; /* Adjust the height of the fade */
-            background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(255, 255, 255, 0));
-        }
-
 .container {
     width:100%;
     max-width: 100%;
     margin: 0 auto;
-    background:#000;
+    background:#fff;
     height:100%;
     overflow-x:hidden;
     overflow-y:auto;
     padding:0;
-    color:white;
+    color:#000;
     font-family:'BB Manual Mono Pro TX',arial;
 }
 .container h1 {
-    color:white;
+    color:#000;
     font-weight:300;
     font-family:'BBManualMonoTX',arial;
     margin-top:80px;
     margin-bottom:70px;
     font-size:27px;
     text-decoration:none;
-    padding-left:20px;
-    padding-right:20px;
+    padding:0;
 }
 .container p {
   line-height:1.9;
-    color:white;
+    color:#000;
     margin:0;
-    padding-left:20px;
-    padding-right:20px;
+    padding:0;
+    text-transform:uppercase;
 }
-.container span {
-    text-decoration:underline;
-    text-underline-offset: 3px;
+.container {
+    padding-bottom:210px;
+}
+#m-t {color:#000;}
+#d-t {display:none;text-align:center;}
+@media screen and (min-width:850px){
+body {
+    padding-right:140px;
+    padding-left:140px;
+    padding-top:50px;
+}
+#m-t {
+    display:none;
+}
+#d-t {
+    display:block;
+}
+}
+li {
+    color:black;
+    line-height:1.5;
+    padding:0;
 }
 </style>
 </head>
 <body>
-<div class="fade-top"></div>
-<div class="fade-bottom"></div>
-<div id="mf">
 <div class="nav-top">
 <div class="menu">
-<a href="https://www.khaliiil.com/">
+<a href="https://www.khaliiil.com/notes">
 <p>
-HOME
+NOTES
 </p>
 </a>
 <a href="https://music.khaliiil.com/">
@@ -306,12 +286,9 @@ HOME
 MUSIC
 </p>
 </a>
-<a href="https://www.khaliiil.com/snap">
-<p>SNAP<br>pro</p>
-</a>
 <a href="https://tour.khaliiil.com/">
 <p>
-tour
+TOUR
 </p>
 </a>
 <a href="https://khaliiil.com/blog">
@@ -322,154 +299,218 @@ BLOG
 </div>
 </div>
 </div>
-<div id="ds">
-<div class="nav-top">
-<div class="menu">
-<a href="https://www.khaliiil.com/">
-<p>
-HOME
-</p>
-</a>
-<a href="https://music.khaliiil.com/">
-<p>
-MUSIC
-</p>
-</a>
-<a href="https://www.khaliiil.com/snap">
-<p>SNAP PRO</p>
-</a>
-<a href="https://tour.khaliiil.com/">
-<p>
-tour
-</p>
-</a>
-<a href="https://khaliiil.com/blog">
-<p>
-BLOG
-</p>
-</a>
-</div>
-</div>
-</div>
-
 <div class="footert" id="m">
 <a href="https://khaliiil.com/join">
 JOIN
 </a>
-<a href="https://khaliiil.com/terms-conditions">
-TERMS
+<a href="https://khaliiil.com/privacy-policy">
+PRIVACY
 </a>
 <a>
 &copy;
 </a>
 <a href="https://khaliiil.com/credits">
-credits
+CREDITS
 </a>
-<a href="https://khaliiil.com/privacy-policy">
-PRIVACY
+<a href="https://khaliiil.com/terms-conditions">
+TERMS
 </a>
 </div>
-
 <div class="footert" id="d">
 <a href="https://khaliiil.com/join">
 JOIN
 </a>
+<p>
+/
+</p>
 <a href="https://khaliiil.com/terms-conditions">
 TERMS & CONDITIONS
 </a>
+<p>
+/
+</p>
 <a>
 &copy; 2024 KHALIL
 </a>
+<p>
+/
+</p>
 <a href="https://khaliiil.com/credits">
-credits
+CREDITS
 </a>
+<p>
+/
+</p>
 <a href="https://khaliiil.com/privacy-policy">
 PRIVACY POLICY
 </a>
 </div>
 
-
-
 <div class="container">
-<h1>
+<h1 id="m-t">
 TERMS<br>&<br>CONDITIONS
 </h1>
+<h1 id="d-t">
+TERMS & CONDITIONS
+</h1>
 <p>
-LAST UPDATED: JULY 8, 2024<br>
-<span style="font-family:'BBManualMonoTX',arial;">
-1. INTRODUCTION -</span> WELCOME TO KHALIIIL.COM. YOUR USE OF THIS WEBSITE IS SUBJECT TO THE FOLLOWING TERMS AND CONDITIONS. BY ACCESSING OR USING ANY WEBSITE OWNED OR OPERATED BY KHALIL, INCLUDING THE WEBSITE FOUND AT WWW.KHALIIIL.COM AND ITS ASSOCIATED SUBDOMAINS, YOU AGREE TO ABIDE BY THE FOLLOWING TERMS AND CONDITIONS. THESE TERMS GOVERN YOUR USAGE AND ACCESS TO THE WEBSITE, ENCOMPASSING ALL ITS OFFERINGS, FEATURES, CONTENT, MATERIALS, PRODUCTS, AND SERVICES. IF YOU DISAGREE WITH THESE TERMS, PLEASE REFRAIN FROM ACCESSING OR USING THE WEBSITES.
+LAST UPDATED: AUGUST 19, 2024
+</p>
+<p style="font-family:'BBManualMonoTX',arial;font-size:1.2rem;">
+1. INTRODUCTION
+</p>
+<p>
+Welcome to KHALIIIL.COM, a personal platform where I, Khalil, share various aspects of my life, including photography, travel experiences, music preferences, personal notes, and more. These terms and conditions (the “Terms”) govern your access to and use of the website, including any content, functionality, and services offered on or through KHALIIIL.COM (the “Website”). By accessing or using the Website, you agree to abide by these Terms. If you do not agree with these Terms, please refrain from accessing the Website.
 </p>
 
-<p>
-<span style="text-transform:uppercase;font-family:'BBManualMonoTX',arial;">
-2. user interaction -</span> USERS ARE ENCOURAGED TO EXPLORE THE DIVERSE CONTENT SHARED ON THE WEBSITE, RANGING FROM PERSONAL EVENTS AND ACTIVITIES TO MUSIC CHOICES AND CREATIVE ENDEAVORS. YOUR ENGAGEMENT AND INTERACTION WITH THE CONTENT ARE VALUED AND APPRECIATED.
+<p style="font-family:'BBManualMonoTX',arial;font-size:1.2rem;">
+2. ABOUT THE WEBSITE
 </p>
-
 <p>
-<span style="font-family:'BBManualMonoTX',arial;">
-3. USER PRIVACY -</span> WHEN ACCESSING THE PRIVATE PAGE ON THE WEBSITE, USERS MAY BE PROMPTED TO PROVIDE THEIR NAME FOR IDENTIFICATION PURPOSES ONLY. REST ASSURED THAT ANY PERSONAL INFORMATION COLLECTED IS USED SOLELY FOR INTERNAL PURPOSES AND IS NOT SHARED WITH ANY THIRD PARTIES. YOUR PRIVACY AND CONFIDENTIALITY ARE PARAMOUNT TO US.
-</p>
-
-<p>
-<span style="font-family:'BBManualMonoTX',arial;">
-4. USER RESPONSIBILITIES -</span> USERS MUST UPHOLD AND RESPECT THE INTELLECTUAL PROPERTY RIGHTS OF KHALIIIL. ANY IMAGES, TEXT, OR OTHER CONTENT SHARED ON THE WEBSITE ARE THE EXCLUSIVE PROPERTY OF KHALIIIL AND MAY NOT BE REPRODUCED, EDITED, OR SHARED WITHOUT EXPLICIT PERMISSION. YOUR COOPERATION IN MAINTAINING THE INTEGRITY OF THE CONTENT IS GREATLY APPRECIATED.
-</p>
-
-<p>
-<span style="font-family:'BBManualMonoTX',arial;">
-5. USER-GENERATED CONTENT -</span> OF OUR COMMITMENT TO FOSTERING AN INCLUSIVE AND RESPECTFUL ONLINE COMMUNITY, USERS MAY HAVE THE OPPORTUNITY TO SUBMIT COMMENTS OR OTHER CONTENT ON THE WEBSITE. BY DOING SO, USERS AGREE TO ADHERE TO THE FOLLOWING GUIDELINES:<br>
+This Website is a personal space where I share my creative works and interests. The sections of the Website include:<br><br>
 </p>
 <ul>
 <li>
-CONTENT MUST NOT VIOLATE ANY LAWS OR INFRINGE UPON THE RIGHTS OF OTHERS.
+Home Page: Features a collection of images that I’ve taken. These images are a reflection of my artistic vision and are protected under copyright law.
 </li>
 </ul>
 <ul>
 <li>
-CONTENT MUST NOT BE OFFENSIVE, DEFAMATORY, OR INAPPROPRIATE IN NATURE.
+Tour Page: Showcases my travels around the world. Each trip is documented with images and sometimes text, providing insight into my personal experiences.
+</li>
+</ul>
+<ul>
+<li>
+Notes Page: Contains floating bubbles with my personal notes inside. These notes are my own reflections and are shared for viewing only.
+</li>
+</ul>
+<ul>
+<li>
+Music Page: Features music from my favorite artists, along with the latest songs, albums, and associated lyrics. I provide links to platforms where users can listen to these songs and include a standard credit “© music by [artist name]” to acknowledge the rightful owner of the music.
+</li>
+</ul>
+<ul>
+<li>
+Blog Page: A space where I share stories, opinions, and other personal writings.
+</li>
+</ul>
+<ul>
+<li>
+Join Page: Allows users to submit their name and email address if they wish to receive updates about new content on the Website. This is optional and users are not required to submit their information to access the site.
 </li>
 </ul>
 <p>
-KHALIL RESERVES THE RIGHT TO REMOVE ANY USER-GENERATED CONTENT THAT VIOLATES THESE TERMS WITHOUT PRIOR NOTICE.
+<p style="font-family:'BBManualMonoTX',arial;font-size:1.2rem;">
+3. USER PRIVACY AND DATA SECURITY
+</p>
+<p>
+Your privacy is important to me. The only personal information I collect is your name and email address through the Join Page. This data is collected using Formspree (https://formspree.io/f/mldrezaz), a service that employs industry-standard security measures to protect your information. Formspree’s privacy practices include data encryption, secure transmission protocols, and storage safeguards. I do not share your information with third parties, and it is used solely for sending updates from the Website. You have the right to unsubscribe from these updates at any time.
 </p>
 
+<p style="font-family:'BBManualMonoTX',arial;font-size:1.2rem;">
+4. INTELLECTUAL PROPERTY RIGHTS
+</p>
 <p>
-<span style="font-family:'BBManualMonoTX',arial;">
-6. USER ACCOUNTS -</span> USER ACCOUNTS OR REGISTRATION ARE REQUIRED TO ACCESS THE WEBSITE. HOWEVER, USERS MAY BE REQUIRED TO PROVIDE THEIR NAME TO ACCESS CERTAIN PRIVATE SECTIONS OF THE WEBSITE.
+All content on this Website, including but not limited to photographs, text, design elements, and music credits, is the intellectual property of Khalil unless otherwise stated. Unauthorized use, reproduction, or distribution of this content is strictly prohibited. If you wish to use any content from the Website, you must obtain explicit permission by contacting me via the official Website email.
 </p>
 
+<p style="font-family:'BBManualMonoTX',arial;font-size:1.2rem;">
+5. USE OF THE WEBSITE
+</p>
 <p>
-<span style="font-family:'BBManualMonoTX',arial;">
-7. INTELLECTUAL PROPERTY RIGHTS -</span> CONTENT, INCLUDING BUT NOT LIMITED TO TEXT, IMAGES, AND MUSIC, FEATURED ON THE WEBSITE IS OWNED BY KHALIIIL AND IS PROTECTED BY COPYRIGHT LAWS. USERS ARE STRICTLY PROHIBITED FROM REPRODUCING, DISTRIBUTING, OR USING ANY CONTENT WITHOUT PRIOR AUTHORIZATION.
+By accessing this Website, you agree to the following terms of use:<br><br>
+</p>
+<ul>
+<li>
+Prohibited Actions: You may not engage in activities such as scraping, reverse engineering, or hacking the Website. You are also prohibited from attempting to gain unauthorized access to any part of the Website.
+</li>
+</ul>
+<ul>
+<li>
+Content Use: You are not allowed to use, reproduce, distribute, or display any content from this Website without prior written consent from me.
+</li>
+</ul>
+<ul>
+<li>
+Linking and Sharing: You may not link to this Website or embed any of its content on other websites or social media platforms without permission.
+</li>
+</ul>
+
+<p style="font-family:'BBManualMonoTX',arial;font-size:1.2rem;">
+6. THIRD-PARTY LINKS AND CONTENT
+</p>
+<p>
+This Website may contain links to third-party websites or services that are not owned or controlled by me. I am not responsible for the content, privacy policies, or practices of any third-party websites. By using this Website, you acknowledge and agree that I will not be liable for any damages or losses caused by your use of or reliance on any third-party content or services.
 </p>
 
+<p style="font-family:'BBManualMonoTX',arial;font-size:1.2rem;">
+7. USER-GENERATED CONTENT (UGC)
+</p>
 <p>
-<span style="font-family:'BBManualMonoTX',arial;">
-8. PURPOSE OF THE WEBSITE -</span> IS A PERSONAL WEBSITE METICULOUSLY CRAFTED TO SHOWCASE THE LIFE EVENTS, ACTIVITIES, AND MUSIC PREFERENCES OF KHALIIIL. THROUGH THIS PLATFORM, KHALIIIL AIMS TO SHARE PERSONAL EXPERIENCES, INSIGHTS, AND CREATIVE ENDEAVORS WITH A GLOBAL AUDIENCE. PLEASE NOTE THAT THIS WEBSITE DOES NOT OFFER ANY PRODUCTS FOR SALE.
+Currently, users cannot upload or share content directly on the Website. Should this feature be introduced in the future, all user-generated content will be subject to moderation. By submitting content, users would grant me a license to use, modify, and display the content as part of the Website. Users would be responsible for ensuring that their content does not infringe on any third-party rights or violate any laws.
 </p>
 
+<p style="font-family:'BBManualMonoTX',arial;font-size:1.2rem;">
+8. EMAIL SUBSCRIPTIONS
+</p>
 <p>
-<span style="font-family:'BBManualMonoTX',arial;">
-9. EMAIL SUBSCRIPTIONS -</span> MAY HAVE THE OPTION TO SUBSCRIBE TO EMAIL UPDATES FROM KHALIIIL.COM BY PROVIDING THEIR GMAIL ADDRESS AND NAME. BY SUBSCRIBING, USERS CONSENT TO RECEIVE PERIODIC EMAILS CONTAINING UPDATES, NEWS, OR PROMOTIONAL CONTENT FROM KHALIIIL. USERS CAN UNSUBSCRIBE FROM THESE EMAILS AT ANY TIME BY FOLLOWING THE INSTRUCTIONS PROVIDED IN THE EMAILS.
+Users who opt to subscribe to updates will receive periodic emails from the official Website email address. These emails may include information about new content, changes to the Website, or other relevant updates. Users can unsubscribe from these emails at any time by following the instructions provided in the emails.
 </p>
 
+<p style="font-family:'BBManualMonoTX',arial;font-size:1.2rem;">
+9. DISPUTE RESOLUTION AND GOVERNING LAW</p>
 <p>
-<span style="font-family:'BBManualMonoTX',arial;">
-10. DISPUTE RESOLUTION -</span> DISPUTES OR COMPLAINTS REGARDING THE WEBSITE OR THESE TERMS SHALL BE RESOLVED THROUGH NEGOTIATION AND MEDIATION BETWEEN THE PARTIES INVOLVED, WITH THE GOAL OF REACHING AN AMICABLE RESOLUTION.
+Any disputes arising from or related to your use of the Website shall be resolved through respectful negotiation and mediation. If a resolution cannot be reached, the dispute shall be governed by and construed in accordance with the laws of [Your Country/State]. You agree to submit to the personal jurisdiction of the courts located in [Your Country/State] for any actions arising out of these Terms.
 </p>
 
+<p style="font-family:'BBManualMonoTX',arial;font-size:1.2rem;">
+10. DISCLAIMER OF WARRANTIES AND LIMITATION OF LIABILITY
+</p>
 <p>
-<span style="font-family:'BBManualMonoTX',arial;">
-11. CHANGES TO TERMS AND CONDITIONS -</span> RESERVES THE RIGHT TO UPDATE OR MODIFY THESE TERMS AND CONDITIONS AT ANY TIME WITHOUT PRIOR NOTICE. CHANGES WILL BE EFFECTIVE IMMEDIATELY UPON POSTING ON THE WEBSITE. USERS ARE ENCOURAGED TO REVIEW THESE TERMS REGULARLY FOR UPDATES.
+The Website is provided on an “as is” and “as available” basis, without any warranties of any kind, either express or implied. To the fullest extent permissible under applicable law, I disclaim all warranties, express or implied, including, but not limited to, implied warranties of merchantability and fitness for a particular purpose. I do not warrant that the Website will be uninterrupted or error-free, that defects will be corrected, or that the Website or the server that makes it available are free of viruses or other harmful components.
 </p>
 
-<p>
-<span style="font-family:'BBManualMonoTX',arial;">
-12. CONTACT INFORMATION -</span> YOU HAVE ANY QUESTIONS OR CONCERNS ABOUT THESE TERMS AND CONDITIONS, PLEASE CONTACT US AT HELP@KHALIIIL.COM.
+<p style="font-family:'BBManualMonoTX',arial;font-size:1.2rem;">
+11. TERMINATION OF ACCESS
 </p>
-<br><br><br><br><br><br><br><br>
+<p>
+I reserve the right to terminate your access to the Website at any time, without notice, for any reason, including but not limited to, a breach of these Terms. Upon termination, you must cease all use of the Website and any content obtained from it.
+</p>
+
+<p style="font-family:'BBManualMonoTX',arial;font-size:1.2rem;">
+12. INDEMNIFICATION
+</p>
+<p>
+You agree to indemnify and hold harmless Khalil and the Website from any claims, damages, liabilities, costs, and expenses (including attorneys’ fees) arising from your use of the Website, your violation of these Terms, or your infringement of any intellectual property or other rights of any person or entity.
+</p>
+
+<p style="font-family:'BBManualMonoTX',arial;font-size:1.2rem;">
+13. MODIFICATION OF THE WEBSIT
+</p>
+<p>
+I reserve the right to modify, suspend, or discontinue any part of the Website at any time, with or without notice. I will not be liable to you or any third party for any modifications, suspensions, or discontinuations of the Website.
+</p>
+
+<p style="font-family:'BBManualMonoTX',arial;font-size:1.2rem;">
+14. COOKIES AND TRACKING TECHNOLOGIES
+</p>
+<p>
+The Website may use cookies and similar technologies to enhance your experience. By using the Website, you consent to the use of these technologies. You can manage your cookie preferences through your browser settings.
+</p>
+
+<p style="font-family:'BBManualMonoTX',arial;font-size:1.2rem;">
+15. CHANGES TO THESE TERMS
+</p>
+<p>
+I may update these Terms from time to time. The latest version will be posted on this page with the “Last Updated” date at the top. It is your responsibility to review these Terms periodically for any changes. By continuing to use the Website after the Terms have been updated, you agree to the revised Terms.
+</p>
+
+<p style="font-family:'BBManualMonoTX',arial;font-size:1.2rem;">
+16. CONTACT INFORMATION
+</p>
+<p>
+If you have any questions or concerns about these Terms or the Website, please contact me at [Your Contact Information].
+</p>
 </div>
-
-
 </body>
 </html>
