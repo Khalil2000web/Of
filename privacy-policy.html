@@ -8,7 +8,7 @@
 <meta property="og:description" content="The Official Website of Khalil">
 <meta property="og:image" content="https://www.khaliiil.com/system/7FA53553-2225-48AC-B68C-89172E7E6340.jpeg">
 <meta property="og:url" content="https://www.khaliiil.com">
-<meta property="og:site_name" content="Khaliil">
+<meta property="og:site_name" content="Khaliiil">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:author" content="Khalil">
@@ -34,12 +34,11 @@ src: url('https://ik.imagekit.io/ybebp19uwa/BBManualMonoProTX-SemiBold.woff2?upd
 }
 html, body {
   margin: 0;
+  background:#fff;
   padding: 0;
-  color:#fff;
+  color:#000;
 }
-
 .nav-top {
-  font-family: 'BB Manual Mono Pro TX',arial;
   position: fixed;
   width: 100%;
   left: 0;
@@ -51,8 +50,9 @@ html, body {
 
 .nav-top {
   top: 0;
-  height: 80px;
-  background: none;
+  height: 60px;
+    /* Define the background with a linear gradient */
+    background: none;
   text-transform:uppercase;
 }
 
@@ -62,7 +62,8 @@ html, body {
 }
 
 .nav-top .menu a {
-  color: white;
+  font-family: 'BB Manual Mono Pro TX',arial;
+  color: #fff;
   text-decoration: none;
   padding-bottom: 5px;
   font-weight: 300; /* Custom font style */
@@ -71,10 +72,10 @@ html, body {
 
 @media screen and (max-width:400px) {
 .nav-top .menu {
-    gap:20px;
+    gap:40px;
 }
 .nav-top .menu a{
-  font-size:21px;
+  font-size:22px;
 }
     .footert {
         justify-content: space-between;
@@ -84,7 +85,7 @@ html, body {
 }
 @media screen and (min-width:401px) and (max-width:500px) {
 .nav-top .menu {
-    gap:32px;
+    gap:45px;
 }
 .nav-top .menu a {
   font-size:22px;
@@ -93,22 +94,35 @@ html, body {
 
 @media screen and (min-width:501px) and (max-width:600px) {
 .nav-top .menu {
-    gap:50px;
+    gap:100px;
 }
 .nav-top .menu a {
     font-size:22px;
+}
+#prev-btn {
+  left: 120px;
+  right:aut0;
+  border: 4px solid #275c86;
+  top: 25px;
+}
+
+#next-btn {
+  right:auto;
+  border: 4px solid #275c86;
+  right: 120px;
+  top: 25px;
 }
 }
 
 @media screen and (min-width:601px) and (max-width:700px) {
 .nav-top .menu {
-    gap:70px;
+    gap:105px;
 }
 }
 
 @media screen and (min-width:701px) and (max-width:800px) {
 .nav-top .menu {
-    gap:90px;
+    gap:110px;
 }
 .nav-top .menu a {
     font-size:22.6px;
@@ -117,7 +131,7 @@ html, body {
 
 @media screen and (min-width:801px) and (max-width:990px) {
 .nav-top .menu {
-    gap:110px;
+    gap:120px;
 }
 .nav-top .menu a {
     font-size:22px;
@@ -164,11 +178,11 @@ font-size:24px;
 .footert p {
     margin: 0 10px; /* Add margin if necessary for spacing */
 }
-@media screen and (max-width: 799px) {
+@media (max-width: 799px) {
     .footert {
         justify-content: space-between;
-        padding-left: 40px;
-        padding-right: 40px;
+        padding-left: 30px;
+        padding-right: 30px;
     }
     .footert button {
         margin: 0 5px;
@@ -183,11 +197,7 @@ font-size:24px;
     }
 }
 
-@media screen and (min-width: 800px) {
-.container p {
-    padding-left:100px;
-    padding-right:100px;
-}
+@media (min-width: 800px) {
     .footert {
         justify-content: space-between;
         padding: 10px 50px;
@@ -205,54 +215,6 @@ font-size:24px;
     }
 }
 
-  #mf {
-    color:white;
-  }
-  #ds .nav-top {
-    height:60px;
-  }
-
-  @media screen and (max-width:550px) {
-    #mf {
-      display:block;
-    }
-    #ds {
-      display:none;
-    }
-  }
-  @media screen and (min-width:551px) {
-    #mf {
-      display:none;
-    }
-    #ds {
-      display:block;
-    }
-    }
-    .fade-top, .fade-bottom {
-            position: fixed; /* Make the fades fixed */
-            left: 0;
-            right: 0;
-            pointer-events: none; /* Allow clicks to pass through */
-            z-index: 900; /* Ensure they are above the content */
-            border: none; /* Ensure no border is applied */
-            outline: none; /* Ensure no outline is applied */
-        }
-
-        .fade-top {
-            top: 0; /* Position the up fade immediately below the black space */
-            left: 0;
-            right: 0;
-            height: 110px; /* Adjust the height of the fade */
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-        }
-            .fade-bottom {
-            bottom: 0; /* Position the down fade immediately above the black space */
-            left: 0;
-            right: 0;
-            height: 110px; /* Adjust the height of the fade */
-            background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-        }
-
 .container {
     width:100%;
     max-width: 100%;
@@ -262,42 +224,86 @@ font-size:24px;
     overflow-x:hidden;
     overflow-y:auto;
     padding:0;
-    color:white;
+    color:#fff;
     font-family:'BB Manual Mono Pro TX',arial;
 }
 .container h1 {
-    color:white;
+    color:#fff;
     font-weight:300;
     font-family:'BBManualMonoTX',arial;
-    margin-top:80px;
+    margin-top:110px;
     margin-bottom:70px;
     font-size:27px;
     text-decoration:none;
-    padding-left:20px;
-    padding-right:20px;
+    padding:0;
 }
 .container p {
   line-height:1.9;
-    color:white;
+    color:#fff;
     margin:0;
+    padding:0;
+    text-transform:uppercase;
+    font-size:15px;
+padding-right:20px;
+padding-left:20px;
+}
+.container {
+    padding-bottom:210px;
+}
+#m-t {color:#fff;text-align:center;}
+#d-t {display:none;text-align:center;}
+@media screen and (min-width:850px){
+body {
+    padding-right:190px;
+    padding-left:190px;
+    padding-top:50px;
+}
+#m-t {
+    display:none;
+}
+#d-t {
+    display:block;
+}
+}
+li {
+    color:#fff;
+    line-height:2;
+    padding:0;
+    margin:0;
+        font-size:15px;
+    text-transform:uppercase;
+}
+ul {
     padding-left:20px;
     padding-right:20px;
+    padding-top:0;
+    padding-bottom:0;
+    margin:0;
+    margin-top:5px;
 }
-.container span {
-    text-decoration:underline;
-    text-underline-offset: 3px;
+
+.container li a {color:white;text-decoration:underline;text-underline-offset:3px;}
+@media only screen and (orientation: landscape) and (max-width: 767px) {
+.container p {
+font-size:15px;
+padding-right:20px;
+padding-left:20px;
+}
+#m-t {
+    display:none;
+}
+#d-t {
+    display:block;
+}
 }
 </style>
 </head>
 <body>
-<div class="fade-top"></div>
-<div class="fade-bottom"></div>
-<div id="mf">
 <div class="nav-top">
 <div class="menu">
-<a href="https://www.khaliiil.com/">
+<a href="https://www.khaliiil.com/notes">
 <p>
-HOME
+NOTES
 </p>
 </a>
 <a href="https://music.khaliiil.com/">
@@ -305,12 +311,9 @@ HOME
 MUSIC
 </p>
 </a>
-<a href="https://www.khaliiil.com/snap">
-<p>SNAP<br>pro</p>
-</a>
 <a href="https://tour.khaliiil.com/">
 <p>
-tour
+TOUR
 </p>
 </a>
 <a href="https://khaliiil.com/blog">
@@ -321,152 +324,553 @@ BLOG
 </div>
 </div>
 </div>
-<div id="ds">
-<div class="nav-top">
-<div class="menu">
-<a href="https://www.khaliiil.com/">
-<p>
-HOME
-</p>
-</a>
-<a href="https://music.khaliiil.com/">
-<p>
-MUSIC
-</p>
-</a>
-<a href="https://www.khaliiil.com/snap">
-<p>SNAP PRO</p>
-</a>
-<a href="https://tour.khaliiil.com/">
-<p>
-tour
-</p>
-</a>
-<a href="https://khaliiil.com/blog">
-<p>
-BLOG
-</p>
-</a>
-</div>
-</div>
-</div>
-
 <div class="footert" id="m">
 <a href="https://khaliiil.com/join">
 JOIN
 </a>
-<a href="https://khaliiil.com/terms-conditions">
-TERMS
+<a href="https://khaliiil.com/privacy-policy">
+PRIVACY
 </a>
 <a>
 &copy;
 </a>
 <a href="https://khaliiil.com/credits">
-credits
+CREDITS
 </a>
-<a href="https://khaliiil.com/privacy-policy">
-PRIVACY
+<a href="https://khaliiil.com/terms-conditions">
+TERMS
 </a>
 </div>
-
 <div class="footert" id="d">
 <a href="https://khaliiil.com/join">
 JOIN
 </a>
+<p>
+/
+</p>
 <a href="https://khaliiil.com/terms-conditions">
 TERMS & CONDITIONS
 </a>
+<p>
+/
+</p>
 <a>
 &copy; 2024 KHALIL
 </a>
+<p>
+/
+</p>
 <a href="https://khaliiil.com/credits">
-credits
+CREDITS
 </a>
+<p>
+/
+</p>
 <a href="https://khaliiil.com/privacy-policy">
 PRIVACY POLICY
 </a>
 </div>
 
-
 <div class="container">
-<h1>
+<h1 id="m-t">
 PRIVACY POLICY
 </h1>
-
+<h1 id="d-t">
+PRIVACY POLICY
+</h1>
 <p>
 PRIVACY POLICY<br>
-THIS PRIVACY POLICY WAS LAST REVISED AND IS EFFECTIVE AS OF JUNE 19, 2024.<BR>
-<span style="font-family:'BBManualMonoTX',arial;">
-1. INTRODUCTION -</span> THIS PRIVACY POLICY EXPLAINS HOW KHALIIIL.COM COLLECTS, USES, AND PROTECTS PERSONAL INFORMATION WHEN YOU VISIT OUR WEBSITE.</p>
+Effective Date: AUGUST 19, 2024<br>
+1. INTRODUCTION<br>
+Welcome to Khaliiil.com. At Khaliiil.com, we are committed to safeguarding your privacy and ensuring a secure online experience. This Privacy Policy outlines how we collect, use, disclose, and protect your personal information when you interact with our website. By using Khaliiil.com, you agree to the practices described in this Privacy Policy. If you have any questions or concerns about our privacy practices, please contact us using the details provided at the end of this policy.
+<br>
+2. Information We Collect<br>
+2.1. Information Provided by Users
+<ul>
+<li>
+<span style="font-weight:700;">
+Join Page Form:</span>
+When you voluntarily provide your name and email address through our join page form, this data is collected to facilitate the sending of updates, newsletters, and notifications about new features, improvements, and significant changes related to Khaliiil.com. This form is managed by Formspree.io, a third-party service provider specializing in form management. Formspree.io’s practices regarding the handling and storage of personal data are detailed in their Privacy Policy. We encourage you to review their policy for comprehensive information on how your data is managed.
+</li>
+</ul>
+
+<ul>
+<li>
+<span style="font-weight:700;">Email Communications:</span>
+If you choose to subscribe to our mailing list, your email address will be used to send you newsletters, promotional materials, and other updates relevant to Khaliiil.com. You may opt out of these communications at any time by following the unsubscribe link included in each email. We do not use your email address for purposes other than those described in this policy.
+</li>
+</ul>
+</p>
 <p>
-<span style="text-transform:uppercase;font-family:'BBManualMonoTX',arial;">
-2. INFORMATION WE COLLECT<br>2.A INFORMATION YOU GIVE US -</span> IN ADDITION TO THE NAME PROVIDED WHEN ACCESSING THE PRIVATE PAGE, USERS MAY HAVE THE OPTION TO VOLUNTARILY PROVIDE THEIR GMAIL ADDRESS FOR EMAIL SUBSCRIPTIONS. THIS INFORMATION IS COLLECTED SOLELY FOR THE PURPOSE OF SENDING UPDATES AND COMMUNICATIONS FROM KHALIIIL.COM AND WILL NOT BE SHARED WITH ANY THIRD PARTIES.
+2.2. Information Not Collected
+</p>
+
+<ul>
+<li>
+<span style="font-weight:700;">
+User Comments and Interactions:</span>
+Currently, Khaliiil.com does not feature a comment section, forum, or any interactive elements that allow users to post content or provide feedback beyond the join page form. Therefore, we do not collect or process data related to user comments, posts, or any other interactive contributions.
+</li>
+</ul>
+
+<p>
+3. Use of Your Information<br>
+3.1. Purpose of Data Collection
+</p>
+
+<ul>
+<li>
+<span style="font-weight:700;">
+Personal Data Utilization:</span>
+The information collected through the join page form, including your name and email address, is used solely for the purpose of sending you updates, newsletters, and information related to Khaliiil.com. This data is not used for any other purpose and is not shared with third parties outside of the scope described in this policy.
+</li>
+</ul>
+
+<ul>
+<li>
+<span style="font-weight:700;">
+Communication and Updates:</span>
+We use your email address to provide you with important updates about Khaliiil.com, including new features, enhancements, and relevant news. We may also use your contact information to respond to your inquiries and provide support as needed.
+</li>
+</ul>
+
+<p>
+4. Data Sharing and Third-Party Services<br>
+4.1. Third-Party Data Management
+</p>
+
+<ul>
+<li>
+<span style="font-weight:700;">Compliance and Legal Obligations:</span>
+We may disclose your personal information to comply with legal obligations, respond to lawful requests from authorities, or protect our rights. Such disclosures are made in accordance with applicable laws and regulations.
+</li>
+</ul>
+
+<ul>
+<li>
+<span style="font-weight:700;">Formspree.io: </span>
+The join page form is managed by Formspree.io. As a third-party service provider, Formspree.io handles the data collected through the form in accordance with their <a href="https://formspree.io/legal/privacy-policy">Privacy Policy</a>. We rely on Formspree.io’s data management and security practices to protect your personal information. For more information on how Formspree.io processes and protects your data, please review their privacy policy.
+</li>
+</ul>
+
+<p>
+4.2. Third-Party Service Providers
+<p>
+
+<ul>
+<li>
+<span style="font-weight:700;">External Links: </span>
+Khaliiil.com may include links to third-party websites or services, such as music platforms and other resources. These third-party sites operate independently of Khaliiil.com and have their own privacy policies. We are not responsible for the privacy practices or content of these external sites. We encourage users to review the privacy policies of any third-party sites before providing personal information.
+</li>
+</ul>
+
+<ul>
+<li>
+<span style="font-weight:700;">Affiliate Links: </span>
+Some links on our website may be affiliate links, meaning we may earn a commission if you make a purchase through these links. This does not affect the price you pay or the quality of the products or services. We strive to ensure that all affiliate links are relevant and beneficial to our users.
+</li>
+</ul>
+
+<p>
+5. Content and Copyrights<br>
+5.1. Ownership and Attribution
+</p>
+
+<ul>
+<li>
+<span style="font-weight:700;">Site Content:</span>
+ All content on Khaliiil.com, including text, images, videos, and other media, is owned by us or licensed to us unless explicitly stated otherwise. This includes personal travel images, blog content, and other materials featured on our website. Unauthorized use of this content is prohibited without prior permission. If you wish to use any content from our website, please contact us to obtain the necessary permissions.
+</li>
+</ul>
+
+<ul>
+<li>
+<span style="font-weight:700;">
+Music Content: </span>
+Our music page features tracks from various artists. Each track includes proper attribution, such as “© music by Kokym”, and links to platforms where the music is available. We ensure that all music credits and links comply with copyright laws. If you notice any errors or discrepancies in credits or links, please contact us so we can address the issue promptly.
+</li>
+</ul>
+
+<p>
+6. Security Measures<br>6.1. Data Protection
+</p>
+
+<ul>
+<li>
+<span style="font-weight:700;">Formspree.io Security: </span>
+Since user data collected through the join page form is managed by Formspree.io, their security protocols are applied to protect your information. Formspree.io employs various measures to safeguard data, including encryption and access controls. For more details on their security practices, please refer to their <a href="https://formspree.io/legal/privacy-policy">Privacy Policy</a> & their <a href="https://formspree.io/security/"></a>.
+</li>
+</ul>
+
+<ul>
+<li>
+<span style="font-weight:700;">Website Security: </span>
+We implement appropriate technical and organizational measures to protect your personal information from unauthorized access, disclosure, alteration, and destruction. These measures include encryption, access controls, and regular security reviews to ensure the integrity of our website and the data we handle.
+</li>
+</ul>
+
+<p>
+7. User Rights and Data Management<br>
+7.1. Access and Control
+</p>
+
+<ul>
+<li>
+<span style="font-weight:700;">
+Personal Information Management: </span>
+You have the right to access, correct, or request the deletion of your personal information collected through the join page form. If you wish to exercise these rights, please contact us using the contact information provided in Section 11. We will respond to your requests in accordance with applicable data protection laws.
+</li>
+</ul>
+
+<ul>
+<li>
+<span style="font-weight:700;">Subscription Management: </span>
+Formspree.io provides users with the ability to manage their subscription preferences, including the option to unsubscribe from email communications. For instructions on how to manage your subscription or unsubscribe, please refer to Formspree.io’s <a href="https://formspree.io/legal/privacy-policy/">Privacy Policy</a>.
+</li>
+</ul>
+
+<p>
+7.2. Data Retention
+</p>
+
+<ul>
+<li>
+<span style="font-weight:700;">
+Retention Policy: </span>
+We retain personal information only for as long as necessary to fulfill the purposes for which it was collected. Once your data is no longer needed, it will be securely deleted. Formspree.io’s data retention practices apply to the information collected through their forms. For specifics, please consult Formspree.io’s <a href="https://formspree.io/legal/privacy-policy/">Privacy Policy</a>.
+</li>
+</ul>
+
+<p>
+8. Children’s Privacy<br>
+8.1. Protection of Minors
+</p>
+
+<ul>
+<li>
+<span style="font-weight:700;">Content Suitability: </span>
+Khaliiil.com is not designed for children under the age of 10. We do not knowingly collect or solicit personal information from individuals under 10 years old. Our content, including travel images, music, and blog posts, is intended for a general audience and is not harmful to minors.
+</li>
+</ul>
+
+<ul>
+<li>
+<span style="font-weight:700;">Parental Consent: </span>
+If we become aware that we have collected personal information from a child under 10 without parental consent, we will take immediate steps to delete the information from our records. We encourage parents to monitor their children’s online activities and ensure their privacy is protected.
+</li>
+</ul>
+
+<p>
+9. Third-Party Links<br>
+9.1. External Links and Services
+</p>
+
+<ul>
+<li>
+<span style="font-weight:700;">Third-Party Sites: </span>
+Khaliiil.com may include links to external websites or services, such as Formspree.io and music platforms. These third-party sites operate independently of Khaliiil.com and have their own privacy policies and practices. We are not responsible for the content or privacy practices of these external sites. We encourage users to review the privacy policies of any third-party sites before providing personal information.
+</li>
+</ul>
+
+<ul>
+<li>
+<span style="font-weight:700;">Affiliate Links: </span>
+Some links on our website may be affiliate links, which means we may earn a commission if you make a purchase through these links. These links do not impact the price you pay or the quality of the products or services. We strive to ensure that all affiliate links are relevant and beneficial to our users.
+</li>
+</ul>
+
+<p>
+10. Policy Updates<br>
+10.1. Revisions and Notifications
+</p>
+
+<ul>
+<li>
+<span style="font-weight:700;">Policy Changes: </span>
+We may update this Privacy Policy periodically to reflect changes in our practices, legal requirements, or operational needs. Any changes will be posted on this page with the effective date indicated at the top. We recommend that you review this Privacy Policy regularly to stay informed about how we protect your information.
+</li>
+</ul>
+
+<ul>
+<li>
+<span style="font-weight:700;">Notification of Changes: </span>
+Significant changes to this Privacy Policy will be communicated to you via email or through a prominent notice on our website. It is your responsibility to review the Privacy Policy periodically for any updates.
+</li>
+</ul>
+
+<p>
+11. Contact Information<br>
+11.1. Inquiries and Feedback
+</p>
+
+<ul>
+<li>
+<span style="font-weight:700;">Contact Us: </span>
+If you have any questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us at help@khaliiil.com. We are committed to addressing your inquiries and providing the necessary support.
+</li>
+</ul>
+
+<ul>
+<li>
+<span style="font-weight:700;">Data Subject Requests: </span>
+To exercise your rights regarding personal data, such as access, correction, or deletion, please provide sufficient details to verify your identity. We will respond to your requests in accordance with applicable data protection laws.
+</li>
+</ul>
+
+<p>
+12. Data Security and Compliance<br>
+12.1. Security Practices
+</p>
+
+<ul>
+<li>
+<span style="font-weight:700;">Encryption </span>
+We use industry-standard encryption technologies to protect your personal information during transmission and storage. This includes secure communication channels (HTTPS) and encrypted databases.
+</li>
+</ul>
+
+<ul>
+<li>
+<span style="font-weight:700;">Access Control: </span>
+We implement strict access control measures to ensure that only authorized personnel have access to your personal information. This includes password protection, user authentication, and regular access reviews.
+</li>
+</ul>
+
+<p>
+12.2. Compliance
+</p>
+
+<ul>
+<li>
+<span style="font-weight:700;">Data Protection Laws: </span>
+We comply with applicable data protection laws and regulations, including the General Data Protection Regulation (GDPR) for users in the European Union and other relevant legislation.
+</li>
+</ul>
+
+<ul>
+<li>
+<span style="font-weight:700;">Privacy Impact Assessments: </span>
+We conduct regular privacy impact assessments to evaluate the risks associated with data processing activities and ensure that appropriate measures are in place to mitigate those risks.
+</li>
+</ul>
+
+<p>
+13. Cookies and Tracking Technologies<br>
+13.1. Cookie Usage
 </p>
 
 <p>
-<span style="font-family:'BBManualMonoTX',arial;">
-2.B COMMENTS AND INTERACTIONS -</span> WHEN USERS LEAVE COMMENTS ON BLOG POSTS OR INTERACT WITH THE WEBSITE, WE COLLECT THE DATA SHOWN IN THE COMMENTS FORM, AND ALSO THE USER’S IP ADDRESS AND BROWSER USER AGENT STRING TO HELP SPAM DETECTION.</p>
-
-<p>
-<span style="font-family:'BBManualMonoTX',arial;">
-3. HOW DO WE USE YOUR INFORMATION?<br>3.A PERSONAL INFORMATION -</span> THE NAME PROVIDED IS SOLELY USED FOR IDENTIFICATION PURPOSES TO GRANT ACCESS TO THE PRIVATE PAGE. WE DO NOT SHARE THIS INFORMATION WITH ANY THIRD PARTIES.</p>
-
-<p>
-<span style="font-family:'BBManualMonoTX',arial;">
-3.B EMAIL ADDRESSES -</span> IF YOU PROVIDE YOUR GMAIL ADDRESS FOR EMAIL SUBSCRIPTIONS, WE WILL USE IT TO SEND YOU UPDATES AND COMMUNICATIONS FROM KHALIIIL.COM.
+<span style="font-weight:700;">Types of Cookies: </span>
+Khaliiil.com uses cookies and similar tracking technologies to enhance user experience, analyze site usage, and provide personalized content. Cookies are small text files stored on your device that help us understand how you interact with our website.
 </p>
 
-<p>
-<span style="font-family:'BBManualMonoTX',arial;">
-3.C COMMENTS AND INTERACTIONS -</span> COMMENTS AND OTHER INTERACTIONS MAY BE USED TO ENGAGE WITH USERS, RESPOND TO FEEDBACK, AND IMPROVE THE CONTENT ON THE WEBSITE.</p>
+<ul>
+<li>
+<span style="font-weight:700;">Cookie Management:: </span>
+You can manage your cookie preferences through your browser settings. However, disabling cookies may affect your ability to use certain features of Khaliiil.com. For more information on our use of cookies and how to manage them, please refer to our Cookie Policy.
+</li>
+</ul>
 
 <p>
-<span style="font-family:'BBManualMonoTX',arial;">
-4. SHARING YOUR PERSONAL INFORMATION -</span> WE DO NOT SHARE YOUR PERSONAL INFORMATION WITH THIRD PARTIES EXCEPT AS NECESSARY TO COMPLY WITH APPLICABLE LAWS AND REGULATIONS, TO RESPOND TO A SUBPOENA, SEARCH WARRANT OR OTHER LAWFUL REQUEST FOR INFORMATION WE RECEIVE, OR TO OTHERWISE PROTECT OUR RIGHTS.</p>
-
-<p>
-<span style="font-family:'BBManualMonoTX',arial;">
-5. CONTENT AND CREDITS<br> 5.A PHOTOS</span> ANY PHOTOS SHARED ON KHALIIIL.COM ARE OWNED BY THE SITE OWNER UNLESS OTHERWISE CREDITED. IF YOU WISH TO USE ANY OF THESE PHOTOS, PLEASE CONTACT US FOR PERMISSION.</p>
-
-<p>
-<span style="font-family:'BBManualMonoTX',arial;">
-5.B MUSIC -</span> MUSIC SHARED ON THE SITE INCLUDES PROPER CREDITS AND LINKS TO THE ORIGINAL ARTISTS IN ACCORDANCE WITH COPYRIGHT LAWS. IF YOU NOTICE ANY ERRORS IN CREDITS OR LINKS, PLEASE CONTACT US TO RECTIFY THE ISSUE.</p>
-
-<p>
-<span style="font-family:'BBManualMonoTX',arial;">
-5.C TRAVEL AND BLOG CONTENT -</span> TRAVEL EXPERIENCES AND BLOG POSTS FEATURED ON KHALIIIL.COM ARE PERSONAL REFLECTIONS OF THE SITE OWNER. THESE STORIES TAKE READERS ON A JOURNEY THROUGH THE EYES OF THE AUTHOR, SHARING INTIMATE DETAILS, INSIGHTS, AND EMOTIONS ENCOUNTERED DURING THEIR TRAVELS. FROM BREATHTAKING LANDSCAPES TO CULTURAL IMMERSIONS, EACH POST OFFERS A UNIQUE PERSPECTIVE AND INVITES READERS TO EXPLORE THE WORLD THROUGH PERSONAL NARRATIVES.</p>
-
-<p>
-<span style="font-family:'BBManualMonoTX',arial;">
-6. SECURITY -</span> WE TAKE APPROPRIATE MEASURES TO ENSURE THE SECURITY OF YOUR PERSONAL INFORMATION. ACCESS TO THE PRIVATE PAGE IS PROTECTED BY A PASSWORD, AND WE REGULARLY REVIEW OUR SECURITY PROTOCOLS TO SAFEGUARD YOUR DATA. COMMENTS AND OTHER INTERACTIONS ARE MONITORED FOR SPAM AND MALICIOUS ACTIVITY.</p>
-
-<p>
-<span style="font-family:'BBManualMonoTX',arial;">
-7. YOUR RIGHTS -</span> YOU HAVE THE RIGHT TO ACCESS PERSONAL INFORMATION WE HOLD ABOUT YOU AND TO ASK THAT YOUR PERSONAL INFORMATION BE CORRECTED, UPDATED, OR DELETED. IF YOU WOULD LIKE TO EXERCISE THIS RIGHT, PLEASE CONTACT US THROUGH THE CONTACT INFORMATION BELOW.
+14. International Data Transfers<br>
+14.1. Data Transfers
 </p>
 
-<p>
-<span style="font-family:'BBManualMonoTX',arial;">
-8. DATA RETENTION -</span> WHEN YOU PROVIDE US WITH PERSONAL INFORMATION, WE WILL MAINTAIN THIS INFORMATION FOR OUR RECORDS UNLESS AND UNTIL YOU ASK US TO DELETE THIS INFORMATION.</p>
+<ul>
+<li>
+<span style="font-weight:700;">Cross-Border Transfers: </span>
+Your personal information may be transferred to and processed in countries other than your own. We ensure that appropriate safeguards are in place to protect your data in accordance with applicable data protection laws.
+</li>
+</ul>
+
+<ul>
+<li>
+<span style="font-weight:700;">Safeguards: </span>
+We use standard contractual clauses and other legal mechanisms to ensure that data transferred outside your country is protected in accordance with the same level of protection as required by local laws.
+</li>
+</ul>
 
 <p>
-<span style="font-family:'BBManualMonoTX',arial;">
-9. CHILDREN’S PRIVACY -</span>
-THE SITE IS INTENDED FOR USERS UNDER THE AGE OF 10. WE TAKE SPECIAL CARE TO PROTECT THE PRIVACY OF YOUNG USERS. WE DO NOT KNOWINGLY COLLECT PERSONAL INFORMATION FROM CHILDREN UNDER 10 WITHOUT PARENTAL CONSENT. IF WE BECOME AWARE THAT WE HAVE INADVERTENTLY RECEIVED PERSONAL INFORMATION FROM A CHILD UNDER THE AGE OF 10 WITHOUT VERIFICATION OF PARENTAL CONSENT, WE WILL DELETE THE INFORMATION FROM OUR RECORDS.
+15. Data Protection Officer<br>
+15.1. Role and Contact
 </p>
-<p>
-<span style="font-family:'BBManualMonoTX',arial;">
-10. THIRD-PARTY LINKS -</span> OCCASIONALLY, AT OUR DISCRETION, WE MAY INCLUDE OR OFFER THIRD-PARTY PRODUCTS OR SERVICES ON OUR WEBSITE. THESE THIRD-PARTY SITES HAVE SEPARATE AND INDEPENDENT PRIVACY POLICIES. WE THEREFORE HAVE NO RESPONSIBILITY OR LIABILITY FOR THE CONTENT AND ACTIVITIES OF THESE LINKED SITES. NONETHELESS, WE SEEK TO PROTECT THE INTEGRITY OF OUR SITE AND WELCOME ANY FEEDBACK ABOUT THESE SITES.</p>
+
+<ul>
+<li>
+<span style="font-weight:700;">Data Protection Officer: </span>
+</li>
+</ul>
 
 <p>
-<span style="font-family:'BBManualMonoTX',arial;">
-11. CHANGES TO THIS PRIVACY POLICY -</span> WE MAY UPDATE THIS PRIVACY POLICY FROM TIME TO TIME TO REFLECT, FOR EXAMPLE, CHANGES TO OUR PRACTICES OR FOR OTHER OPERATIONAL, LEGAL, OR REGULATORY REASONS. ANY CHANGES WILL BE POSTED ON THIS PAGE, AND THE DATE OF THE LAST UPDATE WILL BE INDICATED AT THE TOP OF THE POLICY.</p>
+16. User Responsibilities<br>
+16.1. Account Security
+</p>
+
+<ul>
+<li>
+<span style="font-weight:700;">User Responsibility: </span>
+You are responsible for maintaining the confidentiality of your account credentials and for any activities that occur under your account. If you suspect unauthorized access to your account, please contact us immediately.
+</li>
+</ul>
+
+<ul>
+<li>
+<span style="font-weight:700;">Password Management: </span>
+Use strong, unique passwords for your accounts and avoid sharing them with others. Regularly update your passwords and enable multi-factor authentication if available.
+</li>
+</ul>
 
 <p>
-<span style="font-family:'BBManualMonoTX',arial;">
-12. CONTACT -</span> IF YOU HAVE ANY QUESTIONS OR CONCERNS ABOUT OUR PRIVACY POLICY, PLEASE CONTACT US AT HELP@KHALIIIL.COM.</p>
-<br><br><br><br><br><br><br><br>
+17. Local Laws and Jurisdiction<br>
+17.1. Legal Jurisdiction
+</p>
+
+<ul>
+<li>
+<span style="font-weight:700;">Governing Law: </span>
+This Privacy Policy is governed by and construed in accordance with the laws of Israel. Any disputes arising from or related to this Privacy Policy will be subject to the exclusive jurisdiction of the courts in Israel.
+</li>
+</ul>
+
+<ul>
+<li>
+<span style="font-weight:700;">Compliance with Local Laws: </span>
+We comply with local data protection laws and regulations applicable to our operations. If you have any concerns about how your personal information is handled, please contact us for further assistance.
+</li>
+</ul>
+
+<p>
+18. Additional Information<br>
+18.1. Privacy Policy for Specific Sections
+</p>
+
+<ul>
+<li>
+<span style="font-weight:700;">Join Page Form: </span>
+Specific information about the data collection and management practices for the join page form can be found in Section 2.1. This section provides details on how we use Formspree.io and manage your personal data collected through the form.
+</li>
+</ul>
+
+<ul>
+<li>
+<span style="font-weight:700;">Affiliate and Third-Party Links: </span>
+Information about our use of affiliate links and third-party services is detailed in Sections 4.1 and 9.1. This includes our practices regarding external links and affiliate commissions.
+</li>
+</ul>
+
+<p>
+19. Data Subject Access Requests<br>
+19.1. Access Requests
+</p>
+
+<ul>
+<li>
+<span style="font-weight:700;">Request Process: </span>
+To request access to your personal data or exercise other rights, such as rectification or erasure, please submit a request using the contact information provided in Section 11.1. We will process your request in accordance with applicable data protection laws.
+</li>
+</ul>
+
+<ul>
+<li>
+<span style="font-weight:700;">Verification </span>
+To protect your privacy, we may require verification of your identity before processing data access requests. This may involve providing additional information or documentation.
+</li>
+</ul>
+
+<p>
+20. Data Breach Notification<br>
+20.1. Notification Procedure
+</p>
+
+<ul>
+<li>
+<span style="font-weight:700;">Breach Notification: </span>
+In the event of a data breach that affects your personal information, we will notify you promptly and provide details about the breach, its potential impact, and the measures taken to address the issue.
+</li>
+</ul>
+
+<ul>
+<li>
+<span style="font-weight:700;">Regulatory Reporting:: </span>
+We will also report the breach to relevant data protection authorities as required by applicable laws and regulations.
+</li>
+</ul>
+
+<p>
+21. User Feedback and Complaints<br>
+21.1. Feedback
+</p>
+
+<ul>
+<li>
+<span style="font-weight:700;">User Feedback: </span>
+We welcome your feedback on our privacy practices and this Privacy Policy. If you have suggestions for improvements or concerns, please let us know using the contact information provided in Section 11.1.
+</li>
+</ul>
+
+<ul>
+<li>
+<span style="font-weight:700;">Complaints </span>
+If you have a complaint about how we handle your personal information, you have the right to lodge a complaint with a relevant data protection authority. We will cooperate fully with any investigations or inquiries.
+</li>
+</ul>
+
+<p>
+22. Employee Training<br>
+22.1. Training Programs
+</p>
+
+<ul>
+<li>
+<span style="font-weight:700;">Staff Training: </span>
+Our employees undergo regular training on data protection and privacy practices to ensure they are aware of their responsibilities and the importance of safeguarding personal information.
+</li>
+</ul>
+
+<ul>
+<li>
+<span style="font-weight:700;">Ongoing Education: </span>
+We provide ongoing education and updates to our staff to keep them informed about changes in data protection laws and best practices.
+</li>
+</ul>
+
+<p>
+23. Data Protection Impact Assessments<br>
+23.1. Assessments
+</p>
+
+<ul>
+<li>
+<span style="font-weight:700;">Regular Assessments: </span>
+We conduct regular Data Protection Impact Assessments (DPIAs) to evaluate the risks associated with our data processing activities and ensure that appropriate measures are in place to mitigate those risks.
+</li>
+</ul>
+
+<ul>
+<li>
+<span style="font-weight:700;">Risk Management: </span>
+DPIAs help us identify potential privacy risks and implement strategies to address them, ensuring that we maintain high standards of data protection.
+</li>
+</ul>
+
+<p>
+24. Privacy by Design<br>
+24.1. Design Principles
+</p>
+
+<ul>
+<li>
+<span style="font-weight:700;">Privacy by Design: </span>
+We incorporate privacy principles into the design and operation of our website and services. This includes implementing technical and organizational measures to protect personal data from the outset.
+</li>
+</ul>
+
+<ul>
+<li>
+<span style="font-weight:700;">Data Minimization: </span>
+We adhere to the principle of data minimization, collecting only the data necessary for the purposes specified in this Privacy Policy.
+</li>
+</ul>
 </div>
-
 </body>
 </html>
