@@ -50,10 +50,8 @@ html, body {
 
 .nav-top {
   top: 0;
-  height: 60px;
-    /* Define the background with a linear gradient */
-    background: none;
-  text-transform:uppercase;
+  height: auto;
+  background: none;
 }
 
 .nav-top .menu {
@@ -65,9 +63,14 @@ html, body {
   font-family: 'BB Manual Mono Pro TX',arial;
   color: white;
   text-decoration: none;
-  padding-bottom: 5px;
-  font-weight: 300; /* Custom font style */
+  padding-bottom: 0;
+  font-weight: 300;
   font-size:30px;
+  text-transform:uppercase;
+}
+.nav-top .menu a:hover, .nav-top .menu a:focus {
+  background:none;
+  color:white;
 }
 
 @media screen and (max-width:400px) {
