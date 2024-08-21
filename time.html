@@ -1,147 +1,878 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Timeline</title>
-
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Khalil</title>
+<meta charset="UTF-8">
+<meta name="description" content="The Official Website of Khalil">
+<meta property="og:description" content="The Official Website of Khalil">
+<meta property="og:image" content="https://www.khaliiil.com/system/7FA53553-2225-48AC-B68C-89172E7E6340.jpeg">
+<meta property="og:url" content="https://www.khaliiil.com">
+<meta property="og:site_name" content="Khaliil">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:author" content="Khalil">
+<link rel="icon" type="image/x-icon" href="https://khaliiil.com/system/FF863B55-25CD-41EA-B199-86DC40B5A73F.jpeg">    
+<meta name="URL" content="http://www.khaliiil.com">
+<meta name="twitter:title" content="Khalil">
+<meta name="twitter:description" content="The Official Website of Khalil">
+<meta property="og:title" content="Khalil">
+<meta property="og:description" content="The Official Website of Khalil">
+<meta property="og:site_name" content="Khalil">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.khaliiil.com/">
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<meta name="copyright" content="2024">
 <style>
-body {
-    font-family: Arial, sans-serif;
-    background-color: #000;
-    color: #fff;
+@font-face {
+  font-family: 'BB Manual Mono Pro TX';
+  src: url('https://ik.imagekit.io/ybebp19uwa/BBManualMonoProTX-Regular.woff2?updatedAt=1722424863590') format('woff2');
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  background:#1F1F1F;
+  color:white;
+  height: 100%;
+  font-family: 'BB Manual Mono Pro TX',arial;
+}
+.nav-top {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }
 
-.timeline {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    overflow-x: auto;
+.nav-top {
+  top: 0;
+  height: 30px;
+  background: none;
 }
 
-.event {
-    background-color: #444;
-    padding: 20px;
-    border-radius: 10px;
-    cursor: pointer;
-    position: relative;
+.nav-top .menu {
+  display: flex;
+  gap: 45px;
 }
 
-.event-content {
-    text-align: center;
+.nav-top .menu a {
+  font-family: 'BB Manual Mono Pro TX',arial;
+  color: #fff;
+  text-decoration: none;
+  padding-bottom: 0;
+  font-weight: 300;
+  font-size:30px;
+  text-transform:uppercase;
+  top:0;
+  padding-top:20px;
+}
+.nav-top .menu a:hover, .nav-top .menu a:focus {
+  background:none;
+  color:white;
 }
 
-.event h3 {
-    margin: 0;
-    font-size: 1.2em;
+@media screen and (max-width:400px) {
+.nav-top .menu {
+    gap:40px;
+}
+.nav-top .menu a{
+  font-size:22px;
+}
+    .footert {
+        justify-content: space-between;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+@media screen and (min-width:401px) and (max-width:500px) {
+.nav-top .menu {
+    gap:45px;
+}
+.nav-top .menu a {
+  font-size:22px;
+}
 }
 
-.event p {
-    margin: 5px 0 0;
+@media screen and (min-width:501px) and (max-width:600px) {
+.nav-top .menu {
+    gap:100px;
+}
+.nav-top .menu a {
+    font-size:22px;
+}
+#prev-btn {
+  left: 120px;
+  right:aut0;
+  border: 4px solid #275c86;
+  top: 25px;
 }
 
-.overlay {
-    display: none;
+#next-btn {
+  right:auto;
+  border: 4px solid #275c86;
+  right: 120px;
+  top: 25px;
+}
+}
+
+@media screen and (min-width:601px) and (max-width:700px) {
+.nav-top .menu {
+    gap:105px;
+}
+}
+
+@media screen and (min-width:701px) and (max-width:800px) {
+.nav-top .menu {
+    gap:110px;
+}
+.nav-top .menu a {
+    font-size:22.6px;
+}
+}
+
+@media screen and (min-width:801px) and (max-width:990px) {
+.nav-top .menu {
+    gap:120px;
+}
+.nav-top .menu a {
+    font-size:22px;
+}
+}
+@media screen and (min-width:1000px) {
+.nav-top .menu {
+    gap:150px;
+}
+.nav-top .menu a {
+font-size:24px;
+}
+}
+
+        
+.footert {
     position: fixed;
-    top: 0;
+    bottom: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
+    right: 0;
+    display: flex;
     justify-content: center;
+    background: none;
+    padding: 10px;
+    margin: 0 auto;
     align-items: center;
-    z-index: 1000;
+    z-index:1000;
 }
 
-.overlay-content {
-    background-color: #fff;
-    color: #000;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 80%;
-    max-height: 80%;
-    overflow-y: auto;
-}
-
-.close-button {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 1.5em;
+.footert a, .footert p {
+    text-decoration: none;
+    background: none;
+    color: #fff;
+    border: none;
+    padding: 5px 0;
+    margin: 0 auto;
+    border-radius: 5px;
     cursor: pointer;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-family: 'BB Manual Mono Pro TX', Arial;
 }
-</style>
 
-
-</head>
-<body>
-    <div class="timeline">
-        <div class="event" onclick="showOverlay('event1')">
-            <div class="event-content">
-                <h3>Album Release</h3>
-                <p>March 2020</p>
-            </div>
-        </div>
-        <div class="event" onclick="showOverlay('event2')">
-            <div class="event-content">
-                <h3>World Tour</h3>
-                <p>August 2021</p>
-            </div>
-        </div>
-        <div class="event" onclick="showOverlay('event3')">
-            <div class="event-content">
-                <h3>Award Win</h3>
-                <p>December 2022</p>
-            </div>
-        </div>
-        <!-- Add more events as needed -->
-    </div>
-
-    <div id="overlay" class="overlay" onclick="closeOverlay()">
-        <div class="overlay-content">
-            <span class="close-button" onclick="closeOverlay()">&times;</span>
-            <div id="overlay-details"></div>
-        </div>
-    </div>
-
-    <script>
-function showOverlay(eventId) {
-    const overlay = document.getElementById('overlay');
-    const details = document.getElementById('overlay-details');
-
-    let content = '';
-    switch (eventId) {
-        case 'event1':
-            content = `
-                <h2>Album Release</h2>
-                <p>Details about the album release in March 2020.</p>
-            `;
-            break;
-        case 'event2':
-            content = `
-                <h2>World Tour</h2>
-                <p>Details about the world tour in August 2021.</p>
-            `;
-            break;
-        case 'event3':
-            content = `
-                <h2>Award Win</h2>
-                <p>Details about the award win in December 2022.</p>
-            `;
-            break;
-        // Add more cases as needed
+.footert p {
+    margin: 0 10px; /* Add margin if necessary for spacing */
+}
+@media (max-width: 799px) {
+    .footert {
+        justify-content: space-between;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .footert button {
+        margin: 0 5px;
+        margin-bottom: 5px;
     }
 
-    details.innerHTML = content;
-    overlay.style.display = 'flex';
+    #m {
+        display: flex;
+    }
+    #d {
+        display: none;
+    }
 }
 
-function closeOverlay() {
-    const overlay = document.getElementById('overlay');
-    overlay.style.display = 'none';
+@media (min-width: 800px) {
+    .footert {
+        justify-content: space-between;
+        padding: 10px 50px;
+    }
+    .footert button {
+        font-size: 16px;
+        margin: 0 20px;
+        width: 100%;
+    }
+    #d {
+        display: flex;
+    }
+    #m {
+        display: none;
+    }
 }
-    </script>
+
+.media-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  position: absolute;
+  z-index: 1;
+}
+
+.media {
+  position: relative;
+  flex: 0 0 auto;
+  width: 100%;
+  cursor: pointer;
+  user-select: none;
+  pointer-events: auto;
+  user-drag: none;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: auto;
+  cursor:pointer;
+  -webkit-user-drag: none;
+  -moz-user-drag: none;
+  -ms-user-drag: none;
+  user-drag: none; 
+}
+
+.media video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.sound-icon {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  width: 20px;
+  max-width:20px;
+  height: auto;
+  cursor: pointer;
+  z-index: 10;
+  opacity: 0.90;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: auto;
+  cursor:pointer;
+  -webkit-user-drag: none;
+  -moz-user-drag: none;
+  -ms-user-drag: none;
+  user-drag: none; 
+}
+
+.sound-off-icon {
+  display: block;
+}
+
+.sound-on-icon {
+  display: none;
+}
+
+body.no-scroll {
+  overflow: hidden;
+}
+@media screen and (min-width: 610px) {
+#overlay-content {
+  padding-bottom: 8%;
+  }
+}
+
+#overlay {
+  margin:0;
+  padding:0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: none;
+  touch-action:none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  touch-action: pan-x pan-y;
+}
+
+img {
+  user-select: none;
+  pointer-events: auto;
+  user-drag: none;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: auto;
+  cursor:pointer;
+  -webkit-user-drag: none;
+  -moz-user-drag: none;
+  -ms-user-drag: none;
+  user-drag: none; 
+}
+
+#overlay-content {
+  margin:0;
+  padding:0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  touch-action:none;
+  position: fixed;
+  touch-action: pan-x pan-y;
+}
+#close-btn {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  width: 20px;
+  max-width: 24px;
+  height: auto;
+  user-select: none;
+  pointer-events: auto;
+  user-drag: none;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: auto;
+  cursor: pointer;
+  -webkit-user-drag: none;
+  -moz-user-drag: none;
+  -ms-user-drag: none;
+  user-drag: none;
+  z-index:1009;
+}
+
+.nav-btn {
+  position: absolute;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 10000;
+  padding: 5px 16px;
+  user-select: none;
+  pointer-events: auto;
+  user-drag: none;
+  -webkit-touch-callout: none;
+}
+
+#prev-btn {
+  left: 5px;
+  border: 4px solid #275c86;
+  top: 25px;
+}
+
+#next-btn {
+  border: 4px solid #275c86;
+  right: 5px;
+  top: 25px;
+}
+
+.tpe03 {
+  margin:0 auto;
+  padding:0;
+  width:62%;
+  background:rgba(255, 255, 255, 0.100);
+  height:50px;
+  transform:translateX(-50%);
+  left:50%;
+  top:0;
+  position:absolute;
+  z-index:1007;
+}
+
+.nav-btn img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  width: 17px;
+  max-width:20px;
+  user-select: none;
+  pointer-events: auto;
+  user-drag: none;
+  -webkit-touch-callout: none;
+    -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: auto;
+  cursor:pointer;
+  -webkit-user-drag: none;
+  -moz-user-drag: none;
+  -ms-user-drag: none;
+  user-drag: none; 
+} 
+
+video::-webkit-media-controls {
+  display: none !important;
+}
+
+video::-webkit-media-controls-start-playback-button {
+  display: none !important;
+}
+  video::-webkit-media-controls {
+    display: none !important;
+  }
+  video::-webkit-media-controls {
+  display: none !important;
+}
+
+/* WebKit browsers (Chrome, Safari, Opera) */
+video::-webkit-media-controls {
+  display: none !important;
+}
+
+/* Firefox */
+video::-moz-media-controls {
+  display: none !important;
+}
+
+/* Microsoft Edge and IE */
+video::-ms-media-controls {
+  display: none !important;
+}
+
+/* General approach for all browsers */
+video::-internal-media-controls {
+  display: none !important;
+}
+
+/* A fallback for unsupported browsers */
+video {
+  controls: none !important;
+}
+
+video::-webkit-media-controls-play-button,
+video::-webkit-media-controls-start-playback-button,
+video::-webkit-media-controls-current-time-display,
+video::-webkit-media-controls-time-remaining-display,
+video::-webkit-media-controls-timeline,
+video::-webkit-media-controls-mute-button,
+video::-webkit-media-controls-toggle-closed-captions-button,
+video::-webkit-media-controls-volume-slider {
+  display: none !important;
+}
+
+video::-webkit-media-controls-panel,
+video::-webkit-media-controls-panel *,
+video::-webkit-media-controls-panel > * {
+  display: none !important;
+}
+
+video::-webkit-media-controls-overlay-play-button,
+video::-webkit-media-controls-overflow-button,
+video::-webkit-media-controls-enclosure,
+video::-webkit-media-controls-start-playback-button,
+video::-webkit-media-controls-background,
+video::-webkit-media-controls-timeline,
+video::-webkit-media-controls-current-time-display,
+video::-webkit-media-controls-time-remaining-display,
+video::-webkit-media-controls-mute-button,
+video::-webkit-media-controls-volume-slider-container,
+video::-webkit-media-controls-volume-slider {
+  display: none !important;
+}
+
+video::-webkit-media-controls-fullscreen-button,
+video::-webkit-media-controls-rewind-button,
+video::-webkit-media-controls-return-to-realtime-button,
+video::-webkit-media-controls-toggle-closed-captions-button,
+video::-webkit-media-controls-toggle-closed-captions-track-list,
+video::-webkit-media-controls-toggle-play-button {
+  display: none !important;
+}
+
+video::-webkit-media-controls-play-button,
+video::-webkit-media-controls-pause-button,
+video::-webkit-media-controls-seek-back-button,
+video::-webkit-media-controls-seek-forward-button,
+video::-webkit-media-controls-toggle-closed-captions-button,
+video::-webkit-media-controls-timeline,
+video::-webkit-media-controls-timeline-container,
+video::-webkit-media-controls-volume-slider,
+video::-webkit-media-controls-volume-slider-container {
+  display: none !important;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 640px; /* Adjust as needed */
+    margin: auto;
+}
+.hidden-in-gallery {
+    display: none;
+}
+
+#overlay .hidden-in-gallery {
+    display: block;
+}
+
+
+.title-container {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2000;
+    font-family: 'BB Manual Mono Pro TX',arial;
+
+}
+
+.left-title, .right-title {
+    font-size: 20px;
+    color: #228B22;
+    letter-spacing:2px;
+}
+
+.left-title {
+    left: 0;
+    text-align:left;
+}
+
+.right-title {
+    right: 0;
+    text-align:right;
+}
+
+.title-container.hidden {
+    display: none;
+}
+
+.left-title a, .right-title a {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width:400px) {
+.left-title {
+    padding-left: 60px;
+}
+
+.right-title {
+    padding-right: 60px;
+}
+}
+
+@media screen and (min-width:401px) and (max-width:500px) {
+.left-title {
+    padding-left: 70px;
+}
+
+.right-title {
+    padding-right: 70px;
+}
+}
+
+@media screen and (min-width:501px) and (max-width:600px) {
+.left-title {
+    padding-left: 110px;
+}
+
+.right-title {
+    padding-right: 110px;
+}
+}
+
+@media screen and (min-width:601px) and (max-width:700px) {
+.left-title {
+    padding-left: 140px;
+}
+
+.right-title {
+    padding-right: 140px;
+}
+}
+
+@media screen and (min-width:701px) and (max-width:800px) {
+.left-title {
+    padding-left: 160px;
+}
+
+.right-title {
+    padding-right: 160px;
+}
+}
+
+@media screen and (min-width:801px) and (max-width:990px) {
+.left-title {
+    padding-left: 180px;
+}
+
+.right-title {
+    padding-right: 180px;
+}
+}
+
+@media screen and (min-width:1000px) {
+.left-title {
+    padding-left: 220px;
+}
+
+.right-title {
+    padding-right: 220px;
+}
+}
+</style>
+</head>
+<body>
+<div class="nav-top">
+<div class="menu">
+<a href="https://shop.khaliiil.com">
+<p>
+SHOP
+</p>
+</a>
+<a href="https://www.khaliiil.com/notes">
+<p>
+NOTES
+</p>
+</a>
+<a href="https://tour.khaliiil.com/">
+<p>
+TOUR
+</p>
+</a>
+<a href="https://khaliiil.com/blog">
+<p>
+BLOG
+</p>
+</a>
+</div>
+</div>
+</div>
+<div class="footert" id="m">
+<a href="https://khaliiil.com/join">
+JOIN
+</a>
+<a href="https://khaliiil.com/privacy-policy">
+PRIVACY
+</a>
+<a style="color:#6B8E23;">
+&copy;
+</a>
+<a href="https://khaliiil.com/credits">
+CREDITS
+</a>
+<a href="https://khaliiil.com/terms-conditions">
+TERMS
+</a>
+</div>
+<div class="footert" id="d">
+<a href="https://khaliiil.com/join">
+JOIN
+</a>
+<p>
+/
+</p>
+<a href="https://khaliiil.com/terms-conditions">
+TERMS & CONDITIONS
+</a>
+<p>
+/
+</p>
+<a style="color:#6B8E23;">
+&copy; 2024 KHALIL
+</a>
+<p>
+/
+</p>
+<a href="https://khaliiil.com/credits">
+CREDITS
+</a>
+<p>
+/
+</p>
+<a href="https://khaliiil.com/privacy-policy">
+PRIVACY POLICY
+</a>
+</div>
+
+<div class="media-container">
+<img src="https://ik.imagekit.io/ybebp19uwa/Shop/GMP_U2F2ZUdNQVgwMQ==.gif" loading="lazy" alt="media_home_9032"/>
+<img src="https://ik.imagekit.io/ybebp19uwa/IMG_7947.jpeg?updatedAt=1722876255627" loading="lazy" alt="media_home_9031" />
+<img src="https://ik.imagekit.io/ybebp19uwa/cpm35%202024-07-15%20122420.807%E2%80%AFPM.jpeg?updatedAt=1722876265568" loading="lazy" alt="media_home_9030" />
+<img src="https://ik.imagekit.io/ybebp19uwa/cpm35%202024-07-16%20121227.217%E2%80%AFPM.jpeg?updatedAt=1722876269736" loading="lazy" alt="media_home_9029" />
+<img src="https://ik.imagekit.io/ybebp19uwa/cpm35%202024-07-15%20121904.766%E2%80%AFPM.jpeg?updatedAt=1722876274574" loading="lazy" alt="media_home_9028" />
+<img src="https://ik.imagekit.io/ybebp19uwa/dcr%202024-07-14%2021106.377%E2%80%AFPM.mp4?updatedAt=1722876274816" loading="lazy" alt="media_home_9027" />
+<img src="https://ik.imagekit.io/ybebp19uwa/17.heic?updatedAt=1722438715321" alt="media_home_9026"/>
+<img src="https://ik.imagekit.io/ybebp19uwa/15.JPG?updatedAt=1722438749536" alt="media_home_9025"/>
+<img src="https://ik.imagekit.io/ybebp19uwa/14.GIF?updatedAt=1722438818110" alt="media_home_9024"/>
+<div class="media">
+<video src="https://ik.imagekit.io/ybebp19uwa/IMG_6947.mov?updatedAt=1722431094298" alt="media_home_9002" autoplay loop muted playsinline controls="false"></video>
+<img src="https://ik.imagekit.io/ybebp19uwa/Css-off.PNG?updatedAt=1722515991871" class="sound-icon sound-off-icon" alt="Off">
+<img src="https://ik.imagekit.io/ybebp19uwa/Css-on.PNG?updatedAt=1722516029101" class="sound-icon sound-on-icon" alt="On">
+</div>
+<img src="https://ik.imagekit.io/ybebp19uwa/13.JPG?updatedAt=1722438718083" alt="media_home_9023"/>
+<img src="https://ik.imagekit.io/ybebp19uwa/4E585A22-EC12-4377-901C-B0B7243A7FE0.jpeg" loading="lazy" alt="media_home_9033" />
+<img src="https://ik.imagekit.io/ybebp19uwa/12.JPG?updatedAt=1722438717758" alt="media_home_9022"/>
+<img src="https://ik.imagekit.io/ybebp19uwa/11.JPG?updatedAt=1722438758795" alt="media_home_9021"/>
+<img src="https://ik.imagekit.io/ybebp19uwa/10.GIF?updatedAt=1722438801137" alt="media_home_9020">
+<img src="https://ik.imagekit.io/ybebp19uwa/8.GIF?updatedAt=1722438792959" alt="media_home_9019">
+<img src="https://raw.githubusercontent.com/Dibacarter/Of/main/mediaOf/6.GIF" alt="media_home_9018">
+<img src="https://ik.imagekit.io/ybebp19uwa/IMG_6596.jpeg?updatedAt=1720707515002" alt="media_home_9017">
+<img src="https://raw.githubusercontent.com/Dibacarter/Of/main/mediaOf/5.jpg" alt="media_home_9016">
+<img src="https://raw.githubusercontent.com/Dibacarter/Of/main/mediaOf/4.jpg" alt="media_home_9015">
+<img src="https://ik.imagekit.io/ybebp19uwa/IMG_6400.jpeg?updatedAt=1722425974382" loading="lazy" alt="media_home_9013">
+<img loading="lazy" src="https://khaliiil.com/mediaOf/J.JPG" alt="media_home_9011">
+<img src="https://khaliiil.com/mediaOf/26-6-o-m-24-II.JPG" alt="media_home_9010">
+<img src="https://khaliiil.com/mediaOf/26-6-o-m-24-III.GIF" alt="media_home_9009">
+<img src="https://khaliiil.com/mediaOf/26-6-o-m-24.GIF" alt="media_home_9008">
+<img src="https://www.khaliiil.com/IMG_7634.jpg" alt="media_home_9007">
+<img src="https://www.khaliiil.com/IMG_7632.jpg" alt="media_home_9006">
+<img src="https://www.khaliiil.com/St.GIF" alt="media_home_9005">
+<img src="https://www.khaliiil.com/Cl.GIF" alt="media_home_9004">
+<img src="https://ik.imagekit.io/ybebp19uwa/T-1.JPG?updatedAt=1722425268069" alt="media_home_9003">
+<div class="media">
+<video src="https://ik.imagekit.io/ybebp19uwa/IMG_0844.MOV?updatedAt=1722425583838" alt="media_home_9002" autoplay loop muted playsinline controls="false"></video>
+<img src="https://ik.imagekit.io/ybebp19uwa/Css-off.PNG?updatedAt=1722515991871" class="sound-icon sound-off-icon" alt="Off">
+<img src="https://ik.imagekit.io/ybebp19uwa/Css-on.PNG?updatedAt=1722516029101" class="sound-icon sound-on-icon" alt="On">
+</div>
+<img src="https://ik.imagekit.io/ybebp19uwa/5a67e1ae-0c7b-494c-8440-3eb7d7f35ac9.jpeg?updatedAt=1722425171680"/>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mediaElements = document.querySelectorAll('.media');
+    const overlay = document.getElementById('overlay');
+    const overlayContent = document.getElementById('overlay-content');
+    const closeBtn = document.getElementById('close-btn');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+
+    let currentIndex = 0;
+    let currentOverlayVideo = null;
+
+    function disableScroll() {
+      document.body.classList.add('no-scroll');
+    }
+
+    function enableScroll() {
+      document.body.classList.remove('no-scroll');
+    }
+
+    function muteAllVideos() {
+      mediaElements.forEach(media => {
+        if (media.querySelector('video')) {
+          const video = media.querySelector('video');
+          video.muted = true;
+          const soundOffIcon = media.querySelector('.sound-off-icon');
+          const soundOnIcon = media.querySelector('.sound-on-icon');
+          soundOffIcon.style.display = 'block';
+          soundOnIcon.style.display = 'none';
+          video.play();  // Ensure video keeps playing
+        }
+      });
+    }
+
+    function playAllVideos() {
+      mediaElements.forEach(media => {
+        if (media.querySelector('video')) {
+          const video = media.querySelector('video');
+          video.play();
+        }
+      });
+    }
+
+    
+
+    function closeOverlay() {
+      overlay.style.display = 'none';
+      enableScroll();
+      if (currentOverlayVideo) {
+        currentOverlayVideo.muted = true;
+        currentOverlayVideo = null;
+      }
+      playAllVideos();  // Ensure main page videos continue playing
+    }
+
+    mediaElements.forEach((media, index) => {
+      if (media.querySelector('video')) {
+        const video = media.querySelector('video');
+        const soundOffIcon = media.querySelector('.sound-off-icon');
+        const soundOnIcon = media.querySelector('.sound-on-icon');
+
+        // Remove the controls attribute
+        video.removeAttribute('controls');
+
+        video.play();
+
+        soundOffIcon.addEventListener('click', () => {
+          muteAllVideos();
+          video.muted = false;
+          soundOffIcon.style.display = 'none';
+          soundOnIcon.style.display = 'block';
+        });
+
+        soundOnIcon.addEventListener('click', () => {
+          video.muted = true;
+          soundOffIcon.style.display = 'block';
+          soundOnIcon.style.display = 'none';
+        });
+      }
+
+      media.addEventListener('click', (event) => {
+        if (event.target !== media.querySelector('.sound-off-icon') && event.target !== media.querySelector('.sound-on-icon')) {
+          openOverlay(index);
+        }
+      });
+    });
+
+    closeBtn.addEventListener('click', closeOverlay);
+
+    prevBtn.addEventListener('click', () => {
+      if (currentIndex === 0) {
+        currentIndex = mediaElements.length - 1;
+      } else {
+        currentIndex -= 1;
+      }
+      openOverlay(currentIndex);
+    });
+
+    nextBtn.addEventListener('click', () => {
+      if (currentIndex === mediaElements.length - 1) {
+        currentIndex = 0;
+      } else {
+        currentIndex += 1;
+      }
+      openOverlay(currentIndex);
+    });
+  });
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+
+    if (!localStorage.getItem('btnClicked')) {
+        prevBtn.style.border = '2px solid #275c86';
+        nextBtn.style.border = '2px solid #275c86';
+    }
+
+    function hideBorders() {
+        prevBtn.style.border = 'none';
+        nextBtn.style.border = 'none';
+        localStorage.setItem('btnClicked', 'true');
+    }
+
+    prevBtn.addEventListener('click', hideBorders);
+    nextBtn.addEventListener('click', hideBorders);
+});
+</script>
 </body>
 </html>
