@@ -47,6 +47,8 @@ body {margin: 0;padding: 0;font-family: 'BB Manual Mono Pro TX',arial;background
 .bottom-nav {position: fixed;bottom: 0;width: 100%;background:none;color: #fff;display: flex;justify-content: space-between;padding: 10px;box-sizing: border-box;}
 .left-btns,
 .right-btns {display: flex;flex-direction: column;}
+.right-btns {padding-right:10px;}
+.left-btns {padding-left:10px;}
 .btn {margin: 5px 5px;padding: 0;background:none;color: #fff;border: none;cursor: pointer;}
 .center-text {position: absolute;left: 50%;transform: translateX(-50%);bottom: 15px;text-align: center;font-size:15px;}
 .bottom-nav a {color:#fff;font-size:15px;text-decoration:none;text-transform:uppercase;}
@@ -60,6 +62,10 @@ body {margin: 0;padding: 0;font-family: 'BB Manual Mono Pro TX',arial;background
 @media (min-width:1025px) {
 #d {display:flex;}
 .bottom-nav {display:none;}}
+@media screen and (max-width:200px) {
+.center-text {display:none;}
+.left-btns,
+.right-btns {flex-direction: row;}}
 </style>
 </head>
 <body>
