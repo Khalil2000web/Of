@@ -26,7 +26,7 @@
 <style>
 @font-face {font-family: 'BB Manual Mono Pro TX';src: url('https://ik.imagekit.io/ybebp19uwa/BBManualMonoProTX-Regular.woff2?updatedAt=1722424863590') format('woff2');}
 @font-face {font-family: 'BBManualMonoTX';src: url('https://ik.imagekit.io/ybebp19uwa/BBManualMonoProTX-SemiBold.woff2?updatedAt=1722452612640') format('woff2');}
-html, body {margin: 0;background:#000;padding: 0;color:#000;font-family:'BB Manual Mono Pro TX',arial;}
+html, body {margin: 0;background:#000;padding: 0;color:#fff;font-family:'BB Manual Mono Pro TX',arial;}
 .nav-top {position: fixed;width: 100%;left: 0;display: flex;justify-content: center;align-items: center;z-index: 1000;}
 .nav-top {top: 0;height: 30px;background: none;}
 .nav-top .menu {display: flex;gap: 45px;}
@@ -97,23 +97,21 @@ html, body {margin: 0;background:#000;padding: 0;color:#000;font-family:'BB Manu
 .container h1
 {color:#8A9A5B;font-weight:300;font-family:'BBManualMonoTX',arial;margin-top:110px;margin-bottom:70px;font-size:27px;text-decoration:none;padding:0;text-align:center;}
 .container p
-{line-height:1.9;color:#8A9A5B;margin:0;padding:0;text-transform:uppercase;font-size:15px;padding-right:20px;padding-left:20px;}
+{line-height:1.9;color:#fff;margin:0;padding:0;text-transform:uppercase;font-size:15px;padding-right:20px;padding-left:20px;}
 @media screen and (min-width: 850px) {
 .container p
 {padding-right:190px;padding-left:190px;padding-top:50px;}
-
-    .container ul {
-        padding-left: 190px;
-        padding-right: 190px;
-    }
-    }
-
+.container ul
+{padding-left: 190px;padding-right: 190px;}}
 li
-{color:#8A9A5B;line-height:2;padding:0;margin:0;font-size:15px;text-transform:uppercase;}
+{color:#fff;line-height:2;padding:0;margin:0;font-size:15px;text-transform:uppercase;}
 ul
 {padding-left:20px;padding-right:20px;padding-top:0;padding-bottom:0;margin:0;margin-top:5px;}
 .container li a
-{color:#8A9A5B;text-decoration:underline;text-underline-offset:3px;}
+{color:#fff;text-decoration:underline;text-underline-offset:3px;}
+@media only screen and (max-width: 767px) and (max-height:400px) and (orientation: landscape) {
+.container p
+{font-size:9px;}}
 </style>
 </head>
 <body>
