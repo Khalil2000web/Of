@@ -24,278 +24,94 @@
 <meta http-equiv="Content-type" content="text/html; charset=utf-8">
 <meta name="copyright" content="2024">
 <style>
-@font-face {
-font-family: 'BB Manual Mono Pro TX';
-src: url('https://ik.imagekit.io/ybebp19uwa/BBManualMonoProTX-Regular.woff2?updatedAt=1722424863590') format('woff2');
-}
-@font-face {
-font-family: 'BBManualMonoTX';
-src: url('https://ik.imagekit.io/ybebp19uwa/BBManualMonoProTX-SemiBold.woff2?updatedAt=1722452612640') format('woff2');
-}
-html, body {
-  margin: 0;
-  background:#000;
-  padding: 0;
-  color:#000;
-}
-.nav-top {
-  position: fixed;
-  width: 100%;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.nav-top {
-  top: 0;
-  height: 60px;
-    /* Define the background with a linear gradient */
-    background: none;
-  text-transform:uppercase;
-}
-
-.nav-top .menu {
-  display: flex;
-  gap: 45px;
-}
-
-.nav-top .menu a {
-  font-family: 'BB Manual Mono Pro TX',arial;
-  color: #fff;
-  text-decoration: none;
-  padding-bottom: 5px;
-  font-weight: 300; /* Custom font style */
-  font-size:30px;
-}
-
+@font-face {font-family: 'BB Manual Mono Pro TX';src: url('https://ik.imagekit.io/ybebp19uwa/BBManualMonoProTX-Regular.woff2?updatedAt=1722424863590') format('woff2');}
+@font-face {font-family: 'BBManualMonoTX';src: url('https://ik.imagekit.io/ybebp19uwa/BBManualMonoProTX-SemiBold.woff2?updatedAt=1722452612640') format('woff2');}
+html, body {margin: 0;background:#000;padding: 0;color:#fff;font-family:'BB Manual Mono Pro TX',arial;}
+.nav-top {position: fixed;width: 100%;left: 0;display: flex;justify-content: center;align-items: center;z-index: 1000;}
+.nav-top {top: 0;height: 30px;background: none;}
+.nav-top .menu {display: flex;gap: 45px;}
+.nav-top .menu a {font-family: 'BB Manual Mono Pro TX',arial;color: white;text-decoration: none;padding-bottom: 0;font-weight: 300;font-size:30px;text-transform:uppercase;top:0;padding-top:20px;}
+.nav-top .menu a:hover, .nav-top .menu a:focus {background:none;color:white;}
 @media screen and (max-width:400px) {
-.nav-top .menu {
-    gap:40px;
-}
-.nav-top .menu a{
-  font-size:22px;
-}
-    .footert {
-        justify-content: space-between;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
-}
+.nav-top .menu {gap:40px;}
+.nav-top .menu a{font-size:22px;}
+.footert {justify-content: space-between;padding-left: 10px;padding-right: 10px;}}
 @media screen and (min-width:401px) and (max-width:500px) {
-.nav-top .menu {
-    gap:45px;
-}
-.nav-top .menu a {
-  font-size:22px;
-}
-}
-
+.nav-top .menu {gap:45px;}
+.nav-top .menu a {font-size:22px;}}
 @media screen and (min-width:501px) and (max-width:600px) {
-.nav-top .menu {
-    gap:100px;
-}
-.nav-top .menu a {
-    font-size:22px;
-}
-#prev-btn {
-  left: 120px;
-  right:aut0;
-  border: 4px solid #275c86;
-  top: 25px;
-}
-
-#next-btn {
-  right:auto;
-  border: 4px solid #275c86;
-  right: 120px;
-  top: 25px;
-}
-}
-
+.nav-top .menu {gap:100px;}
+.nav-top .menu a {font-size:22px;}}
 @media screen and (min-width:601px) and (max-width:700px) {
-.nav-top .menu {
-    gap:105px;
-}
-}
-
+.nav-top .menu {gap:105px;}}
 @media screen and (min-width:701px) and (max-width:800px) {
-.nav-top .menu {
-    gap:110px;
-}
-.nav-top .menu a {
-    font-size:22.6px;
-}
-}
-
+.nav-top .menu {gap:110px;}
+.nav-top .menu a {font-size:22.6px;}}
 @media screen and (min-width:801px) and (max-width:990px) {
-.nav-top .menu {
-    gap:120px;
-}
-.nav-top .menu a {
-    font-size:22px;
-}
-}
+.nav-top .menu {gap:120px;}
+.nav-top .menu a {font-size:22px;}}
 @media screen and (min-width:1000px) {
-.nav-top .menu {
-    gap:150px;
-}
-.nav-top .menu a {
-font-size:24px;
-}
-}
-
-        
-.footert {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    background: none;
-    padding: 10px;
-    margin: 0 auto;
-    align-items: center;
-    z-index:1000;
-}
-
-.footert a, .footert p {
-    text-decoration: none;
-    background: none;
-    color: #fff;
-    border: none;
-    padding: 5px 0;
-    margin: 0 auto;
-    border-radius: 5px;
-    cursor: pointer;
-    text-transform: uppercase;
-    font-size: 16px;
-    font-family: 'BB Manual Mono Pro TX', Arial;
-}
-
-.footert p {
-    margin: 0 10px; /* Add margin if necessary for spacing */
-}
+.nav-top .menu {gap:150px;}
+.nav-top .menu a {font-size:24px;}}
+.footert {position: fixed;bottom: 0;left: 0;right: 0;display: flex;justify-content: center;background: none;padding: 10px;margin: 0 auto;align-items: center;z-index:1000;}
+.footert a, .footert p {text-decoration: none;background: none;color: #fff;border: none;padding: 5px 0;margin: 0 auto;border-radius: 5px;cursor: pointer;text-transform: uppercase;font-size: 14px;font-family: 'BB Manual Mono Pro TX', Arial;}
+.footert p {margin: 0 10px;}
 @media (max-width: 799px) {
-    .footert {
-        justify-content: space-between;
-        padding-left: 30px;
-        padding-right: 30px;
-    }
-    .footert button {
-        margin: 0 5px;
-        margin-bottom: 5px;
-    }
-
-    #m {
-        display: flex;
-    }
-    #d {
-        display: none;
-    }
-}
-
+.footert {justify-content: space-between;padding-left: 30px;padding-right: 30px;}
+.footert button {margin: 0 5px;margin-bottom: 5px;}   
+#d {display: none;}}
 @media (min-width: 800px) {
-    .footert {
-        justify-content: space-between;
-        padding: 10px 50px;
-    }
-    .footert button {
-        font-size: 16px;
-        margin: 0 20px;
-        width: 100%;
-    }
-    #d {
-        display: flex;
-    }
-    #m {
-        display: none;
-    }
-}
+.footert {justify-content: space-between;padding: 10px 50px;}
+#d {display: flex;}}
+.bottom-nav {position: fixed;font-family:'BB Manual Mono Pro TX',arial;margin:0 auto;bottom: 1px;width:100%;background:none;color: #fff;display: flex;justify-content: space-between;padding: 10px;box-sizing: border-box;right:0;z-index: 1000;}
+.left-btns,
+.right-btns {display: flex;flex-direction: column;}
+.right-btns {padding-right:18px;}
+.left-btns {padding-left:18px;}
+.btn {margin: 5px 5px;padding: 0;background:none;color: #fff;border: none;cursor: pointer;}
+.center-text {position: absolute;left: 50%;transform: translateX(-50%);bottom: 15px;text-align: center;font-size:15px;}
+.bottom-nav a {color:#fff;font-size:15px;text-decoration:none;text-transform:uppercase;}
+#d {display:none;}
+@media (min-width: 590px) and (max-width:1024px) {
+.left-btns,
+.right-btns {flex-direction: row;}
+.left-btns .btn,
+.right-btns .btn {margin: 0 10px;}
+.center-text {bottom: auto;top: 50%;transform: translate(-50%, -50%);}}
+@media (min-width:1025px) {
+#d {display:flex;}
+.bottom-nav {display:none;}}
+@media screen and (max-width:300px) {
+.center-text {display:none;}
+.left-btns,
+.right-btns {flex-direction:row;}
+#cnt-ii {display:block;color:#fff;}
+#cnt-i {display:none;}
+.nav-top .menu {gap:20px;}
+.nav-top .menu a {font-size:19px;}}
+#cnt-i {display:block;}
+#cnt-ii {display:none;}
 
-.container {
-    width:100%;
-    max-width: 100%;
-    margin: 0 auto;
-    background:#000;
-    height:100%;
-    overflow-x:hidden;
-    overflow-y:auto;
-    padding:0;
-    color:#fff;
-    font-family:'BB Manual Mono Pro TX',arial;
-}
-.container h1 {
-    color:#fff;
-    font-weight:300;
-    font-family:'BBManualMonoTX',arial;
-    margin-top:110px;
-    margin-bottom:70px;
-    font-size:27px;
-    text-decoration:none;
-    padding:0;
-}
-.container p {
-  line-height:1.9;
-    color:#fff;
-    margin:0;
-    padding:0;
-    text-transform:uppercase;
-    font-size:16px;
-padding-right:20px;
-padding-left:20px;
-}
-.container {
-    padding-bottom:210px;
-}
-#m-t {color:#fff;text-align:center;}
-#d-t {display:none;text-align:center;}
-@media screen and (min-width:850px){
-.container p {
-    padding-right:190px;
-    padding-left:190px;
-    padding-top:50px;
-}
-#m-t {
-    display:none;
-}
-#d-t {
-    display:block;
-}
-}
-li {
-    color:#fff;
-    line-height:2;
-    padding:0;
-    margin:0;
-        font-size:15px;
-    text-transform:uppercase;
-}
-ul {
-    padding-left:20px;
-    padding-right:20px;
-    padding-top:0;
-    padding-bottom:0;
-    margin:0;
-    margin-top:5px;
-}
-
-.container li a {color:white;text-decoration:underline;text-underline-offset:3px;}
-@media only screen and (orientation: landscape) and (max-width: 767px) {
-.container p {
-font-size:12px;
-padding-right:50px;
-padding-left:50px;
-}
-#m-t {
-    display:none;
-}
-#d-t {
-    display:block;
-}
-}
+.container
+{width:100%;max-width: 100%;margin: 0 auto;background:#1F1F1F;height:100%;overflow-x:hidden;overflow-y:auto;padding:0;color:#8A9A5B;font-family:'BB Manual Mono Pro TX',arial;padding-bottom:210px;}
+.container h1
+{color:#8A9A5B;font-weight:300;font-family:'BBManualMonoTX',arial;margin-top:110px;margin-bottom:70px;font-size:27px;text-decoration:none;padding:0;text-align:center;}
+.container p
+{line-height:1.9;color:#fff;margin:0;padding:0;text-transform:uppercase;font-size:15px;padding-right:20px;padding-left:20px;}
+@media screen and (min-width: 850px) {
+.container p
+{padding-right:190px;padding-left:190px;padding-top:50px;}
+.container ul
+{padding-left: 190px;padding-right: 190px;}}
+li
+{color:#fff;line-height:2;padding:0;margin:0;font-size:15px;text-transform:uppercase;}
+ul
+{padding-left:20px;padding-right:20px;padding-top:0;padding-bottom:0;margin:0;margin-top:5px;}
+.container li a
+{color:#fff;text-decoration:underline;text-underline-offset:3px;}
+@media only screen and (max-width: 767px) and (max-height:500px) and (orientation: landscape) {
+.container p
+{font-size:9px;}}
 </style>
 </head>
 <body>
@@ -306,9 +122,9 @@ padding-left:50px;
 HOME
 </p>
 </a>
-<a href="https://music.khaliiil.com/">
+<a href="https://shop.khaliiil.com/">
 <p>
-MUSIC
+SHOP
 </p>
 </a>
 <a href="https://tour.khaliiil.com/">
@@ -324,23 +140,6 @@ BLOG
 </div>
 </div>
 </div>
-<div class="footert" id="m">
-<a href="https://khaliiil.com/join">
-JOIN
-</a>
-<a href="https://khaliiil.com/privacy-policy">
-PRIVACY
-</a>
-<a>
-&copy;
-</a>
-<a href="https://khaliiil.com/credits">
-CREDITS
-</a>
-<a href="https://khaliiil.com/terms-conditions">
-TERMS
-</a>
-</div>
 <div class="footert" id="d">
 <a href="https://khaliiil.com/join">
 JOIN
@@ -355,7 +154,7 @@ TERMS & CONDITIONS
 /
 </p>
 <a>
-&copy; 2024 KHALIL
+&copy; KHALIL, 2024
 </a>
 <p>
 /
@@ -369,6 +168,34 @@ CREDITS
 <a href="https://khaliiil.com/privacy-policy">
 PRIVACY POLICY
 </a>
+</div>
+<div class="bottom-nav">
+<div class="left-btns">
+<a href="https://khaliiil.com/join" style="text-align:left;" class="btn">JOIN</a>
+<a href="https://khaliiil.com/privacy-policy" style="text-align:left;" class="btn">PRIVACY</a>
+</div>
+<div id="cnt-i">
+<div class="center-text">
+<span>
+&copy; KHALIL, 2024
+</span>
+</div>
+</div>
+<div id="cnt-ii">
+<div class="center-text">
+<span>
+&copy;
+</span>
+</div>
+</div>
+<div class="right-btns">
+<a href="https://khaliiil.com/terms-conditions" style="text-align:right;" class="btn">
+TERMS
+</a>
+<a href="https://khaliiil.com/credits" style="text-align:right;" class="btn">
+CREDITS
+</a>
+</div>
 </div>
 
 <div class="container">
