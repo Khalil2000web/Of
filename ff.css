@@ -1,5 +1,0 @@
-    body.modal-open {
-    overflow: hidden; /* Hide scrollbar */
-    position: fixed; /* Prevent body from moving */
-    width: 100%; /* Ensure full width to prevent shifting */
-}
