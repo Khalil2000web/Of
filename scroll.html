@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disable iOS Rubber Band Effect</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* Prevent body scroll */
+            position: fixed;
+            width: 100%;
+        }
+
+        .scrollable-container {
+            height: 100%;
+            overflow-y: scroll; /* Enable scrolling within this container */
+            -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        .content {
+            height: 2000px; /* Tall content to allow scrolling */
+            background: linear-gradient(to bottom, #ffffff, #cccccc);
+        }
+    </style>
+</head>
+<body>
+
+<div class="scrollable-container">
+    <div class="content">
+        <h1>Scroll Down</h1>
+        <p>Test scrolling to see if the rubber band effect is disabled.</p>
+        <p>Keep scrolling to see if the effect is fully disabled.</p>
+        <p>More content... More content... More content... More content... More content... </p>
+        <p>More content... More content... More content... More content... More content... </p>
+        <p>More content... More content... More content... More content... More content... </p>
+        <p>More content... More content... More content... More content... More content... </p>
+        <p>More content... More content... More content... More content... More content... </p>
+        <p>More content... More content... More content... More content... More content... </p>
+    </div>
+</div>
+
+<script>
+    // Disable rubber band effect globally by preventing touchmove on the body
+    document.body.addEventListener('touchmove', function(event) {
+        event.preventDefault(); // Prevent rubber band effect
+    }, { passive: false });
+
+    // Allow scrolling only within the scrollable container
+    const scrollableContainer = document.querySelector('.scrollable-container');
+
+    scrollableContainer.addEventListener('touchstart', function() {
+        const top = this.scrollTop;
+        const totalScroll = this.scrollHeight;
+        const currentScroll = top + this.offsetHeight;
+
+        // Adjust scrollTop to prevent rubber band effect at the edges
+        if (top === 0) {
+            this.scrollTop = 1;
+        } else if (currentScroll === totalScroll) {
+            this.scrollTop = top - 1;
+        }
+    });
+
+    scrollableContainer.addEventListener('touchmove', function(event) {
+        // Allow scroll inside the scrollable container
+        event.stopPropagation();
+    }, { passive: false });
+</script>
+
+</body>
+</html>
