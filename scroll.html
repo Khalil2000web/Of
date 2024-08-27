@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>iOS Rubber Band Effect Test</title>
+    <title>Disable iOS Rubber Band Effect</title>
     <style>
         body, html {
             margin: 0;
@@ -15,7 +15,7 @@
         .scrollable-container {
             height: 100%;
             overflow-y: auto;
-            -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+            -webkit-overflow-scrolling: touch; /* Enable smooth scrolling */
             background-color: #f0f0f0;
             padding: 20px;
         }
@@ -37,11 +37,12 @@
 </div>
 
 <script>
-    // Prevent rubber band effect on iOS
+    // Prevent the rubber band effect by disabling default touchmove behavior globally
     document.addEventListener('touchmove', function(event) {
         event.preventDefault();
     }, { passive: false });
 
+    // Allow scrolling only within the designated scrollable container
     const scrollableContainer = document.querySelector('.scrollable-container');
 
     scrollableContainer.addEventListener('touchstart', function() {
@@ -49,18 +50,21 @@
         const totalScroll = this.scrollHeight;
         const currentScroll = top + this.offsetHeight;
 
+        // Adjust scrollTop to prevent rubber band effect at the edges
         if (top === 0) {
-            this.scrollTop = 1; // Pushes the scroll down slightly
+            this.scrollTop = 1;
         } else if (currentScroll === totalScroll) {
-            this.scrollTop = top - 1; // Pulls the scroll up slightly
+            this.scrollTop = top - 1;
         }
     });
 
     scrollableContainer.addEventListener('touchmove', function(event) {
-        if (this.scrollTop === 0 && event.touches[0].clientY > 0) {
+        if (scrollableContainer.scrollTop > 0) {
+            event.stopPropagation();
+        } else {
             event.preventDefault();
         }
-    });
+    }, { passive: false });
 </script>
 
 </body>
