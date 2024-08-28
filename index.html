@@ -340,7 +340,10 @@ CREDITS
       document.body.classList.add('no-scroll');
       document.body.style.overflow = 'hidden';
       document.body.style.touchAction = 'none';
-      document.body.style.height = '10px';
+      document.body.style.touchAction = 'none';
+      container.style.overflow = 'hidden';
+      container.style.touchAction = 'none';
+      container.style.pointerEvents = 'none';
     }
 
     function enableScroll() {
