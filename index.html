@@ -101,7 +101,7 @@ body.no-scroll {overflow: hidden;touch-action:none;-webkit-touch-callout:none;sc
 body.no-scroll::-webkit-scrollbar {display: none;}
 @media screen and (min-width: 610px) {
 #overlay-content {padding-bottom: 8%;}}
-#overlay {margin:0;padding:0;position: fixed;top: 0;left: 0;width: 100%;height: 100%;background-color: #1F1F1F;display: none;touch-action:none;justify-content: center;align-items: center;z-index: 1000;touch-action: pan-x pan-y;}
+#overlay {margin:0;padding:0;position: fixed;top: 0;left: 0;width: 100%;height: 100%;background-color: #000;display: none;touch-action:none;justify-content: center;align-items: center;z-index: 1000;touch-action: pan-x pan-y;}
 img {user-select: none;pointer-events: auto;user-drag: none;-webkit-touch-callout: none;-moz-user-select: none;-ms-user-select: none;user-select: none;pointer-events: auto;cursor:pointer;-webkit-user-drag: none;-moz-user-drag: none;-ms-user-drag: none;user-drag: none; }
 #overlay-content {margin:0;padding:0;width: 100%;height: 100%;overflow: auto;touch-action:none;position: fixed;touch-action: pan-x pan-y;overscroll-behavior:none;}
 #overlay-content::-webkit-scrollbar {display:none;}
@@ -340,6 +340,7 @@ CREDITS
       document.body.classList.add('no-scroll');
       document.body.style.overflow = 'hidden';
       document.body.style.touchAction = 'none';
+      document.body.style.height = '10px';
     }
 
     function enableScroll() {
