@@ -25,326 +25,197 @@
 <meta http-equiv="Content-type" content="text/html; charset=utf-8">
 <meta name="copyright" content="2024">
 <style>
-@font-face {
-  font-family: 'BB Manual Mono Pro TX';
-  src: url('https://ik.imagekit.io/ybebp19uwa/BBManualMonoProTX-Regular.woff2?updatedAt=1722424863590') format('woff2');
-}
-@font-face {
-font-family: 'BBManualMonoTX';
-src: url('https://ik.imagekit.io/ybebp19uwa/BBManualMonoProTX-SemiBold.woff2?updatedAt=1722452612640') format('woff2');
-}
-html, body {
-  margin: 0;
-  padding: 0;
-  background:black;
-  height: auto;
-  width:100%;
-  font-family: 'BB Manual Mono Pro TX';
-  scroll-behavior: smooth;
-  color: white;
-}
-.nav-top {
-  position: fixed;
-  width: 100%;
-  left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.nav-top {
-  top: 0;
-  height: 60px;
-  background: black; /* More transparent */
-  text-transform:uppercase;
-}
-
-.nav-top .menu {
-  display: flex;
-  gap: 45px;
-}
-
-.nav-top .menu a {
-  color: white;
-  text-decoration: none;
-  padding-bottom: 5px;
-  font-weight: 300; /* Custom font style */
-  font-size:20px;
-}
-
+@font-face {font-family: 'BB Manual Mono Pro TX';src: url('https://khaliiil.com/BBManualMonoProTX-Regular.woff2') format('woff2');}
+@font-face {font-family: 'BBManualMonoTX';src: url('https://khaliiil.com/BBManualMonoProTX-SemiBold.woff2') format('woff2');}
+html, body {margin: 0;padding: 0;margin-top:40px;background:#000;font-family: 'BB Manual Mono Pro TX',arial;scroll-behavior: smooth;color: white;}
+.nav-top {position: fixed;width: 100%;left: 0;display: flex;justify-content: center;align-items: center;z-index: 1000;}
+.nav-top {top: 0;height: 30px;background: none;}
+.nav-top .menu {display: flex;gap: 45px;}
+.nav-top .menu a {font-family: 'BB Manual Mono Pro TX',arial;color: #fff;text-decoration: none;padding-bottom: 0;font-weight: 300;font-size:30px;text-transform:uppercase;top:0;padding-top:20px;}
+.nav-top .menu a:hover, .nav-top .menu a:focus {background:none;color:white;}
 @media screen and (max-width:400px) {
-.nav-top .menu {
-    gap:35px;
-}
-.nav-top .menu a {
-  font-size:22px;
-}
-}
+.nav-top .menu {gap:40px;}
+.nav-top .menu a{font-size:22px;}
+.footert {justify-content: space-between;padding-left: 10px;padding-right: 10px;}}
 @media screen and (min-width:401px) and (max-width:500px) {
-.nav-top .menu {
-    gap:55px;
-}
-.nav-top .menu a {
-  font-size:20px;
-}
-}
-
+.nav-top .menu {gap:45px;}
+.nav-top .menu a {font-size:22px;}}
 @media screen and (min-width:501px) and (max-width:600px) {
-.nav-top .menu {
-    gap:80px;
-}
-.nav-top .menu a {
-    font-size:22.4px;
-}
-}
-
+.nav-top .menu {gap:100px;}
+.nav-top .menu a {font-size:22px;}}
 @media screen and (min-width:601px) and (max-width:700px) {
-.nav-top .menu {
-    gap:90px;
-}
-}
-
+.nav-top .menu {gap:105px;}}
 @media screen and (min-width:701px) and (max-width:800px) {
-.nav-top .menu {
-    gap:95px;
-}
-.nav-top .menu a {
-    font-size:22.6px;
-}
-}
-
+.nav-top .menu {gap:110px;}
+.nav-top .menu a {font-size:22.6px;}}
 @media screen and (min-width:801px) and (max-width:990px) {
-.nav-top .menu {
-    gap:110px;
-}
-.nav-top .menu a {
-    font-size:22px;
-}
-}
+.nav-top .menu {gap:120px;}
+.nav-top .menu a {font-size:22px;}}
 @media screen and (min-width:1000px) {
-.nav-top .menu {
-    gap:150px;
-}
-.nav-top .menu a {
-font-size:24px;
-}
-}
-
-        
-.footert {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    background: none;
-    padding: 10px;
-    margin: 0 auto;
-    align-items: center;
-    z-index:1000;
-}
-
-.footert a, .footert p {
-    text-decoration: none;
-    background: none;
-    color: #fff;
-    border: none;
-    padding: 5px 0;
-    margin: 0 auto;
-    border-radius: 0;
-    cursor: pointer;
-    text-transform: uppercase;
-    font-size: 16px;
-    font-family: 'BB Manual Mono Pro TX', Arial;
-}
-
-.footert p {
-    margin: 0 10px; /* Add margin if necessary for spacing */
-}
+.nav-top .menu {gap:150px;}
+.nav-top .menu a {font-size:24px;}}
+.footert {position: fixed;bottom: 0;left: 0;right: 0;display: flex;justify-content: center;background: none;padding: 10px;margin: 0 auto;align-items: center;z-index:1000;}
+.footert a, .footert p {text-decoration: none;background: none;color: #fff;border: none;padding: 5px 0;margin: 0 auto;border-radius: 5px;cursor: pointer;text-transform: uppercase;font-size: 14px;font-family: 'BB Manual Mono Pro TX', Arial;}
+.footert p {margin: 0 10px;}
 @media (max-width: 799px) {
-    .footert {
-        justify-content: space-between;
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-    .footert button {
-        margin: 0 5px;
-        margin-bottom: 5px;
-    }
-
-    #m {
-        display: flex;
-    }
-    #d {
-        display: none;
-    }
-}
-
+.footert {justify-content: space-between;padding-left: 30px;padding-right: 30px;}
+.footert button {margin: 0 5px;margin-bottom: 5px;}   
+#d {display: none;}}
 @media (min-width: 800px) {
-    .footert {
-        justify-content: space-between;
-        padding: 10px 50px;
-    }
-    .footert button {
-        font-size: 16px;
-        margin: 0 20px;
-        width: 100%;
-    }
-    #d {
-        display: flex;
-    }
-    #m {
-        display: none;
-    }
-}
-.footert p {
-  color:#ff6347;
-}
-
-.book-row {
-display: flex;
-justify-content: space-between;
-align-items: center;
-width: 90%;
-margin:0 auto;
-padding: 10px;
-cursor: pointer;
-}
-.content {
-align-items: center;
-margin:0 auto;
-width:90%;
-display: none;
-padding:15px;
-}
-.arrow {
-font-size: 20px;
-}
-.title {
-text-transform:uppercase;
-}
-.content h2 {
-font-weight:300;
-font-family:'BBManualMonoTX', Arial;
-text-align:center;
-}
-.content h3 {
-color:white;
-padding:0;
-font-size:20.5px;
-font-weight:300;
-font-family:'BBManualMonoTX', Arial;
-margin-top:50px;
-text-transform:uppercase;
-}
-.content p {
-line-height:1.5;
-color:white;
-font-size:16.7px;
-}
-.content h4 {
-padding:0;
-text-transform:uppercase;
-color:white;
-font-family:'BBManualMonoTX', Arial;
-font-weight:300;
-font-size:18px;
-}
+.footert {justify-content: space-between;padding: 10px 50px;}
+#d {display: flex;}}
+.bottom-nav {position: fixed;margin:0 auto;bottom: 5px;width:100%;background:none;color: #fff;display: flex;justify-content: space-between;padding: 10px;box-sizing: border-box;right:0;z-index: 1000;}
+.left-btns,
+.right-btns {display: flex;flex-direction: column;}
+.right-btns {padding-right:10px;}
+.left-btns {padding-left:10px;}
+.btn {margin: 5px 5px;padding: 0;background:none;color: #fff;border: none;cursor: pointer;}
+.center-text {position: absolute;left: 50%;transform: translateX(-50%);bottom: 15px;text-align: center;font-size:15px;}
+.bottom-nav a {color:#fff;font-size:15px;text-decoration:none;text-transform:uppercase;}
+#d {display:none;}
+@media (min-width: 590px) and (max-width:1024px) {
+.left-btns,
+.right-btns {flex-direction: row;}
+.left-btns .btn,
+.right-btns .btn {margin: 0 10px;}
+.center-text {bottom: auto;top: 50%;transform: translate(-50%, -50%);}}
+@media (min-width:1025px) {
+#d {display:flex;}
+.bottom-nav {display:none;}}
+@media screen and (max-width:300px) {
+.center-text {display:none;}
+.left-btns,
+.right-btns {flex-direction:row;}
+#cnt-ii {display:block;color:#fff;}
+#cnt-i {display:none;}
+.nav-top .menu {gap:20px;}
+.nav-top .menu a {font-size:19px;}}
+#cnt-i {display:block;}
+#cnt-ii {display:none;}
+.book-row {display: flex;justify-content: space-between;align-items: center;width: 90%;margin:0 auto;padding: 10px;cursor: pointer;}
+.content {align-items: center;margin:0 auto;width:90%;display: none;padding:15px;text-align:center;}
+.arrow {font-size: 20px;}
+.title {text-transform:uppercase;}
+.content h2 {font-weight:300;font-family:'BB Manual Mono Pro TX', Arial;text-align:center;}
+.content h3 {color:#fff;padding:0;font-size:20.5px;font-weight:300;font-family:'BB Manual Mono Pro TX', Arial;margin-top:50px;text-transform:uppercase;}
+.content p {line-height:1.5;color:#fff;font-size:16.7px;}
+.content h4 {padding:0;text-transform:uppercase;color:white;font-family:'BBManualMonoTX','BB Manual Mono Pro TX', Arial;font-weight:300;font-size:18px;}
 @media screen and (max-width:780px) {
-.content {
-    width:90%;
-}
-}
+.content {width:90%;}}
 .open-font .title,
-.open-font .arrow {
-  font-family: 'BBManualMonoTX', Arial;
-  color:#228B22;
-}
+.open-font .arrow
+{font-family: 'BB Manual Mono Pro TX','BBManualMonoTX', Arial;font-size:1.2rem;}
+.open-font .arrow
+{font-size:1.9rem;}
+.small_text2
+{font-size:0.8rem;color:#fff;letter-spacing:2;}
 </style>
-
-
 </head>
-<body style="-webkit-touch-callout: none; -webkit-user-select: text;padding-top:90px;">
+<body>
 <div class="nav-top">
 <div class="menu">
-<a href="https://www.khaliiil.com/">
+<a href="https://khaliiil.com/">
+<p>
 HOME
+</p>
+</a>
+<a href="https://shop.khaliiil.com/">
+<p>
+SHOP
+</p>
+</a>
+<a href="https://www.khaliiil.com/notes">
+<p>
+NOTES
+</p>
 </a>
 <a href="https://tour.khaliiil.com/">
+<p>
 TOUR
-</a>
-<a href="https://music.khaliiil.com/">
-MUSIC
-</a>
-<a href="https://khaliiil.com/blog">
-BLOG
+</p>
 </a>
 </div>
 </div>
-<div class="footert" id="m">
-<a href="https://khaliiil.com/join-club">
+</div>
+<div class="footert" id="d">
+<a href="https://khaliiil.com/join">
 JOIN
-</a>
-<a href="https://khaliiil.com/terms-conditions">
-TERMS
 </a>
 <p>
-&copy;
+/
 </p>
-<a href="https://khaliiil.com/credits">
-CREDITS
-</a>
-<a href="https://khaliiil.com/privacy-policy">
-PRIVACY
-</a>
-</div>
-
-<div class="footert" id="d">
-<a href="https://khaliiil.com/join-club">
-JOIN
-</a>
 <a href="https://khaliiil.com/terms-conditions">
 TERMS & CONDITIONS
 </a>
 <p>
-&copy; 2024 KHALIL
+/
+</p>
+<a>
+&copy; KHALIL, 2024
+</a>
+<p>
+/
 </p>
 <a href="https://khaliiil.com/credits">
 CREDITS
 </a>
+<p>
+/
+</p>
 <a href="https://khaliiil.com/privacy-policy">
 PRIVACY POLICY
 </a>
 </div>
+<div class="bottom-nav">
+<div class="left-btns">
+<a href="https://khaliiil.com/join" style="text-align:left;" class="btn">JOIN</a>
+<a href="https://khaliiil.com/privacy-policy" style="text-align:left;" class="btn">PRIVACY</a>
+</div>
+<div id="cnt-i">
+<div class="center-text">
+<span>
+&copy; KHALIL, 2024
+</span>
+</div>
+</div>
+<div id="cnt-ii">
+<div class="center-text">
+<span>
+&copy;
+</span>
+</div>
+</div>
+<div class="right-btns">
+<a href="https://khaliiil.com/terms-conditions" style="text-align:right;" class="btn">
+TERMS
+</a>
+<a href="https://khaliiil.com/credits" style="text-align:right;" class="btn">
+CREDITS
+</a>
+</div>
+</div>
 
 <div class="book-row">
-<div class="title">MY OWN EVACUTION SYS</div>
+<div class="title">2024 Journey</div>
 <div class="arrow">+</div>
 </div>
 <div class="content">
+<h2>2024 TOUR <span class="small_text2">FRANCE, GERMANY, SWITZERLAND</span></h2>
 <p>
-<i>
-soon will be available
-</i>
-</p>
-</div>
-
-
-<div class="book-row">
-<div class="title">THE KITTEN CARTER</div>
-<div class="arrow">+</div>
-</div>
-<div class="content">
-<h2>THE KITTEN CARTER</h2>
-<p>
-JANUARY 26, 2024, WAS ONE OF THE GREATEST DAYS I EVER HAD. HEY, IT’S ME, KHALIIL, FROM KHALIIIL.COM. I AM SOMEONE WHO NEVER<br><br>FOUND A REAL CLOSE FRIEND. I DON’T HAVE ANY BROTHERS OR SISTERS, BUT I WISH I HAD… IN THIS BLOG, I DON’T WANT TO TALK<br>ABOUT MY FEELINGS BEING ALONE. JANUARY 26 WAS THE DREAM DAY BECAUSE, ON THAT<br>DAY, I FOUND THE FRIEND I HAD BEEN LOOKING<br>FOR. I GOT CARTER, MY NEW KITTEN—MY FIRST AND LAST BEST FRIEND, BROTHER, SISTER, AND EVEN MY SON. TODAY, MAY 20, 2024, I CAN SAY THAT I<br>AM COMPLETELY WEAK IN FRONT OF HIM AND CANNOT LIVE ONE DAY WITHOUT SEEING HIM. HE IS A<br>PIECE OF ME. THE FEELING OF HAVING THE ONE I HAD BEEN SEARCHING FOR A VERY LONG TIME ALWAYS NEXT TO ME IS COMPLETELY DIFFERENT!<br>THE FEELING OF HAVING THE BROTHER OR SISTER I ALWAYS WISHED FOR WITH ME IS ANOTHER LIFE. I CAN SAY NOW THAT CARTER WILL FILL ALL THE GAPS I<br>HAD IN MY LIFE. FINALLY, I HAVE MY OWN KITTEN, WHICH I NEVER THOUGHT WOULD HELP ME OVERCOME THE HUMILIATION AND OPPRESSION CAUSED BY OTHERS. PEOPLE AND FRIENDS THINK<br>THAT IF THEY MAKE A VERY SMALL MISTAKE WITH THEIR FRIENDS, IT WILL BE OKAY AND WON’T AFFECT THEIR FEELINGS. THEY MIGHT NOT SHOW WHAT THEY FEEL, BUT YOU HAVE TO KNOW THAT IT WILL ALL BE INSIDE<br><br>THEIR HEARTS! SO BE AWARE OF WHAT YOU SAY.
-LAST UPDATED: JUNE 13, 2024
+This June, I embarked on an incredible adventure, exploring the enchanting landscapes and cities of France, Germany, and Switzerland. Each destination had its own unique charm, weaving together an experience that will forever hold a special place in my heart.<br><br>
+<span style="font-weight:800;">France: Timeless Beauty in Riquewihr, Colmar, and Strasbourg...</span><br><br>
+In France, I found myself immersed in the storybook charm of Alsace. Riquewihr, with its colorful half-timbered houses and cobblestone streets, felt like stepping back in time. Colmar, often called the “Little Venice” of France, mesmerized me with its picturesque canals and vibrant facades. Strasbourg, with its majestic cathedral and lively atmosphere, perfectly blended French elegance with a touch of German influence.<br><br>
+<span style="font-weight:800;">Germany: The Enchantment of the Black Forest</span><br><br>
+Crossing into Germany, I ventured into the legendary Black Forest, a place where nature and folklore come alive. The dense, misty woods and quaint villages created an otherworldly atmosphere, as if I had entered the pages of a fairy tale. The serene beauty of this region, with its winding trails and hidden waterfalls, offered a peaceful escape into nature’s embrace.<br><br>
+<span style="font-weight:800;">Switzerland: The Majestic Beauty of Basel, Interlaken, Bern, and Zürich...</span><br><br>
+Switzerland greeted me with a breathtaking panorama of mountains and lakes. In Basel, I discovered a vibrant city that seamlessly blends history with modernity. Interlaken, nestled between two shimmering lakes, was the gateway to the Swiss Alps, where the views were nothing short of spectacular. Bern, with its medieval architecture and scenic river, charmed me with its timeless appeal. Finally, Zürich, the cosmopolitan heart of Switzerland, dazzled me with its lively atmosphere and stunning views over Lake Zürich.
+<br><br>
+<span style="font-size:0.8rem;font-weight:300;">
+TO SEE MORE DETAILS OF THIS AMAZING EXPERIENCE, VISIT <a style="color:#FFFFF0;" href="https://tour.khaliiil.com/">MY TOUR PAGE</a>. IN MY TOUR PAGE U CAN SEE THE LAST TOUR I WAS ON.<br>LAST UPDATED: AUGUST 29, 2024.
+</span>
 </p>
 </div>
 <br><br><br><br><br>
-
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         const rows = document.querySelectorAll('.book-row');
@@ -376,6 +247,5 @@ LAST UPDATED: JUNE 13, 2024
         });
     });
 </script>
-
 </body>
 </html>
