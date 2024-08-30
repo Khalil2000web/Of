@@ -99,7 +99,7 @@ body.no-scroll {overflow: hidden;touch-action:none !important;-webkit-touch-call
 body.no-scroll::-webkit-scrollbar {display: none;}
 @media screen and (min-width: 610px) {
 #overlay-content {padding-bottom: 8%;}}
-#overlay {margin:0;padding:0;position: fixed;top: 0;left: 0;width: 100%;height: 100%;background-color: #000;display: none;touch-action:none;justify-content: center;align-items: center;z-index: 1000;touch-action: pan-x pan-y;}
+#overlay {transition: all 0.0100s ease-in-out;margin:0;padding:0;position: fixed;top: 0;left: 0;width: 100%;height: 100%;background-color: #000;display: none;touch-action:none;justify-content: center;align-items: center;z-index: 1000;touch-action: pan-x pan-y;}
 img {user-select: none;pointer-events: auto;user-drag: none;-webkit-touch-callout: none;-moz-user-select: none;-ms-user-select: none;user-select: none;pointer-events: auto;cursor:pointer;-webkit-user-drag: none;-moz-user-drag: none;-ms-user-drag: none;user-drag: none; }
 #overlay-content {margin:0;padding:0;width: 100%;height: 100%;overflow: auto;touch-action:none;position: fixed;touch-action: pan-x pan-y;overscroll-behavior:none;}
 #overlay-content::-webkit-scrollbar {display:none;}
@@ -185,6 +185,34 @@ video {width: 100%;height: auto;}
 @media screen and (min-width:901px) {
 .left-text {left: 0;padding-left: 240px;padding-right:auto;}
 .right-text {right: 0;padding-right: 240px;}}
+
+#overlay.opening {
+  display: flex;
+  width: 98%;
+  height: 98%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  opacity:0.4;
+}
+
+#overlay.fullscreen {
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity:1;
+}
+
+#overlay.closing {
+  width: 95%;
+  height: 95%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity:0.2;
+}
 </style>
 </head>
 <body>
@@ -377,6 +405,16 @@ CREDITS
       overlayContent.appendChild(clonedMedia);
       overlay.style.display = 'flex';
       overlay.classList.add('overlay-show');
+      
+        overlay.classList.add('opening');
+  overlay.style.display = 'flex';
+
+  setTimeout(() => {
+
+    overlay.classList.remove('opening');
+    overlay.classList.add('fullscreen');
+  }, 90);
+
 
       muteAllVideos();
 
@@ -408,12 +446,23 @@ CREDITS
 
     function closeOverlay() {
       overlay.style.display = 'none';
+      
+        overlay.classList.remove('fullscreen');
+  overlay.classList.add('closing');
+
+  setTimeout(() => {
+
+    overlay.classList.remove('closing');
+    overlay.style.display = 'none';
+  }, 90);
+
+      
       enableScroll();
       if (currentOverlayVideo) {
         currentOverlayVideo.muted = true;
         currentOverlayVideo = null;
       }
-      playAllVideos();  // Ensure main page videos continue playing
+      playAllVideos();
     }
 
     mediaElements.forEach((media, index) => {
@@ -422,7 +471,6 @@ CREDITS
         const soundOffIcon = media.querySelector('.sound-off-icon');
         const soundOnIcon = media.querySelector('.sound-on-icon');
 
-        // Remove the controls attribute
         video.removeAttribute('controls');
 
         video.play();
