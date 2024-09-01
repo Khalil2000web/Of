@@ -83,6 +83,21 @@ html, body {margin: 0;padding: 0;background:var(--main_container_bg);max-height:
 @media (min-width: 800px) {
 .footert {justify-content: space-between;padding: 10px 50px;}
 #d {display: flex;}}
+
+#desk_ii {display:none;}
+.main_layout_top_nav_vii {z-index:400;display:flex;flex-direction:row;width:auto;height:30px;background:none;position:fixed;align-items:center;justify-content:space-between;top:60px;left:50%;transform:translateX(-50%);}
+.main_layout_top_nav_vii a {font-size:20px;text-decoration:none;color:var(--primary_color);}
+.main_layout_top_nav_vii p {margin:10px;}
+@media screen and (min-width: 800px) {
+  #desk_ii {
+    display: flex;
+  }
+  .main_layout_top_nav_vii {
+    display: none;
+  }
+}
+
+
 .bottom-nav {position: fixed;margin:0 auto;bottom: 5px;width:100%;background:none;color:var(--primary_color);display: flex;justify-content: space-between;padding: 10px;box-sizing: border-box;right:0;z-index: 1000;}
 .left-btns,
 .right-btns {display: flex;flex-direction: column;}
@@ -233,9 +248,9 @@ video {width: 100%;height: auto;}
 SHOP
 </p>
 </a>
-<a href="https://www.khaliiil.com/notes">
+<a href="https://music.khaliiil.com/">
 <p>
-NOTES
+MUSIC
 </p>
 </a>
 <a href="https://tour.khaliiil.com/">
@@ -248,6 +263,20 @@ TOUR
 BLOG
 </p>
 </a>
+<span id="desk_ii">
+<a href="https://khaliiil.com/notes">
+<p>
+NOTES
+</p>
+</a>
+</span>
+<span id="desk_ii">
+<a href="https://khaliiil.com/core">
+<p>
+CORE
+</p>
+</a>
+</span>
 </div>
 </div>
 </div>
@@ -307,6 +336,15 @@ TERMS
 CREDITS
 </a>
 </div>
+</div>
+<div class="main_layout_top_nav_vii">
+<a href="https://khaliiil.com/notes">
+NOTES
+</a>
+<p>/</p>
+<a href="https://khaliiil.com/core">
+CORE
+</a>
 </div>
 <div id="modal2" class="modal">
 <span class="close-btn" onclick="closeModal('modal2')"><img src="https://img.icons8.com/ios/100/FFFFFF/multiply.png"></span>
