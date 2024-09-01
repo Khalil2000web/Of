@@ -25,33 +25,11 @@
 <meta http-equiv="Content-type" content="text/html; charset=utf-8">
 <meta name="copyright" content="2024">
 <style>
-@font-face {font-family: 'BB Manual Mono Regular';src: url('https://raw.githubusercontent.com/Khalil2000web/Of/main/system/fonts/BBManualMonoProTX.22d272fc.ttf');}
-@font-face {font-family: 'BB Manual Mono SemiBold';src: url('https://raw.githubusercontent.com/Khalil2000web/Of/main/system/fonts/BBManualMonoProTX-SemiBold.otf');}
-:root {
-    --primary_color: #fff;
-    --secondary_color: #B2BEB5;
-    --main_container_bg: #000;
-    --second_bg_color:#fff;
-    --big_font_size: 1rem;
-    --small_font_size: 0.6875rem;
-    --spacing: 10px;
-    --lowercase_tx: lowercase;
-    --uppercase_tx:uppercase;
-    --font_weight_3:300;
-    --font_weight_4:400;
-    --font_weight_5:500;
-    --font_weight_6:600;
-    --font_weight_7:700;
-    --font_weight_8:800;
-    --font_weight_9:900;
-    --font_all_a7:'BB Manual Mono SemiBold','BB Manual Mono Regular',arial;
-    --font_two_regular:'BB Manual Mono Regular',arial;
-    --zIndex_1000:1000;
-}
-html, body {margin: 0;padding: 0;background:var(--main_container_bg);height: 100%;font-family:var(--font_two_regular);scroll-behavior: smooth;color: white;}
-.nav-top {line-height:0;position: fixed;width: 100%;left: 0;justify-content:center;align-items:center;display: flex;z-index: var(--zIndex_1000);top: 0;height: 30px;background: none;}
+@font-face {font-family: 'BB Manual Mono Pro TX';src: url('https://khaliiil.com/BBManualMonoProTX-Regular.woff2') format('woff2');}
+html, body {margin: 0;padding: 0;background:#000;max-height:99%;height: 100%;font-family: 'BB Manual Mono Pro TX',arial;scroll-behavior: smooth;color: white;}
+.nav-top {line-height:0;position: fixed;width: 100%;left: 0;justify-content:center;align-items:center;display: flex;z-index: 1000;top: 0;height: 30px;background: none;}
 .nav-top .menu {line-height:0;display: flex;gap: 45px;padding:0;}
-.nav-top .menu a {line-height:0;font-family:var(--font_two_regular);color:var(--primary_color);text-decoration: none;font-weight: 300;font-size:30px;text-transform:var(--uppercase_tx);top:0;margin-top:20px;padding:0;}
+.nav-top .menu a {line-height:0;font-family: 'BB Manual Mono Pro TX',arial;color: #fff;text-decoration: none;font-weight: 300;font-size:30px;text-transform:uppercase;top:0;margin-top:20px;padding:0;}
 @media screen and (max-width:400px) {
 .nav-top .menu {gap:40px;}
 .nav-top .menu a{font-size:22px;}
@@ -73,8 +51,8 @@ html, body {margin: 0;padding: 0;background:var(--main_container_bg);height: 100
 @media screen and (min-width:1000px) {
 .nav-top .menu {gap:70px;}
 .nav-top .menu a {font-size:24px;}}
-.footert {position: fixed;bottom: 0;left: 0;right: 0;display: flex;justify-content: center;background: none;padding: 10px;margin: 0 auto;align-items: center;z-index:var(--zIndex_1000);}
-.footert a, .footert p {text-decoration: none;background: none;color:var(--primary_color);border: none;padding: 5px 0;margin: 0 auto;border-radius: 5px;cursor: pointer;text-transform:var(--uppercase_tx);font-size: 14px;font-family:var(--font_two_regular);}
+.footert {position: fixed;bottom: 0;left: 0;right: 0;display: flex;justify-content: center;background: none;padding: 10px;margin: 0 auto;align-items: center;z-index:1000;}
+.footert a, .footert p {text-decoration: none;background: none;color: #fff;border: none;padding: 5px 0;margin: 0 auto;border-radius: 5px;cursor: pointer;text-transform: uppercase;font-size: 14px;font-family: 'BB Manual Mono Pro TX', Arial;}
 .footert p {margin: 0 10px;}
 @media (max-width: 799px) {
 .footert {justify-content: space-between;padding-left: 30px;padding-right: 30px;}
@@ -83,26 +61,14 @@ html, body {margin: 0;padding: 0;background:var(--main_container_bg);height: 100
 @media (min-width: 800px) {
 .footert {justify-content: space-between;padding: 10px 50px;}
 #d {display: flex;}}
-#desk_ii {display:none;}
-.main_layout_top_nav_vii {z-index:400;display:flex;flex-direction:row;width:auto;height:30px;background:none;position:fixed;align-items:center;justify-content:space-between;top:60px;left:50%;transform:translateX(-50%);}
-.main_layout_top_nav_vii a {font-size:20px;text-decoration:none;color:var(--primary_color);}
-.main_layout_top_nav_vii p {margin:10px;}
-@media screen and (min-width: 800px) {
-  #desk_ii {
-    display: flex;
-  }
-  .main_layout_top_nav_vii {
-    display: none;
-  }
-}
-.bottom-nav {position: fixed;margin:0 auto;bottom: 5px;width:100%;background:none;color:var(--primary_color);display: flex;justify-content: space-between;padding: 10px;box-sizing: border-box;right:0;z-index: 1000;}
+.bottom-nav {position: fixed;margin:0 auto;bottom: 5px;width:100%;background:none;color: #fff;display: flex;justify-content: space-between;padding: 10px;box-sizing: border-box;right:0;z-index: 1000;}
 .left-btns,
 .right-btns {display: flex;flex-direction: column;}
 .right-btns {padding-right:10px;}
 .left-btns {padding-left:10px;}
-.btn {margin: 5px 5px;padding: 0;background:none;color:var(--primary_color);border: none;cursor: pointer;}
+.btn {margin: 5px 5px;padding: 0;background:none;color: #fff;border: none;cursor: pointer;}
 .center-text {position: absolute;left: 50%;transform: translateX(-50%);bottom: 15px;text-align: center;font-size:15px;}
-.bottom-nav a {color:var(--primary_color);font-size:15px;text-decoration:none;text-transform:var(--uppercase_tx);}
+.bottom-nav a {color:#fff;font-size:15px;text-decoration:none;text-transform:uppercase;}
 #d {display:none;}
 @media (min-width: 590px) and (max-width:1024px) {
 .left-btns,
@@ -117,13 +83,25 @@ html, body {margin: 0;padding: 0;background:var(--main_container_bg);height: 100
 .center-text {display:none;}
 .left-btns,
 .right-btns {flex-direction:row;}
-#cnt-ii {display:block;color:var(--primary_color);}
+#cnt-ii {display:block;color:#fff;}
 #cnt-i {display:none;}
 .nav-top .menu {gap:20px;}
 .nav-top .menu a {font-size:19px;}}
 #cnt-i {display:block;}
 #cnt-ii {display:none;}
-.media-container {width: 100%;height: 100%;max-height:100%;display: flex;flex-direction: column;overflow-y: auto;position: absolute;z-index: 1;}
+#desk_ii {display:none;}
+.main_layout_top_nav_vii {z-index:400;display:flex;flex-direction:row;width:auto;height:30px;background:none;position:fixed;align-items:center;justify-content:space-between;top:60px;left:50%;transform:translateX(-50%);}
+.main_layout_top_nav_vii a {font-size:20px;text-decoration:none;color:var(--primary_color);}
+.main_layout_top_nav_vii p {margin:10px;}
+@media screen and (min-width: 800px) {
+  #desk_ii {
+    display: flex;
+  }
+  .main_layout_top_nav_vii {
+    display: none;
+  }
+}
+.media-container {width: 100%;height: 100%;max-height:100%;display: flex;flex-direction: column;overflow-y: auto;position: fixed;z-index: 1;}
 .media {position: relative;flex: 0 0 auto;width: 100%;cursor: pointer;user-select: none;pointer-events: auto;user-drag: none;-webkit-touch-callout: none;-moz-user-select: none;-ms-user-select: none;user-select: none;pointer-events: auto;cursor:pointer;-webkit-user-drag: none;-moz-user-drag: none;-ms-user-drag: none;user-drag: none; }
 .media video {width: 100%;height: auto;display: block;}
 .sound-icon {position: absolute;bottom: 15px;right: 15px;width: 20px;max-width:20px;height: auto;cursor: pointer;z-index: 10;opacity: 0.90;-moz-user-select: none;-ms-user-select: none;user-select: none;pointer-events: auto;cursor:pointer;-webkit-user-drag: none;-moz-user-drag: none;-ms-user-drag: none;user-drag: none; }
@@ -131,7 +109,9 @@ html, body {margin: 0;padding: 0;background:var(--main_container_bg);height: 100
 .sound-on-icon {display: none;}
 body.no-scroll {overflow: hidden;touch-action:none !important;-webkit-touch-callout:none;scrollbar-width: none;-ms-overflow-style: none;}
 body.no-scroll::-webkit-scrollbar {display: none;}
-#overlay {transition: all 0.09s ease-in-out;margin:0;padding:0;position: fixed;top: 0;left: 0;width: 100%;height: 100%;background-color:var(--main_container_bg);display: none;touch-action:none;justify-content: center;align-items: center;z-index:var(--zIndex_1000);touch-action: pan-x pan-y;}
+@media screen and (min-width: 610px) {
+#overlay-content {padding-bottom: 8%;}}
+#overlay {transition: all 0.09s ease-in-out;margin:0;padding:0;position: fixed;top: 0;left: 0;width: 100%;height: 100%;background-color: #000;display: none;touch-action:none;justify-content: center;align-items: center;z-index: 1000;touch-action: pan-x pan-y;}
 img {user-select: none;pointer-events: auto;user-drag: none;-webkit-touch-callout: none;-moz-user-select: none;-ms-user-select: none;user-select: none;pointer-events: auto;cursor:pointer;-webkit-user-drag: none;-moz-user-drag: none;-ms-user-drag: none;user-drag: none; }
 #overlay-content {margin:0;padding:0;width: 100%;height: 100%;overflow: auto;touch-action:none;position: fixed;touch-action: pan-x pan-y;overscroll-behavior:none;}
 #overlay-content::-webkit-scrollbar {display:none;}
@@ -193,7 +173,7 @@ video {width: 100%;height: auto;}
 .hidden-in-gallery {display: none;}
 #overlay .hidden-in-gallery {display: block;}
 .tit {position: relative;display: flex;justify-content: space-between;width: 100%;max-width: 800px;}
-.left-text, .right-text {color:var(--primary_color);position: fixed;top: 50%;transform: translateY(-50%);letter-spacing:1.2px;font-size:21.5px;z-index:var(--zIndex_1000);font-family:var(--font_two_regular);}
+.left-text, .right-text {color: white;position: fixed;top: 50%;transform: translateY(-50%);letter-spacing:1.2px;font-size:21.5px;z-index:1000;font-family:'BB Manual Mono Pro TX', arial;}
 .left-text {left: 0;padding-left: 20px;}
 .right-text {right: 0;padding-right: 20px;}
 @media screen and (max-width:300px) {
@@ -217,22 +197,33 @@ video {width: 100%;height: auto;}
 @media screen and (min-width:901px) {
 .left-text {left: 0;padding-left: 240px;padding-right:auto;}
 .right-text {right: 0;padding-right: 240px;}}
-#overlay.opening {display: flex;width: 98%;height: 98%;top: 50%;left: 50%;transform: translate(-50%,-50%);opacity:0.9;}
-#overlay.fullscreen {width: 100%;height: 100%;top: 50%;left: 50%;transform: translate(-50%, -50%);opacity:1;}
-#overlay.closing {width: 95%;height: 95%;top: 50%;left: 50%;transform: translate(-50%, -50%);opacity:0.2;}
-.info-text {position: absolute;bottom: 15px;left: 15px;color: var(--primary_color);font-family: var(--font_two_regular);padding: 0;margin:0;}
-.modal {display: none;position: fixed;z-index: 10000;width: 100%;height: 100%;overflow: auto;background-color: rgba(0, 0, 0, 0.8);top:50%;left:50%;transform:translate(-50%, -50%);}
-.modal-content {position: absolute;margin: 0;padding: 20px;width: 80%;max-width: 80%;background-color: var(--main_container_bg);border-radius: 0;color: var(--primary_color);font-family: var(--font_two_regular);top:50%;left:50%;transform:translate(-50%, -50%);text-align:center;}
-@media screen and (max-width:770px) {
-  .modal-content {
-    width:100%;
-  }
+#overlay.opening {
+  display: flex;
+  width: 98%;
+  height: 98%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  opacity:0.9;
 }
-.close-btn {position:absolute;cursor: pointer;bottom:200px;left:50%;transform:translateX(-50%);padding:0;margin:0;}
-.close-btn img {width:30px;height:30px;max-width:30px;}
-.close-btn:hover,
-.close-btn:focus {background:rgba(255,255,255,0.2);border-radius:6px;cursor: pointer;}
-.info-text img {width:17px;height:17px;max-width:17px;padding:0;margin:0;opacity: 0.90;}
+
+#overlay.fullscreen {
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity:1;
+}
+
+#overlay.closing {
+  width: 95%;
+  height: 95%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity:0.2;
+}
 </style>
 </head>
 <body>
@@ -341,18 +332,6 @@ NOTES
 CORE
 </a>
 </div>
-<div id="modal2" class="modal">
-<span class="close-btn" onclick="closeModal('modal2')"><img src="https://img.icons8.com/ios/100/FFFFFF/multiply.png"></span>
-<div class="modal-content">
-<p><span style="font-weight:900;">VIDEO CREDITS</span><br><br>VIDEO BY: KHALIL</p>
-</div>
-</div>
-<div id="modal1" class="modal">
-<span class="close-btn" onclick="closeModal('modal1')"><img src="https://img.icons8.com/ios/100/FFFFFF/multiply.png"></span>
-<div class="modal-content">
-<p><span style="font-weight:900;">VIDEO CREDITS</span><br><br>SOUND FROM: RENAISSANCE A FILM BY BEYONCÉ <i>(in theaters)</i></p>
-</div>
-</div>
 <div class="media-container">
 <img class="media" id="disable-prev" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/GMP_U2F2ZUdNQVgwMQ%3D%3D.gif" loading="eager" alt="media_home_9032" />
 <img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9025.webp" loading="eager" alt="media_home_9031" />
@@ -366,7 +345,6 @@ CORE
 <video src="https://ik.imagekit.io/ybebp19uwa/IMG_6947.mov?updatedAt=1722431094298" alt="media_home_9002" autoplay loop muted playsinline controls="false"></video>
 <img src="https://raw.githubusercontent.com/Khalil2000web/Of/main/system/Css-off.PNG" class="sound-icon sound-off-icon" alt="Off">
 <img src="https://raw.githubusercontent.com/Khalil2000web/Of/main/system/Css-on.PNG" class="sound-icon sound-on-icon" alt="On">
-<div class="info-text"><span class="btn" onclick="openModal('modal2')"><img src="https://img.icons8.com/ios-filled/50/FFFFFF/info.png" alt="Credits"></span></div>
 </div>
 <img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9017.webp" loading="lazy" alt="media_home_9033" />
 <img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9016.webp" alt="media_home_9022"/>
@@ -387,16 +365,18 @@ CORE
 <video src="https://ik.imagekit.io/ybebp19uwa/IMG_0844.MOV?updatedAt=1722425583838" alt="media_home_9002" autoplay loop muted playsinline controls="false"></video>
 <img src="https://raw.githubusercontent.com/Khalil2000web/Of/main/system/Css-off.PNG" class="sound-icon sound-off-icon" alt="Off">
 <img src="https://raw.githubusercontent.com/Khalil2000web/Of/main/system/Css-on.PNG" class="sound-icon sound-on-icon" alt="On">
-<div class="info-text"><span class="btn" onclick="openModal('modal1')"><img src="https://img.icons8.com/ios-filled/50/FFFFFF/info.png" alt="Credits"></span></div>
 </div>
 <img class="media" src="https://raw.githubusercontent.com/Dibacarter/Media/main/Home_media_image_gallery/5a67e1ae-0c7b-494c-8440-3eb7d7f35ac9.jpeg"/>
 </div>
+</div>
+
 <div class="open"></div>
 <div id="overlay">
   <div class="holder">
   <span id="prev-btn"  class="nav-btn">
     <img style="transform: rotate(270deg);" src="https://raw.githubusercontent.com/Dibacarter/Of/main/next.PNG" alt="prev">
   </span>
+
   <span id="next-btn" class="nav-btn">
     <img style="transform: rotate(270deg);" src="https://raw.githubusercontent.com/Dibacarter/Of/main/prev.PNG" alt="next">
   </span>
@@ -405,22 +385,6 @@ CORE
   <img id="close-btn" style="filter: invert(100%);" src="https://raw.githubusercontent.com/Khalil2000web/Of/main/system/IMG_9107.webp" alt="Close">
 </div>
 
-
-<script>
-function openModal(modalId) {
-    document.getElementById(modalId).style.display = 'block';
-}
-
-function closeModal(modalId) {
-    document.getElementById(modalId).style.display = 'none';
-}
-
-window.onclick = function(event) {
-    if (event.target.classList.contains('modal')) {
-        event.target.style.display = 'none';
-    }
-}
-</script>
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const mediaElements = document.querySelectorAll('.media');
