@@ -131,7 +131,7 @@ img {user-select: none;pointer-events: auto;user-drag: none;-webkit-touch-callou
 #next-btn {border: 2px solid #275c86;right: 5px;top: 25px;}
 .holder {margin:0 auto;padding:0;width:62%;background:none;height:50px;transform:translateX(-50%);left:50%;top:0;position:absolute;z-index:1007;}
 .nav-btn img {display: block;max-width: 100%;height: auto;width: 17px;max-width:20px;user-select: none;pointer-events: auto;user-drag: none;-webkit-touch-callout: none;-moz-user-select: none;-ms-user-select: none;user-select: none;pointer-events: auto;cursor:pointer;-webkit-user-drag: none;-moz-user-drag: none;-ms-user-drag: none;user-drag: none; }
-#overlay-content img, #overlay-content video {margin-bottom:160px;}
+#overlay-content img, #overlay-content video {padding-bottom:160px;}
 video::-webkit-media-controls {display: none !important;}
 video::-webkit-media-controls {display: none !important;}
 video::-moz-media-controls {display: none !important;}
@@ -210,14 +210,19 @@ video {width: 100%;height: auto;}
 #overlay.opening {display: flex;width: 98%;height: 98%;top: 50%;left: 50%;transform: translate(-50%,-50%);opacity:0.9;}
 #overlay.fullscreen {width: 100%;height: 100%;top: 50%;left: 50%;transform: translate(-50%, -50%);opacity:1;}
 #overlay.closing {width: 95%;height: 95%;top: 50%;left: 50%;transform: translate(-50%, -50%);opacity:0.2;}
-.info-text {position: absolute;bottom: 15px;left: 15px;color: var(--primary_color);font-family: var(--font_two_regular);padding: 0;}
+.info-text {position: absolute;bottom: 15px;left: 15px;color: var(--primary_color);font-family: var(--font_two_regular);padding: 0;margin:0;}
 .modal {display: none;position: fixed;z-index: 10000;width: 100%;height: 100%;overflow: auto;background-color: rgba(0, 0, 0, 0.8);top:50%;left:50%;transform:translate(-50%, -50%);}
-.modal-content {position: absolute;margin: 0 auto;padding: 20px;width: 80%;max-width: 80%;background-color: var(--main_container_bg);border-radius: 0;color: var(--primary_color);font-family: var(--font_two_regular);top:50%;left:50%;transform:translate(-50%, -50%);text-align:center;}
-.close-btn {position:absolute;cursor: pointer;bottom:200px;left:50%;transform:translateX(-50%);}
-.close-btn img {width:40px;height:40px;max-width:40px;}
+.modal-content {position: absolute;margin: 0;padding: 20px;width: 80%;max-width: 80%;background-color: var(--main_container_bg);border-radius: 0;color: var(--primary_color);font-family: var(--font_two_regular);top:50%;left:50%;transform:translate(-50%, -50%);text-align:center;}
+@media screen and (max-width:770px) {
+  .modal-content {
+    width:100%;
+  }
+}
+.close-btn {position:absolute;cursor: pointer;bottom:200px;left:50%;transform:translateX(-50%);padding:0;margin:0;}
+.close-btn img {width:30px;height:30px;max-width:30px;}
 .close-btn:hover,
-.close-btn:focus {color: #aaa;text-decoration: none;cursor: pointer;}
-.info-text button {padding:0;margin:0;color:var(--primary_color);font-family:var(--font_two_regular);text-transform: var(--uppercase_tx);text-decoration:underline;text-underline-offset:3px;font-size: 1rem;}
+.close-btn:focus {background:rgba(255,255,255,0.2);border-radius:6px;cursor: pointer;}
+.info-text img {width:17px;height:17px;max-width:17px;padding:0;margin:0;opacity: 0.90;}
 </style>
 </head>
 <body>
@@ -306,13 +311,13 @@ CREDITS
 <div id="modal2" class="modal">
 <span class="close-btn" onclick="closeModal('modal2')"><img src="https://img.icons8.com/ios/100/FFFFFF/multiply.png"></span>
 <div class="modal-content">
-<p><span style="font-weight:900;margin-bottom:20px;">VIDEO CREDITS</span><br> BY: KHALIL</p>
+<p><span style="font-weight:900;">VIDEO CREDITS</span><br><br>VIDEO BY: KHALIL</p>
 </div>
 </div>
 <div id="modal1" class="modal">
 <span class="close-btn" onclick="closeModal('modal1')"><img src="https://img.icons8.com/ios/100/FFFFFF/multiply.png"></span>
 <div class="modal-content">
-<p><span style="font-weight:900;padding-bottom:20px;">VIDEO CREDITS</span><br>SOUND FROM: RENAISSANCE A FILM BY BEYONCÉ <i>(in theaters)</i></p>
+<p><span style="font-weight:900;">VIDEO CREDITS</span><br><br>SOUND FROM: RENAISSANCE A FILM BY BEYONCÉ <i>(in theaters)</i></p>
 </div>
 </div>
 <div class="media-container">
@@ -328,7 +333,7 @@ CREDITS
 <video src="https://ik.imagekit.io/ybebp19uwa/IMG_6947.mov?updatedAt=1722431094298" alt="media_home_9002" autoplay loop muted playsinline controls="false"></video>
 <img src="https://raw.githubusercontent.com/Khalil2000web/Of/main/system/Css-off.PNG" class="sound-icon sound-off-icon" alt="Off">
 <img src="https://raw.githubusercontent.com/Khalil2000web/Of/main/system/Css-on.PNG" class="sound-icon sound-on-icon" alt="On">
-<div class="info-text"><button class="btn" onclick="openModal('modal2')">CREDITS</button></div>
+<div class="info-text"><span class="btn" onclick="openModal('modal2')"><img src="https://img.icons8.com/ios-filled/50/FFFFFF/info.png" alt="Credits"></span></div>
 </div>
 <img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9017.webp" loading="lazy" alt="media_home_9033" />
 <img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9016.webp" alt="media_home_9022"/>
@@ -349,7 +354,7 @@ CREDITS
 <video src="https://ik.imagekit.io/ybebp19uwa/IMG_0844.MOV?updatedAt=1722425583838" alt="media_home_9002" autoplay loop muted playsinline controls="false"></video>
 <img src="https://raw.githubusercontent.com/Khalil2000web/Of/main/system/Css-off.PNG" class="sound-icon sound-off-icon" alt="Off">
 <img src="https://raw.githubusercontent.com/Khalil2000web/Of/main/system/Css-on.PNG" class="sound-icon sound-on-icon" alt="On">
-<div class="info-text"><button class="btn" onclick="openModal('modal1')">CREDITS</button></div>
+<div class="info-text"><span class="btn" onclick="openModal('modal1')"><img src="https://img.icons8.com/ios-filled/50/FFFFFF/info.png" alt="Credits"></span></div>
 </div>
 <img class="media" src="https://raw.githubusercontent.com/Dibacarter/Media/main/Home_media_image_gallery/5a67e1ae-0c7b-494c-8440-3eb7d7f35ac9.jpeg"/>
 </div>
@@ -377,7 +382,6 @@ function closeModal(modalId) {
     document.getElementById(modalId).style.display = 'none';
 }
 
-// Close modal if the user clicks outside of it
 window.onclick = function(event) {
     if (event.target.classList.contains('modal')) {
         event.target.style.display = 'none';
