@@ -48,7 +48,7 @@
     --font_two_regular:'BB Manual Mono Regular',arial;
     --zIndex_1000:1000;
 }
-html, body {background:#000;font-family:var(--font_two_regular);padding-top:100px;}
+html, body {background:#000;font-family:var(--font_two_regular);padding-top:100px;overscroll-behavior:none;}
 .nav_bottom {position: fixed;width: 100%;left: 0;display: flex;justify-content: center;align-items: center;z-index:var(--zIndex_1000);}
 .nav_bottom {bottom: 0;height: 30px;background: none;}
 .nav_bottom .menu {display: flex;gap: 45px;}
@@ -76,7 +76,7 @@ html, body {background:#000;font-family:var(--font_two_regular);padding-top:100p
 #sep {display:none;}}
 
 @media screen and (min-width:601px) and (max-width:700px) {
-.nav_bottom .menu {gap:90px;}
+.nav_bottom .menu {gap:70px;}
 #copyright_sign_i {display:none;}
 #copyright_sign_ii {display:block;}
 #copyright_sign_iii {display:none;}
