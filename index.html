@@ -122,6 +122,58 @@ img {user-select: none;pointer-events: auto;user-drag: none;-webkit-touch-callou
 .holder {margin:0 auto;padding:0;width:62%;background:none;height:50px;transform:translateX(-50%);left:50%;top:0;position:absolute;z-index:1007;}
 .nav-btn img {display: block;max-width: 100%;height: auto;width: 17px;max-width:20px;user-select: none;pointer-events: auto;user-drag: none;-webkit-touch-callout: none;-moz-user-select: none;-ms-user-select: none;user-select: none;pointer-events: auto;cursor:pointer;-webkit-user-drag: none;-moz-user-drag: none;-ms-user-drag: none;user-drag: none; }
 #overlay-content img, #overlay-content video {padding-bottom:160px;}
+video {
+    controls: none !important;
+    pointer-events: none;
+}
+video::-webkit-media-controls {
+    display: none !important;
+}
+video::-webkit-media-controls-enclosure {
+    display: none !important;
+}
+video::-webkit-media-controls-panel {
+    display: none !important;
+}
+video::-moz-media-controls {
+    display: none !important;
+}
+video::-ms-media-controls {
+    display: none !important;
+}
+video::-internal-media-controls {
+    display: none !important;
+}
+video::-webkit-media-controls-play-button,
+video::-webkit-media-controls-start-playback-button,
+video::-webkit-media-controls-current-time-display,
+video::-webkit-media-controls-time-remaining-display,
+video::-webkit-media-controls-timeline,
+video::-webkit-media-controls-mute-button,
+video::-webkit-media-controls-toggle-closed-captions-button,
+video::-webkit-media-controls-volume-slider,
+video::-webkit-media-controls-overlay-play-button,
+video::-webkit-media-controls-overflow-button,
+video::-webkit-media-controls-fullscreen-button,
+video::-webkit-media-controls-rewind-button,
+video::-webkit-media-controls-return-to-realtime-button,
+video::-webkit-media-controls-toggle-play-button,
+video::-webkit-media-controls-pause-button,
+video::-webkit-media-controls-seek-back-button,
+video::-webkit-media-controls-seek-forward-button,
+video::-webkit-media-controls-volume-slider-container,
+video::-webkit-media-controls-timeline-container {
+    display: none !important;
+}
+video {
+    pointer-events: none !important;
+}
+video::-webkit-media-controls-overlay-play-button {
+    display: none !important;
+}
+video::controls {
+    display: none !important;
+}
 video::-webkit-media-controls {display: none !important;}
 video::-webkit-media-controls {display: none !important;}
 video::-moz-media-controls {display: none !important;}
