@@ -28,14 +28,14 @@
 @font-face {font-family: 'BB Manual Mono Regular';src: url('https://raw.githubusercontent.com/Khalil2000web/Of/main/system/fonts/BBManualMonoProTX.22d272fc.ttf');}
 @font-face {font-family: 'BB Manual Mono SemiBold';src: url('https://raw.githubusercontent.com/Khalil2000web/Of/main/system/fonts/BBManualMonoProTX-SemiBold.otf');}
 :root {--primary_color: #fff;--secondary_color: #B2BEB5;--main_container_bg: #000;--second_bg_color:#fff;--big_font_size: 1rem;--small_font_size: 0.6875rem;--spacing: 10px;--lowercase_tx: lowercase;--uppercase_tx:uppercase;--font_weight_3:300;--font_weight_4:400;--font_weight_5:500;--font_weight_6:600;--font_weight_7:700;--font_weight_8:800;--font_weight_9:900;--font_all_a7:'BB Manual Mono SemiBold','BB Manual Mono Regular',arial;--font_two_regular:'BB Manual Mono Regular',arial;--zIndex_1000:1000;}
-html, body {margin: 0;padding: 0;background:#000;max-height:99%;height: 100%;font-family:var(--font_two_regular);scroll-behavior: smooth;color:var(--primary_color);user-select:text;-webkit-user-select:text;}
+html, body {margin: 0;padding: 0;background:#000;max-height:99%;height: 100%;font-family:var(--font_two_regular);scroll-behavior: smooth;color:var(--primary_color);user-select:none;-webkit-user-select:none;}
 .nav_bottom {position: fixed;width: 100%;left: 0;display: flex;justify-content: center;align-items: center;z-index:var(--zIndex_1000);}
 .nav_bottom {bottom: 0;height: 30px;background: none;}
 .nav_bottom .menu {display: flex;gap: 45px;}
-.nav_bottom .menu a, .nav_bottom .menu p {font-family:var(--font_two_regular);color:var(--primary_color);text-decoration: none;padding-bottom: 0;font-weight:var(--font_weight_3);font-size:15.9px;text-transform:uppercase;top:0;padding-bottom:16px;}
+.nav_bottom .menu a, .nav_bottom .menu p {font-family:var(--font_two_regular);color:var(--primary_color);text-decoration: none;padding-bottom: 0;font-weight:var(--font_weight_3);font-size:15.9px;text-transform:uppercase;top:0;padding-bottom:14px;}
 .nav_bottom .menu a:hover, .nav-top .menu a:focus {background:none;color:var(--primary_color);}
 @media screen and (max-width:400px) {
-.nav_bottom .menu {gap:20px;}
+.nav_bottom .menu {gap:10px;}
 #copyright_sign_i {display:block;}
 #copyright_sign_ii {display:none;}
 #copyright_sign_iii {display:none;}
