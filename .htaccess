@@ -12,3 +12,10 @@ RewriteRule ^([^\.]+)$ $1.html [NC,L]
 # Block direct access to URLs ending with .html
 RewriteCond %{ENV:REDIRECT_STATUS} ^$
 RewriteRule ^(.+)\.html$ - [R=404,L]
+
+# Add trailing slash if it doesn't exist
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !\.[a-zA-Z0-9]{1,4}$ [NC]
+RewriteCond %{REQUEST_URI} !(.*)/$ [NC]
+RewriteRule ^(.*)$ /$1/ [L,R=301]
