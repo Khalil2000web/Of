@@ -25,14 +25,91 @@
 <meta http-equiv="Content-type" content="text/html; charset=utf-8">
 <meta name="copyright" content="2024">
 <style>
-@font-face {font-family: 'BB Manual Mono Pro TX';src: url('https://khaliiil.com/BBManualMonoProTX-Regular.woff2') format('woff2');}
-@font-face {font-family: 'BBManualMonoTX';src: url('https://khaliiil.com/BBManualMonoProTX-SemiBold.woff2') format('woff2');}
-html, body {margin: 0;padding: 0;margin-top:40px;background:#000;font-family: 'BB Manual Mono Pro TX',arial;scroll-behavior: smooth;color: white;}
-.nav-top {position: fixed;width: 100%;left: 0;display: flex;justify-content: center;align-items: center;z-index: 1000;}
+@font-face {font-family: 'BB Manual Mono Regular';src: url('https://raw.githubusercontent.com/Khalil2000web/Of/main/system/fonts/BBManualMonoProTX.22d272fc.ttf');}
+@font-face {font-family: 'BB Manual Mono SemiBold';src: url('https://raw.githubusercontent.com/Khalil2000web/Of/main/system/fonts/BBManualMonoProTX-SemiBold.otf');}
+:root {
+    --primary_color: #000;
+    --secondary_color: #B2BEB5;
+    --main_container_bg: #fff;
+    --second_bg_color:#fff;
+    --big_font_size: 1rem;
+    --small_font_size: 0.6875rem;
+    --spacing: 10px;
+    --lowercase_tx: lowercase;
+    --uppercase_tx:uppercase;
+    --font_weight_3:300;
+    --font_weight_4:400;
+    --font_weight_5:500;
+    --font_weight_6:600;
+    --font_weight_7:700;
+    --font_weight_8:800;
+    --font_weight_9:900;
+    --font_all_a7:'BB Manual Mono SemiBold','BB Manual Mono Regular',arial;
+    --font_two_regular:'BB Manual Mono Regular',arial;
+    --zIndex_1000:1000;
+}
+html, body {background:var(--main_container_bg);font-family:var(--font_two_regular);padding-top:60px;color:var(--primary_color);}
+.nav_bottom {position: fixed;width: 100%;left: 0;display: flex;justify-content: center;align-items: center;z-index:var(--zIndex_1000);}
+.nav_bottom {bottom: 0;height: 30px;background: none;}
+.nav_bottom .menu {display: flex;gap: 45px;}
+.nav_bottom .menu a, .nav_bottom .menu p {font-family:var(--font_two_regular);color:var(--primary_color);text-decoration: none;padding-bottom: 0;font-weight:var(--font_weight_3);font-size:16.6px;text-transform:uppercase;top:0;padding-bottom:16px;}
+.nav_bottom .menu a:hover, .nav-top .menu a:focus {background:none;color:var(--primary_color);}
+@media screen and (max-width:400px) {
+.nav_bottom .menu {gap:20px;}
+#copyright_sign_i {display:block;}
+#copyright_sign_ii {display:none;}
+#copyright_sign_iii {display:none;}
+#sep {display:none;}}
+
+@media screen and (min-width:401px) and (max-width:500px) {
+.nav_bottom .menu {gap:30px;}
+#copyright_sign_i {display:block;}
+#copyright_sign_ii {display:none;}
+#copyright_sign_iii {display:none;}
+#sep {display:none;}}
+
+@media screen and (min-width:501px) and (max-width:600px) {
+.nav_bottom .menu {gap:50px;}
+#copyright_sign_i {display:none;}
+#copyright_sign_ii {display:block;}
+#copyright_sign_iii {display:none;}
+#sep {display:none;}}
+
+@media screen and (min-width:601px) and (max-width:700px) {
+.nav_bottom .menu {gap:70px;}
+#copyright_sign_i {display:none;}
+#copyright_sign_ii {display:block;}
+#copyright_sign_iii {display:none;}
+#sep {display:none;}}
+
+@media screen and (min-width:701px) and (max-width:800px) {
+.nav_bottom .menu {gap:50px;}
+#copyright_sign_i {display:none;}
+#copyright_sign_ii {display:block;}
+#copyright_sign_iii {display:none;}
+#sep {display:none;}}
+
+@media screen and (min-width:801px) and (max-width:990px) {
+.nav_bottom .menu {gap:40px;}
+#copyright_sign_i {display:none;}
+#copyright_sign_ii {display:none;}
+#copyright_sign_iii {display:block;}
+#sep {display:block;}}
+
+@media screen and (min-width:1000px) {
+.nav_bottom .menu {gap:50px;}
+#copyright_sign_i {display:none;}
+#copyright_sign_ii {display:none;}
+#copyright_sign_iii {display:block;}
+#sep {display:block;}}
+
+#copyright_sign_i, #copyright_sign_i, #copyright_sign_i {color:#000;}
+
+.nav-top {position: fixed;width: 100%;left: 0;display: flex;justify-content: center;align-items: center;z-index:var(--zIndex_1000);}
 .nav-top {top: 0;height: 30px;background: none;}
 .nav-top .menu {display: flex;gap: 45px;}
-.nav-top .menu a {font-family: 'BB Manual Mono Pro TX',arial;color: #fff;text-decoration: none;padding-bottom: 0;font-weight: 300;font-size:30px;text-transform:uppercase;top:0;padding-top:20px;}
-.nav-top .menu a:hover, .nav-top .menu a:focus {background:none;color:white;}
+.nav-top .menu a {font-family:var(--font_two_regular);color:var(--primary_color);text-decoration: none;padding-bottom: 0;font-weight:var(--font_weight_3);font-size:30px;text-transform:uppercase;top:0;padding-top:20px;}
+.nav-top .menu a:hover, .nav-top .menu a:focus {background:none;color:var(--primary_color);}
 @media screen and (max-width:400px) {
 .nav-top .menu {gap:40px;}
 .nav-top .menu a{font-size:22px;}
@@ -54,67 +131,37 @@ html, body {margin: 0;padding: 0;margin-top:40px;background:#000;font-family: 'B
 @media screen and (min-width:1000px) {
 .nav-top .menu {gap:150px;}
 .nav-top .menu a {font-size:24px;}}
-.footert {position: fixed;bottom: 0;left: 0;right: 0;display: flex;justify-content: center;background: none;padding: 10px;margin: 0 auto;align-items: center;z-index:1000;}
-.footert a, .footert p {text-decoration: none;background: none;color: #fff;border: none;padding: 5px 0;margin: 0 auto;border-radius: 5px;cursor: pointer;text-transform: uppercase;font-size: 14px;font-family: 'BB Manual Mono Pro TX', Arial;}
-.footert p {margin: 0 10px;}
-@media (max-width: 799px) {
-.footert {justify-content: space-between;padding-left: 30px;padding-right: 30px;}
-.footert button {margin: 0 5px;margin-bottom: 5px;}   
-#d {display: none;}}
-@media (min-width: 800px) {
-.footert {justify-content: space-between;padding: 10px 50px;}
-#d {display: flex;}}
-.bottom-nav {position: fixed;margin:0 auto;bottom: 5px;width:100%;background:none;color: #fff;display: flex;justify-content: space-between;padding: 10px;box-sizing: border-box;right:0;z-index: 1000;}
-.left-btns,
-.right-btns {display: flex;flex-direction: column;}
-.right-btns {padding-right:10px;}
-.left-btns {padding-left:10px;}
-.btn {margin: 5px 5px;padding: 0;background:none;color: #fff;border: none;cursor: pointer;}
-.center-text {position: absolute;left: 50%;transform: translateX(-50%);bottom: 15px;text-align: center;font-size:15px;}
-.bottom-nav a {color:#fff;font-size:15px;text-decoration:none;text-transform:uppercase;}
-#d {display:none;}
-@media (min-width: 590px) and (max-width:1024px) {
-.left-btns,
-.right-btns {flex-direction: row;}
-.left-btns .btn,
-.right-btns .btn {margin: 0 10px;}
-.center-text {bottom: auto;top: 50%;transform: translate(-50%, -50%);}}
-@media (min-width:1025px) {
-#d {display:flex;}
-.bottom-nav {display:none;}}
-@media screen and (max-width:300px) {
-.center-text {display:none;}
-.left-btns,
-.right-btns {flex-direction:row;}
-#cnt-ii {display:block;color:#fff;}
-#cnt-i {display:none;}
-.nav-top .menu {gap:20px;}
-.nav-top .menu a {font-size:19px;}}
-#cnt-i {display:block;}
-#cnt-ii {display:none;}
+#desk_ii {display:none;}
+.main_layout_top_nav_vii {z-index:400;display:flex;flex-direction:row;width:auto;height:30px;background:none;position:fixed;align-items:center;justify-content:space-between;top:60px;left:50%;transform:translateX(-50%);}
+.main_layout_top_nav_vii a {font-size:20px;text-decoration:none;color:var(--primary_color);}
+.main_layout_top_nav_vii p {margin:10px;color:var(--primary_color);}
+@media screen and (min-width: 800px) {
+  #desk_ii {
+    display: flex;
+  }
+  .main_layout_top_nav_vii {
+    display: none;
+  }
+}
+
 .book-row {display: flex;justify-content: space-between;align-items: center;width: 90%;margin:0 auto;padding: 10px;cursor: pointer;}
 .content {align-items: center;margin:0 auto;width:90%;display: none;padding:15px;text-align:center;}
-.arrow {font-size: 20px;}
+.arrow {font-size: 24px;font-weight:300;}
 .title {text-transform:uppercase;}
-.content h2 {font-weight:300;font-family:'BB Manual Mono Pro TX', Arial;text-align:center;}
-.content h3 {color:#fff;padding:0;font-size:20.5px;font-weight:300;font-family:'BB Manual Mono Pro TX', Arial;margin-top:50px;text-transform:uppercase;}
-.content p {line-height:1.5;color:#fff;font-size:16.7px;}
-.content h4 {padding:0;text-transform:uppercase;color:white;font-family:'BBManualMonoTX','BB Manual Mono Pro TX', Arial;font-weight:300;font-size:18px;}
+.content h2 {font-weight:300;font-family:var(--font_two_regular);text-align:center;}
+.content h3 {color:var(--primary_color);padding:0;font-size:20.5px;font-weight:300;font-family:var(--font_two_regular);margin-top:50px;text-transform:uppercase;}
+.content p {line-height:1.5;color:var(--primary_color);font-size:16.7px;}
+.content h4 {padding:0;text-transform:uppercase;color:var(--primary_color);font-family:var(--font_all_a7);font-weight:300;font-size:18px;}
 @media screen and (max-width:780px) {
 .content {width:90%;}}
-.open-font .title,
-.open-font .arrow
-{font-family: 'BB Manual Mono Pro TX','BBManualMonoTX', Arial;font-size:1.2rem;}
-.open-font .arrow
-{font-size:1.9rem;}
 .small_text2
-{font-size:0.8rem;color:#fff;letter-spacing:2;}
+{font-size:0.8rem;color:var(--primary_color);letter-spacing:2;}
 </style>
 </head>
 <body>
 <div class="nav-top">
 <div class="menu">
-<a href="https://khaliiil.com/">
+<a href="https://www.khaliiil.com/">
 <p>
 HOME
 </p>
@@ -124,75 +171,59 @@ HOME
 SHOP
 </p>
 </a>
-<a href="https://www.khaliiil.com/notes">
-<p>
-NOTES
-</p>
-</a>
 <a href="https://tour.khaliiil.com/">
 <p>
 TOUR
 </p>
 </a>
+<a href="https://khaliiil.com/blog">
+<p>
+BLOG
+</p>
+</a>
 </div>
 </div>
 </div>
-<div class="footert" id="d">
+<div class="nav_bottom">
+<div class="menu">
 <a href="https://connect.khaliiil.com">
+<p>
 JOIN
-</a>
-<p>
-/
 </p>
-<a href="https://khaliiil.com/terms-conditions">
-TERMS & CONDITIONS
 </a>
+<p id="sep">/</p>
+<a href="https://www.khaliiil.com/credits">
 <p>
-/
-</p>
-<a>
-&copy; KHALIL, 2024
-</a>
-<p>
-/
-</p>
-<a href="https://khaliiil.com/credits">
 CREDITS
-</a>
-<p>
-/
 </p>
-<a href="https://khaliiil.com/privacy-policy">
-PRIVACY POLICY
 </a>
-</div>
-<div class="bottom-nav">
-<div class="left-btns">
-<a href="https://khaliiil.com/join" style="text-align:left;" class="btn">JOIN</a>
-<a href="https://khaliiil.com/privacy-policy" style="text-align:left;" class="btn">PRIVACY</a>
-</div>
-<div id="cnt-i">
-<div class="center-text">
-<span>
-&copy; KHALIL, 2024
-</span>
-</div>
-</div>
-<div id="cnt-ii">
-<div class="center-text">
-<span>
-&copy;
-</span>
-</div>
-</div>
-<div class="right-btns">
-<a href="https://khaliiil.com/terms-conditions" style="text-align:right;" class="btn">
+<p id="sep">/</p>
+<p id="copyright_sign_i">&copy;</p>
+<p id="copyright_sign_ii">&copy;&nbsp;2024</p>
+<p id="copyright_sign_iii">&copy;&nbsp;2024,&nbsp;KHALIL</p>
+<p id="sep">/</p>
+<a href="https://www.khaliiil.com/terms-conditions">
+<p>
 TERMS
+</p>
 </a>
-<a href="https://khaliiil.com/credits" style="text-align:right;" class="btn">
-CREDITS
+<p id="sep">/</p>
+<a href="https://khaliiil.com/privacy-policy">
+<p>
+PRIVACY
+</p>
 </a>
 </div>
+</div>
+</div>
+<div class="main_layout_top_nav_vii">
+<a href="https://khaliiil.com/notes">
+NOTES
+</a>
+<p>/</p>
+<a href="https://khaliiil.com/core">
+CORE
+</a>
 </div>
 
 <div class="book-row">
@@ -211,7 +242,7 @@ Crossing into Germany, I ventured into the legendary Black Forest, a place where
 Switzerland greeted me with a breathtaking panorama of mountains and lakes. In Basel, I discovered a vibrant city that seamlessly blends history with modernity. Interlaken, nestled between two shimmering lakes, was the gateway to the Swiss Alps, where the views were nothing short of spectacular. Bern, with its medieval architecture and scenic river, charmed me with its timeless appeal. Finally, Zürich, the cosmopolitan heart of Switzerland, dazzled me with its lively atmosphere and stunning views over Lake Zürich.
 <br><br>
 <span style="font-size:0.8rem;font-weight:300;">
-TO SEE MORE DETAILS OF THIS AMAZING EXPERIENCE, VISIT <a style="color:#FFFFF0;" href="https://tour.khaliiil.com/">MY TOUR PAGE</a>. IN MY TOUR PAGE U CAN SEE THE LAST TOUR I WAS ON.<br>LAST UPDATED: AUGUST 29, 2024.
+TO SEE MORE DETAILS OF THIS AMAZING EXPERIENCE, VISIT <a style="color:#000;" href="https://tour.khaliiil.com/">MY TOUR PAGE</a>. IN MY TOUR PAGE U CAN SEE THE LAST TOUR I WAS ON.<br>LAST UPDATED: AUGUST 29, 2024.
 </span>
 </p>
 </div>
@@ -222,7 +253,7 @@ TO SEE MORE DETAILS OF THIS AMAZING EXPERIENCE, VISIT <a style="color:#FFFFF0;" 
         
         rows.forEach(row => {
             row.addEventListener('click', function() {
-                // Close any open content
+l
                 const openContent = document.querySelector('.content.open');
                 if (openContent && openContent !== this.nextElementSibling) {
                     openContent.previousElementSibling.querySelector('.arrow').textContent = '+';
@@ -231,7 +262,6 @@ TO SEE MORE DETAILS OF THIS AMAZING EXPERIENCE, VISIT <a style="color:#FFFFF0;" 
                     openContent.previousElementSibling.classList.remove('open-font'); // Remove the font class from the previously opened row
                 }
                 
-                // Toggle current content
                 const content = this.nextElementSibling;
                 if (content.style.display === 'block') {
                     content.style.display = 'none';
