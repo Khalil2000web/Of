@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Khalil</title>
-<meta charset="UTF-8">
-<meta name="description" content="The Official Website of Khalil">
 <meta property="og:description" content="The Official Website of Khalil">
 <meta property="og:image" content="https://www.khaliiil.com/system/7FA53553-2225-48AC-B68C-89172E7E6340.jpeg">
 <meta property="og:url" content="https://www.khaliiil.com">
@@ -27,8 +26,28 @@
 <style>
 @font-face {font-family: 'BB Manual Mono Regular';src: url('https://raw.githubusercontent.com/Khalil2000web/Of/main/system/fonts/BBManualMonoProTX.22d272fc.ttf');}
 @font-face {font-family: 'BB Manual Mono SemiBold';src: url('https://raw.githubusercontent.com/Khalil2000web/Of/main/system/fonts/BBManualMonoProTX-SemiBold.otf');}
-:root {--primary_color: #fff;--secondary_color: #B2BEB5;--main_container_bg: #000;--second_bg_color:#fff;--big_font_size: 1rem;--small_font_size: 0.6875rem;--spacing: 10px;--lowercase_tx: lowercase;--uppercase_tx:uppercase;--font_weight_3:300;--font_weight_4:400;--font_weight_5:500;--font_weight_6:600;--font_weight_7:700;--font_weight_8:800;--font_weight_9:900;--font_all_a7:'BB Manual Mono SemiBold','BB Manual Mono Regular',arial;--font_two_regular:'BB Manual Mono Regular',arial;--zIndex_1000:1000;}
-html, body {margin: 0;padding: 0;background:#000;max-height:99%;height: 100%;font-family:var(--font_two_regular);scroll-behavior: smooth;color:var(--primary_color);user-select:none;-webkit-user-select:none;}
+:root {
+    --primary_color: #fff;
+    --secondary_color: #B2BEB5;
+    --main_container_bg: #000;
+    --second_bg_color:#000;
+    --big_font_size: 1rem;
+    --small_font_size: 0.6875rem;
+    --spacing: 10px;
+    --lowercase_tx: lowercase;
+    --uppercase_tx:uppercase;
+    --font_weight_3:300;
+    --font_weight_4:400;
+    --font_weight_5:500;
+    --font_weight_6:600;
+    --font_weight_7:700;
+    --font_weight_8:800;
+    --font_weight_9:900;
+    --font_all_a7:'BB Manual Mono SemiBold','BB Manual Mono Regular',arial;
+    --font_two_regular:'BB Manual Mono Regular',arial;
+    --zIndex_1000:1000;
+}
+body {font-family: var(--font_all_a7);margin:0;padding:0;background-color:var(--second_bg_color);}
 .nav_bottom {position: fixed;width: 100%;left: 0;display: flex;justify-content: center;align-items: center;z-index:var(--zIndex_1000);}
 .nav_bottom {bottom: 0;height: 30px;background: none;}
 .nav_bottom .menu {display: flex;gap: 45px;}
@@ -113,142 +132,28 @@ html, body {margin: 0;padding: 0;background:#000;max-height:99%;height: 100%;fon
 .main_layout_top_nav_vii {z-index:400;display:flex;flex-direction:row;width:auto;height:30px;background:none;position:fixed;align-items:center;justify-content:space-between;top:60px;left:50%;transform:translateX(-50%);}
 .main_layout_top_nav_vii a {font-size:20px;text-decoration:none;color:var(--primary_color);}
 .main_layout_top_nav_vii p {margin:10px;color:var(--primary_color);}
+.main_layout_top_nav_vii p, .main_layout_top_nav_vii a {font-family:var(--font_two_regular);}
 @media screen and (min-width: 800px) {
-#desk_ii {display: flex;}
-.main_layout_top_nav_vii {display: none;}}
-.media-container {width: 100%;height:suto;display: flex;flex-direction: column;overflow-y: auto;position: absolute;z-index: 1;}
-.media {position: relative;flex: 0 0 auto;width: 100%;cursor: pointer;user-select: none;pointer-events: auto;user-drag: none;-webkit-touch-callout: none;-moz-user-select: none;-ms-user-select: none;user-select: none;pointer-events: auto;cursor:pointer;-webkit-user-drag: none;-moz-user-drag: none;-ms-user-drag: none;user-drag: none; }
-.media video {width: 100%;height: auto;display: block;}
-.sound-icon {position: absolute;bottom: 15px;right: 15px;width: 20px;max-width:20px;height: auto;cursor: pointer;z-index: 10;opacity: 0.90;-moz-user-select: none;-ms-user-select: none;user-select: none;pointer-events: auto;cursor:pointer;-webkit-user-drag: none;-moz-user-drag: none;-ms-user-drag: none;user-drag: none; }
-.sound-off-icon {display: block;}
-.sound-on-icon {display: none;}
-body.no-scroll {overflow: hidden;touch-action:none !important;-webkit-touch-callout:none;scrollbar-width: none;-ms-overflow-style: none;}
-body.no-scroll::-webkit-scrollbar {display: none;}
-@media screen and (min-width: 610px) {
-#overlay-content {padding-bottom: 8%;}}
-#overlay {transition: all 0.09s ease-in-out;margin:0;padding:0;position: fixed;top: 0;left: 0;width: 100%;height: 100%;background-color: #000;display: none;touch-action:none;justify-content: center;align-items: center;z-index: 1000;touch-action: pan-x pan-y;-webkit-touch-callout:none;overflow:hidden;}
-img {user-select: none;pointer-events: auto;user-drag: none;-webkit-touch-callout: none;-moz-user-select: none;-ms-user-select: none;user-select: none;pointer-events: auto;cursor:pointer;-webkit-user-drag: none;-moz-user-drag: none;-ms-user-drag: none;user-drag: none; }
-#overlay-content {margin:0;padding:0;width: 100%;height: 100%;overflow: auto;touch-action:none;position: fixed;touch-action: pan-x pan-y;overscroll-behavior:none;}
-#overlay-content::-webkit-scrollbar {display:none;}
-#close-btn {position: absolute;top: 10px;left: 50%;transform: translateX(-50%);cursor: pointer;width: 35px;max-width:35px;height: 35px;user-select: none;pointer-events: auto;user-drag: none;-webkit-touch-callout: none;-moz-user-select: none;-ms-user-select: none;user-select: none;pointer-events: auto;cursor: pointer;-webkit-user-drag: none;-moz-user-drag: none;-ms-user-drag: none;user-drag: none;z-index:1009;}
-.nav-btn {position: absolute;transform: translateY(-50%);cursor: pointer;z-index: 10000;padding: 5px 16px;user-select: none;pointer-events: auto;user-drag: none;-webkit-touch-callout: none;}
-#prev-btn {left: 5px;border: 2px solid #275c86;top: 25px;}
-#next-btn {border: 2px solid #275c86;right: 5px;top: 25px;}
-.holder {margin:0 auto;padding:0;width:62%;background:none;height:50px;transform:translateX(-50%);left:50%;top:0;position:absolute;z-index:1007;}
-.nav-btn img {display: block;max-width: 100%;height: auto;width: 17px;max-width:20px;user-select: none;pointer-events: auto;user-drag: none;-webkit-touch-callout: none;-moz-user-select: none;-ms-user-select: none;user-select: none;pointer-events: auto;cursor:pointer;-webkit-user-drag: none;-moz-user-drag: none;-ms-user-drag: none;user-drag: none; }
-#overlay-content img, #overlay-content video {padding-bottom:160px;}
-video {controls: none !important;pointer-events: none;}
-video::-webkit-media-controls {display: none !important;}
-video::-webkit-media-controls-enclosure {display: none !important;}
-video::-webkit-media-controls-panel {display: none !important;}
-video::-moz-media-controls {display: none !important;}
-video::-ms-media-controls {display: none !important;}
-video::-internal-media-controls {display: none !important;}
-video::-webkit-media-controls-play-button,
-video::-webkit-media-controls-start-playback-button,
-video::-webkit-media-controls-current-time-display,
-video::-webkit-media-controls-time-remaining-display,
-video::-webkit-media-controls-timeline,
-video::-webkit-media-controls-mute-button,
-video::-webkit-media-controls-toggle-closed-captions-button,
-video::-webkit-media-controls-volume-slider,
-video::-webkit-media-controls-overlay-play-button,
-video::-webkit-media-controls-overflow-button,
-video::-webkit-media-controls-fullscreen-button,
-video::-webkit-media-controls-rewind-button,
-video::-webkit-media-controls-return-to-realtime-button,
-video::-webkit-media-controls-toggle-play-button,
-video::-webkit-media-controls-pause-button,
-video::-webkit-media-controls-seek-back-button,
-video::-webkit-media-controls-seek-forward-button,
-video::-webkit-media-controls-volume-slider-container,
-video::-webkit-media-controls-timeline-container {display: none !important;}
-video {pointer-events: none !important;}
-video::-webkit-media-controls-overlay-play-button {display: none !important;}
-video::controls {display: none !important;}
-video::-webkit-media-controls {display: none !important;}
-video::-webkit-media-controls {display: none !important;}
-video::-moz-media-controls {display: none !important;}
-video::-ms-media-controls {display: none !important;}
-video::-internal-media-controls {display: none !important;}
-video {controls: none !important;}
-video::-webkit-media-controls-start-playback-button {display: none !important;}
-video::-webkit-media-controls {display: none !important;}
-video::-webkit-media-controls {display: none !important;}
-video::-webkit-media-controls-play-button,
-video::-webkit-media-controls-start-playback-button,
-video::-webkit-media-controls-current-time-display,
-video::-webkit-media-controls-time-remaining-display,
-video::-webkit-media-controls-timeline,
-video::-webkit-media-controls-mute-button,
-video::-webkit-media-controls-toggle-closed-captions-button,
-video::-webkit-media-controls-volume-slider {display: none !important;}
-video::-webkit-media-controls-panel,
-video::-webkit-media-controls-panel *,
-video::-webkit-media-controls-panel > * {display: none !important;}
-video::-webkit-media-controls-overlay-play-button,
-video::-webkit-media-controls-overflow-button,
-video::-webkit-media-controls-enclosure,
-video::-webkit-media-controls-start-playback-button,
-video::-webkit-media-controls-background,
-video::-webkit-media-controls-timeline,
-video::-webkit-media-controls-current-time-display,
-video::-webkit-media-controls-time-remaining-display,
-video::-webkit-media-controls-mute-button,
-video::-webkit-media-controls-volume-slider-container,
-video::-webkit-media-controls-volume-slider {display: none !important;}
-video::-webkit-media-controls-fullscreen-button,
-video::-webkit-media-controls-rewind-button,
-video::-webkit-media-controls-return-to-realtime-button,
-video::-webkit-media-controls-toggle-closed-captions-button,
-video::-webkit-media-controls-toggle-closed-captions-track-list,
-video::-webkit-media-controls-toggle-play-button {display: none !important;}
-video::-webkit-media-controls-play-button,
-video::-webkit-media-controls-pause-button,
-video::-webkit-media-controls-seek-back-button,
-video::-webkit-media-controls-seek-forward-button,
-video::-webkit-media-controls-toggle-closed-captions-button,
-video::-webkit-media-controls-timeline,
-video::-webkit-media-controls-timeline-container,
-video::-webkit-media-controls-volume-slider,
-video::-webkit-media-controls-volume-slider-container {display: none !important;}
-.video-container {position: relative;width: 100%;max-width: 640px; /* Adjust as needed */margin: auto;}
-video {width: 100%;height: auto;}
-.hidden-in-gallery {display: none;}
-#overlay .hidden-in-gallery {display: block;}
-.tit {position: relative;display: flex;justify-content: space-between;width: 100%;max-width: 800px;}
-.left-text, .right-text {color:var(--primary_color);position: fixed;top: 50%;transform: translateY(-50%);letter-spacing:1.2px;font-size:21.5px;z-index:1000;font-family:var(--font_two_regular);}
-.left-text {left: 0;padding-left: 20px;}
-.right-text {right: 0;padding-right: 20px;}
-@media screen and (max-width:300px) {
-.left-text {left: 0;padding-left: 40px;font-size:14px;}
-.right-text {right: 0;padding-right: 40px;font-size:17px;}}
-@media screen and (min-width:301px) and (max-width:500px) {
-.left-text {left: 0;padding-left: 80px;}
-.right-text {right: 0;padding-right: 80px;padding-right:auto;}}
-@media screen and (min-width:501px) and (max-width:600px) {
-.left-text {left: 0;padding-left: 110px;padding-right:auto;}
-.right-text {right: 0;padding-right: 110px;}}
-@media screen and (min-width:601px) and (max-width:700px) {
-.left-text {left: 0;padding-left: 150px;padding-right:auto;}
-.right-text {right: 0;padding-right: 150px;}}
-@media screen and (min-width:701px) and (max-width:800px) {
-.left-text {left: 0;padding-left: 180px;padding-right:auto;}
-.right-text {right: 0;padding-right: 180px;}}
-@media screen and (min-width:801px) and (max-width:990px) {
-.left-text {left: 0;padding-left: 200px;padding-right:auto;}
-.right-text {right: 0;padding-right: 200px;}}
-@media screen and (min-width:901px) {
-.left-text {left: 0;padding-left: 240px;padding-right:auto;}
-.right-text {right: 0;padding-right: 240px;}}
-#overlay.opening {display: flex;width: 98%;height: 98%;top: 50%;left: 50%;transform: translate(-50%,-50%);opacity:0.9;}
-#overlay.fullscreen {width: 100%;height: 100%;top: 50%;left: 50%;transform: translate(-50%, -50%);opacity:1;}
-#overlay.closing {width: 95%;height: 95%;top: 50%;left: 50%;transform: translate(-50%, -50%);opacity:0.2;}
+#desk_ii {display: flex;}}
+.container_main_layout {position:absolute;width:100%;height:auto;background:var(--main_container_bg);padding:0;margin:0;overflow-x:hidden;overflow-y:scroll;justify-content:center;text-transform:var(--uppercase_tx);}
+table {margin-top:40px;width: 100%;border-collapse: collapse;font-family:var(--font_all_a7);}
+td {border: none;width: 50%;max-width:50%;padding: 5px;line-height: 0.9;font-family:var(--font_all_a7);}
+.small-text {font-size:var(--small_font_size);color: var(--primary_color);text-align: right;padding-right: 7px;word-wrap:break-word;}
+.regular-text {font-size:var(--big_font_size);color: var(--primary_color);text-align: left;padding-left: 7px;}
+.centered-text {text-align: center;padding-top: 20px;font-family:var(--font_all_a7);padding-bottom: 15px;font-size: 24px;font-weight:var(--font_weight_3);color: var(--primary_color);word-wrap:break-word;}
+.breadcrumb {font-family:var(--font_two_regular);color:var(--primary_color);position:fixed;top:60px;padding: 10px;background-color: none;margin-bottom:50px;width:90%;margin-left:10px;}
+.breadcrumb a {font-family:var(--font_two_regular);text-decoration: underline;color:var(--secondary_color);margin: 0 5px;text-decoration: underline;text-underline-offset:4px;}
+.breadcrumb span {margin: 0 5px;}
 </style>
 </head>
 <body>
 <div class="nav-top">
 <div class="menu">
+<a href="https://www.khaliiil.com/">
+<p>
+HOME
+</p>
+</a>
 <a href="https://shop.khaliiil.com/">
 <p>
 SHOP
@@ -257,11 +162,6 @@ SHOP
 <a href="https://music.khaliiil.com/">
 <p>
 MUSIC
-</p>
-</a>
-<a href="https://tour.khaliiil.com/">
-<p>
-TOUR
 </p>
 </a>
 <a href="https://khaliiil.com/blog">
@@ -327,243 +227,235 @@ NOTES
 CORE
 </a>
 </div>
-<div class="media-container">
+
+<div class="container_main_layout">
+<table>
+<tr>
+<td colspan="2" class="centered-text" style="font-weight:var(--font_weight_5);font-size:1.6rem;padding-top:90px;">credits</td>
+</tr>
+<tr>
+<td colspan="2" style="font-size:1.4rem;line-height:1.4;padding-bottom:30px;" class="centered-text">
+THANK YOU FOR VISITING MY WEBSITE. THIS PROJECT ISN’T JUST A DISPLAY OF MY WORK; IT’S A REFLECTION OF MY JOURNEY, PASSIONS, AND THE PEOPLE WHO HAVE INSPIRED ME ALONG THE WAY. I HOPE YOU FIND VALUE AND INSPIRATION HERE.  </td>
+</tr>
+
+<tr>
+<td colspan="2" class="centered-text">coding</td>
+</tr>
+<tr>
+<td class="small-text">Tools/Technologies Used</td>
+<td class="regular-text">html</td>
+</tr>
+<tr>
+<td class="small-text"></td>
+<td class="regular-text">css</td>
+</tr>
+<tr>
+<td class="small-text"></td>
+<td class="regular-text">javascript</td>
+</tr>
+<tr>
+<td class="small-text"></td>
+<td class="regular-text">Visual Studio Code</td>
+</tr>
+
+<tr>
+<td colspan="2" class="centered-text">fonts</td>
+</tr>
+<tr>
+<td class="small-text">main fonts</td>
+<td class="regular-text">bb manual mono pro (regular)</td>
+</tr>
+<tr>
+<td class="small-text"></td>
+<td class="regular-text">bb manual mono pro semi bold</td>
+</tr>
+<tr>
+<td class="small-text">secondary fonts</td>
+<td class="regular-text">arial</td>
+</tr>
+<tr>
+<td class="small-text"></td>
+<td class="regular-text">Sans-serif</td>
+</tr>
+
+<tr>
+<td colspan="2" class="centered-text">PAGES</td>
+</tr>
+<tr>
+<td class="small-text">main PAGES</td>
+<td class="regular-text"><a style="text-decoration:none;color:var(--secondary_color);" href="https://khaliiil.com">home page</a></td>
+</tr>
+<tr>
+<td class="small-text"></td>
+<td class="regular-text"><a style="text-decoration:none;color:var(--secondary_color);" href="https://khaliiil.com/notes">notes</a></td>
+</tr>
+<tr>
+<td class="small-text"></td>
+<td class="regular-text"><a style="text-decoration:none;color:var(--secondary_color);" href="https://tour.khaliiil.com">tour</a></td>
+</tr>
+<tr>
+<td class="small-text"></td>
+<td class="regular-text"><a style="text-decoration:none;color:var(--secondary_color);" href="https://khaliiil.com/blog">blog</a></td>
+</tr>
+<tr>
+<td class="small-text"></td>
+<td class="regular-text"><a style="text-decoration:none;color:var(--secondary_color);" href="https://shop.khaliiil.com">shop</a></td>
+</tr>
+<tr>
+<td class="small-text">Supplementary/Utility Pages</td>
+<td class="regular-text"><a style="text-decoration:none;color:var(--secondary_color);" href="https://khaliiil.com/join">join</a></td>
+</tr>
+<tr>
+<td class="small-text"></td>
+<td class="regular-text"><a style="text-decoration:none;color:var(--secondary_color);" href="https://khaliiil.com/terms-conditions">terms & conditions</a></td>
+</tr>
+
+<tr>
+<td class="small-text"></td>
+<td class="regular-text"><a style="text-decoration:none;color:var(--secondary_color);" href="https://khaliiil.com/privacy-policy">privacy policy</a></td>
+</tr>
+<tr>
+<td class="small-text"></td>
+<td class="regular-text"><a style="text-decoration:none;color:var(--secondary_color);" href="https://khaliiil.com/credits">credits</a></td>
+</tr>
+
+<tr>
+<td colspan="2" class="centered-text" style="padding-top:40px;">fonts licenses</td>
+</tr>
+<td colspan="2" style="font-size:14px;line-height:1.4;padding-bottom:30px;" class="centered-text">
+The primary font that shapes the unique aesthetic of this website is BB Manual Mono Pro TX (Regular), a carefully chosen typeface that brings a distinct character and clarity to the content. For elements that require a bit more emphasis, BB Manual Mono Pro TX (Semi Bold) is used, providing a strong and refined touch to headings, buttons, and other key features. These fonts were thoughtfully selected to not only enhance the visual appeal but to also ensure that the text is both readable and engaging.
+<br>
+In the rare instance that these primary fonts are not available, the website seamlessly falls back on Arial and Sans Serif as secondary options. These widely recognized fonts maintain the clean and modern look of the site while ensuring compatibility across different devices and platforms.
+<br><br>
+I am proud to say that both BB Manual Mono Pro TX fonts were purchased with the proper licenses, ensuring that they are used in full compliance with the designer’s terms. This attention to detail in font selection and licensing reflects my commitment to creating a polished and professional online experience.
+</tr>
+
+<tr>
+<td colspan="2" class="centered-text" style="padding-top:40px;">website design and Development</td>
+</tr>
+<tr>
+<td colspan="2" style="font-size:14px;line-height:1.4;padding-bottom:30px;" class="centered-text">
+This website was meticulously crafted by Khalil (khaliiil), who poured countless hours into every detail, from the underlying code to the visual aesthetics. While the design is predominantly a unique reflection of my creative vision, certain elements have been inspired by the incredible work of other designers and websites that I deeply admire. I have taken great care to infuse my own originality into these inspirations, ensuring that the final product is a harmonious blend of my personal style and the design concepts that have resonated with me.<br>
+Each page, each interaction, and each visual element has been tailored to fit the specific needs of this site, creating an experience that is both engaging and reflective of the site’s purpose. The result is a website that stands on its own while acknowledging the influence of design excellence from across the web.  </td>
+</tr>
+
+<tr>
+<td colspan="2" class="centered-text" style="padding-top:40px;">Content Creation and Media</td>
+</tr>
+<tr>
+<td colspan="2" style="font-size:14px;line-height:1.4;padding-bottom:50px;" class="centered-text">
+Every image, video, and piece of content on this website has been crafted with immense passion and dedication by khalil (khaliiil). Each photograph captured, every word written, and every video edited represents not just a technical achievement, but a labor of love. My creative process is driven by a deep connection to the subject matter, and I strive to pour that same emotion into every piece of content you see here.
+<br><br>
+From the initial concept to the final product, every step of creating these media elements has been a journey of discovery, experimentation, and heart. Whether it’s the way light falls on a scene in a photograph or the rhythm of a narrative, each piece has been meticulously crafted to evoke a specific feeling or tell a particular story. My aim is to offer you more than just visuals or text—I want to offer you a window into my world, an experience that resonates on a deeper level.
+<br><br>
+This website is a canvas where I express my creativity, and it is filled with moments that I hold dear. The love and care I have invested in each piece are palpable, and it is my hope that this passion is felt by everyone who visits.
+</tr>
+
+<tr>
+<td colspan="2" class="centered-text">Hosting and Infrastructure</td>
+</tr>
+<tr>
+<td colspan="2" style="font-size:14px;line-height:1.4;padding-bottom:50px;" class="centered-text">
+This website’s performance and security are bolstered by Cloudflare, a leading provider of web infrastructure and security services. Cloudflare’s advanced features ensure that the site operates smoothly, with enhanced speed and reliability for all users. By utilizing Cloudflare’s Content Delivery Network (CDN), we effectively distribute content across a global network, reducing load times and improving the overall user experience. Additionally, Cloudflare’s security measures protect the site from potential threats and attacks, offering robust protection against cyber vulnerabilities. This infrastructure supports our commitment to providing a seamless, fast, and secure browsing experience for visitors, allowing us to focus on delivering high-quality content and engaging features.
+</td>
+</tr>
+
+
+<tr>
+<td colspan="2" class="centered-text">Acknowledgements</td>
+</tr>
+<tr>
+<td colspan="2" style="font-size:14px;line-height:1.4;padding-bottom:50px;" class="centered-text">
+I am deeply appreciative of the many individuals and entities whose contributions and support have made this website possible. A heartfelt acknowledgment goes to the designers and developers whose work inspired me and provided the creative spark for many elements of this site. Your innovative designs have been a guiding light in my own creative process. I also want to recognize the software developers and plugin creators whose tools have greatly enhanced the functionality and design of this website. Your dedication to crafting high-quality resources has been a cornerstone of this project’s success. Finally, to all the users and visitors who have engaged with this website, your feedback and interaction have been the ultimate validation of the effort and passion invested. Thank you for being a part of this journey and for helping to make this vision a reality.
+</td>
+</tr>
+
+<td colspan="2" class="centered-text">Resources and Learning</td>
+<tr>
+<td colspan="2" style="font-size:14px;line-height:1.4;padding-bottom:20px;" class="centered-text">
+utilized various online courses, tutorials, and books to enhance my skills and bring this project to life. Key resources include:
+</td>
+</tr>
+
+<tr>
+<td class="small-text">online help</td>
+<td class="regular-text"><a style="text-decoration:none;color:var(--secondary_color);" href="https://youtube.com/@freecodecamp?si=WhQzuZS43YPlfmc2">freecodecamp.org</a></td>
+</tr>
+<tr>
+<td class="small-text"></td>
+<td class="regular-text"><a style="text-decoration:none;color:var(--secondary_color);" href="https://chatgpt.com">chatgpt</a></td>
+</tr>
+
+<td colspan="2" style="padding-top:70px;" class="centered-text">Future Plans</td>
+<tr>
+<td colspan="2" style="font-size:14px;line-height:1.4;padding-bottom:50px;" class="centered-text">
+Looking ahead, we have a range of exciting developments in store for this website. We are committed to enhancing the user experience by introducing new features and functionalities that will make the site more interactive and engaging. Expect to see fresh content regularly added, including new articles, expanded galleries, and updates to existing pages to keep the site dynamic and relevant. We will also be refining the design and user interface based on feedback and evolving trends, ensuring that navigation and aesthetics remain top-notch. Community engagement is a priority, and we plan to introduce forums and feedback channels to foster deeper interactions. Technology upgrades will continue to play a significant role, with improvements aimed at optimizing performance, security, and accessibility. We’re also exploring collaborations and partnerships that will bring new perspectives and resources to enhance the website further. Additionally, we are focused on improving the mobile experience and ensuring our site is accessible to all users. Sustainability is on our radar as well, with efforts to adopt eco-friendly practices and support conservation initiatives. We are thrilled about these future plans and look forward to sharing each new development with you as we continue to grow and evolve.
+</td>
+</tr>
+
+<tr>
+<td colspan="2" class="centered-text"><span style="color:var(--secondary_color);">★</span> Special Thanks <span style="color:var(--secondary_color);">★</span></td>
+</tr>
+<tr>
+<td colspan="2" style="font-size:14px;line-height:1.4;padding-bottom:20px;" class="centered-text">
+This website has been an incredible journey, and I owe a tremendous amount of gratitude to those who played a pivotal role in its creation. To my friends and family, your unwavering support and belief in my vision have been invaluable. Your patience, constructive feedback, and encouragement helped shape every aspect of this project. A special shoutout to my colleagues and mentors who provided insightful advice and inspired me to push the boundaries of creativity. Your influence is woven into every pixel of this site. Additionally, I want to thank the online communities and forums where I engaged with fellow creators and gained valuable knowledge and inspiration. Your contributions and shared wisdom have been instrumental in bringing this project to life.
+</td>
+</tr>
+
+</table>
 <br><br><br><br><br><br>
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/Home_page_gif_2024_bday_i.GIF" loading="eager" alt="media_home_9032" />
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/Birthday_gif_2024892024_home_media.GIF" loading="eager" alt="media_home_9031" />
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9024.webp" loading="eager" alt="media_home_9030" />
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9023.webp" loading="eager" alt="media_home_9029" />
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9022.webp" loading="lazy" alt="media_home_9028" />
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9021.webp" loading="lazy" alt="media_home_9027" />
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9020.webp" alt="media_home_9026"/>
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9018.webp" alt="media_home_9024"/>
-<div class="media">
-<video src="https://ik.imagekit.io/ybebp19uwa/IMG_6947.mov?updatedAt=1722431094298" alt="media_home_9002" autoplay loop muted playsinline controls="false"></video>
-<img src="https://raw.githubusercontent.com/Khalil2000web/Of/main/system/Css-off.PNG" class="sound-icon sound-off-icon" alt="Off">
-<img src="https://raw.githubusercontent.com/Khalil2000web/Of/main/system/Css-on.PNG" class="sound-icon sound-on-icon" alt="On">
-</div>
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9017.webp" loading="lazy" alt="media_home_9033" />
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9016.webp" alt="media_home_9022"/>
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9015.webp" alt="media_home_9021"/>
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9014.webp" alt="media_home_9020">
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9013.webp" alt="media_home_9019">
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9011.gif" alt="media_home_9018">
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9010.webp" alt="media_home_9017">
-<img class="media" src="https://raw.githubusercontent.com/Dibacarter/Of/main/mediaOf/5.jpg" alt="media_home_9016">
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_6522.jpeg" alt="media_home_9010">
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9008.jpeg" alt="media_home_9009">
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9007.gif" alt="media_home_9008">
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9006.jpeg" alt="media_home_9007">
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_3652.jpeg" alt="media_home_9006">
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_8993.gif" alt="media_home_9004">
-<img class="media" src="https://raw.githubusercontent.com/Dibacarter/Media/main/Home_media_image_gallery/IMG_3461.jpeg" alt="media_home_9003">
-<div class="media">
-<video src="https://ik.imagekit.io/ybebp19uwa/IMG_0844.MOV?updatedAt=1722425583838" alt="media_home_9002" autoplay loop muted playsinline controls="false"></video>
-<img src="https://raw.githubusercontent.com/Khalil2000web/Of/main/system/Css-off.PNG" class="sound-icon sound-off-icon" alt="Off">
-<img src="https://raw.githubusercontent.com/Khalil2000web/Of/main/system/Css-on.PNG" class="sound-icon sound-on-icon" alt="On">
-</div>
-<img class="media" src="https://raw.githubusercontent.com/Dibacarter/Media/main/Home_media_image_gallery/5a67e1ae-0c7b-494c-8440-3eb7d7f35ac9.jpeg"/>
-</div>
-<div class="open"></div>
-<div id="overlay">
-<div class="holder">
-<span id="prev-btn"  class="nav-btn">
-<img style="transform: rotate(270deg);" src="https://raw.githubusercontent.com/Dibacarter/Of/main/next.PNG" alt="prev">
-</span>
-<span id="next-btn" class="nav-btn">
-<img style="transform: rotate(270deg);" src="https://raw.githubusercontent.com/Dibacarter/Of/main/prev.PNG" alt="next">
-</span>
-</div>
-<div id="overlay-content"></div>
-<img id="close-btn" style="filter: brightness(0) invert(1);-webkit-filter: brightness(0) invert(1);" src="https://raw.githubusercontent.com/Khalil2000web/Of/main/system/IMG_9107.webp" alt="Close">
 </div>
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const mediaElements = document.querySelectorAll('.media');
-    const overlay = document.getElementById('overlay');
-    const overlayContent = document.getElementById('overlay-content');
-    const closeBtn = document.getElementById('close-btn');
-    const prevBtn = document.getElementById('prev-btn');
-    const nextBtn = document.getElementById('next-btn');
-    const container = document.querySelectorAll('.media-container');
+document.addEventListener("DOMContentLoaded", function() {
+    const breadcrumbContainer = document.getElementById('breadcrumb');
+    const referrer = document.referrer;
+    let breadcrumb = '';
 
-    let currentIndex = 0;
-    let currentOverlayVideo = null;
-
-    function disableScroll() {
-      document.body.classList.add('no-scroll');
-      document.body.style.overflow = 'hidden';
-      document.body.style.touchAction = 'none';
+    if (!referrer) {
+        breadcrumbContainer.style.display = 'none';
+        return;
     }
 
-    function enableScroll() {
-      document.body.classList.remove('no-scroll');
-      document.body.style.overflow = '';
-      document.body.style.touchAction = '';
+   if (referrer.includes('tour')) {
+        breadcrumb = '<a href="https://tour.khaliiil.com">Tour</a>';
+    } else if (referrer.includes('music')) {
+        breadcrumb = '<a href="https://music.khaliiil.com">Music</a>';
+    }  else if (referrer.includes('terms-conditions')) {
+        breadcrumb = '<a href="https://khaliiil.com/terms-conditions">terms</a>';
+    }
+    else if (referrer.includes('privacy-policy')) {
+        breadcrumb = '<a href="https://khaliiil.com/privacy-policy">privacy</a>';
+    }
+    else if (referrer.includes('snap')) {
+        breadcrumb = '<a href="https://khaliiil.com/snap">snap pro</a>';
+    }
+    else if (referrer.includes('join')) {
+        breadcrumb = '<a href="https://khaliiil.com/join">join</a>';
+    }
+    else if (referrer.includes('blog')) {
+        breadcrumb = '<a href="https://khaliiil.com/blog">blog</a>';
+    }
+    else if (referrer.includes('https://khaliiil.com')) {
+        breadcrumb = '<a href="https://khaliiil.com/">home</a>';
+    }
+    else {
+        breadcrumbContainer.style.display = 'none';
+        return;
     }
 
-    function muteAllVideos() {
-      mediaElements.forEach(media => {
-        if (media.querySelector('video')) {
-          const video = media.querySelector('video');
-          video.muted = true;
-          const soundOffIcon = media.querySelector('.sound-off-icon');
-          const soundOnIcon = media.querySelector('.sound-on-icon');
-          soundOffIcon.style.display = 'block';
-          soundOnIcon.style.display = 'none';
-          video.play();
-        }
-      });
-    }
+    breadcrumb += ` ➜ ${capitalizeFirstLetter(getPageName())}`;
 
-    function playAllVideos() {
-      mediaElements.forEach(media => {
-        if (media.querySelector('video')) {
-          const video = media.querySelector('video');
-          video.play();
-        }
-      });
-    }
-
-    function openOverlay(index) {
-      disableScroll();
-      currentIndex = index;
-      const clonedMedia = mediaElements[currentIndex].cloneNode(true);
-      overlayContent.innerHTML = '';
-      overlayContent.appendChild(clonedMedia);
-      overlay.style.display = 'flex';
-      overlay.classList.add('overlay-show');
-      
-        overlay.classList.add('opening');
-  overlay.style.display = 'flex';
-
-  setTimeout(() => {
-
-    overlay.classList.remove('opening');
-    overlay.classList.add('fullscreen');
-  }, 140);
-
-
-      muteAllVideos();
-
-      if (clonedMedia.querySelector('video')) {
-        const video = clonedMedia.querySelector('video');
-        const soundOffIcon = clonedMedia.querySelector('.sound-off-icon');
-        const soundOnIcon = clonedMedia.querySelector('.sound-on-icon');
-
-        video.muted = true;
-        soundOffIcon.style.display = 'block';
-        soundOnIcon.style.display = 'none';
-
-        soundOffIcon.addEventListener('click', () => {
-          video.muted = false;
-          soundOffIcon.style.display = 'none';
-          soundOnIcon.style.display = 'block';
-        });
-
-        soundOnIcon.addEventListener('click', () => {
-          video.muted = true;
-          soundOffIcon.style.display = 'block';
-          soundOnIcon.style.display = 'none';
-        });
-
-        currentOverlayVideo = video;
-        video.play();
-      }
-    }
-
-    function closeOverlay() {
-      overlay.style.display = 'none';
-      
-        overlay.classList.remove('fullscreen');
-  overlay.classList.add('closing');
-
-  setTimeout(() => {
-
-    overlay.classList.remove('closing');
-    overlay.style.display = 'none';
-  }, 90);
-
-      
-      enableScroll();
-      if (currentOverlayVideo) {
-        currentOverlayVideo.muted = true;
-        currentOverlayVideo = null;
-      }
-      playAllVideos();
-    }
-
-    mediaElements.forEach((media, index) => {
-      if (media.querySelector('video')) {
-        const video = media.querySelector('video');
-        const soundOffIcon = media.querySelector('.sound-off-icon');
-        const soundOnIcon = media.querySelector('.sound-on-icon');
-
-        video.removeAttribute('controls');
-
-        video.play();
-
-        soundOffIcon.addEventListener('click', () => {
-          muteAllVideos();
-          video.muted = false;
-          soundOffIcon.style.display = 'none';
-          soundOnIcon.style.display = 'block';
-        });
-
-        soundOnIcon.addEventListener('click', () => {
-          video.muted = true;
-          soundOffIcon.style.display = 'block';
-          soundOnIcon.style.display = 'none';
-        });
-      }
-
-      media.addEventListener('click', (event) => {
-        if (event.target !== media.querySelector('.sound-off-icon') && event.target !== media.querySelector('.sound-on-icon')) {
-          openOverlay(index);
-        }
-      });
-    });
-
-    closeBtn.addEventListener('click', closeOverlay);
-
-    prevBtn.addEventListener('click', () => {
-      if (currentIndex === 0) {
-        currentIndex = mediaElements.length - 1;
-      } else {
-        currentIndex -= 1;
-      }
-      openOverlay(currentIndex);
-    });
-
-    nextBtn.addEventListener('click', () => {
-      if (currentIndex === mediaElements.length - 1) {
-        currentIndex = 0;
-      } else {
-        currentIndex += 1;
-      }
-      openOverlay(currentIndex);
-    });
-  });
-</script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const prevBtn = document.getElementById('prev-btn');
-    const nextBtn = document.getElementById('next-btn');
-
-    if (!localStorage.getItem('btnClicked')) {
-        prevBtn.style.border = '2px solid #275c86';
-        nextBtn.style.border = '2px solid #275c86';
-    }
-
-    function hideBorders() {
-        prevBtn.style.border = 'none';
-        nextBtn.style.border = 'none';
-        localStorage.setItem('btnClicked', 'true');
-    }
-
-    prevBtn.addEventListener('click', hideBorders);
-    nextBtn.addEventListener('click', hideBorders);
+    breadcrumbContainer.innerHTML = breadcrumb;
 });
+
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+function getPageName() {
+    const pathArray = window.location.pathname.split('/').filter(Boolean);
+    return pathArray.length > 0 ? capitalizeFirstLetter(pathArray[pathArray.length - 1].replace(/\.html$/, '')) : 'Home';
+}
 </script>
 </body>
 </html>
