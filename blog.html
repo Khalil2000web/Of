@@ -28,10 +28,10 @@
 @font-face {font-family: 'BB Manual Mono Regular';src: url('https://raw.githubusercontent.com/Khalil2000web/Of/main/system/fonts/BBManualMonoProTX.22d272fc.ttf');}
 @font-face {font-family: 'BB Manual Mono SemiBold';src: url('https://raw.githubusercontent.com/Khalil2000web/Of/main/system/fonts/BBManualMonoProTX-SemiBold.otf');}
 :root {
-    --primary_color: #000;
+    --primary_color: #fff;
     --secondary_color: #B2BEB5;
-    --main_container_bg: #fff;
-    --second_bg_color:#fff;
+    --main_container_bg: #000;
+    --second_bg_color:#000;
     --big_font_size: 1rem;
     --small_font_size: 0.6875rem;
     --spacing: 10px;
@@ -52,7 +52,7 @@ html, body {background:var(--main_container_bg);font-family:var(--font_two_regul
 .nav_bottom {position: fixed;width: 100%;left: 0;display: flex;justify-content: center;align-items: center;z-index:var(--zIndex_1000);}
 .nav_bottom {bottom: 0;height: 30px;background: none;}
 .nav_bottom .menu {display: flex;gap: 45px;}
-.nav_bottom .menu a, .nav_bottom .menu p {font-family:var(--font_two_regular);color:var(--primary_color);text-decoration: none;padding-bottom: 0;font-weight:var(--font_weight_3);font-size:16.6px;text-transform:uppercase;top:0;padding-bottom:16px;}
+.nav_bottom .menu a, .nav_bottom .menu p {font-family:var(--font_two_regular);color:var(--primary_color);text-decoration: none;font-weight:var(--font_weight_3);font-size:16.6px;text-transform:uppercase;top:0;padding-bottom:13px;}
 .nav_bottom .menu a:hover, .nav-top .menu a:focus {background:none;color:var(--primary_color);}
 @media screen and (max-width:400px) {
 .nav_bottom .menu {gap:20px;}
@@ -103,7 +103,7 @@ html, body {background:var(--main_container_bg);font-family:var(--font_two_regul
 #copyright_sign_iii {display:block;}
 #sep {display:block;}}
 
-#copyright_sign_i, #copyright_sign_i, #copyright_sign_i {color:#000;}
+#copyright_sign_i, #copyright_sign_i, #copyright_sign_i {color:#fff;}
 
 .nav-top {position: fixed;width: 100%;left: 0;display: flex;justify-content: center;align-items: center;z-index:var(--zIndex_1000);}
 .nav-top {top: 0;height: 30px;background: none;}
@@ -118,30 +118,31 @@ html, body {background:var(--main_container_bg);font-family:var(--font_two_regul
 .nav-top .menu {gap:45px;}
 .nav-top .menu a {font-size:22px;}}
 @media screen and (min-width:501px) and (max-width:600px) {
-.nav-top .menu {gap:100px;}
+.nav-top .menu {gap:70px;}
 .nav-top .menu a {font-size:22px;}}
 @media screen and (min-width:601px) and (max-width:700px) {
-.nav-top .menu {gap:105px;}}
+.nav-top .menu {gap:40px;}}
 @media screen and (min-width:701px) and (max-width:800px) {
-.nav-top .menu {gap:110px;}
+.nav-top .menu {gap:30px;}
 .nav-top .menu a {font-size:22.6px;}}
 @media screen and (min-width:801px) and (max-width:990px) {
-.nav-top .menu {gap:120px;}
+.nav-top .menu {gap:30px;}
 .nav-top .menu a {font-size:22px;}}
 @media screen and (min-width:1000px) {
-.nav-top .menu {gap:150px;}
+.nav-top .menu {gap:50px;}
 .nav-top .menu a {font-size:24px;}}
 #desk_ii {display:none;}
 .main_layout_top_nav_vii {z-index:400;display:flex;flex-direction:row;width:auto;height:30px;background:none;position:fixed;align-items:center;justify-content:space-between;top:60px;left:50%;transform:translateX(-50%);}
 .main_layout_top_nav_vii a {font-size:20px;text-decoration:none;color:var(--primary_color);}
 .main_layout_top_nav_vii p {margin:10px;color:var(--primary_color);}
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 600px) {
   #desk_ii {
     display: flex;
   }
   .main_layout_top_nav_vii {
     display: none;
   }
+  body {padding-top:30px;}
 }
 
 .book-row {display: flex;justify-content: space-between;align-items: center;width: 90%;margin:0 auto;padding: 10px;cursor: pointer;}
@@ -161,7 +162,7 @@ html, body {background:var(--main_container_bg);font-family:var(--font_two_regul
 <body>
 <div class="nav-top">
 <div class="menu">
-<a href="https://www.khaliiil.com/">
+<a href="https://khaliiil.com/">
 <p>
 HOME
 </p>
@@ -171,16 +172,37 @@ HOME
 SHOP
 </p>
 </a>
+<a href="https://music.khaliiil.com/">
+<p>
+MUSIC
+</p>
+</a>
 <a href="https://tour.khaliiil.com/">
 <p>
 TOUR
 </p>
 </a>
+<span id="desk_ii">
 <a href="https://khaliiil.com/blog">
 <p>
 BLOG
 </p>
 </a>
+</span>
+<span id="desk_ii">
+<a href="https://khaliiil.com/notes">
+<p>
+NOTES
+</p>
+</a>
+</span>
+<span id="desk_ii">
+<a href="https://khaliiil.com/core">
+<p>
+CORE
+</p>
+</a>
+</span>
 </div>
 </div>
 </div>
@@ -224,6 +246,10 @@ NOTES
 <a href="https://khaliiil.com/core">
 CORE
 </a>
+<p>/</p>
+<a href="https://khaliiil.com/blog">
+BLOG
+</a>
 </div>
 
 <div class="book-row">
@@ -258,19 +284,19 @@ TO SEE MORE DETAILS OF THIS AMAZING EXPERIENCE, VISIT <a style="color:#000;" hre
                     openContent.previousElementSibling.querySelector('.arrow').textContent = '+';
                     openContent.classList.remove('open');
                     openContent.style.display = 'none';
-                    openContent.previousElementSibling.classList.remove('open-font'); // Remove the font class from the previously opened row
+                    openContent.previousElementSibling.classList.remove('open-font');
                 }
                 
                 const content = this.nextElementSibling;
                 if (content.style.display === 'block') {
                     content.style.display = 'none';
                     this.querySelector('.arrow').textContent = '+';
-                    this.classList.remove('open-font'); // Remove the font class if the content is closed
+                    this.classList.remove('open-font');
                 } else {
                     content.style.display = 'block';
                     content.classList.add('open');
                     this.querySelector('.arrow').textContent = '-';
-                    this.classList.add('open-font'); // Add the font class if the content is opened
+                    this.classList.add('open-font');
                 }
             });
         });
