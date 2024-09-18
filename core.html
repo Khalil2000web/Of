@@ -52,7 +52,7 @@ html, body {background:#000;font-family:var(--font_two_regular);padding-top:100p
 .nav_bottom {position: fixed;width: 100%;left: 0;display: flex;justify-content: center;align-items: center;z-index:var(--zIndex_1000);}
 .nav_bottom {bottom: 0;height: 30px;background: none;}
 .nav_bottom .menu {display: flex;gap: 45px;}
-.nav_bottom .menu a, .nav_bottom .menu p {font-family:var(--font_two_regular);color:var(--primary_color);text-decoration: none;padding-bottom: 0;font-weight:var(--font_weight_3);font-size:16.6px;text-transform:uppercase;top:0;padding-bottom:16px;}
+.nav_bottom .menu a, .nav_bottom .menu p {margin-top:0;font-family:var(--font_two_regular);color:var(--primary_color);text-decoration: none;padding-bottom: 0;font-weight:var(--font_weight_3);font-size:16.6px;text-transform:uppercase;top:0;padding-bottom:16px;}
 .nav_bottom .menu a:hover, .nav-top .menu a:focus {background:none;color:var(--primary_color);}
 @media screen and (max-width:400px) {
 .nav_bottom .menu {gap:20px;}
@@ -108,8 +108,8 @@ html, body {background:#000;font-family:var(--font_two_regular);padding-top:100p
 .nav-top {position: fixed;width: 100%;left: 0;display: flex;justify-content: center;align-items: center;z-index:var(--zIndex_1000);}
 .nav-top {top: 0;height: 30px;background: none;}
 .nav-top .menu {display: flex;gap: 45px;}
-.nav-top .menu a {font-family:var(--font_two_regular);color:var(--primary_color);text-decoration: none;padding-bottom: 0;font-weight:var(--font_weight_3);font-size:30px;text-transform:uppercase;top:0;padding-top:20px;}
-.nav-top .menu a:hover, .nav-top .menu a:focus {background:none;color:var(--primary_color);}
+.nav-top .menu a {-webkit-tap-highlight-color: transparent;-moz-tap-highlight-color: transparent;font-family:var(--font_two_regular);color:var(--primary_color);text-decoration: none;font-weight:var(--font_weight_3);font-size:30px;text-transform:uppercase;top:0;padding-top:20px;}
+.nav-top .menu a:hover, .nav-top .menu a:focus {outline:none;background:none;text-decoration:underline;text-underline-offset:4px;}
 @media screen and (max-width:400px) {
 .nav-top .menu {gap:40px;}
 .nav-top .menu a{font-size:22px;}
