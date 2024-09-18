@@ -103,10 +103,11 @@ html, body {margin: 0;padding: 0;color:var(--primary_color);background:var(--mai
 
 #copyright_sign_i, #copyright_sign_i, #copyright_sign_i {color:#fff;}
 
-.nav_bottom {position: fixed;width: 100%;left: 0;display: flex;justify-content: center;align-items: center;z-index:var(--zIndex_1000);}
-.nav_bottom {bottom:16px;background: none;}
-.nav_bottom .menu {display: flex;gap: 45px;}
-.nav_bottom .menu a, .nav_bottom .menu p {text-shadow:none;font-family:var(--font_two_regular);color:var(--primary_color);text-decoration: none;font-weight:var(--font_weight_3);font-size:16.6px;text-transform:uppercase;bottom:0;padding:0;margin:0;}
+.nav-top {position: fixed;width: 100%;left: 0;display: flex;justify-content: center;align-items: center;z-index:var(--zIndex_1000);}
+.nav-top {top:15px;background: none;padding:0;margin:0;}
+.nav-top .menu {display:flex;gap: 30px;padding-bottom:0;margin:0;}
+.nav-top .menu a {color:var(--primary_color);text-decoration:none;}
+.nav-top .menu a p {font-family:var(--font_two_regular);color:var(--primary_color);text-decoration: none;font-weight:var(--font_weight_3);font-size:30px;text-transform:uppercase;padding:0;margin:0;}
 @media screen and (max-width:400px) {
 .nav-top .menu {gap:40px;}
 .nav-top .menu a p{font-size:22px;}
