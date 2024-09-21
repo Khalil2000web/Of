@@ -2,36 +2,22 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Khalil</title>
-<meta charset="UTF-8">
-<meta name="description" content="The Official Website of Khalil">
-<meta property="og:description" content="The Official Website of Khalil">
-<meta property="og:image" content="https://www.khaliiil.com/system/7FA53553-2225-48AC-B68C-89172E7E6340.jpeg">
-<meta property="og:url" content="https://www.khaliiil.com">
-<meta property="og:site_name" content="Khaliil">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="en_US">
-<meta property="og:author" content="Khalil">
-<link rel="icon" type="image/x-icon" href="https://khaliiil.com/system/FF863B55-25CD-41EA-B199-86DC40B5A73F.jpeg">    
-<meta name="URL" content="http://www.khaliiil.com">
-<meta name="twitter:title" content="Khalil">
-<meta name="twitter:description" content="The Official Website of Khalil">
-<meta property="og:title" content="Khalil">
-<meta property="og:description" content="The Official Website of Khalil">
-<meta property="og:site_name" content="Khalil">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://www.khaliiil.com/">
-<meta http-equiv="Content-type" content="text/html; charset=utf-8">
-<meta name="copyright" content="2024">
 <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 @font-face {font-family: 'BB Manual Mono Regular';src: url('https://raw.githubusercontent.com/Khalil2000web/Of/main/system/fonts/BBManualMonoProTX.22d272fc.ttf');}
 @font-face {font-family: 'BB Manual Mono SemiBold';src: url('https://raw.githubusercontent.com/Khalil2000web/Of/main/system/fonts/BBManualMonoProTX-SemiBold.otf');}
 :root {
     --primary_color: #fff;
     --secondary_color: #B2BEB5;
     --main_container_bg: #000;
-    --second_bg_color:#fff;
+    --second_bg_color:#000;
     --big_font_size: 1rem;
     --small_font_size: 0.6875rem;
     --spacing: 10px;
@@ -48,58 +34,92 @@
     --font_two_regular:'BB Manual Mono Regular',arial;
     --zIndex_1000:1000;
 }
-html, body {margin: 0;padding: 0;background:var(--main_container_bg);height: 100%;font-family:var(--font_two_regular);scroll-behavior: smooth;color: white;}
+body {font-family: var(--font_all_a7);margin:0;padding:0;padding-top:120px;background-color:var(--second_bg_color);}
 .nav_bottom {position: fixed;width: 100%;left: 0;display: flex;justify-content: center;align-items: center;z-index:var(--zIndex_1000);}
-.nav_bottom {bottom: 0;height: 30px;background: none;}
+.nav_bottom {bottom:16px;background: none;}
 .nav_bottom .menu {display: flex;gap: 45px;}
-.nav_bottom .menu a {font-family:var(--font_two_regular);color:var(--primary_color);text-decoration: none;padding-bottom: 0;font-weight:var(--font_weight_3);font-size:16.6px;text-transform:uppercase;top:0;padding-bottom:20px;}
-.nav_bottom .menu a:hover, .nav-top .menu a:focus {background:none;color:var(--primary_color);}
+.nav_bottom .menu a, .nav_bottom .menu p {text-shadow:none;font-family:var(--font_two_regular);color:var(--primary_color);text-decoration: none;font-weight:var(--font_weight_3);font-size:16.6px;text-transform:uppercase;bottom:0;padding:0;margin:0;}
 @media screen and (max-width:400px) {
-.nav_bottom .menu {gap:20px;}}
+.nav_bottom .menu {gap:20px;}
+#copyright_sign_i {display:none;}
+#copyright_sign_ii {display:none;}
+#copyright_sign_iii {display:none;}
+#sep {display:none;}}
+
 @media screen and (min-width:401px) and (max-width:500px) {
-.nav_bottom .menu {gap:45px;}}
+.nav_bottom .menu {gap:30px;}
+#copyright_sign_i {display:none;}
+#copyright_sign_ii {display:none;}
+#copyright_sign_iii {display:none;}
+#sep {display:none;}}
+
 @media screen and (min-width:501px) and (max-width:600px) {
-.nav_bottom .menu {gap:70px;}}
+.nav_bottom .menu {gap:50px;}
+#copyright_sign_i {display:none;}
+#copyright_sign_ii {display:block;}
+#copyright_sign_iii {display:none;}
+#sep {display:none;}}
+
 @media screen and (min-width:601px) and (max-width:700px) {
-.nav_bottom .menu {gap:100px;}}
+.nav_bottom .menu {gap:70px;}
+#copyright_sign_i {display:none;}
+#copyright_sign_ii {display:block;}
+#copyright_sign_iii {display:none;}
+#sep {display:none;}}
+
 @media screen and (min-width:701px) and (max-width:800px) {
-.nav_bottom .menu {gap:120px;}}
+.nav_bottom .menu {gap:50px;}
+#copyright_sign_i {display:none;}
+#copyright_sign_ii {display:block;}
+#copyright_sign_iii {display:none;}
+#sep {display:none;}}
+
 @media screen and (min-width:801px) and (max-width:990px) {
-.nav_bottom .menu {gap:160px;}}
+.nav_bottom .menu {gap:40px;}
+#copyright_sign_i {display:none;}
+#copyright_sign_ii {display:none;}
+#copyright_sign_iii {display:block;}
+#sep {display:block;}}
+
 @media screen and (min-width:1000px) {
-.nav_bottom .menu {gap:150px;}}
+.nav_bottom .menu {gap:50px;}
+#copyright_sign_i {display:none;}
+#copyright_sign_ii {display:none;}
+#copyright_sign_iii {display:block;}
+#sep {display:block;}}
+
+#copyright_sign_i, #copyright_sign_i, #copyright_sign_i {color:#fff;}
 
 .nav-top {position: fixed;width: 100%;left: 0;display: flex;justify-content: center;align-items: center;z-index:var(--zIndex_1000);}
-.nav-top {top: 0;height: 30px;background: none;}
-.nav-top .menu {display: flex;gap: 45px;}
-.nav-top .menu a {font-family:var(--font_two_regular);color:var(--primary_color);text-decoration: none;padding-bottom: 0;font-weight:var(--font_weight_3);font-size:30px;text-transform:uppercase;top:0;padding-top:20px;}
-.nav-top .menu a:hover, .nav-top .menu a:focus {background:none;color:var(--primary_color);}
+.nav-top {top:15px;background: none;padding:0;margin:0;}
+.nav-top .menu {display:flex;gap: 30px;padding-bottom:0;margin:0;}
+.nav-top .menu a {color:var(--primary_color);text-decoration:none;}
+.nav-top .menu a p {font-family:var(--font_two_regular);color:var(--primary_color);text-decoration: none;font-weight:var(--font_weight_3);font-size:30px;text-transform:uppercase;padding:0;margin:0;}
 @media screen and (max-width:400px) {
-.nav-top .menu {gap:40px;}
-.nav-top .menu a{font-size:22px;}
-.footert {justify-content: space-between;padding-left: 10px;padding-right: 10px;}}
+.nav-top .menu {gap:30px;}
+.nav-top .menu a p{font-size:22px;}}
 @media screen and (min-width:401px) and (max-width:500px) {
-.nav-top .menu {gap:45px;}
-.nav-top .menu a {font-size:22px;}}
+.nav-top .menu {gap:40px;}
+.nav-top .menu a p{font-size:22px;}}
 @media screen and (min-width:501px) and (max-width:600px) {
-.nav-top .menu {gap:100px;}
-.nav-top .menu a {font-size:22px;}}
+.nav-top .menu {gap:50px;}
+.nav-top .menu a p{font-size:22px;}}
 @media screen and (min-width:601px) and (max-width:700px) {
-.nav-top .menu {gap:105px;}}
+.nav-top .menu {gap:40px;}}
 @media screen and (min-width:701px) and (max-width:800px) {
-.nav-top .menu {gap:110px;}
-.nav-top .menu a {font-size:22.6px;}}
+.nav-top .menu {gap:30px;}
+.nav-top .menu a p{font-size:22.6px;}}
 @media screen and (min-width:801px) and (max-width:990px) {
-.nav-top .menu {gap:120px;}
-.nav-top .menu a {font-size:22px;}}
+.nav-top .menu {gap:30px;}
+.nav-top .menu a p{font-size:22px;}}
 @media screen and (min-width:1000px) {
-.nav-top .menu {gap:150px;}
-.nav-top .menu a {font-size:24px;}}
+.nav-top .menu {gap:50px;}
+.nav-top .menu a p{font-size:24px;}}
 #desk_ii {display:none;}
 .main_layout_top_nav_vii {z-index:400;display:flex;flex-direction:row;width:auto;height:30px;background:none;position:fixed;align-items:center;justify-content:space-between;top:60px;left:50%;transform:translateX(-50%);}
-.main_layout_top_nav_vii a {font-size:20px;text-decoration:none;color:var(--primary_color);}
-.main_layout_top_nav_vii p {margin:10px;}
-@media screen and (min-width: 800px) {
+.main_layout_top_nav_vii a {font-family:var(--font_two_regular);font-size:20px;text-decoration:none;color:var(--primary_color);}
+.main_layout_top_nav_vii p {font-family:var(--font_two_regular);margin:10px;color:var(--primary_color);}
+@media screen and (min-width: 600px) {
   #desk_ii {
     display: flex;
   }
@@ -107,28 +127,118 @@ html, body {margin: 0;padding: 0;background:var(--main_container_bg);height: 100
     display: none;
   }
 }
-.copyright_sign_center_fixed_main {position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);z-index:700;color:var(--primary_color);font-size:16.8px;word-spacing:7px;letter-spacing:8px;text-align:center;width:100%;}
+
+.media-grid {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap:0; 
+}
+
+.column img, .column video {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.p_t_100 {
+  padding-top:100px;
+}
+
+body.no-scroll {
+  overflow: hidden;
+  touch-action: none;
+  -webkit-touch-callout:none;
+}
+
+.media-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.media {
+  cursor: pointer;
+  position: relative;
+}
+.overlay-content .media {width:100%;max-width:100%;margin-bottom:150px;}
 
 
-.media-container {width: 100%;height: 100%;max-height:100%;display: flex;flex-direction: column;overflow-y: auto;position: absolute;z-index: 1;}
-.media {position: relative;flex: 0 0 auto;width: 100%;cursor: pointer;user-select: none;pointer-events: auto;user-drag: none;-webkit-touch-callout: none;-moz-user-select: none;-ms-user-select: none;user-select: none;pointer-events: auto;cursor:pointer;-webkit-user-drag: none;-moz-user-drag: none;-ms-user-drag: none;user-drag: none; }
-.media video {width: 100%;height: auto;display: block;}
-.sound-icon {position: absolute;bottom: 15px;right: 15px;width: 20px;max-width:20px;height: auto;cursor: pointer;z-index: 10;opacity: 0.90;-moz-user-select: none;-ms-user-select: none;user-select: none;pointer-events: auto;cursor:pointer;-webkit-user-drag: none;-moz-user-drag: none;-ms-user-drag: none;user-drag: none; }
+.sound-icon {position: absolute;bottom: 15px;right: 15px;width: 18px;max-width:18px;height: auto;cursor: pointer;z-index: 10;-moz-user-select: none;-ms-user-select: none;user-select: none;pointer-events: auto;cursor:pointer;-webkit-user-drag: none;-moz-user-drag: none;-ms-user-drag: none;user-drag: none; }
 .sound-off-icon {display: block;}
 .sound-on-icon {display: none;}
-body.no-scroll {overflow: hidden;touch-action:none !important;-webkit-touch-callout:none;scrollbar-width: none;-ms-overflow-style: none;}
-body.no-scroll::-webkit-scrollbar {display: none;}
-#overlay {transition: all 0.09s ease-in-out;margin:0;padding:0;position: fixed;top: 0;left: 0;width: 100%;height: 100%;background-color:var(--main_container_bg);display: none;touch-action:none;justify-content: center;align-items: center;z-index:var(--zIndex_1000);touch-action: pan-x pan-y;}
-img {user-select: none;pointer-events: auto;user-drag: none;-webkit-touch-callout: none;-moz-user-select: none;-ms-user-select: none;user-select: none;pointer-events: auto;cursor:pointer;-webkit-user-drag: none;-moz-user-drag: none;-ms-user-drag: none;user-drag: none; }
-#overlay-content {margin:0;padding:0;width: 100%;height: 100%;overflow: auto;touch-action:none;position: fixed;touch-action: pan-x pan-y;overscroll-behavior:none;}
-#overlay-content::-webkit-scrollbar {display:none;}
-#close-btn {position: absolute;top: 10px;left: 50%;transform: translateX(-50%);cursor: pointer;width: 35px;max-width:35px;height: 35px;user-select: none;pointer-events: auto;user-drag: none;-webkit-touch-callout: none;-moz-user-select: none;-ms-user-select: none;user-select: none;pointer-events: auto;cursor: pointer;-webkit-user-drag: none;-moz-user-drag: none;-ms-user-drag: none;user-drag: none;z-index:1009;}
-.nav-btn {position: absolute;transform: translateY(-50%);cursor: pointer;z-index: 10000;padding: 5px 16px;user-select: none;pointer-events: auto;user-drag: none;-webkit-touch-callout: none;}
-#prev-btn {left: 5px;border: 2px solid #275c86;top: 25px;}
-#next-btn {border: 2px solid #275c86;right: 5px;top: 25px;}
-.holder {margin:0 auto;padding:0;width:62%;background:none;height:50px;transform:translateX(-50%);left:50%;top:0;position:absolute;z-index:1007;}
-.nav-btn img {display: block;max-width: 100%;height: auto;width: 17px;max-width:20px;user-select: none;pointer-events: auto;user-drag: none;-webkit-touch-callout: none;-moz-user-select: none;-ms-user-select: none;user-select: none;pointer-events: auto;cursor:pointer;-webkit-user-drag: none;-moz-user-drag: none;-ms-user-drag: none;user-drag: none; }
-#overlay-content img, #overlay-content video {padding-bottom:160px;}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 1);
+  z-index: 9999;
+  overflow:auto;
+  overscroll-behavior:none;
+  scrollbar-width: none;
+  touch-action:pan-x pan-y;
+}
+
+.overlay::-webkit-scrollbar {
+  display: none;
+}
+
+.overlay-content {
+  position:absolute;
+  width:100%;
+  max-width:100%;
+  height:auto;
+  top:0;left:0;
+  padding:0;
+  margin:0;
+  z-index:1000;
+}
+.overlay-content video {
+  width:100%;
+  max-width:100%;
+  height:auto;
+}
+
+.close-btn, .prev-btn, .next-btn {
+  position: absolute;
+  cursor: pointer;
+}
+
+.close-btn {
+  right: 10px;
+  top:10px;
+  width:33px;
+  height:auto;
+  max-width:33px;
+  z-index:1000000;
+}
+.close-btn:hover {background:rgba(255,255,255,0.2);border-radius:5px;} 
+
+.prev-btn {
+  left: 60px;
+  top: 50px;
+  width:17px;
+  z-index:10001;
+}
+.next-btn {
+  right: 60px;
+  top: 50px;
+  width:17px;
+  z-index:10001;
+}
+
+.prev-btn img, .next-btn img {
+  width:20px;
+  height:auto;
+}
 video::-webkit-media-controls {display: none !important;}
 video::-webkit-media-controls {display: none !important;}
 video::-moz-media-controls {display: none !important;}
@@ -175,12 +285,22 @@ video::-webkit-media-controls-timeline,
 video::-webkit-media-controls-timeline-container,
 video::-webkit-media-controls-volume-slider,
 video::-webkit-media-controls-volume-slider-container {display: none !important;}
-.video-container {position: relative;width: 100%;max-width: 640px; /* Adjust as needed */margin: auto;}
+video::-webkit-media-controls { display: none !important; }
+video::-webkit-media-controls-enclosure { display: none !important; }
+video::-webkit-media-controls-panel { display: none !important; }
+video::-moz-media-controls { display: none !important; }
+video::-ms-media-controls { display: none !important; }
+video {controls: none !important;pointer-events: none !important;user-select: none !important;}
+.video-container {position: relative;width: 100%;max-width: 640px;margin: auto;}
 video {width: 100%;height: auto;}
 .hidden-in-gallery {display: none;}
-#overlay .hidden-in-gallery {display: block;}
+.overlay .hidden-in-gallery {display: block;}
+.overlay.opening {display: flex;width: 98%;height: 98%;top: 50%;left: 50%;transform: translate(-50%,-50%);opacity:0.9;}
+body .overlay.opening {touch-action:none;overflow:hidden;-webkit-touch-callout:none;pointer-events:none;}
+.overlay.fullscreen {width: 100%;height: 100%;top: 50%;left: 50%;transform: translate(-50%, -50%);opacity:1;}
+.overlay.closing {width: 95%;height: 95%;top: 50%;left: 50%;transform: translate(-50%, -50%);opacity:0.2;}
 .tit {position: relative;display: flex;justify-content: space-between;width: 100%;max-width: 800px;}
-.left-text, .right-text {color:var(--primary_color);position: fixed;top: 50%;transform: translateY(-50%);letter-spacing:1.2px;font-size:21.5px;z-index:var(--zIndex_1000);font-family:var(--font_two_regular);}
+.left-text, .right-text {color: white;position: fixed;top: 50%;transform: translateY(-50%);letter-spacing:1.2px;font-size:21.5px;z-index:1000;font-family:'BB Manual Mono Pro TX', arial;}
 .left-text {left: 0;padding-left: 20px;}
 .right-text {right: 0;padding-right: 20px;}
 @media screen and (max-width:300px) {
@@ -204,35 +324,26 @@ video {width: 100%;height: auto;}
 @media screen and (min-width:901px) {
 .left-text {left: 0;padding-left: 240px;padding-right:auto;}
 .right-text {right: 0;padding-right: 240px;}}
-#overlay.opening {display: flex;width: 98%;height: 98%;top: 50%;left: 50%;transform: translate(-50%,-50%);opacity:0.9;}
-#overlay.fullscreen {width: 100%;height: 100%;top: 50%;left: 50%;transform: translate(-50%, -50%);opacity:1;}
-#overlay.closing {width: 95%;height: 95%;top: 50%;left: 50%;transform: translate(-50%, -50%);opacity:0.2;}
-.info-text {position: absolute;bottom: 15px;left: 15px;color: var(--primary_color);font-family: var(--font_two_regular);padding: 0;margin:0;}
-.modal {display: none;position: fixed;z-index: 10000;width: 100%;height: 100%;overflow: auto;background-color: rgba(0, 0, 0, 0.8);top:50%;left:50%;transform:translate(-50%, -50%);}
-.modal-content {position: absolute;margin: 0;padding: 20px;width: 80%;max-width: 80%;background-color: var(--main_container_bg);border-radius: 0;color: var(--primary_color);font-family: var(--font_two_regular);top:50%;left:50%;transform:translate(-50%, -50%);text-align:center;}
-@media screen and (max-width:770px) {
-  .modal-content {
-    width:100%;
-  }
+.overlay.opening {display: flex;width: 98%;height: 98%;top: 50%;left: 50%;transform: translate(-50%,-50%);opacity:0.9;}
+.overlay.fullscreen {width: 100%;height: 100%;top: 50%;left: 50%;transform: translate(-50%, -50%);opacity:1;}
+.overlay.closing {width: 95%;height: 95%;top: 50%;left: 50%;transform: translate(-50%, -50%);opacity:0.2;}
+
+.overlay-content .first + .prev-btn {
+  display:none;
 }
-.close-btn {position:absolute;cursor: pointer;bottom:200px;left:50%;transform:translateX(-50%);padding:0;margin:0;}
-.close-btn img {width:30px;height:30px;max-width:30px;}
-.close-btn:hover,
-.close-btn:focus {background:rgba(255,255,255,0.2);border-radius:6px;cursor: pointer;}
-.info-text img {width:17px;height:17px;max-width:17px;padding:0;margin:0;opacity: 0.90;}
 </style>
 </head>
 <body>
 <div class="nav-top">
 <div class="menu">
-<a href="https://www.khaliiil.com/">
-<p>
-HOME
-</p>
-</a>
 <a href="https://shop.khaliiil.com/">
 <p>
 SHOP
+</p>
+</a>
+<a href="https://music.khaliiil.com/">
+<p>
+MUSIC
 </p>
 </a>
 <a href="https://tour.khaliiil.com/">
@@ -245,27 +356,47 @@ TOUR
 BLOG
 </p>
 </a>
+<span id="desk_ii">
+<a href="https://khaliiil.com/notes">
+<p>
+NOTES
+</p>
+</a>
+</span>
+<span id="desk_ii">
+<a href="https://khaliiil.com/core">
+<p>
+CORE
+</p>
+</a>
+</span>
 </div>
 </div>
 </div>
-
 <div class="nav_bottom">
 <div class="menu">
+<a href="https://connect.khaliiil.com">
+<p>
+JOIN
+</p>
+</a>
+<p id="sep">/</p>
 <a href="https://www.khaliiil.com/credits">
 <p>
 CREDITS
 </p>
 </a>
-<a href="https://www.khaliiil.com/join">
-<p>
-JOIN
-</p>
-</a>
+<p id="sep">/</p>
+<p id="copyright_sign_i">&copy;</p>
+<p id="copyright_sign_ii">&copy;&nbsp;2024</p>
+<p id="copyright_sign_iii">&copy;&nbsp;2024,&nbsp;KHALIL</p>
+<p id="sep">/</p>
 <a href="https://www.khaliiil.com/terms-conditions">
 <p>
 TERMS
 </p>
 </a>
+<p id="sep">/</p>
 <a href="https://khaliiil.com/privacy-policy">
 <p>
 PRIVACY
@@ -273,10 +404,6 @@ PRIVACY
 </a>
 </div>
 </div>
-</div>
-
-<div class="copyright_sign_center_fixed_main">
-&copy; 2024, KHALIL
 </div>
 <div class="main_layout_top_nav_vii">
 <a href="https://khaliiil.com/notes">
@@ -287,95 +414,47 @@ NOTES
 CORE
 </a>
 </div>
-<div id="modal2" class="modal">
-<span class="close-btn" onclick="closeModal('modal2')"><img src="https://img.icons8.com/ios/100/FFFFFF/multiply.png"></span>
-<div class="modal-content">
-<p><span style="font-weight:900;">VIDEO CREDITS</span><br><br>VIDEO BY: KHALIL</p>
-</div>
-</div>
-<div id="modal1" class="modal">
-<span class="close-btn" onclick="closeModal('modal1')"><img src="https://img.icons8.com/ios/100/FFFFFF/multiply.png"></span>
-<div class="modal-content">
-<p><span style="font-weight:900;">VIDEO CREDITS</span><br><br>SOUND FROM: RENAISSANCE A FILM BY BEYONCÉ <i>(in theaters)</i></p>
-</div>
-</div>
-<div class="media-container">
-<img class="media" id="disable-prev" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/GMP_U2F2ZUdNQVgwMQ%3D%3D.gif" loading="eager" alt="media_home_9032" />
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9025.webp" loading="eager" alt="media_home_9031" />
+
+<div class="media-grid">
+<div class="column">
+<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/Birthday_gif_2024892024_home_media.GIF" loading="eager" alt="media_home_9031" />
 <img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9024.webp" loading="eager" alt="media_home_9030" />
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9023.webp" loading="eager" alt="media_home_9029" />
 <img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9022.webp" loading="lazy" alt="media_home_9028" />
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9021.webp" loading="lazy" alt="media_home_9027" />
 <img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9020.webp" alt="media_home_9026"/>
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9018.webp" alt="media_home_9024"/>
 <div class="media">
 <video src="https://ik.imagekit.io/ybebp19uwa/IMG_6947.mov?updatedAt=1722431094298" alt="media_home_9002" autoplay loop muted playsinline controls="false"></video>
 <img src="https://raw.githubusercontent.com/Khalil2000web/Of/main/system/Css-off.PNG" class="sound-icon sound-off-icon" alt="Off">
-<img src="https://raw.githubusercontent.com/Khalil2000web/Of/main/system/Css-on.PNG" class="sound-icon sound-on-icon" alt="On">
-<div class="info-text"><span class="btn" onclick="openModal('modal2')"><img src="https://img.icons8.com/ios-filled/50/FFFFFF/info.png" alt="Credits"></span></div>
+<img src="https://raw.githubusercontent.com/Khalil2000web/Of/main/system/Css-on.PNG" style="display:none;" class="sound-icon sound-on-icon" alt="On">
 </div>
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9017.webp" loading="lazy" alt="media_home_9033" />
 <img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9016.webp" alt="media_home_9022"/>
 <img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9015.webp" alt="media_home_9021"/>
 <img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9014.webp" alt="media_home_9020">
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9013.webp" alt="media_home_9019">
 <img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9011.gif" alt="media_home_9018">
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9010.webp" alt="media_home_9017">
-<img class="media" src="https://raw.githubusercontent.com/Dibacarter/Of/main/mediaOf/5.jpg" alt="media_home_9016">
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_6522.jpeg" alt="media_home_9010">
 <img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9008.jpeg" alt="media_home_9009">
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9007.gif" alt="media_home_9008">
 <img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9006.jpeg" alt="media_home_9007">
 <img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_3652.jpeg" alt="media_home_9006">
 <img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_8993.gif" alt="media_home_9004">
-<img class="media" src="https://raw.githubusercontent.com/Dibacarter/Media/main/Home_media_image_gallery/IMG_3461.jpeg" alt="media_home_9003">
-<div class="media">
-<video src="https://ik.imagekit.io/ybebp19uwa/IMG_0844.MOV?updatedAt=1722425583838" alt="media_home_9002" autoplay loop muted playsinline controls="false"></video>
-<img src="https://raw.githubusercontent.com/Khalil2000web/Of/main/system/Css-off.PNG" class="sound-icon sound-off-icon" alt="Off">
-<img src="https://raw.githubusercontent.com/Khalil2000web/Of/main/system/Css-on.PNG" class="sound-icon sound-on-icon" alt="On">
-<div class="info-text"><span class="btn" onclick="openModal('modal1')"><img src="https://img.icons8.com/ios-filled/50/FFFFFF/info.png" alt="Credits"></span></div>
-</div>
+
 <img class="media" src="https://raw.githubusercontent.com/Dibacarter/Media/main/Home_media_image_gallery/5a67e1ae-0c7b-494c-8440-3eb7d7f35ac9.jpeg"/>
 </div>
-<div class="open"></div>
-<div id="overlay">
-  <div class="holder">
-  <span id="prev-btn"  class="nav-btn">
-    <img style="transform: rotate(270deg);" src="https://raw.githubusercontent.com/Dibacarter/Of/main/next.PNG" alt="prev">
-  </span>
-  <span id="next-btn" class="nav-btn">
-    <img style="transform: rotate(270deg);" src="https://raw.githubusercontent.com/Dibacarter/Of/main/prev.PNG" alt="next">
-  </span>
-  </div>
-    <div id="overlay-content"></div>
-  <img id="close-btn" style="filter: invert(100%);" src="https://raw.githubusercontent.com/Khalil2000web/Of/main/system/IMG_9107.webp" alt="Close">
+</div>
+
+<div id="overlay" class="overlay">
+<div id="overlay-content" class="overlay-content"></div>
+<img id="close-btn" class="close-btn" style="filter: brightness(0) invert(1);-webkit-filter: brightness(0) invert(1);" src="https://raw.githubusercontent.com/Khalil2000web/Of/main/system/IMG_9107.webp" alt="Close">
+<img id="prev-btn" class="prev-btn" src="https://raw.githubusercontent.com/Dibacarter/Of/main/prev.PNG" alt="Previous">
+<img id="next-btn" class="next-btn" src="https://raw.githubusercontent.com/Dibacarter/Of/main/next.PNG" alt="Next">
 </div>
 
 
 <script>
-function openModal(modalId) {
-    document.getElementById(modalId).style.display = 'block';
-}
-
-function closeModal(modalId) {
-    document.getElementById(modalId).style.display = 'none';
-}
-
-window.onclick = function(event) {
-    if (event.target.classList.contains('modal')) {
-        event.target.style.display = 'none';
-    }
-}
-</script>
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const mediaElements = document.querySelectorAll('.media');
-    const overlay = document.getElementById('overlay');
-    const overlayContent = document.getElementById('overlay-content');
-    const closeBtn = document.getElementById('close-btn');
-    const prevBtn = document.getElementById('prev-btn');
-    const nextBtn = document.getElementById('next-btn');
-    const container = document.querySelectorAll('.media-container');
+document.addEventListener("DOMContentLoaded", function () {
+  const mediaElements = document.querySelectorAll(".media");
+  const overlay = document.querySelector(".overlay");
+  const overlayContent = document.querySelector(".overlay-content");
+  const closeButton = document.querySelector(".close-btn");
+  const prevButton = document.querySelector(".prev-btn");
+  const nextButton = document.querySelector(".next-btn");
 
     let currentIndex = 0;
     let currentOverlayVideo = null;
@@ -415,6 +494,11 @@ window.onclick = function(event) {
       });
     }
 
+    function checkButtons() {
+      prevButton.style.display = currentIndex === 0 ? 'none' : 'block';
+      nextButton.style.display = currentIndex === mediaElements.length - 1 ? 'none' : 'block';
+    }
+
     function openOverlay(index) {
       disableScroll();
       currentIndex = index;
@@ -423,18 +507,16 @@ window.onclick = function(event) {
       overlayContent.appendChild(clonedMedia);
       overlay.style.display = 'flex';
       overlay.classList.add('overlay-show');
-      
-        overlay.classList.add('opening');
-  overlay.style.display = 'flex';
+      overlay.classList.add('opening');
+      overlay.style.display = 'flex';
 
-  setTimeout(() => {
-
-    overlay.classList.remove('opening');
-    overlay.classList.add('fullscreen');
-  }, 140);
-
+      setTimeout(() => {
+        overlay.classList.remove('opening');
+        overlay.classList.add('fullscreen');
+      }, 140);
 
       muteAllVideos();
+      checkButtons(); // Call checkButtons here when overlay opens
 
       if (clonedMedia.querySelector('video')) {
         const video = clonedMedia.querySelector('video');
@@ -464,17 +546,14 @@ window.onclick = function(event) {
 
     function closeOverlay() {
       overlay.style.display = 'none';
-      
-        overlay.classList.remove('fullscreen');
-  overlay.classList.add('closing');
+      overlay.classList.remove('fullscreen');
+      overlay.classList.add('closing');
 
-  setTimeout(() => {
+      setTimeout(() => {
+        overlay.classList.remove('closing');
+        overlay.style.display = 'none';
+      }, 90);
 
-    overlay.classList.remove('closing');
-    overlay.style.display = 'none';
-  }, 90);
-
-      
       enableScroll();
       if (currentOverlayVideo) {
         currentOverlayVideo.muted = true;
@@ -514,46 +593,28 @@ window.onclick = function(event) {
       });
     });
 
-    closeBtn.addEventListener('click', closeOverlay);
+    closeButton.addEventListener('click', closeOverlay);
 
-    prevBtn.addEventListener('click', () => {
+    prevButton.addEventListener('click', () => {
       if (currentIndex === 0) {
         currentIndex = mediaElements.length - 1;
       } else {
         currentIndex -= 1;
       }
       openOverlay(currentIndex);
+      checkButtons(); // Call checkButtons here when navigating
     });
 
-    nextBtn.addEventListener('click', () => {
+    nextButton.addEventListener('click', () => {
       if (currentIndex === mediaElements.length - 1) {
         currentIndex = 0;
       } else {
         currentIndex += 1;
       }
       openOverlay(currentIndex);
+      checkButtons(); // Call checkButtons here when navigating
     });
   });
-</script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const prevBtn = document.getElementById('prev-btn');
-    const nextBtn = document.getElementById('next-btn');
-
-    if (!localStorage.getItem('btnClicked')) {
-        prevBtn.style.border = '2px solid #275c86';
-        nextBtn.style.border = '2px solid #275c86';
-    }
-
-    function hideBorders() {
-        prevBtn.style.border = 'none';
-        nextBtn.style.border = 'none';
-        localStorage.setItem('btnClicked', 'true');
-    }
-
-    prevBtn.addEventListener('click', hideBorders);
-    nextBtn.addEventListener('click', hideBorders);
-});
 </script>
 </body>
 </html>
