@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Khalil</title>
+<style>
+@font-face {font-family: 'BB Manual Mono Regular';src: url('https://raw.githubusercontent.com/Khalil2000web/Of/main/system/fonts/BBManualMonoProTX.22d272fc.ttf');}
+@font-face {font-family: 'BB Manual Mono SemiBold';src: url('https://raw.githubusercontent.com/Khalil2000web/Of/main/system/fonts/BBManualMonoProTX-SemiBold.otf');}
+:root {
+    --primary_color: #fff;
+    --secondary_color: #B2BEB5;
+    --main_container_bg: #000;
+    --second_bg_color:#000;
+    --big_font_size: 1rem;
+    --small_font_size: 0.6875rem;
+    --spacing: 10px;
+    --lowercase_tx: lowercase;
+    --uppercase_tx:uppercase;
+    --font_weight_3:300;
+    --font_weight_4:400;
+    --font_weight_5:500;
+    --font_weight_6:600;
+    --font_weight_7:700;
+    --font_weight_8:800;
+    --font_weight_9:900;
+    --font_all_a7:'BB Manual Mono SemiBold','BB Manual Mono Regular',arial;
+    --font_two_regular:'BB Manual Mono Regular',arial;
+    --zIndex_1000:1000;
+}
+body {font-family: var(--font_all_a7);margin:0;padding:0;background-color:var(--second_bg_color);user-select:none;-webkit-user-select:none;}
+.nav_bottom {position: fixed;width: 100%;left: 0;display: flex;justify-content: center;align-items: center;z-index:var(--zIndex_1000);}
+.nav_bottom {bottom:16px;background: none;}
+.nav_bottom .menu {display: flex;gap: 45px;}
+.nav_bottom .menu a, .nav_bottom .menu p {text-shadow:none;font-family:var(--font_two_regular);color:var(--primary_color);text-decoration: none;font-weight:var(--font_weight_3);font-size:16.6px;text-transform:uppercase;bottom:0;padding:0;margin:0;}
+@media screen and (max-width:400px) {
+.nav_bottom .menu {gap:20px;}
+#copyright_sign_i {display:none;}
+#copyright_sign_ii {display:none;}
+#copyright_sign_iii {display:none;}
+#sep {display:none;}}
+
+@media screen and (min-width:401px) and (max-width:500px) {
+.nav_bottom .menu {gap:30px;}
+#copyright_sign_i {display:none;}
+#copyright_sign_ii {display:none;}
+#copyright_sign_iii {display:none;}
+#sep {display:none;}}
+
+@media screen and (min-width:501px) and (max-width:600px) {
+.nav_bottom .menu {gap:50px;}
+#copyright_sign_i {display:none;}
+#copyright_sign_ii {display:block;}
+#copyright_sign_iii {display:none;}
+#sep {display:none;}}
+
+@media screen and (min-width:601px) and (max-width:700px) {
+.nav_bottom .menu {gap:70px;}
+#copyright_sign_i {display:none;}
+#copyright_sign_ii {display:block;}
+#copyright_sign_iii {display:none;}
+#sep {display:none;}}
+
+@media screen and (min-width:701px) and (max-width:800px) {
+.nav_bottom .menu {gap:50px;}
+#copyright_sign_i {display:none;}
+#copyright_sign_ii {display:block;}
+#copyright_sign_iii {display:none;}
+#sep {display:none;}}
+
+@media screen and (min-width:801px) and (max-width:990px) {
+.nav_bottom .menu {gap:40px;}
+#copyright_sign_i {display:none;}
+#copyright_sign_ii {display:none;}
+#copyright_sign_iii {display:block;}
+#sep {display:block;}}
+
+@media screen and (min-width:1000px) {
+.nav_bottom .menu {gap:50px;}
+#copyright_sign_i {display:none;}
+#copyright_sign_ii {display:none;}
+#copyright_sign_iii {display:block;}
+#sep {display:block;}}
+
+#copyright_sign_i, #copyright_sign_i, #copyright_sign_i {color:#fff;}
+
+.nav-top {position: fixed;width: 100%;left: 0;display: flex;justify-content: center;align-items: center;z-index:var(--zIndex_1000);}
+.nav-top {top:15px;background: none;padding:0;margin:0;}
+.nav-top .menu {display:flex;gap: 30px;padding-bottom:0;margin:0;}
+.nav-top .menu a {color:var(--primary_color);text-decoration:none;}
+.nav-top .menu a p {font-family:var(--font_two_regular);color:var(--primary_color);text-decoration: none;font-weight:var(--font_weight_3);font-size:30px;text-transform:uppercase;padding:0;margin:0;}
+@media screen and (max-width:400px) {
+.nav-top .menu {gap:30px;}
+.nav-top .menu a p{font-size:22px;}
+.prev-btn {left: 40px;}
+.next-btn {right: 40px;}
+}
+@media screen and (min-width:401px) and (max-width:500px) {
+.nav-top .menu {gap:40px;}
+.nav-top .menu a p{font-size:22px;}
+.prev-btn {left: 60px;}
+.next-btn {right: 60px;}
+}
+@media screen and (min-width:501px) and (max-width:600px) {
+.nav-top .menu {gap:60px;}
+.nav-top .menu a p{font-size:22px;}
+.prev-btn {left: 100px;}
+.next-btn {right: 100px;}
+}
+@media screen and (min-width:601px) and (max-width:700px) {
+.nav-top .menu {gap:60px;}
+.prev-btn {left: 140px;}
+.next-btn {right: 140px;}}
+@media screen and (min-width:701px) and (max-width:800px) {
+.nav-top .menu {gap:70px;}
+.nav-top .menu a p{font-size:22.6px;}
+.prev-btn {left: 160px;}
+.next-btn {right: 160px;}}
+@media screen and (min-width:801px) and (max-width:990px) {
+.nav-top .menu {gap:70px;}
+.nav-top .menu a p{font-size:22px;}
+.prev-btn {left: 200px;}
+.next-btn {right: 200px;}}
+@media screen and (min-width:1000px) {
+.nav-top .menu {gap:90px;}
+.nav-top .menu a p{font-size:24px;}
+.prev-btn {left: 350px;right:auto;}
+.next-btn {right: 350px;left:auto;}}
+#desk_ii {display:none;}
+.main_layout_top_nav_vii {z-index:400;display:flex;flex-direction:row;width:auto;height:30px;background:none;position:fixed;align-items:center;justify-content:space-between;top:60px;left:50%;transform:translateX(-50%);}
+.main_layout_top_nav_vii a {font-family:var(--font_two_regular);font-size:20px;text-decoration:none;color:var(--primary_color);}
+.main_layout_top_nav_vii p {font-family:var(--font_two_regular);margin:10px;color:var(--primary_color);}
+@media screen and (min-width: 600px) {
+#desk_ii {display: flex;}
+.main_layout_top_nav_vii {display: none;}}
+.media-grid {display: flex;width: 100%;height: 100%;}
+.column {flex: 1;display: flex;flex-direction:column;gap:0; }
+.column img, .column video {width: 100%;height: auto;display: block;}
+body.no-scroll {overflow: hidden;touch-action: none;-webkit-touch-callout:none;-webkit-overflow-scrolling:none;}
+.media {cursor: pointer;position: relative;}
+img {-webkit-touch-callout: none;-webkit-user-drag: none;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;pointer-events: auto;cursor: pointer;touch-action: manipulation;}
+.overlay-content .media {width:100%;max-width:100%;margin-bottom:150px;}
+.sound-icon {padding:5px;position: absolute;bottom: 20px;right: 20px;width: 15px;max-width:15px;height: auto;cursor: pointer;z-index: 10;-moz-user-select: none;-ms-user-select: none;user-select: none;pointer-events: auto;cursor:pointer;-webkit-user-drag: none;-moz-user-drag: none;-ms-user-drag: none;user-drag: none; }
+.sound-off-icon {display: block;}
+.sound-on-icon {display: none;}
+.overlay {display: none;position: fixed;top: 0;left: 0;width: 100%;height: 100%;background-color: rgba(0, 0, 0, 1);z-index: 9999;overflow:auto;overscroll-behavior:none;scrollbar-width: none;touch-action:pan-x pan-y;}
+.overlay::-webkit-scrollbar {display: none;}
+.overlay-content {position:absolute;width:100%;max-width:100%;height:auto;top:0;left:0;padding:0;margin:0;z-index:1000;-webkit-overflow-scrolling:touch;touch-action:auto;}
+.overlay-content video {width:100%;max-width:100%;height:auto;}
+.close-btn, .prev-btn, .next-btn {position: absolute;cursor: pointer;}
+.close-btn {right: 10px;top:10px;width:33px;height:auto;max-width:33px;z-index:10001;}
+.close-btn:hover {background:rgba(255,255,255,0.2);border-radius:5px;} 
+.prev-btn {top: 40px;width:17.7px;z-index:10001;padding:5px 16px;user-drag:none;}
+.prev-btn:active, .prev-btn:hover {background:rgba(0,0,0,0.2);border-radius:3px;}
+.next-btn {top: 40px;width:17px;z-index:10001;padding:5px 16px;}
+.next-btn:active, .next-btn:hover {background:rgba(0,0,0,0.2);border-radius:3px;}
+.prev-btn img, .next-btn img {width:20px;height:auto;}
+video::-webkit-media-controls {display: none !important;}
+video::-webkit-media-controls {display: none !important;}
+video::-moz-media-controls {display: none !important;}
+video::-ms-media-controls {display: none !important;}
+video::-internal-media-controls {display: none !important;}
+video {controls: none !important;}
+video::-webkit-media-controls-start-playback-button {display: none !important;}
+video::-webkit-media-controls {display: none !important;}
+video::-webkit-media-controls {display: none !important;}
+video::-webkit-media-controls-play-button,
+video::-webkit-media-controls-start-playback-button,
+video::-webkit-media-controls-current-time-display,
+video::-webkit-media-controls-time-remaining-display,
+video::-webkit-media-controls-timeline,
+video::-webkit-media-controls-mute-button,
+video::-webkit-media-controls-toggle-closed-captions-button,
+video::-webkit-media-controls-volume-slider {display: none !important;}
+video::-webkit-media-controls-panel,
+video::-webkit-media-controls-panel *,
+video::-webkit-media-controls-panel > * {display: none !important;}
+video::-webkit-media-controls-overlay-play-button,
+video::-webkit-media-controls-overflow-button,
+video::-webkit-media-controls-enclosure,
+video::-webkit-media-controls-start-playback-button,
+video::-webkit-media-controls-background,
+video::-webkit-media-controls-timeline,
+video::-webkit-media-controls-current-time-display,
+video::-webkit-media-controls-time-remaining-display,
+video::-webkit-media-controls-mute-button,
+video::-webkit-media-controls-volume-slider-container,
+video::-webkit-media-controls-volume-slider {display: none !important;}
+video::-webkit-media-controls-fullscreen-button,
+video::-webkit-media-controls-rewind-button,
+video::-webkit-media-controls-return-to-realtime-button,
+video::-webkit-media-controls-toggle-closed-captions-button,
+video::-webkit-media-controls-toggle-closed-captions-track-list,
+video::-webkit-media-controls-toggle-play-button {display: none !important;}
+video::-webkit-media-controls-play-button,
+video::-webkit-media-controls-pause-button,
+video::-webkit-media-controls-seek-back-button,
+video::-webkit-media-controls-seek-forward-button,
+video::-webkit-media-controls-toggle-closed-captions-button,
+video::-webkit-media-controls-timeline,
+video::-webkit-media-controls-timeline-container,
+video::-webkit-media-controls-volume-slider,
+video::-webkit-media-controls-volume-slider-container {display: none !important;}
+video::-webkit-media-controls { display: none !important; }
+video::-webkit-media-controls-enclosure { display: none !important; }
+video::-webkit-media-controls-panel { display: none !important; }
+video::-moz-media-controls { display: none !important; }
+video::-ms-media-controls { display: none !important; }
+video {controls: none !important;pointer-events: none !important;user-select: none !important;}
+.video-container {position: relative;width: 100%;max-width: 640px;margin: auto;}
+video {width: 100%;height: auto;}
+.hidden_in_gallery {display: none;}
+.overlay .hidden_in_gallery {display: block;}
+.overlay.opening {display: flex;width: 98%;height: 98%;top: 50%;left: 50%;transform: translate(-50%,-50%);opacity:0.9;}
+body .overlay.opening {touch-action:none;overflow:hidden;-webkit-touch-callout:none;pointer-events:none;}
+.overlay.fullscreen {width: 100%;height: 100%;top: 50%;left: 50%;transform: translate(-50%, -50%);opacity:1;}
+.overlay.closing {width: 95%;height: 95%;top: 50%;left: 50%;transform: translate(-50%, -50%);opacity:0.2;}
+a {cursor:pointer;}
+.tit {position: relative;display: flex;justify-content: space-between;width: 100%;max-width: 800px;}
+.left-text, .right-text {color: white;position: fixed;top: 50%;transform: translateY(-50%);letter-spacing:1.2px;font-size:21.5px;z-index:1000;font-family:'BB Manual Mono Pro TX', arial;}
+.left-text {left: 0;padding-left: 20px;}
+.right-text {right: 0;padding-right: 20px;}
+@media screen and (max-width:300px) {
+.left-text {left: 0;padding-left: 40px;font-size:14px;}
+.right-text {right: 0;padding-right: 40px;font-size:17px;}}
+@media screen and (min-width:301px) and (max-width:500px) {
+.left-text {left: 0;padding-left: 80px;}
+.right-text {right: 0;padding-right: 80px;padding-right:auto;}}
+@media screen and (min-width:501px) and (max-width:600px) {
+.left-text {left: 0;padding-left: 110px;padding-right:auto;}
+.right-text {right: 0;padding-right: 110px;}}
+@media screen and (min-width:601px) and (max-width:700px) {
+.left-text {left: 0;padding-left: 150px;padding-right:auto;}
+.right-text {right: 0;padding-right: 150px;}}
+@media screen and (min-width:701px) and (max-width:800px) {
+.left-text {left: 0;padding-left: 180px;padding-right:auto;}
+.right-text {right: 0;padding-right: 180px;}}
+@media screen and (min-width:801px) and (max-width:990px) {
+.left-text {left: 0;padding-left: 200px;padding-right:auto;}
+.right-text {right: 0;padding-right: 200px;}}
+@media screen and (min-width:901px) {
+.left-text {left: 0;padding-left: 240px;padding-right:auto;}
+.right-text {right: 0;padding-right: 240px;}}
+.overlay.opening {display: flex;width: 98%;height: 98%;top: 50%;left: 50%;transform: translate(-50%,-50%);opacity:0.9;}
+.overlay.fullscreen {width: 100%;height: 100%;top: 50%;left: 50%;transform: translate(-50%, -50%);opacity:1;}
+.overlay.closing {width: 95%;height: 95%;top: 50%;left: 50%;transform: translate(-50%, -50%);opacity:0.2;}
+
+
+#loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  border: 6px solid rgba(255,255,255,0.5);
+  border-top: 6px solid #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  display: none;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+#playBtn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  cursor: pointer;
+  display: none;
+  padding: 20px;
+  border-radius: 50%;
+  width:60px;
+  height:60px;
+  z-index: 1000;
+  justify-content:center;
+}
+
+
+#playBtn:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#errorText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  display: none;
+  z-index: 1000;
+}
+
+#errorLink {
+  color: #3498db;
+  font-size: 16px;
+  text-decoration: underline;
+}
+</style>
+</head>
+<body>
+<div class="nav-top">
+<div class="menu">
+<a href="">
+<p>
+CORE
+</p>
+</a>
+<a href="https://music.khaliiil.com/">
+<p>
+MUSIC
+</p>
+</a>
+<a href="https://tour.khaliiil.com/">
+<p>
+TOUR
+</p>
+</a>
+<a href="https://khaliiil.com/blog">
+<p>
+BLOG
+</p>
+</a>
+</div>
+</div>
+</div>
+<div class="nav_bottom">
+<div class="menu">
+<a href="https://connect.khaliiil.com">
+<p>
+JOIN
+</p>
+</a>
+<p id="sep">/</p>
+<a href="https://www.khaliiil.com/credits">
+<p>
+CREDITS
+</p>
+</a>
+<p id="sep">/</p>
+<p id="copyright_sign_i">&copy;</p>
+<p id="copyright_sign_ii">&copy;&nbsp;2024</p>
+<p id="copyright_sign_iii">&copy;&nbsp;2024,&nbsp;KHALIL</p>
+<p id="sep">/</p>
+<a href="https://www.khaliiil.com/terms-conditions">
+<p>
+TERMS
+</p>
+</a>
+<p id="sep">/</p>
+<a href="https://khaliiil.com/privacy-policy">
+<p>
+PRIVACY
+</p>
+</a>
+</div>
+</div>
+</div>
+<div class="media-grid">
+<div class="column">
+<div class="media">
+<video id="video" src="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/Test_vid.mov" alt="media_home_9002" autoplay loop muted playsinline controls="false"></video>
+<img src="https://tour.beyonce.com/_next/static/media/icon-mute.cc814289.svg" class="sound-icon sound-off-icon" alt="Off">
+<img src="https://tour.beyonce.com/_next/static/media/icon-volume.bcf72889.svg" style="display:none;" class="sound-icon sound-on-icon" alt="On">
+<div class="loader" id="loader"></div>
+<button class="play-btn" id="playBtn"><img style="width:20px;height:auto;" src="https://img.icons8.com/ios-filled/50/FFFFFF/play--v1.png" alt="Play"></button>
+</div>
+<img class="media" src="https://cdn.sanity.io/images/fvrrd1kn/production/e959a41efb37429043a03bc36a33927b02373d72-2000x1334.jpg?q=75&fit=clip&auto=format"/>
+<img class="media" src="https://cdn.sanity.io/images/fvrrd1kn/production/f9e05284e8c0e2e1202bfc6b7fd6cedae83a4bf4-4000x2667.jpg?q=75&fit=clip&auto=format"/>
+<img class="media" src="https://cdn.sanity.io/images/fvrrd1kn/production/5a4b30caa5f6a39359920ea99d774b8e5a27de5a-5504x8256.jpg?q=75&fit=clip&auto=format"/>
+<img class="media" src="https://cdn.sanity.io/images/fvrrd1kn/production/22d08b2c9b9acd5a9505e22adb87a892533b6021-4000x2668.jpg?q=75&fit=clip&auto=format"/>
+<img class="media" src="https://cdn.sanity.io/images/fvrrd1kn/production/4178bfeb5be7ef28c7f6d8b6bc02f83006c09817-2000x3000.jpg?q=75&fit=clip&auto=format"/>
+<img class="media" src="https://cdn.sanity.io/images/fvrrd1kn/production/aa269323a69a201c19009e1301e58a7c174ad91a-3000x2000.jpg?q=75&fit=clip&auto=format"/>
+<img class="media" src="https://cdn.sanity.io/images/fvrrd1kn/production/64b4f57e41f37a91c81cfd1841bb320d6c978ce5-3801x2534.jpg?q=75&fit=clip&auto=format"/>
+<img class="media" src="https://cdn.sanity.io/images/fvrrd1kn/production/7605d69ccab9dd972f99894773e2d234447834dc-4000x2667.jpg?q=75&fit=clip&auto=format"/>
+<img class="media" src="https://cdn.sanity.io/images/fvrrd1kn/production/c1560372f3757017c1972515d065311a9cd6db21-4000x2667.jpg?q=75&fit=clip&auto=format"/>
+<img class="media" src="https://cdn.sanity.io/images/fvrrd1kn/production/bbb9c6f35b04650ffe1415f8d111a75a37bb6dc8-4000x2667.jpg?q=75&fit=clip&auto=format"/>
+<img class="media" src="https://cdn.sanity.io/images/fvrrd1kn/production/fbc43c6f56bdad39fe5d6d499171e08fda64e009-4000x2857.jpg?q=75&fit=clip&auto=format"/>
+<img class="media" src="https://cdn.sanity.io/images/fvrrd1kn/production/46b9644a0cafa44aa0d3a3c5da4cac4d99bf8f78-3374x4217.jpg?q=75&fit=clip&auto=format"/>
+<img class="media" src="https://cdn.sanity.io/images/fvrrd1kn/production/42d8b5d33696dd473f1c07f7d9e6f2de12095873-3000x4498.jpg?q=75&fit=clip&auto=format"/>
+<img class="media" src="https://cdn.sanity.io/images/fvrrd1kn/production/5c8dbec4167c84bcc552387dae67462c533272d7-4000x2667.jpg?q=75&fit=clip&auto=format"/>
+<img class="media" src="https://cdn.sanity.io/images/fvrrd1kn/production/a9563daf3564dc28ca45a07ad2ac665f13cea64b-8192x5464.jpg?q=75&fit=clip&auto=format"/>
+<img class="media" src="https://cdn.sanity.io/images/fvrrd1kn/production/9ef48583ea49fad07bdb50a84a64985e702f5fd9-7395x4930.jpg?q=75&fit=clip&auto=format"/>
+<img class="media hidden_in_gallery" src="https://cdn.sanity.io/images/fvrrd1kn/production/5ad75e4b2573822a87c42371b98741cbb5f255ff-8192x5464.jpg?q=75&fit=clip&auto=format"/>
+<img class="media hidden_in_gallery" src="https://cdn.sanity.io/images/fvrrd1kn/production/868fba0b90b8b52449e3380851ab3df7dfd5a011-2752x4128.jpg?q=75&fit=clip&auto=format"/>
+<img class="media hidden_in_gallery" src="https://cdn.sanity.io/images/fvrrd1kn/production/35b72febda40abba33d5889792ef29ee3b3f3dfd-5504x8256.jpg?q=75&fit=clip&auto=format"/>
+<img class="media hidden_in_gallery" src="https://cdn.sanity.io/images/fvrrd1kn/production/05b272fa1a33aa9e931c3df8aac7cc60a4c8fbde-5504x8256.jpg?q=75&fit=clip&auto=format"/>
+<img class="media hidden_in_gallery" src="https://cdn.sanity.io/images/fvrrd1kn/production/0928fe94ee3f3d066a57274953635bd788619216-4304x5380.jpg?q=75&fit=clip&auto=format"/>
+<img class="media hidden_in_gallery" src="https://cdn.sanity.io/images/fvrrd1kn/production/ef3c0c23c17b2cec519aebbdac838c76a7434921-5504x8256.jpg?q=75&fit=clip&auto=format"/>
+<img class="media" src="https://cdn.sanity.io/images/fvrrd1kn/production/1cfd88a70e784412337d1aba015187fffdf184d4-8256x5504.jpg?q=75&fit=clip&auto=format"/>
+</div>
+</div>
+<div class="over"></div>
+<div id="overlay" class="overlay">
+<div id="overlay-content" class="overlay-content"></div>
+<img id="close-btn" class="close-btn" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAACKElEQVR4nO3cTW4TQRBA4QISDsJPBIiLgESAJbALeMOVg/gRRHCJzEMjTQsLcOKx47gq/b6l5YVLT90zmrYmQpIkSZIkSZIkSZIkXTvgAHgAHAG3oijgNvBomuUgKgLeAT/44yvwKooBXgPflub4DryNgjEG/jV+togigMUFc7yJCsatCTj7zxClorA6RnNWYhuerheXSR2Fy2M0DyM74P4ag6SNwvoxRveiyJb1qWIU5sU4LbFljYDnwHmlKMyLMc72LCoBTmZG+bjH3/q+ym+98VHoJUaFKPQWI3MUeo2RMQq9x8gUBWPkiYIx8kTBGHmiYIw8UTBGnigYI08UjJEnCsbIEwVj5ImCMfJEwRipDoyGmd/d+4FYDyul7weFBaMMxsgTZTBGniiDMfJEGYyxQ8y7tTVIshiNqyRRjMYoiWI0RkkUozHKFjEWPjpJgg0eFGb4i9GNxBZPbY2SKEZjlCtylecZuH3lidEYZUO7POnDlZInRmOUNV3nGTiulDwxGqOssM9/h+BKyROjMUqiGE33UTLFiN6jZIzRbZTMMbqLUiFGN1GAlx28fOY4KgDuTO9XLBNjwyhfxlkju+ntnWWXPvO2rxJvlHtaNcYGUR5HdsBd4FeVbWqL7evnOGtUAHxYMcR5hRh/RVm1Uk6ikinK8kr5DLyIYoDj6QK+vDJqxWiAQ+DJ9OrY/HckF985Hk2zHK76niRJkiRJkiRJkiRJip35Dagkt/setTYhAAAAAElFTkSuQmCC" alt="Close">
+<img id="prev-btn" class="prev-btn" src="https://raw.githubusercontent.com/Dibacarter/Of/main/prev.PNG" alt="Previous">
+<img id="next-btn" class="next-btn" src="https://raw.githubusercontent.com/Dibacarter/Of/main/next.PNG" alt="Next">
+</div>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const mediaElements = document.querySelectorAll(".media");
+    const overlay = document.querySelector(".overlay");
+    const overlayContent = document.querySelector(".overlay-content");
+    const closeButton = document.querySelector(".close-btn");
+    const prevButton = document.querySelector(".prev-btn");
+    const nextButton = document.querySelector(".next-btn");
+
+    let currentIndex = 0;
+    let currentOverlayVideo = null;
+
+    function disableScroll() {
+      document.body.classList.add('no-scroll');
+      document.body.style.overflow = 'hidden';
+      document.body.style.touchAction = 'none';
+    }
+
+    function enableScroll() {
+      document.body.classList.remove('no-scroll');
+      document.body.style.overflow = '';
+      document.body.style.touchAction = '';
+    }
+
+    function muteAllVideos() {
+      mediaElements.forEach(media => {
+        if (media.querySelector('video')) {
+          const video = media.querySelector('video');
+          video.muted = true;
+          const soundOffIcon = media.querySelector('.sound-off-icon');
+          const soundOnIcon = media.querySelector('.sound-on-icon');
+          soundOffIcon.style.display = 'block';
+          soundOnIcon.style.display = 'none';
+          video.play();
+        }
+      });
+    }
+
+    function playAllVideos() {
+      mediaElements.forEach(media => {
+        if (media.querySelector('video')) {
+          const video = media.querySelector('video');
+          video.play();
+        }
+      });
+    }
+
+    function checkButtons() {
+      prevButton.style.display = currentIndex === 0 ? 'none' : 'block';
+      nextButton.style.display = currentIndex === mediaElements.length - 1 ? 'none' : 'block';
+    }
+
+    function openOverlay(index) {
+      disableScroll();
+      currentIndex = index;
+      const clonedMedia = mediaElements[currentIndex].cloneNode(true);
+      overlayContent.innerHTML = '';
+      overlayContent.appendChild(clonedMedia);
+      overlay.style.display = 'flex';
+      overlay.classList.add('overlay-show');
+      overlay.classList.add('opening');
+
+      setTimeout(() => {
+        overlay.classList.remove('opening');
+        overlay.classList.add('fullscreen');
+      }, 140);
+
+      muteAllVideos();
+      checkButtons();
+
+const video = clonedMedia.querySelector('video');
+  const loader = clonedMedia.querySelector("#loader");
+  const playBtn = clonedMedia.querySelector("#playBtn");
+  const errorText = clonedMedia.querySelector("#errorText");
+  const errorLink = clonedMedia.querySelector("#errorLink");
+
+  // Show the loader while the video is loading
+  video.addEventListener('loadstart', function() {
+    loader.style.display = 'block';
+    playBtn.style.display = 'none';
+  });
+
+  // Hide the loader and show the play button once the video is ready to play
+  video.addEventListener('canplay', function() {
+    loader.style.display = 'none';
+    playBtn.style.display = 'block';
+  });
+
+  // Hide play button and loader when playing
+  video.addEventListener('play', function() {
+    playBtn.style.display = 'none';
+    loader.style.display = 'none';
+  });
+
+  // Show play button when the video is paused
+  video.addEventListener('pause', function() {
+    playBtn.style.display = 'block';
+  });
+
+  // Show play button when the video ends
+  video.addEventListener('ended', function() {
+    playBtn.style.display = 'block';
+  });
+
+  // Handle video errors
+  video.addEventListener('error', function() {
+    loader.style.display = 'none';
+    playBtn.style.display = 'none';
+    errorText.style.display = 'block';
+    errorLink.href = video.src;
+  });
+
+  // Play video on play button click
+  playBtn.addEventListener('click', function(event) {
+    event.stopPropagation(); // Prevent overlay actions
+    video.play().then(() => {
+      playBtn.style.display = 'none';
+    }).catch((error) => {
+      console.error("Error trying to play the video:", error);
+    });
+  });
+
+  playBtn.addEventListener('click', function(event) {
+  event.stopPropagation();
+  console.log("Play button clicked"); // Debug log
+  video.play().then(() => {
+    playBtn.style.display = 'none';
+  }).catch((error) => {
+    console.error("Error trying to play the video:", error);
+  });
+});
+
+      if (clonedMedia.querySelector('video')) {
+        const video = clonedMedia.querySelector('video');
+        const soundOffIcon = clonedMedia.querySelector('.sound-off-icon');
+        const soundOnIcon = clonedMedia.querySelector('.sound-on-icon');
+
+        video.muted = true;
+        soundOffIcon.style.display = 'block';
+        soundOnIcon.style.display = 'none';
+
+        soundOffIcon.addEventListener('click', () => {
+          video.muted = false;
+          soundOffIcon.style.display = 'none';
+          soundOnIcon.style.display = 'block';
+        });
+
+        soundOnIcon.addEventListener('click', () => {
+          video.muted = true;
+          soundOffIcon.style.display = 'block';
+          soundOnIcon.style.display = 'none';
+        });
+
+        currentOverlayVideo = video;
+        video.play();
+      }
+    }
+
+    function closeOverlay() {
+      overlay.style.display = 'none';
+      overlay.classList.remove('fullscreen');
+      overlay.classList.add('closing');
+
+      setTimeout(() => {
+        overlay.classList.remove('closing');
+        overlay.style.display = 'none';
+      }, 90);
+
+      enableScroll();
+      if (currentOverlayVideo) {
+        currentOverlayVideo.muted = true;
+        currentOverlayVideo = null;
+      }
+      playAllVideos();
+    }
+
+    mediaElements.forEach((media, index) => {
+      if (media.querySelector('video')) {
+        const video = media.querySelector('video');
+        const soundOffIcon = media.querySelector('.sound-off-icon');
+        const soundOnIcon = media.querySelector('.sound-on-icon');
+        const playBtn = media.querySelector('.play-btn');
+
+        video.removeAttribute('controls');
+        video.play();
+
+        soundOffIcon.addEventListener('click', (event) => {
+          event.stopPropagation();  // Prevents opening the overlay when sound icons are clicked
+          muteAllVideos();
+          video.muted = false;
+          soundOffIcon.style.display = 'none';
+          soundOnIcon.style.display = 'block';
+        });
+
+        soundOnIcon.addEventListener('click', (event) => {
+          event.stopPropagation();  // Prevents opening the overlay when sound icons are clicked
+          video.muted = true;
+          soundOffIcon.style.display = 'block';
+          soundOnIcon.style.display = 'none';
+        });
+
+        playBtn.addEventListener('click', function(event) {
+          event.stopPropagation();  // Stops the overlay from opening when the play button is clicked
+          video.play();
+          playBtn.style.display = 'none';
+        });
+      }
+
+      media.addEventListener('click', (event) => {
+        if (event.target !== media.querySelector('.sound-off-icon') && event.target !== media.querySelector('.sound-on-icon') && event.target !== media.querySelector('.play-btn')) {
+          openOverlay(index);  // Only open the overlay if neither sound nor play button is clicked
+        }
+      });
+    });
+
+    closeButton.addEventListener('click', closeOverlay);
+
+    prevButton.addEventListener('click', () => {
+      if (currentIndex === 0) {
+        currentIndex = mediaElements.length - 1;
+      } else {
+        currentIndex -= 1;
+      }
+      openOverlay(currentIndex);
+      checkButtons();
+    });
+
+    nextButton.addEventListener('click', () => {
+      if (currentIndex === mediaElements.length - 1) {
+        currentIndex = 0;
+      } else {
+        currentIndex += 1;
+      }
+      openOverlay(currentIndex);
+      checkButtons();
+    });
+  });
+</script>
+<script>
+  const video = document.getElementById("video");
+  const loader = document.getElementById("loader");
+  const playBtn = document.getElementById("playBtn");
+  const errorText = document.getElementById("errorText");
+  const errorLink = document.getElementById("errorLink");
+
+  // Show the loader while the video is loading
+  video.addEventListener('loadstart', function() {
+    loader.style.display = 'block';
+    playBtn.style.display = 'none';
+  });
+
+  // Hide the loader and show the play button once the video is ready to play
+  video.addEventListener('canplay', function() {
+    loader.style.display = 'none';
+    playBtn.style.display = 'block';
+  });
+
+  // Hide play button and loader when playing
+  video.addEventListener('play', function() {
+    playBtn.style.display = 'none';
+    loader.style.display = 'none';
+  });
+
+  // Show play button when the video is paused
+  video.addEventListener('pause', function() {
+    playBtn.style.display = 'block';
+  });
+
+  // Show play button when the video ends
+  video.addEventListener('ended', function() {
+    playBtn.style.display = 'block';
+  });
+
+  // Handle video errors
+  video.addEventListener('error', function() {
+    loader.style.display = 'none';
+    playBtn.style.display = 'none';
+    errorText.style.display = 'block';
+    errorLink.href = video.src;
+  });
+
+  // Play video on play button click
+  playBtn.addEventListener('click', function() {
+    video.play();
+    playBtn.style.display = 'none';
+  });
+</script>
+</body>
+</html>
