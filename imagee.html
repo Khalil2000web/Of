@@ -134,11 +134,13 @@ body {font-family: var(--font_all_a7);margin:0;padding:0;background-color:var(--
 @media screen and (min-width: 600px) {
 #desk_ii {display: flex;}
 .main_layout_top_nav_vii {display: none;}}
-.media-grid {display: flex;width: 100%;height:auto;overflow-y:scroll;flex-direction:column;gap:0;}
+.media-grid {display: flex;width: 100%;height: 100%;}
 .column {flex: 1;display: flex;flex-direction:column;gap:0; }
-.media-grid img, .media-grid video {width: 100%;height: auto;display: block;}
+.column img, .column video {width: 100%;height: auto;display: block;}
+.column video {background:#151b17;}
 body.no-scroll {overflow: hidden;touch-action: none;-webkit-touch-callout:none;-webkit-overflow-scrolling:none;}
 .media {cursor: pointer;position: relative;}
+img {-webkit-touch-callout: none;-webkit-user-drag: none;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;pointer-events: auto;cursor: pointer;touch-action: manipulation;}
 .overlay-content .media {width:100%;max-width:100%;margin-bottom:150px;}
 .sound-icon {padding:5px;position: absolute;bottom: 20px;right: 20px;width: 15px;max-width:15px;height: auto;cursor: pointer;z-index: 10;-moz-user-select: none;-ms-user-select: none;user-select: none;pointer-events: auto;cursor:pointer;-webkit-user-drag: none;-moz-user-drag: none;-ms-user-drag: none;user-drag: none; }
 .sound-off-icon {display: block;}
@@ -146,14 +148,14 @@ body.no-scroll {overflow: hidden;touch-action: none;-webkit-touch-callout:none;-
 .overlay {display: none;position: fixed;top: 0;left: 0;width: 100%;height: 100%;background-color: rgba(0, 0, 0, 1);z-index: 9999;overflow:auto;overscroll-behavior:none;scrollbar-width: none;touch-action:pan-x pan-y;}
 .overlay::-webkit-scrollbar {display: none;}
 .overlay-content {position:absolute;width:100%;max-width:100%;height:auto;top:0;left:0;padding:0;margin:0;z-index:1000;-webkit-overflow-scrolling:touch;touch-action:auto;}
-.overlay-content video {width:100%;max-width:100%;height:auto;}
-.close-btn, .prev-btn, .next-btn {position: absolute;cursor: pointer;border:2px solid transparent;}
-.close-btn {right: 10px;top:10px;width:35px;height:auto;max-width:33px;z-index:10001;}
-.close-btn:hover {background:rgba(255,255,255,0.2);border-radius:5px;border:2px solid rgba(255,255,255,0.2);}
-.prev-btn {top: 40px;width:16px;z-index:10001;padding:5px 16px;user-drag:none;}
-.prev-btn:active, .prev-btn:hover {background:rgba(0,0,0,0.2);border-radius:3px;border:2px solid rgba(255,255,255,0.3);}
-.next-btn {top: 40px;width:16px;z-index:10001;padding:5px 16px;border:2px solid transparent;}
-.next-btn:active, .next-btn:hover {background:rgba(0,0,0,0.2);border-radius:3px;border:2px solid rgba(255,255,255,0.3);}
+.overlay-content video {width:100%;max-width:100%;height:auto;background:#151b17;}
+.close-btn, .prev-btn, .next-btn {position: absolute;cursor: pointer;}
+.close-btn {right: 10px;top:10px;width:33px;height:auto;max-width:33px;z-index:10001;}
+.close-btn:hover {background:rgba(255,255,255,0.2);border-radius:5px;} 
+.prev-btn {top: 40px;width:17.7px;z-index:10001;padding:5px 16px;user-drag:none;}
+.prev-btn:active, .prev-btn:hover {background:rgba(0,0,0,0.2);border-radius:3px;}
+.next-btn {top: 40px;width:17px;z-index:10001;padding:5px 16px;}
+.next-btn:active, .next-btn:hover {background:rgba(0,0,0,0.2);border-radius:3px;}
 .prev-btn img, .next-btn img {width:20px;height:auto;}
 video::-webkit-media-controls {display: none !important;}
 video::-webkit-media-controls {display: none !important;}
@@ -209,12 +211,9 @@ video::-ms-media-controls { display: none !important; }
 video {controls: none !important;pointer-events: none !important;user-select: none !important;}
 .video-container {position: relative;width: 100%;max-width: 640px;margin: auto;}
 video {width: 100%;height: auto;}
-.hidden_in_gallery {display:hidden;}
+.hidden_in_gallery {display: none;}
 .overlay .hidden_in_gallery {display: block;}
-.overlay.opening {display: flex;width: 98%;height: 98%;top: 50%;left: 50%;transform: translate(-50%,-50%);opacity:0.9;}
 body .overlay.opening {touch-action:none;overflow:hidden;-webkit-touch-callout:none;pointer-events:none;}
-.overlay.fullscreen {width: 100%;height: 100%;top: 50%;left: 50%;transform: translate(-50%, -50%);opacity:1;}
-.overlay.closing {width: 95%;height: 95%;top: 50%;left: 50%;transform: translate(-50%, -50%);opacity:0.2;}
 a {cursor:pointer;}
 .tit {position: relative;display: flex;justify-content: space-between;width: 100%;max-width: 800px;}
 .left-text, .right-text {color: white;position: fixed;top: 50%;transform: translateY(-50%);letter-spacing:1.2px;font-size:21.5px;z-index:1000;font-family:'BB Manual Mono Pro TX', arial;}
@@ -244,39 +243,12 @@ a {cursor:pointer;}
 .overlay.opening {display: flex;width: 98%;height: 98%;top: 50%;left: 50%;transform: translate(-50%,-50%);opacity:0.9;}
 .overlay.fullscreen {width: 100%;height: 100%;top: 50%;left: 50%;transform: translate(-50%, -50%);opacity:1;}
 .overlay.closing {width: 95%;height: 95%;top: 50%;left: 50%;transform: translate(-50%, -50%);opacity:0.2;}
-
-.media {
-  -webkit-user-select: all;
-  -moz-user-select: all;
-  user-select: all;
-  -webkit-user-drag: none;
-  user-drag: none;
-  pointer-events:none;
-}
 </style>
-<script>
-    document.addEventListener('contextmenu', function (e) {
-      e.preventDefault();
-    }, false);
-
-    document.addEventListener('touchstart', function (e) {
-      e.preventDefault();
-    }, false);
-
-    document.addEventListener('copy', function (e) {
-      const selection = window.getSelection();
-      if (selection && selection.containsNode(document.querySelector('.media-grid img'), true)) {
-        e.preventDefault();
-        const imgAltText = document.querySelector('.media').alt;
-        e.clipboardData.setData('text/plain', imgAltText);
-      }
-    });
-</script>
 </head>
 <body>
 <div class="nav-top">
 <div class="menu">
-<a href="/core">
+<a href="">
 <p>
 CORE
 </p>
@@ -291,7 +263,7 @@ MUSIC
 TOUR
 </p>
 </a>
-<a href="/blog">
+<a href="https://khaliiil.com/blog">
 <p>
 BLOG
 </p>
@@ -307,25 +279,23 @@ JOIN
 </p>
 </a>
 <p id="sep">/</p>
-<a href="credits">
+<a href="https://www.khaliiil.com/credits">
 <p>
 CREDITS
 </p>
 </a>
 <p id="sep">/</p>
-<a href="/">
 <p id="copyright_sign_i">&copy;</p>
 <p id="copyright_sign_ii">&copy;&nbsp;2024</p>
 <p id="copyright_sign_iii">&copy;&nbsp;2024,&nbsp;KHALIL</p>
-</a>
 <p id="sep">/</p>
-<a href="/terms-conditions">
+<a href="https://www.khaliiil.com/terms-conditions">
 <p>
 TERMS
 </p>
 </a>
 <p id="sep">/</p>
-<a href="/privacy-policy">
+<a href="https://khaliiil.com/privacy-policy">
 <p>
 PRIVACY
 </p>
@@ -333,58 +303,48 @@ PRIVACY
 </div>
 </div>
 </div>
-
-
 <div class="media-grid">
-<img src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/Home_page_gif_2024_bday_i.GIF" loading="eager" alt="media_home_9032" />
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/Birthday_gif_2024892024_home_media.GIF" loading="eager" alt="media_home_9031" />
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9024.webp" loading="eager" alt="media_home_9030" />
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9023.webp" loading="eager" alt="media_home_9029" />
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9022.webp" loading="lazy" alt="media_home_9028" />
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9021.webp" loading="lazy" alt="media_home_9027" />
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9020.webp" alt="media_home_9026"/>
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9018.webp" alt="media_home_9024"/>
+<div class="column">
 <div class="media">
-<video src="https://ik.imagekit.io/ybebp19uwa/IMG_6947.mov?updatedAt=1722431094298" alt="media_home_9002" autoplay loop muted autoplay="" loop="" playsinline controls="false"></video>
-<img src="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/static/media/icon-mute.svg" class="sound-icon sound-off-icon" alt="Off">
-<img src="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/static/media/icon-volume.svg" style="display:none;" class="sound-icon sound-on-icon" alt="On">
+<video src="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/Test_vid.mov" alt="media_home_9002" autoplay loop muted playsinline controls="false"></video>
+<img src="https://tour.beyonce.com/_next/static/media/icon-mute.cc814289.svg" class="sound-icon sound-off-icon" alt="Off">
+<img src="https://tour.beyonce.com/_next/static/media/icon-volume.bcf72889.svg" style="display:none;" class="sound-icon sound-on-icon" alt="On">
 </div>
-
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9017.webp" loading="lazy" alt="media_home_9033" />
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9016.webp" alt="media_home_9022"/>
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9015.webp" alt="media_home_9021"/>
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9014.webp" alt="media_home_9020">
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9013.webp" alt="media_home_9019">
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9011.gif" alt="media_home_9018">
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9010.webp" alt="media_home_9017">
-<img class="media" src="https://raw.githubusercontent.com/Dibacarter/Of/main/mediaOf/5.jpg" alt="media_home_9016">
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_6522.jpeg" alt="media_home_9010">
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9008.jpeg" alt="media_home_9009">
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9007.gif" alt="media_home_9008">
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9006.jpeg" alt="media_home_9007">
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_3652.jpeg" alt="media_home_9006">
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_8993.gif" alt="media_home_9004">
-<img class="media" src="https://raw.githubusercontent.com/Dibacarter/Media/main/Home_media_image_gallery/IMG_3461.jpeg" alt="media_home_9003">
-<div class="media">
-<video src="https://ik.imagekit.io/ybebp19uwa/IMG_0844.MOV?updatedAt=1722425583838" alt="media_home_9002" autoplay loop muted playsinline controls="false"></video>
-<img src="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/static/media/icon-mute.svg" class="sound-icon sound-off-icon" alt="Off">
-<img src="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/static/media/icon-volume.svg" style="display:none;" class="sound-icon sound-on-icon" alt="On">
+<img class="media" src="https://cdn.sanity.io/images/fvrrd1kn/production/e959a41efb37429043a03bc36a33927b02373d72-2000x1334.jpg?q=75&fit=clip&auto=format"/>
+<img class="media" src="https://cdn.sanity.io/images/fvrrd1kn/production/f9e05284e8c0e2e1202bfc6b7fd6cedae83a4bf4-4000x2667.jpg?q=75&fit=clip&auto=format"/>
+<img class="media" src="https://cdn.sanity.io/images/fvrrd1kn/production/5a4b30caa5f6a39359920ea99d774b8e5a27de5a-5504x8256.jpg?q=75&fit=clip&auto=format"/>
+<img class="media" src="https://cdn.sanity.io/images/fvrrd1kn/production/22d08b2c9b9acd5a9505e22adb87a892533b6021-4000x2668.jpg?q=75&fit=clip&auto=format"/>
+<img class="media" src="https://cdn.sanity.io/images/fvrrd1kn/production/4178bfeb5be7ef28c7f6d8b6bc02f83006c09817-2000x3000.jpg?q=75&fit=clip&auto=format"/>
+<img class="media" src="https://cdn.sanity.io/images/fvrrd1kn/production/aa269323a69a201c19009e1301e58a7c174ad91a-3000x2000.jpg?q=75&fit=clip&auto=format"/>
+<img class="media" src="https://cdn.sanity.io/images/fvrrd1kn/production/64b4f57e41f37a91c81cfd1841bb320d6c978ce5-3801x2534.jpg?q=75&fit=clip&auto=format"/>
+<img class="media" src="https://cdn.sanity.io/images/fvrrd1kn/production/7605d69ccab9dd972f99894773e2d234447834dc-4000x2667.jpg?q=75&fit=clip&auto=format"/>
+<img class="media" src="https://cdn.sanity.io/images/fvrrd1kn/production/c1560372f3757017c1972515d065311a9cd6db21-4000x2667.jpg?q=75&fit=clip&auto=format"/>
+<img class="media" src="https://cdn.sanity.io/images/fvrrd1kn/production/bbb9c6f35b04650ffe1415f8d111a75a37bb6dc8-4000x2667.jpg?q=75&fit=clip&auto=format"/>
+<img class="media" src="https://cdn.sanity.io/images/fvrrd1kn/production/fbc43c6f56bdad39fe5d6d499171e08fda64e009-4000x2857.jpg?q=75&fit=clip&auto=format"/>
+<img class="media" src="https://cdn.sanity.io/images/fvrrd1kn/production/46b9644a0cafa44aa0d3a3c5da4cac4d99bf8f78-3374x4217.jpg?q=75&fit=clip&auto=format"/>
+<img class="media" src="https://cdn.sanity.io/images/fvrrd1kn/production/42d8b5d33696dd473f1c07f7d9e6f2de12095873-3000x4498.jpg?q=75&fit=clip&auto=format"/>
+<img class="media" src="https://cdn.sanity.io/images/fvrrd1kn/production/5c8dbec4167c84bcc552387dae67462c533272d7-4000x2667.jpg?q=75&fit=clip&auto=format"/>
+<img class="media" src="https://cdn.sanity.io/images/fvrrd1kn/production/a9563daf3564dc28ca45a07ad2ac665f13cea64b-8192x5464.jpg?q=75&fit=clip&auto=format"/>
+<img class="media" src="https://cdn.sanity.io/images/fvrrd1kn/production/9ef48583ea49fad07bdb50a84a64985e702f5fd9-7395x4930.jpg?q=75&fit=clip&auto=format"/>
+<img class="media hidden_in_gallery" src="https://cdn.sanity.io/images/fvrrd1kn/production/5ad75e4b2573822a87c42371b98741cbb5f255ff-8192x5464.jpg?q=75&fit=clip&auto=format"/>
+<img class="media hidden_in_gallery" src="https://cdn.sanity.io/images/fvrrd1kn/production/868fba0b90b8b52449e3380851ab3df7dfd5a011-2752x4128.jpg?q=75&fit=clip&auto=format"/>
+<img class="media hidden_in_gallery" src="https://cdn.sanity.io/images/fvrrd1kn/production/35b72febda40abba33d5889792ef29ee3b3f3dfd-5504x8256.jpg?q=75&fit=clip&auto=format"/>
+<img class="media hidden_in_gallery" src="https://cdn.sanity.io/images/fvrrd1kn/production/05b272fa1a33aa9e931c3df8aac7cc60a4c8fbde-5504x8256.jpg?q=75&fit=clip&auto=format"/>
+<img class="media hidden_in_gallery" src="https://cdn.sanity.io/images/fvrrd1kn/production/0928fe94ee3f3d066a57274953635bd788619216-4304x5380.jpg?q=75&fit=clip&auto=format"/>
+<img class="media hidden_in_gallery" src="https://cdn.sanity.io/images/fvrrd1kn/production/ef3c0c23c17b2cec519aebbdac838c76a7434921-5504x8256.jpg?q=75&fit=clip&auto=format"/>
+<img class="media" src="https://cdn.sanity.io/images/fvrrd1kn/production/1cfd88a70e784412337d1aba015187fffdf184d4-8256x5504.jpg?q=75&fit=clip&auto=format"/>
 </div>
-<img class="media" src="https://raw.githubusercontent.com/Dibacarter/Media/main/Home_media_image_gallery/5a67e1ae-0c7b-494c-8440-3eb7d7f35ac9.jpeg"/>
 </div>
 
 <div id="overlay" class="overlay">
 <div id="overlay-content" class="overlay-content"></div>
-<img
-id="close-btn"
-class="close-btn"
-src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAACKElEQVR4nO3cTW4TQRBA4QISDsJPBIiLgESAJbALeMOVg/gRRHCJzEMjTQsLcOKx47gq/b6l5YVLT90zmrYmQpIkSZIkSZIkSZIkXTvgAHgAHAG3oijgNvBomuUgKgLeAT/44yvwKooBXgPflub4DryNgjEG/jV+togigMUFc7yJCsatCTj7zxClorA6RnNWYhuerheXSR2Fy2M0DyM74P4ag6SNwvoxRveiyJb1qWIU5sU4LbFljYDnwHmlKMyLMc72LCoBTmZG+bjH3/q+ym+98VHoJUaFKPQWI3MUeo2RMQq9x8gUBWPkiYIx8kTBGHmiYIw8UTBGnigYI08UjJEnCsbIEwVj5ImCMfJEwRipDoyGmd/d+4FYDyul7weFBaMMxsgTZTBGniiDMfJEGYyxQ8y7tTVIshiNqyRRjMYoiWI0RkkUozHKFjEWPjpJgg0eFGb4i9GNxBZPbY2SKEZjlCtylecZuH3lidEYZUO7POnDlZInRmOUNV3nGTiulDwxGqOssM9/h+BKyROjMUqiGE33UTLFiN6jZIzRbZTMMbqLUiFGN1GAlx28fOY4KgDuTO9XLBNjwyhfxlkju+ntnWWXPvO2rxJvlHtaNcYGUR5HdsBd4FeVbWqL7evnOGtUAHxYMcR5hRh/RVm1Uk6ikinK8kr5DLyIYoDj6QK+vDJqxWiAQ+DJ9OrY/HckF985Hk2zHK76niRJkiRJkiRJkiRJip35Dagkt/setTYhAAAAAElFTkSuQmCC"
-alt="Close">
+<img id="close-btn" class="close-btn" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAACKElEQVR4nO3cTW4TQRBA4QISDsJPBIiLgESAJbALeMOVg/gRRHCJzEMjTQsLcOKx47gq/b6l5YVLT90zmrYmQpIkSZIkSZIkSZIkXTvgAHgAHAG3oijgNvBomuUgKgLeAT/44yvwKooBXgPflub4DryNgjEG/jV+togigMUFc7yJCsatCTj7zxClorA6RnNWYhuerheXSR2Fy2M0DyM74P4ag6SNwvoxRveiyJb1qWIU5sU4LbFljYDnwHmlKMyLMc72LCoBTmZG+bjH3/q+ym+98VHoJUaFKPQWI3MUeo2RMQq9x8gUBWPkiYIx8kTBGHmiYIw8UTBGnigYI08UjJEnCsbIEwVj5ImCMfJEwRipDoyGmd/d+4FYDyul7weFBaMMxsgTZTBGniiDMfJEGYyxQ8y7tTVIshiNqyRRjMYoiWI0RkkUozHKFjEWPjpJgg0eFGb4i9GNxBZPbY2SKEZjlCtylecZuH3lidEYZUO7POnDlZInRmOUNV3nGTiulDwxGqOssM9/h+BKyROjMUqiGE33UTLFiN6jZIzRbZTMMbqLUiFGN1GAlx28fOY4KgDuTO9XLBNjwyhfxlkju+ntnWWXPvO2rxJvlHtaNcYGUR5HdsBd4FeVbWqL7evnOGtUAHxYMcR5hRh/RVm1Uk6ikinK8kr5DLyIYoDj6QK+vDJqxWiAQ+DJ9OrY/HckF985Hk2zHK76niRJkiRJkiRJkiRJip35Dagkt/setTYhAAAAAElFTkSuQmCC" alt="Close">
 <img id="prev-btn" class="prev-btn" src="https://raw.githubusercontent.com/Dibacarter/Of/main/prev.PNG" alt="Previous">
 <img id="next-btn" class="next-btn" src="https://raw.githubusercontent.com/Dibacarter/Of/main/next.PNG" alt="Next">
 </div>
+
 <script>
- document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener("DOMContentLoaded", function () {
     const mediaElements = document.querySelectorAll(".media");
     const overlay = document.querySelector(".overlay");
     const overlayContent = document.querySelector(".overlay-content");
@@ -452,6 +412,68 @@ alt="Close">
 
       muteAllVideos();
       checkButtons();
+
+const video = clonedMedia.querySelector('video');
+  const loader = clonedMedia.querySelector("#loader");
+  const playBtn = clonedMedia.querySelector("#playBtn");
+  const errorText = clonedMedia.querySelector("#errorText");
+  const errorLink = clonedMedia.querySelector("#errorLink");
+
+  // Show the loader while the video is loading
+  video.addEventListener('loadstart', function() {
+    loader.style.display = 'block';
+    playBtn.style.display = 'none';
+  });
+
+  // Hide the loader and show the play button once the video is ready to play
+  video.addEventListener('canplay', function() {
+    loader.style.display = 'none';
+    playBtn.style.display = 'block';
+  });
+
+  // Hide play button and loader when playing
+  video.addEventListener('play', function() {
+    playBtn.style.display = 'none';
+    loader.style.display = 'none';
+  });
+
+  // Show play button when the video is paused
+  video.addEventListener('pause', function() {
+    playBtn.style.display = 'block';
+  });
+
+  // Show play button when the video ends
+  video.addEventListener('ended', function() {
+    playBtn.style.display = 'block';
+  });
+
+  // Handle video errors
+  video.addEventListener('error', function() {
+    loader.style.display = 'none';
+    playBtn.style.display = 'none';
+    errorText.style.display = 'block';
+    errorLink.href = video.src;
+  });
+
+  // Play video on play button click
+  playBtn.addEventListener('click', function(event) {
+    event.stopPropagation(); // Prevent overlay actions
+    video.play().then(() => {
+      playBtn.style.display = 'none';
+    }).catch((error) => {
+      console.error("Error trying to play the video:", error);
+    });
+  });
+
+  playBtn.addEventListener('click', function(event) {
+  event.stopPropagation();
+  console.log("Play button clicked"); // Debug log
+  video.play().then(() => {
+    playBtn.style.display = 'none';
+  }).catch((error) => {
+    console.error("Error trying to play the video:", error);
+  });
+});
 
       if (clonedMedia.querySelector('video')) {
         const video = clonedMedia.querySelector('video');
@@ -560,14 +582,51 @@ alt="Close">
   });
 </script>
 <script>
-document.addEventListener("DOMContentLoaded", function() {
-  setTimeout(function() {
-    const elements = document.querySelectorAll('.hidden_in_gallery');
-    elements.forEach(element => {
-      element.style.display = 'none';
-    });
-  }, 8000);
-});
+  const video = document.getElementById("video");
+  const loader = document.getElementById("loader");
+  const playBtn = document.getElementById("playBtn");
+  const errorText = document.getElementById("errorText");
+  const errorLink = document.getElementById("errorLink");
+
+  // Show the loader while the video is loading
+  video.addEventListener('loadstart', function() {
+    loader.style.display = 'block';
+    playBtn.style.display = 'none';
+  });
+
+  // Hide the loader and show the play button once the video is ready to play
+  video.addEventListener('canplay', function() {
+    loader.style.display = 'none';
+    playBtn.style.display = 'block';
+  });
+
+  // Hide play button and loader when playing
+  video.addEventListener('play', function() {
+    playBtn.style.display = 'none';
+    loader.style.display = 'none';
+  });
+
+  // Show play button when the video is paused
+  video.addEventListener('pause', function() {
+    playBtn.style.display = 'block';
+  });
+
+  // Show play button when the video ends
+  video.addEventListener('ended', function() {
+    playBtn.style.display = 'block';
+  });
+
+  video.addEventListener('error', function() {
+    loader.style.display = 'none';
+    playBtn.style.display = 'none';
+    errorText.style.display = 'block';
+    errorLink.href = video.src;
+  });
+
+  playBtn.addEventListener('click', function() {
+    video.play();
+    playBtn.style.display = 'none';
+  });
 </script>
 </body>
 </html>
