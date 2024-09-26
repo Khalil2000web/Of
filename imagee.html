@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image with Selectable Text</title>
+</head>
+<body>
+<div class="m">
+<img 
+src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9023.webp" 
+alt="This is the alternative text." 
+width="500">
+</div>
+
+<img 
+src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9023.webp" 
+alt="This is the alternative text." 
+width="500">
+
+
+<style>
+.media-grid img {
+  -webkit-user-select: all;
+  -moz-user-select: all;
+  user-select: all;
+  -webkit-user-drag: none;
+  user-drag: none;
+  pointer-events: none;
+}
+</style>
+<script>
+    document.addEventListener('contextmenu', function (e) {
+      e.preventDefault();
+    }, false);
+
+    document.addEventListener('touchstart', function (e) {
+      e.preventDefault();
+    }, false);
+
+    document.addEventListener('copy', function (e) {
+      const selection = window.getSelection();
+      if (selection && selection.containsNode(document.querySelector('.media-grid img'), true)) {
+        e.preventDefault();
+        const imgAltText = document.querySelector('.media-grid img').alt;
+        e.clipboardData.setData('text/plain', imgAltText);
+      }
+    });
+</script>
+</body>
+</html>
