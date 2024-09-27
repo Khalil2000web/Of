@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Khalil - 404</title>
+<title>Khalil</title>
 <meta name="description" content="The Official Website of Khalil">
 <meta property="og:description" content="The Official Website of Khalil">
 <meta property="og:image" content="https://www.khaliiil.com/system/7FA53553-2225-48AC-B68C-89172E7E6340.jpeg">
@@ -13,7 +13,7 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:author" content="Khalil">
-<link rel="icon" type="image/x-icon" href="https://khaliiil.com/system/FF863B55-25CD-41EA-B199-86DC40B5A73F.jpeg">    
+<link rel="icon" type="image/x-icon" href="https://khaliiil.com/system/FF863B55-25CD-41EA-B199-86DC40B5A73F.jpeg">
 <meta name="URL" content="http://www.khaliiil.com">
 <meta name="twitter:title" content="Khalil">
 <meta name="twitter:description" content="The Official Website of Khalil">
@@ -27,8 +27,9 @@
 <style>
 @font-face {font-family: 'BB Manual Mono Regular';src: url('https://raw.githubusercontent.com/Khalil2000web/Of/main/system/fonts/BBManualMonoProTX.22d272fc.ttf');}
 @font-face {font-family: 'BB Manual Mono SemiBold';src: url('https://raw.githubusercontent.com/Khalil2000web/Of/main/system/fonts/BBManualMonoProTX-SemiBold.otf');}
-:root {--primary_color: #000;--secondary_color: #B2BEB5;--main_container_bg: #fff;--second_bg_color:#fff;--big_font_size: 1rem;--small_font_size: 0.6875rem;--spacing: 10px;--lowercase_tx: lowercase;--uppercase_tx:uppercase;--font_weight_3:300;--font_weight_4:400;--font_weight_5:500;--font_weight_6:600;--font_weight_7:700;--font_weight_8:800;--font_weight_9:900;--font_all_a7:'BB Manual Mono SemiBold','BB Manual Mono Regular',arial;--font_two_regular:'BB Manual Mono Regular',arial;--zIndex_1000:1000;}
-html, body {padding:0;margin:0;color:var(--primary_color);font-family:var(--font_two_regular);background:var(--main_container_bg);}
+:root {--primary_color: #fff;--secondary_color: #B2BEB5;--main_container_bg: #000;--second_bg_color:#000;--big_font_size: 1rem;--small_font_size: 0.6875rem;--spacing: 10px;--lowercase_tx: lowercase;--uppercase_tx:uppercase;--font_weight_3:300;--font_weight_4:400;--font_weight_5:500;--font_weight_6:600;--font_weight_7:700;--font_weight_8:800;--font_weight_9:900;--font_all_a7:'BB Manual Mono SemiBold','BB Manual Mono Regular',arial;--font_two_regular:'BB Manual Mono Regular',arial;--zIndex_1000:1000;}
+* {margin:0;padding:0;}
+body, html {margin:0;padding:0;background:#000;color:#fff;font-family:var(--font_two_regular);}
 .nav_bottom {position: fixed;width: 100%;left: 0;display: flex;justify-content: center;align-items: center;z-index:var(--zIndex_1000);}
 .nav_bottom {bottom:16px;background: none;}
 .nav_bottom .menu {display: flex;gap: 45px;}
@@ -70,6 +71,7 @@ html, body {padding:0;margin:0;color:var(--primary_color);font-family:var(--font
 
 @media screen and (min-width:801px) and (max-width:990px) {
 .nav_bottom .menu {gap:40px;}
+.nav_bottom .menu p {font-size:14px;}
 #copyright_sign_i {display:none;}
 #copyright_sign_ii {display:none;}
 #copyright_sign_iii {display:block;}
@@ -77,6 +79,7 @@ html, body {padding:0;margin:0;color:var(--primary_color);font-family:var(--font
 
 @media screen and (min-width:1000px) {
 .nav_bottom .menu {gap:50px;}
+.nav_bottom .menu p {font-size:14px;}
 #copyright_sign_i {display:none;}
 #copyright_sign_ii {display:none;}
 #copyright_sign_iii {display:block;}
@@ -90,52 +93,41 @@ html, body {padding:0;margin:0;color:var(--primary_color);font-family:var(--font
 .nav-top .menu a {color:var(--primary_color);text-decoration:none;}
 .nav-top .menu a p {font-family:var(--font_two_regular);color:var(--primary_color);text-decoration: none;font-weight:var(--font_weight_3);font-size:30px;text-transform:uppercase;padding:0;margin:0;}
 @media screen and (max-width:400px) {
-.nav-top .menu {gap:10px;}
-.nav-top .menu a p {font-size:20px;}}
+.nav-top .menu {gap:30px;}
+.nav-top .menu a p {font-size:23px;}}
 @media screen and (min-width:401px) and (max-width:500px) {
-.nav-top .menu {gap:20px;}
-.nav-top .menu a p {font-size:21px;}}
+.nav-top .menu {gap:40px;}
+.nav-top .menu a p {font-size:23px;}}
 @media screen and (min-width:501px) and (max-width:600px) {
-.nav-top .menu {gap:30px;}
-.nav-top .menu a p {font-size:22px;}}
+.nav-top .menu {gap:50px;}
+.nav-top .menu a p {font-size:23px;}}
 @media screen and (min-width:601px) and (max-width:700px) {
-.nav-top .menu {gap:30px;}}
+.nav-top .menu {gap:50px;}}
 @media screen and (min-width:701px) and (max-width:800px) {
-.nav-top .menu {gap:30px;}
-.nav-top .menu a p {font-size:22.6px;}}
+.nav-top .menu {gap:50px;}
+.nav-top .menu a p {font-size:23px;}}
 @media screen and (min-width:801px) and (max-width:990px) {
-.nav-top .menu {gap:30px;}
+.nav-top .menu {gap:70px;}
 .nav-top .menu a p {font-size:22px;}}
 @media screen and (min-width:1000px) {
-.nav-top .menu {gap:50px;}
+.nav-top .menu {gap:70px;}
 .nav-top .menu a p {font-size:24px;}}
 #desk_ii {display:none;}
 .main_layout_top_nav_vii {z-index:400;display:flex;flex-direction:row;width:auto;height:30px;background:none;position:fixed;align-items:center;justify-content:space-between;top:60px;left:50%;transform:translateX(-50%);}
 .main_layout_top_nav_vii a {font-family:var(--font_two_regular);font-size:20px;text-decoration:none;color:var(--primary_color);}
 .main_layout_top_nav_vii p {font-family:var(--font_two_regular);margin:10px;color:var(--primary_color);}
 @media screen and (min-width: 600px) {
-  #desk_ii {
-    display: flex;
-  }
-  .main_layout_top_nav_vii {
-    display: none;
-  }
-}
-
-.main_text {color:var(--primary_color);text-align:center;font-size:4rem;font-family:var(--font_two_regular);padding-top:70px;padding-bottom:0;}
-.text_2 {color:var(--primary_color);text-align:center;font-size:2rem;font-family:var(--font_two_regular);padding:0;}
-.text_link {color:var(--primary_color);text-align:center;font-size:2rem;font-family:var(--font_two_regular);}
-.text_link a {color:var(--primary_color);text-underline-offset:4px;}
+#desk_ii {display: flex;}
+.main_layout_top_nav_vii {display: none;}}
+.text {color:#c63527;text-align:center;font-size:2.3rem;}
+.text a {color:var(--primary_color);text-underline-offset:8px;}
+.text_ii {color:var(--primary_color);text-align:center;font-size:2.2rem;}
+.text_ii a {color:var(--primary_color);text-underline-offset:8px;}
 </style>
 </head>
 <body>
 <div class="nav-top">
 <div class="menu">
-<a href="https://khaliiil.com/">
-<p>
-HOME
-</p>
-</a>
 <a href="https://shop.khaliiil.com/">
 <p>
 SHOP
@@ -154,11 +146,6 @@ TOUR
 <a href="https://khaliiil.com/blog">
 <p>
 BLOG
-</p>
-</a>
-<a href="https://khaliiil.com/core">
-<p>
-CORE
 </p>
 </a>
 </div>
@@ -196,16 +183,14 @@ PRIVACY
 </div>
 </div>
 </div>
-<p class="main_text">
-404
+<main>
+<p class="text" style="padding-top:140px;">
+404: PAGE NOT FOUND.
 </p>
-<p class="text_2">
-PAGE NOT FOUND !
+<p class="text_ii" style="padding-top:60px;">
+PAGE IS MOVED OR DELETED,
+<u><a href="/">TRY AGAIN</a></u>.
 </p>
-<p class="text_link">
-<a href="/">
-TRY AGAIN
-</a>
-</p>
+</main>
 </body>
 </html>
