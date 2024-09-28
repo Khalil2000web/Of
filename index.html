@@ -48,11 +48,11 @@
     --font_two_regular:'BB Manual Mono Regular',arial;
     --zIndex_1000:1000;
 }
-body {font-family: var(--font_all_a7);margin:0;padding:0;background-color:var(--second_bg_color);}
+body,html {font-family: var(--font_two_regular);margin:0;padding:0;background-color:var(--second_bg_color);}
 .nav_bottom {position: fixed;width: 100%;left: 0;display: flex;justify-content: center;align-items: center;z-index:var(--zIndex_1000);}
 .nav_bottom {bottom:16px;background: none;}
 .nav_bottom .menu {display: flex;gap: 45px;}
-.nav_bottom .menu a, .nav_bottom .menu p {text-shadow:none;font-family:var(--font_two_regular);color:var(--primary_color);text-decoration: none;font-weight:var(--font_weight_3);font-size:16.6px;text-transform:uppercase;bottom:0;padding:0;margin:0;}
+.nav_bottom .menu a, .nav_bottom .menu p {user-select:none;-webkit-user-select:none;text-shadow:none;font-family:var(--font_two_regular);color:var(--primary_color);text-decoration: none;font-weight:var(--font_weight_3);font-size:16.6px;text-transform:uppercase;bottom:0;padding:0;margin:0;}
 @media screen and (max-width:400px) {
 .nav_bottom .menu {gap:20px;}
 #copyright_sign_i {display:none;}
@@ -90,6 +90,7 @@ body {font-family: var(--font_all_a7);margin:0;padding:0;background-color:var(--
 
 @media screen and (min-width:801px) and (max-width:990px) {
 .nav_bottom .menu {gap:40px;}
+.nav_bottom .menu p {font-size:14px;}
 #copyright_sign_i {display:none;}
 #copyright_sign_ii {display:none;}
 #copyright_sign_iii {display:block;}
@@ -97,6 +98,7 @@ body {font-family: var(--font_all_a7);margin:0;padding:0;background-color:var(--
 
 @media screen and (min-width:1000px) {
 .nav_bottom .menu {gap:50px;}
+.nav_bottom .menu p {font-size:14px;}
 #copyright_sign_i {display:none;}
 #copyright_sign_ii {display:none;}
 #copyright_sign_iii {display:block;}
@@ -110,24 +112,24 @@ body {font-family: var(--font_all_a7);margin:0;padding:0;background-color:var(--
 .nav-top .menu a {color:var(--primary_color);text-decoration:none;}
 .nav-top .menu a p {font-family:var(--font_two_regular);color:var(--primary_color);text-decoration: none;font-weight:var(--font_weight_3);font-size:30px;text-transform:uppercase;padding:0;margin:0;}
 @media screen and (max-width:400px) {
-.nav-top .menu {gap:30px;}
+.nav-top .menu {gap:90px;}
 .nav-top .menu a p{font-size:22px;}}
 @media screen and (min-width:401px) and (max-width:500px) {
-.nav-top .menu {gap:40px;}
+.nav-top .menu {gap:120px;}
 .nav-top .menu a p{font-size:22px;}}
 @media screen and (min-width:501px) and (max-width:600px) {
-.nav-top .menu {gap:50px;}
+.nav-top .menu {gap:150px;}
 .nav-top .menu a p{font-size:22px;}}
 @media screen and (min-width:601px) and (max-width:700px) {
-.nav-top .menu {gap:40px;}}
+.nav-top .menu {gap:180px;}}
 @media screen and (min-width:701px) and (max-width:800px) {
-.nav-top .menu {gap:30px;}
+.nav-top .menu {gap:180px;}
 .nav-top .menu a p{font-size:22.6px;}}
 @media screen and (min-width:801px) and (max-width:990px) {
-.nav-top .menu {gap:30px;}
+.nav-top .menu {gap:220px;}
 .nav-top .menu a p{font-size:22px;}}
 @media screen and (min-width:1000px) {
-.nav-top .menu {gap:50px;}
+.nav-top .menu {gap:300px;}
 .nav-top .menu a p{font-size:24px;}}
 #desk_ii {display:none;}
 .main_layout_top_nav_vii {z-index:400;display:flex;flex-direction:row;width:auto;height:30px;background:none;position:fixed;align-items:center;justify-content:space-between;top:60px;left:50%;transform:translateX(-50%);}
@@ -142,24 +144,10 @@ body {font-family: var(--font_all_a7);margin:0;padding:0;background-color:var(--
   }
 }
 .media-container {width: 100%;height:auto;display: flex;flex-direction: column;overflow-y: auto;position:absolute;z-index: 1;}
-.media {position: relative;flex: 0 0 auto;width: 100%;cursor: pointer;user-select: none;pointer-events: auto;user-drag: none;-webkit-touch-callout: none;-moz-user-select: none;-ms-user-select: none;user-select: none;pointer-events: auto;cursor:pointer;-webkit-user-drag: none;-moz-user-drag: none;-ms-user-drag: none;user-drag: none; }
-.media video {width: 100%;height: auto;display: block;}
-.sound-icon {position: absolute;bottom: 15px;right: 15px;width: 20px;max-width:20px;height: auto;cursor: pointer;z-index: 10;opacity: 0.90;-moz-user-select: none;-ms-user-select: none;user-select: none;pointer-events: auto;cursor:pointer;-webkit-user-drag: none;-moz-user-drag: none;-ms-user-drag: none;user-drag: none; }
+.media {position: relative;flex: 0 0 auto;width: 100%;}
+.media video, .media img {width: 100%;height: auto;display: block;}
+.sound-icon {position: absolute;padding:5px;bottom: 20px;right: 20px;width:15px;max-width:15px;height: auto;cursor: pointer;z-index: 10;-moz-user-select: none;-ms-user-select: none;user-select: none;pointer-events: auto;-webkit-user-drag: none;-moz-user-drag: none;-ms-user-drag: none;user-drag: none;}
 .sound-off-icon {display: block;}
-.sound-on-icon {display: none;}
-body.no-scroll {overflow: hidden;touch-action:none !important;-webkit-touch-callout:none;scrollbar-width: none;-ms-overflow-style: none;}
-body.no-scroll::-webkit-scrollbar {display: none;}
-#overlay {max-height:100%;transition: all 0.09s ease-in-out;margin:0;padding:0;position: fixed;top: 0;left: 0;width: 100%;height: 100%;background-color: #000;display: none;touch-action:none;justify-content: center;align-items: center;z-index: 1000;touch-action: pan-x pan-y;}
-img {user-select: none;pointer-events: auto;user-drag: none;-webkit-touch-callout: none;-moz-user-select: none;-ms-user-select: none;user-select: none;pointer-events: auto;cursor:pointer;-webkit-user-drag: none;-moz-user-drag: none;-ms-user-drag: none;user-drag: none; }
-#overlay-content {margin:0;padding:0;width: 100%;height: 100%;max-height:100%;overflow: auto;touch-action:none;position: fixed;touch-action: pan-x pan-y;overscroll-behavior:none;}
-#overlay-content::-webkit-scrollbar {display:none;}
-#close-btn {position: absolute;top: 10px;left: 50%;transform: translateX(-50%);cursor: pointer;width: 35px;max-width:35px;height: 35px;user-select: none;pointer-events: auto;user-drag: none;-webkit-touch-callout: none;-moz-user-select: none;-ms-user-select: none;user-select: none;pointer-events: auto;cursor: pointer;-webkit-user-drag: none;-moz-user-drag: none;-ms-user-drag: none;user-drag: none;z-index:1009;}
-.nav-btn {position: absolute;transform: translateY(-50%);cursor: pointer;z-index: 10000;padding: 5px 16px;user-select: none;pointer-events: auto;user-drag: none;-webkit-touch-callout: none;}
-#prev-btn {left: 5px;border: 2px solid #275c86;top: 25px;}
-#next-btn {border: 2px solid #275c86;right: 5px;top: 25px;}
-.holder {margin:0 auto;padding:0;width:62%;background:none;height:50px;transform:translateX(-50%);left:50%;top:0;position:absolute;z-index:1007;}
-.nav-btn img {display: block;max-width: 100%;height: auto;width: 17px;max-width:20px;user-select: none;pointer-events: auto;user-drag: none;-webkit-touch-callout: none;-moz-user-select: none;-ms-user-select: none;user-select: none;pointer-events: auto;cursor:pointer;-webkit-user-drag: none;-moz-user-drag: none;-ms-user-drag: none;user-drag: none; }
-#overlay-content img, #overlay-content video {padding-bottom:160px;}
 video::-webkit-media-controls {display: none !important;}
 video::-webkit-media-controls {display: none !important;}
 video::-moz-media-controls {display: none !important;}
@@ -206,10 +194,7 @@ video::-webkit-media-controls-timeline,
 video::-webkit-media-controls-timeline-container,
 video::-webkit-media-controls-volume-slider,
 video::-webkit-media-controls-volume-slider-container {display: none !important;}
-.video-container {position: relative;width: 100%;max-width: 640px; /* Adjust as needed */margin: auto;}
 video {width: 100%;height: auto;}
-.hidden-in-gallery {display: none;}
-#overlay .hidden-in-gallery {display: block;}
 .tit {position: relative;display: flex;justify-content: space-between;width: 100%;max-width: 800px;}
 .left-text, .right-text {color: white;position: fixed;top: 50%;transform: translateY(-50%);letter-spacing:1.2px;font-size:21.5px;z-index:1000;font-family:'BB Manual Mono Pro TX', arial;}
 .left-text {left: 0;padding-left: 20px;}
@@ -235,24 +220,12 @@ video {width: 100%;height: auto;}
 @media screen and (min-width:901px) {
 .left-text {left: 0;padding-left: 240px;padding-right:auto;}
 .right-text {right: 0;padding-right: 240px;}}
-#overlay.opening {display: flex;width: 98%;height: 98%;top: 50%;left: 50%;transform: translate(-50%,-50%);opacity:0.9;}
-#overlay.fullscreen {width: 100%;height: 100%;top: 50%;left: 50%;transform: translate(-50%, -50%);opacity:1;}
-#overlay.closing {width: 95%;height: 95%;top: 50%;left: 50%;transform: translate(-50%, -50%);opacity:0.2;}
 </style>
+
 </head>
 <body>
 <div class="nav-top">
 <div class="menu">
-<a href="https://shop.khaliiil.com/">
-<p>
-SHOP
-</p>
-</a>
-<a href="https://music.khaliiil.com/">
-<p>
-MUSIC
-</p>
-</a>
 <a href="https://tour.khaliiil.com/">
 <p>
 TOUR
@@ -263,20 +236,6 @@ TOUR
 BLOG
 </p>
 </a>
-<span id="desk_ii">
-<a href="https://khaliiil.com/notes">
-<p>
-NOTES
-</p>
-</a>
-</span>
-<span id="desk_ii">
-<a href="https://khaliiil.com/core">
-<p>
-CORE
-</p>
-</a>
-</span>
 </div>
 </div>
 </div>
@@ -312,17 +271,12 @@ PRIVACY
 </div>
 </div>
 </div>
-<div class="main_layout_top_nav_vii">
-<a href="https://khaliiil.com/notes">
-NOTES
-</a>
-<p>/</p>
-<a href="https://khaliiil.com/core">
-CORE
-</a>
-</div>
-<div class="media-container"><br><br><br><br><br><br>
+
+<div class="media-container">
+<div class="med">
 <img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/Home_page_gif_2024_bday_i.GIF" loading="eager" alt="media_home_9032" />
+</div>
+
 <img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/Birthday_gif_2024892024_home_media.GIF" loading="eager" alt="media_home_9031" />
 <img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9024.webp" loading="eager" alt="media_home_9030" />
 <img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9023.webp" loading="eager" alt="media_home_9029" />
@@ -332,8 +286,8 @@ CORE
 <img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9018.webp" alt="media_home_9024"/>
 <div class="media">
 <video src="https://ik.imagekit.io/ybebp19uwa/IMG_6947.mov?updatedAt=1722431094298" alt="media_home_9002" autoplay loop muted playsinline controls="false"></video>
-<img src="https://raw.githubusercontent.com/Khalil2000web/Of/main/system/Css-off.PNG" class="sound-icon sound-off-icon" alt="Off">
-<img src="https://raw.githubusercontent.com/Khalil2000web/Of/main/system/Css-on.PNG" class="sound-icon sound-on-icon" alt="On">
+<img src="https://raw.githubusercontent.com/Khalil2000web/Of/refs/heads/main/static/media/icon-mute.svg" class="sound-icon sound-off-icon" alt="Toggle Sound">
+<img src="https://raw.githubusercontent.com/Khalil2000web/Of/refs/heads/main/static/media/icon-volume.svg" style="display:none;" class="sound-icon sound-on-icon" alt="unmute">
 </div>
 <img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9017.webp" loading="lazy" alt="media_home_9033" />
 <img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9016.webp" alt="media_home_9022"/>
@@ -352,214 +306,84 @@ CORE
 <img class="media" src="https://raw.githubusercontent.com/Dibacarter/Media/main/Home_media_image_gallery/IMG_3461.jpeg" alt="media_home_9003">
 <div class="media">
 <video src="https://ik.imagekit.io/ybebp19uwa/IMG_0844.MOV?updatedAt=1722425583838" alt="media_home_9002" autoplay loop muted playsinline controls="false"></video>
-<img src="https://raw.githubusercontent.com/Khalil2000web/Of/main/system/Css-off.PNG" class="sound-icon sound-off-icon" alt="Off">
-<img src="https://raw.githubusercontent.com/Khalil2000web/Of/main/system/Css-on.PNG" class="sound-icon sound-on-icon" alt="On">
+<img src="https://raw.githubusercontent.com/Khalil2000web/Of/refs/heads/main/static/media/icon-mute.svg" class="sound-icon sound-off-icon" alt="Off">
+<img src="https://raw.githubusercontent.com/Khalil2000web/Of/refs/heads/main/static/media/icon-volume.svg" style="display:none;" class="sound-icon sound-on-icon" alt="On">
 </div>
 <img class="media" src="https://raw.githubusercontent.com/Dibacarter/Media/main/Home_media_image_gallery/5a67e1ae-0c7b-494c-8440-3eb7d7f35ac9.jpeg"/>
 </div>
 
-<div class="open"></div>
-<div id="overlay">
-  <div class="holder">
-  <span id="prev-btn"  class="nav-btn">
-    <img style="transform: rotate(270deg);" src="https://raw.githubusercontent.com/Dibacarter/Of/main/next.PNG" alt="prev">
-  </span>
-
-  <span id="next-btn" class="nav-btn">
-    <img style="transform: rotate(270deg);" src="https://raw.githubusercontent.com/Dibacarter/Of/main/prev.PNG" alt="next">
-  </span>
-  </div>
-    <div id="overlay-content"></div>
-  <img id="close-btn" style="filter: brightness(0) invert(1);-webkit-filter: brightness(0) invert(1);" src="https://raw.githubusercontent.com/Khalil2000web/Of/main/system/IMG_9107.webp" alt="Close">
-</div>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const mediaElements = document.querySelectorAll('.media');
-    const overlay = document.getElementById('overlay');
-    const overlayContent = document.getElementById('overlay-content');
-    const closeBtn = document.getElementById('close-btn');
-    const prevBtn = document.getElementById('prev-btn');
-    const nextBtn = document.getElementById('next-btn');
-    const container = document.querySelectorAll('.media-container');
+document.addEventListener('DOMContentLoaded', function() {
+  const mediaElements = document.querySelectorAll('.media');
 
-    let currentIndex = 0;
-    let currentOverlayVideo = null;
+  function muteAllVideos() {
+    mediaElements.forEach(media => {
+      if (media.querySelector('video')) {
+        const video = media.querySelector('video');
+        video.muted = true;
+        const soundOffIcon = media.querySelector('.sound-off-icon');
+        const soundOnIcon = media.querySelector('.sound-on-icon');
+        soundOffIcon.style.display = 'block';
+        soundOnIcon.style.display = 'none';
+        video.play();
+      }
+    });
+  }
 
-    function disableScroll() {
-      document.body.classList.add('no-scroll');
-      document.body.style.overflow = 'hidden';
-      document.body.style.touchAction = 'none';
-    }
+  mediaElements.forEach((media) => {
+    if (media.querySelector('video')) {
+      const video = media.querySelector('video');
+      const soundOffIcon = media.querySelector('.sound-off-icon');
+      const soundOnIcon = media.querySelector('.sound-on-icon');
 
-    function enableScroll() {
-      document.body.classList.remove('no-scroll');
-      document.body.style.overflow = '';
-      document.body.style.touchAction = '';
-    }
+      video.removeAttribute('controls');
+      video.play();
 
-    function muteAllVideos() {
-      mediaElements.forEach(media => {
-        if (media.querySelector('video')) {
-          const video = media.querySelector('video');
-          video.muted = true;
-          const soundOffIcon = media.querySelector('.sound-off-icon');
-          const soundOnIcon = media.querySelector('.sound-on-icon');
-          soundOffIcon.style.display = 'block';
-          soundOnIcon.style.display = 'none';
-          video.play();
-        }
+      soundOffIcon.addEventListener('click', () => {
+        muteAllVideos();
+        video.muted = false;
+        soundOffIcon.style.display = 'none';
+        soundOnIcon.style.display = 'block';
       });
-    }
 
-    function playAllVideos() {
-      mediaElements.forEach(media => {
-        if (media.querySelector('video')) {
-          const video = media.querySelector('video');
-          video.play();
-        }
-      });
-    }
-
-    function openOverlay(index) {
-      disableScroll();
-      currentIndex = index;
-      const clonedMedia = mediaElements[currentIndex].cloneNode(true);
-      overlayContent.innerHTML = '';
-      overlayContent.appendChild(clonedMedia);
-      overlay.style.display = 'flex';
-      overlay.classList.add('overlay-show');
-      
-        overlay.classList.add('opening');
-  overlay.style.display = 'flex';
-
-  setTimeout(() => {
-
-    overlay.classList.remove('opening');
-    overlay.classList.add('fullscreen');
-  }, 140);
-
-
-      muteAllVideos();
-
-      if (clonedMedia.querySelector('video')) {
-        const video = clonedMedia.querySelector('video');
-        const soundOffIcon = clonedMedia.querySelector('.sound-off-icon');
-        const soundOnIcon = clonedMedia.querySelector('.sound-on-icon');
-
+      soundOnIcon.addEventListener('click', () => {
         video.muted = true;
         soundOffIcon.style.display = 'block';
         soundOnIcon.style.display = 'none';
-
-        soundOffIcon.addEventListener('click', () => {
-          video.muted = false;
-          soundOffIcon.style.display = 'none';
-          soundOnIcon.style.display = 'block';
-        });
-
-        soundOnIcon.addEventListener('click', () => {
-          video.muted = true;
-          soundOffIcon.style.display = 'block';
-          soundOnIcon.style.display = 'none';
-        });
-
-        currentOverlayVideo = video;
-        video.play();
-      }
-    }
-
-    function closeOverlay() {
-      overlay.style.display = 'none';
-      
-        overlay.classList.remove('fullscreen');
-  overlay.classList.add('closing');
-
-  setTimeout(() => {
-
-    overlay.classList.remove('closing');
-    overlay.style.display = 'none';
-  }, 90);
-
-      
-      enableScroll();
-      if (currentOverlayVideo) {
-        currentOverlayVideo.muted = true;
-        currentOverlayVideo = null;
-      }
-      playAllVideos();
-    }
-
-    mediaElements.forEach((media, index) => {
-      if (media.querySelector('video')) {
-        const video = media.querySelector('video');
-        const soundOffIcon = media.querySelector('.sound-off-icon');
-        const soundOnIcon = media.querySelector('.sound-on-icon');
-
-        video.removeAttribute('controls');
-
-        video.play();
-
-        soundOffIcon.addEventListener('click', () => {
-          muteAllVideos();
-          video.muted = false;
-          soundOffIcon.style.display = 'none';
-          soundOnIcon.style.display = 'block';
-        });
-
-        soundOnIcon.addEventListener('click', () => {
-          video.muted = true;
-          soundOffIcon.style.display = 'block';
-          soundOnIcon.style.display = 'none';
-        });
-      }
-
-      media.addEventListener('click', (event) => {
-        if (event.target !== media.querySelector('.sound-off-icon') && event.target !== media.querySelector('.sound-on-icon')) {
-          openOverlay(index);
-        }
       });
-    });
-
-    closeBtn.addEventListener('click', closeOverlay);
-
-    prevBtn.addEventListener('click', () => {
-      if (currentIndex === 0) {
-        currentIndex = mediaElements.length - 1;
-      } else {
-        currentIndex -= 1;
-      }
-      openOverlay(currentIndex);
-    });
-
-    nextBtn.addEventListener('click', () => {
-      if (currentIndex === mediaElements.length - 1) {
-        currentIndex = 0;
-      } else {
-        currentIndex += 1;
-      }
-      openOverlay(currentIndex);
-    });
+    }
   });
-</script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const prevBtn = document.getElementById('prev-btn');
-    const nextBtn = document.getElementById('next-btn');
-
-    if (!localStorage.getItem('btnClicked')) {
-        prevBtn.style.border = '2px solid #275c86';
-        nextBtn.style.border = '2px solid #275c86';
-    }
-
-    function hideBorders() {
-        prevBtn.style.border = 'none';
-        nextBtn.style.border = 'none';
-        localStorage.setItem('btnClicked', 'true');
-    }
-
-    prevBtn.addEventListener('click', hideBorders);
-    nextBtn.addEventListener('click', hideBorders);
 });
+</script>
+
+<style>
+img {
+  -webkit-user-select: all;
+  -moz-user-select: all;
+  user-select: all;
+  -webkit-user-drag: none;
+  user-drag: none;
+  pointer-events: none;
+}
+</style>
+<script>
+    document.addEventListener('contextmenu', function (e) {
+      e.preventDefault();
+    }, false);
+
+    document.addEventListener('touchstart', function (e) {
+      e.preventDefault();
+    }, false);
+
+    document.addEventListener('copy', function (e) {
+      const selection = window.getSelection();
+      if (selection && selection.containsNode(document.querySelector('img'), true)) {
+        e.preventDefault();
+        const imgAltText = document.querySelector('img').alt;
+        e.clipboardData.setData('text/plain', imgAltText);
+      }
+    });
 </script>
 </body>
 </html>
