@@ -110,7 +110,7 @@ body,html {font-family: var(--font_two_regular);margin:0;padding:0;background-co
 .nav-top {top:15px;background: none;padding:0;margin:0;}
 .nav-top .menu {display:flex;gap: 30px;padding-bottom:0;margin:0;}
 .nav-top .menu a {color:var(--primary_color);text-decoration:none;}
-.nav-top .menu a p {font-family:var(--font_two_regular);color:var(--primary_color);text-decoration: none;font-weight:var(--font_weight_3);font-size:30px;text-transform:uppercase;padding:0;margin:0;}
+.nav-top .menu a p {font-family:var(--font_two_regular);color:var(--primary_color);user-select:none;-webkit-user-select:none;text-decoration: none;font-weight:var(--font_weight_3);font-size:30px;text-transform:uppercase;padding:0;margin:0;}
 @media screen and (max-width:400px) {
 .nav-top .menu {gap:90px;}
 .nav-top .menu a p{font-size:22px;}}
@@ -143,10 +143,12 @@ body,html {font-family: var(--font_two_regular);margin:0;padding:0;background-co
     display: none;
   }
 }
-.media-container {width: 100%;height:auto;display: flex;flex-direction: column;overflow-y: auto;position:absolute;z-index: 1;}
+.media-container {width: 100%;height:auto;display: flex;flex-direction: column;overflow-y: auto;overflow-x:hidden;position:absolute;z-index: 1;padding-top:60px;}
 .media {position: relative;flex: 0 0 auto;width: 100%;}
-.media video, .media img {width: 100%;height: auto;display: block;}
-.sound-icon {position: absolute;padding:5px;bottom: 20px;right: 20px;width:15px;max-width:15px;height: auto;cursor: pointer;z-index: 10;-moz-user-select: none;-ms-user-select: none;user-select: none;pointer-events: auto;-webkit-user-drag: none;-moz-user-drag: none;-ms-user-drag: none;user-drag: none;}
+.media-container video, .media-container img {width: 100%;height: auto;display: block;}
+.media-container video {background:#151b17;}
+
+.sound-icon {position: absolute;padding:7px;bottom: 18px;right: 18px;width:15px;max-width:15px;height: auto;cursor: pointer;z-index: 10;-moz-user-select: none;-ms-user-select: none;user-select: none;pointer-events: auto;-webkit-user-drag: none;-moz-user-drag: none;-ms-user-drag: none;user-drag: none;}
 .sound-off-icon {display: block;}
 video::-webkit-media-controls {display: none !important;}
 video::-webkit-media-controls {display: none !important;}
@@ -231,7 +233,7 @@ video {width: 100%;height: auto;}
 TOUR
 </p>
 </a>
-<a href="https://khaliiil.com/blog">
+<a href="/blog">
 <p>
 BLOG
 </p>
@@ -247,7 +249,7 @@ JOIN
 </p>
 </a>
 <p id="sep">/</p>
-<a href="https://www.khaliiil.com/credits">
+<a href="/credits">
 <p>
 CREDITS
 </p>
@@ -257,13 +259,13 @@ CREDITS
 <p id="copyright_sign_ii">&copy;&nbsp;2024</p>
 <p id="copyright_sign_iii">&copy;&nbsp;2024,&nbsp;KHALIL</p>
 <p id="sep">/</p>
-<a href="https://www.khaliiil.com/terms-conditions">
+<a href="/terms-conditions">
 <p>
 TERMS
 </p>
 </a>
 <p id="sep">/</p>
-<a href="https://khaliiil.com/privacy-policy">
+<a href="/privacy-policy">
 <p>
 PRIVACY
 </p>
@@ -271,45 +273,115 @@ PRIVACY
 </div>
 </div>
 </div>
-
 <div class="media-container">
+
 <div class="med">
 <img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/Home_page_gif_2024_bday_i.GIF" loading="eager" alt="media_home_9032" />
 </div>
 
+<div class="med">
 <img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/Birthday_gif_2024892024_home_media.GIF" loading="eager" alt="media_home_9031" />
+</div>
+
+<div class="med">
 <img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9024.webp" loading="eager" alt="media_home_9030" />
+</div>
+
+<div class="med">
 <img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9023.webp" loading="eager" alt="media_home_9029" />
+</div>
+
+<div class="med">
 <img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9022.webp" loading="lazy" alt="media_home_9028" />
+</div>
+
+<div class="med">
 <img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9021.webp" loading="lazy" alt="media_home_9027" />
+</div>
+
+<div class="med">
 <img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9020.webp" alt="media_home_9026"/>
+</div>
+
+<div class="med">
 <img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9018.webp" alt="media_home_9024"/>
+</div>
+
 <div class="media">
 <video src="https://ik.imagekit.io/ybebp19uwa/IMG_6947.mov?updatedAt=1722431094298" alt="media_home_9002" autoplay loop muted playsinline controls="false"></video>
 <img src="https://raw.githubusercontent.com/Khalil2000web/Of/refs/heads/main/static/media/icon-mute.svg" class="sound-icon sound-off-icon" alt="Toggle Sound">
 <img src="https://raw.githubusercontent.com/Khalil2000web/Of/refs/heads/main/static/media/icon-volume.svg" style="display:none;" class="sound-icon sound-on-icon" alt="unmute">
 </div>
+
+<div class="med">
 <img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9017.webp" loading="lazy" alt="media_home_9033" />
+</div>
+
+<div class="med">
 <img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9016.webp" alt="media_home_9022"/>
+</div>
+
+<div class="med">
 <img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9015.webp" alt="media_home_9021"/>
+</div>
+
+<div class="med">
 <img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9014.webp" alt="media_home_9020">
+</div>
+
+<div class="med">
 <img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9013.webp" alt="media_home_9019">
+</div>
+
+<div class="med">
 <img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9011.gif" alt="media_home_9018">
+</div>
+
+<div class="med">
 <img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9010.webp" alt="media_home_9017">
+</div>
+
+<div class="med">
 <img class="media" src="https://raw.githubusercontent.com/Dibacarter/Of/main/mediaOf/5.jpg" alt="media_home_9016">
+</div>
+
+<div class="med">
 <img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_6522.jpeg" alt="media_home_9010">
+</div>
+
+<div class="med">
 <img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9008.jpeg" alt="media_home_9009">
+</div>
+
+<div class="med">
 <img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9007.gif" alt="media_home_9008">
+</div>
+
+<div class="med">
 <img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9006.jpeg" alt="media_home_9007">
+</div>
+
+<div class="med">
 <img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_3652.jpeg" alt="media_home_9006">
+</div>
+
+<div class="med">
 <img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_8993.gif" alt="media_home_9004">
+</div>
+
+<div class="med">
 <img class="media" src="https://raw.githubusercontent.com/Dibacarter/Media/main/Home_media_image_gallery/IMG_3461.jpeg" alt="media_home_9003">
+</div>
+
 <div class="media">
 <video src="https://ik.imagekit.io/ybebp19uwa/IMG_0844.MOV?updatedAt=1722425583838" alt="media_home_9002" autoplay loop muted playsinline controls="false"></video>
 <img src="https://raw.githubusercontent.com/Khalil2000web/Of/refs/heads/main/static/media/icon-mute.svg" class="sound-icon sound-off-icon" alt="Off">
 <img src="https://raw.githubusercontent.com/Khalil2000web/Of/refs/heads/main/static/media/icon-volume.svg" style="display:none;" class="sound-icon sound-on-icon" alt="On">
 </div>
+
+<div class="med">
 <img class="media" src="https://raw.githubusercontent.com/Dibacarter/Media/main/Home_media_image_gallery/5a67e1ae-0c7b-494c-8440-3eb7d7f35ac9.jpeg"/>
+</div>
 </div>
 
 
