@@ -136,6 +136,7 @@ body,html {font-family: var(--font_two_regular);margin:0;padding:0;background-co
 .media-container video {background:#151b17;}
 .sound-icon {position: absolute;padding:7px;bottom: 18px;right: 18px;width:15px;max-width:15px;height: auto;cursor: pointer;z-index: 10;-moz-user-select: none;-ms-user-select: none;user-select: none;pointer-events: auto;-webkit-user-drag: none;-moz-user-drag: none;-ms-user-drag: none;user-drag: none;touch-action:none;-webkit-touch-action:none;-webkit-touch-callout:none;}
 .sound-off-icon {display: block;}
+#pipButton {position: absolute;padding:7px;bottom: 18px;left: 18px;cursor: pointer;z-index: 10;color:var(--primary_color);background:none;font-family:var(--font_all_a7);font-size:0.6rem;letter-spacing:2px;border-radius:0;}
 video::-webkit-media-controls {display: none !important;}
 video::-webkit-media-controls {display: none !important;}
 video::-moz-media-controls {display: none !important;}
@@ -269,11 +270,11 @@ PRIVACY
 </div>
 </div>
 <div class="media-container">
-
 <div class="media">
 <video id="myVideo" src="https://ik.imagekit.io/xlretjwgk/Video_bday-videohomepagevideo20248920242992024.mov" alt="media_home_9002" autoplay loop muted playsinline controls="false"></video>
 <img src="https://raw.githubusercontent.com/Khalil2000web/Of/refs/heads/main/static/media/icon-mute.svg" class="sound-icon sound-off-icon" alt="Toggle Sound">
 <img src="https://raw.githubusercontent.com/Khalil2000web/Of/refs/heads/main/static/media/icon-volume.svg" style="display:none;" class="sound-icon sound-on-icon" alt="unmute">
+<button id="pipButton">PiP</button>
 </div>
 
 <div class="med">
@@ -372,21 +373,29 @@ PRIVACY
 
 <script>
 const video = document.getElementById('myVideo');
+const pipButton = document.getElementById('pipButton');
 
-video.addEventListener('play', async () => {
+pipButton.addEventListener('click', async () => {
     try {
-        // Automatically enter PiP when the video starts playing
-        if (document.pictureInPictureEnabled && !video.disablePictureInPicture) {
+        // If the video is already in PiP, exit PiP
+        if (document.pictureInPictureElement) {
+            await document.exitPictureInPicture();
+        } else {
+            // If PiP is not active, request PiP mode
             await video.requestPictureInPicture();
         }
     } catch (error) {
-        console.error('Error trying to automatically enter PiP:', error);
+        console.error('Error with PiP:', error);
     }
 });
 
-// Handle cases where PiP might be closed by the user
+// Update the button's text when entering and leaving PiP
+video.addEventListener('enterpictureinpicture', () => {
+    pipButton.textContent = 'Exit Picture-in-Picture';
+});
+
 video.addEventListener('leavepictureinpicture', () => {
-    console.log('Exited Picture-in-Picture mode');
+    pipButton.textContent = 'Enter Picture-in-Picture';
 });
 </script>
 
