@@ -208,6 +208,7 @@ video {width: 100%;height: auto;}
 @media screen and (min-width:901px) {
 .left-text {left: 0;padding-left: 240px;padding-right:auto;}
 .right-text {right: 0;padding-right: 240px;}}
+select {background:none;color:var(--primary_color);position:fixed;z-index:20;right:10px;top:70px;font-family:var(--font_two_regular);font-size:1rem;padding:5px 10px;outline:none;}
 </style>
 </head>
 <body>
@@ -268,8 +269,22 @@ PRIVACY
 </div>
 </div>
 </div>
+<select id="mySelect" onchange="redirectToLink()">
+<option value="" disabled selected>EN</option>
+<option value="https://khaliiil.com/ar">AR</option>
+<option value="https://khaliiil.com/fr">FR</option>
+<option value="https://khaliiil.com/es">ES</option>
+</select>
+<script>
+  function redirectToLink() {
+    var select = document.getElementById("mySelect");
+    var selectedValue = select.value;
+    if (selectedValue) {
+      window.location.href = selectedValue; // Redirect to the selected URL
+    }
+  }
+</script>
 <div class="media-container">
-
 <div class="media">
 <video src="https://ik.imagekit.io/xlretjwgk/Video_bday-videohomepagevideo20248920242992024.mov" alt="media_home_9002" autoplay loop muted playsinline controls="false"></video>
 <img src="https://raw.githubusercontent.com/Khalil2000web/Of/refs/heads/main/static/media/icon-mute.svg" class="sound-icon sound-off-icon" alt="Toggle Sound">
