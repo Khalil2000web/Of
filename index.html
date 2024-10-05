@@ -209,6 +209,63 @@ video {width: 100%;height: auto;}
 .left-text {left: 0;padding-left: 240px;padding-right:auto;}
 .right-text {right: 0;padding-right: 240px;}}
 select {background:none;color:var(--primary_color);position:fixed;z-index:20;right:10px;top:70px;font-family:var(--font_two_regular);font-size:1rem;padding:5px 10px;outline:none;}
+
+.container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: max-content; /* Ensure the container takes only as much space as needed */
+  height: 100%; /* Full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+.top-text {
+  margin-top: 180px; /* Adjust this for the space from the top */
+}
+
+.bottom-text {
+  margin-bottom: 180px; /* Adjust this for the space from the bottom */
+}
+.bottom-text, .top-text {
+    text-align: center;
+  color: var(--primary_color);
+  font-size: 1.2rem;
+  letter-spacing:1.3px;
+}
+.bottom-text a, .top-text a {
+  color: var(--primary_color);
+  text-decoration: none;
+}
+
+/* Media query for screens wider than 800px */
+@media screen and (min-width: 800px) {
+  .container {
+    flex-direction: row;
+    justify-content: space-between; /* Push items to opposite sides */
+    align-items: center;
+    width: 100vw; /* Make the container span the entire width of the viewport */
+    height: auto; /* Remove the height restriction */
+    padding: 0 20px; /* Add padding for some space on the sides */
+  }
+
+  .top-text {
+    margin: 0; /* Reset margins */
+    text-align: left; /* Align text to the left */
+  }
+
+  .top-text a {    padding-left:230px;}
+
+  .bottom-text {
+    margin: 0; /* Reset margins */
+    text-align: right; /* Align text to the right */
+  }
+    .bottom-text a {    padding-right:230px;}
+
+}
 </style>
 </head>
 <body>
@@ -269,21 +326,10 @@ PRIVACY
 </div>
 </div>
 </div>
-<select id="mySelect" onchange="redirectToLink()">
-<option value="" disabled selected>EN</option>
-<option value="https://khaliiil.com/ar">AR</option>
-<option value="https://khaliiil.com/fr">FR</option>
-<option value="https://khaliiil.com/es">ES</option>
-</select>
-<script>
-  function redirectToLink() {
-    var select = document.getElementById("mySelect");
-    var selectedValue = select.value;
-    if (selectedValue) {
-      window.location.href = selectedValue; // Redirect to the selected URL
-    }
-  }
-</script>
+<div class="container">
+  <p class="top-text"><a href="/carter">THE KITTEN</a></p>
+  <p class="bottom-text"><a href="/carter">CARTER</a></p>
+</div>
 <div class="media-container">
 <div class="media">
 <video src="https://ik.imagekit.io/xlretjwgk/Video_bday-videohomepagevideo20248920242992024.mov" alt="media_home_9002" autoplay loop muted playsinline controls="false"></video>
@@ -383,8 +429,6 @@ PRIVACY
 <img class="media" src="https://raw.githubusercontent.com/Dibacarter/Media/main/Home_media_image_gallery/5a67e1ae-0c7b-494c-8440-3eb7d7f35ac9.jpeg"/>
 </div>
 </div>
-
-
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const mediaElements = document.querySelectorAll('.media');
@@ -455,6 +499,15 @@ document.addEventListener('DOMContentLoaded', function() {
         e.clipboardData.setData('text/plain', imgAltText);
       }
     });
+</script>
+<script>
+  function redirectToLink() {
+    var select = document.getElementById("mySelect");
+    var selectedValue = select.value;
+    if (selectedValue) {
+      window.location.href = selectedValue; // Redirect to the selected URL
+    }
+  }
 </script>
 </body>
 </html>
