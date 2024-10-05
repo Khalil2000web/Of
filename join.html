@@ -47,148 +47,158 @@
     --font_two_regular:'BB Manual Mono Regular',arial;
     --zIndex_1000:1000;
 }
-body {font-family: var(--font_all_a7);margin:0;padding:0;background-color:var(--second_bg_color);}
+body {font-family: var(--font_two_regular);margin:0;padding:0;background-color:var(--second_bg_color);}
 .nav_bottom {position: fixed;width: 100%;left: 0;display: flex;justify-content: center;align-items: center;z-index:var(--zIndex_1000);}
 .nav_bottom {bottom:16px;background: none;}
 .nav_bottom .menu {display: flex;gap: 45px;}
-.nav_bottom .menu a, .nav_bottom .menu p {font-family:var(--font_two_regular);color:var(--primary_color);text-decoration: none;font-weight:var(--font_weight_3);font-size:16.6px;text-transform:uppercase;bottom:0;padding:0;margin:0;}
+.nav_bottom .menu a, .nav_bottom .menu p {user-select:none;-webkit-user-select:none;text-shadow:none;font-family:var(--font_two_regular);color:var(--primary_color);text-decoration: none;font-weight:var(--font_weight_3);font-size:16.6px;text-transform:uppercase;bottom:0;padding:0;margin:0;}
 @media screen and (max-width:400px) {
 .nav_bottom .menu {gap:20px;}
 #copyright_sign_i {display:none;}
 #copyright_sign_ii {display:none;}
 #copyright_sign_iii {display:none;}
 #sep {display:none;}}
-
 @media screen and (min-width:401px) and (max-width:500px) {
 .nav_bottom .menu {gap:30px;}
 #copyright_sign_i {display:none;}
 #copyright_sign_ii {display:none;}
 #copyright_sign_iii {display:none;}
 #sep {display:none;}}
-
 @media screen and (min-width:501px) and (max-width:600px) {
+.nav_bottom .menu {gap:40px;}
+#copyright_sign_i {display:none;}
+#copyright_sign_ii {display:block;}
+#copyright_sign_iii {display:none;}
+#sep {display:none;}}
+@media screen and (min-width:601px) and (max-width:700px) {
 .nav_bottom .menu {gap:50px;}
 #copyright_sign_i {display:none;}
 #copyright_sign_ii {display:block;}
 #copyright_sign_iii {display:none;}
 #sep {display:none;}}
-
-@media screen and (min-width:601px) and (max-width:700px) {
-.nav_bottom .menu {gap:70px;}
-#copyright_sign_i {display:none;}
-#copyright_sign_ii {display:block;}
-#copyright_sign_iii {display:none;}
-#sep {display:none;}}
-
 @media screen and (min-width:701px) and (max-width:800px) {
 .nav_bottom .menu {gap:50px;}
 #copyright_sign_i {display:none;}
 #copyright_sign_ii {display:block;}
 #copyright_sign_iii {display:none;}
 #sep {display:none;}}
-
 @media screen and (min-width:801px) and (max-width:990px) {
 .nav_bottom .menu {gap:40px;}
+.nav_bottom .menu p {font-size:14px;}
 #copyright_sign_i {display:none;}
 #copyright_sign_ii {display:none;}
 #copyright_sign_iii {display:block;}
 #sep {display:block;}}
-
 @media screen and (min-width:1000px) {
 .nav_bottom .menu {gap:50px;}
+.nav_bottom .menu p {font-size:14px;}
 #copyright_sign_i {display:none;}
 #copyright_sign_ii {display:none;}
 #copyright_sign_iii {display:block;}
 #sep {display:block;}}
-
-#copyright_sign_i, #copyright_sign_i, #copyright_sign_i {color:#fff;}
-
+#copyright_sign_i, #copyright_sign_ii, #copyright_sign_iii {color:#fff;}
 .nav-top {position: fixed;width: 100%;left: 0;display: flex;justify-content: center;align-items: center;z-index:var(--zIndex_1000);}
 .nav-top {top:15px;background: none;padding:0;margin:0;}
 .nav-top .menu {display:flex;gap: 30px;padding-bottom:0;margin:0;}
 .nav-top .menu a {color:var(--primary_color);text-decoration:none;}
-.nav-top .menu a p {font-family:var(--font_two_regular);color:var(--primary_color);text-decoration: none;font-weight:var(--font_weight_3);font-size:30px;text-transform:uppercase;padding:0;margin:0;}
+.nav-top .menu a p {font-family:var(--font_two_regular);color:var(--primary_color);user-select:none;-webkit-user-select:none;text-decoration: none;font-weight:var(--font_weight_3);font-size:30px;text-transform:uppercase;padding:0;margin:0;}
 @media screen and (max-width:400px) {
-.nav-top .menu {gap:40px;}
-.nav-top .menu a p{font-size:22px;}}
+.nav-top .menu {gap:30px;}
+.nav-top .menu a p{font-size:23px;}}
 @media screen and (min-width:401px) and (max-width:500px) {
-.nav-top .menu {gap:45px;}
-.nav-top .menu a p{font-size:22px;}}
+.nav-top .menu {gap:40px;}
+.nav-top .menu a p{font-size:23px;}}
 @media screen and (min-width:501px) and (max-width:600px) {
-.nav-top .menu {gap:70px;}
-.nav-top .menu a p{font-size:22px;}}
-@media screen and (min-width:601px) and (max-width:700px) {
-.nav-top .menu {gap:40px;}}
-@media screen and (min-width:701px) and (max-width:800px) {
-.nav-top .menu {gap:30px;}
-.nav-top .menu a p{font-size:22.6px;}}
-@media screen and (min-width:801px) and (max-width:990px) {
-.nav-top .menu {gap:30px;}
-.nav-top .menu a p{font-size:22px;}}
-@media screen and (min-width:1000px) {
 .nav-top .menu {gap:50px;}
-.nav-top .menu a p{font-size:24px;}}
+.nav-top .menu a p{font-size:23px;}}
+@media screen and (min-width:601px) and (max-width:700px) {
+.nav-top .menu {gap:80px;}}
+@media screen and (min-width:701px) and (max-width:800px) {
+.nav-top .menu {gap:80px;}
+.nav-top .menu a p{font-size:23px;}}
+@media screen and (min-width:801px) and (max-width:990px) {
+.nav-top .menu {gap:90px;}
+.nav-top .menu a p{font-size:23px;}}
+@media screen and (min-width:1000px) {
+.nav-top .menu {gap:90px;}
+.nav-top .menu a p{font-size:23px;}}
 #desk_ii {display:none;}
 .main_layout_top_nav_vii {z-index:400;display:flex;flex-direction:row;width:auto;height:30px;background:none;position:fixed;align-items:center;justify-content:space-between;top:60px;left:50%;transform:translateX(-50%);}
 .main_layout_top_nav_vii a {font-family:var(--font_two_regular);font-size:20px;text-decoration:none;color:var(--primary_color);}
 .main_layout_top_nav_vii p {font-family:var(--font_two_regular);margin:10px;color:var(--primary_color);}
 @media screen and (min-width: 600px) {
-  #desk_ii {
-    display: flex;
-  }
-  .main_layout_top_nav_vii {
-    display: none;
-  }
-}
-
+#desk_ii {display: flex;}
+.main_layout_top_nav_vii {display: none;}}
 .main-title {font-family:var(--font_two_regular);font-size: 17px;color:var(--primary_color);top: 0;left: 50%;background:none;transform: translateX(-50%);padding-top: 150px;text-align: center;text-transform:uppercase;line-height:2.2;position:absolute;width:100%;}
 form {width:90%;height:auto;position:fixed;left:50%;top:240px;transform:translate(-50%, -50%);padding:0;margin:0;}
-input[type="email"] {position:absolute;outline:none;border:1px solid var(--primary_color);background:rgba(74, 106, 64, 0.1);color:var(--primary_color);border-radius:0;width:100%;height:40px;font-family:var(--font_two_regular);margin:0 auto;font-size:17px;left:50%;transform:translateX(-50%);margin-top:20px;}
-input[type="name"] {position:absolute;outline:none;border:1px solid var(--primary_color);color:var(--primary_color);border-radius:0;font-size:17px;width:100%;height:40px;font-family:var(--font_two_regular);margin:0 auto;background:rgba(74, 106, 64, 0.1);left:50%;transform:translateX(-50%);margin-top:90px;}
+input[type="email"] {position:absolute;outline:none;border:1px solid var(--primary_color);background:#151b17;color:var(--primary_color);border-radius:0;width:100%;height:40px;font-family:var(--font_two_regular);margin:0 auto;font-size:1rem;left:50%;transform:translateX(-50%);margin-top:20px;}
+input[type="name"] {position:absolute;outline:none;border:1px solid var(--primary_color);color:var(--primary_color);border-radius:0;font-size:1rem;width:100%;height:40px;font-family:var(--font_two_regular);margin:0 auto;background:#151b17;left:50%;transform:translateX(-50%);margin-top:90px;}
 input[type="name"]::placeholder,
 input[type="email"]::placeholder {font-size:17px;color:rgba(255, 255, 255, 0.7);letter-spacing:2px;}
 input:focus {background:none;}
 .send-btn {position:absolute;font-weight:300;font-size:14.6px;width:70%;background-color:black;border:1px solid var(--primary_color);border-radius:0;font-family:var(--font_two_regular);color:var(--primary_color);margin:0 auto;padding-bottom:7px;margin-top:180px;height:40px;left:50%;transform:translateX(-50%);letter-spacing:2px;}
 .send-btn:hover {color:var(--primary_color);background:#c63527;border:none;}
+.cookie-banner {position: fixed;bottom: 0;width: 100%;background-color: #333;color: #fff;padding: 15px;text-align: left;z-index: 9999;}
+.cookie-banner p {padding:5px;margin: 0;}
+.cookie-banner button {padding: 8px 15px;cursor: pointer;color: var(--primary_color);background: none;border: 1px solid white;font-family: var(--font_two_regular);font-size: 0.8rem;}
+.cookie-banner button:hover {background-color:#c63527;}
 </style>
 </head>
 <body>
 <div class="nav-top">
 <div class="menu">
-<a href="https://khaliiil.com/">
+<a href="https://www.khaliiil.com/">
 <p>
 HOME
 </p>
 </a>
-<a href="https://shop.khaliiil.com/">
+<a href="/">
 <p>
 SHOP
 </p>
 </a>
-<a href="https://music.khaliiil.com/">
-<p>
-MUSIC
-</p>
-</a>
-<a href="https://tour.khaliiil.com/">
+<a href="https://tour.khaliiil.com">
 <p>
 TOUR
 </p>
 </a>
-<span id="desk_ii">
-<a href="https://khaliiil.com/blog">
+<a href="/blog">
 <p>
 BLOG
 </p>
 </a>
-</span>
-<span id="desk_ii">
-<a href="https://khaliiil.com/core">
+</div>
+</div>
+</div>
+<div class="nav_bottom">
+<div class="menu">
+<a href="https://connect.khaliiil.com">
 <p>
-CORE
+JOIN
 </p>
 </a>
-</span>
+<p id="sep">/</p>
+<a href="/credits">
+<p>
+CREDITS
+</p>
+</a>
+<p id="sep">/</p>
+<p id="copyright_sign_i">&copy;</p>
+<p id="copyright_sign_ii">&copy;&nbsp;2024</p>
+<p id="copyright_sign_iii">&copy;&nbsp;2024,&nbsp;KHALIL</p>
+<p id="sep">/</p>
+<a href="/terms-conditions">
+<p>
+TERMS
+</p>
+</a>
+<p id="sep">/</p>
+<a href="/privacy-policy">
+<p>
+PRIVACY
+</p>
+</a>
 </div>
 </div>
 </div>
@@ -224,31 +234,38 @@ PRIVACY
 </div>
 </div>
 </div>
-<div class="main_layout_top_nav_vii">
-<a href="https://khaliiil.com/notes">
-NOTES
-</a>
-<p>/</p>
-<a href="https://khaliiil.com/blog">
-BLOG
-</a>
+<div id="cookie-banner" class="cookie-banner">
+  <p>We use cookies to improve your experience. By using our site, you agree to our use of cookies. 
+    <a href="/privacy-policy" style="color:#ccc;" target="_blank">Learn more</a>
+  </p>
+  <button id="accept-cookies">Accept</button>
 </div>
-
 <div class="main-title">join now!<br>get all of the new updates...</div>
-
 <form action="https://formspree.io/f/mldrezaz" method="POST">
-
 <label>
 <input type="email" name="email" placeholder="Enter your email" required>
 </label>
-
 <label>
 <input type="name" name="name" placeholder="Enter your name." required>
 </label>
-
 <button class="send-btn" type="submit">SEND</button>
-
 </form>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const banner = document.getElementById("cookie-banner");
+  const acceptButton = document.getElementById("accept-cookies");
 
+  if (window.location.pathname === "/join") {
+    if (!localStorage.getItem("cookiesAccepted")) {
+      banner.style.display = "block";
+    }
+
+    acceptButton.addEventListener("click", function() {
+      localStorage.setItem("cookiesAccepted", true);
+      banner.style.display = "none";
+    });
+  }
+});
+</script>
 </body>
 </html>
