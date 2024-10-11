@@ -5,19 +5,19 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Khalil</title>
-<meta property="og:description" content="The Official Website of Khalil">
-<meta property="og:image" content="https://www.khaliiil.com/system/7FA53553-2225-48AC-B68C-89172E7E6340.jpeg">
-<meta property="og:url" content="https://www.khaliiil.com">
-<meta property="og:site_name" content="Khaliil">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="en_US">
-<meta property="og:author" content="Khalil">
-<link rel="icon" type="image/x-icon" href="https://khaliiil.com/system/FF863B55-25CD-41EA-B199-86DC40B5A73F.jpeg">    
-<meta name="URL" content="http://www.khaliiil.com">
-<meta name="twitter:title" content="Khalil">
+<meta charset="UTF-8">
+<meta name="description" content="The Official Website of Khalil">
+<link rel="icon" href="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/static/media/head/favicon.ico">
+<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/static/media/head/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/static/media/head/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/static/media/head/android-chrome-192x192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/static/media/head/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/static/media/head/android-chrome-192x192.png" sizes="192x192">  
+<meta name="URL" content="https://www.khaliiil.com">
 <meta name="twitter:description" content="The Official Website of Khalil">
 <meta property="og:title" content="Khalil">
 <meta property="og:description" content="The Official Website of Khalil">
+<meta property="og:image" content="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/static/media/head/photo-output.jpeg" />
 <meta property="og:site_name" content="Khalil">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.khaliiil.com/">
@@ -47,100 +47,88 @@
     --font_two_regular:'BB Manual Mono Regular',arial;
     --zIndex_1000:1000;
 }
-body {font-family: var(--font_all_a7);margin:0;padding:0;background-color:var(--second_bg_color);}
+body {font-family: var(--font_two_regular);margin:0;padding:0;background-color:var(--second_bg_color);}
 .nav_bottom {position: fixed;width: 100%;left: 0;display: flex;justify-content: center;align-items: center;z-index:var(--zIndex_1000);}
 .nav_bottom {bottom:16px;background: none;}
 .nav_bottom .menu {display: flex;gap: 45px;}
-.nav_bottom .menu a, .nav_bottom .menu p {text-shadow:none;font-family:var(--font_two_regular);color:var(--primary_color);text-decoration: none;font-weight:var(--font_weight_3);font-size:16.6px;text-transform:uppercase;bottom:0;padding:0;margin:0;}
+.nav_bottom .menu a, .nav_bottom .menu p {user-select:none;-webkit-user-select:none;text-shadow:none;font-family:var(--font_two_regular);color:var(--primary_color);text-decoration: none;font-weight:var(--font_weight_3);font-size:16.6px;text-transform:uppercase;bottom:0;padding:0;margin:0;}
 @media screen and (max-width:400px) {
 .nav_bottom .menu {gap:20px;}
 #copyright_sign_i {display:none;}
 #copyright_sign_ii {display:none;}
 #copyright_sign_iii {display:none;}
 #sep {display:none;}}
-
 @media screen and (min-width:401px) and (max-width:500px) {
 .nav_bottom .menu {gap:30px;}
 #copyright_sign_i {display:none;}
 #copyright_sign_ii {display:none;}
 #copyright_sign_iii {display:none;}
 #sep {display:none;}}
-
 @media screen and (min-width:501px) and (max-width:600px) {
+.nav_bottom .menu {gap:40px;}
+#copyright_sign_i {display:none;}
+#copyright_sign_ii {display:block;}
+#copyright_sign_iii {display:none;}
+#sep {display:none;}}
+@media screen and (min-width:601px) and (max-width:700px) {
 .nav_bottom .menu {gap:50px;}
 #copyright_sign_i {display:none;}
 #copyright_sign_ii {display:block;}
 #copyright_sign_iii {display:none;}
 #sep {display:none;}}
-
-@media screen and (min-width:601px) and (max-width:700px) {
-.nav_bottom .menu {gap:70px;}
-#copyright_sign_i {display:none;}
-#copyright_sign_ii {display:block;}
-#copyright_sign_iii {display:none;}
-#sep {display:none;}}
-
 @media screen and (min-width:701px) and (max-width:800px) {
 .nav_bottom .menu {gap:50px;}
 #copyright_sign_i {display:none;}
 #copyright_sign_ii {display:block;}
 #copyright_sign_iii {display:none;}
 #sep {display:none;}}
-
 @media screen and (min-width:801px) and (max-width:990px) {
 .nav_bottom .menu {gap:40px;}
+.nav_bottom .menu p {font-size:14px;}
 #copyright_sign_i {display:none;}
 #copyright_sign_ii {display:none;}
 #copyright_sign_iii {display:block;}
 #sep {display:block;}}
-
 @media screen and (min-width:1000px) {
 .nav_bottom .menu {gap:50px;}
+.nav_bottom .menu p {font-size:14px;}
 #copyright_sign_i {display:none;}
 #copyright_sign_ii {display:none;}
 #copyright_sign_iii {display:block;}
 #sep {display:block;}}
-
-#copyright_sign_i, #copyright_sign_i, #copyright_sign_i {color:#fff;}
-
+#copyright_sign_i, #copyright_sign_ii, #copyright_sign_iii {color:#fff;}
 .nav-top {position: fixed;width: 100%;left: 0;display: flex;justify-content: center;align-items: center;z-index:var(--zIndex_1000);}
 .nav-top {top:15px;background: none;padding:0;margin:0;}
 .nav-top .menu {display:flex;gap: 30px;padding-bottom:0;margin:0;}
 .nav-top .menu a {color:var(--primary_color);text-decoration:none;}
-.nav-top .menu a p {font-family:var(--font_two_regular);color:var(--primary_color);text-decoration: none;font-weight:var(--font_weight_3);font-size:30px;text-transform:uppercase;padding:0;margin:0;}
+.nav-top .menu a p {font-family:var(--font_two_regular);color:var(--primary_color);user-select:none;-webkit-user-select:none;text-decoration: none;font-weight:var(--font_weight_3);font-size:30px;text-transform:uppercase;padding:0;margin:0;}
 @media screen and (max-width:400px) {
-.nav-top .menu {gap:40px;}
-.nav-top .menu a p{font-size:22px;}}
+.nav-top .menu {gap:30px;}
+.nav-top .menu a p{font-size:23px;}}
 @media screen and (min-width:401px) and (max-width:500px) {
-.nav-top .menu {gap:45px;}
-.nav-top .menu a p{font-size:22px;}}
+.nav-top .menu {gap:40px;}
+.nav-top .menu a p{font-size:23px;}}
 @media screen and (min-width:501px) and (max-width:600px) {
-.nav-top .menu {gap:70px;}
-.nav-top .menu a p{font-size:22px;}}
+.nav-top .menu {gap:60px;}
+.nav-top .menu a p{font-size:23px;}}
 @media screen and (min-width:601px) and (max-width:700px) {
-.nav-top .menu {gap:40px;}}
+.nav-top .menu {gap:50px;}}
 @media screen and (min-width:701px) and (max-width:800px) {
-.nav-top .menu {gap:30px;}
-.nav-top .menu a p{font-size:22.6px;}}
+.nav-top .menu {gap:80px;}
+.nav-top .menu a p{font-size:23px;}}
 @media screen and (min-width:801px) and (max-width:990px) {
-.nav-top .menu {gap:30px;}
-.nav-top .menu a p{font-size:22px;}}
+.nav-top .menu {gap:80px;}
+.nav-top .menu a p{font-size:23px;}}
 @media screen and (min-width:1000px) {
-.nav-top .menu {gap:50px;}
-.nav-top .menu a p{font-size:24px;}}
+.nav-top .menu {gap:60px;}
+.nav-top .menu a p{font-size:23px;}}
 #desk_ii {display:none;}
-.main_layout_top_nav_vii {z-index:400;display:flex;flex-direction:row;width:auto;height:30px;background:none;position:fixed;align-items:center;justify-content:space-between;top:60px;left:50%;transform:translateX(-50%);}
+.main_layout_top_nav_vii {z-index:4002;display:flex;flex-direction:row;width:auto;height:30px;background:none;position:fixed;align-items:center;justify-content:space-between;top:60px;left:50%;transform:translateX(-50%);}
 .main_layout_top_nav_vii a {font-family:var(--font_two_regular);font-size:20px;text-decoration:none;color:var(--primary_color);}
 .main_layout_top_nav_vii p {font-family:var(--font_two_regular);margin:10px;color:var(--primary_color);}
 @media screen and (min-width: 600px) {
-  #desk_ii {
-    display: flex;
-  }
-  .main_layout_top_nav_vii {
-    display: none;
-  }
-}
-
+#desk_ii {display: flex;}
+.main_layout_top_nav_vii {display: none;}}
 .container_main_layout {position:absolute;width:100%;height:auto;background:var(--main_container_bg);padding:0;margin:0;overflow-x:hidden;overflow-y:scroll;justify-content:center;text-transform:var(--uppercase_tx);}
 table {margin-top:40px;width: 100%;border-collapse: collapse;font-family:var(--font_all_a7);}
 td {border: none;width: 50%;max-width:50%;padding: 5px;line-height: 0.9;font-family:var(--font_all_a7);}
@@ -165,37 +153,16 @@ HOME
 SHOP
 </p>
 </a>
-<a href="https://music.khaliiil.com/">
-<p>
-MUSIC
-</p>
-</a>
 <a href="https://tour.khaliiil.com/">
 <p>
 TOUR
 </p>
 </a>
-<span id="desk_ii">
 <a href="https://khaliiil.com/blog">
 <p>
 BLOG
 </p>
 </a>
-</span>
-<span id="desk_ii">
-<a href="https://khaliiil.com/notes">
-<p>
-NOTES
-</p>
-</a>
-</span>
-<span id="desk_ii">
-<a href="https://khaliiil.com/core">
-<p>
-CORE
-</p>
-</a>
-</span>
 </div>
 </div>
 </div>
@@ -207,7 +174,7 @@ JOIN
 </p>
 </a>
 <p id="sep">/</p>
-<a href="https://www.khaliiil.com/credits">
+<a href="/credits">
 <p>
 CREDITS
 </p>
@@ -217,13 +184,13 @@ CREDITS
 <p id="copyright_sign_ii">&copy;&nbsp;2024</p>
 <p id="copyright_sign_iii">&copy;&nbsp;2024,&nbsp;KHALIL</p>
 <p id="sep">/</p>
-<a href="https://www.khaliiil.com/terms-conditions">
+<a href="/terms-conditions">
 <p>
 TERMS
 </p>
 </a>
 <p id="sep">/</p>
-<a href="https://khaliiil.com/privacy-policy">
+<a href="/privacy-policy">
 <p>
 PRIVACY
 </p>
@@ -231,16 +198,6 @@ PRIVACY
 </div>
 </div>
 </div>
-<div class="main_layout_top_nav_vii">
-<a href="https://khaliiil.com/core">
-CORE
-</a>
-<p>/</p>
-<a href="https://khaliiil.com/blog">
-BLOG
-</a>
-</div>
-
 <div class="container_main_layout">
 <table>
 <tr>
@@ -248,7 +205,8 @@ BLOG
 </tr>
 <tr>
 <td colspan="2" style="font-size:1.4rem;line-height:1.4;padding-bottom:30px;" class="centered-text">
-THANK YOU FOR VISITING MY WEBSITE. THIS PROJECT ISN’T JUST A DISPLAY OF MY WORK; IT’S A REFLECTION OF MY JOURNEY, PASSIONS, AND THE PEOPLE WHO HAVE INSPIRED ME ALONG THE WAY. I HOPE YOU FIND VALUE AND INSPIRATION HERE.  </td>
+THANK YOU FOR VISITING MY WEBSITE. THIS PROJECT ISN’T JUST A DISPLAY OF MY WORK; IT’S A REFLECTION OF MY JOURNEY, PASSIONS, AND THE PEOPLE WHO HAVE INSPIRED ME ALONG THE WAY. I HOPE YOU FIND VALUE AND INSPIRATION HERE.
+</td>
 </tr>
 
 <tr>
