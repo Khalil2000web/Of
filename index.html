@@ -182,31 +182,38 @@ video::-webkit-media-controls-timeline-container,
 video::-webkit-media-controls-volume-slider,
 video::-webkit-media-controls-volume-slider-container {display: none !important;}
 video {width: 100%;height: auto;}
-.tit {position: relative;display: flex;justify-content: space-between;width: 100%;max-width: 800px;}
-.left-text, .right-text {color: white;position: fixed;top: 50%;transform: translateY(-50%);letter-spacing:1.2px;font-size:21.5px;z-index:1000;font-family:'BB Manual Mono Pro TX', arial;}
-.left-text {left: 0;padding-left: 20px;}
-.right-text {right: 0;padding-right: 20px;}
-@media screen and (max-width:300px) {
-.left-text {left: 0;padding-left: 40px;font-size:14px;}
-.right-text {right: 0;padding-right: 40px;font-size:17px;}}
-@media screen and (min-width:301px) and (max-width:500px) {
-.left-text {left: 0;padding-left: 80px;}
-.right-text {right: 0;padding-right: 80px;padding-right:auto;}}
+.tit {position: relative;display: flex;justify-content: space-between;width:100%;max-width:100%;}
+.left-text, .right-text {color: white;position: fixed;top: 50%;transform: translateY(-50%);letter-spacing:1.9px;font-size:20px;z-index:1000;font-family:var(--font_two_regular);}
+.left-text {left: 0;padding-left: 20px;text-align:left;}
+.right-text {right: 0;padding-right: 20px;text-align:right;}
+@media screen and (max-width:400px) {
+.left-text {left: 0;padding-left:50px;}
+.right-text {right: 0;padding-right:50px;}}
+
+@media screen and (min-width:401px) and (max-width:500px) {
+.left-text {left: 0;padding-left: 60px;}
+.right-text {right: 0;padding-right: 60px;}}
+
 @media screen and (min-width:501px) and (max-width:600px) {
-.left-text {left: 0;padding-left: 110px;padding-right:auto;}
-.right-text {right: 0;padding-right: 110px;}}
+.left-text {left: 0;padding-left: 100px;padding-right:auto;}
+.right-text {right: 0;padding-right: 100px;}}
+
 @media screen and (min-width:601px) and (max-width:700px) {
+.left-text {left: 0;padding-left: 140px;padding-right:auto;}
+.right-text {right: 0;padding-right: 140px;}}
+
+@media screen and (min-width:701px) and (max-width:800px) {
 .left-text {left: 0;padding-left: 150px;padding-right:auto;}
 .right-text {right: 0;padding-right: 150px;}}
-@media screen and (min-width:701px) and (max-width:800px) {
-.left-text {left: 0;padding-left: 180px;padding-right:auto;}
-.right-text {right: 0;padding-right: 180px;}}
+
 @media screen and (min-width:801px) and (max-width:990px) {
 .left-text {left: 0;padding-left: 200px;padding-right:auto;}
 .right-text {right: 0;padding-right: 200px;}}
+
 @media screen and (min-width:901px) {
-.left-text {left: 0;padding-left: 240px;padding-right:auto;}
-.right-text {right: 0;padding-right: 240px;}}
+.left-text {left: 0;padding-left: 310px;padding-right:auto;}
+.right-text {right: 0;padding-right: 310px;}}
+
 select {background:none;color:var(--primary_color);position:fixed;z-index:20;right:10px;top:70px;font-family:var(--font_two_regular);font-size:1rem;padding:5px 10px;outline:none;}
 
 #pipButton {position: absolute;padding:7px;bottom: 50px;right: 18px;background:none;border:none;border-radius:0;}
@@ -265,6 +272,14 @@ PRIVACY
 </a>
 </div>
 </div>
+</div>
+<div class="tit">
+<a target="_blank" href="https://tour.khaliiil.com/">
+<div class="left-text">2024</div>
+</a>
+<a target="_blank" href="https://tour.khaliiil.com/">
+<div class="right-text">WORLD WIDE</div>
+</a>
 </div>
 <div class="media-container">
 <div class="media">
@@ -470,7 +485,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var select = document.getElementById("mySelect");
     var selectedValue = select.value;
     if (selectedValue) {
-      window.location.href = selectedValue; // Redirect to the selected URL
+      window.location.href = selectedValue;
     }
   }
 </script>
