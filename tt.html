@@ -1,26 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Khalil</title>
+<meta name="description" content="The Official Website of Khalil">
+<meta property="og:description" content="The Official Tour Page of Khalil">
+<meta property="og:image" content="https://www.khaliiil.com/system/7FA53553-2225-48AC-B68C-89172E7E6340.jpeg">
+<meta property="og:url" content="https://www.khaliiil.com">
+<meta property="og:site_name" content="Khaliil">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:author" content="Khalil">
+<link rel="icon" type="image/x-icon" href="https://khaliiil.com/system/FF863B55-25CD-41EA-B199-86DC40B5A73F.jpeg">    
+<meta name="URL" content="http://www.khaliiil.com">
+<meta name="twitter:title" content="Khalil">
+<meta name="twitter:description" content="The Official Tour Page of Khalil">
+<meta property="og:title" content="Khalil">
+<meta property="og:description" content="The Official Tour Page of Khalil">
+<meta property="og:site_name" content="Khalil">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.khaliiil.com/">
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+<meta name="copyright" content="2024">
+<style>
+@font-face {font-family: 'BB Manual Mono Regular';src: url('https://raw.githubusercontent.com/Khalil2000web/Of/main/system/fonts/BBManualMonoProTX.22d272fc.ttf');}
+@font-face {font-family: 'BB Manual Mono SemiBold';src: url('https://raw.githubusercontent.com/Khalil2000web/Of/main/system/fonts/BBManualMonoProTX-SemiBold.otf');}
+:root {
+    --primary_color: #fff;
+    --secondary_color: #B2BEB5;
+    --main_container_bg: #000;
+    --second_bg_color:#000;
+    --big_font_size: 1rem;
+    --small_font_size: 0.6875rem;
+    --spacing: 10px;
+    --lowercase_tx: lowercase;
+    --uppercase_tx:uppercase;
+    --font_weight_3:300;
+    --font_weight_4:400;
+    --font_weight_5:500;
+    --font_weight_6:600;
+    --font_weight_7:700;
+    --font_weight_8:800;
+    --font_weight_9:900;
+    --font_all_a7:'BB Manual Mono SemiBold','BB Manual Mono Regular',arial;
+    --font_two_regular:'BB Manual Mono Regular',arial;
+    --zIndex_1000:1000;
+}
+body {font-family: var(--font_all_a7);margin:0;padding:0;background-color:var(--second_bg_color);}
+.nav_bottom {position: fixed;width: 100%;left: 0;display: flex;justify-content: center;align-items: center;z-index:var(--zIndex_1000);}
+.nav_bottom {bottom:16px;background: none;}
+.nav_bottom .menu {display: flex;gap: 45px;}
+.nav_bottom .menu a, .nav_bottom .menu p {user-select:none;-webkit-user-select:none;text-shadow:none;font-family:var(--font_two_regular);color:var(--primary_color);text-decoration: none;font-weight:var(--font_weight_3);font-size:16.6px;text-transform:uppercase;bottom:0;padding:0;margin:0;}
+@media screen and (max-width:400px) {
+.nav_bottom .menu {gap:20px;}
+#copyright_sign_i {display:none;}
+#copyright_sign_ii {display:none;}
+#copyright_sign_iii {display:none;}
+#sep {display:none;}}
+@media screen and (min-width:401px) and (max-width:500px) {
+.nav_bottom .menu {gap:30px;}
+#copyright_sign_i {display:none;}
+#copyright_sign_ii {display:none;}
+#copyright_sign_iii {display:none;}
+#sep {display:none;}}
+@media screen and (min-width:501px) and (max-width:600px) {
+.nav_bottom .menu {gap:40px;}
+#copyright_sign_i {display:none;}
+#copyright_sign_ii {display:block;}
+#copyright_sign_iii {display:none;}
+#sep {display:none;}}
+@media screen and (min-width:601px) and (max-width:700px) {
+.nav_bottom .menu {gap:50px;}
+#copyright_sign_i {display:none;}
+#copyright_sign_ii {display:block;}
+#copyright_sign_iii {display:none;}
+#sep {display:none;}}
+@media screen and (min-width:701px) and (max-width:800px) {
+.nav_bottom .menu {gap:50px;}
+#copyright_sign_i {display:none;}
+#copyright_sign_ii {display:block;}
+#copyright_sign_iii {display:none;}
+#sep {display:none;}}
+@media screen and (min-width:801px) and (max-width:990px) {
+.nav_bottom .menu {gap:40px;}
+.nav_bottom .menu p {font-size:14px;}
+#copyright_sign_i {display:none;}
+#copyright_sign_ii {display:none;}
+#copyright_sign_iii {display:block;}
+#sep {display:block;}}
+@media screen and (min-width:1000px) {
+.nav_bottom .menu {gap:50px;}
+.nav_bottom .menu p {font-size:14px;}
+#copyright_sign_i {display:none;}
+#copyright_sign_ii {display:none;}
+#copyright_sign_iii {display:block;}
+#sep {display:block;}}
+#copyright_sign_i, #copyright_sign_ii, #copyright_sign_iii {color:#fff;}
+.nav-top {position: fixed;width: 100%;left: 0;display: flex;justify-content: center;align-items: center;z-index:var(--zIndex_1000);}
+.nav-top {top:15px;background: none;padding:0;margin:0;}
+.nav-top .menu {display:flex;gap: 30px;padding-bottom:0;margin:0;}
+.nav-top .menu a {color:var(--primary_color);text-decoration:none;}
+.nav-top .menu a p {font-family:var(--font_two_regular);color:var(--primary_color);user-select:none;-webkit-user-select:none;text-decoration: none;font-weight:var(--font_weight_3);font-size:30px;text-transform:uppercase;padding:0;margin:0;}
+@media screen and (max-width:400px) {
+.nav-top .menu {gap:30px;}
+.nav-top .menu a p{font-size:21px;}
+.prev-btn {left: 40px;}
+.next-btn {right: 40px;}
+}
+@media screen and (min-width:401px) and (max-width:500px) {
+.nav-top .menu {gap:40px;}
+.nav-top .menu a p{font-size:22px;}
+.prev-btn {left: 60px;}
+.next-btn {right: 60px;}
+}
+@media screen and (min-width:501px) and (max-width:600px) {
+.nav-top .menu {gap:50px;}
+.nav-top .menu a p{font-size:23px;}
+.prev-btn {left: 100px;}
+.next-btn {right: 100px;}
+}
+@media screen and (min-width:601px) and (max-width:700px) {
+.nav-top .menu {gap:80px;}
+.prev-btn {left: 140px;}
+.next-btn {right: 140px;}}
+@media screen and (min-width:701px) and (max-width:800px) {
+.nav-top .menu {gap:80px;}
+.nav-top .menu a p{font-size:23px;}
+.prev-btn {left: 160px;}
+.next-btn {right: 160px;}}
+@media screen and (min-width:801px) and (max-width:990px) {
+.nav-top .menu {gap:90px;}
+.nav-top .menu a p{font-size:23px;}
+.prev-btn {left: 200px;}
+.next-btn {right: 200px;}}
+@media screen and (min-width:1000px) {
+.nav-top .menu {gap:90px;}
+.nav-top .menu a p{font-size:24px;}
+.prev-btn {left: 350px;right:auto;}
+.next-btn {right: 350px;left:auto;}}
+#desk_ii {display:none;}
+.main_layout_top_nav_vii {z-index:400;display:flex;flex-direction:row;width:auto;height:30px;background:none;position:fixed;align-items:center;justify-content:space-between;top:60px;left:50%;transform:translateX(-50%);}
+.main_layout_top_nav_vii a {font-family:var(--font_two_regular);font-size:20px;text-decoration:none;color:var(--primary_color);}
+.main_layout_top_nav_vii p {font-family:var(--font_two_regular);margin:10px;color:var(--primary_color);}
+@media screen and (min-width: 600px) {
+#desk_ii {display: flex;}
+.main_layout_top_nav_vii {display: none;}}
+.media-grid {display: flex;width: 100%;height: 100%;}
+.column {flex: 1;display: flex;flex-direction:column;gap:0; }
+.column img, .column video {width: 100%;height: auto;display: block;}
+body.no-scroll {overflow: hidden;touch-action: none;-webkit-touch-callout:none;-webkit-overflow-scrolling:none;}
+.media {cursor: pointer;position: relative;}
+.overlay-content .media {width:100%;max-width:100%;margin-bottom:150px;}
+.sound-icon {padding:5px;position: absolute;bottom: 20px;right: 20px;width: 15px;max-width:15px;height: auto;cursor: pointer;z-index: 10;-moz-user-select: none;-ms-user-select: none;user-select: none;pointer-events: auto;cursor:pointer;-webkit-user-drag: none;-moz-user-drag: none;-ms-user-drag: none;user-drag: none; }
+.sound-off-icon {display: block;}
+.sound-on-icon {display: none;}
+.overlay {display: none;position: fixed;top: 0;left: 0;width: 100%;height: 100%;background-color: rgba(0, 0, 0, 1);z-index: 9999;overflow:auto;overscroll-behavior:none;scrollbar-width: none;touch-action:pan-x pan-y;}
+.overlay::-webkit-scrollbar {display: none;}
+.overlay-content {position:absolute;width:100%;max-width:100%;height:auto;top:0;left:0;padding:0;margin:0;z-index:1000;-webkit-overflow-scrolling:touch;touch-action:auto;}
+.overlay-content video {width:100%;max-width:100%;height:auto;}
+.close-btn, .prev-btn, .next-btn {position: absolute;cursor: pointer;}
+.close-btn {right: 10px;top:10px;width:35px;height:auto;max-width:33px;z-index:10001;}
+.close-btn:hover {background:rgba(255,255,255,0.2);border-radius:5px;} 
+.prev-btn {top: 40px;width:17px;z-index:10001;padding:5px 16px;border:3px solid rgba(39, 92, 134, 0.7);user-drag:none;}
+.prev-btn:active, .prev-btn:hover, .next-btn:active, .next-btn:hover {background:rgba(0,0,0,0.2);transform: scale(0.95);}
+.next-btn {top: 40px;width:17px;z-index:10001;padding:5px 16px;border:3px solid rgba(39, 92, 134, 0.7);}
+video::-webkit-media-controls {display: none !important;}
+video::-webkit-media-controls {display: none !important;}
+video::-moz-media-controls {display: none !important;}
+video::-ms-media-controls {display: none !important;}
+video::-internal-media-controls {display: none !important;}
+video {controls: none !important;}
+video::-webkit-media-controls-start-playback-button {display: none !important;}
+video::-webkit-media-controls {display: none !important;}
+video::-webkit-media-controls {display: none !important;}
+video::-webkit-media-controls-play-button,
+video::-webkit-media-controls-start-playback-button,
+video::-webkit-media-controls-current-time-display,
+video::-webkit-media-controls-time-remaining-display,
+video::-webkit-media-controls-timeline,
+video::-webkit-media-controls-mute-button,
+video::-webkit-media-controls-toggle-closed-captions-button,
+video::-webkit-media-controls-volume-slider {display: none !important;}
+video::-webkit-media-controls-panel,
+video::-webkit-media-controls-panel *,
+video::-webkit-media-controls-panel > * {display: none !important;}
+video::-webkit-media-controls-overlay-play-button,
+video::-webkit-media-controls-overflow-button,
+video::-webkit-media-controls-enclosure,
+video::-webkit-media-controls-start-playback-button,
+video::-webkit-media-controls-background,
+video::-webkit-media-controls-timeline,
+video::-webkit-media-controls-current-time-display,
+video::-webkit-media-controls-time-remaining-display,
+video::-webkit-media-controls-mute-button,
+video::-webkit-media-controls-volume-slider-container,
+video::-webkit-media-controls-volume-slider {display: none !important;}
+video::-webkit-media-controls-fullscreen-button,
+video::-webkit-media-controls-rewind-button,
+video::-webkit-media-controls-return-to-realtime-button,
+video::-webkit-media-controls-toggle-closed-captions-button,
+video::-webkit-media-controls-toggle-closed-captions-track-list,
+video::-webkit-media-controls-toggle-play-button {display: none !important;}
+video::-webkit-media-controls-play-button,
+video::-webkit-media-controls-pause-button,
+video::-webkit-media-controls-seek-back-button,
+video::-webkit-media-controls-seek-forward-button,
+video::-webkit-media-controls-toggle-closed-captions-button,
+video::-webkit-media-controls-timeline,
+video::-webkit-media-controls-timeline-container,
+video::-webkit-media-controls-volume-slider,
+video::-webkit-media-controls-volume-slider-container {display: none !important;}
+video::-webkit-media-controls { display: none !important; }
+video::-webkit-media-controls-enclosure { display: none !important; }
+video::-webkit-media-controls-panel { display: none !important; }
+video::-moz-media-controls { display: none !important; }
+video::-ms-media-controls { display: none !important; }
+video {controls: none !important;pointer-events: none !important;user-select: none !important;}
+.video-container {position: relative;width: 100%;max-width: 640px;margin: auto;}
+video {width: 100%;height: auto;}
+.hidden_in_gallery {display: none;}
+.overlay .hidden_in_gallery {display: block;}
+.overlay.opening {display: flex;width: 98%;height: 98%;top: 50%;left: 50%;transform: translate(-50%,-50%);opacity:0.9;}
+body .overlay.opening {touch-action:none;overflow:hidden;-webkit-touch-callout:none;pointer-events:none;}
+.overlay.fullscreen {width: 100%;height: 100%;top: 50%;left: 50%;transform: translate(-50%, -50%);opacity:1;}
+.overlay.closing {width: 95%;height: 95%;top: 50%;left: 50%;transform: translate(-50%, -50%);opacity:0.2;}
+a {cursor:pointer;}
+.tit {position: relative;display: flex;justify-content: space-between;width: 100%;max-width: 800px;}
+.left-text, .right-text {color:var(--primary_color);position: fixed;top: 50%;transform: translateY(-50%);letter-spacing:1.2px;font-size:21.5px;z-index:1000;font-family:var(--font_two_regular);}
+.left-text {left: 0;padding-left: 20px;text-align:left;}
+.right-text {right: 0;margin-right: 20px;text-align:right;}
+@media screen and (max-width:300px) {
+.left-text {left: 0;padding-left: 20px;font-size:15px;}
+.right-text {right: 0;margin-right: 20px;font-size:15px;}}
+@media screen and (min-width:301px) and (max-width:500px) {
+.left-text {left: 0;padding-left: 50px;}
+.right-text {right: 0;margin-right: 50px;padding-right:auto;}}
+@media screen and (min-width:501px) and (max-width:600px) {
+.left-text {left: 0;padding-left: 90px;padding-right:auto;}
+.right-text {right: 0;margin-right: 90px;}}
+@media screen and (min-width:601px) and (max-width:700px) {
+.left-text {left: 0;padding-left: 150px;padding-right:auto;}
+.right-text {right: 0;margin-right: 150px;}}
+@media screen and (min-width:701px) and (max-width:800px) {
+.left-text {left: 0;padding-left: 150px;padding-right:auto;}
+.right-text {right: 0;margin-right: 150px;}}
+@media screen and (min-width:801px) and (max-width:990px) {
+.left-text {left: 0;padding-left: 190px;padding-right:auto;}
+.right-text {right: 0;margin-right: 190px;}}
+@media screen and (min-width:901px) {
+.left-text {left: 0;padding-left: 240px;padding-right:auto;}
+.right-text {right: 0;margin-right: 240px;}}
+.overlay.opening {display: flex;width: 98%;height: 98%;top: 50%;left: 50%;transform: translate(-50%,-50%);opacity:0.9;}
+.overlay.fullscreen {width: 100%;height: 100%;top: 50%;left: 50%;transform: translate(-50%, -50%);opacity:1;}
+.overlay.closing {width: 95%;height: 95%;top: 50%;left: 50%;transform: translate(-50%, -50%);opacity:0.2;}
+</style>
+</head>
+<body>
+<div class="nav-top">
+<div class="menu">
+<a href="https://www.khaliiil.com/">
+<p>
+HOME
+</p>
+</a>
+<a href="https://khaliiil.com/">
+<p>
+SHOP
+</p>
+</a>
+<a href="https://tour.khaliiil.com/">
+<p>
+TOUR
+</p>
+</a>
+<a href="https://khaliiil.com/blog">
+<p>
+BLOG
+</p>
+</a>
+</div>
+</div>
+</div>
+<div class="nav_bottom">
+<div class="menu">
+<a href="https://connect.khaliiil.com">
+<p>
+JOIN
+</p>
+</a>
+<p id="sep">/</p>
+<a href="https://www.khaliiil.com/credits">
+<p>
+CREDITS
+</p>
+</a>
+<p id="sep">/</p>
+<p id="copyright_sign_i">&copy;</p>
+<p id="copyright_sign_ii">&copy;&nbsp;2024</p>
+<p id="copyright_sign_iii">&copy;&nbsp;2024,&nbsp;KHALIL</p>
+<p id="sep">/</p>
+<a href="https://www.khaliiil.com/terms-conditions">
+<p>
+TERMS
+</p>
+</a>
+<p id="sep">/</p>
+<a href="https://khaliiil.com/privacy-policy">
+<p>
+PRIVACY
+</p>
+</a>
+</div>
+</div>
+</div>
+<div class="media-grid">
+<div class="column">
+
+<div class="image-container">
+<img class="media" loading="eager" alt="Switzerland_img_2024_45" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9238.jpeg"/>
+</div>
+
+<div class="image-container">
+<img class="media" loading="eager" alt="Switzerland_img_2024_44" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9274.jpeg"/>
+</div>
+
+<div class="image-container">
+<img class="media" loading="lazy" alt="Switzerland_img_2024_43" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/Gif_10i.GIF"/>
+</div>
+
+<img class="media" loading="lazy" alt="Switzerland_img_2024_42" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9271.jpeg"/>
+<img class="media" loading="lazy" alt="Switzerland_img_2024_34" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9263.jpeg"/>
+<img class="media" loading="lazy" alt="Switzerland_img_2024_33" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9262.jpeg"/>
+<img class="media" loading="lazy" alt="Switzerland_img_2024_32" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9261.jpeg"/>
+<img class="media" loading="lazy" alt="Switzerland_img_2024_31" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9260.jpeg"/>
+<img class="media" loading="lazy" alt="Switzerland_img_2024_30" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9259.jpeg"/>
+<img class="media" loading="lazy" alt="Switzerland_img_2024_28" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9241.jpeg"/>
+<img class="media" loading="lazy" alt="Switzerland_img_2024_27" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9242.jpeg"/>
+<img class="media" loading="lazy" alt="Switzerland_img_2024_26" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/Gif7_swis.GIF"/>
+<img class="media" loading="lazy" alt="Switzerland_img_2024_25" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9245.jpeg"/>
+<img class="media" loading="lazy" alt="Switzerland_img_2024_24" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/IMG_9239.jpeg"/>
+<img class="media" loading="lazy" alt="Switzerland_img_2024_23" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/IMG_9240.jpeg"/>
+<div class="media">
+<video src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/Video_2_swis_2024_tour_page_.mov" loading="lazy" alt="Switzerland_video_2024_2" autoplay loop muted playsinline controls="false"></video>
+<img src="/static/media/icon-mute.svg" class="sound-icon sound-off-icon" alt="mute">
+<img src="/static/media/icon-volume.svg" class="sound-icon sound-on-icon" style="display:none;" alt="unmute">
+</div>
+<img class="media" loading="lazy" alt="Switzerland_img_2024_22" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/Swis_gif4.GIF"/>
+<img class="media" loading="lazy" alt="Switzerland_img_2024_21" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9208.jpeg"/>
+<img class="media" loading="lazy" alt="Switzerland_img_2024_20" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9209.jpeg"/>
+<img class="media" loading="lazy" alt="Switzerland_img_2024_19" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9210.jpeg"/>
+<img class="media" loading="lazy" alt="Switzerland_img_2024_18" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9211.jpeg"/>
+<img class="media" loading="lazy" alt="Switzerland_img_2024_17" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/Swis_gif66.GIF"/>
+<img class="media" loading="lazy" alt="Switzerland_img_2024_16" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9212.jpeg"/>
+<img class="media" loading="lazy" alt="Switzerland_img_2024_15" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9213.jpeg"/>
+<img class="media" loading="lazy" alt="Switzerland_img_2024_14" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9214.jpeg"/>
+<img class="media" loading="lazy" alt="Switzerland_img_2024_13" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/Swis_gif_3.GIF"/>
+<div class="media">
+<video src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_7095.mov" loading="lazy" alt="Switzerland_video_2024_1" autoplay loop muted playsinline controls="false"></video>
+<img src="/static/media/icon-mute.svg" class="sound-icon sound-off-icon" alt="mute">
+<img src="/static/media/icon-volume.svg" class="sound-icon sound-on-icon" style="display:none;" alt="unmute">
+</div>
+<img class="media" loading="lazy" alt="Switzerland_img_2024_12" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9215.jpeg"/>
+<img class="media" loading="lazy" alt="Switzerland_img_2024_11" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9216.jpeg"/>
+<img class="media" loading="lazy" alt="Switzerland_img_2024_10" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/Swis_gif_2.GIF"/>
+<img class="media" loading="lazy" alt="Switzerland_img_2024_9" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9217.jpeg"/>
+<img class="media" loading="lazy" alt="Switzerland_img_2024_8" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9218.jpeg"/>
+<img class="media" loading="lazy" alt="Switzerland_img_2024" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/Swis_gif5.GIF"/>
+<img class="media" loading="lazy" alt="Switzerland_img_2024_7" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9219.jpeg"/>
+<img class="media" loading="lazy" alt="Switzerland_img_2024_6" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9220.jpeg"/>
+<img class="media" loading="lazy" alt="Switzerland_img_2024_41" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9270.jpeg"/>
+<img class="media" loading="lazy" alt="Switzerland_img_2024_40" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9269.jpeg"/>
+<img class="media" loading="lazy" alt="Switzerland_img_2024_39" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9268.jpeg"/>
+<img class="media" loading="lazy" alt="Switzerland_img_2024_38" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9267.jpeg"/>
+<img class="media" loading="lazy" alt="Switzerland_img_2024_37" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9266.jpeg"/>
+<img class="media" loading="lazy" alt="Switzerland_img_2024_36" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9265.jpeg"/>
+<img class="media" loading="lazy" alt="Switzerland_img_2024_35" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9264.jpeg"/>
+<img class="media" loading="lazy" alt="Switzerland_img_2024_5" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9221.jpeg"/>
+<img class="media" loading="lazy" alt="Switzerland_img_2024" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9244.jpeg"/>
+<img class="media" loading="lazy" alt="Switzerland_img_2024_4" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/GMP_U2F2ZUdIMDE%3D.gif"/>
+<img class="media" loading="lazy" alt="Switzerland_img_2024_3" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9222.jpeg"/>
+<img class="media" loading="lazy" alt="Switzerland_img_2024_2" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9223.jpeg"/>
+<img class="media" loading="lazy" alt="Switzerland_img_2024_1" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9224.jpeg"/>
+</div>
+</div>
+<div class="tit">
+<a title="TOUR" href="https://tour.khaliiil.com/">
+<div class="left-text">2024</div>
+</a>
+<a title="TOUR" href="https://tour.khaliiil.com/">
+<div class="right-text">WORLD WIDE</div>
+</a>
+</div>
+<div id="overlay" class="overlay">
+<div id="overlay-content" class="overlay-content"></div>
+<img id="close-btn" class="close-btn" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAACKElEQVR4nO3cTW4TQRBA4QISDsJPBIiLgESAJbALeMOVg/gRRHCJzEMjTQsLcOKx47gq/b6l5YVLT90zmrYmQpIkSZIkSZIkSZIkXTvgAHgAHAG3oijgNvBomuUgKgLeAT/44yvwKooBXgPflub4DryNgjEG/jV+togigMUFc7yJCsatCTj7zxClorA6RnNWYhuerheXSR2Fy2M0DyM74P4ag6SNwvoxRveiyJb1qWIU5sU4LbFljYDnwHmlKMyLMc72LCoBTmZG+bjH3/q+ym+98VHoJUaFKPQWI3MUeo2RMQq9x8gUBWPkiYIx8kTBGHmiYIw8UTBGnigYI08UjJEnCsbIEwVj5ImCMfJEwRipDoyGmd/d+4FYDyul7weFBaMMxsgTZTBGniiDMfJEGYyxQ8y7tTVIshiNqyRRjMYoiWI0RkkUozHKFjEWPjpJgg0eFGb4i9GNxBZPbY2SKEZjlCtylecZuH3lidEYZUO7POnDlZInRmOUNV3nGTiulDwxGqOssM9/h+BKyROjMUqiGE33UTLFiN6jZIzRbZTMMbqLUiFGN1GAlx28fOY4KgDuTO9XLBNjwyhfxlkju+ntnWWXPvO2rxJvlHtaNcYGUR5HdsBd4FeVbWqL7evnOGtUAHxYMcR5hRh/RVm1Uk6ikinK8kr5DLyIYoDj6QK+vDJqxWiAQ+DJ9OrY/HckF985Hk2zHK76niRJkiRJkiRJkiRJip35Dagkt/setTYhAAAAAElFTkSuQmCC" alt="Close">
+<img id="prev-btn" class="prev-btn" src="https://raw.githubusercontent.com/Khalil2000web/tour/refs/heads/main/static/media/IMG_1095.svg" alt="Previous">
+<img id="next-btn" class="next-btn" src="https://raw.githubusercontent.com/Khalil2000web/tour/refs/heads/main/static/media/IMG_1096.svg" alt="Next">
+</div>
 <script>
-  const imgElements = document.querySelectorAll('.media-grid img');
+document.addEventListener("DOMContentLoaded", function () {
+  const mediaElements = document.querySelectorAll(".media");
+  const overlay = document.querySelector(".overlay");
+  const overlayContent = document.querySelector(".overlay-content");
+  const closeButton = document.querySelector(".close-btn");
+  const prevButton = document.querySelector(".prev-btn");
+  const nextButton = document.querySelector(".next-btn");
 
-  imgElements.forEach(function(imgElement) {
-    imgElement.addEventListener('click', function (e) {
-      // Deselect all selected text/images
-      window.getSelection().removeAllRanges();
+    document.querySelectorAll(".image-container").forEach((media, index) => {
+  media.addEventListener('click', () => {
+    openOverlay(index);
+  });
+});
 
-      // Create a new selection for the clicked image only
-      const range = document.createRange();
-      range.selectNode(imgElement);
-      const selection = window.getSelection();
-      selection.addRange(range);
 
-      // Custom copy behavior
-      document.addEventListener('copy', function (event) {
-        event.preventDefault();
+    let currentIndex = 0;
+    let currentOverlayVideo = null;
 
-        const imgAltText = imgElement.alt || ' ';
-        event.clipboardData.setData('text/plain', imgAltText);
-        event.clipboardData.setData('text/html', imgAltText);
-        event.clipboardData.setData('image/png', ''); 
-      }, { once: true });
+    function disableScroll() {
+      document.body.classList.add('no-scroll');
+      document.body.style.overflow = 'hidden';
+      document.body.style.touchAction = 'none';
+    }
+
+    function enableScroll() {
+      document.body.classList.remove('no-scroll');
+      document.body.style.overflow = '';
+      document.body.style.touchAction = '';
+    }
+
+    function muteAllVideos() {
+      mediaElements.forEach(media => {
+        if (media.querySelector('video')) {
+          const video = media.querySelector('video');
+          video.muted = true;
+          const soundOffIcon = media.querySelector('.sound-off-icon');
+          const soundOnIcon = media.querySelector('.sound-on-icon');
+          soundOffIcon.style.display = 'block';
+          soundOnIcon.style.display = 'none';
+          video.play();
+        }
+      });
+    }
+
+    function playAllVideos() {
+      mediaElements.forEach(media => {
+        if (media.querySelector('video')) {
+          const video = media.querySelector('video');
+          video.play();
+        }
+      });
+    }
+
+    function checkButtons() {
+      prevButton.style.display = currentIndex === 0 ? 'none' : 'block';
+      nextButton.style.display = currentIndex === mediaElements.length - 1 ? 'none' : 'block';
+    }
+
+    function openOverlay(index) {
+      disableScroll();
+      currentIndex = index;
+      const clonedMedia = mediaElements[currentIndex].cloneNode(true);
+      overlayContent.innerHTML = '';
+      overlayContent.appendChild(clonedMedia);
+      overlay.style.display = 'flex';
+      overlay.classList.add('overlay-show');
+      overlay.classList.add('opening');
+      overlay.style.display = 'flex';
+
+      setTimeout(() => {
+        overlay.classList.remove('opening');
+        overlay.classList.add('fullscreen');
+      }, 140);
+
+      muteAllVideos();
+      checkButtons();
+
+      if (clonedMedia.querySelector('video')) {
+        const video = clonedMedia.querySelector('video');
+        const soundOffIcon = clonedMedia.querySelector('.sound-off-icon');
+        const soundOnIcon = clonedMedia.querySelector('.sound-on-icon');
+
+        video.muted = true;
+        soundOffIcon.style.display = 'block';
+        soundOnIcon.style.display = 'none';
+
+        soundOffIcon.addEventListener('click', () => {
+          video.muted = false;
+          soundOffIcon.style.display = 'none';
+          soundOnIcon.style.display = 'block';
+        });
+
+        soundOnIcon.addEventListener('click', () => {
+          video.muted = true;
+          soundOffIcon.style.display = 'block';
+          soundOnIcon.style.display = 'none';
+        });
+
+        currentOverlayVideo = video;
+        video.play();
+      }
+    }
+
+    function closeOverlay() {
+      overlay.style.display = 'none';
+      overlay.classList.remove('fullscreen');
+      overlay.classList.add('closing');
+
+      setTimeout(() => {
+        overlay.classList.remove('closing');
+        overlay.style.display = 'none';
+      }, 90);
+
+      enableScroll();
+      if (currentOverlayVideo) {
+        currentOverlayVideo.muted = true;
+        currentOverlayVideo = null;
+      }
+      playAllVideos();
+    }
+
+    mediaElements.forEach((media, index) => {
+      if (media.querySelector('video')) {
+        const video = media.querySelector('video');
+        const soundOffIcon = media.querySelector('.sound-off-icon');
+        const soundOnIcon = media.querySelector('.sound-on-icon');
+
+        video.removeAttribute('controls');
+
+        video.play();
+
+        soundOffIcon.addEventListener('click', () => {
+          muteAllVideos();
+          video.muted = false;
+          soundOffIcon.style.display = 'none';
+          soundOnIcon.style.display = 'block';
+        });
+
+        soundOnIcon.addEventListener('click', () => {
+          video.muted = true;
+          soundOffIcon.style.display = 'block';
+          soundOnIcon.style.display = 'none';
+        });
+      }
+
+      media.addEventListener('click', (event) => {
+        if (event.target !== media.querySelector('.sound-off-icon') && event.target !== media.querySelector('.sound-on-icon')) {
+          openOverlay(index);
+        }
+      });
+    });
+
+    closeButton.addEventListener('click', closeOverlay);
+
+    prevButton.addEventListener('click', () => {
+      if (currentIndex === 0) {
+        currentIndex = mediaElements.length - 1;
+      } else {
+        currentIndex -= 1;
+      }
+      openOverlay(currentIndex);
+      checkButtons();
+    });
+
+    nextButton.addEventListener('click', () => {
+      if (currentIndex === mediaElements.length - 1) {
+        currentIndex = 0;
+      } else {
+        currentIndex += 1;
+      }
+      openOverlay(currentIndex);
+      checkButtons();
     });
   });
 </script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    const closeButton = document.querySelector('.close-btn');
+
+    // Add borders to both prevBtn and nextBtn when the page loads
+    if (!localStorage.getItem('buttonClicked')) {
+        prevBtn.style.border = '3px solid #275c86';
+        nextBtn.style.border = '3px solid #275c86';
+    }
+
+    // Function to change borders to transparent when any button is clicked
+    function hideBorders() {
+        prevBtn.style.border = '3px solid transparent';
+        nextBtn.style.border = '3px solid transparent';
+        localStorage.setItem('buttonClicked', 'true');
+    }
+
+    // Add event listeners to all three buttons
+    prevBtn.addEventListener('click', hideBorders);
+    nextBtn.addEventListener('click', hideBorders);
+    closeButton.addEventListener('click', hideBorders);
+});
+</script>
+<script>
+document.addEventListener('copy', function (e) {
+  const selection = window.getSelection();
+  const imgElements = document.querySelectorAll('.image-container img'); // Get all images
+
+  imgElements.forEach(function (imgElement) {
+    // Check if the current image is part of the selection
+    if (selection.containsNode(imgElement, true)) {
+      e.preventDefault();
+
+      const imgAltText = imgElement.alt || ' '; // Get alt text or use a space
+
+      // Set clipboard data
+      e.clipboardData.setData('text/plain', imgAltText);
+      e.clipboardData.setData('text/html', imgAltText);
+      e.clipboardData.setData('image/png', ''); // You could add an actual image if needed
+    }
+  });
+}, false);
+</script>
+<style>
+.media-grid img {
+  -webkit-user-select: all;
+  -moz-user-select: all;
+  user-select: all;
+  -webkit-user-drag: none !important;
+  user-drag: none;
+  pointer-events: none;
+}
+</style>
+</body>
+</html>
