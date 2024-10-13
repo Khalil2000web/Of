@@ -1,0 +1,26 @@
+<script>
+  const imgElements = document.querySelectorAll('.media-grid img');
+
+  imgElements.forEach(function(imgElement) {
+    imgElement.addEventListener('click', function (e) {
+      // Deselect all selected text/images
+      window.getSelection().removeAllRanges();
+
+      // Create a new selection for the clicked image only
+      const range = document.createRange();
+      range.selectNode(imgElement);
+      const selection = window.getSelection();
+      selection.addRange(range);
+
+      // Custom copy behavior
+      document.addEventListener('copy', function (event) {
+        event.preventDefault();
+
+        const imgAltText = imgElement.alt || ' ';
+        event.clipboardData.setData('text/plain', imgAltText);
+        event.clipboardData.setData('text/html', imgAltText);
+        event.clipboardData.setData('image/png', ''); 
+      }, { once: true });
+    });
+  });
+</script>
