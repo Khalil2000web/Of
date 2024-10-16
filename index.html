@@ -134,7 +134,10 @@ body,html {font-family: var(--font_two_regular);margin:0;padding:0;background-co
 @media screen and (min-width:800px) {.media {width:70%;max-width:70%;height:auto;margin:0 auto;display:flex;}}
 .media {position: relative;flex: 0 0 auto;width: 100%;}
 .media-container video, .media-container img {width: 100%;height: auto;display: block;}
-.media-container video {background:#151b17;}
+.media-container video {
+    background: url('https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/static/media/LoaderLandscape.GIF') no-repeat center center;
+background-size: 100% auto;
+}
 .sound-icon {position: absolute;padding:7px;bottom: 18px;right: 18px;width:15px;max-width:15px;height: auto;cursor: pointer;z-index: 10;-moz-user-select: none;-ms-user-select: none;-webkit-user-select:none;user-select: none;pointer-events: auto;-webkit-user-drag: none;-moz-user-drag: none;-ms-user-drag: none;user-drag: none;touch-action:none;-webkit-touch-callout:none;}
 .sound-off-icon {display: block;}
 video::-webkit-media-controls {display: none !important;}
