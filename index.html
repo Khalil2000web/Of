@@ -221,6 +221,10 @@ video {width: 100%;height: auto;}
 select {background:none;color:var(--primary_color);position:fixed;z-index:20;right:10px;top:70px;font-family:var(--font_two_regular);font-size:1rem;padding:5px 10px;outline:none;}
 #pipButton {position: absolute;padding:7px;bottom: 50px;right: 18px;background:none;border:none;border-radius:0;}
 .pipImg {width:15px;max-width:15px;height: auto;cursor: pointer;z-index: 10;-moz-user-select: none;-ms-user-select: none;user-select: none;pointer-events: auto;-webkit-user-drag: none;-moz-user-drag: none;-ms-user-drag: none;user-drag: none;touch-action:none;-webkit-touch-action:none;}
+.play-btn, .spinner {position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);z-index: 5;display: none;padding:0;margin:0;}
+.play-btn {width: 80px;height: 80px;background: url('/static/media/undefined.svg') no-repeat center;background-size: contain;cursor: pointer;}
+.spinner {border: 6px solid rgba(255, 255, 255, 0.3);border-top: 6px solid white;border-radius: 50%;width: 40px;height: 40px;animation: spin 1s linear infinite;}
+@keyframes spin {0% { transform: rotate(0deg); }100% { transform: rotate(360deg); }}
 </style>
 </head>
 <body>
@@ -290,11 +294,12 @@ PRIVACY
 <img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/Home_media_image_gallery/Rip20241011-2024Image.JPEG" loading="eager" alt="media_home_9029" />
 </div>
 <div class="media">
-<video src="https://ik.imagekit.io/xlretjwgk/Video_bday-videohomepagevideo20248920242992024.mov" alt="media_home_9002" autoplay loop muted playsinline controls="false"></video>
-<img src="static/media/icon-mute.svg" class="sound-icon sound-off-icon" alt="Toggle Sound">
-<img src="/static/media/icon-volume.svg" style="display:none;" class="sound-icon sound-on-icon" alt="unmute">
+<video src="https://ik.imagekit.io/xlretjwgk/Video_bday-videohomepagevideo20248920242992024.mov" alt="media_home_9002" autoplay loop muted playsinline></video>
+<img src="https://khaliiil.com/static/media/icon-mute.svg" class="sound-icon sound-off-icon" alt="Toggle Sound">
+<img src="https://khaliiil.com/static/media/icon-volume.svg" style="display:none;" class="sound-icon sound-on-icon" alt="unmute">
+<div class="play-btn"></div>
+<div class="spinner"></div>
 </div>
-
 <div class="med">
 <img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9024.webp" loading="lazy" alt="media_home_9030" />
 <img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9023.webp" loading="lazy" alt="media_home_9029" />
@@ -369,6 +374,8 @@ PRIVACY
 <video src="https://ik.imagekit.io/ybebp19uwa/IMG_0844.MOV?updatedAt=1722425583838" alt="media_home_9002" autoplay loop muted playsinline controls="false"></video>
 <img src="/static/media/icon-mute.svg" class="sound-icon sound-off-icon" alt="Toggle Sound">
 <img src="/static/media/icon-volume.svg" style="display:none;" class="sound-icon sound-on-icon" alt="unmute">
+<div class="play-btn"></div>
+<div class="spinner"></div>
 </div>
 
 <div class="med">
@@ -416,8 +423,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
   function muteAllVideos() {
     mediaElements.forEach(media => {
-      if (media.querySelector('video')) {
-        const video = media.querySelector('video');
+      const video = media.querySelector('video');
+      if (video) {
         video.muted = true;
         const soundOffIcon = media.querySelector('.sound-off-icon');
         const soundOnIcon = media.querySelector('.sound-on-icon');
@@ -428,28 +435,51 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 
-  mediaElements.forEach((media) => {
-    if (media.querySelector('video')) {
-      const video = media.querySelector('video');
-      const soundOffIcon = media.querySelector('.sound-off-icon');
-      const soundOnIcon = media.querySelector('.sound-on-icon');
+  mediaElements.forEach(media => {
+    const video = media.querySelector('video');
+    const soundOffIcon = media.querySelector('.sound-off-icon');
+    const soundOnIcon = media.querySelector('.sound-on-icon');
+    const playBtn = media.querySelector('.play-btn');
+    const spinner = media.querySelector('.spinner');
 
-      video.removeAttribute('controls');
-      video.play();
+    video.removeAttribute('controls');
+    
+    video.addEventListener('waiting', () => {
+      spinner.style.display = 'block';
+    });
 
-      soundOffIcon.addEventListener('click', () => {
-        muteAllVideos();
-        video.muted = false;
-        soundOffIcon.style.display = 'none';
-        soundOnIcon.style.display = 'block';
-      });
+    video.addEventListener('canplay', () => {
+      spinner.style.display = 'none';
+    });
 
-      soundOnIcon.addEventListener('click', () => {
-        video.muted = true;
-        soundOffIcon.style.display = 'block';
-        soundOnIcon.style.display = 'none';
-      });
-    }
+    playBtn.style.display = 'block';
+    playBtn.addEventListener('click', () => {
+      if (video.paused) {
+        video.play();
+        playBtn.style.display = 'none';
+      }
+    });
+
+    video.addEventListener('pause', () => {
+      playBtn.style.display = 'block';
+    });
+
+    video.addEventListener('play', () => {
+      playBtn.style.display = 'none';
+    });
+
+    soundOffIcon.addEventListener('click', () => {
+      muteAllVideos();
+      video.muted = false;
+      soundOffIcon.style.display = 'none';
+      soundOnIcon.style.display = 'block';
+    });
+
+    soundOnIcon.addEventListener('click', () => {
+      video.muted = true;
+      soundOffIcon.style.display = 'block';
+      soundOnIcon.style.display = 'none';
+    });
   });
 });
 </script>
