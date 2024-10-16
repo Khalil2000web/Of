@@ -297,7 +297,7 @@ PRIVACY
 <video src="https://ik.imagekit.io/xlretjwgk/Video_bday-videohomepagevideo20248920242992024.mov" alt="media_home_9002" autoplay loop muted playsinline></video>
 <img src="https://khaliiil.com/static/media/icon-mute.svg" class="sound-icon sound-off-icon" alt="Toggle Sound">
 <img src="https://khaliiil.com/static/media/icon-volume.svg" style="display:none;" class="sound-icon sound-on-icon" alt="unmute">
-<div class="play-btn"></div>
+<div class="play-btn" style="display: block;"></div>
 <div class="spinner"></div>
 </div>
 <div class="med">
@@ -374,7 +374,7 @@ PRIVACY
 <video src="https://ik.imagekit.io/ybebp19uwa/IMG_0844.MOV?updatedAt=1722425583838" alt="media_home_9002" autoplay loop muted playsinline controls="false"></video>
 <img src="/static/media/icon-mute.svg" class="sound-icon sound-off-icon" alt="Toggle Sound">
 <img src="/static/media/icon-volume.svg" style="display:none;" class="sound-icon sound-on-icon" alt="unmute">
-<div class="play-btn"></div>
+<div class="play-btn" style="display: block;"></div>
 <div class="spinner"></div>
 </div>
 
@@ -387,10 +387,9 @@ PRIVACY
 const video = document.getElementById('myVideo');
 const pipButton = document.getElementById('pipButton');
 
-// Event listener to toggle Picture-in-Picture mode
 pipButton.addEventListener('click', async () => {
     try {
-        // If the video is already in Picture-in-Picture, exit PiP
+
         if (document.pictureInPictureElement) {
             await document.exitPictureInPicture();
         } else {
@@ -402,7 +401,6 @@ pipButton.addEventListener('click', async () => {
     }
 });
 
-// Update the button text when entering and leaving PiP
 video.addEventListener('enterpictureinpicture', () => {
     pipButton.textContent = 'Exit Picture-in-Picture';
 });
@@ -411,7 +409,6 @@ video.addEventListener('leavepictureinpicture', () => {
     pipButton.textContent = 'Enter Picture-in-Picture';
 });
 
-// Optional: Check if PiP is supported and hide the button if not
 if (!document.pictureInPictureEnabled) {
     pipButton.style.display = 'none';  // Hide the PiP button if unsupported
     console.log('Picture-in-Picture is not supported by your browser.');
@@ -420,7 +417,6 @@ if (!document.pictureInPictureEnabled) {
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const mediaElements = document.querySelectorAll('.media');
-
   function muteAllVideos() {
     mediaElements.forEach(media => {
       const video = media.querySelector('video');
@@ -434,24 +430,19 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   }
-
   mediaElements.forEach(media => {
     const video = media.querySelector('video');
     const soundOffIcon = media.querySelector('.sound-off-icon');
     const soundOnIcon = media.querySelector('.sound-on-icon');
     const playBtn = media.querySelector('.play-btn');
     const spinner = media.querySelector('.spinner');
-
     video.removeAttribute('controls');
-    
     video.addEventListener('waiting', () => {
       spinner.style.display = 'block';
     });
-
     video.addEventListener('canplay', () => {
       spinner.style.display = 'none';
     });
-
     playBtn.style.display = 'block';
     playBtn.addEventListener('click', () => {
       if (video.paused) {
@@ -459,22 +450,18 @@ document.addEventListener('DOMContentLoaded', function() {
         playBtn.style.display = 'none';
       }
     });
-
     video.addEventListener('pause', () => {
       playBtn.style.display = 'block';
     });
-
     video.addEventListener('play', () => {
       playBtn.style.display = 'none';
     });
-
     soundOffIcon.addEventListener('click', () => {
       muteAllVideos();
       video.muted = false;
       soundOffIcon.style.display = 'none';
       soundOnIcon.style.display = 'block';
     });
-
     soundOnIcon.addEventListener('click', () => {
       video.muted = true;
       soundOffIcon.style.display = 'block';
