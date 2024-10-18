@@ -1,3 +1,4 @@
 User-agent: *
 Disallow: /static/media/icon-volume.svg
 Disallow: /static/media/icon-mute.svg
+Disallow: /static/media/undefined.svg
