@@ -48,7 +48,7 @@
     --font_two_regular:'BB Manual Mono Regular',arial;
     --zIndex_1000:1000;
 }
-body,html {font-family: var(--font_two_regular);margin:0;padding:0;background-color:var(--second_bg_color);}
+body,html {font-family: var(--font_two_regular);margin:0;padding:0;background-color:var(--second_bg_color);padding-top:30px;}
 .nav_bottom {position: fixed;width: 100%;left: 50%;transform:translateX(-50%);display: flex;justify-content: center;align-items: center;z-index:var(--zIndex_1000);}
 .nav_bottom {bottom:16px;background: none;}
 .nav_bottom .menu {display: flex;gap: 45px;}
@@ -107,24 +107,24 @@ body,html {font-family: var(--font_two_regular);margin:0;padding:0;background-co
 .nav-top .menu a {color:var(--primary_color);text-decoration:none;}
 .nav-top .menu a p {font-family:var(--font_two_regular);color:var(--primary_color);user-select:none;-webkit-user-select:none;text-decoration: none;font-weight:var(--font_weight_3);font-size:30px;text-transform:uppercase;padding:0;margin:0;}
 @media screen and (max-width:400px) {
-.nav-top .menu {gap:50px;}
+.nav-top .menu {gap:30px;}
 .nav-top .menu a p{font-size:23px;}}
 @media screen and (min-width:401px) and (max-width:500px) {
-.nav-top .menu {gap:60px;}
+.nav-top .menu {gap:40px;}
 .nav-top .menu a p{font-size:23px;}}
 @media screen and (min-width:501px) and (max-width:600px) {
-.nav-top .menu {gap:120px;}
+.nav-top .menu {gap:70px;}
 .nav-top .menu a p{font-size:23px;}}
 @media screen and (min-width:601px) and (max-width:700px) {
-.nav-top .menu {gap:180px;}}
+.nav-top .menu {gap:110px;}}
 @media screen and (min-width:701px) and (max-width:800px) {
-.nav-top .menu {gap:190px;}
+.nav-top .menu {gap:90px;}
 .nav-top .menu a p{font-size:23px;}}
 @media screen and (min-width:801px) and (max-width:990px) {
-.nav-top .menu {gap:200px;}
+.nav-top .menu {gap:90px;}
 .nav-top .menu a p{font-size:23px;}}
 @media screen and (min-width:1000px) {
-.nav-top .menu {gap:260px;}
+.nav-top .menu {gap:90px;}
 .nav-top .menu a p{font-size:23px;}}
 #desk_ii {display:none;}
 .main_layout_top_nav_vii {z-index:4002;display:flex;flex-direction:row;width:auto;height:30px;background:none;position:fixed;align-items:center;justify-content:space-between;top:60px;left:50%;transform:translateX(-50%);}
@@ -168,19 +168,7 @@ body,html {font-family: var(--font_two_regular);margin:0;padding:0;background-co
 .play-btn, .spinner {position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);z-index: 5;display: none;}
 .play-btn {width:100px;height:100px;border-radius: 50%;border:1px solid #fff;background: url('https://khaliiil.com/static/media/undefined.svg') no-repeat center;background-size: contain;cursor: pointer;}
 .spinner {border:6px solid rgba(255, 255, 255, 0.3);border-top: 6px solid white;border-radius: 50%;width: 60px;height: 60px;transform-origin: center;animation: spin 1s linear infinite;margin:-30px 0 0 -30px;opacity:.85;text-align:left;box-sizing:border-box;background-clip:padding-box;}
-@keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-    
-video::-webkit-media-controls-enclosure {
-    display: none !important;}\
-video::-webkit-media-controls-start-playback-button {
-    display: none;
-}
+@keyframes spin {from {transform: rotate(0deg);}to {transform: rotate(360deg);}}
 </style>
 </head>
 <body><div class="nav-top">
@@ -193,6 +181,11 @@ TOUR
 <a href="/">
 <p>
 SHOP
+</p>
+</a>
+<a href="/carter">
+<p>
+CARTER
 </p>
 </a>
 <a href="/blog">
