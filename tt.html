@@ -2,406 +2,208 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Khalil</title>
-<meta charset="UTF-8">
-<meta name="description" content="The Official Website of Khalil">
-<link rel="icon" href="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/static/media/head/favicon.ico">
-<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/static/media/head/favicon-16x16.png" sizes="16x16">
-<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/static/media/head/favicon-32x32.png" sizes="32x32">
-<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/static/media/head/android-chrome-192x192.png" sizes="192x192">
-<link rel="apple-touch-icon" href="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/static/media/head/apple-touch-icon.png" sizes="180x180">
-<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/static/media/head/android-chrome-192x192.png" sizes="192x192">  
-<meta name="URL" content="https://www.khaliiil.com">
-<meta name="twitter:description" content="The Official Website of Khalil">
-<meta property="og:title" content="Khalil">
-<meta property="og:description" content="The Official Website of Khalil">
-<meta property="og:image" content="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/static/media/head/photo-output.jpeg" />
-<meta property="og:site_name" content="Khalil">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://www.khaliiil.com/">
-<meta http-equiv="Content-type" content="text/html; charset=utf-8">
-<meta name="copyright" content="2024">
+<title>Document</title>
 <style>
-@font-face {font-family: 'BB Manual Mono Regular';src: url('https://raw.githubusercontent.com/Khalil2000web/Of/main/system/fonts/BBManualMonoProTX.22d272fc.ttf');}
-@font-face {font-family: 'BB Manual Mono SemiBold';src: url('https://raw.githubusercontent.com/Khalil2000web/Of/main/system/fonts/BBManualMonoProTX-SemiBold.otf');}
-:root {
-    --primary_color: #fff;
-    --secondary_color: #B2BEB5;
-    --main_container_bg: #000;
-    --second_bg_color:#000;
-    --big_font_size: 1rem;
-    --small_font_size: 0.6875rem;
-    --spacing: 10px;
-    --lowercase_tx: lowercase;
-    --uppercase_tx:uppercase;
-    --font_weight_3:300;
-    --font_weight_4:400;
-    --font_weight_5:500;
-    --font_weight_6:600;
-    --font_weight_7:700;
-    --font_weight_8:800;
-    --font_weight_9:900;
-    --font_all_a7:'BB Manual Mono SemiBold','BB Manual Mono Regular',arial;
-    --font_two_regular:'BB Manual Mono Regular',arial;
-    --zIndex_1000:1000;
+@font-face {font-family: 'BB Manual Mono Regular';src: url('https://tour.khaliiil.com/static/fonts/BBManualMonoProTX-Regular.otf');}
+body {
+  margin:0;
+  padding:0;
+  color:#000;
+  font-family:'BB Manual Mono Regular';
 }
-body,html {font-family: var(--font_two_regular);margin:0;padding:0;background-color:var(--second_bg_color);}
-.nav_bottom {position: fixed;width: 100%;left: 50%;transform:translateX(-50%);display: flex;justify-content: center;align-items: center;z-index:var(--zIndex_1000);}
-.nav_bottom {bottom:16px;background: none;}
-.nav_bottom .menu {display: flex;gap: 45px;}
-.nav_bottom .menu a, .nav_bottom .menu p {line-height:1.6;align-self:end;word-wrap:break-word;user-select:none;-webkit-user-select:none;text-shadow:none;font-family:var(--font_two_regular);color:var(--primary_color);text-decoration: none;font-weight:var(--font_weight_3);font-size:16.6px;text-transform:uppercase;bottom:0;padding:0;margin:0;}
-@media screen and (max-width:400px) {
-.nav_bottom .menu {gap:20px;}
-.nav_bottom {max-width:50%;}
-#copyright_sign_i {display:none;}
-#copyright_sign_ii {display:none;}
-#copyright_sign_iii {display:none;}
-#sep {display:none;}}
-@media screen and (min-width:401px) and (max-width:500px) {
-.nav_bottom .menu {gap:30px;}
-.nav_bottom {max-width:70%;}
-#copyright_sign_i {display:none;}
-#copyright_sign_ii {display:none;}
-#copyright_sign_iii {display:none;}
-#sep {display:none;}}
-@media screen and (min-width:501px) and (max-width:600px) {
-.nav_bottom .menu {gap:40px;}
-#copyright_sign_i {display:none;}
-#copyright_sign_ii {display:none;}
-#copyright_sign_iii {display:none;}
-#sep {display:none;}}
-@media screen and (min-width:601px) and (max-width:700px) {
-.nav_bottom .menu {gap:50px;}
-#copyright_sign_i {display:none;}
-#copyright_sign_ii {display:none;}
-#copyright_sign_iii {display:none;}
-#sep {display:none;}}
-@media screen and (min-width:701px) and (max-width:800px) {
-.nav_bottom .menu {gap:50px;}
-#copyright_sign_i {display:none;}
-#copyright_sign_ii {display:none;}
-#copyright_sign_iii {display:none;}
-#sep {display:none;}}
-@media screen and (min-width:801px) and (max-width:990px) {
-.nav_bottom .menu {gap:40px;}
-.nav_bottom .menu p {font-size:14px;}
-#copyright_sign_i {display:none;}
-#copyright_sign_ii {display:none;}
-#copyright_sign_iii {display:block;}
-#sep {display:block;}}
-@media screen and (min-width:1000px) {
-.nav_bottom .menu {gap:50px;}
-.nav_bottom .menu p {font-size:14px;}
-#copyright_sign_i {display:none;}
-#copyright_sign_ii {display:none;}
-#copyright_sign_iii {display:block;}
-#sep {display:block;}}
-#copyright_sign_i, #copyright_sign_ii, #copyright_sign_iii {color:#fff;}
-.nav-top {position: fixed;width: 100%;left: 0;display: flex;justify-content: center;align-items: center;z-index:var(--zIndex_1000);}
-.nav-top {top:15px;background: none;padding:0;margin:0;}
-.nav-top .menu {display:flex;gap: 30px;padding-bottom:0;margin:0;}
-.nav-top .menu a {color:var(--primary_color);text-decoration:none;}
-.nav-top .menu a p {font-family:var(--font_two_regular);color:var(--primary_color);user-select:none;-webkit-user-select:none;text-decoration: none;font-weight:var(--font_weight_3);font-size:30px;text-transform:uppercase;padding:0;margin:0;}
-@media screen and (max-width:400px) {
-.nav-top .menu {gap:50px;}
-.nav-top .menu a p{font-size:23px;}}
-@media screen and (min-width:401px) and (max-width:500px) {
-.nav-top .menu {gap:60px;}
-.nav-top .menu a p{font-size:23px;}}
-@media screen and (min-width:501px) and (max-width:600px) {
-.nav-top .menu {gap:120px;}
-.nav-top .menu a p{font-size:23px;}}
-@media screen and (min-width:601px) and (max-width:700px) {
-.nav-top .menu {gap:180px;}}
-@media screen and (min-width:701px) and (max-width:800px) {
-.nav-top .menu {gap:190px;}
-.nav-top .menu a p{font-size:23px;}}
-@media screen and (min-width:801px) and (max-width:990px) {
-.nav-top .menu {gap:200px;}
-.nav-top .menu a p{font-size:23px;}}
-@media screen and (min-width:1000px) {
-.nav-top .menu {gap:260px;}
-.nav-top .menu a p{font-size:23px;}}
-#desk_ii {display:none;}
-.main_layout_top_nav_vii {z-index:4002;display:flex;flex-direction:row;width:auto;height:30px;background:none;position:fixed;align-items:center;justify-content:space-between;top:60px;left:50%;transform:translateX(-50%);}
-.main_layout_top_nav_vii a {font-family:var(--font_two_regular);font-size:20px;text-decoration:none;color:var(--primary_color);}
-.main_layout_top_nav_vii p {font-family:var(--font_two_regular);margin:10px;color:var(--primary_color);}
-@media screen and (min-width: 600px) {
-#desk_ii {display: flex;}
-.main_layout_top_nav_vii {display: none;}}
-.media-container {width: 100%;height:auto;display: flex;flex-direction: column;overflow-y: auto;overflow-x:hidden;position:absolute;z-index: 1;padding:0;margin:0 auto;}
-@media screen and (min-width:800px) {.media {width:70%;max-width:70%;height:auto;margin:0 auto;display:flex;}}
-.media {position: relative;flex: 0 0 auto;width: 100%;}
-.media-container video, .media-container img {width: 100%;height: auto;display: block;}
-.media-container video {background: #151b17;}
-.sound-icon {position: absolute;padding:7px;bottom: 18px;right: 18px;width:15px;max-width:15px;height: auto;cursor: pointer;z-index: 10;-moz-user-select: none;-ms-user-select: none;-webkit-user-select:none;user-select: none;pointer-events: auto;-webkit-user-drag: none;-moz-user-drag: none;-ms-user-drag: none;user-drag: none;touch-action:none;-webkit-touch-callout:none;}
-.sound-off-icon {display: block;}
-video::-webkit-media-controls {display: none !important;}
-video::-webkit-media-controls {display: none !important;}
-video::-moz-media-controls {display: none !important;}
-video::-ms-media-controls {display: none !important;}
-video::-internal-media-controls {display: none !important;}
-video {controls: none !important;}
-video::-webkit-media-controls-start-playback-button {display: none !important;}
-video::-webkit-media-controls {display: none !important;}
-video::-webkit-media-controls {display: none !important;}
-video::-webkit-media-controls-play-button,
-video::-webkit-media-controls-start-playback-button,
-video::-webkit-media-controls-current-time-display,
-video::-webkit-media-controls-time-remaining-display,
-video::-webkit-media-controls-timeline,
-video::-webkit-media-controls-mute-button,
-video::-webkit-media-controls-toggle-closed-captions-button,
-video::-webkit-media-controls-volume-slider {display: none !important;}
-video::-webkit-media-controls-panel,
-video::-webkit-media-controls-panel *,
-video::-webkit-media-controls-panel > * {display: none !important;}
-video::-webkit-media-controls-overlay-play-button,
-video::-webkit-media-controls-overflow-button,
-video::-webkit-media-controls-enclosure,
-video::-webkit-media-controls-start-playback-button,
-video::-webkit-media-controls-background,
-video::-webkit-media-controls-timeline,
-video::-webkit-media-controls-current-time-display,
-video::-webkit-media-controls-time-remaining-display,
-video::-webkit-media-controls-mute-button,
-video::-webkit-media-controls-volume-slider-container,
-video::-webkit-media-controls-volume-slider {display: none !important;}
-video::-webkit-media-controls-fullscreen-button,
-video::-webkit-media-controls-rewind-button,
-video::-webkit-media-controls-return-to-realtime-button,
-video::-webkit-media-controls-toggle-closed-captions-button,
-video::-webkit-media-controls-toggle-closed-captions-track-list,
-video::-webkit-media-controls-toggle-play-button {display: none !important;}
-video::-webkit-media-controls-play-button,
-video::-webkit-media-controls-pause-button,
-video::-webkit-media-controls-seek-back-button,
-video::-webkit-media-controls-seek-forward-button,
-video::-webkit-media-controls-toggle-closed-captions-button,
-video::-webkit-media-controls-timeline,
-video::-webkit-media-controls-timeline-container,
-video::-webkit-media-controls-volume-slider,
-video::-webkit-media-controls-volume-slider-container {display: none !important;}
-video {width: 100%;height: auto;}
-.tit {position: relative;display: flex;justify-content: space-between;width:100%;max-width:100%;}
-.left-text, .right-text {color: white;position: fixed;top: 50%;transform: translateY(-50%);letter-spacing:1.9px;font-size:20px;z-index:1000;font-family:var(--font_two_regular);}
-.left-text {left: 0;padding-left: 20px;text-align:left;}
-.right-text {right: 0;margin-right: 20px;text-align:right;}
-@media screen and (max-width:400px) {
-.left-text {left: 0;padding-left:50px;}
-.right-text {right: 0;margin-right:50px;}}
 
-@media screen and (min-width:401px) and (max-width:500px) {
-.left-text {left: 0;padding-left: 70px;}
-.right-text {right: 0;margin-right: 70px;}}
+.menu-btn {
+  position:fixed;
+  top:30px;
+  right:30px;
+  background:none;
+  color:#fff;
+  border:none;
+  outline:none;
+  border-radius:0;
+  font-size:1.2rem;
+  z-index:100;
+  margin:0;
+  padding:0;
+}
+.menu-btn img {
+  width:30px;
+  height:auto;
+  max-width:30px;
+}
 
-@media screen and (min-width:501px) and (max-width:600px) {
-.left-text {left: 0;padding-left: 100px;padding-right:auto;}
-.right-text {right: 0;margin-right: 100px;}}
+.menu {
+  position:fixed;
+  height:100%;
+  width:70%;
+  margin:0;
+  padding:20px;
+  align-items:center;
+  justify-content:center;
+  background:#000;
+  border-left:2px solid #fff;
+  top:0;
+  right:-100%;
+  z-index:1000;
+  transition: right 0.3s ease;
+}
+.menu.open {
+  right: 0;
+}
 
-@media screen and (min-width:601px) and (max-width:700px) {
-.left-text {left: 0;padding-left: 140px;padding-right:auto;}
-.right-text {right: 0;margin-right: 140px;}}
+.close {
+  position:absolute;
+  top:20px;
+  right:20px;
+  background:none;
+  color:#fff;
+  border:none;
+  outline:none;
+  border-radius:0;
+  font-size:1.2rem;
+  padding:0;
+  margin:0;
+}
+.close img {
+  width:50px;
+  height:auto;
+  max-width:50px;
+}
 
-@media screen and (min-width:701px) and (max-width:800px) {
-.left-text {left: 0;padding-left: 150px;padding-right:auto;}
-.right-text {right: 0;margin-right: 150px;}}
+.menu .links {
+  display:flex;
+  padding:0;
+  margin:0 auto;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  margin-top:80px;
+}
 
-@media screen and (min-width:801px) and (max-width:990px) {
-.left-text {left: 0;padding-left: 200px;padding-right:auto;}
-.right-text {right: 0;margin-right: 200px;}}
+.menu .links a {
+  color:#FFf;
+  text-align:center;
+  text-decoration:none;
+  margin-bottom:30px;
+  font-size:1.4rem;
+  width:100%;
 
-@media screen and (min-width:901px) {
-.left-text {left: 0;padding-left: 310px;padding-right:auto;}
-.right-text {right: 0;margin-right: 310px;}}
-select {background:none;color:var(--primary_color);position:fixed;z-index:20;right:10px;top:70px;font-family:var(--font_two_regular);font-size:1rem;padding:5px 10px;outline:none;}
-#pipButton {position: absolute;padding:7px;bottom: 50px;right: 18px;background:none;border:none;border-radius:0;}
-.pipImg {width:15px;max-width:15px;height: auto;cursor: pointer;z-index: 10;-moz-user-select: none;-ms-user-select: none;user-select: none;pointer-events: auto;-webkit-user-drag: none;-moz-user-drag: none;-ms-user-drag: none;user-drag: none;touch-action:none;-webkit-touch-action:none;}
-.play-btn, .spinner {position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);z-index: 5;display: none;padding:0;margin:0;}
-.play-btn {width: 80px;height: 80px;background: url('/static/media/undefined.svg') no-repeat center;background-size: contain;cursor: pointer;}
-.spinner {border: 6px solid rgba(255, 255, 255, 0.3);border-top: 6px solid white;border-radius: 50%;width: 40px;height: 40px;animation: spin 1s linear infinite;}
-@keyframes spin {0% { transform: rotate(0deg); }100% { transform: rotate(360deg); }}
+}
+.menu .links a:hover {color:#ccc;background:rgba(255,255,854,0.010000000000);}
+.overlay {
+  position:fixed;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.4);
+  z-index:500;
+  top:0;
+  left:-100%;
+  transition: left 0.3s ease;
+}
+.overlay.open {
+  left:0;
+}
+
+h2 {
+  text-align:center;
+  padding-top:80px;
+  font-family:'BB Manual Mono Regular';
+  width:100%;
+  font-size:1.6rem;
+  font-weight:600;
+}
+
+p {
+  font-size:0.7rem;
+  font-weight:300;
+  padding:15px;
+  line-height:1.5;
+}
+
+.footer {
+  position:absolute;
+  width:100%;
+  height:40px;
+  justify-content:center;
+  align-items:center;
+  display:flex;
+  margin:0;
+  padding:0;
+  flex-direction:row;
+  background:none;
+  gap:15px;
+  max-width:70%;
+  bottom:30px;
+  left:50%;
+  transform:translateX(-50%);
+}
+
+.footer a {
+  color:#fff;
+  text-align:left;
+  text-decoration:none;
+  word-wrap:break-word;
+  font-size:14px;
+  padding-bottom:60px;
+  align-self:end;
+}
+
+svg {display:block;}
+.me {width:30px;color:black;display:block;}
+.cc {width:50px;}
 </style>
 </head>
 <body>
-<div class="nav-top">
+<button class="menu-btn" type="button" onclick="openMenu()"><svg viewBox="0 0 24 24" aria-hidden="true" class="me">
+  <path fill="black" d="M3 5a1 1 0 100 2h18a1 1 0 100-2H3zm0 6a1 1 0 100 2h18a1 1 0 100-2H3zm0 6a1 1 0 100 2h18a1 1 0 100-2H3z"></path>
+</svg>
+
+</button>
+<div class="overlay"></div>
 <div class="menu">
-<a href="https://tour.khaliiil.com/">
-<p>
-TOUR
-</p>
-</a>
-<a href="/">
-<p>
-SHOP
-</p>
-</a>
-<a href="/blog">
-<p>
-BLOG
-</p>
-</a>
-</div>
-</div>
-</div>
-<div class="nav_bottom">
-<div class="menu">
-<a href="https://connect.khaliiil.com">
-<p>
-JOIN
-</p>
-</a>
-<p id="sep">/</p>
-<a href="/credits">
-<p>
-SITE CREDITS
-</p>
-</a>
-<p id="sep">/</p>
-<p id="copyright_sign_i">&copy;</p>
-<p id="copyright_sign_ii">&copy;&nbsp;2024</p>
-<p id="copyright_sign_iii">&copy;&nbsp;2024,&nbsp;KHALIL</p>
-<p id="sep">/</p>
-<a href="/terms-conditions">
-<p>
-TERMS
-</p>
-</a>
-<p id="sep">/</p>
-<a href="/privacy-policy">
-<p>
-PRIVACY
-</p>
-</a>
-</div>
-</div>
-</div>
-<div class="media-container">
-
-
-
-<div class="media">
-<video src="https://ik.imagekit.io/xlretjwgk/Video_bday-videohomepagevideo20248920242992024.mov" alt="media_home_9002" autoplay loop muted playsinline></video>
-<img src="https://khaliiil.com/static/media/icon-mute.svg" class="sound-icon sound-off-icon" alt="Toggle Sound">
-<img src="https://khaliiil.com/static/media/icon-volume.svg" style="display:none;" class="sound-icon sound-on-icon" alt="unmute">
-<div class="play-btn"></div>
-<div class="spinner"></div>
+<button class="close" onclick="closeMenu()"><svg viewBox="0 0 24 24" aria-hidden="true" class="cc">
+  <path fill="white" d="M19 6 6 19M6 6l13 13" stroke="white" stroke-width="1.6" stroke-linecap="round"></path>
+</svg></button>
+<div class="links">
+<a href="">SHOP</a>
+<a href="">MUSIC</a>
+<a href="">PARFUM</a>
+<a href="">CÉCRED</a>
+<a href="">SIRDAVIS</a>
 </div>
 
-<div class="media">
-<video src="https://ik.imagekit.io/ybebp19uwa/IMG_0844.MOV?updatedAt=1722425583838" alt="media_home_9002" autoplay loop muted playsinline controls="false"></video>
-<img src="https://khaliiil.com/static/media/icon-mute.svg" class="sound-icon sound-off-icon" alt="Toggle Sound">
-<img src="https://khaliiil.com/static/media/icon-volume.svg" style="display:none;" class="sound-icon sound-on-icon" alt="unmute">
-<div class="play-btn"></div>
-<div class="spinner"></div>
+
+<div class="footer">
+<a href="">JOIN</a>
+<a href="">BEEN COUNTRY</a>
+<a href="">TERMS</a>
+<a href="">PRIVACY</a>
 </div>
 
-<img class="media" src="hhd.jpg" alt="">
-
 </div>
+
+<h2>TERMS & CONDITIONS</h2>
+<p>
+LAST UPDATED: JULY 17, 2024
+</p>
+
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-  const mediaElements = document.querySelectorAll('.media');
+const menu = document.querySelector('.menu');
+const overlay = document.querySelector('.overlay');
+const isOpen = document.classList.toggle('open');
 
-  function muteAllVideos() {
-    mediaElements.forEach(media => {
-      const video = media.querySelector('video');
-      if (video) {
-        video.muted = true;
-        const soundOffIcon = media.querySelector('.sound-off-icon');
-        const soundOnIcon = media.querySelector('.sound-on-icon');
-        soundOffIcon.style.display = 'block';
-        soundOnIcon.style.display = 'none';
-        video.play();
-      }
-    });
-  }
-
-  mediaElements.forEach(media => {
-    const video = media.querySelector('video');
-    const soundOffIcon = media.querySelector('.sound-off-icon');
-    const soundOnIcon = media.querySelector('.sound-on-icon');
-    const playBtn = media.querySelector('.play-btn');
-    const spinner = media.querySelector('.spinner');
-
-    video.removeAttribute('controls');
-    
-    video.addEventListener('waiting', () => {
-      spinner.style.display = 'block';
-    });
-
-    video.addEventListener('canplay', () => {
-      spinner.style.display = 'none';
-    });
-
-    playBtn.style.display = 'block';
-    playBtn.addEventListener('click', () => {
-      if (video.paused) {
-        video.play();
-        playBtn.style.display = 'none';
-      }
-    });
-
-    video.addEventListener('pause', () => {
-      playBtn.style.display = 'block';
-    });
-
-    video.addEventListener('play', () => {
-      playBtn.style.display = 'none';
-    });
-
-    soundOffIcon.addEventListener('click', () => {
-      muteAllVideos();
-      video.muted = false;
-      soundOffIcon.style.display = 'none';
-      soundOnIcon.style.display = 'block';
-    });
-
-    soundOnIcon.addEventListener('click', () => {
-      video.muted = true;
-      soundOffIcon.style.display = 'block';
-      soundOnIcon.style.display = 'none';
-    });
-  });
-});
-</script>
-<style>
-.med img {
-  -webkit-user-select:all;
-  -moz-user-select:all;
-  user-select:all;
-  -webkit-user-drag:none;
-  user-drag:none;
-  pointer-events:none;
+function openMenu() {
+menu.classList.add('open');
+overlay.classList.add('open');
 }
-</style>
-<script>
-    document.addEventListener('contextmenu', function (e) {
-      e.preventDefault();
-    }, false);
 
-    document.addEventListener('touchstart', function (e) {
-      e.preventDefault();
-    }, false);
-
-    document.addEventListener('copy', function (e) {
-      const selection = window.getSelection();
-      if (selection && selection.containsNode(document.querySelector('.med img'), true)) {
-        e.preventDefault();
-        const imgAltText = document.querySelector('.med img').alt;
-        e.clipboardData.setData('text/plain', imgAltText);
-      }
-    });
-</script>
-<script>
-  function redirectToLink() {
-    var select = document.getElementById("mySelect");
-    var selectedValue = select.value;
-    if (selectedValue) {
-      window.location.href = selectedValue;
-    }
-  }
+function closeMenu() {
+menu.classList.remove('open');
+overlay.classList.remove('open');
+}
 </script>
 </body>
 </html>
