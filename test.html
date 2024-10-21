@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Document</title>
+<title>Bey</title>
 <style>
 @font-face {font-family: 'BB Manual Mono Regular';src: url('https://tour.khaliiil.com/static/fonts/BBManualMonoProTX-Regular.otf');}
 body {
@@ -37,7 +37,7 @@ body {
 .menu {
   position:fixed;
   height:100%;
-  width:60%;
+  width:70%;
   margin:0;
   padding:20px;
   align-items:center;
@@ -99,16 +99,18 @@ body {
 
 h2 {
   text-align:center;
-  padding-top:50px;
+  padding-top:80px;
   font-family:'BB Manual Mono Regular';
   width:100%;
-  font-size:2rem;
+  font-size:1.6rem;
+  font-weight:600;
 }
 
 p {
   font-size:0.7rem;
   font-weight:300;
   padding:15px;
+  line-height:1.5;
 }
 
 .footer {
@@ -138,10 +140,15 @@ p {
   padding-bottom:60px;
   align-self:end;
 }
+
+svg {display:block;}
+.me {width:30px;color:black;display:block;}
 </style>
 </head>
 <body>
-<button class="menu-btn" onclick="openMenu()"><img width="100" height="100" src="https://img.icons8.com/ios-filled/100/menu--v6.png" alt="menu--v6"/></button>
+<button class="menu-btn" type="button" onclick="openMenu()"><svg viewBox="0 0 24 24" aria-hidden="true" class="me">
+  <path fill="black" d="M3 5a1 1 0 100 2h18a1 1 0 100-2H3zm0 6a1 1 0 100 2h18a1 1 0 100-2H3zm0 6a1 1 0 100 2h18a1 1 0 100-2H3z"></path>
+</svg></button>
 <div class="overlay"></div>
 <div class="menu">
 <button class="close" onclick="closeMenu()"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAAsTAAALEwEAmpwYAAACBUlEQVR4nO3cwU6DQBSF4Vnr0tDG918WX6a2qe+iyTGkkDTEIlCg5878X9LEhQuGXyhSelMCAAAAAAAAAAAAAABASpJemlf0faHo65D0JulD0k/7an6uUjCSqt466mZtKZp2EX1nSfsUhKR9u819dQp4eDd/TX/5kvSezEnaSfq8s4Zmba8pWJDvO4uxj6LhGF2QWO8n7bl2yMnx9KXraarZtiGHFPTN8BwpisbFOEe8OBl76NucvjRuWy8O25p9FJUSI0IUlRbDOYpKjeEYRaXHcIoiYvhEETF8doyI4bODRAyfHSVizNphxzWiEOOxe1/HJaMQwyiKOE35RBExfKKIGD5RRAyfKCLGNnTd0f99inca+Tu7jTY7bxp3pPx7FD17HVnR/CjEMIpy4cjwiXIhxgY07mqKIGYxOhwlRjE6RDGK0SHKwjFOGsY/hlvQhNsha3yeghtz7k0RZSV64EYhUYxidIiyEC14C50oRjE6RJlpzQ+XxNWXT4yJUSy+yVXSo6QVUUxidIhyxzMfSND1SLH40pAFh6dDZPClIQsOMTrFR3GKkUqP4hij2CjOMYqLEiFGMVEYPhNjopztJKCJE4Gymihnc5p6cIBZNhPlrGNMGPGXxUS5XIZgHlLQMbF1b7xqFfTipL5ZxyHkmNhsBhBntg4AAAAAAAAAAAAAAIC0hF9f97IYBxQvoAAAAABJRU5ErkJggg=="></button>
