@@ -160,7 +160,7 @@ video {width:auto;height:100%;display:block;background:#151b17;}
 @media screen and (min-width:701px) and (max-width:800px) {}
 @media screen and (min-width:801px) and (max-width:990px) {}
 @media screen and (min-width:901px) {}
-</style>
+@media only screen and (max-width: 768px) and (orientation: landscape) {body,html {display: none;}}</style>
 </head>
 <body>
 <div class="nav-top">
@@ -359,6 +359,23 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 });
+</script>
+<script>
+  function isMobile() {
+    return /Mobi|Android/i.test(navigator.userAgent);
+  }
+
+  function checkOrientation() {
+    if (isMobile() && window.innerWidth > window.innerHeight) {
+      document.body.style.display = "none";
+      alert("Please rotate your device to portrait mode.");
+    } else {
+      document.body.style.display = "block";
+    }
+  }
+
+  window.addEventListener("resize", checkOrientation);
+  window.addEventListener("load", checkOrientation);
 </script>
 </body>
 </html>
