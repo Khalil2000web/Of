@@ -150,31 +150,16 @@ body,html {margin:0;padding:0;color:var(--primary-color);background:var(--backgr
 .media {position:relative;width:auto;height:100%;}
 .image {pointer-events:none;}
 video {width:auto;height:100%;display:block;background:#151b17;}
-.tit {position: relative;display: flex;justify-content: space-between;width: 100%;max-width: 800px;}
-.left-text, .right-text {color:var(--text-color);position: fixed;top: 50%;transform: translateY(-50%);letter-spacing:1.2px;font-size:21.5px;z-index:var(--z-index-max);font-family:var(--font-main);}
-.left-text {left: 0;padding-left: 20px;text-align:left;}
-.right-text {right: 0;padding-right: 20px;text-align:right;}
-@media screen and (max-width:400px) {
-.left-text {left: 0;padding-left: 30px;}
-.right-text {right: 0;padding-right: 30px;}}
-@media screen and (min-width:401px) and (max-width:500px) {
-.left-text {left: 0;padding-left: 60px;}
-.right-text {right: 0;padding-right: 60px;padding-right:auto;}}
-@media screen and (min-width:501px) and (max-width:600px) {
-.left-text {left: 0;padding-left: 110px;padding-right:auto;}
-.right-text {right: 0;padding-right: 110px;}}
-@media screen and (min-width:601px) and (max-width:700px) {
-.left-text {left: 0;padding-left: 150px;padding-right:auto;}
-.right-text {right: 0;padding-right: 150px;}}
-@media screen and (min-width:701px) and (max-width:800px) {
-.left-text {left: 0;padding-left: 150px;padding-right:auto;}
-.right-text {right: 0;padding-right: 150px;}}
-@media screen and (min-width:801px) and (max-width:990px) {
-.left-text {left: 0;padding-left: 190px;padding-right:auto;}
-.right-text {right: 0;padding-right: 190px;}}
-@media screen and (min-width:901px) {
-.left-text {left: 0;padding-left: 240px;padding-right:auto;}
-.right-text {right: 0;padding-right: 240px;}}
+.left-text, .right-text {color:var(--text-color);position: fixed;left:50%;transform:translateX(-50%);letter-spacing:1.2px;font-size:1.2rem;z-index:var(--z-index-max);font-family:var(--font-main);}
+.left-text {top:150px;text-align:center;}
+.right-text {bottom:150px;text-align:center;}
+@media screen and (max-width:400px) {}
+@media screen and (min-width:401px) and (max-width:500px) {}
+@media screen and (min-width:501px) and (max-width:600px) {}
+@media screen and (min-width:601px) and (max-width:700px) {}
+@media screen and (min-width:701px) and (max-width:800px) {}
+@media screen and (min-width:801px) and (max-width:990px) {}
+@media screen and (min-width:901px) {}
 </style>
 </head>
 <body>
@@ -247,7 +232,6 @@ PRIVACY
 </a>
 </div>
 </div>
-<div class="tit">
 <a title="TOUR" href="https://tour.khaliiil.com/">
 <div class="left-text">
 &#9001; 3.
@@ -258,13 +242,12 @@ PRIVACY
 SWITZERLAND &#9002;
 </div>
 </a>
-</div>
 <div class="container">
 <img style="pointer-events:none;" class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_45" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9238.jpeg">
-<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_44" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9274.jpeg">
-<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_43" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/Gif_10i.GIF">
-<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_42" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9271.jpeg">
-<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_34" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9263.jpeg">
+<img class="image" loading="lazy" alt="Image" title="Switzerland_2024_44" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9274.jpeg">
+<img class="image" loading="lazy" alt="Image" title="Switzerland_2024_43" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/Gif_10i.GIF">
+<img class="image" loading="lazy" alt="Image" title="Switzerland_2024_42" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9271.jpeg">
+<img class="image" loading="lazy" alt="Image" title="Switzerland_2024_34" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9263.jpeg">
 <img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_33" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9262.jpeg">
 <img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_32" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9261.jpeg">
 <img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_31" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9260.jpeg">
@@ -282,16 +265,16 @@ SWITZERLAND &#9002;
 <div class="play-btn"></div>
 <div class="spinner"></div>
 </div>
-<img class="media" loading="lazy" alt="Image" title="Switzerland_img_2024_22" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/Swis_gif4.GIF">
-<img class="media" loading="lazy" alt="Image" title="Switzerland_img_2024_21" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9208.jpeg">
-<img class="media" loading="lazy" alt="Image" title="Switzerland_img_2024_20" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9209.jpeg">
-<img class="media" loading="lazy" alt="Image" title="Switzerland_img_2024_19" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9210.jpeg">
-<img class="media" loading="lazy" alt="Image" title="Switzerland_img_2024_18" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9211.jpeg">
-<img class="media" loading="lazy" alt="Image" title="Switzerland_img_2024_17" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/Swis_gif66.GIF">
-<img class="media" loading="lazy" alt="Image" title="Switzerland_img_2024_16" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9212.jpeg">
-<img class="media" loading="lazy" alt="Image" title="Switzerland_img_2024_15" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9213.jpeg">
-<img class="media" loading="lazy" alt="Image" title="Switzerland_img_2024_14" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9214.jpeg">
-<img class="media" loading="lazy" alt="Image" title="Switzerland_img_2024_13" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/Swis_gif_3.GIF">
+<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_22" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/Swis_gif4.GIF">
+<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_21" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9208.jpeg">
+<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_20" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9209.jpeg">
+<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_19" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9210.jpeg">
+<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_18" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9211.jpeg">
+<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_17" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/Swis_gif66.GIF">
+<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_16" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9212.jpeg">
+<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_15" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9213.jpeg">
+<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_14" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9214.jpeg">
+<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_13" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/Swis_gif_3.GIF">
 <div class="media">
 <video src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_7095.mov" loading="lazy" alt="Switzerland_video_2024_1" autoplay="" loop="" muted="" playsinline=""></video>
 <img src="/static/media/icon-mute.svg" class="sound-icon sound-off-icon" alt="mute">
@@ -299,27 +282,27 @@ SWITZERLAND &#9002;
 <div class="play-btn"></div>
 <div class="spinner"></div>
 </div>
-<img class="media" loading="lazy" alt="Image" title="Switzerland_img_2024_12" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9215.jpeg">
-<img class="media" loading="lazy" alt="Image" title="Switzerland_img_2024_11" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9216.jpeg">
-<img class="media" loading="lazy" alt="Image" title="Switzerland_img_2024_10" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/Swis_gif_2.GIF">
-<img class="media" loading="lazy" alt="Image" title="Switzerland_img_2024_9" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9217.jpeg">
-<img class="media" loading="lazy" alt="Image" title="Switzerland_img_2024_8" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9218.jpeg">
-<img class="media" loading="lazy" alt="Image" title="Switzerland_img_2024" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/Swis_gif5.GIF">
-<img class="media" loading="lazy" alt="Image" title="Switzerland_img_2024_7" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9219.jpeg">
-<img class="media" loading="lazy" alt="Image" title="Switzerland_img_2024_6" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9220.jpeg">
-<img class="media" loading="lazy" alt="Image" title="Switzerland_img_2024_41" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9270.jpeg">
-<img class="media" loading="lazy" alt="Image" title="Switzerland_img_2024_40" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9269.jpeg">
-<img class="media" loading="lazy" alt="Image" title="Switzerland_img_2024_39" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9268.jpeg">
-<img class="media" loading="lazy" alt="Image" title="Switzerland_img_2024_38" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9267.jpeg">
-<img class="media" loading="lazy" alt="Image" title="Switzerland_img_2024_37" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9266.jpeg">
-<img class="media" loading="lazy" alt="Image" title="Switzerland_img_2024_36" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9265.jpeg">
-<img class="media" loading="lazy" alt="Image" title="Switzerland_img_2024_35" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9264.jpeg">
-<img class="media" loading="lazy" alt="Image" title="Switzerland_img_2024_5" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9221.jpeg">
-<img class="media" loading="lazy" alt="Image" title="Switzerland_img_2024" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9244.jpeg">
-<img class="media" loading="lazy" alt="Image" title="Switzerland_img_2024_4" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/GMP_U2F2ZUdIMDE%3D.gif">
-<img class="media" loading="lazy" alt="Image" title="Switzerland_img_2024_3" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9222.jpeg">
-<img class="media" loading="lazy" alt="Image" title="Switzerland_img_2024_2" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9223.jpeg">
-<img class="media" loading="lazy" alt="Image" title="Switzerland_img_2024_1" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9224.jpeg">
+<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_12" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9215.jpeg">
+<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_11" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9216.jpeg">
+<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_10" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/Swis_gif_2.GIF">
+<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_9" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9217.jpeg">
+<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_8" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9218.jpeg">
+<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/Swis_gif5.GIF">
+<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_7" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9219.jpeg">
+<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_6" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9220.jpeg">
+<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_41" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9270.jpeg">
+<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_40" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9269.jpeg">
+<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_39" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9268.jpeg">
+<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_38" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9267.jpeg">
+<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_37" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9266.jpeg">
+<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_36" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9265.jpeg">
+<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_35" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9264.jpeg">
+<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_5" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9221.jpeg">
+<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9244.jpeg">
+<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_4" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/GMP_U2F2ZUdIMDE%3D.gif">
+<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_3" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9222.jpeg">
+<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_2" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9223.jpeg">
+<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_1" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9224.jpeg">
 </div>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
