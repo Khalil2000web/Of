@@ -65,40 +65,38 @@
 <style>
 @font-face {font-family: 'BB Manual Mono Regular';src: url('https://raw.githubusercontent.com/Khalil2000web/Of/main/system/fonts/BBManualMonoProTX.22d272fc.ttf');}
 @font-face {font-family: 'BB Manual Mono SemiBold';src: url('https://raw.githubusercontent.com/Khalil2000web/Of/main/system/fonts/BBManualMonoProTX-SemiBold.otf');}
-body {margin:0;padding:0;background-color:var(--background-color);font-family:var(--font-main);color:var(--primary-color);}
+body {margin:0;padding:0 20px;background-color:var(--background-color);font-family:var(--font-main);color:var(--primary-color);}
 .nav_bottom {position: fixed;width: 100%;left: 50%;transform:translateX(-50%);display: flex;justify-content: center;align-items: center;z-index:var(--z-index-max);bottom:16px;background: none;}
 .nav_bottom .menu {display: flex;gap: 45px;}
 .nav_bottom .menu a, .nav_bottom .menu p {line-height:1.6;align-self:end;word-wrap:break-word;user-select:none;-webkit-user-select:none;text-shadow:none;font-family:var(--font-main);color:var(--text-color);text-decoration: none;font-weight:400;font-size:16px;text-transform:uppercase;bottom:0;padding:0;margin:0;}
 @media screen and (max-width:400px) {
 .nav_bottom .menu {gap:20px;}
-.nav_bottom {max-width:50%;}
 .nav_bottom .menu p {font-size:15px;}
-#copyright_sign_i {display:none;}
+#copyright_sign_i {display:block;}
 #copyright_sign_ii {display:none;}
 #copyright_sign_iii {display:none;}
 #sep {display:none;}}
 @media screen and (min-width:401px) and (max-width:500px) {
 .nav_bottom .menu {gap:30px;}
-.nav_bottom {max-width:74%;}
-#copyright_sign_i {display:none;}
+#copyright_sign_i {display:block;}
 #copyright_sign_ii {display:none;}
 #copyright_sign_iii {display:none;}
 #sep {display:none;}}
 @media screen and (min-width:501px) and (max-width:600px) {
 .nav_bottom .menu {gap:40px;}
-#copyright_sign_i {display:none;}
+#copyright_sign_i {display:block;}
 #copyright_sign_ii {display:none;}
 #copyright_sign_iii {display:none;}
 #sep {display:none;}}
 @media screen and (min-width:601px) and (max-width:700px) {
 .nav_bottom .menu {gap:50px;}
-#copyright_sign_i {display:none;}
+#copyright_sign_i {display:block;}
 #copyright_sign_ii {display:none;}
 #copyright_sign_iii {display:none;}
 #sep {display:none;}}
 @media screen and (min-width:701px) and (max-width:800px) {
 .nav_bottom .menu {gap:50px;}
-#copyright_sign_i {display:none;}
+#copyright_sign_i {display:block;}
 #copyright_sign_ii {display:none;}
 #copyright_sign_iii {display:none;}
 #sep {display:none;}}
@@ -141,21 +139,16 @@ body {margin:0;padding:0;background-color:var(--background-color);font-family:va
 @media screen and (min-width:1000px) {
 .nav-top .menu {gap:90px;}
 .nav-top .menu a p{font-size:23px;}}
-.container{width:100%;max-width: 100%;margin: 0 auto;height:100%;overflow-x:hidden;overflow-y:auto;padding:0;padding-bottom:210px;}
-.container h1{color:var(--text-color);font-weight:500;font-family:var(--font-main);margin-top:100px;margin-bottom:70px;font-size:27px;text-decoration:none;padding:0;text-align:center;}
-.container p{color:var(--text-color);margin:0;line-height:1.7;padding:0;text-transform:uppercase;font-size:15px;padding-right:20px;padding-left:20px;}
-@media screen and (min-width: 790px) and (max-width:849px) {
-.container p, ul{padding-right:100px;padding-left:100px;font-size:0.5rem;}
-.container ul {padding-left: 100px;padding-right: 100px;}
-.container ul li {font-size:0.5rem;}}
-@media screen and (min-width: 850px) {
-.container p, ul{padding-right:190px;padding-left:190px;font-size:0.8rem;}
-.container ul {padding-left: 190px;padding-right: 190px;}
-.container ul li {font-size:0.8rem;}}
+.container{width:100%;max-width: 100%;display:flex;flex-direction:column;margin: 0 auto;height:100%;overflow-x:hidden;overflow-y:auto;padding:0;padding-bottom:210px;}
 li{color:var(--text-color);line-height:1.7;padding:0;margin:0;font-size:15px;text-transform:uppercase;}
 ul{padding-left:20px;padding-right:20px;padding-top:0;padding-bottom:0;margin:0;margin-top:5px;}
 .container li a{color:var(--text-color);text-decoration:underline;text-underline-offset:3px;}
 #bold {font-family:var(--font-main-bold);}
+@media screen and (min-width: 790px) and (max-width:849px) {.container {width:80%;}.container h1 {font-size:1.3rem;}.container p {font-size:1rem;}.container pre {;font-size:0.6rem;}}
+@media screen and (min-width: 850px) {.container {width:60%;}}
+.container h1 {color:var(--text-color);font-family:var(--font-main);font-weight:300;text-align:center;padding:0;margin:100px 0 60px 0;font-size:1.6rem;}
+.container p {color:var(--text-color);text-align:left;font-size:1.2rem;text-transform:uppercase;}
+.container pre {white-space:pre-wrap;word-wrap:break-word;text-align:left;color:var(--text-color);padding:0;margin:0;font-family:var(--font-main);text-transform:uppercase;font-size:0.9rem;line-height:1.5;}
 </style>
 </head>
 <body>
@@ -186,22 +179,9 @@ TOUR
 </div>
 <div class="nav_bottom">
 <div class="menu">
-<a href="https://connect.khaliiil.com/">
-<p>
-JOIN
-</p>
-</a>
 <a href="/terms-conditions">
 <p>
-TERMS & CONDITIONS
-</p>
-</a>
-<p id="copyright_sign_iii">&copy;&nbsp;2024,&nbsp;KHALIL</p>
-<p id="sep">/</p>
-<p id="sep">/</p>
-<a href="/credits">
-<p>
-CREDITS
+TERMS
 </p>
 </a>
 <p id="sep">/</p>
@@ -210,178 +190,90 @@ CREDITS
 PRIVACY
 </p>
 </a>
+<p id="sep">/</p>
+<p id="copyright_sign_i">&copy;</p>
+<p id="copyright_sign_iii">&copy;&nbsp;2024,&nbsp;KHALIL</p>
+<p id="sep">/</p>
+<a href="/credits">
+<p>
+CREDITS
+</p>
+</a>
+<p id="sep">/</p>
+<a href="https://connect.khaliiil.com/">
+<p>
+JOIN
+</p>
+</a>
 </div>
 </div>
 </div>
 <div class="container">
-<h1>
-TERMS & CONDITIONS
-</h1>
-<p>
-LAST UPDATED: AUGUST 20, 2024<br>
-1. INTRODUCTION<br>
-WELCOME TO KHALIIIL.COM, A PERSONAL PLATFORM WHERE I, KHALIL, SHARE VARIOUS ASPECTS OF MY LIFE, INCLUDING PHOTOGRAPHY, TRAVEL EXPERIENCES, MUSIC PREFERENCES, PERSONAL NOTES, AND MORE. THESE TERMS AND CONDITIONS (THE “TERMS”) GOVERN YOUR ACCESS TO AND USE OF THE WEBSITE, INCLUDING ANY CONTENT, FUNCTIONALITY, AND SERVICES OFFERED ON OR THROUGH KHALIIIL.COM (THE “WEBSITE”). BY ACCESSING OR USING THE WEBSITE, YOU AGREE TO ABIDE BY THESE TERMS. IF YOU DO NOT AGREE WITH THESE TERMS, PLEASE REFRAIN FROM ACCESSING THE WEBSITE.
-<br>
-ABOUT THE WEBSITE
-</p>
+<h1>TERMS & CONDITIONS</h1>
+<pre>
+Last Updated: October, 29, 2024
+Welcome to Khaliiil.com (referred to as “the Site”), which includes all associated subdomains. By accessing, browsing, or using this Site and its subdomains, you agree to fully comply with and be bound by these Terms and Conditions. Please review the following provisions carefully. If you disagree with any part of these terms, you may not use the Site or any of its subdomains.</pre>
+<p>1. Acceptance of Terms</p>
+<pre>By accessing or using the Site, including any subdomain, you acknowledge that you have read, understood, and accepted these Terms and Conditions. Your continued use signifies your ongoing acceptance, even as terms may be updated periodically.</pre>
+<p>2. Scope of Terms and Subdomains</p>
+<pre>These Terms and Conditions apply to the main Site as well as any and all subdomains operated by Khaliiil or Khaliiil.com. References to “the Site” in these Terms and Conditions shall include all associated subdomains. Use of any subdomain constitutes acceptance of these terms, which extend fully to all content, functionality, and features on subdomains.</pre>
+<p>3. Intellectual Property Rights</p>
+<ol style="list-style-type:upper-alpha;">
+<li>Ownership of Content: All content available on the Site and its subdomains, including but not limited to text, images, videos, and designs, are exclusively owned by Khalil or licensed for use by Khalil (referred to as “Owner”). All rights, titles, and interests in and to the Site, subdomains, and all associated intellectual property rights are reserved solely for the Owner.</li>
+<li>Copyright: Content on this Site and its subdomains is protected by international copyright and intellectual property laws. Unauthorized use, distribution, copying, or modification of the Site’s content is prohibited.</li>
+<li>Trademarks: Any trademarks, logos, or service marks appearing on the Site and its subdomains are proprietary to the Owner or other third parties. No license or right to use any trademark displayed on the Site is granted without explicit written permission from the Owner.</li>
+</ol>
+<p>4. Restrictions on Use</p>
+<pre>Users are strictly prohibited from:
+
+</pre>
 <ul>
-<li>
-<span id="bold">
-Home Page:</span>
-Features a collection of images that I’ve taken. These images are a reflection of my artistic vision and are protected under copyright law.
-</li>
+<li>Downloading, copying, or redistributing images, videos, text, or other content from the Site or its subdomains without prior written consent.</li>
+<li>Modifying, publishing, distributing, or transmitting any content from the Site or its subdomains without authorization.</li>
+<li>Using content from the Site or its subdomains in any manner that infringes on intellectual property rights.</li>
+<li>Misrepresenting or falsely attributing any content from this Site or its subdomains.</li>
 </ul>
-<ul>
-<li>
-<span id="bold">Tour Page:</span>
-Showcases my travels around the world. Each trip is documented with images and sometimes text, providing insight into my personal experiences.
-</li>
-</ul>
-<ul>
-<li>
-<span id="bold">Notes Page:</span>
-Contains floating bubbles with my personal notes inside. These notes are my own reflections and are shared for viewing only.
-</li>
-</ul>
-<ul>
-<li>
-<span id="bold">Music Page:</span>
-This section of the Website is dedicated to showcasing music, including the latest tracks, albums, and associated lyrics. All music and lyrical content are made available solely for personal enjoyment and educational purposes. Users are provided with links to authorized platforms where these songs can be lawfully streamed or purchased. The music featured on this page is fully credited as follows: “© Music by (artist name).”<br><br>
-Unauthorized copying, distribution, public performance, or any other form of reproduction of the music or lyrics, in whole or in part, is strictly prohibited without prior written permission from the copyright holder. Any violation of these terms may result in immediate termination of access to the Website and could expose the violator to legal action under applicable copyright laws. By accessing this section, you agree to respect and uphold the intellectual property rights of the artist and any affiliated parties.
-</li>
-</ul>
-<ul>
-<li>
-<span id="bold">Blog Page:</span>
-A space where I share stories, opinions, and other personal writings.
-</li>
-</ul>
-<ul>
-<li>
-<span id="bold">Join Page:</span>
-Allows users to submit their name and email address if they wish to receive updates about new content on the Website. This is optional and users are not required to submit their information to access the site.
-</li>
-</ul>
-<p>
-3. USER PRIVACY AND DATA SECURITY
-<br>
-YOUR PRIVACY IS IMPORTANT TO ME. THE ONLY PERSONAL INFORMATION I COLLECT IS YOUR NAME AND EMAIL ADDRESS THROUGH THE JOIN PAGE. THIS DATA IS COLLECTED USING FORMSPREE (HTTPS://FORMSPREE.IO/F/MLDREZAZ), A SERVICE THAT EMPLOYS INDUSTRY-STANDARD SECURITY MEASURES TO PROTECT YOUR INFORMATION. FORMSPREE’S PRIVACY PRACTICES INCLUDE DATA ENCRYPTION, SECURE TRANSMISSION PROTOCOLS, AND STORAGE SAFEGUARDS. I DO NOT SHARE YOUR INFORMATION WITH THIRD PARTIES, AND IT IS USED SOLELY FOR SENDING UPDATES FROM THE WEBSITE. YOU HAVE THE RIGHT TO UNSUBSCRIBE FROM THESE UPDATES AT ANY TIME.
-COOKIES AND TRACKING TECHNOLOGIES:<br>
-The website may use cookies and similar technologies to enhance your browsing experience. These technologies allow the website to recognize your device, track your preferences, and collect usage data to improve website functionality. By using the website, you consent to the use of these technologies. You can manage your cookie preferences through your browser settings.
-<br>
-DATA RETENTION:<br>
-I will retain the personal data collected from you for as long as necessary to provide the services or as required by law. If you request to have your data deleted, it will be removed from active systems but may remain in backup archives for legal or compliance purposes.
-<br>
-4. INTELLECTUAL PROPERTY RIGHTS<br>
-ALL CONTENT ON THIS WEBSITE, INCLUDING BUT NOT LIMITED TO PHOTOGRAPHS, TEXT, DESIGN ELEMENTS, AND MUSIC CREDITS, IS THE INTELLECTUAL PROPERTY OF KHALIL UNLESS OTHERWISE STATED. UNAUTHORIZED USE, REPRODUCTION, OR DISTRIBUTION OF THIS CONTENT IS STRICTLY PROHIBITED. IF YOU WISH TO USE ANY CONTENT FROM THE WEBSITE, YOU MUST OBTAIN EXPLICIT PERMISSION BY CONTACTING ME VIA THE OFFICIAL WEBSITE EMAIL.
-<br>
-DERIVATIVE WORKS:<br>
-You are prohibited from creating any derivative works based on the content available on this website without obtaining prior written consent from me.<br>
-COMMERCIAL USE:<br>All content on this website is intended for personal, non-commercial use only, unless otherwise explicitly permitted in writing. Any commercial use of the content is strictly prohibited without my explicit permission.
-<br>
-5. USE OF THE WEBSITE<br>
-BY ACCESSING THIS WEBSITE, YOU AGREE TO THE FOLLOWING TERMS OF USE:<br><br>
-<br>
-Prohibited Actions:<br>
-You may not engage in activities such as scraping, reverse engineering, or hacking the Website. You are also prohibited from attempting to gain unauthorized access to any part of the Website.
-<br>
-DATA HARVESTING:<br>
-You are strictly prohibited from using bots, spiders, crawlers, or any other automated systems or software to extract data from this website for any purpose without express written permission from me.
-<br>
-DEEP LINKING:<br>
-You may not create links to this website that bypass the homepage or other main sections of the site (“deep linking”) without obtaining prior written consent.
-<br>
-FRAMING AND MIRRORING:<br>
-You are forbidden from framing, mirroring, or otherwise embedding any part of this website within another website or online platform without my express permission. Any unauthorized use of the website in this manner will result in immediate termination of access and potential legal action.
-<br>
-Content Use:<br>
-You are not allowed to use, reproduce, distribute, or display any content from this Website without prior written consent from me.
-<br>
-Linking and Sharing:<br>
-You may not link to this Website or embed any of its content on other websites or social media platforms without permission.
-<br>
-6. User Content and Interaction<br>
-USER-GENERATED CONTENT (FUTURE)<br>
-If in the future I enable the ability for users to submit content, such as comments, posts, or other material, the following terms will apply:<br><br>
-</p>
-<ul>
-<li>
-<span id="bold">
-Acceptable Use:</span>
-Users must ensure that their submissions do not include any content that is illegal, infringing, defamatory, obscene, offensive, or that violates the privacy or publicity rights of others.
-</li>
-</ul>
-<ul>
-<li>
-<span id="bold">
-License Grant:</span>
-By submitting content, you grant me a non-exclusive, royalty-free, worldwide license to use, modify, and display the content as part of the website or in other media.
-</li>
-</ul>
-<ul>
-<li>
-<span id="bold">
-Moderation:</span>
-All user submissions will be subject to moderation, and I reserve the right to remove or edit any content that violates these terms or for any other reason at my discretion.
-</li>
-</ul>
-<ul>
-<li>
-<span id="bold">
-User Responsibility:</span>
-You are responsible for ensuring that your content does not infringe on any third-party rights or violate any laws.
-</li>
-</ul>
-<p>
-7. THIRD-PARTY LINKS AND CONTENT<br>
-THIS WEBSITE MAY CONTAIN LINKS TO THIRD-PARTY WEBSITES OR SERVICES THAT ARE NOT OWNED OR CONTROLLED BY ME. I AM NOT RESPONSIBLE FOR THE CONTENT, PRIVACY POLICIES, OR PRACTICES OF ANY THIRD-PARTY WEBSITES. BY USING THIS WEBSITE, YOU ACKNOWLEDGE AND AGREE THAT I WILL NOT BE LIABLE FOR ANY DAMAGES OR LOSSES CAUSED BY YOUR USE OF OR RELIANCE ON ANY THIRD-PARTY CONTENT OR SERVICES.
-<br>
-THIRD-PARTY EMBEDS:<br>
-This website may include content embedded from third-party services (e.g., videos, social media feeds). I am not responsible for the content, privacy practices, or data collection activities of these third-party services. By interacting with embedded content, you agree to the terms of the third-party service provider.
-<br>
-ADVERTISEMENTS (FUTURE):<br>
-If advertisements are included on the website in the future, I disclaim all responsibility for the content or claims made in these advertisements. Users interact with advertisements at their own risk.
-<br>8. USER-GENERATED CONTENT (UGC)
-<br>CURRENTLY, USERS CANNOT UPLOAD OR SHARE CONTENT DIRECTLY ON THE WEBSITE. SHOULD THIS FEATURE BE INTRODUCED IN THE<br>FUTURE, ALL USER-GENERATED CONTENT WILL BE SUBJECT TO MODERATION. BY SUBMITTING CONTENT, USERS WOULD GRANT ME A LICENSE TO USE, MODIFY, AND DISPLAY<br>THE CONTENT AS PART OF THE WEBSITE. USERS WOULD BE RESPONSIBLE FOR ENSURING THAT THEIR CONTENT DOES NOT INFRINGE ON ANY THIRD-PARTY<br>RIGHTS OR VIOLATE ANY LAWS.
-<br>9. EMAIL SUBSCRIPTIONS
-<br>USERS WHO OPT TO SUBSCRIBE TO UPDATES WILL RECEIVE PERIODIC EMAILS FROM THE NO REPLY WEBSITE EMAIL ADDRESS NO-REPLY@KHALIIIL.COM. THESE EMAILS MAY INCLUDE INFORMATION ABOUT NEW CONTENT, CHANGES TO THE WEBSITE, OR OTHER RELEVANT UPDATES. USERS CAN UNSUBSCRIBE FROM THESE EMAILS AT ANY TIME BY FOLLOWING THE INSTRUCTIONS PROVIDED IN THE EMAILS.
-<br>10. DISPUTE RESOLUTION AND GOVERNING LAW
-<br>ANY DISPUTES ARISING FROM OR RELATED TO YOUR USE OF THE WEBSITE SHALL BE RESOLVED THROUGH RESPECTFUL NEGOTIATION AND MEDIATION. IF A RESOLUTION CANNOT BE REACHED, THE DISPUTE SHALL BE GOVERNED BY AND CONSTRUED IN ACCORDANCE WITH THE LAWS OF ISRAEL. YOU AGREE TO SUBMIT TO THE PERSONAL JURISDICTION OF THE COURTS LOCATED IN ISRAEL FOR ANY ACTIONS ARISING OUT OF THESE TERMS.
-<br>
-CLASS ACTION WAIVER:<br>
-By using this website, you agree that any dispute resolution proceedings will be conducted only on an individual basis and not in a class, consolidated, or representative action. You waive any right to participate in a class action lawsuit against me.
-<br>
-ARBITRATION CLAUSE:<br>
-Any disputes arising from or related to your use of the website shall be resolved through binding arbitration in accordance with the rules of the Israeli Institute of Commercial Arbitration. The arbitration shall be conducted in Israel, and the decision of the arbitrator shall be final and binding on all parties.
-<br>
-INTERNATIONAL USERS:<br>If you are accessing this website from outside Israel, you are responsible for compliance with local laws in addition to these terms. You agree that you will not use the website in any manner that violates the laws of your jurisdiction.
-<br>11. DISCLAIMER OF WARRANTIES AND LIMITATION OF LIABILITY
-<br>THE WEBSITE IS PROVIDED ON AN “AS IS” AND “AS AVAILABLE” BASIS, WITHOUT ANY WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED. TO THE FULLEST EXTENT PERMISSIBLE UNDER APPLICABLE LAW, I DISCLAIM ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED <br>TO, IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR<br>PURPOSE. I DO NOT WARRANT THAT THE WEBSITE WILL BE UNINTERRUPTED OR ERROR-FREE, THAT DEFECTS WILL BE CORRECTED, OR THAT THE WEBSITE OR THE SERVER THAT MAKES IT<br>AVAILABLE ARE FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS.
-<br>
-NO RESPONSIBILITY FOR THIRD-PARTY ACTIONS:<br>
-I am not responsible for actions taken by third parties that may affect your use of the website, including but not limited to cyberattacks, unauthorized access to your data, or service disruptions on external platforms linked from this website.
-<br>
-LIMITATION OF LIABILITY:<br>
-My liability to you for any claim arising out of your use of the website is limited to the amount paid, if any, by you to access or use the website. In no event shall I be liable for any indirect, incidental, consequential, or punitive damages, even if I have been advised of the possibility of such damages.
-<br>12. TERMINATION OF ACCESS
-<br>I RESERVE THE RIGHT TO TERMINATE YOUR ACCESS TO THE WEBSITE AT ANY TIME, WITHOUT NOTICE, FOR<br>ANY REASON, INCLUDING BUT NOT LIMITED TO, A BREACH OF THESE TERMS. UPON TERMINATION, YOU MUST CEASE ALL USE OF THE WEBSITE AND ANY CONTENT OBTAINED FROM IT.
-<br>
-SUSPENSION:<br>
-I reserve the right to suspend your access to the website if I detect any suspicious activity, breaches of these terms, or if required by law. Suspension may be lifted at my discretion once the issue is resolved.
-<br>POST-TERMINATION OBLIGATIONS:<br>
-Upon termination of your access to the website, you must immediately cease all use of the website and destroy any copies of content obtained from it. Termination does not affect any provisions of these terms that by their nature should survive termination, including but not limited to intellectual property rights, disclaimers, and liability limitations.
-<br>13. INDEMNIFICATION
-<br>YOU AGREE TO INDEMNIFY AND HOLD HARMLESS KHALIL AND THE WEBSITE FROM ANY CLAIMS, DAMAGES, LIABILITIES, COSTS, AND EXPENSES (INCLUDING ATTORNEYS’ FEES) ARISING FROM YOUR USE OF THE<br>WEBSITE, YOUR VIOLATION OF THESE TERMS, OR YOUR INFRINGEMENT OF ANY INTELLECTUAL PROPERTY OR OTHER RIGHTS OF ANY PERSON OR ENTITY.
-<br>14. MODIFICATION OF THE WEBSIT
-<br>I RESERVE THE RIGHT TO MODIFY, SUSPEND, OR DISCONTINUE<br>ANY PART OF THE WEBSITE AT ANY TIME, WITH OR WITHOUT NOTICE. I WILL NOT BE LIABLE TO YOU OR ANY THIRD PARTY FOR ANY MODIFICATIONS, SUSPENSIONS, OR DISCONTINUATIONS OF THE WEBSITE.
-<br>15. CHANGES TO THESE TERMS
-<br>I MAY UPDATE THESE TERMS FROM TIME TO TIME. THE LATEST VERSION WILL BE POSTED ON THIS PAGE WITH THE “LAST UPDATED” DATE AT THE<br>TOP. IT IS YOUR RESPONSIBILITY TO REVIEW THESE TERMS PERIODICALLY FOR ANY CHANGES. BY CONTINUING TO USE THE WEBSITE AFTER THE TERMS HAVE BEEN UPDATED, YOU AGREE TO THE REVISED TERMS.
-<br>
-NOTICE OF CHANGES:<br>
-I will notify users of significant changes to these terms by email (if you have subscribed) or by displaying a prominent notice on the website. It is your responsibility to review these terms periodically for any changes. Continued use of the website after any changes to the terms constitutes your acceptance of the revised terms.
-<br>16. CONTACT INFORMATION
-<br>IF YOU HAVE ANY QUESTIONS OR CONCERNS ABOUT THESE TERMS OR THE WEBSITE, PLEASE CONTACT ME AT HELP@KHALIIIL.COM.
-</p>
+<pre>
+
+Violation of these restrictions may result in legal consequences, including claims for damages, injunctive relief, or other forms of recourse.
+</pre>
+<p>5. Use of Music Content</p>
+<pre>The music-related content on this Site and its subdomains is intended for personal enjoyment and reference only. Links to third-party music services like Spotify, Tidal, YouTube, and Apple Music are provided to support artists and platforms. DISCLAIMER: The Owner does not claim ownership over any songs shared through these links. All rights and copyrights belong to the original artists and copyright holders.</pre>
+<p>6. Images and Videos on the Tour Pages and Subdomains</p>
+<pre>The images and videos featured on the Tour pages and across the Site and subdomains are exclusive works by the Owner. These materials may not be downloaded, copied, modified, or used without written authorization. Unauthorized use may result in legal action.</pre>
+<p>7. Blog Content and Stories</p>
+<pre>The stories, blog posts, and written content on the Site and its subdomains are original works by the Owner and are protected by copyright laws. Users are prohibited from reproducing, distributing, translating, or using any written content without the Owner’s permission.</pre>
+<p>8. Subscription and Communication</p>
+<pre>Visitors may subscribe to the Owner’s circle for updates by providing a name and email address through a form powered by Formspree.io. By subscribing, you agree to receive communications related to the Site, including subdomains. You may opt-out anytime by using the unsubscribe link in the emails.</pre>
+<p>9. Privacy and Data Collection</p>
+<ol style="list-style-type:upper-alpha;">
+<li>Data Collection: Personal information from visitors is collected only to facilitate communication and updates. Please refer to our Privacy Policy for details on data management and usage.</li>
+<li>Data Security: The Owner takes reasonable steps to protect users’ information. However, no data transmission over the Internet is entirely secure. Users agree to accept inherent security risks in providing information online.</li>
+</ol>
+<p>10. Disclaimer of Liability and Warranties</p>
+<ol style="list-style-type:upper-alpha;">
+<li>Site Availability: The Site and its subdomains are provided “as is” and “as available.” The Owner makes no representations or warranties regarding availability, accuracy, or reliability.</li>
+<li>No Responsibility for Linked Content: The Site may contain links to third-party sites or services. The Owner assumes no responsibility or liability for any third-party content.</li>
+<li>User Responsibility: By using this Site, you agree to indemnify and hold the Owner harmless from claims, damages, losses, or liabilities arising from your use of the Site or subdomains.</li>
+</ol>
+<p>11. credits</p>
+<pre>The Credits page acknowledges contributions to the Site and its subdomains. All ownership, copyrights, and rights to content remain with the Owner. No part of the Site or subdomains may be reproduced or distributed without the Owner’s explicit written consent.</pre>
+<p>12. Limitation on Legal Actions and Dispute Resolution</p>
+<ol style="list-style-type:upper-alpha;">
+<li>Limitations on Legal Recourse: By using this Site and its subdomains, you agree not to pursue legal action against the Owner. Any disputes or conflicts shall be resolved through direct, amicable discussion rather than formal legal processes.</li>
+<li>Resolution Through Harmony and Understanding: Users agree to approach misunderstandings or grievances with the intent of resolving issues respectfully, peacefully, and without hostility. Legal measures are to be avoided in favor of collaborative problem-solving.</li>
+<li>Binding Agreement: By agreeing to these terms, users waive the right to initiate any legal claim against the Owner regarding the use of the Site or subdomains.</li>
+</ol>
+<p>13. Governing Law and Jurisdiction</p>
+<pre>These Terms and Conditions shall be governed and construed in accordance with the laws of Israel. Users agree that any dispute arising from these Terms will be resolved under applicable laws.</pre>
+<p>14. Amendments to Terms and Conditions</p>
+<pre>The Owner reserves the right to modify or update these Terms and Conditions at any time without prior notice. Continued use of the Site or any subdomain after such changes signifies acceptance of modified terms.</pre>
+<p>15. Entire Agreement</p>
+<pre>These Terms and Conditions, together with the Privacy Policy, constitute the entire agreement between the Owner and users regarding the use of the Site and its subdomains. Any additional terms in separate agreements are superseded by these Terms.</pre>
+<p>16. Contact Information</p>
+<pre>For questions about these Terms, please contact help@khaliiil.com.</pre>
+<p>Acceptance of Terms</p>
+<pre>By accessing and using this Site, including any subdomains, you confirm that you have read, understood, and agree to comply with these Terms and Conditions.</pre>
 </div>
 </body>
 </html>
