@@ -144,7 +144,15 @@ li{color:var(--text-color);line-height:1.7;padding:0;margin:0;font-size:0.8rem;t
 ul{padding-left:20px;padding-right:20px;padding-top:0;padding-bottom:0;margin:0;margin-top:5px;}
 .container li a{color:var(--text-color);text-decoration:underline;text-underline-offset:3px;}
 #bold {font-family:var(--font-main-bold);}
-@media screen and (min-width: 800px) and (max-width:1080px) {.container {width:100%;margin:0 90px;}.container h1 {font-size:1.3rem;}.subtitle,.par {font-size:0.6rem;}}
+
+@media only screen 
+  and (min-device-width: 450px) 
+  and (max-device-width: 1000px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: landscape) { 
+    .container h1 {font-size:1.3rem;}
+    .subtitle, .par {font-size:0.6rem;}
+}
 @media screen and (min-width: 1090px) {.container {width:80%;}}
 .container h1 {color:var(--text-color);font-family:var(--font-main);font-weight:300;text-align:center;padding:0;margin:100px 0 60px 0;font-size:1.6rem;}
 .subtitle {color:var(--text-color);text-align:left;font-size:0.8rem;text-transform:uppercase;padding:0;padding-top:10px;margin:0;}
@@ -280,10 +288,8 @@ JOIN
   
   <p class="subtitle">15. Entire Agreement</p>
   <p class="par">These Terms and Conditions, together with the Privacy Policy, constitute the entire agreement between the Owner and users regarding the use of the Site and its subdomains. Any additional terms in separate agreements are superseded by these Terms.</p>
-  
   <p class="subtitle">16. Contact Information</p>
   <p class="par">For questions about these Terms, please contact help@khaliiil.com.</p>
-  
   <p class="subtitle">Acceptance of Terms</p>
   <p class="par">By accessing and using this Site, including any subdomains, you confirm that you have read, understood, and agree to comply with these Terms and Conditions.</p>
 </div>
