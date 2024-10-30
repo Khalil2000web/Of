@@ -66,30 +66,30 @@
 <style>
 @font-face {font-family: 'BB Manual Mono Regular';src: url('https://raw.githubusercontent.com/Khalil2000web/Of/main/system/fonts/BBManualMonoProTX.22d272fc.ttf');}
 @font-face {font-family: 'BB Manual Mono SemiBold';src: url('https://raw.githubusercontent.com/Khalil2000web/Of/main/system/fonts/BBManualMonoProTX-SemiBold.otf');}
-body {margin:0;padding:0;background-color:var(--background-color);font-family:var(--font-main);user-select:none;-webkit-user-select:none;}
+body {margin:0;padding:0;background-color:var(--background-color);font-family:var(--font-main);}
 .nav_bottom {position: fixed;width: 100%;left: 50%;transform:translateX(-50%);display: flex;justify-content: center;align-items: center;z-index:var(--z-index-max);bottom:16px;background: none;}
 .nav_bottom .menu {display: flex;gap: 45px;}
 .nav_bottom .menu a, .nav_bottom .menu p {line-height:1.6;align-self:end;word-wrap:break-word;user-select:none;-webkit-user-select:none;text-shadow:none;font-family:var(--font-main);color:var(--text-color);text-decoration: none;font-weight:300;font-size:16px;text-transform:uppercase;bottom:0;padding:0;margin:0;}
 @media screen and (max-width:400px) {
-.nav_bottom .menu {gap:40px;}
-#copyright_sign_i {display:none;}
+.nav_bottom .menu {gap:20px;}
+#copyright_sign_i {display:block;}
 #copyright_sign_ii {display:none;}
 #copyright_sign_iii {display:none;}
 #sep {display:none;}}
 @media screen and (min-width:401px) and (max-width:500px) {
-.nav_bottom .menu {gap:40px;}
-#copyright_sign_i {display:none;}
+.nav_bottom .menu {gap:30px;}
+#copyright_sign_i {display:block;}
 #copyright_sign_ii {display:none;}
 #copyright_sign_iii {display:none;}
 #sep {display:none;}}
 @media screen and (min-width:501px) and (max-width:600px) {
-.nav_bottom .menu {gap:80px;}
+.nav_bottom .menu {gap:50px;}
 #copyright_sign_i {display:none;}
 #copyright_sign_ii {display:block;}
 #copyright_sign_iii {display:none;}
 #sep {display:none;}}
 @media screen and (min-width:601px) and (max-width:700px) {
-.nav_bottom .menu {gap:100px;}
+.nav_bottom .menu {gap:80px;}
 #copyright_sign_i {display:none;}
 #copyright_sign_ii {display:block;}
 #copyright_sign_iii {display:none;}
@@ -121,41 +121,63 @@ body {margin:0;padding:0;background-color:var(--background-color);font-family:va
 .nav-top .menu a p {font-family:var(--font-main);color:var(--text-color);user-select:none;-webkit-user-select:none;text-decoration: none;font-weight:300;font-size:30px;text-transform:uppercase;padding:0;margin:0;}
 @media screen and (max-width:400px) {
 .nav-top .menu {gap:30px;}
-.nav-top .menu a p{font-size:23px;}}
+.nav-top .menu a p{font-size:21px;}}
 @media screen and (min-width:401px) and (max-width:500px) {
 .nav-top .menu {gap:40px;}
-.nav-top .menu a p{font-size:23px;}}
+.nav-top .menu a p{font-size:22px;}}
 @media screen and (min-width:501px) and (max-width:600px) {
-.nav-top .menu {gap:70px;}
+.nav-top .menu {gap:50px;}
 .nav-top .menu a p{font-size:23px;}}
 @media screen and (min-width:601px) and (max-width:700px) {
-.nav-top .menu {gap:110px;}}
+.nav-top .menu {gap:80px;}}
 @media screen and (min-width:701px) and (max-width:800px) {
-.nav-top .menu {gap:90px;}
+.nav-top .menu {gap:80px;}
 .nav-top .menu a p{font-size:23px;}}
 @media screen and (min-width:801px) and (max-width:990px) {
 .nav-top .menu {gap:90px;}
 .nav-top .menu a p{font-size:23px;}}
 @media screen and (min-width:1000px) {
 .nav-top .menu {gap:90px;}
-.nav-top .menu a p{font-size:23px;}}
-.media-grid {display: flex;flex-direction:column;width:100%;max-width:100%;height:100%;position:fixed;margin:0 auto;padding:0;overflow:auto;}
-.media {position: relative;width:80%;max-width:80%;height:auto;display:flex;margin:0 auto;margin-bottom:50px;justify-content:center;align-items:center;}
+.nav-top .menu a p{font-size:24px;}}
+.media-grid {display: flex;flex-direction:column;width:100%;max-width:100%;height:100%;margin:0 auto;padding:0;overflow:auto;}
+.media {position:relative;display:flex;margin:0 auto;justify-content:center;align-items:center;max-width:80%;}
 video {display:flex;margin:0 auto;width:100%;padding:0;margin:0;}
-.overlay {display: none;position: fixed;top: 0;left: 0;width: 100%;height: 100%;background-color: rgba(0, 0, 0, 1);z-index: 10000;overflow: auto;overscroll-behavior: none;scrollbar-width: none;touch-action: pan-x pan-y;}.overlay-content::-webkit-scrollbar {display: none;}
-.overlay-content {position: relative;width: 100%;max-width: 100%;height:auto;top: 0;left: 0;padding: 0;margin: 0;z-index: 1000;touch-action: pan-x pan-y;overscroll-behavior:none;}
-.overlay-content .media {width: 100%;max-width: 100%;height: auto;margin-bottom: 170px;}
-.close-btn {position: fixed;bottom:30px;left: 50%;transform: translateX(-50%);border-radius: 5px;z-index: 10001;background: none;border: none;}
-.fade-base {position: fixed;bottom: 0;width: 100%;height:80px;z-index: 1001;background: #000;}
-.fade {position: fixed;bottom:80px;width: 100%;height:60px;z-index: 10001;background: linear-gradient(to top, #000, transparent);}
-.cl {width:35px;color:#fff;padding:0;}
-.prev-btn, .next-btn {position: fixed;justify-content:center;align-items:center;}
+.overlay {display: none;position: fixed;top: 0;left: 0;width: 100%;height: 100%;background-color: rgba(0, 0, 0, 1);z-index: 10000;overflow: auto;overscroll-behavior: none;scrollbar-width: none;touch-action: pan-x pan-y;}.overlay::-webkit-scrollbar {display: none;}
+.overlay-content {position:absolute;width: 100%;max-width: 100%;height:auto;top: 0;left: 0;padding: 0;margin: 0;z-index: 1000;touch-action: pan-x pan-y;overscroll-behavior:none;}
+.overlay-content .media {width: 100%;max-width: 100%;height: auto;margin-bottom: 150px;}
+.overlay-content .media a {display:block;pointer-events:all;}
+.close-btn {position: absolute;top:10px;right:10px;border-radius: 5px;z-index: 10001;background: none;border: none;}
+.fade-base {position: fixed;bottom: 0;width: 100%;height:60px;z-index: 1001;background:rgba(0,0,0,1);}
+.fade {position: fixed;bottom:60px;width: 100%;height:60px;z-index: 10001;background: linear-gradient(to top, #000, transparent);}
+.cl {width:33px;color:#fff;padding:0;}
+.prev-btn, .next-btn {position: absolute;justify-content:center;align-items:center;}
 button:active {background:rgba(0,0,0,0.4);}
 button{padding:0;margin:0;}
 .prev-btn,.next-btn {background:none;border:none;border-radius:0;padding:2px 10px;margin:0;}
-.me,.cc {color:white;width:35px;}
-.prev-btn {bottom:30px;left:30px;z-index:10002;border:3px solid rgba(39, 92, 134, 0.5);}
-.next-btn {bottom:30px;right:30px;z-index:10002;border:3px solid rgba(39, 92, 134, 0.5);}
+.me,.cc {color:white;width:33px;}
+.prev-btn {top:35px;left:50px;z-index:10005;border:3px solid rgba(39, 92, 134, 0.5);}
+.next-btn {top:35px;right:50px;z-index:10005;border:3px solid rgba(39, 92, 134, 0.5);}
+@media screen and (max-width:400px) {
+.prev-btn {left: 35px;}
+.next-btn {right:35px;}}
+@media screen and (min-width:401px) and (max-width:500px) {
+.prev-btn {left: 50px;}
+.next-btn {right:50px;}}
+@media screen and (min-width:501px) and (max-width:600px) {
+.prev-btn {left: 100px;}
+.next-btn {right: 100px;}}
+@media screen and (min-width:601px) and (max-width:700px) {
+.prev-btn {left: 140px;}
+.next-btn {right: 140px;}}
+@media screen and (min-width:701px) and (max-width:800px) {
+.prev-btn {left: 160px;}
+.next-btn {right: 160px;}}
+@media screen and (min-width:801px) and (max-width:990px) {
+.prev-btn {left: 200px;}
+.next-btn {right: 200px;}}
+@media screen and (min-width:1000px) {
+.prev-btn {left: 350px;right:auto;}
+.next-btn {right: 350px;left:auto;}}
 .overlay.opening {display: flex;width: 98%;height: 98%;top: 50%;left: 50%;transform: translate(-50%,-50%);opacity:0.9;}
 body .overlay.opening {touch-action:none;overflow:hidden;-webkit-touch-callout:none;pointer-events:none;}
 .overlay.fullscreen {width: 100%;height: 100%;top: 50%;left: 50%;transform: translate(-50%, -50%);opacity:1;}
@@ -168,7 +190,7 @@ body .overlay.opening {touch-action:none;overflow:hidden;-webkit-touch-callout:n
 @media (max-height: 600px) {.top-tit {top:70px;}.bottom-tit {bottom:70px;}}
 @media (min-height: 601px) and (max-height: 800px) {.top-tit {top:200px;}.bottom-tit {bottom:200px;}}
 @media (min-height: 801px) {.top-tit {top:230px;}.bottom-tit {bottom:230px;}}
-#first {padding-top:70px;}
+.image {-webkit-user-select:all;-moz-user-select: all;user-select: all;-webkit-user-drag: none !important;user-drag: none;pointer-events: none;}
 </style>
 </head>
 <body>
@@ -179,14 +201,14 @@ body .overlay.opening {touch-action:none;overflow:hidden;-webkit-touch-callout:n
 MUSIC
 </p>
 </a>
-<a href="/carter">
-<p>
-CARTER
-</p>
-</a>
 <a href="https://tour.khaliiil.com/">
 <p>
 TOUR
+</p>
+</a>
+<a href="/carter">
+<p>
+CARTER
 </p>
 </a>
 <a href="https://khaliiil.com/blog">
@@ -199,8 +221,6 @@ BLOG
 </div>
 <div class="nav_bottom">
 <div class="menu">
-<p id="copyright_sign_iii">&copy;&nbsp;2024,&nbsp;KHALIL</p>
-<p id="sep">/</p>
 <a href="https://www.khaliiil.com/terms-conditions">
 <p>
 TERMS
@@ -213,6 +233,16 @@ CREDITS
 </p>
 </a>
 <p id="sep">/</p>
+<p id="copyright_sign_i">&copy;</p>
+<p id="copyright_sign_ii">&copy;&nbsp;2024</p>
+<p id="copyright_sign_iii">&copy;&nbsp;2024,&nbsp;KHALIL</p>
+<p id="sep">/</p>
+<a href="https://connect.khaliiil.com/">
+<p>
+JOIN
+</p>
+</a>
+<p id="sep">/</p>
 <a href="https://khaliiil.com/privacy-policy">
 <p>
 PRIVACY
@@ -221,65 +251,77 @@ PRIVACY
 </div>
 </div>
 </div>
-<div class="top-tit">
-<a href="https://tour.khaliiil.com">2024</a>
-</div>
-<div class="bottom-tit">
-<a href="https://tour.khaliiil.com">WORLD WIDE</a>
-</div>
-<div class="media-grid">
-<img class="media" id="first" src="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/Home_media_image_gallery/Rip-sir20241011-gif.GIF" loading="eager" alt="media_home_9030">
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/Home_media_image_gallery/Rip20241011-2024Image.JPEG" loading="eager" alt="media_home_9029">
+
 <div class="media">
-<video src="https://ik.imagekit.io/xlretjwgk/Video_bday-videohomepagevideo20248920242992024.mov" poster="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/Home_media_image_gallery/IMG_1228.jpeg" alt="media_home_9002" controlsList="nofullscreen" autoplay loop muted playsinline></video>
-<img src="https://khaliiil.com/static/media/icon-mute.svg" class="sound-icon sound-off-icon" alt="Toggle Sound">
-<img src="https://khaliiil.com/static/media/icon-volume.svg" style="display:none;" class="sound-icon sound-on-icon" alt="unmute">
+<div style="pointer-events:none;">
+<img class="image" src="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/Home_media_image_gallery/Rip-sir20241011-gif.GIF" style="color:transparent;width:100%;height:auto;" loading="lazy" title="imgae:0984388858" alt="Image">
+</div>
+</div>
+
+<div class="media">
+<div style="pointer-events:none;">
+<img class="image" src="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/Home_media_image_gallery/Rip20241011-2024Image.JPEG" style="color:transparent;width:100%;height:auto;pointer-events:none;" loading="lazy" alt="Image">
+</div>
+</div>
+
+
+<div class="media">
+<video src="https://ik.imagekit.io/xlretjwgk/Video_bday-videohomepagevideo20248920242992024.mov" poster="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/Home_media_image_gallery/IMG_1228.jpeg" style="color:transparent;width:100%;height:auto;pointer-events:none;" alt="Video" controlsList="nofullscreen" autoplay loop muted playsinline></video>
+<img src="/static/media/icon-mute.svg" class="sound-icon sound-off-icon" alt="Toggle Sound">
+<img src="/static/media/icon-volume.svg" style="display:none;" class="sound-icon sound-on-icon" alt="unmute">
 <div class="play-btn"></div>
 <div class="spinner"></div>
 </div>
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9024.webp" loading="lazy" alt="media_home_9030" />
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9023.webp" loading="lazy" alt="media_home_9029" />
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9022.webp" loading="lazy" alt="media_home_9028" />
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9021.webp" loading="lazy" alt="media_home_9027" />
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9020.webp" alt="media_home_9026"/>
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9018.webp" alt="media_home_9024"/>
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9017.webp" loading="lazy" alt="media_home_9033" />
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9016.webp" alt="media_home_9022"/>
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9015.webp" alt="media_home_9021"/>
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9014.webp" alt="media_home_9020">
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9013.webp" alt="media_home_9019">
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9011.gif" alt="media_home_9018">
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9010.webp" alt="media_home_9017">
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9008.jpeg" alt="media_home_9009">
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9007.gif" alt="media_home_9008">
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9006.jpeg" alt="media_home_9007">
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_3652.jpeg" alt="media_home_9006">
-<img class="media" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_8993.gif" alt="media_home_9004">
-<img class="media" src="https://raw.githubusercontent.com/Dibacarter/Media/main/Home_media_image_gallery/IMG_3461.jpeg" alt="media_home_9003">
 <div class="media">
-<video src="https://ik.imagekit.io/ybebp19uwa/IMG_0844.MOV?updatedAt=1722425583838" alt="media_home_9002" autoplay loop muted playsinline></video>
-<img src="https://khaliiil.com/static/media/icon-mute.svg" class="sound-icon sound-off-icon" alt="Toggle Sound">
-<img src="https://khaliiil.com/static/media/icon-volume.svg" style="display:none;" class="sound-icon sound-on-icon" alt="unmute">
-<div class="play-btn"></div>
-<div class="spinner"></div>
+<img src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9024.webp" style="color:transparent;width:100%;height:auto;pointer-events:none;" decoding="async" loading="lazy" alt="Image">
 </div>
-<img class="media" src="https://raw.githubusercontent.com/Dibacarter/Media/main/Home_media_image_gallery/5a67e1ae-0c7b-494c-8440-3eb7d7f35ac9.jpeg"/>
+<div class="media">
+<img src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9023.webp" style="color:transparent;width:100%;height:auto;pointer-events:none;" decoding="async" loading="lazy" alt="Image">
+</div>
+<div class="media">
+<img src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9022.webp" style="color:transparent;width:100%;height:auto;pointer-events:none;" decoding="async" loading="lazy" alt="Image">
+</div>
+<div class="media">
+<img src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9020.webp" style="color:transparent;width:100%;height:auto;pointer-events:none;" decoding="async" loading="lazy" alt="Image">
+</div>
+<div class="media">
+<img src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9017.webp" style="color:transparent;width:100%;height:auto;pointer-events:none;" decoding="async" loading="lazy" alt="Image">
+</div>
+<div class="media">
+<img src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9016.webp" style="color:transparent;width:100%;height:auto;pointer-events:none;" decoding="async" loading="lazy" alt="Image">
+</div>
+<div class="media">
+<img src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9014.webp" style="color:transparent;width:100%;height:auto;pointer-events:none;" decoding="async" loading="lazy" alt="Image">
+</div>
+<div class="media">
+<img src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9011.gif" style="color:transparent;width:100%;height:auto;pointer-events:none;" decoding="async" loading="lazy" alt="Image">
+</div>
+<div class="media">
+<img src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9010.webp" style="color:transparent;width:100%;height:auto;pointer-events:none;" decoding="async" loading="lazy" alt="Image">
+</div>
+<div class="media">
+<img src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9008.jpeg" style="color:transparent;width:100%;height:auto;pointer-events:none;" decoding="async" loading="lazy" alt="Image">
+</div>
+<div class="media">
+<img src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9007.gif" style="color:transparent;width:100%;height:auto;pointer-events:none;" decoding="async" loading="lazy" alt="Image">
+</div>
+<div class="media">
+<img src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_9006.jpeg" style="color:transparent;width:100%;height:auto;pointer-events:none;" decoding="async" loading="lazy" alt="Image">
+</div>
+<div class="media">
+<img src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_3652.jpeg" style="color:transparent;width:100%;height:auto;pointer-events:none;" decoding="async" loading="lazy" alt="Image">
+</div>
+<div class="media">
+<img src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Home_media_image_gallery/IMG_8993.gif" style="color:transparent;width:100%;height:auto;pointer-events:none;" decoding="async" loading="lazy" alt="Image">
+</div>
+<div class="media">
+<img src="https://raw.githubusercontent.com/Dibacarter/Media/main/Home_media_image_gallery/5a67e1ae-0c7b-494c-8440-3eb7d7f35ac9.jpeg" style="color:transparent;width:100%;height:auto;pointer-events:none;" decoding="async" loading="lazy" alt="Image">
 </div>
 <div id="overlay" class="overlay">
-<div class="fade"></div>
-<div class="fade-base"></div>
-<div id="overlay-content" class="overlay-content" style="pointer-events:all;overflow:auto;touch-action:all;-webkit-touch-callout:auto;"></div>
-<button id="close-btn" class="close-btn"><svg viewBox="0 0 24 24" aria-hidden="true" class="cl"><path fill="white" d="M19 6 6 19M6 6l13 13" stroke="white" stroke-width="3" stroke-linecap="round"></path></svg></button>
-<button id="next-btn" class="next-btn">
-<svg viewBox="-2 -2 24 24" aria-hidden="true" class="cc" xmlns="http://www.w3.org/2000/svg">
-<path fill="none" d="M6 4l8 8-8 8" stroke="white" stroke-width="2.7" stroke-linejoin="miter"></path>
-</svg>
-</button>
-<button id="prev-btn" class="prev-btn">
-<svg viewBox="2 -2 24 24" aria-hidden="true" class="me" xmlns="http://www.w3.org/2000/svg">
-<path fill="none" d="M18 4l-8 8 8 8" stroke="white" stroke-width="2.7" stroke-linejoin="miter"></path>
-</svg>
-</button>
+<div id="overlay-content" class="overlay-content"></div>
+<button id="close-btn" class="close-btn"><svg viewBox="0 0 24 24" aria-hidden="true" class="cl"><path fill="white" d="M19 6 6 19M6 6l13 13" stroke="white" stroke-width="2.2" stroke-linecap="round"></path></svg></button>
+<button id="next-btn" class="next-btn"><svg viewBox="-2 -2 24 24" aria-hidden="true" class="cc" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M6 4l8 8-8 8" stroke="white" stroke-width="2.7" stroke-linejoin="miter"></path></svg></button>
+<button id="prev-btn" class="prev-btn"><svg viewBox="2 -2 24 24" aria-hidden="true" class="me" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M18 4l-8 8 8 8" stroke="white" stroke-width="2.7" stroke-linejoin="miter"></path></svg></button>
 </div>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -571,6 +613,22 @@ document.addEventListener('DOMContentLoaded', function() {
     nextBtn.addEventListener('click', hideBorders);
     closeButton.addEventListener('click', hideBorders);
 });
+</script>
+<script>
+document.addEventListener('copy', function (e) {
+  const selection = window.getSelection();
+  const imgElement = document.querySelector('img');
+
+  if (selection.containsNode(imgElement, true)) {
+    e.preventDefault();
+
+    const imgAltText = imgElement.title || ' '; 
+
+    e.clipboardData.setData('text/plain', imgAltText);
+    e.clipboardData.setData('text/html', imgAltText);
+    e.clipboardData.setData('image/png', '');
+  }
+}, false);
 </script>
 </body>
 </html>
