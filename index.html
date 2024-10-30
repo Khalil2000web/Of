@@ -648,15 +648,12 @@ document.addEventListener('copy', function (e) {
   if (selection.containsNode(imgElement, true)) {
     e.preventDefault();
 
-    const imgAltText = imgElement.alt || ' ';
+    const imgAltText = imgElement.alt || '⠀⠀⠀⠀⠀⠀';
 
     e.clipboardData.setData('text/plain', imgAltText);
     e.clipboardData.setData('text/html', imgAltText);
 
-    e.clipboardData.setData('image/png', new Blob([], { type: 'image/png' }));
-
-    e.clipboardData.clearData('image/jpeg');
-    e.clipboardData.clearData('image/gif');
+    e.clipboardData.clearData();
   }
 }, false);
 </script>
