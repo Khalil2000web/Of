@@ -43,7 +43,7 @@
 --animation-ease-in-out:cubic-bezier(0.42,0,0.58,1);--animation-bounce:ease-in-out 1.5s infinite bounce;--transition-duration-short:0.2s;
 --transition-duration-medium:0.5s;--transition-duration-long:1s;--transition-ease:ease;
 --transition-ease-in-out:ease-in-out;--z-index-low:1;--z-index-medium:10;
---z-index-high:100;--z-index-max:1000;--grid-columns:12;
+--z-index-high:100;--z-index-max:10000;--grid-columns:12;
 --grid-gap:16px;--width-max:1200px;--width-container:90%;
 --width-sidebar:250px;--width-content:75%;--height-header:80px;
 --height-footer:100px;--breakpoint-xs:480px;--breakpoint-sm:768px;
@@ -151,6 +151,23 @@ ul{padding-left:20px;padding-right:20px;padding-top:0;padding-bottom:0;margin:0;
 .container h1 {color:var(--text-color);font-family:var(--font-main);font-weight:300;text-align:center;padding:0;margin:100px 0 60px 0;font-size:1.6rem;}
 .subtitle {color:var(--text-color);text-align:left;font-size:0.8rem;text-transform:uppercase;padding:0;padding-top:10px;margin:0;}
 .par {text-align:left;color:var(--text-color);padding:0;margin:0;font-family:var(--font-main);text-transform:uppercase;font-size:0.8rem;line-height:1.5;}
+.open-menu {position:fixed;top:30px;right:30px;background:none;color:#fff;border:none;outline:none;border-radius:0;font-size:1.2rem;z-index:1000;margin:0;padding:5px;}
+.menu-btn img {width:30px;height:auto;max-width:30px;}
+.menu-tab {position:fixed;height:100%;width:70%;margin:0;padding:20px;align-items:center;justify-content:center;background:#000;border-left:2px solid #fff;top:0;right:-100%;z-index:10000;transition: right 0.3s ease;}
+.menu-tab.open {right: 0;}
+.close {position:absolute;top:35px;right:35px;background:none;color:#fff;border:none;outline:none;border-radius:0;font-size:1.2rem;padding:0;margin:0;}
+.close img {width:50px;height:auto;max-width:50px;}
+.links {display:flex;padding:0;margin:0 auto;display:flex;flex-direction:column;align-items:center;justify-content:center;margin-top:50px;}
+.links a {color:var(--text-color);text-align:center;text-decoration:none;margin-bottom:20px;font-size:1.4rem;width:100%;}
+.links a:hover {color:#ccc;background:rgba(204,204,204,0.4);}
+.overlay {position:fixed;width:100%;height:100%;background:rgba(255,255,255,0.4);z-index:500;top:0;left:-100%;transition: left 0.3s ease;}
+.overlay.open {left:0;}
+.footer {display:flex;padding:0;margin:0 auto;display:flex;flex-direction:column;align-items:center;justify-content:center;margin-top:20px;border-top:1px solid rgba(204,204,204,0.6);padding-top:20px;width:50%;}
+.footer a {color:var(--text-color);text-align:center;text-decoration:none;margin-bottom:30px;font-size:1.1rem;width:100%;}
+svg {display:block;}
+.menu-open-icon {width:30px;color:black;display:block;}
+.menu-close-icon {width:40px;}
+button:active {background:rgb(255,255,255,0.3);border-radius:10px;}
 </style>
 </head>
 <body>
@@ -208,6 +225,31 @@ JOIN
 </p>
 </a>
 </div>
+</div>
+</div>
+
+<button class="open-menu" type="button" onclick="openMenu()"><svg viewBox="0 0 24 24" aria-hidden="true" class="menu-open-icon">
+<path fill="#fff" d="M3 5a1 1 0 100 2h18a1 1 0 100-2H3zm0 6a1 1 0 100 2h18a1 1 0 100-2H3zm0 6a1 1 0 100 2h18a1 1 0 100-2H3z"></path>
+</svg>
+</button>
+
+<div class="overlay"></div>
+<div class="menu-tab">
+<button class="close" onclick="closeMenu()"><svg viewBox="0 0 24 24" aria-hidden="true" class="menu-close-icon">
+<path fill="white" d="M19 6 6 19M6 6l13 13" stroke="white" stroke-width="1.6" stroke-linecap="round"></path>
+</svg></button>
+<div class="links">
+<a href="/">HOME</a>
+<a href="https://music.khaliiil.com">MUSIC</a>
+<a href="/">STORE</a>
+<a href="https://tour.khaliiil.com">TOUR</a>
+<a href="/blog">BLOG</a>
+</div>
+<div class="footer">
+<a href="https://connect.khaliiil.com">JOIN</a>
+<a href="/credits">CREDITS</a>
+<a href="/terms-conditions">TERMS</a>
+<a href="/privacy-policy">PRIVACY</a>
 </div>
 </div>
 
@@ -289,5 +331,20 @@ JOIN
   <p class="subtitle">Acceptance of Terms</p>
   <p class="par">By accessing and using this Site, including any subdomains, you confirm that you have read, understood, and agree to comply with these Terms and Conditions.</p>
 </div>
+<script>
+const menuTab = document.querySelector('.menu-tab');
+const overlay = document.querySelector('.overlay');
+const isOpen = document.classList.toggle('open');
+
+function openMenu() {
+menuTab.classList.add('open');
+overlay.classList.add('open');
+}
+
+function closeMenu() {
+menuTab.classList.remove('open');
+overlay.classList.remove('open');
+}
+</script>
 </body>
 </html>
