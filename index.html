@@ -66,7 +66,7 @@
 <style>
 @font-face {font-family: 'BB Manual Mono Regular';src: url('https://raw.githubusercontent.com/Khalil2000web/Of/main/system/fonts/BBManualMonoProTX.22d272fc.ttf');}
 @font-face {font-family: 'BB Manual Mono SemiBold';src: url('https://raw.githubusercontent.com/Khalil2000web/Of/main/system/fonts/BBManualMonoProTX-SemiBold.otf');}
-body {margin:0;padding:0;background-color:var(--background-color);font-family:var(--font-main);}
+body {margin:0;padding:0;background-color:var(--background-color);font-family:var(--font-main);color:var(--primary-color)}
 .nav_bottom {position: fixed;width: 100%;left: 50%;transform:translateX(-50%);display: flex;justify-content: center;align-items: center;z-index:var(--z-index-max);bottom:16px;background: none;}
 .nav_bottom .menu {display: flex;gap: 45px;}
 .nav_bottom .menu a, .nav_bottom .menu p {line-height:1.6;align-self:end;word-wrap:break-word;user-select:none;-webkit-user-select:none;text-shadow:none;font-family:var(--font-main);color:var(--text-color);text-decoration: none;font-weight:300;font-size:16px;text-transform:uppercase;bottom:0;padding:0;margin:0;}
@@ -139,9 +139,9 @@ body {margin:0;padding:0;background-color:var(--background-color);font-family:va
 @media screen and (min-width:1000px) {
 .nav-top .menu {gap:90px;}
 .nav-top .menu a p{font-size:24px;}}
-.media-grid {display: flex;flex-direction:column;width:80%;max-width:80%;height:100%;margin:0 auto;position:fixed;padding:0;overflow:auto;}
-.media {position:relative;display:flex;margin:0 auto;justify-content:center;align-items:center;}
-video {display:flex;margin:0 auto;width:100%;padding:0;margin:0;}
+.media-grid {position:fixed;width:100%;max-width:100%;height:100%;padding:0;margin:0;overflow:auto;}
+.media {position:relative;display:flex;margin:0 auto;justify-content:center;align-items:center;max-width:80%;}
+video {display:flex;margin:0 auto;width:100%;min-width:99%;max-width:100%:padding:0;margin:0;}
 .overlay {display: none;position: fixed;top: 0;left: 0;width: 100%;height: 100%;background-color: rgba(0, 0, 0, 1);z-index: 10000;overflow: auto;overscroll-behavior: none;scrollbar-width: none;touch-action: pan-x pan-y;}.overlay::-webkit-scrollbar {display: none;}
 .overlay-content {position:absolute;width: 100%;max-width: 100%;height:auto;top: 0;left: 0;padding: 0;margin: 0;z-index: 1000;touch-action: pan-x pan-y;overscroll-behavior:none;}
 .overlay-content .media {width: 100%;max-width: 100%;height: auto;margin-bottom: 150px;}
