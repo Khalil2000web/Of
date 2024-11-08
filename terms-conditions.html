@@ -172,61 +172,6 @@ button:active {background:rgb(255,255,255,0.3);border-radius:10px;}
 </style>
 </head>
 <body>
-<div class="nav-top">
-<div class="menu">
-<a href="https://khaliiil.com/">
-<p>
-HOME
-</p>
-</a>
-<a href="https://music.khaliiil.com/">
-<p>
-MUSIC
-</p>
-</a>
-<a href="/">
-<p>
-STORE
-</p>
-</a>
-<a href="https://tour.khaliiil.com/">
-<p>
-TOUR
-</p>
-</a>
-</div>
-</div>
-<div class="nav_bottom">
-<div class="menu">
-<a href="/terms-conditions">
-<p>
-TERMS
-</p>
-</a>
-<p id="sep">/</p>
-<a href="/privacy-policy">
-<p>
-PRIVACY
-</p>
-</a>
-<p id="sep">/</p>
-<p id="copyright_sign_i">&copy;</p>
-<p id="copyright_sign_iii">&copy;&nbsp;2024,&nbsp;KHALIL</p>
-<p id="sep">/</p>
-<a href="https://connect.khaliiil.com/">
-<p>
-JOIN
-</p>
-</a>
-<p id="sep">/</p>
-<a href="/credits">
-<p>
-CREDITS
-</p>
-</a>
-</div>
-</div>
-
 <div class="container">
   <h1>TERMS & CONDITIONS</h1>
   <p class="par">Last Updated: October, 29, 2024</p>
@@ -305,6 +250,13 @@ CREDITS
   <p class="subtitle">Acceptance of Terms</p>
   <p class="par">By accessing and using this Site, including any subdomains, you confirm that you have read, understood, and agree to comply with these Terms and Conditions.</p>
 </div>
+<div id="navbar-container"></div>
+<script>
+fetch('/navbar.html')
+.then(response => response.text())
+.then(data => document.getElementById('navbar-container').innerHTML = data)
+.catch(error => console.error('Error loading navbar:', error));
+</script>
 <script>
 const menuTab = document.querySelector('.menu-tab');
 const overlay = document.querySelector('.overlay');
