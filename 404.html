@@ -66,151 +66,24 @@
 @font-face {font-family: 'BB Manual Mono Regular';src: url('/system/fonts/BBManualMonoProTX.22d272fc.ttf');}
 @font-face {font-family: 'BB Manual Mono SemiBold';src: url('/system/fonts/BBManualMonoProTX-SemiBold.otf');}
 body {margin:0;padding:0;background-color:var(--background-color);font-family:var(--font-main);color:var(--primary-color);}
-.nav_bottom {position: fixed;width: 100%;left: 50%;transform:translateX(-50%);display: flex;justify-content: center;align-items: center;z-index:var(--z-index-max);bottom:16px;background: none;}
-.nav_bottom .menu {display: flex;gap: 45px;}
-.nav_bottom .menu a, .nav_bottom .menu p {line-height:1.6;align-self:end;word-wrap:break-word;user-select:none;-webkit-user-select:none;text-shadow:none;font-family:var(--font-main);color:var(--text-color);text-decoration: none;font-weight:300;font-size:16px;text-transform:uppercase;bottom:0;padding:0;margin:0;}
-@media screen and (max-width:400px) {
-.nav_bottom .menu {gap:20px;}
-#copyright_sign_i {display:none;}
-#copyright_sign_ii {display:none;}
-#copyright_sign_iii {display:none;}
-#sep {display:none;}}
-@media screen and (min-width:401px) and (max-width:500px) {
-.nav_bottom .menu {gap:30px;}
-#copyright_sign_i {display:none;}
-#copyright_sign_ii {display:none;}
-#copyright_sign_iii {display:none;}
-#sep {display:none;}}
-@media screen and (min-width:501px) and (max-width:600px) {
-.nav_bottom .menu {gap:50px;}
-#copyright_sign_i {display:none;}
-#copyright_sign_ii {display:none;}
-#copyright_sign_iii {display:none;}
-#sep {display:none;}}
-@media screen and (min-width:601px) and (max-width:700px) {
-.nav_bottom .menu {gap:80px;}
-#copyright_sign_i {display:none;}
-#copyright_sign_ii {display:none;}
-#copyright_sign_iii {display:none;}
-#sep {display:none;}}
-@media screen and (min-width:701px) and (max-width:800px) {
-.nav_bottom .menu {gap:50px;}
-#copyright_sign_i {display:none;}
-#copyright_sign_ii {display:none;}
-#copyright_sign_iii {display:none;}
-#sep {display:none;}}
-@media screen and (min-width:801px) and (max-width:990px) {
-.nav_bottom .menu {gap:40px;}
-.nav_bottom .menu p {font-size:14px;}
-#copyright_sign_i {display:none;}
-#copyright_sign_ii {display:none;}
-#copyright_sign_iii {display:block;}
-#sep {display:block;}}
-@media screen and (min-width:1000px) {
-.nav_bottom .menu {gap:50px;}
-.nav_bottom .menu p {font-size:14px;}
-#copyright_sign_i {display:none;}
-#copyright_sign_ii {display:none;}
-#copyright_sign_iii {display:block;}
-#sep {display:block;}}
-#copyright_sign_i, #copyright_sign_ii, #copyright_sign_iii {color:var(--text-color);}
-.nav-top {position: fixed;width: 100%;left: 0;display: flex;justify-content: center;align-items: center;z-index:var(--z-index-max);top:15px;background: none;padding:0;margin:0;}
-.nav-top .menu {display:flex;gap: 30px;padding-bottom:0;margin:0;}
-.nav-top .menu a {text-decoration:none;}
-.nav-top .menu a p {font-family:var(--font-main);color:var(--text-color);user-select:none;-webkit-user-select:none;text-decoration: none;font-weight:300;font-size:30px;text-transform:uppercase;padding:0;margin:0;}
-@media screen and (max-width:400px) {
-.nav-top .menu {gap:20px;}
-.nav-top .menu a p{font-size:20px;}}
-@media screen and (min-width:401px) and (max-width:500px) {
-.nav-top .menu {gap:30px;}
-.nav-top .menu a p{font-size:21px;}}
-@media screen and (min-width:501px) and (max-width:600px) {
-.nav-top .menu {gap:30px;}
-.nav-top .menu a p{font-size:23px;}}
-@media screen and (min-width:601px) and (max-width:700px) {
-.nav-top .menu {gap:50px;}}
-@media screen and (min-width:701px) and (max-width:800px) {
-.nav-top .menu {gap:50px;}
-.nav-top .menu a p{font-size:22px;}}
-@media screen and (min-width:801px) and (max-width:990px) {
-.nav-top .menu {gap:60px;}
-.nav-top .menu a p{font-size:22px;}}
-@media screen and (min-width:1000px) {
-.nav-top .menu {gap:60px;}
-.nav-top .menu a p{font-size:22px;}}
 .ccj404 {text-align:center;font-family:var(--font-main-bold);font-size:4rem;margin-top:150px;color:var(--text-color);font-weight:300;}
 .sub263 {font-family:var(--font-main);text-align:center;font-size:1.2rem;color:var(--text-color);padding:0 20px;}
 .sub263 a {color:var(--text-color);text-underline-offset:6px;}
 </style>
 </head>
 <body>
-<div class="nav-top">
-<div class="menu">
-<a href="https://www.khaliiil.com/">
-<p>
-HOME
-</p>
-</a>
-<a href="https://music.khaliiil.com/">
-<p>
-MUSIC
-</p>
-</a>
-<a href="https://tour.khaliiil.com">
-<p>
-TOUR
-</p>
-</a>
-<a href="https://www.khaliiil.com/">
-<p>
-STORE
-</p>
-</a>
-<a href="https://www.khaliiil.com/blog">
-<p>
-BLOG
-</p>
-</a>
-</div>
-</div>
-</div>
 <p class="ccj404">
 404
 </p>
 <p class="sub263">
 OOPS! THIS PAGE DOESN’T EXIST. HEAD HOME AND <a href="/">TRY AGAIN</a>.
 </p>
-<div class="nav_bottom">
-<div class="menu">
-<a href="https://connect.khaliiil.com">
-<p>
-JOIN
-</p>
-</a>
-<p id="sep">/</p>
-<a href="/privacy-policy">
-<p>
-PRIVACY
-</p>
-</a>
-<p id="sep">/</p>
-<p id="copyright_sign_i">&copy;</p>
-<p id="copyright_sign_ii">&copy;&nbsp;2024</p>
-<p id="copyright_sign_iii">&copy;&nbsp;2024,&nbsp;KHALIL</p>
-<p id="sep">/</p>
-<a href="/terms-conditions">
-<p>
-TERMS
-</p>
-</a>
-<p id="sep">/</p>
-<a href="/credits">
-<p>
-CREDITS
-</p>
-</a>
-</div>
-</div>
-</div>
+<div id="navbar-container"></div>
+<script>
+fetch('/navbar-leg652427637.html')
+.then(response => response.text())
+.then(data => document.getElementById('navbar-container').innerHTML = data)
+.catch(error => console.error('Error loading navbar:', error));
+</script>
 </body>
 </html>
