@@ -67,78 +67,6 @@
 @font-face {font-family: 'BB Manual Mono Regular';src: url('https://raw.githubusercontent.com/Khalil2000web/Of/main/system/fonts/BBManualMonoProTX.22d272fc.ttf');}
 @font-face {font-family: 'BB Manual Mono SemiBold';src: url('https://raw.githubusercontent.com/Khalil2000web/Of/main/system/fonts/BBManualMonoProTX-SemiBold.otf');}
 body,html {margin:0;padding:0;color:var(--primary-color);background:var(--background-color);}
-.nav_bottom {position: fixed;width: 100%;left: 50%;transform:translateX(-50%);display: flex;justify-content: center;align-items: center;z-index:var(--z-index-max);bottom:16px;background: none;}
-.nav_bottom .menu {display: flex;gap: 45px;}
-.nav_bottom .menu a, .nav_bottom .menu p {line-height:1.6;align-self:end;word-wrap:break-word;user-select:none;-webkit-user-select:none;text-shadow:none;font-family:var(--font-main);color:var(--text-color);text-decoration: none;font-weight:300;font-size:16px;text-transform:uppercase;bottom:0;padding:0;margin:0;}
-@media screen and (max-width:400px) {
-.nav_bottom .menu {gap:40px;}
-#copyright_sign_i {display:none;}
-#copyright_sign_ii {display:none;}
-#copyright_sign_iii {display:none;}
-#sep {display:none;}}
-@media screen and (min-width:401px) and (max-width:500px) {
-.nav_bottom .menu {gap:40px;}
-#copyright_sign_i {display:none;}
-#copyright_sign_ii {display:none;}
-#copyright_sign_iii {display:none;}
-#sep {display:none;}}
-@media screen and (min-width:501px) and (max-width:600px) {
-.nav_bottom .menu {gap:80px;}
-#copyright_sign_i {display:none;}
-#copyright_sign_ii {display:block;}
-#copyright_sign_iii {display:none;}
-#sep {display:none;}}
-@media screen and (min-width:601px) and (max-width:700px) {
-.nav_bottom .menu {gap:100px;}
-#copyright_sign_i {display:none;}
-#copyright_sign_ii {display:block;}
-#copyright_sign_iii {display:none;}
-#sep {display:none;}}
-@media screen and (min-width:701px) and (max-width:800px) {
-.nav_bottom .menu {gap:50px;}
-#copyright_sign_i {display:none;}
-#copyright_sign_ii {display:block;}
-#copyright_sign_iii {display:none;}
-#sep {display:none;}}
-@media screen and (min-width:801px) and (max-width:990px) {
-.nav_bottom .menu {gap:40px;}
-.nav_bottom .menu p {font-size:14px;}
-#copyright_sign_i {display:none;}
-#copyright_sign_ii {display:none;}
-#copyright_sign_iii {display:block;}
-#sep {display:block;}}
-@media screen and (min-width:1000px) {
-.nav_bottom .menu {gap:50px;}
-.nav_bottom .menu p {font-size:14px;}
-#copyright_sign_i {display:none;}
-#copyright_sign_ii {display:none;}
-#copyright_sign_iii {display:block;}
-#sep {display:block;}}
-#copyright_sign_i, #copyright_sign_ii, #copyright_sign_iii {color:var(--text-color);}
-.nav-top {position: fixed;width: 100%;left: 0;display: flex;justify-content: center;align-items: center;z-index:var(--z-index-max);top:15px;background: none;padding:0;margin:0;}
-.nav-top .menu {display:flex;gap: 30px;padding-bottom:0;margin:0;}
-.nav-top .menu a {text-decoration:none;}
-.nav-top .menu a p {font-family:var(--font-main);color:var(--text-color);user-select:none;-webkit-user-select:none;text-decoration: none;font-weight:300;font-size:30px;text-transform:uppercase;padding:0;margin:0;}
-@media screen and (max-width:400px) {
-.nav-top .menu {gap:30px;}
-.nav-top .menu a p{font-size:23px;}}
-@media screen and (min-width:401px) and (max-width:500px) {
-.nav-top .menu {gap:40px;}
-.nav-top .menu a p{font-size:23px;}}
-@media screen and (min-width:501px) and (max-width:600px) {
-.nav-top .menu {gap:70px;}
-.nav-top .menu a p{font-size:23px;}}
-@media screen and (min-width:601px) and (max-width:700px) {
-.nav-top .menu {gap:110px;}}
-@media screen and (min-width:701px) and (max-width:800px) {
-.nav-top .menu {gap:90px;}
-.nav-top .menu a p{font-size:23px;}}
-@media screen and (min-width:801px) and (max-width:990px) {
-.nav-top .menu {gap:90px;}
-.nav-top .menu a p{font-size:23px;}}
-@media screen and (min-width:1000px) {
-.nav-top .menu {gap:90px;}
-.nav-top .menu a p{font-size:23px;}}
 .container {padding:0;padding-top:100px;padding-bottom:120px;width:80%;height:auto;margin:0 auto;display:flex;align-items:center;justify-content:center;flex-direction:column;}
 .center-t {text-align:center;font-family:var(--font-main-bold);font-size:1.1rem;text-transform:uppercase;padding:0;margin:0;padding-bottom:20px;padding-top:20px;}
 .title {color:var(--text-color);font-family:var(--font-main-bold);font-size:1.3rem;text-align:center;padding:0;margin:0;padding-bottom:20px;padding-top:50px;text-transform:uppercase;text-decoration:underline;text-underline-offset:6px;}
@@ -146,55 +74,6 @@ pre {color:var(--text-color);text-align:center;white-space: pre-wrap;word-wrap: 
 </style>
 </head>
 <body>
-<div class="nav-top">
-<div class="menu">
-<a href="/">
-<p>
-HOME
-</p>
-</a>
-<a href="/">
-<p>
-STORE
-</p>
-</a>
-<a href="https://tour.khaliiil.com/">
-<p>
-TOUR
-</p>
-</a>
-<a href="/blog">
-<p>
-BLOG
-</p>
-</a>
-</div>
-</div>
-</div>
-<div class="nav_bottom">
-<div class="menu">
-<p id="copyright_sign_iii">&copy;&nbsp;2024,&nbsp;KHALIL</p>
-<p id="sep">/</p>
-<a href="/terms-conditions">
-<p>
-TERMS
-</p>
-</a>
-<p id="sep">/</p>
-<a href="/credits">
-<p>
-CREDITS
-</p>
-</a>
-<p id="sep">/</p>
-<a href="/privacy-policy">
-<p>
-PRIVACY
-</p>
-</a>
-</div>
-</div>
-</div>
 <div class="container">
 <p class="center-t">
 THANK YOU FOR VISITING MY WEBSITE. THIS PROJECT ISN’T JUST A DISPLAY OF MY WORK; IT’S A REFLECTION OF MY JOURNEY, PASSIONS, AND THE PEOPLE WHO HAVE INSPIRED ME ALONG THE WAY. I HOPE YOU FIND VALUE AND INSPIRATION HERE.
@@ -288,5 +167,12 @@ LOOKING AHEAD, WE HAVE A RANGE OF EXCITING DEVELOPMENTS IN STORE FOR THIS WEBSIT
 THIS WEBSITE HAS BEEN AN INCREDIBLE JOURNEY, AND I OWE A TREMENDOUS AMOUNT OF GRATITUDE TO THOSE WHO PLAYED A PIVOTAL ROLE IN ITS CREATION. TO MY FRIENDS AND FAMILY, YOUR UNWAVERING SUPPORT AND BELIEF IN MY VISION HAVE BEEN INVALUABLE. YOUR PATIENCE, CONSTRUCTIVE FEEDBACK, AND ENCOURAGEMENT HELPED SHAPE EVERY ASPECT OF THIS PROJECT. A SPECIAL SHOUTOUT TO MY COLLEAGUES AND MENTORS WHO PROVIDED INSIGHTFUL ADVICE AND INSPIRED ME TO PUSH THE BOUNDARIES OF CREATIVITY. YOUR INFLUENCE IS WOVEN INTO EVERY PIXEL OF THIS SITE. ADDITIONALLY, I WANT TO THANK THE ONLINE COMMUNITIES AND FORUMS WHERE I ENGAGED WITH FELLOW CREATORS AND GAINED VALUABLE KNOWLEDGE AND INSPIRATION. YOUR CONTRIBUTIONS AND SHARED WISDOM HAVE BEEN INSTRUMENTAL IN BRINGING THIS PROJECT TO LIFE.
 </pre>
 </div>
+<div id="navbar-container"></div>
+<script>
+fetch('/navbar-leg652427637.html')
+.then(response => response.text())
+.then(data => document.getElementById('navbar-container').innerHTML = data)
+.catch(error => console.error('Error loading navbar:', error));
+</script>
 </body>
 </html>
