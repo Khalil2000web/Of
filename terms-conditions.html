@@ -177,6 +177,14 @@ button:active {background:rgb(255,255,255,0.3);border-radius:10px;}
   <p class="subtitle">Acceptance of Terms</p>
   <p class="par">By accessing and using this Site, including any subdomains, you confirm that you have read, understood, and agree to comply with these Terms and Conditions.</p>
 </div>
+
+<div id="footer-container"></div>
+<script>
+fetch('/footer626-pages61.html')
+.then(response => response.text())
+.then(data => document.getElementById('footer-container').innerHTML = data)
+.catch(error => console.error('Error loading navbar:', error));
+</script>
 <div id="navbar-container"></div>
 <script>
 fetch('/navbar-leg652427637.html')
