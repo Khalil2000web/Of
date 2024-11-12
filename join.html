@@ -46,6 +46,13 @@ input:focus {border:2px solid #fff;}
 <button id="btn" style="color:var(--text-color);background-color: #000;border-radius: 0;border:1px solid #ccc;background-color: transparent;font-family: var(--font-main);font-weight:300;width:70%;height:40px;font-size:1rem;" type="submit">SEND</button>
 </form>
 </div>
+<div id="footer-container"></div>
+<script>
+fetch('/footer626-pages61.html')
+.then(response => response.text())
+.then(data => document.getElementById('footer-container').innerHTML = data)
+.catch(error => console.error('Error loading navbar:', error));
+</script>
 <div id="navbar-container"></div>
 <script>
 fetch('/navbar-leg652427637.html')
