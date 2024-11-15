@@ -144,9 +144,9 @@ body {margin:0;padding:20px;padding-bottom:100px;padding-top:100px;color:var(--p
 .nav-top .menu {gap:60px;}
 .nav-top .menu a p{font-size:23px;}}
 
-.song-row {display: flex;align-items: top;justify-content: space-between;cursor: pointer;padding: 10px;position: relative;margin-bottom:7px;}
+.song-row {display: flex;align-items: top;justify-content: space-between;cursor: pointer;padding: 10px;position: relative;margin-bottom:7px;background-color: #2980b9;}
 .song-number {text-align:left;font-size: 16px;margin-right: 10px; }
-.song-title {text-align: right;font-size: 16px;flex-grow: 1; word-wrap: break-word;text-transform:uppercase;padding-left:25px;padding:0;margin:0;}
+.song-title {text-align: right;font-size: 16px;flex-grow: 1; word-wrap: break-word;text-transform:uppercase;padding-left:28px;padding:0;margin:0;}
 .icons {display: none;flex-direction: column;gap: 15px;justify-content: flex-start;}
 .expanded .icons {display: flex;}
 .song-row .song-number,
@@ -163,16 +163,8 @@ body {margin:0;padding:20px;padding-bottom:100px;padding-top:100px;color:var(--p
 .icons img {margin-left:auto;width: 32px;height: auto;max-width: 30px;vertical-align: middle;}
 .expanded .song-title {font-size: 22px;}
 .expanded .song-number {font-size: 22px;}
-.expanded .song_title_small {font-size: 16px;}
 .expanded .icons {display: flex;}
-.info-button {background: none;color: var(--text-color);border: 1px solid var(--text-color);padding: 10px;cursor: pointer;margin-top: 20px;font-family:var(--font-main);font-weight:300;}
-.info-content {display: none;background-color: #333;padding: 15px;margin-top: 10px;border-radius: 5px;}
 .bold {font-family:var(--font-main);padding-top:20px;}
-img {-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;}
-#intro {position: fixed;top: 0;left: 0;width: 100%;height: 100%;background-color: black;display: flex;justify-content: center;align-items: center;z-index: 9999;overflow:hidden;max-height:100%;}
-#intro-text {color: white;font-size: 1.5em;text-align: center;opacity: 0;visibility: hidden;transition: opacity 1s ease-in-out;}
-#intro-text.show {visibility: visible;opacity: 1;transition: opacity 1s ease-in-out;}
-#intro-text.hide {opacity: 0.1;transition: opacity 1s ease-in-out;}
 .overlay_btns {display:none;flex-direction:row;margin-left:auto;padding-bottom:auto;order:3;justify-content:flex-end;padding:0;margin:8px;}
 .overlay_btns button, .overlay_btns span {background:none;color:var(--text-color);font-family:var(--font-main);border:none;font-size:1rem;padding:0;margin:0;cursor:pointer;}
 .overlay_btns span {padding-left:5px;padding-right:5px;}
@@ -185,8 +177,6 @@ img {-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user
 .overlay_btns {position: absolute;left:50%;transform: translateX(-50%);top:50px;margin:0 auto;padding:0;gap:10px;}
 .expanded .song-title {padding-bottom:40px;}
 .expanded .song-title {max-width:35%;}}
-
-@media screen and (min-width:700px) {.overlay-content p {font-size:1rem;padding-left:100px;padding-right:100px;}}
 .overlay-content p {overflow:auto;overflow-x:hidden;max-width:100%;padding:30px;padding-bottom:90px;}
 .overlay-content pre {line-height:3;font-family:var(--font-main);text-transform:uppercase;font-size:1.1rem;word-wrap:break-word;overflow-x:hidden;max-width:100%;text-align:center;color:var(--text-color);white-space: pre-wrap;word-wrap: break-word;overflow-wrap: break-word;padding:20px;}
 .overlay-header {font-size: 30px;font-family:var(--font-main);font-weight:300;padding:0;margin:0;position:fixed;width:100%;top:0;left:50%;transform:translateX(-50%);z-index:100000;justify-content:center;align-items:center;padding-top:10px;}
@@ -211,11 +201,6 @@ img {-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user
 .bottom_f_con {position:fixed;width:100%;height:100px;background:black;bottom:0;z-index:1000;}
 .fade_bottom {position:fixed;bottom:100px;width:100%;height:100px;padding:0;background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));z-index:1000;}
 .overlay::-webkit-scrollbar {display:none;}
-.full-credits {position: fixed;top:105px;left:50%;transform:translateX(-50%);align-items:center;justify-content:center;z-index:30;}
-.full-credits button {background:none;color:var(--text-color);font-family:var(--font-main);border:none;font-size:1rem;}
-.c-overlay {position:fixed;top:0;left:0;width:100%;height:100%;background-color:#000;max-height:100%;overflow:auto;display:none;z-index:10000;}
-.c-overlay pre {word-wrap:break-word;overflow-x:hidden;max-width:100%;text-align:center;color:var(--text-color);white-space: pre-wrap;word-wrap: break-word;overflow-wrap: break-word;font-family:var(--font-main);padding:10px;margin:0;}
-.c-overlay span {padding:0;margin:0;text-align:center;}
 .closec {position:fixed;z-index:201;left:50%;transform:translateX(-50%);bottom:50px;background:none;border:none;}
 .closec img {width:30px;height:30px;max-width:30px;filter: invert(100%);}
 .bmblock {position:fixed;width:100%;max-width:100%;height:100px;background:#000;z-index:200;overflow:hidden;bottom:0;left:0;}
@@ -440,7 +425,7 @@ CREDITS II
 
 <div class="song-row" onclick="toggleSong(this)">
 <span class="song-number">3.</span>
-<span class="song-title">SMOKE HOUR ★ WILLIE NELSON SMOKE HOUR ★ WILLIE NELSON
+<span class="song-title">SMOKE HOUR ★ WILLIE NELSON SMOKE
 <div class="overlay_btns">
 <button onclick="openOverlayWithContent('overlay1', 'lyrics1')">LYRICS</button>
 <span>/</span>
