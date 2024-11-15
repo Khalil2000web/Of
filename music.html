@@ -145,13 +145,8 @@ body {margin:0;padding:20px;padding-bottom:100px;padding-top:100px;color:var(--p
 .nav-top .menu a p{font-size:23px;}}
 
 .song-row {display: flex;align-items: top;justify-content: space-between;cursor: pointer;padding: 10px;position: relative;margin-bottom:7px;}
-.song-number {text-align:left;font-size: 17px;margin-right: 10px; }
-.song-title {text-align: right;font-size: 17px;flex-grow: 1; word-wrap: break-word;text-transform:uppercase;padding-left:25px;padding:0;margin:0;}
-@media screen and (max-width: 849px) and (orientation: landscape) {
-  .song-number, .song-title {
-    font-size: 17px;
-  }
-}
+.song-number {text-align:left;font-size: 16px;margin-right: 10px; }
+.song-title {text-align: right;font-size: 16px;flex-grow: 1; word-wrap: break-word;text-transform:uppercase;padding-left:25px;padding:0;margin:0;}
 .icons {display: none;flex-direction: column;gap: 15px;justify-content: flex-start;}
 .expanded .icons {display: flex;}
 .song-row .song-number,
@@ -188,7 +183,9 @@ img {-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user
 .icons {position: absolute;left:50%;transform: translateX(-50%);flex-direction:row;top:10px;}
 .icons img {max-width:30px;}
 .overlay_btns {position: absolute;left:50%;transform: translateX(-50%);top:50px;margin:0 auto;padding:0;gap:10px;}
-.expanded .song-title {padding-bottom:40px;}}
+.expanded .song-title {padding-bottom:40px;}
+.expanded .song-title {max-width:35%;}}
+
 @media screen and (min-width:700px) {.overlay-content p {font-size:1rem;padding-left:100px;padding-right:100px;}}
 .overlay-content p {overflow:auto;overflow-x:hidden;max-width:100%;padding:30px;padding-bottom:90px;}
 .overlay-content pre {line-height:3;font-family:var(--font-main);text-transform:uppercase;font-size:1.1rem;word-wrap:break-word;overflow-x:hidden;max-width:100%;text-align:center;color:var(--text-color);white-space: pre-wrap;word-wrap: break-word;overflow-wrap: break-word;padding:20px;}
@@ -443,7 +440,7 @@ CREDITS II
 
 <div class="song-row" onclick="toggleSong(this)">
 <span class="song-number">3.</span>
-<span class="song-title">SUMMER RENAISSANCE
+<span class="song-title">SMOKE HOUR ★ WILLIE NELSON SMOKE HOUR ★ WILLIE NELSON
 <div class="overlay_btns">
 <button onclick="openOverlayWithContent('overlay1', 'lyrics1')">LYRICS</button>
 <span>/</span>
