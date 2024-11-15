@@ -63,7 +63,7 @@
 --footer-height:100px;--card-padding:var(--spacing-md);--card-border-radius:var(--border-radius-medium);}</style><style>
 @font-face {font-family: 'BB Manual Mono Regular';src: url('https://music.khaliiil.com/static/fonts/BBManualMonoProTX.22d272fc 2.ttf');}
 @font-face {font-family: 'BB Manual Mono SemiBold';src: url('https://music.khaliiil.com/static/fonts/BBManualMonoProTX-SemiBold 2.otf');}
-body {margin:0;padding:20px;padding-bottom:100px;padding-top:100px;color:var(--primary-color);background-color:var(--background-color);font-family:var(--font-main);}
+body {margin:0;padding:0;padding:20px;padding-bottom:100px;padding-top:100px;color:var(--primary-color);background-color:var(--background-color);font-family:var(--font-main);}
 .nav_bottom {position: fixed;width: 100%;left: 50%;transform:translateX(-50%);display: flex;justify-content: center;align-items: center;z-index:var(--z-index-max);bottom:0;background: none;}
 .nav_bottom .menu {display: flex;gap: 45px;}
 .nav_bottom .menu a, .nav_bottom .menu p {line-height:1.6;align-self:end;word-wrap:break-word;user-select:none;-webkit-user-select:none;text-shadow:none;font-family:var(--font-main);color:var(--text-color);text-decoration: none;font-weight:300;font-size:16px;text-transform:uppercase;bottom:0;padding:0;margin:0;}
@@ -145,14 +145,14 @@ body {margin:0;padding:20px;padding-bottom:100px;padding-top:100px;color:var(--p
 .nav-top .menu a p{font-size:23px;}}
 
 .song-row {display: flex;align-items: top;justify-content: space-between;cursor: pointer;padding: 10px;position: relative;margin-bottom:7px;}
-.song-number {text-align:left;font-size: 16px;margin-right: 10px; }
-.song-title {text-align: right;font-size: 16px;flex-grow: 1; word-wrap: break-word;text-transform:uppercase;padding-left:28px;padding:0;margin:0;}
+.song-number {text-align:left;font-size:1rem;margin-right: 10px; }
+.song-title {text-align: right;font-size:1rem;flex-grow: 1; word-wrap: break-word;text-transform:uppercase;padding-left:28px;padding:0;margin:0;}
 .icons {display: none;flex-direction: column;gap: 15px;justify-content: flex-start;}
 .expanded .icons {display: flex;}
 .song-row .song-number,
 .song-row .icons {order: 1; }
 .song-row .song-title {order: 2; padding-left:40px;}
-.icons {display: none;flex-direction: column;gap: 15px;justify-content:flex-start;}
+.icons {display: none;flex-direction: column;gap:1rem;justify-content:flex-start;}
 .expanded .icons {display: flex;}
 .song-row .song-number,
 .song-row .icons {order: 1;}
@@ -161,8 +161,8 @@ body {margin:0;padding:20px;padding-bottom:100px;padding-top:100px;color:var(--p
 .song-row .icons {order: 1; }
 .song-row .song-title {order: 2;}
 .icons img {margin-left:auto;width: 32px;height: auto;max-width: 30px;vertical-align: middle;}
-.expanded .song-title {font-size: 22px;}
-.expanded .song-number {font-size: 22px;}
+.expanded .song-title {font-size:1.375rem;}
+.expanded .song-number {font-size: 1.375rem;}
 .expanded .icons {display: flex;}
 .bold {font-family:var(--font-main);padding-top:20px;}
 .overlay_btns {display:none;flex-direction:row;margin-left:auto;padding-bottom:auto;order:3;justify-content:flex-end;padding:0;margin:8px;}
@@ -176,7 +176,7 @@ body {margin:0;padding:20px;padding-bottom:100px;padding-top:100px;color:var(--p
     zoom: 1;
   }
   .song-title {
-    font-size: 17px !important;
+    font-size: 1rem !important;
   }
 }
 @media screen and (min-width:1000px) {
