@@ -82,10 +82,10 @@ video {display:flex;margin:0 auto;width:100%;max-width:100%:padding:0;margin:0;}
 .prev-btn, .next-btn {position: absolute;justify-content:center;align-items:center;}
 button:active {background:rgba(0,0,0,0.4);}
 button{padding:0;margin:0;}
-.prev-btn,.next-btn {background:none;border:none;border-radius:0;padding:4px 8px;margin:0;}
+.prev-btn,.next-btn {background:none;border:none;border-radius:0;padding:2px 8px;margin:0;}
 .navb, .close-btn {color:white;width:33px;}
-.prev-btn {top:28px;left:50px;z-index:10005;border:3px solid rgba(39, 92, 134, 0.8);}
-.next-btn {top:28px;right:50px;z-index:10005;border:3px solid rgba(39, 92, 134, 0.8);}
+.prev-btn {top:28px;left:50px;z-index:10005;border:3px solid rgba(39, 92, 134, 1);}
+.next-btn {top:28px;right:50px;z-index:10005;border:3px solid rgba(39, 92, 134, 1);}
 @media screen and (max-width:400px) {
 .prev-btn {left: 45px;}
 .next-btn {right:45px;}}
@@ -128,7 +128,7 @@ button{padding:0;margin:0;}
 .diskfooter p {padding: 0;margin:0;}
 @media screen and (min-width:800px) {.menu-btn, .menu, .overlay-m {display:none;}.nav-top {display: flex;}.diskfooter {display:flex}}
 .menu-btn {position:fixed;border-radius:6px;top:20px;right:20px;background:none;color:#fff;border:none;outline:none;z-index:100;margin:0;padding:10px;}
-.menu {position:fixed;height:100%;width:70%;margin:0;padding:20px;align-items:center;justify-content:center;background:#000;border-left:2px solid #fff;top:0;right:-100%;z-index:1000;transition: right 0.3s ease;}
+.menu {position:fixed;height:100%;width:70%;margin:0;padding:20px;align-items:center;justify-content:center;background:#000;border-left:2px solid #fff;top:0;right:-150%;z-index:1000;transition: right 0.3s ease;}
 .menu.open {right: 0;}
 .close {position:absolute;top:20px;right:20px;background:none;color:#fff;border:none;outline:none;border-radius:0;font-size:1.2rem;padding:0;margin:0;}
 .menu .links {display:flex;padding:0;margin:0 auto;display:flex;flex-direction:column;align-items:center;justify-content:center;margin-top:80px;}
@@ -141,8 +141,8 @@ button{padding:0;margin:0;}
 svg {display:block;}
 .me {width:25px;color:black;display:block;}
 .cc {width:40px;}
-.titles {position: fixed;top:50%;left:50%;transform: translate(-50%,-50%);display:flex;width:100%;align-items: center;justify-content: space-between;z-index:900;}
-.titles a {color:#fff;text-decoration: none;font-size:1.2rem;letter-spacing:2px;cursor: pointer;}
+.titles {position: fixed;border :1px solid white;top:50%;left:50%;transform: translate(-50%,-50%);display:flex;width:100%;max-width:98%;align-items: center;justify-content: space-between;z-index:900;}
+.titles a {color:#fff;text-decoration: none;width:max-content;font-size:1.2rem;letter-spacing:2px;cursor: pointer;}
 #left {padding-left:100px;text-align:left;float:left;}
 #right {margin-right:100px;text-align:right;float:right;}
 @media screen and (max-width:400px) {#left {padding-left:10px;}#right {margin-right:10px;}}
@@ -317,8 +317,8 @@ PRIVACY
 <div id="overlay" class="overlay">
 <div id="overlay-content" class="overlay-content"></div>
 <button id="close-btn" class="close-btn"><svg viewBox="0 0 24 24" aria-hidden="true" class="close-overlay"><path fill="white" d="M19 6 6 19M6 6l13 13" stroke="white" stroke-width="2.2" stroke-linecap="round"></path></svg></button>
-<button id="next-btn" class="next-btn"><svg viewBox="-2 0 24 24" aria-hidden="true" class="navb" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M6 4l8 8-8 8" stroke="white" stroke-width="2.7" stroke-linejoin="miter"></path></svg></button>
-<button id="prev-btn" class="prev-btn"><svg viewBox="2 0 24 24" aria-hidden="true" class="navb" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M18 4l-8 8 8 8" stroke="white" stroke-width="2.7" stroke-linejoin="miter"></path></svg></button>
+<button id="next-btn" class="next-btn"><svg viewBox="-2 0 24 24" aria-hidden="true" class="navb" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M6 4l8 8-8 8" stroke="white" stroke-width="2.9" stroke-linejoin="miter"></path></svg></button>
+<button id="prev-btn" class="prev-btn"><svg viewBox="2 0 24 24" aria-hidden="true" class="navb" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M18 4l-8 8 8 8" stroke="white" stroke-width="2.9" stroke-linejoin="miter"></path></svg></button>
 </div>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
