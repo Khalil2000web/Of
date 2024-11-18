@@ -11,17 +11,19 @@
 <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/static/media/head/favicon-32x32.png" sizes="32x32">
 <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/static/media/head/android-chrome-192x192.png" sizes="192x192">
 <link rel="apple-touch-icon" href="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/static/media/head/apple-touch-icon.png" sizes="180x180">
-<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/static/media/head/android-chrome-192x192.png" sizes="192x192">
+<link rel="icon" type="image/png" href="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/static/media/head/android-chrome-192x192.png" sizes="192x192">  
 <meta name="URL" content="https://www.khaliiil.com">
 <meta name="twitter:description" content="The Official Website of Khalil">
 <meta property="og:title" content="Khalil">
 <meta property="og:description" content="The Official Website of Khalil">
-<meta property="og:image" content="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/static/media/head/photo-output.jpeg">
+<meta property="og:image" content="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/static/media/head/photo-output.jpeg" />
 <meta property="og:site_name" content="Khalil">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.khaliiil.com/">
 <meta http-equiv="Content-type" content="text/html; charset=utf-8">
 <meta name="copyright" content="2024">
+<link rel="preload" href="https://khaliiil.com/static/css/cssnovideoc.css" as="style" onload="this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://khaliiil.com/static/css/cssnovideoc.css"></noscript>
 <style>:root {--primary-color:#fff;--secondary-color:#ccc;--accent-color:#ddd;
 --background-color:#000;--light-background-color:#ffffff;--dark-background-color:#333333;
 --text-color:#fff;--light-text-color:#666;--heading-color:#111;
@@ -60,322 +62,619 @@
 --link-hover-decoration:underline;--table-border-color:var(--border-color);--table-padding:var(--spacing-sm);
 --table-striped-bg:#f9f9f9;--container-max-width:1200px;--header-height:70px;
 --footer-height:100px;--card-padding:var(--spacing-md);--card-border-radius:var(--border-radius-medium);}</style>
+<style>.sound-icon {position: absolute;bottom: 18px;right: 18px;width: 15px;height: auto;cursor: pointer;z-index:21;user-select: none;touch-action: none;}.sound-off-icon {display: block;}.play-btn, .spinner {position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);z-index: 5;display: none;}.play-btn {width:100px;height:100px;border-radius: 50%;border:1px solid #fff;background: url('https://khaliiil.com/static/media/undefined.svg') no-repeat center;background-size: contain;cursor: pointer;}.spinner {border:6px solid rgba(255, 255, 255, 0.3);border-top: 6px solid white;border-bottom:6px solid rgba(173, 216, 230, 0.9);border-radius: 50%;width: 60px;height: 60px;transform-origin: center;animation: spin 1s linear infinite;margin:-30px 0 0 -30px;opacity:.85;text-align:left;box-sizing:border-box;background-clip:padding-box;}@keyframes spin {from {transform: rotate(0deg);}to {transform: rotate(360deg);}}</style>
+<style>.video-error {position: absolute;top:0;left:0;width:100%;height:100%;z-index:20;background: #151b17;font-family:Arial;}</style>
 <style>
-.sound-icon {padding:5px;position: absolute;bottom: 20px;right: 20px;width: 15px;max-width:15px;height: auto;cursor: pointer;z-index:var(--z-index-max);-moz-user-select: none;-ms-user-select: none;user-select: none;pointer-events: auto;cursor:pointer;-webkit-user-drag: none;-moz-user-drag: none;-ms-user-drag: none;user-drag: none;}
-.sound-off-icon {display: block;}
-.sound-on-icon {display: none;}
-.play-btn, .spinner {position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);z-index: 5;display: none;}
-.play-btn {width:100px;height:100px;border-radius: 50%;border:1px solid #fff;background: url('https://khaliiil.com/static/media/undefined.svg') no-repeat center;background-size: contain;cursor: pointer;}
-.spinner {border:6px solid rgba(255, 255, 255, 0.3);border-top: 6px solid white;border-bottom:6px solid rgba(173, 216, 230, 0.9);border-radius: 50%;width: 50px;height:50px;transform-origin: center;animation: spin 1s linear infinite;margin:-25px 0 0 -25px;opacity:.85;text-align:left;box-sizing:border-box;background-clip:padding-box;}
-@keyframes spin {from {transform: rotate(0deg);} to {transform: rotate(360deg);}}</style>
-<style>
-@font-face {font-family: 'BB Manual Mono Regular';src: url('https://raw.githubusercontent.com/Khalil2000web/Of/main/system/fonts/BBManualMonoProTX.22d272fc.ttf');}@font-face {font-family: 'BB Manual Mono SemiBold';src: url('https://raw.githubusercontent.com/Khalil2000web/Of/main/system/fonts/BBManualMonoProTX-SemiBold.otf');}
-body,html {margin:0;padding:0;color:var(--primary-color);background:var(--background-color);font-family:var(--font-main);}
-.nav_bottom {position: fixed;width: 100%;left: 50%;transform:translateX(-50%);display: flex;justify-content: center;align-items: center;z-index:var(--z-index-max);bottom:16px;background: none;}
-.nav_bottom .menu {display: flex;gap: 45px;}
-.nav_bottom .menu a, .nav_bottom .menu p {line-height:1.6;align-self:end;word-wrap:break-word;user-select:none;-webkit-user-select:none;text-shadow:none;font-family:var(--font-main);color:var(--text-color);text-decoration: none;font-weight:300;font-size:16px;text-transform:uppercase;bottom:0;padding:0;margin:0;}
+@font-face {font-family: 'BB Manual Mono Regular';src: url('https://raw.githubusercontent.com/Khalil2000web/Of/main/system/fonts/BBManualMonoProTX.22d272fc.ttf');}
+@font-face {font-family: 'BB Manual Mono SemiBold';src: url('https://raw.githubusercontent.com/Khalil2000web/Of/main/system/fonts/BBManualMonoProTX-SemiBold.otf');}
+body {margin:0;padding:0;background-color:var(--background-color);font-family:var(--font-main);color:var(--primary-color)}
+.media-grid {position:fixed;width:100%;max-width:100%;height:100%;padding:0;margin:0;overflow:auto;}
+.media {position:relative;display:flex;margin:0 auto;justify-content:center;align-items:center;max-width:100%;}
+video {display:flex;margin:0 auto;width:100%;max-width:100%:padding:0;margin:0;}
+.overlay {display: none;position: fixed;top: 0;left: 0;width: 100%;height: 100%;background-color: rgba(0, 0, 0, 1);z-index: 10000;overflow: auto;overscroll-behavior: none;scrollbar-width: none;touch-action: pan-x pan-y;}.overlay::-webkit-scrollbar {display: none;}
+.overlay-content {position:absolute;width: 100%;max-width: 100%;height:auto;top: 0;left: 0;padding: 0;margin: 0;z-index: 1000;touch-action: pan-x pan-y;overscroll-behavior:none;}
+.overlay-content .media {width: 100%;max-width: 100%;height: auto;margin-bottom: 150px;}
+.overlay-content .media a {display:block;pointer-events:all;}
+.close-btn {position: absolute;top:10px;right:10px;border-radius: 5px;z-index: 10001;background: none;border: none;}
+.fade-base {position: fixed;bottom: 0;width: 100%;height:60px;z-index: 1001;background:rgba(0,0,0,1);}
+.fade {position: fixed;bottom:60px;width: 100%;height:60px;z-index: 10001;background: linear-gradient(to top, #000, transparent);}
+.close-btn {width:33px;color:#fff;padding:0;border-radius:8px;}
+.prev-btn, .next-btn {position: absolute;justify-content:center;align-items:center;}
+button:active {background:rgba(0,0,0,0.4);}
+button{padding:0;margin:0;}
+.prev-btn,.next-btn {background:none;border:none;border-radius:2px;padding:2px 10px;margin:0;}
+.navb, .close-btn {color:white;width:33px;}
+.prev-btn {top:35px;left:50px;z-index:10005;border:3px solid rgba(39, 92, 134, 0.5);}
+.next-btn {top:35px;right:50px;z-index:10005;border:3px solid rgba(39, 92, 134, 0.5);}
 @media screen and (max-width:400px) {
-.nav_bottom .menu {gap:20px;}
-.nav_bottom {max-width:50%;}
-.nav_bottom .menu p {font-size:15px;}
-#copyright_sign_i {display:none;}
-#copyright_sign_ii {display:none;}
-#copyright_sign_iii {display:none;}
-#sep {display:none;}}
+.prev-btn {left: 35px;}
+.next-btn {right:35px;}}
 @media screen and (min-width:401px) and (max-width:500px) {
-.nav_bottom .menu {gap:30px;}
-.nav_bottom {max-width:74%;}
-#copyright_sign_i {display:none;}
-#copyright_sign_ii {display:none;}
-#copyright_sign_iii {display:none;}
-#sep {display:none;}}
+.prev-btn {left: 50px;}
+.next-btn {right:50px;}}
 @media screen and (min-width:501px) and (max-width:600px) {
-.nav_bottom .menu {gap:40px;}
-#copyright_sign_i {display:none;}
-#copyright_sign_ii {display:none;}
-#copyright_sign_iii {display:none;}
-#sep {display:none;}}
+.prev-btn {left: 100px;}
+.next-btn {right: 100px;}}
 @media screen and (min-width:601px) and (max-width:700px) {
-.nav_bottom .menu {gap:50px;}
-#copyright_sign_i {display:none;}
-#copyright_sign_ii {display:none;}
-#copyright_sign_iii {display:none;}
-#sep {display:none;}}
+.prev-btn {left: 140px;}
+.next-btn {right: 140px;}}
 @media screen and (min-width:701px) and (max-width:800px) {
-.nav_bottom .menu {gap:50px;}
-#copyright_sign_i {display:none;}
-#copyright_sign_ii {display:none;}
-#copyright_sign_iii {display:none;}
-#sep {display:none;}}
+.prev-btn {left: 160px;}
+.next-btn {right: 160px;}}
 @media screen and (min-width:801px) and (max-width:990px) {
-.nav_bottom .menu {gap:40px;}
-.nav_bottom .menu p {font-size:14px;}
-#copyright_sign_i {display:none;}
-#copyright_sign_ii {display:none;}
-#copyright_sign_iii {display:block;}
-#sep {display:block;}}
+.prev-btn {left: 200px;}
+.next-btn {right: 200px;}}
 @media screen and (min-width:1000px) {
-.nav_bottom .menu {gap:50px;}
-.nav_bottom .menu p {font-size:14px;}
-#copyright_sign_i {display:none;}
-#copyright_sign_ii {display:none;}
-#copyright_sign_iii {display:block;}
-#sep {display:block;}}
-#copyright_sign_i, #copyright_sign_ii, #copyright_sign_iii {color:var(--text-color);}
-.nav-top {position: fixed;width: 100%;left:50%;transform:translateX(-50%);display: flex;justify-content: center;align-items: center;z-index:var(--z-index-max);top:15px;background: none;padding:0;margin:0;}
-.nav-top .menu {display:flex;gap: 30px;padding-bottom:0;margin:0;}
-.nav-top .menu a {color:var(--text-color);text-decoration:none;}
-.nav-top .menu a p {font-family:var(--font-main);color:var(--text-color);user-select:none;-webkit-user-select:none;text-decoration: none;font-weight:300;font-size:30px;text-transform:uppercase;padding:0;margin:0;}
-@media screen and (max-width:400px) {
-.nav-top .menu {gap:30px;}
-.nav-top .menu a p{font-size:23px;}}
-@media screen and (min-width:401px) and (max-width:500px) {
-.nav-top .menu {gap:40px;}
-.nav-top .menu a p{font-size:23px;}}
-@media screen and (min-width:501px) and (max-width:600px) {
-.nav-top .menu {gap:70px;}
-.nav-top .menu a p{font-size:23px;}}
-@media screen and (min-width:601px) and (max-width:700px) {
-.nav-top .menu {gap:110px;}}
-@media screen and (min-width:701px) and (max-width:800px) {
-.nav-top .menu {gap:90px;}
-.nav-top .menu a p{font-size:23px;}}
-@media screen and (min-width:801px) and (max-width:990px) {
-.nav-top .menu {gap:90px;}
-.nav-top .menu a p{font-size:23px;}}
-@media screen and (min-width:1000px) {
-.nav-top .menu {gap:90px;}
-.nav-top .menu a p{font-size:23px;}}
-.container {margin:0;padding:0;position:absolute;display:flex;flex-direction:row;overflow-y:hidden;overflow-x:auto;width:100%;height:80%;top:50%;left:50%;transform:translate(-50%,-50%);gap:0;}
-.media {position:relative;width:auto;height:100%;}
-.image {pointer-events:none;}
-video {width:auto;height:100%;display:block;background:#151b17;}
-.left-text, .right-text {color:var(--text-color);position: fixed;left:50%;transform:translateX(-50%);letter-spacing:1.2px;font-size:1.2rem;z-index:var(--z-index-max);font-family:var(--font-main);}
-.left-text {top:150px;text-align:center;}
-.right-text {bottom:150px;text-align:center;}
-@media screen and (max-width:400px) {}
-@media screen and (min-width:401px) and (max-width:500px) {}
-@media screen and (min-width:501px) and (max-width:600px) {}
-@media screen and (min-width:601px) and (max-width:700px) {}
-@media screen and (min-width:701px) and (max-width:800px) {}
-@media screen and (min-width:801px) and (max-width:990px) {}
-@media screen and (min-width:901px) {}
-@media only screen and (max-width: 768px) and (orientation: landscape) {body,html {display: none;}}</style>
+.prev-btn {left: 350px;right:auto;}
+.next-btn {right: 350px;left:auto;}}
+.overlay.opening {display: flex;width: 98%;height: 98%;top: 50%;left: 50%;transform: translate(-50%,-50%);opacity:0.9;}
+.overlay.fullscreen {width: 100%;height: 100%;top: 50%;left: 50%;transform: translate(-50%, -50%);opacity:1;}
+.overlay.closing {width: 95%;height: 95%;top: 50%;left: 50%;transform: translate(-50%, -50%);opacity:0.2;}
+.hidden_in_gallery {display: none;}
+.overlay .hidden_in_gallery {display: block;}
+.nav-top {position: fixed;width: 100%;left: 0;display:none;justify-content: center;align-items: center;z-index:var(--z-index-max);top:20px;background: none;padding:0;margin:0;}
+.nav-top .menu-nav {display:flex;gap: 30px;padding-bottom:0;margin:0;}
+.nav-top .menu-nav a {text-decoration:none;}
+.nav-top .menu-nav a p {font-family:var(--font-main);color:var(--text-color);user-select:none;-webkit-user-select:none;text-decoration: none;font-weight:300;font-size:30px;text-transform:uppercase;padding:0;margin:0;}
+@media screen and (min-width:801px) {
+.nav-top .menu-nav {gap:50px;}
+.nav-top .menu-nav a p{font-size:1.2rem;}}
+.diskfooter {position: fixed;bottom: 25px;left:50%;transform:translateX(-50%);width: 100%;max-width:98%;margin:0 auto;display:none;;justify-content: space-between;align-items: center;padding: 0;color:var(--text-color);z-index:1000;}
+.diskfooter a, .diskfooter #cp {margin: 0;padding: 0;color:var(--text-color)}
+#cp {text-align: center;flex-grow: 1;}
+.diskfooter a {text-decoration: none;}
+.diskfooter a #lefts{padding-right:30px;}
+.diskfooter a #rights{padding-left:30px;}
+.diskfooter p {padding: 0;margin:0;}
+@media screen and (min-width:800px) {.menu-btn, .menu, .overlay-m {display:none;}.nav-top {display: flex;}.diskfooter {display:flex}}
+.menu-btn {position:fixed;border-radius:6px;top:20px;right:20px;background:none;color:#fff;border:none;outline:none;z-index:100;margin:0;padding:10px;}
+.menu {position:fixed;height:100%;width:70%;margin:0;padding:20px;align-items:center;justify-content:center;background:#000;border-left:2px solid #fff;top:0;right:-100%;z-index:1000;transition: right 0.3s ease;}
+.menu.open {right: 0;}
+.close {position:absolute;top:20px;right:20px;background:none;color:#fff;border:none;outline:none;border-radius:0;font-size:1.2rem;padding:0;margin:0;}
+.menu .links {display:flex;padding:0;margin:0 auto;display:flex;flex-direction:column;align-items:center;justify-content:center;margin-top:80px;}
+.menu .links a {color:#fff;text-align:center;text-decoration:none;margin-bottom:30px;font-size:1.4rem;width:100%;}
+.menu .links a:hover {color:#ccc;background:rgba(255,255,854,0.010000000000);}
+.overlay-m {position:fixed;width:100%;height:100%;background:rgba(0,0,0,0.4);z-index:500;top:0;left:-100%;transition: left 0.3s ease;}
+.overlay-m.open {left:0;}
+.footer {position:absolute;width:100%;height:40px;justify-content:center;align-items:center;display:flex;margin:0;padding:0;flex-direction:row;background:none;gap:15px;max-width:70%;bottom:30px;left:50%;transform:translateX(-50%);}
+.footer a {color:#fff;text-align:left;text-decoration:none;word-wrap:break-word;font-size:14px;padding-bottom:60px;align-self:end;}
+svg {display:block;}
+.me {width:25px;color:black;display:block;}
+.cc {width:40px;}
+.titles {position: fixed;top:50%;left:50%;transform: translate(-50%,-50%);display:flex;width:100%;align-items: center;justify-content: space-between;z-index:900;}
+.titles a {color:#fff;text-decoration: none;font-size:1.2rem;letter-spacing:2px;cursor: pointer;}
+#left {padding-left:100px;text-align:left;float:left;}
+#right {margin-right:100px;text-align:right;float:right;}
+@media screen and (max-width:400px) {#left {padding-left:40px;}#right {margin-right:40px;}}
+@media screen and (min-width:800px) {.titles a {font-size:1.4rem;letter-spacing: normal;}.titles {max-width:90%;}}
+</style>
 </head>
 <body>
+<div class="titles">
+<a href="https://music.beyonce.com/" style="pointer-events:visible" id="left">
+act ii
+</a>
+<a href="https://music.beyonce.com/" style="pointer-events:visible" id="right">
+COWBOY CARTER
+</a>
+</div>
 <div class="nav-top">
-<div class="menu">
-<a href="hhtps://khaliiil.com/">
+<div class="menu-nav">
+<a href="https://shop.beyonce.com/">
 <p>
-HOME
+SHOP
 </p>
 </a>
-<a href="https://tour.khaliiil.com/">
+<a href="https://music.beyonce.com">
 <p>
-TOUR
+MUSIC
 </p>
 </a>
-<a href="/carter">
+<a href="https://parfum.beyonce.com/">
 <p>
-CARTER
+PARFUM
 </p>
 </a>
-<a href="/blog">
+<a href="https://cecred.com">
 <p>
-BLOG
+CÉCRED
+</p>
+</a>
+<a href="https://www.sirdavis.com/?utm_source=msb&utm_medium=community&utm_campaign=SIRDAVIS_WS_USA_SIRDAVISBRLAUNCH_WHI_MASTERBRAND_SIRDAVIS_AW$0">
+<p>
+SIRDAVIS
 </p>
 </a>
 </div>
 </div>
-<div class="nav_bottom">
-<div class="menu">
-<a href="https://connect.khaliiil.com">
-<p>
+
+
+<div class="diskfooter">
+<a href="https://beyonce.com">
+<p id="rights">
 JOIN
 </p>
 </a>
-<p id="sep">
-/
-</p>
-<a href="/credits">
-<p>
-SITE CREDITS
+<p id="cp">&copy;&nbsp;2024 BEYONCÉ</p>
+<a href="https://beencountry.com/">
+<p id="lefts">
+BEEN COUNTRY
 </p>
 </a>
-<p id="sep">
-/
-</p>
-<p id="copyright_sign_i">
-©
-</p>
-<p id="copyright_sign_ii">
-©&nbsp;2024
-</p>
-<p id="copyright_sign_iii">
-©&nbsp;2024,&nbsp;KHALIL
-</p>
-<p id="sep">
-/
-</p>
-<a href="/terms-conditions">
-<p>
+<a href="https://www.beyonce.com/terms-conditions">
+<p id="lefts">
 TERMS
 </p>
 </a>
-<p id="sep">
-/
-</p>
-<a href="/privacy-policy">
-<p>
+<a href="https://www.beyonce.com/privacy-policy">
+<p id="lefts">
 PRIVACY
 </p>
 </a>
 </div>
+<button class="menu-btn" type="button" onclick="openMenu()"><svg viewBox="0 0 24 24" aria-hidden="true" class="me">
+<path fill="#fff" d="M3 5a1 1 0 100 2h18a1 1 0 100-2H3zm0 6a1 1 0 100 2h18a1 1 0 100-2H3zm0 6a1 1 0 100 2h18a1 1 0 100-2H3z"></path>
+</svg>
+</button>
+<div class="overlay-m"></div>
+<div class="menu">
+<button class="close" onclick="closeMenu()"><svg viewBox="0 0 24 24" aria-hidden="true" class="cc">
+<path fill="white" d="M19 6 6 19M6 6l13 13" stroke="white" stroke-width="1.6" stroke-linecap="round"></path>
+</svg></button>
+<div class="links">
+<a href="https://shop.beyonce.com/">SHOP</a>
+<a href="https://music.beyonce.com/">MUSIC</a>
+<a href="https://parfum.beyonce.com/">PARFUM</a>
+<a href="https://cecred.com/">CÉCRED</a>
+<a href="https://www.sirdavis.com/?utm_source=msb&utm_medium=community&utm_campaign=SIRDAVIS_WS_USA_SIRDAVISBRLAUNCH_WHI_MASTERBRAND_SIRDAVIS_AW">SIRDAVIS</a>
 </div>
-<a title="TOUR" href="https://tour.khaliiil.com/">
-<div class="left-text">
-&#9001; 3.
+<div class="footer">
+<a href="https://beyonce.com">JOIN</a>
+<a href="https://beencountry.com">BEEN COUNTRY</a>
+<a href="https://beyonce.com/terms-conditions/$0">TERMS</a>
+<a href="https://beyonce.com/privacy-policy/$0">PRIVACY</a>
+</div>
+</div>
+
+<div class="media-grid">
+<div class="media">
+<a rel="noopener noreferrer" style="cursor: pointer;">
+<div style="pointer-events:none;">
+<img sizes="(max-width: 2000px) 100vw, 800px" srcset="https://cdn.sanity.io/images/fvrrd1kn/production/17f32e3d3dbf8caab20c87f9d63a3edabdc4d15c-6926x6925.jpg?w=640&q=75&fit=clip&auto=format 640w, https://cdn.sanity.io/images/fvrrd1kn/production/17f32e3d3dbf8caab20c87f9d63a3edabdc4d15c-6926x6925.jpg?w=750&q=75&fit=clip&auto=format 750w, https://cdn.sanity.io/images/fvrrd1kn/production/17f32e3d3dbf8caab20c87f9d63a3edabdc4d15c-6926x6925.jpg?w=828&q=75&fit=clip&auto=format 828w, https://cdn.sanity.io/images/fvrrd1kn/production/17f32e3d3dbf8caab20c87f9d63a3edabdc4d15c-6926x6925.jpg?w=1080&q=75&fit=clip&auto=format 1080w, https://cdn.sanity.io/images/fvrrd1kn/production/17f32e3d3dbf8caab20c87f9d63a3edabdc4d15c-6926x6925.jpg?w=1200&q=75&fit=clip&auto=format 1200w, https://cdn.sanity.io/images/fvrrd1kn/production/17f32e3d3dbf8caab20c87f9d63a3edabdc4d15c-6926x6925.jpg?w=1920&q=75&fit=clip&auto=format 1920w, https://cdn.sanity.io/images/fvrrd1kn/production/17f32e3d3dbf8caab20c87f9d63a3edabdc4d15c-6926x6925.jpg?w=2048&q=75&fit=clip&auto=format 2048w, https://cdn.sanity.io/images/fvrrd1kn/production/17f32e3d3dbf8caab20c87f9d63a3edabdc4d15c-6926x6925.jpg?w=3840&q=75&fit=clip&auto=format 3840w" src="https://cdn.sanity.io/images/fvrrd1kn/production/17f32e3d3dbf8caab20c87f9d63a3edabdc4d15c-6926x6925.jpg?w=3840&q=75&fit=clip&auto=format" width="100" height="100" style="color:transparent;width:100%;height:auto;pointer-events:none;" decoding="async" loading="lazy" alt="Image">
 </div>
 </a>
-<a title="TOUR" href="https://tour.khaliiil.com/">
-<div class="right-text">
-SWITZERLAND &#9002;
+</div>
+<div class="media">
+<a href="https://khaliiil.com" rel="noopener noreferrer" style="cursor: pointer;">
+<div style="pointer-events:none;">
+<img sizes="(max-width: 2000px) 100vw, 800px" srcset="https://cdn.sanity.io/images/fvrrd1kn/production/0a8c59cac4b0fdc13910020b1c027bf295105135-3000x1560.jpg?w=640&q=75&fit=clip&auto=format 640w, https://cdn.sanity.io/images/fvrrd1kn/production/0a8c59cac4b0fdc13910020b1c027bf295105135-3000x1560.jpg?w=750&q=75&fit=clip&auto=format 750w, https://cdn.sanity.io/images/fvrrd1kn/production/0a8c59cac4b0fdc13910020b1c027bf295105135-3000x1560.jpg?w=828&q=75&fit=clip&auto=format 828w, https://cdn.sanity.io/images/fvrrd1kn/production/0a8c59cac4b0fdc13910020b1c027bf295105135-3000x1560.jpg?w=1080&q=75&fit=clip&auto=format 1080w, https://cdn.sanity.io/images/fvrrd1kn/production/0a8c59cac4b0fdc13910020b1c027bf295105135-3000x1560.jpg?w=1200&q=75&fit=clip&auto=format 1200w, https://cdn.sanity.io/images/fvrrd1kn/production/0a8c59cac4b0fdc13910020b1c027bf295105135-3000x1560.jpg?w=1920&q=75&fit=clip&auto=format 1920w, https://cdn.sanity.io/images/fvrrd1kn/production/0a8c59cac4b0fdc13910020b1c027bf295105135-3000x1560.jpg?w=2048&q=75&fit=clip&auto=format 2048w, https://cdn.sanity.io/images/fvrrd1kn/production/0a8c59cac4b0fdc13910020b1c027bf295105135-3000x1560.jpg?w=3840&q=75&fit=clip&auto=format 3840w" src="https://cdn.sanity.io/images/fvrrd1kn/production/0a8c59cac4b0fdc13910020b1c027bf295105135-3000x1560.jpg?w=3840&q=75&fit=clip&auto=format" width="100" height="100" style="color:transparent;width:100%;height:auto;pointer-events:none;" decoding="async" loading="lazy" alt="Image">
 </div>
 </a>
-<div class="container">
-<img style="pointer-events:none;" class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_45" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9238.jpeg">
-<img class="image" loading="lazy" alt="Image" title="Switzerland_2024_44" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9274.jpeg">
-<img class="image" loading="lazy" alt="Image" title="Switzerland_2024_43" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/Gif_10i.GIF">
-<img class="image" loading="lazy" alt="Image" title="Switzerland_2024_42" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9271.jpeg">
-<img class="image" loading="lazy" alt="Image" title="Switzerland_2024_34" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9263.jpeg">
-<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_33" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9262.jpeg">
-<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_32" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9261.jpeg">
-<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_31" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9260.jpeg">
-<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_30" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9259.jpeg">
-<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_28" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9241.jpeg">
-<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_27" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9242.jpeg">
-<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_26" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/Gif7_swis.GIF">
-<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_25" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9245.jpeg">
-<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_24" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/IMG_9239.jpeg">
-<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_23" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/IMG_9240.jpeg">
+</div>
 <div class="media">
-<video src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/Video_2_swis_2024_tour_page_.mov" controlslist="nofullscreen" autoplay="" loop="" muted="" playsinline=""></video>
-<img src="https://khaliiil.com/static/media/icon-mute.svg" class="sound-icon sound-off-icon" alt="Toggle Sound">
-<img src="https://khaliiil.com/static/media/icon-volume.svg" style="display:none;" class="sound-icon sound-on-icon" alt="unmute">
+<a rel="noopener noreferrer" style="cursor: pointer;">
+<div style="pointer-events:none;">
+<img sizes="(max-width: 2000px) 100vw, 800px" srcset="https://cdn.sanity.io/images/fvrrd1kn/production/273f3c6ee269a31e7549b0a4d374affccb9423c2-5000x6667.jpg?w=640&q=75&fit=clip&auto=format 640w, https://cdn.sanity.io/images/fvrrd1kn/production/273f3c6ee269a31e7549b0a4d374affccb9423c2-5000x6667.jpg?w=750&q=75&fit=clip&auto=format 750w, https://cdn.sanity.io/images/fvrrd1kn/production/273f3c6ee269a31e7549b0a4d374affccb9423c2-5000x6667.jpg?w=828&q=75&fit=clip&auto=format 828w, https://cdn.sanity.io/images/fvrrd1kn/production/273f3c6ee269a31e7549b0a4d374affccb9423c2-5000x6667.jpg?w=1080&q=75&fit=clip&auto=format 1080w, https://cdn.sanity.io/images/fvrrd1kn/production/273f3c6ee269a31e7549b0a4d374affccb9423c2-5000x6667.jpg?w=1200&q=75&fit=clip&auto=format 1200w, https://cdn.sanity.io/images/fvrrd1kn/production/273f3c6ee269a31e7549b0a4d374affccb9423c2-5000x6667.jpg?w=1920&q=75&fit=clip&auto=format 1920w, https://cdn.sanity.io/images/fvrrd1kn/production/273f3c6ee269a31e7549b0a4d374affccb9423c2-5000x6667.jpg?w=2048&q=75&fit=clip&auto=format 2048w, https://cdn.sanity.io/images/fvrrd1kn/production/273f3c6ee269a31e7549b0a4d374affccb9423c2-5000x6667.jpg?w=3840&q=75&fit=clip&auto=format 3840w" src="https://cdn.sanity.io/images/fvrrd1kn/production/273f3c6ee269a31e7549b0a4d374affccb9423c2-5000x6667.jpg?w=3840&q=75&fit=clip&auto=format" width="100" height="100" style="color:transparent;width:100%;height:auto;pointer-events:none;" decoding="async" loading="lazy" alt="Image">
+</div>
+</a>
+</div>
+<div class="media">
+<div style="pointer-events:none;">
+<img sizes="(max-width: 2000px) 100vw, 800px" srcset="https://cdn.sanity.io/images/fvrrd1kn/production/40a09bc4c85a60ab84e7e20e656db2aa26b5e290-3128x1767.jpg?w=640&q=75&fit=clip&auto=format 640w, https://cdn.sanity.io/images/fvrrd1kn/production/40a09bc4c85a60ab84e7e20e656db2aa26b5e290-3128x1767.jpg?w=750&q=75&fit=clip&auto=format 750w, https://cdn.sanity.io/images/fvrrd1kn/production/40a09bc4c85a60ab84e7e20e656db2aa26b5e290-3128x1767.jpg?w=828&q=75&fit=clip&auto=format 828w, https://cdn.sanity.io/images/fvrrd1kn/production/40a09bc4c85a60ab84e7e20e656db2aa26b5e290-3128x1767.jpg?w=1080&q=75&fit=clip&auto=format 1080w, https://cdn.sanity.io/images/fvrrd1kn/production/40a09bc4c85a60ab84e7e20e656db2aa26b5e290-3128x1767.jpg?w=1200&q=75&fit=clip&auto=format 1200w, https://cdn.sanity.io/images/fvrrd1kn/production/40a09bc4c85a60ab84e7e20e656db2aa26b5e290-3128x1767.jpg?w=1920&q=75&fit=clip&auto=format 1920w, https://cdn.sanity.io/images/fvrrd1kn/production/40a09bc4c85a60ab84e7e20e656db2aa26b5e290-3128x1767.jpg?w=2048&q=75&fit=clip&auto=format 2048w, https://cdn.sanity.io/images/fvrrd1kn/production/40a09bc4c85a60ab84e7e20e656db2aa26b5e290-3128x1767.jpg?w=3840&q=75&fit=clip&auto=format 3840w" src="https://cdn.sanity.io/images/fvrrd1kn/production/40a09bc4c85a60ab84e7e20e656db2aa26b5e290-3128x1767.jpg?w=3840&q=75&fit=clip&auto=format" width="100" height="100"sizes="(max-width: 2000px) 100vw, 800px" srcset="https://cdn.sanity.io/images/fvrrd1kn/production/40a09bc4c85a60ab84e7e20e656db2aa26b5e290-3128x1767.jpg?w=640&q=75&fit=clip&auto=format 640w, https://cdn.sanity.io/images/fvrrd1kn/production/40a09bc4c85a60ab84e7e20e656db2aa26b5e290-3128x1767.jpg?w=750&q=75&fit=clip&auto=format 750w, https://cdn.sanity.io/images/fvrrd1kn/production/40a09bc4c85a60ab84e7e20e656db2aa26b5e290-3128x1767.jpg?w=828&q=75&fit=clip&auto=format 828w, https://cdn.sanity.io/images/fvrrd1kn/production/40a09bc4c85a60ab84e7e20e656db2aa26b5e290-3128x1767.jpg?w=1080&q=75&fit=clip&auto=format 1080w, https://cdn.sanity.io/images/fvrrd1kn/production/40a09bc4c85a60ab84e7e20e656db2aa26b5e290-3128x1767.jpg?w=1200&q=75&fit=clip&auto=format 1200w, https://cdn.sanity.io/images/fvrrd1kn/production/40a09bc4c85a60ab84e7e20e656db2aa26b5e290-3128x1767.jpg?w=1920&q=75&fit=clip&auto=format 1920w, https://cdn.sanity.io/images/fvrrd1kn/production/40a09bc4c85a60ab84e7e20e656db2aa26b5e290-3128x1767.jpg?w=2048&q=75&fit=clip&auto=format 2048w, https://cdn.sanity.io/images/fvrrd1kn/production/40a09bc4c85a60ab84e7e20e656db2aa26b5e290-3128x1767.jpg?w=3840&q=75&fit=clip&auto=format 3840w" src="https://cdn.sanity.io/images/fvrrd1kn/production/40a09bc4c85a60ab84e7e20e656db2aa26b5e290-3128x1767.jpg?w=3840&q=75&fit=clip&auto=format" width="100" height="100" style="color:transparent;width:100%;height:auto;pointer-events:none;" decoding="async" loading="lazy" alt="Image">
+</div>
+</div>
+<div class="media">
+<div style="pointer-events:none;">
+<img sizes="(max-width: 2000px) 100vw, 800px" srcset="https://cdn.sanity.io/images/fvrrd1kn/production/18f584ec40efc453c3026ee340c171fc4c55d438-3000x707.jpg?w=640&q=75&fit=clip&auto=format 640w, https://cdn.sanity.io/images/fvrrd1kn/production/18f584ec40efc453c3026ee340c171fc4c55d438-3000x707.jpg?w=750&q=75&fit=clip&auto=format 750w, https://cdn.sanity.io/images/fvrrd1kn/production/18f584ec40efc453c3026ee340c171fc4c55d438-3000x707.jpg?w=828&q=75&fit=clip&auto=format 828w, https://cdn.sanity.io/images/fvrrd1kn/production/18f584ec40efc453c3026ee340c171fc4c55d438-3000x707.jpg?w=1080&q=75&fit=clip&auto=format 1080w, https://cdn.sanity.io/images/fvrrd1kn/production/18f584ec40efc453c3026ee340c171fc4c55d438-3000x707.jpg?w=1200&q=75&fit=clip&auto=format 1200w, https://cdn.sanity.io/images/fvrrd1kn/production/18f584ec40efc453c3026ee340c171fc4c55d438-3000x707.jpg?w=1920&q=75&fit=clip&auto=format 1920w, https://cdn.sanity.io/images/fvrrd1kn/production/18f584ec40efc453c3026ee340c171fc4c55d438-3000x707.jpg?w=2048&q=75&fit=clip&auto=format 2048w, https://cdn.sanity.io/images/fvrrd1kn/production/18f584ec40efc453c3026ee340c171fc4c55d438-3000x707.jpg?w=3840&q=75&fit=clip&auto=format 3840w" src="https://cdn.sanity.io/images/fvrrd1kn/production/18f584ec40efc453c3026ee340c171fc4c55d438-3000x707.jpg?w=3840&q=75&fit=clip&auto=format" width="100" height="100" style="color:transparent;width:100%;height:auto;pointer-events:none;" decoding="async" loading="lazy" alt="Image">
+</div>
+</div>
+<div class="media">
+<div style="pointer-events:none;">
+<img sizes="(max-width: 2000px) 100vw, 800px" srcset="https://cdn.sanity.io/images/fvrrd1kn/production/4f8171682ebbd0ccd1f580920805b2bdd6a631ad-960x1305.jpg?w=640&q=75&fit=clip&auto=format 640w, https://cdn.sanity.io/images/fvrrd1kn/production/4f8171682ebbd0ccd1f580920805b2bdd6a631ad-960x1305.jpg?w=750&q=75&fit=clip&auto=format 750w, https://cdn.sanity.io/images/fvrrd1kn/production/4f8171682ebbd0ccd1f580920805b2bdd6a631ad-960x1305.jpg?w=828&q=75&fit=clip&auto=format 828w, https://cdn.sanity.io/images/fvrrd1kn/production/4f8171682ebbd0ccd1f580920805b2bdd6a631ad-960x1305.jpg?w=1080&q=75&fit=clip&auto=format 1080w, https://cdn.sanity.io/images/fvrrd1kn/production/4f8171682ebbd0ccd1f580920805b2bdd6a631ad-960x1305.jpg?w=1200&q=75&fit=clip&auto=format 1200w, https://cdn.sanity.io/images/fvrrd1kn/production/4f8171682ebbd0ccd1f580920805b2bdd6a631ad-960x1305.jpg?w=1920&q=75&fit=clip&auto=format 1920w, https://cdn.sanity.io/images/fvrrd1kn/production/4f8171682ebbd0ccd1f580920805b2bdd6a631ad-960x1305.jpg?w=2048&q=75&fit=clip&auto=format 2048w, https://cdn.sanity.io/images/fvrrd1kn/production/4f8171682ebbd0ccd1f580920805b2bdd6a631ad-960x1305.jpg?w=3840&q=75&fit=clip&auto=format 3840w" src="https://cdn.sanity.io/images/fvrrd1kn/production/4f8171682ebbd0ccd1f580920805b2bdd6a631ad-960x1305.jpg?w=3840&q=75&fit=clip&auto=format" width="100" height="100" style="color:transparent;width:100%;height:auto;pointer-events:none;" decoding="async" loading="lazy" alt="Image">
+</div>
+</div>
+<div class="media">
+<div style="pointer-events:none;">
+<img sizes="(max-width: 2000px) 100vw, 800px" srcset="https://cdn.sanity.io/images/fvrrd1kn/production/e54c9e282e5abf46ce001731acb7184052e50d95-3000x4068.jpg?w=640&q=75&fit=clip&auto=format 640w, https://cdn.sanity.io/images/fvrrd1kn/production/e54c9e282e5abf46ce001731acb7184052e50d95-3000x4068.jpg?w=750&q=75&fit=clip&auto=format 750w, https://cdn.sanity.io/images/fvrrd1kn/production/e54c9e282e5abf46ce001731acb7184052e50d95-3000x4068.jpg?w=828&q=75&fit=clip&auto=format 828w, https://cdn.sanity.io/images/fvrrd1kn/production/e54c9e282e5abf46ce001731acb7184052e50d95-3000x4068.jpg?w=1080&q=75&fit=clip&auto=format 1080w, https://cdn.sanity.io/images/fvrrd1kn/production/e54c9e282e5abf46ce001731acb7184052e50d95-3000x4068.jpg?w=1200&q=75&fit=clip&auto=format 1200w, https://cdn.sanity.io/images/fvrrd1kn/production/e54c9e282e5abf46ce001731acb7184052e50d95-3000x4068.jpg?w=1920&q=75&fit=clip&auto=format 1920w, https://cdn.sanity.io/images/fvrrd1kn/production/e54c9e282e5abf46ce001731acb7184052e50d95-3000x4068.jpg?w=2048&q=75&fit=clip&auto=format 2048w, https://cdn.sanity.io/images/fvrrd1kn/production/e54c9e282e5abf46ce001731acb7184052e50d95-3000x4068.jpg?w=3840&q=75&fit=clip&auto=format 3840w" src="https://cdn.sanity.io/images/fvrrd1kn/production/e54c9e282e5abf46ce001731acb7184052e50d95-3000x4068.jpg?w=3840&q=75&fit=clip&auto=format" width="100" height="100" style="color:transparent;width:100%;height:auto;pointer-events:none;" decoding="async" loading="lazy" alt="Image">
+</div>
+</div>
+<div class="media">
+<div style="pointer-events:none;">
+<img sizes="(max-width: 2000px) 100vw, 800px" srcset="https://cdn.sanity.io/images/fvrrd1kn/production/821ca9057c1574991e745e5c46a974ce62926c91-1200x1799.gif?w=640&q=75&fit=clip&auto=format 640w, https://cdn.sanity.io/images/fvrrd1kn/production/821ca9057c1574991e745e5c46a974ce62926c91-1200x1799.gif?w=750&q=75&fit=clip&auto=format 750w, https://cdn.sanity.io/images/fvrrd1kn/production/821ca9057c1574991e745e5c46a974ce62926c91-1200x1799.gif?w=828&q=75&fit=clip&auto=format 828w, https://cdn.sanity.io/images/fvrrd1kn/production/821ca9057c1574991e745e5c46a974ce62926c91-1200x1799.gif?w=1080&q=75&fit=clip&auto=format 1080w, https://cdn.sanity.io/images/fvrrd1kn/production/821ca9057c1574991e745e5c46a974ce62926c91-1200x1799.gif?w=1200&q=75&fit=clip&auto=format 1200w, https://cdn.sanity.io/images/fvrrd1kn/production/821ca9057c1574991e745e5c46a974ce62926c91-1200x1799.gif?w=1920&q=75&fit=clip&auto=format 1920w, https://cdn.sanity.io/images/fvrrd1kn/production/821ca9057c1574991e745e5c46a974ce62926c91-1200x1799.gif?w=2048&q=75&fit=clip&auto=format 2048w, https://cdn.sanity.io/images/fvrrd1kn/production/821ca9057c1574991e745e5c46a974ce62926c91-1200x1799.gif?w=3840&q=75&fit=clip&auto=format 3840w" src="https://cdn.sanity.io/images/fvrrd1kn/production/821ca9057c1574991e745e5c46a974ce62926c91-1200x1799.gif?w=3840&q=75&fit=clip&auto=format" width="100" height="100" style="color:transparent;width:100%;height:auto;pointer-events:none;" decoding="async" loading="lazy" alt="Image">
+</div>
+</div>
+<div class="media">
+<div style="pointer-events:none;">
+<img sizes="(max-width: 2000px) 100vw, 800px" srcset="https://cdn.sanity.io/images/fvrrd1kn/production/645ef7a91c517331d898bde52876491267303379-3069x2849.jpg?w=640&q=75&fit=clip&auto=format 640w, https://cdn.sanity.io/images/fvrrd1kn/production/645ef7a91c517331d898bde52876491267303379-3069x2849.jpg?w=750&q=75&fit=clip&auto=format 750w, https://cdn.sanity.io/images/fvrrd1kn/production/645ef7a91c517331d898bde52876491267303379-3069x2849.jpg?w=828&q=75&fit=clip&auto=format 828w, https://cdn.sanity.io/images/fvrrd1kn/production/645ef7a91c517331d898bde52876491267303379-3069x2849.jpg?w=1080&q=75&fit=clip&auto=format 1080w, https://cdn.sanity.io/images/fvrrd1kn/production/645ef7a91c517331d898bde52876491267303379-3069x2849.jpg?w=1200&q=75&fit=clip&auto=format 1200w, https://cdn.sanity.io/images/fvrrd1kn/production/645ef7a91c517331d898bde52876491267303379-3069x2849.jpg?w=1920&q=75&fit=clip&auto=format 1920w, https://cdn.sanity.io/images/fvrrd1kn/production/645ef7a91c517331d898bde52876491267303379-3069x2849.jpg?w=2048&q=75&fit=clip&auto=format 2048w, https://cdn.sanity.io/images/fvrrd1kn/production/645ef7a91c517331d898bde52876491267303379-3069x2849.jpg?w=3840&q=75&fit=clip&auto=format 3840w" src="https://cdn.sanity.io/images/fvrrd1kn/production/645ef7a91c517331d898bde52876491267303379-3069x2849.jpg?w=3840&q=75&fit=clip&auto=format" width="100" height="100" style="color:transparent;width:100%;height:auto;pointer-events:none;" decoding="async" loading="lazy" alt="Image">
+</div>
+</div>
+<div class="media">
+<div style="pointer-events:none;">
+<img sizes="(max-width: 2000px) 100vw, 800px" srcset="https://cdn.sanity.io/images/fvrrd1kn/production/7233d5ca4bca740f3bb6c913e61cefe3569a0827-960x2242.jpg?w=640&q=75&fit=clip&auto=format 640w, https://cdn.sanity.io/images/fvrrd1kn/production/7233d5ca4bca740f3bb6c913e61cefe3569a0827-960x2242.jpg?w=750&q=75&fit=clip&auto=format 750w, https://cdn.sanity.io/images/fvrrd1kn/production/7233d5ca4bca740f3bb6c913e61cefe3569a0827-960x2242.jpg?w=828&q=75&fit=clip&auto=format 828w, https://cdn.sanity.io/images/fvrrd1kn/production/7233d5ca4bca740f3bb6c913e61cefe3569a0827-960x2242.jpg?w=1080&q=75&fit=clip&auto=format 1080w, https://cdn.sanity.io/images/fvrrd1kn/production/7233d5ca4bca740f3bb6c913e61cefe3569a0827-960x2242.jpg?w=1200&q=75&fit=clip&auto=format 1200w, https://cdn.sanity.io/images/fvrrd1kn/production/7233d5ca4bca740f3bb6c913e61cefe3569a0827-960x2242.jpg?w=1920&q=75&fit=clip&auto=format 1920w, https://cdn.sanity.io/images/fvrrd1kn/production/7233d5ca4bca740f3bb6c913e61cefe3569a0827-960x2242.jpg?w=2048&q=75&fit=clip&auto=format 2048w, https://cdn.sanity.io/images/fvrrd1kn/production/7233d5ca4bca740f3bb6c913e61cefe3569a0827-960x2242.jpg?w=3840&q=75&fit=clip&auto=format 3840w" src="https://cdn.sanity.io/images/fvrrd1kn/production/7233d5ca4bca740f3bb6c913e61cefe3569a0827-960x2242.jpg?w=3840&q=75&fit=clip&auto=format" width="100" height="100"sizes="(max-width: 2000px) 100vw, 800px" srcset="https://cdn.sanity.io/images/fvrrd1kn/production/7233d5ca4bca740f3bb6c913e61cefe3569a0827-960x2242.jpg?w=640&q=75&fit=clip&auto=format 640w, https://cdn.sanity.io/images/fvrrd1kn/production/7233d5ca4bca740f3bb6c913e61cefe3569a0827-960x2242.jpg?w=750&q=75&fit=clip&auto=format 750w, https://cdn.sanity.io/images/fvrrd1kn/production/7233d5ca4bca740f3bb6c913e61cefe3569a0827-960x2242.jpg?w=828&q=75&fit=clip&auto=format 828w, https://cdn.sanity.io/images/fvrrd1kn/production/7233d5ca4bca740f3bb6c913e61cefe3569a0827-960x2242.jpg?w=1080&q=75&fit=clip&auto=format 1080w, https://cdn.sanity.io/images/fvrrd1kn/production/7233d5ca4bca740f3bb6c913e61cefe3569a0827-960x2242.jpg?w=1200&q=75&fit=clip&auto=format 1200w, https://cdn.sanity.io/images/fvrrd1kn/production/7233d5ca4bca740f3bb6c913e61cefe3569a0827-960x2242.jpg?w=1920&q=75&fit=clip&auto=format 1920w, https://cdn.sanity.io/images/fvrrd1kn/production/7233d5ca4bca740f3bb6c913e61cefe3569a0827-960x2242.jpg?w=2048&q=75&fit=clip&auto=format 2048w, https://cdn.sanity.io/images/fvrrd1kn/production/7233d5ca4bca740f3bb6c913e61cefe3569a0827-960x2242.jpg?w=3840&q=75&fit=clip&auto=format 3840w" src="https://cdn.sanity.io/images/fvrrd1kn/production/7233d5ca4bca740f3bb6c913e61cefe3569a0827-960x2242.jpg?w=3840&q=75&fit=clip&auto=format" width="100" height="100" style="color:transparent;width:100%;height:auto;pointer-events:none;" decoding="async" loading="lazy" alt="Image">
+</div>
+</div>
+<div class="media">
+<div style="pointer-events:none;">
+<img sizes="(max-width: 2000px) 100vw, 800px" srcset="https://cdn.sanity.io/images/fvrrd1kn/production/eebd2aebc35488753bb1fa6808eea0ba9564370f-711x400.gif?w=640&q=75&fit=clip&auto=format 640w, https://cdn.sanity.io/images/fvrrd1kn/production/eebd2aebc35488753bb1fa6808eea0ba9564370f-711x400.gif?w=750&q=75&fit=clip&auto=format 750w, https://cdn.sanity.io/images/fvrrd1kn/production/eebd2aebc35488753bb1fa6808eea0ba9564370f-711x400.gif?w=828&q=75&fit=clip&auto=format 828w, https://cdn.sanity.io/images/fvrrd1kn/production/eebd2aebc35488753bb1fa6808eea0ba9564370f-711x400.gif?w=1080&q=75&fit=clip&auto=format 1080w, https://cdn.sanity.io/images/fvrrd1kn/production/eebd2aebc35488753bb1fa6808eea0ba9564370f-711x400.gif?w=1200&q=75&fit=clip&auto=format 1200w, https://cdn.sanity.io/images/fvrrd1kn/production/eebd2aebc35488753bb1fa6808eea0ba9564370f-711x400.gif?w=1920&q=75&fit=clip&auto=format 1920w, https://cdn.sanity.io/images/fvrrd1kn/production/eebd2aebc35488753bb1fa6808eea0ba9564370f-711x400.gif?w=2048&q=75&fit=clip&auto=format 2048w, https://cdn.sanity.io/images/fvrrd1kn/production/eebd2aebc35488753bb1fa6808eea0ba9564370f-711x400.gif?w=3840&q=75&fit=clip&auto=format 3840w" src="https://cdn.sanity.io/images/fvrrd1kn/production/eebd2aebc35488753bb1fa6808eea0ba9564370f-711x400.gif?w=3840&q=75&fit=clip&auto=format" width="100" height="100"sizes="(max-width: 2000px) 100vw, 800px" srcset="https://cdn.sanity.io/images/fvrrd1kn/production/eebd2aebc35488753bb1fa6808eea0ba9564370f-711x400.gif?w=640&q=75&fit=clip&auto=format 640w, https://cdn.sanity.io/images/fvrrd1kn/production/eebd2aebc35488753bb1fa6808eea0ba9564370f-711x400.gif?w=750&q=75&fit=clip&auto=format 750w, https://cdn.sanity.io/images/fvrrd1kn/production/eebd2aebc35488753bb1fa6808eea0ba9564370f-711x400.gif?w=828&q=75&fit=clip&auto=format 828w, https://cdn.sanity.io/images/fvrrd1kn/production/eebd2aebc35488753bb1fa6808eea0ba9564370f-711x400.gif?w=1080&q=75&fit=clip&auto=format 1080w, https://cdn.sanity.io/images/fvrrd1kn/production/eebd2aebc35488753bb1fa6808eea0ba9564370f-711x400.gif?w=1200&q=75&fit=clip&auto=format 1200w, https://cdn.sanity.io/images/fvrrd1kn/production/eebd2aebc35488753bb1fa6808eea0ba9564370f-711x400.gif?w=1920&q=75&fit=clip&auto=format 1920w, https://cdn.sanity.io/images/fvrrd1kn/production/eebd2aebc35488753bb1fa6808eea0ba9564370f-711x400.gif?w=2048&q=75&fit=clip&auto=format 2048w, https://cdn.sanity.io/images/fvrrd1kn/production/eebd2aebc35488753bb1fa6808eea0ba9564370f-711x400.gif?w=3840&q=75&fit=clip&auto=format 3840w" src="https://cdn.sanity.io/images/fvrrd1kn/production/eebd2aebc35488753bb1fa6808eea0ba9564370f-711x400.gif?w=3840&q=75&fit=clip&auto=format" width="100" height="100" style="color:transparent;width:100%;height:auto;pointer-events:none;" decoding="async" loading="lazy" alt="Image">
+</div>
+</div>
+<div class="media">
+<div style="pointer-events:none;">
+<img sizes="(max-width: 2000px) 100vw, 800px" srcset="https://cdn.sanity.io/images/fvrrd1kn/production/7cc19932b5673cb8e904f344155131fb9ec6d1e1-3000x2000.jpg?w=640&q=75&fit=clip&auto=format 640w, https://cdn.sanity.io/images/fvrrd1kn/production/7cc19932b5673cb8e904f344155131fb9ec6d1e1-3000x2000.jpg?w=750&q=75&fit=clip&auto=format 750w, https://cdn.sanity.io/images/fvrrd1kn/production/7cc19932b5673cb8e904f344155131fb9ec6d1e1-3000x2000.jpg?w=828&q=75&fit=clip&auto=format 828w, https://cdn.sanity.io/images/fvrrd1kn/production/7cc19932b5673cb8e904f344155131fb9ec6d1e1-3000x2000.jpg?w=1080&q=75&fit=clip&auto=format 1080w, https://cdn.sanity.io/images/fvrrd1kn/production/7cc19932b5673cb8e904f344155131fb9ec6d1e1-3000x2000.jpg?w=1200&q=75&fit=clip&auto=format 1200w, https://cdn.sanity.io/images/fvrrd1kn/production/7cc19932b5673cb8e904f344155131fb9ec6d1e1-3000x2000.jpg?w=1920&q=75&fit=clip&auto=format 1920w, https://cdn.sanity.io/images/fvrrd1kn/production/7cc19932b5673cb8e904f344155131fb9ec6d1e1-3000x2000.jpg?w=2048&q=75&fit=clip&auto=format 2048w, https://cdn.sanity.io/images/fvrrd1kn/production/7cc19932b5673cb8e904f344155131fb9ec6d1e1-3000x2000.jpg?w=3840&q=75&fit=clip&auto=format 3840w" src="https://cdn.sanity.io/images/fvrrd1kn/production/7cc19932b5673cb8e904f344155131fb9ec6d1e1-3000x2000.jpg?w=3840&q=75&fit=clip&auto=format" width="100" height="100" style="color:transparent;width:100%;height:auto;pointer-events:none;" decoding="async" loading="lazy" alt="Image">
+</div>
+</div>
+
+
+<div class="media">
+<video src="https://youtu.be/ViwtNLUqkMY?si=c8DX0GrvmWItSdhv" style="color:transparent;width:100%;height:auto;" alt="Video" controlsList="nofullscreen" autoplay loop muted playsinline></video>
+<img src="/static/media/icon-mute.svg" style="-webkit-user-select:none;-moz-user-select: none;user-select: none;-webkit-user-drag: none !important;user-drag: none;" class="sound-icon sound-off-icon" alt="Toggle Sound">
+<img src="/static/media/icon-volume.svg" style="-webkit-user-select:none;-moz-user-select: none;user-select: none;-webkit-user-drag: none !important;user-drag: none;display:none;" class="sound-icon sound-on-icon" alt="unmute">
 <div class="play-btn"></div>
 <div class="spinner"></div>
+<div class="video-error"></div>
 </div>
-<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_22" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/Swis_gif4.GIF">
-<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_21" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9208.jpeg">
-<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_20" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9209.jpeg">
-<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_19" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9210.jpeg">
-<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_18" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9211.jpeg">
-<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_17" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/Swis_gif66.GIF">
-<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_16" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9212.jpeg">
-<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_15" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9213.jpeg">
-<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_14" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9214.jpeg">
-<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_13" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/Swis_gif_3.GIF">
-<div class="media">
-<video src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_7095.mov" loading="lazy" alt="Switzerland_video_2024_1" autoplay="" loop="" muted="" playsinline=""></video>
-<img src="/static/media/icon-mute.svg" class="sound-icon sound-off-icon" alt="mute">
-<img src="/static/media/icon-volume.svg" class="sound-icon sound-on-icon" style="display:none;" alt="unmute">
-<div class="play-btn"></div>
-<div class="spinner"></div>
 </div>
-<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_12" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9215.jpeg">
-<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_11" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9216.jpeg">
-<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_10" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/Swis_gif_2.GIF">
-<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_9" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9217.jpeg">
-<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_8" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9218.jpeg">
-<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/Swis_gif5.GIF">
-<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_7" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9219.jpeg">
-<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_6" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9220.jpeg">
-<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_41" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9270.jpeg">
-<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_40" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9269.jpeg">
-<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_39" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9268.jpeg">
-<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_38" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9267.jpeg">
-<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_37" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9266.jpeg">
-<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_36" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9265.jpeg">
-<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_35" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9264.jpeg">
-<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_5" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9221.jpeg">
-<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9244.jpeg">
-<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_4" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/GMP_U2F2ZUdIMDE%3D.gif">
-<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_3" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9222.jpeg">
-<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_2" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9223.jpeg">
-<img class="image" loading="lazy" alt="Image" title="Switzerland_img_2024_1" src="https://raw.githubusercontent.com/Khalil2000web/Media/main/Swis-page/IMG_9224.jpeg">
+<div id="overlay" class="overlay">
+<div id="overlay-content" class="overlay-content"></div>
+<button id="close-btn" class="close-btn"><svg viewBox="0 0 24 24" aria-hidden="true" class="close-overlay"><path fill="white" d="M19 6 6 19M6 6l13 13" stroke="white" stroke-width="2.2" stroke-linecap="round"></path></svg></button>
+<button id="next-btn" class="next-btn"><svg viewBox="-2 0 24 24" aria-hidden="true" class="navb" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M6 4l8 8-8 8" stroke="white" stroke-width="2.7" stroke-linejoin="miter"></path></svg></button>
+<button id="prev-btn" class="prev-btn"><svg viewBox="2 0 24 24" aria-hidden="true" class="navb" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M18 4l-8 8 8 8" stroke="white" stroke-width="2.7" stroke-linejoin="miter"></path></svg></button>
 </div>
 <script>
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const mediaElements = document.querySelectorAll('.media');
-  function muteAllVideos() {
+
+  function handleVideoErrors(video) {
+    const errorContainer = document.createElement('div');
+    errorContainer.className = 'video-error';
+    errorContainer.style.textAlign = 'left';
+    errorContainer.style.color = '#fff';
+    errorContainer.style.display = 'none';
+
+    errorContainer.innerHTML = `
+      <div style="padding:20px;">
+        <span style="font-size:0.8rem;word-wrap:break-word;"><strong>Error:</strong> Video could not be loaded.</span><br>
+        <span style="font-size:0.7rem;color:#ccc;word-wrap:break-word;">This may be due to a failed loading attempt or an invalid video URL. Please verify video source paths and reload the page.</span><br><br>
+        <button id="retry-btn" style="font-size:0.8rem; padding:5px 10px; cursor:pointer;">Try Again</button>
+      </div>
+    `;
+
+    video.parentElement.appendChild(errorContainer);
+
+    video.addEventListener('error', () => {
+      errorContainer.style.display = 'block';
+    });
+
+    errorContainer.addEventListener('click', (event) => {
+      if (event.target && event.target.id === 'retry-btn') {
+        errorContainer.style.display = 'none';
+        video.load();
+        video.play();
+      }
+    });
+  }
+
+  function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return rect.top < window.innerHeight && rect.bottom > 0;
+  }
+
+  function muteOutOfViewportVideos() {
     mediaElements.forEach(media => {
       const video = media.querySelector('video');
-      if (video) {
+      if (video && !isInViewport(video)) {
         video.muted = true;
         const soundOffIcon = media.querySelector('.sound-off-icon');
         const soundOnIcon = media.querySelector('.sound-on-icon');
-        soundOffIcon.style.display = 'block';
-        soundOnIcon.style.display = 'none';
-        video.play();
+        if (soundOffIcon && soundOnIcon) {
+          soundOffIcon.style.display = 'block';
+          soundOnIcon.style.display = 'none';
+        }
       }
     });
   }
+
   mediaElements.forEach(media => {
     const video = media.querySelector('video');
-    const soundOffIcon = media.querySelector('.sound-off-icon');
-    const soundOnIcon = media.querySelector('.sound-on-icon');
-    const playBtn = media.querySelector('.play-btn');
-    const spinner = media.querySelector('.spinner');
-    video.removeAttribute('controls');
-    video.addEventListener('waiting', () => {
-      spinner.style.display = 'block';
-    });
-    video.addEventListener('canplay', () => {
-      spinner.style.display = 'none';
-    });
-    playBtn.style.display = 'block';
-    playBtn.addEventListener('click', () => {
-      if (video.paused) {
-        video.play();
-        playBtn.style.display = 'none';
-      }
-    });
-    video.addEventListener('pause', () => {
-      playBtn.style.display = 'block';
-    });
-    video.addEventListener('play', () => {
-      playBtn.style.display = 'none';
-    });
-    soundOffIcon.addEventListener('click', () => {
-      muteAllVideos();
-      video.muted = false;
-      soundOffIcon.style.display = 'none';
-      soundOnIcon.style.display = 'block';
-    });
-    soundOnIcon.addEventListener('click', () => {
+    if (video) {
+      handleVideoErrors(video);
+
       video.muted = true;
-      soundOffIcon.style.display = 'block';
-      soundOnIcon.style.display = 'none';
-    });
+      video.play();
+
+      const soundOffIcon = media.querySelector('.sound-off-icon');
+      const soundOnIcon = media.querySelector('.sound-on-icon');
+
+      if (soundOffIcon && soundOnIcon) {
+        soundOffIcon.addEventListener('click', () => {
+          video.muted = false;
+          soundOffIcon.style.display = 'none';
+          soundOnIcon.style.display = 'block';
+        });
+
+        soundOnIcon.addEventListener('click', () => {
+          video.muted = true;
+          soundOffIcon.style.display = 'block';
+          soundOnIcon.style.display = 'none';
+        });
+      }
+    }
   });
+
+  window.addEventListener('scroll', muteOutOfViewportVideos);
+
+  muteOutOfViewportVideos();
 });
 </script>
 <script>
-  function isMobile() {
-    return /Mobi|Android/i.test(navigator.userAgent);
-  }
+document.addEventListener("DOMContentLoaded", function () {
+  const mediaElements = document.querySelectorAll(".media");
+  const overlay = document.querySelector(".overlay");
+  const overlayContent = document.querySelector(".overlay-content");
+  const closeButton = document.querySelector(".close-btn");
+  const prevButton = document.querySelector(".prev-btn");
+  const nextButton = document.querySelector(".next-btn");
+  const mediaGrid = document.querySelector(".media-grid");
 
-  function checkOrientation() {
-    if (isMobile() && window.innerWidth > window.innerHeight) {
-      document.body.style.display = "none";
-      alert("Please rotate your device to portrait mode.");
-    } else {
-      document.body.style.display = "block";
+    let currentIndex = 0;
+    let currentOverlayVideo = null;
+
+    function disableScroll() {
+      document.body.classList.add('no-scroll');
+      document.body.style.overflow = 'hidden';
+      document.body.style.touchAction = 'none';
     }
+
+    function enableScroll() {
+      document.body.classList.remove('no-scroll');
+      document.body.style.overflow = '';
+      document.body.style.touchAction = '';
+    }
+
+    function muteAllVideos() {
+      mediaElements.forEach(media => {
+        if (media.querySelector('video')) {
+          const video = media.querySelector('video');
+          video.muted = true;
+          const soundOffIcon = media.querySelector('.sound-off-icon');
+          const soundOnIcon = media.querySelector('.sound-on-icon');
+          soundOffIcon.style.display = 'block';
+          soundOnIcon.style.display = 'none';
+          video.play();
+        }
+      });
+    }
+
+    function playAllVideos() {
+      mediaElements.forEach(media => {
+        if (media.querySelector('video')) {
+          const video = media.querySelector('video');
+          video.play();
+        }
+      });
+    }
+
+    function checkButtons() {
+      prevButton.style.display = currentIndex === 0 ? 'none' : 'block';
+      nextButton.style.display = currentIndex === mediaElements.length - 1 ? 'none' : 'block';
+    }
+
+ function openOverlay(index) {
+  disableScroll();
+  currentIndex = index;
+  const clonedMedia = mediaElements[currentIndex].cloneNode(true);
+  overlayContent.innerHTML = '';
+  overlayContent.appendChild(clonedMedia);
+  overlay.style.display = 'flex';
+  overlay.classList.add('overlay-show');
+  overlay.classList.add('opening');
+  overlay.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+  document.body.classList.add('overlay-active');
+
+  setTimeout(() => {
+    overlay.classList.remove('opening');
+    overlay.classList.add('fullscreen');
+  }, 140);
+
+  muteAllVideos();
+  checkButtons();
+
+const clonedVideo = clonedMedia.querySelector('video');
+const clonedPlayBtn = clonedMedia.querySelector('.play-btn');
+const clonedSpinner = clonedMedia.querySelector('.spinner');
+
+if (clonedVideo && clonedPlayBtn && clonedSpinner) {
+  function showClonedSpinner() {
+    clonedSpinner.style.display = 'block';
+    clonedPlayBtn.style.display = 'none';
   }
 
-  window.addEventListener("resize", checkOrientation);
-  window.addEventListener("load", checkOrientation);
+  function hideClonedSpinner() {
+    clonedSpinner.style.display = 'none';
+  }
+
+  function showClonedPlayButton() {
+    clonedPlayBtn.style.display = 'block';
+    hideClonedSpinner();
+  }
+
+  clonedVideo.addEventListener('waiting', () => {
+    showClonedSpinner();
+  });
+
+  clonedVideo.addEventListener('canplay', () => {
+    hideClonedSpinner();
+  });
+
+  clonedVideo.addEventListener('play', () => {
+    hideClonedSpinner();
+    clonedPlayBtn.style.display = 'none';
+  });
+
+  clonedVideo.addEventListener('pause', () => {
+    showClonedPlayButton();
+  });
+
+  clonedPlayBtn.addEventListener('click', () => {
+    if (clonedVideo.paused) {
+      clonedVideo.play();
+      showClonedSpinner();
+    }
+  });
+}
+
+  if (clonedVideo) {
+    const soundOffIcon = clonedMedia.querySelector('.sound-off-icon');
+    const soundOnIcon = clonedMedia.querySelector('.sound-on-icon');
+    
+    clonedVideo.muted = true;
+    soundOffIcon.style.display = 'block';
+    soundOnIcon.style.display = 'none';
+
+    soundOffIcon.addEventListener('click', () => {
+      clonedVideo.muted = false;
+      soundOffIcon.style.display = 'none';
+      soundOnIcon.style.display = 'block';
+    });
+
+    soundOnIcon.addEventListener('click', () => {
+      clonedVideo.muted = true;
+      soundOffIcon.style.display = 'block';
+      soundOnIcon.style.display = 'none';
+    });
+
+    currentOverlayVideo = clonedVideo;
+    clonedVideo.play();
+  }
+}
+
+    function closeOverlay() {
+      overlay.style.display = 'none';
+      overlay.classList.remove('fullscreen');
+      overlay.classList.add('closing');
+    document.body.classList.remove('overlay-active');
+
+      setTimeout(() => {
+        overlay.classList.remove('closing');
+        overlay.style.display = 'none';
+      }, 90);
+
+      enableScroll();
+      if (currentOverlayVideo) {
+        currentOverlayVideo.muted = true;
+        currentOverlayVideo = null;
+      }
+      playAllVideos();
+    }
+
+    mediaElements.forEach((media, index) => {
+      if (media.querySelector('video')) {
+        const video = media.querySelector('video');
+        const soundOffIcon = media.querySelector('.sound-off-icon');
+        const soundOnIcon = media.querySelector('.sound-on-icon');
+
+        video.removeAttribute('controls');
+
+        video.play();
+
+        soundOffIcon.addEventListener('click', () => {
+          muteAllVideos();
+          video.muted = false;
+          soundOffIcon.style.display = 'none';
+          soundOnIcon.style.display = 'block';
+        });
+
+        soundOnIcon.addEventListener('click', () => {
+          video.muted = true;
+          soundOffIcon.style.display = 'block';
+          soundOnIcon.style.display = 'none';
+        });
+      }
+
+      media.addEventListener('click', (event) => {
+        if (event.target !== media.querySelector('.sound-off-icon') && event.target !== media.querySelector('.sound-on-icon')) {
+          openOverlay(index);
+        }
+      });
+    });
+
+    closeButton.addEventListener('click', closeOverlay);
+
+    prevButton.addEventListener('click', () => {
+      if (currentIndex === 0) {
+        currentIndex = mediaElements.length - 1;
+      } else {
+        currentIndex -= 1;
+      }
+      openOverlay(currentIndex);
+      checkButtons();
+    });
+
+    nextButton.addEventListener('click', () => {
+      if (currentIndex === mediaElements.length - 1) {
+        currentIndex = 0;
+      } else {
+        currentIndex += 1;
+      }
+      openOverlay(currentIndex);
+      checkButtons();
+    });
+  });
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    const closeButton = document.querySelector('.close-btn');
+
+    if (!localStorage.getItem('buttonClicked')) {
+        prevBtn.style.border = '3px solid #275c86';
+        nextBtn.style.border = '3px solid #275c86';
+    }
+
+    function hideBorders() {
+        prevBtn.style.border = '3px solid transparent';
+        nextBtn.style.border = '3px solid transparent';
+        localStorage.setItem('buttonClicked', 'true');
+    }
+
+    prevBtn.addEventListener('click', hideBorders);
+    nextBtn.addEventListener('click', hideBorders);
+    closeButton.addEventListener('click', hideBorders);
+});
+</script>
+<script>
+document.addEventListener('copy', function (e) {
+  const selection = window.getSelection();
+  const imgElement = document.querySelector('img');
+
+  if (selection.containsNode(imgElement, true)) {
+    e.preventDefault();
+
+    const imgAltText = imgElement.alt || '⠀⠀⠀⠀⠀⠀';
+
+    e.clipboardData.setData('text/plain', imgAltText);
+    e.clipboardData.setData('text/html', imgAltText);
+
+    e.clipboardData.clearData();
+  }
+}, false);
+</script>
+<script>
+const menu = document.querySelector('.menu');
+const overlayM = document.querySelector('.overlay-m');
+const isOpen = document.classList.toggle('open');
+
+function openMenu() {
+menu.classList.add('open');
+overlayM.classList.add('open');
+}
+
+function closeMenu() {
+menu.classList.remove('open');
+overlayM.classList.remove('open');
+}
 </script>
 </body>
 </html>
