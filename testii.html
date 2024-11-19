@@ -63,12 +63,12 @@
 --table-striped-bg:#f9f9f9;--container-max-width:1200px;--header-height:70px;
 --footer-height:100px;--card-padding:var(--spacing-md);--card-border-radius:var(--border-radius-medium);}</style>
 <style>.sound-icon {position: absolute;bottom: 18px;right: 18px;width: 15px;height: auto;cursor: pointer;z-index:21;user-select: none;touch-action: none;}.sound-off-icon {display: block;}.play-btn, .spinner {position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);z-index: 5;display: none;}.play-btn {width:100px;height:100px;border-radius: 50%;border:1px solid #fff;background: url('https://khaliiil.com/static/media/undefined.svg') no-repeat center;background-size: contain;cursor: pointer;}.spinner {border:6px solid rgba(255, 255, 255, 0.3);border-top: 6px solid white;border-bottom:6px solid rgba(173, 216, 230, 0.9);border-radius: 50%;width: 60px;height: 60px;transform-origin: center;animation: spin 1s linear infinite;margin:-30px 0 0 -30px;opacity:.85;text-align:left;box-sizing:border-box;background-clip:padding-box;}@keyframes spin {from {transform: rotate(0deg);}to {transform: rotate(360deg);}}</style>
-<style>.video-error {position: absolute;top:0;left:0;width:100%;height:100%;z-index:20;background: #151b17;font-family:Arial;}</style>
+<style>.video-error {position: absolute;top:0;left:0;width:100%;height:100%;z-index:20;background: #151b17;font-family:Arial;display: none;}</style>
 <style>
 @font-face {font-family: 'BB Manual Mono Regular';src: url('https://raw.githubusercontent.com/Khalil2000web/Of/main/system/fonts/BBManualMonoProTX.22d272fc.ttf');}
 @font-face {font-family: 'BB Manual Mono SemiBold';src: url('https://raw.githubusercontent.com/Khalil2000web/Of/main/system/fonts/BBManualMonoProTX-SemiBold.otf');}
 body {margin:0;padding:0;background-color:var(--background-color);font-family:var(--font-main);color:var(--primary-color);}
-.media-grid {position:fixed;width:100%;max-width:100%;height:100%;padding:0;margin:0;overflow:auto;}
+.media-grid {position:absolute;width:100%;max-width:100%;height:auto;padding:0;margin:0;overflow:auto;}
 .media {position:relative;display:flex;margin:0 auto;justify-content:center;align-items:center;width:100%;max-width:100%;}
 video {display:flex;margin:0 auto;width:100%;max-width:100%:padding:0;margin:0;}
 .overlay {display: none;position: fixed;top: 0;left: 0;width: 100%;height: 100%;background-color: rgba(0, 0, 0, 1);z-index: 10000;overflow: auto;overscroll-behavior: none;scrollbar-width: none;touch-action: pan-x pan-y;}.overlay::-webkit-scrollbar {display: none;}
@@ -238,9 +238,33 @@ PRIVACY
 </div>
 
 <div class="media-grid">
+
+
+<div class="media">
+<div style="width:100%;">
+<iframe 
+    width="100%" 
+    height="315" 
+    src="https://www.youtube.com/embed/469OoIYW-nM" 
+    title="YouTube video player" 
+    frameborder="0" 
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;">
+</iframe>
+</div>
+</div>
+
+<div class="media">
+<video src="https://ik.imagekit.io/xlretjwgk/Video_bday-videohomepagevideo20248920242992024.mov" style="color:transparent;width:100%;height:auto;" alt="Video" controlsList="nofullscreen" autoplay loop muted playsinline></video>
+<img src="/static/media/icon-mute.svg" style="-webkit-user-select:none;-moz-user-select: none;user-select: none;-webkit-user-drag: none !important;user-drag: none;" class="sound-icon sound-off-icon" alt="Toggle Sound">
+<img src="/static/media/icon-volume.svg" style="-webkit-user-select:none;-moz-user-select: none;user-select: none;-webkit-user-drag: none !important;user-drag: none;display:none;" class="sound-icon sound-on-icon" alt="unmute">
+<div class="play-btn"></div>
+<div class="spinner"></div>
+<div class="video-error"></div>
+</div>
+
 <div class="media">
 <a rel="noopener noreferrer" style="cursor: pointer;">
-<div style="pointer-events:none;">
+<div style="pointer-events:none;width:100%;">
 <img sizes="(max-width: 2000px) 100vw, 800px" srcset="https://cdn.sanity.io/images/fvrrd1kn/production/17f32e3d3dbf8caab20c87f9d63a3edabdc4d15c-6926x6925.jpg?w=640&q=75&fit=clip&auto=format 640w, https://cdn.sanity.io/images/fvrrd1kn/production/17f32e3d3dbf8caab20c87f9d63a3edabdc4d15c-6926x6925.jpg?w=750&q=75&fit=clip&auto=format 750w, https://cdn.sanity.io/images/fvrrd1kn/production/17f32e3d3dbf8caab20c87f9d63a3edabdc4d15c-6926x6925.jpg?w=828&q=75&fit=clip&auto=format 828w, https://cdn.sanity.io/images/fvrrd1kn/production/17f32e3d3dbf8caab20c87f9d63a3edabdc4d15c-6926x6925.jpg?w=1080&q=75&fit=clip&auto=format 1080w, https://cdn.sanity.io/images/fvrrd1kn/production/17f32e3d3dbf8caab20c87f9d63a3edabdc4d15c-6926x6925.jpg?w=1200&q=75&fit=clip&auto=format 1200w, https://cdn.sanity.io/images/fvrrd1kn/production/17f32e3d3dbf8caab20c87f9d63a3edabdc4d15c-6926x6925.jpg?w=1920&q=75&fit=clip&auto=format 1920w, https://cdn.sanity.io/images/fvrrd1kn/production/17f32e3d3dbf8caab20c87f9d63a3edabdc4d15c-6926x6925.jpg?w=2048&q=75&fit=clip&auto=format 2048w, https://cdn.sanity.io/images/fvrrd1kn/production/17f32e3d3dbf8caab20c87f9d63a3edabdc4d15c-6926x6925.jpg?w=3840&q=75&fit=clip&auto=format 3840w" src="https://cdn.sanity.io/images/fvrrd1kn/production/17f32e3d3dbf8caab20c87f9d63a3edabdc4d15c-6926x6925.jpg?w=3840&q=75&fit=clip&auto=format" width="100" height="100" style="color:transparent;width:100%;height:auto;pointer-events:none;" decoding="async" loading="lazy" alt="Image">
 </div>
 </a>
@@ -306,14 +330,7 @@ PRIVACY
 </div>
 
 
-<div class="media">
-<video src="https://youtu.be/ViwtNLUqkMY?si=c8DX0GrvmWItSdhv" style="color:transparent;width:100%;height:auto;" alt="Video" controlsList="nofullscreen" autoplay loop muted playsinline></video>
-<img src="/static/media/icon-mute.svg" style="-webkit-user-select:none;-moz-user-select: none;user-select: none;-webkit-user-drag: none !important;user-drag: none;" class="sound-icon sound-off-icon" alt="Toggle Sound">
-<img src="/static/media/icon-volume.svg" style="-webkit-user-select:none;-moz-user-select: none;user-select: none;-webkit-user-drag: none !important;user-drag: none;display:none;" class="sound-icon sound-on-icon" alt="unmute">
-<div class="play-btn"></div>
-<div class="spinner"></div>
-<div class="video-error"></div>
-</div>
+
 </div>
 <div id="overlay" class="overlay">
 <div id="overlay-content" class="overlay-content"></div>
@@ -416,6 +433,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const prevButton = document.querySelector(".prev-btn");
   const nextButton = document.querySelector(".next-btn");
   const mediaGrid = document.querySelector(".media-grid");
+  const iframes = document.querySelectorAll('iframe');
 
     let currentIndex = 0;
     let currentOverlayVideo = null;
@@ -442,6 +460,9 @@ document.addEventListener("DOMContentLoaded", function () {
           soundOffIcon.style.display = 'block';
           soundOnIcon.style.display = 'none';
           video.play();
+          iframes.forEach((iframe) => {
+        iframe.src = iframe.src;
+    });
         }
       });
     }
@@ -451,6 +472,9 @@ document.addEventListener("DOMContentLoaded", function () {
         if (media.querySelector('video')) {
           const video = media.querySelector('video');
           video.play();
+            iframes.forEach((iframe) => {
+        iframe.src = iframe.src;
+    });
         }
       });
     }
@@ -556,6 +580,10 @@ if (clonedVideo && clonedPlayBtn && clonedSpinner) {
       overlay.classList.add('closing');
     document.body.classList.remove('overlay-active');
 
+    iframes.forEach((iframe) => {
+        iframe.src = iframe.src;
+    });
+
       setTimeout(() => {
         overlay.classList.remove('closing');
         overlay.style.display = 'none';
@@ -567,6 +595,8 @@ if (clonedVideo && clonedPlayBtn && clonedSpinner) {
         currentOverlayVideo = null;
       }
       playAllVideos();
+      muteAllVideos();
+
     }
 
     mediaElements.forEach((media, index) => {
