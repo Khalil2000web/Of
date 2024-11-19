@@ -119,7 +119,10 @@ button{padding:0;margin:0;}
 @media screen and (min-width:801px) {
 .nav-top .menu-nav {gap:50px;}
 .nav-top .menu-nav a p{font-size:1.2rem;}}
-.diskfooter {position: fixed;bottom: 25px;left:50%;transform:translateX(-50%);width: 100%;max-width:98%;margin:0 auto;display:none;;justify-content: space-between;align-items: center;padding: 0;color:var(--text-color);z-index:1000;}
+.diskfooter {position: fixed;bottom:1.5rem;left:50%;transform:translateX(-50%);width: 100%;max-width:98%;margin:0 auto;display:none;justify-content: space-between;align-items: center;padding: 0;color:var(--text-color);z-index:1000;}
+@media screen and (min-width: 30em){.diskfooter {-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}}@media screen and (min-width: 48em){.diskfooter {display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;font-size:11px;}}
+
+
 .diskfooter a, .diskfooter #cp {margin: 0;padding: 0;color:var(--text-color);}
 #cp {text-align: center;flex-grow: 1;}
 .diskfooter a {text-decoration: none;}
