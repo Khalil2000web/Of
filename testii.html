@@ -69,7 +69,7 @@
 @font-face {font-family: 'BB Manual Mono SemiBold';src: url('https://raw.githubusercontent.com/Khalil2000web/Of/main/system/fonts/BBManualMonoProTX-SemiBold.otf');}
 body {margin:0;padding:0;background-color:var(--background-color);font-family:var(--font-main);color:var(--primary-color);}
 .media-grid {position:absolute;width:100%;max-width:100%;height:auto;padding:0;margin:0;overflow:auto;}
-.media {position:relative;display:flex;margin:0 auto;justify-content:center;align-items:center;width:100%;max-width:100%;}
+.media {position:relative;display:flex;padding:0;margin:0 auto;justify-content:center;align-items:center;width:100%;max-width:100%;}
 video {display:flex;margin:0 auto;width:100%;max-width:100%:padding:0;margin:0;}
 .overlay {display: none;position: fixed;top: 0;left: 0;width: 100%;height: 100%;background-color: rgba(0, 0, 0, 1);z-index: 10000;overflow: auto;overscroll-behavior: none;scrollbar-width: none;touch-action: pan-x pan-y;}.overlay::-webkit-scrollbar {display: none;}
 .overlay-content {position:absolute;width: 100%;max-width: 100%;height:auto;top: 0;left: 0;padding: 0;margin: 0;z-index: 1000;touch-action: pan-x pan-y;overscroll-behavior:none;}
@@ -121,8 +121,6 @@ button{padding:0;margin:0;}
 .nav-top .menu-nav a p{font-size:1.2rem;}}
 .diskfooter {position: fixed;bottom:1.5rem;left:50%;transform:translateX(-50%);width: 100%;max-width:98%;margin:0 auto;display:none;justify-content: space-between;align-items: center;padding: 0;color:var(--text-color);z-index:1000;}
 @media screen and (min-width: 30em){.diskfooter {-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}}@media screen and (min-width: 48em){.diskfooter {display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;font-size:11px;}}
-
-
 .diskfooter a, .diskfooter #cp {margin: 0;padding: 0;color:var(--text-color);}
 #cp {text-align: center;flex-grow: 1;}
 .diskfooter a {text-decoration: none;}
@@ -236,11 +234,12 @@ PRIVACY
 <a href="https://beyonce.com/privacy-policy/$0">PRIVACY</a>
 </div>
 </div>
+
 <div class="media-grid">
 <div class="media">
 <a rel="noopener noreferrer" style="cursor: pointer;">
 <div style="pointer-events:none;width:100%;">
-<img sizes="(max-width: 2000px) 100vw, 800px" srcset="https://cdn.sanity.io/images/fvrrd1kn/production/17f32e3d3dbf8caab20c87f9d63a3edabdc4d15c-6926x6925.jpg?w=640&q=75&fit=clip&auto=format 640w, https://cdn.sanity.io/images/fvrrd1kn/production/17f32e3d3dbf8caab20c87f9d63a3edabdc4d15c-6926x6925.jpg?w=750&q=75&fit=clip&auto=format 750w, https://cdn.sanity.io/images/fvrrd1kn/production/17f32e3d3dbf8caab20c87f9d63a3edabdc4d15c-6926x6925.jpg?w=828&q=75&fit=clip&auto=format 828w, https://cdn.sanity.io/images/fvrrd1kn/production/17f32e3d3dbf8caab20c87f9d63a3edabdc4d15c-6926x6925.jpg?w=1080&q=75&fit=clip&auto=format 1080w, https://cdn.sanity.io/images/fvrrd1kn/production/17f32e3d3dbf8caab20c87f9d63a3edabdc4d15c-6926x6925.jpg?w=1200&q=75&fit=clip&auto=format 1200w, https://cdn.sanity.io/images/fvrrd1kn/production/17f32e3d3dbf8caab20c87f9d63a3edabdc4d15c-6926x6925.jpg?w=1920&q=75&fit=clip&auto=format 1920w, https://cdn.sanity.io/images/fvrrd1kn/production/17f32e3d3dbf8caab20c87f9d63a3edabdc4d15c-6926x6925.jpg?w=2048&q=75&fit=clip&auto=format 2048w, https://cdn.sanity.io/images/fvrrd1kn/production/17f32e3d3dbf8caab20c87f9d63a3edabdc4d15c-6926x6925.jpg?w=3840&q=75&fit=clip&auto=format 3840w" src="https://cdn.sanity.io/images/fvrrd1kn/production/17f32e3d3dbf8caab20c87f9d63a3edabdc4d15c-6926x6925.jpg?w=3840&q=75&fit=clip&auto=format" width="100" height="100" style="color:transparent;width:100%;height:auto;pointer-events:none;display:block;" decoding="async" loading="lazy" alt="Image">
+<img sizes="(max-width: 2000px) 100vw, 800px" srcset="https://cdn.sanity.io/images/fvrrd1kn/production/17f32e3d3dbf8caab20c87f9d63a3edabdc4d15c-6926x6925.jpg?w=640&q=75&fit=clip&auto=format 640w, https://cdn.sanity.io/images/fvrrd1kn/production/17f32e3d3dbf8caab20c87f9d63a3edabdc4d15c-6926x6925.jpg?w=750&q=75&fit=clip&auto=format 750w, https://cdn.sanity.io/images/fvrrd1kn/production/17f32e3d3dbf8caab20c87f9d63a3edabdc4d15c-6926x6925.jpg?w=828&q=75&fit=clip&auto=format 828w, https://cdn.sanity.io/images/fvrrd1kn/production/17f32e3d3dbf8caab20c87f9d63a3edabdc4d15c-6926x6925.jpg?w=1080&q=75&fit=clip&auto=format 1080w, https://cdn.sanity.io/images/fvrrd1kn/production/17f32e3d3dbf8caab20c87f9d63a3edabdc4d15c-6926x6925.jpg?w=1200&q=75&fit=clip&auto=format 1200w, https://cdn.sanity.io/images/fvrrd1kn/production/17f32e3d3dbf8caab20c87f9d63a3edabdc4d15c-6926x6925.jpg?w=1920&q=75&fit=clip&auto=format 1920w, https://cdn.sanity.io/images/fvrrd1kn/production/17f32e3d3dbf8caab20c87f9d63a3edabdc4d15c-6926x6925.jpg?w=2048&q=75&fit=clip&auto=format 2048w, https://cdn.sanity.io/images/fvrrd1kn/production/17f32e3d3dbf8caab20c87f9d63a3edabdc4d15c-6926x6925.jpg?w=3840&q=75&fit=clip&auto=format 3840w" src="https://cdn.sanity.io/images/fvrrd1kn/production/17f32e3d3dbf8caab20c87f9d63a3edabdc4d15c-6926x6925.jpg?w=3840&q=75&fit=clip&auto=format" width="100%" height="100" style="color:transparent;width:100%;height:auto;pointer-events:none;display:block;" decoding="async" loading="lazy" alt="Image">
 </div>
 </a>
 </div>
