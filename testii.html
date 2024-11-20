@@ -567,9 +567,10 @@ if (clonedVideo && clonedPlayBtn && clonedSpinner) {
       overlay.classList.add('closing');
     document.body.classList.remove('overlay-active');
 
-    iframes.forEach((iframe) => {
+ const iframes = document.querySelectorAll(".overlay iframe");
+    iframes.forEach(iframe => {
         iframe.src = iframe.src;
-    });
+    })
 
       setTimeout(() => {
         overlay.classList.remove('closing');
