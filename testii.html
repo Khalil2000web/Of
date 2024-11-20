@@ -325,6 +325,28 @@ PRIVACY
 <button id="next-btn" class="next-btn"><svg viewBox="-2 0 24 24" aria-hidden="true" class="navb" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M6 4l8 8-8 8" stroke="white" stroke-width="2.9" stroke-linejoin="miter"></path></svg></button>
 <button id="prev-btn" class="prev-btn"><svg viewBox="2 0 24 24" aria-hidden="true" class="navb" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M18 4l-8 8 8 8" stroke="white" stroke-width="2.9" stroke-linejoin="miter"></path></svg></button>
 </div>
+
+<script>
+// Select all iframe videos
+const iframes = document.querySelectorAll('iframe');
+
+// Create an Intersection Observer
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    const iframe = entry.target;
+
+    // Check if the iframe is leaving the viewport
+    if (!entry.isIntersecting) {
+      // Reload the iframe to reset and mute
+      const src = iframe.src;
+      iframe.src = ''; // Clear the src to force reload
+      iframe.src = src; // Reapply the original src
+    }
+  });
+}, { threshold: 0 });
+
+iframes.forEach((iframe) => observer.observe(iframe));
+</script>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   const mediaElements = document.querySelectorAll('.media');
