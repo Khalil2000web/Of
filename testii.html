@@ -442,55 +442,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let currentIndex = 0;
     let currentOverlayVideo = null;
-    
+  
 function disableScroll() {
   const scrollTop = window.scrollY || document.documentElement.scrollTop;
   const scrollLeft = window.scrollX || document.documentElement.scrollLeft;
 
-  // Save the current scroll position
   document.body.dataset.scrollTop = scrollTop;
   document.body.dataset.scrollLeft = scrollLeft;
 
-  // Disable scrolling
-  document.body.style.position = 'absolute';
+  document.body.style.position = 'fixed';
   document.body.style.top = `-${scrollTop}px`;
   document.body.style.left = `-${scrollLeft}px`;
   document.body.style.width = '100%';
-  document.body.style.height = '100%';
   document.body.style.overflow = 'hidden';
 }
-
+  
 function enableScroll() {
-  // Listen for Safari's dynamic toolbar behavior and ensure scroll is restored only when the toolbar is hidden
-  let previousHeight = window.innerHeight;
 
-  const restoreScroll = () => {
-    const currentHeight = window.innerHeight;
+  const scrollTop = parseInt(document.body.dataset.scrollTop || '0', 10);
+  const scrollLeft = parseInt(document.body.dataset.scrollLeft || '0', 10);
 
-    // Ensure the scroll is restored only when the viewport height stabilizes
-    if (Math.abs(previousHeight - currentHeight) < 50) {
-      const scrollTop = parseInt(document.body.dataset.scrollTop || '0', 10);
-      const scrollLeft = parseInt(document.body.dataset.scrollLeft || '0', 10);
+  document.body.style.position = '';
+  document.body.style.top = '';
+  document.body.style.left = '';
+  document.body.style.width = '';
+  document.body.style.overflow = '';
 
-      // Restore body styles
-      document.body.style.position = '';
-      document.body.style.top = '';
-      document.body.style.left = '';
-      document.body.style.width = '';
-      document.body.style.height = '';
-      document.body.style.overflow = '';
-
-      // Restore the scroll position
-      window.scrollTo(scrollLeft, scrollTop);
-
-
-      window.removeEventListener('resize', restoreScroll);
-    } else {
-      previousHeight = currentHeight; // Update the height for the next check
-    }
-  };
-
-  window.addEventListener('resize', restoreScroll);
+  window.scrollTo(scrollLeft, scrollTop);
 }
 
     function muteAllVideos() {
