@@ -446,18 +446,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let currentIndex = 0;
     let currentOverlayVideo = null;
+    
+function disableScroll() {
+  const scrollTop = window.scrollY || document.documentElement.scrollTop;
+  const scrollLeft = window.scrollX || document.documentElement.scrollLeft;
 
-    function disableScroll() {
-      document.body.classList.add('no-scroll');
-      document.body.style.overflow = 'hidden';
-      document.body.style.touchAction = 'none';
-    }
+  document.body.style.position = 'absolute';
+  document.body.style.top = `-${scrollTop}px`;
+  document.body.style.left = `-${scrollLeft}px`;
+  document.body.style.width = '100%';
+  document.body.style.height = '100%';
+  document.body.dataset.scrollTop = scrollTop; // Save the scroll position
+  document.body.dataset.scrollLeft = scrollLeft;
+}
 
-    function enableScroll() {
-      document.body.classList.remove('no-scroll');
-      document.body.style.overflow = '';
-      document.body.style.touchAction = '';
-    }
+function enableScroll() {
+  const scrollTop = parseInt(document.body.dataset.scrollTop || '0', 10);
+  const scrollLeft = parseInt(document.body.dataset.scrollLeft || '0', 10);
+
+  document.body.style.position = '';
+  document.body.style.top = '';
+  document.body.style.left = '';
+  document.body.style.width = '';
+  document.body.style.height = '';
+
+  window.scrollTo(scrollLeft, scrollTop);
+}
 
     function muteAllVideos() {
       mediaElements.forEach(media => {
