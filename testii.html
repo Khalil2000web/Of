@@ -450,7 +450,7 @@ function disableScroll() {
   document.body.dataset.scrollTop = scrollTop;
   document.body.dataset.scrollLeft = scrollLeft;
 
-  document.body.style.position = 'fixed';
+  document.body.style.position = 'absolute';
   document.body.style.top = `-${scrollTop}px`;
   document.body.style.left = `-${scrollLeft}px`;
   document.body.style.width = '100%';
