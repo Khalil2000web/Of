@@ -3,7 +3,6 @@
 .nav-top .menu a {text-decoration:none;}
 .nav-top .menu a p {font-family:var(--font-main);color:var(--text-color);user-select:none;-webkit-user-select:none;text-decoration: none;font-weight:300;font-size:30px;text-transform:uppercase;padding:0;padding-top:17px;margin:0;font-size:22px;}
 @media screen and (min-width: 30em){.nav-top .menu {-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}}@media screen and (min-width: 48em){.nav-top .menu a p {display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;font-size:20px;}}
-@media screen and (min-width: 30em){.nav_bottom .menu {-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}}@media screen and (min-width: 48em){.nav_bottom .menu p {display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;font-size:15px;}}
 @media screen and (max-width:400px) {
 .nav-top .menu {gap:30px;}}
 @media screen and (min-width:401px) and (max-width:500px) {
