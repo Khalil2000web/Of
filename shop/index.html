@@ -172,6 +172,7 @@ select option:disabled {
 .watchn {position: relative;width:90%;justify-content: center;align-items: center;padding:0;margin:0 auto;display: flex;}
 .watch {transition: background-color 0.3s ease;padding:20px 100px;color:#fff;background-color:#2a2829;border:1px solid #fff;font-family: var(--font-main);text-decoration: none;}
 .watch:hover {background-color: #815d36;}
+#soldy {color:#c63528;}
 </style>
 </head>
 <body>
@@ -196,6 +197,7 @@ select option:disabled {
 <p id="overlay-price"></p>
 <p id="overlay-details"></p>
 <button id="add-to-cart">Add to Cart</button>
+<span id="soldy">SOLD OUT</span>
 </div>
 </div>
 <div id="cart-drawer" class="hidden">
@@ -262,20 +264,19 @@ select option:disabled {
 </div>
 </div>
 
+
 <script>
 const products = [
-  { id: 1, name: "Product 1", price: 20, img: "img1.jpg", details: "Details about Product 1" },
-  { id: 2, name: "Product 2", price: 30, img: "img2.jpg", details: "Details about Product 2" },
-  { id: 3, name: "Product 3", price: 40, img: "img3.jpg", details: "Details about Product 3" },
-  { id: 4, name: "Product 3", price: 40, img: "img3.jpg", details: "Details about Product 3" },
-  { id: 5, name: "Product 3", price: 40, img: "img3.jpg", details: "Details about Product 3" },
-  { id: 6, name: "Product 3", price: 40, img: "img3.jpg", details: "Details about Product 3" }
+  { id: 1, name: "Product 1", price: 20, img: "img1.jpg", details: "Details about Product 1", stock: 1 },
+  { id: 2, name: "Product 2", price: 30, img: "img2.jpg", details: "Details about Product 2", stock: 0 },
+  { id: 3, name: "Product 3", price: 40, img: "img3.jpg", details: "Details about Product 3", stock: 0 },
+  { id: 4, name: "Product 3", price: 40, img: "img3.jpg", details: "Details about Product 3", stock: 0 },
+  { id: 5, name: "Product 3", price: 40, img: "img3.jpg", details: "Details about Product 3", stock: 0  },
+  { id: 6, name: "Product 3", price: 40, img: "img3.jpg", details: "Details about Product 3", stock: 0 }
 ];
 
-// Cart and checkout states
 let cart = [];
 
-// Function to populate product list
 function populateProducts() {
   const productList = document.getElementById("product-list");
   productList.innerHTML = "";
@@ -287,42 +288,54 @@ function populateProducts() {
       <h3>${product.name}</h3>
       <p>$${product.price}</p>
       <button data-id="${product.id}">View</button>
+      ${product.stock === 0 ? '<p class="sold-out" style="color:#c63528;">SOLD OUT</p>' : ''}
     `;
     productList.appendChild(box);
   });
 
-  // Add event listeners for product "View" buttons
+
+
+
   document.querySelectorAll(".product-box button").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const product = products.find((p) => p.id == btn.dataset.id);
-      // Display product overlay
-      document.getElementById("overlay-img").src = product.img;
-      document.getElementById("overlay-name").textContent = product.name;
-      document.getElementById("overlay-price").textContent = `$${product.price}`;
-      document.getElementById("overlay-details").textContent = product.details;
-      document.getElementById("add-to-cart").dataset.id = product.id;
-      document.getElementById("product-overlay").classList.remove("hidden");
-    });
+  btn.addEventListener("click", () => {
+    const product = products.find((p) => p.id == btn.dataset.id);
+
+    if (!product) return; 
+
+    document.getElementById("overlay-img").src = product.img;
+    document.getElementById("overlay-name").textContent = product.name;
+    document.getElementById("overlay-price").textContent = `$${product.price}`;
+    document.getElementById("overlay-details").textContent = product.details;
+    document.getElementById("add-to-cart").dataset.id = product.id;
+
+    const addToCartButton = document.getElementById("add-to-cart");
+    const soldy = document.getElementById("soldy");
+    if (product.stock === 0) {
+      addToCartButton.style.display = "none";
+      soldy.style.display = 'block';
+    } else {
+      addToCartButton.style.display = "block";
+      soldy.style.display = 'none';
+    }
+
+    document.getElementById("product-overlay").classList.remove("hidden");
   });
+});
 }
 
-// Function to update cart
 function updateCart() {
   const cartCounter = document.getElementById("cart-counter");
   const cartContent = document.getElementById("cart-content");
   const checkoutButton = document.getElementById("checkout");
   const totalPriceElement = document.getElementById("total-price");
 
-  // Update cart counter
   cartCounter.textContent = cart.length;
 
   if (cart.length === 0) {
-    // Hide checkout button and total price if cart is empty
     checkoutButton.style.display = "none";
     totalPriceElement.style.display = "none";
     cartContent.innerHTML = "<div style='display:flex;flex-direction:column;gap:10px;'><p class='empty-ms'>YOUR CART IS EMPTY</p><a style='border:1px solid #000;padding:10px 30px;text-decoration:none;padding-bottom:20px;' id='hov53' href='/'>CONTINUE SHOPPING</a></div>";
   } else {
-    // Show checkout button and calculate total price
     checkoutButton.style.display = "block";
     cartContent.innerHTML = "";
 
@@ -388,7 +401,6 @@ function updateCart() {
   }
 }
 
-// Function to add item to cart
 document.getElementById("add-to-cart").addEventListener("click", () => {
   const productId = document.getElementById("add-to-cart").dataset.id;
   const product = products.find((p) => p.id == productId);
