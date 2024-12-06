@@ -5,14 +5,14 @@
 @media screen and (min-width: 30em){.nav_bottom .menu {-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}}@media screen and (min-width: 48em){.nav_bottom .menu p {display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;font-size:14px;}}
 @media screen and (max-width:400px) {
 .nav_bottom .menu {gap:10px;}
-.nav_bottom .menu {width:60%;}
+.nav_bottom {width:60%;}
 #copyright_sign_i {display:none;}
 #copyright_sign_ii {display:none;}
 #copyright_sign_iii {display:none;}
 #sep {display:none;}}
 @media screen and (min-width:401px) and (max-width:500px) {
 .nav_bottom .menu {gap:10px;}
-.nav_bottom .menu {width:50%;}
+.nav_bottom {width:50%;}
 #copyright_sign_i {display:none;}
 #copyright_sign_ii {display:none;}
 #copyright_sign_iii {display:none;}
