@@ -249,11 +249,10 @@ menuBtn.addEventListener('click', () => {
     }
 });
 
-// Prevent menu from closing when a link is clicked
 const menuLinks = fullMenu.querySelectorAll('a');
 menuLinks.forEach(link => {
     link.addEventListener('click', (e) => {
-        e.stopPropagation(); // Prevent the event from bubbling and triggering closeMenu
+        e.stopPropagation();
     });
 });
 
