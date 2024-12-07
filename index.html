@@ -210,6 +210,44 @@ document.addEventListener('copy', function (e) {
   }
 }, false);
 </script>
+<script>
+const menuBtn = document.getElementById('menu-btn');
+const fullMenu = document.getElementById('full-menu');
 
+function openMenu() {
+    fullMenu.style.display = 'flex';
+    menuBtn.setAttribute('aria-expanded', 'true');
+    fullMenu.setAttribute('aria-hidden', 'false');
+    menuBtn.innerHTML = `<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M19 6 6 19M6 6l13 13" stroke="white" stroke-width="2.2" stroke-linecap="round"></path></svg>`;
+}
+
+function closeMenu() {
+    fullMenu.style.display = 'none';
+    menuBtn.setAttribute('aria-expanded', 'false');
+    fullMenu.setAttribute('aria-hidden', 'true');
+    menuBtn.innerHTML = '<svg viewBox="0 0 24 24" focusable="false" aria-hidden="true"><path fill="#fff" d="M 3 5 A 1.0001 1.0001 0 1 0 3 7 L 21 7 A 1.0001 1.0001 0 1 0 21 5 L 3 5 z M 3 11 A 1.0001 1.0001 0 1 0 3 13 L 21 13 A 1.0001 1.0001 0 1 0 21 11 L 3 11 z M 3 17 A 1.0001 1.0001 0 1 0 3 19 L 21 19 A 1.0001 1.0001 0 1 0 21 17 L 3 17 z"></path></svg>';
+}
+
+menuBtn.addEventListener('click', () => {
+    if (fullMenu.style.display === 'none' || fullMenu.style.display === '') {
+        openMenu();
+    } else {
+        closeMenu();
+    }
+});
+
+const menuLinks = fullMenu.querySelectorAll('a');
+menuLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.stopPropagation();
+    });
+});
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && fullMenu.style.display === 'flex') {
+        closeMenu();
+    }
+});
+</script>
 </body>
 </html>
