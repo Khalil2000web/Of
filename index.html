@@ -28,7 +28,7 @@
 <style>.sound-icon {position: absolute;bottom:24px;right:24px;width: 15px;height: auto;cursor: pointer;z-index:21;user-select: none;touch-action: none;}.sound-off-icon {display: block;}.play-btn, .spinner {position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);z-index: 5;display: none;}.play-btn {width:100px;height:100px;border-radius: 50%;border:1px solid #fff;background: url('https://khaliiil.com/static/media/undefined.svg') no-repeat center;background-size: contain;cursor: pointer;}.spinner {border:6px solid rgba(255, 255, 255, 0.3);border-top: 6px solid white;border-bottom:6px solid rgba(173, 216, 230, 0.9);border-radius: 50%;width: 60px;height: 60px;transform-origin: center;animation: spin 1s linear infinite;margin:-30px 0 0 -30px;opacity:.85;text-align:left;box-sizing:border-box;background-clip:padding-box;}@keyframes spin {from {transform: rotate(0deg);}to {transform: rotate(360deg);}}</style>
 <style>.video-error {position: absolute;top:0;left:0;width:100%;height:100%;z-index:20;background: #151b17;font-family:Arial;display: none;}</style>
 <style>@font-face {font-family: 'BB Manual Mono Regular';src: url('https://raw.githubusercontent.com/Khalil2000web/Of/main/system/fonts/BBManualMonoProTX.22d272fc.ttf');}@font-face {font-family: 'BB Manual Mono SemiBold';src: url('/system/fonts/BBManualMonoProTX-SemiBold.otf');}</style>
-<style>body {margin:0;padding:0;background-color:var(--background-color);font-family:var(--font-main);color:var(--primary-color);}.media-grid {max-width:100%;height:auto;padding:0;margin:0;overflow:auto;display:flex;flex-direction: column;}.media {position:relative;display:flex;padding:0;margin:0 auto;justify-content:center;align-items:center;width:100%;max-width:100%;}video {display:flex;margin:0 auto;width:100%;max-width:100%:padding:0;margin:0;}.overlay {display: none;position: fixed;top: 0;left: 0;width: 100%;height: 100vh;background-color: rgba(0, 0, 0, 1);z-index: 10000;overflow: auto;overscroll-behavior: none;scrollbar-width: none;touch-action: pan-x pan-y;}.overlay::-webkit-scrollbar {display: none;}.overlay-content {position:absolute;width: 100%;max-width: 100%;height:auto;top: 0;left: 0;padding: 0;margin: 0;z-index: 1000;touch-action: pan-x pan-y;overscroll-behavior:none;}.overlay-content .media {width: 100%;max-width: 100%;height: auto;margin-bottom: 150px;}.overlay-content .media a {display:block;pointer-events:all;}.close-btn {position: absolute;top:10px;right:10px;border-radius:10px;z-index: 10001;background: none;padding:2px;border:none;}.fade-base {position: fixed;bottom: 0;width: 100%;height:60px;z-index: 1001;background:rgba(0,0,0,1);}.fade {position: fixed;bottom:60px;width: 100%;height:60px;z-index: 10001;background: linear-gradient(to top, #000, transparent);}.close-btn svg {color:#fff;width:35px;}.prev-btn, .next-btn {position: absolute;justify-content:center;align-items:center;}button:active {background:rgba(0,0,0,0.4);}button{padding:0;margin:0;}.prev-btn,.next-btn {background:none;border:none;border-radius:0;padding:2px 8px;margin:0;}.navb {color:white;width:35px;}.prev-btn {top:28px;left:50px;z-index:10005;border:3px solid rgba(39, 92, 134, 0.5);}.next-btn {top:28px;right:50px;z-index:10005;border:3px solid rgba(39, 92, 134, 0.5);}@media screen and (max-width:400px) {.prev-btn {left: 45px;}.next-btn {right:45px;}}@media screen and (min-width:401px) and (max-width:500px) {.prev-btn {left: 50px;}.next-btn {right:50px;}}@media screen and (min-width:501px) and (max-width:600px) {.prev-btn {left: 100px;}.next-btn {right: 100px;}}@media screen and (min-width:601px) and (max-width:700px) {.prev-btn {left: 140px;}.next-btn {right: 140px;}}@media screen and (min-width:701px) and (max-width:800px) {.prev-btn {left: 160px;}.next-btn {right: 160px;}}@media screen and (min-width:801px) and (max-width:990px) {.prev-btn {left: 200px;}.next-btn {right: 200px;}}@media screen and (min-width:1000px) {.prev-btn {left: 350px;right:auto;}.next-btn {right: 350px;left:auto;}}.overlay.opening {display: flex;width: 98%;height: 98%;top: 50%;left: 50%;transform: translate(-50%,-50%);opacity:0.9;}.overlay.fullscreen {width: 100%;height: 100%;top: 50%;left: 50%;transform: translate(-50%, -50%);opacity:1;}.overlay.closing {width: 95%;height: 95%;top: 50%;left: 50%;transform: translate(-50%, -50%);opacity:0.2;}.hidden_in_gallery {display: none;}.overlay .hidden_in_gallery {display: block;}@media screen and (max-width:600px) {.titles {max-width:70%;}}@media screen and (min-width:750px) {.titles a {font-size:1.4rem;letter-spacing: normal;}.titles {max-width:70%;}}iframe {width:100%;height:350px;border:none;}@media screen and (min-width:48em) {iframe {height:900px;}}.media a {color:transparent;text-decoration: none;width: 100%;padding:0;margin:0;display:block;z-index:10;}.image {width:100%;height:auto;max-width:100%;display: block;}</style>
+<style>body {margin:0;padding:0;background-color:var(--background-color);font-family:var(--font-main);color:var(--primary-color);}.media-grid {max-width:100%;height:auto;padding:0;margin:0;overflow:auto;display:flex;flex-direction: column;}.media {position:relative;display:flex;padding:0;margin:0 auto;justify-content:center;align-items:center;width:100%;max-width:100%;}video {display:flex;margin:0 auto;width:100%;max-width:100%:padding:0;margin:0;}.overlay {display: none;position: fixed;top: 0;left: 0;width: 100%;height: 100vh;background-color: rgba(0, 0, 0, 1);z-index: 10000;overflow: auto;overscroll-behavior: none;scrollbar-width: none;touch-action: pan-x pan-y;}.overlay::-webkit-scrollbar {display: none;}.overlay-content {position:absolute;width: 100%;max-width: 100%;height:auto;top: 0;left: 0;padding: 0;margin: 0;z-index: 1000;touch-action: pan-x pan-y;overscroll-behavior:none;}.overlay-content .media {width: 100%;max-width: 100%;height: auto;margin-bottom: 150px;}.overlay-content .media a {display:block;pointer-events:all;}.close-btn {position: absolute;top:10px;right:10px;border-radius:10px;z-index: 10001;background: none;padding:2px;border:none;}.fade-base {position: fixed;bottom: 0;width: 100%;height:60px;z-index: 1001;background:rgba(0,0,0,1);}.fade {position: fixed;bottom:60px;width: 100%;height:60px;z-index: 10001;background: linear-gradient(to top, #000, transparent);}.close-btn svg {color:#fff;width:35px;}.prev-btn, .next-btn {position: absolute;justify-content:center;align-items:center;}button:active {background:rgba(0,0,0,0.4);}button{padding:0;margin:0;}.prev-btn,.next-btn {background:none;border:none;border-radius:0;padding:2px 8px;margin:0;visibility: hidden;}.navb {color:white;width:35px;}.prev-btn {top:28px;left:50px;z-index:10005;border:3px solid rgba(39, 92, 134, 0.5);}.next-btn {top:28px;right:50px;z-index:10005;border:3px solid rgba(39, 92, 134, 0.5);}@media screen and (max-width:400px) {.prev-btn {left: 45px;}.next-btn {right:45px;}}@media screen and (min-width:401px) and (max-width:500px) {.prev-btn {left: 50px;}.next-btn {right:50px;}}@media screen and (min-width:501px) and (max-width:600px) {.prev-btn {left: 100px;}.next-btn {right: 100px;}}@media screen and (min-width:601px) and (max-width:700px) {.prev-btn {left: 140px;}.next-btn {right: 140px;}}@media screen and (min-width:701px) and (max-width:800px) {.prev-btn {left: 160px;}.next-btn {right: 160px;}}@media screen and (min-width:801px) and (max-width:990px) {.prev-btn {left: 200px;}.next-btn {right: 200px;}}@media screen and (min-width:1000px) {.prev-btn {left: 350px;right:auto;}.next-btn {right: 350px;left:auto;}}.overlay.opening {display: flex;width: 98%;height: 98%;top: 50%;left: 50%;transform: translate(-50%,-50%);opacity:0.9;}.overlay.fullscreen {width: 100%;height: 100%;top: 50%;left: 50%;transform: translate(-50%, -50%);opacity:1;}.overlay.closing {width: 95%;height: 95%;top: 50%;left: 50%;transform: translate(-50%, -50%);opacity:0.2;}.hidden_in_gallery {display: none;}.overlay .hidden_in_gallery {display: block;}@media screen and (max-width:600px) {.titles {max-width:70%;}}@media screen and (min-width:750px) {.titles a {font-size:1.4rem;letter-spacing: normal;}.titles {max-width:70%;}}iframe {width:100%;height:350px;border:none;}@media screen and (min-width:48em) {iframe {height:900px;}}.media a {color:transparent;text-decoration: none;width: 100%;padding:0;margin:0;display:block;z-index:10;}.image {width:100%;height:auto;max-width:100%;display: block;}</style>
 <style>.tti74 {display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-webkit-justify-content:space-around;justify-content:space-around;position: fixed;z-index:100;width:98%;height:100%;top:1.5%;}</style>
 <style>.ll36 {position:relative;color:var(--text-color);text-align:right;text-decoration:none;font-size:21px;letter-spacing:2px;padding-left:10px;}@media screen and (min-width: 48em){.ll36{width:auto;text-align:left;font-size:24px;letter-spacing: 0;}}</style>
 <style>.rr63 {position:relative;color:var(--text-color);text-align:left;text-decoration:none;font-size:21px;letter-spacing:2px;padding-right:10px;}@media screen and (min-width: 48em){.rr63{width:auto;text-align:right;font-size:24px;letter-spacing: 0;}}</style>
@@ -54,6 +54,7 @@ BLOG
 </a>
 </div>
 
+
 <div style="pointer-events:none" class="tti74">
 <a href="https://tour.khaliiil.com/" style="pointer-events:visible" class="ll36">2024</a>
 <a href="https://tour.khaliiil.com/" style="pointer-events:visible" class="rr63">WORLD WIDE</a>
@@ -70,6 +71,7 @@ BLOG
 <div class="media"><video src="https://ik.imagekit.io/xlretjwgk/Video_bday-videohomepagevideo20248920242992024.mov" poster="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/Home_media_image_gallery/IMG_1228.jpeg" alt="Video" controlsList="nofullscreen" autoplay loop muted playsinline></video><img src="/static/media/icon-mute.svg" class="sound-icon sound-off-icon" alt="Toggle Sound"><img src="/static/media/icon-volume.svg" style="display:none;" class="sound-icon sound-on-icon" alt="unmute"><div class="play-btn"></div><div class="spinner"></div><div class="error-message" style="display: none;"></div></div>
 <div class="media"><a rel="noopener noreferrer" style="cursor: pointer;"><div style="pointer-events: none;width:100%;"><img class="image" loading="lazy" alt="Image" title="image:000" decoding="async" style="color: transparent; width: 100%; height: auto; pointer-events: none;" src="https://raw.githubusercontent.com/Dibacarter/Media/main/Home_media_image_gallery/5a67e1ae-0c7b-494c-8440-3eb7d7f35ac9.jpeg"></div></a></div>
 </div>
+
 
 <div class="footer-mobile">
 <a href="https://connect.khaliiil.com">
@@ -118,13 +120,13 @@ PRIVACY
 </div>
 <div id="overlay" class="overlay">
 <div id="overlay-content" class="overlay-content"></div>
-<button id="close-btn" class="close-btn"><svg viewBox="0 0 25 22" aria-hidden="true" class="close-overlay"><path fill="white" d="M19 6 6 19M6 6l13 13" stroke="white" stroke-width="2.2" stroke-linecap="round"></path></svg></button>
+<button id="close-btn" class="close-btn"><svg viewBox="0 0 24 24" aria-hidden="true" class="close-overlay"><path fill="white" d="M19 6 6 19M6 6l13 13" stroke="white" stroke-width="2.2" stroke-linecap="round"></path></svg></button>
 <button id="next-btn" class="next-btn"><svg viewBox="-2 0 24 24" aria-hidden="true" class="navb" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M6 4l8 8-8 8" stroke="white" stroke-width="3" stroke-linejoin="miter"></path></svg></button>
 <button id="prev-btn" class="prev-btn"><svg viewBox="2 0 24 24" aria-hidden="true" class="navb" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M18 4l-8 8 8 8" stroke="white" stroke-width="3" stroke-linejoin="miter"></path></svg></button>
 </div>
-
 <script>
 const iframes = document.querySelectorAll('iframe');
+
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     const iframe = entry.target;
@@ -139,108 +141,91 @@ const observer = new IntersectionObserver((entries) => {
 
 iframes.forEach((iframe) => observer.observe(iframe));
 </script>
-
-
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const mediaElements = document.querySelectorAll('.media');
-  
-    function muteAllVideos() {
-      mediaElements.forEach(media => {
-        const video = media.querySelector('video');
-        if (video) {
-          video.muted = true;
-          const soundOffIcon = media.querySelector('.sound-off-icon');
-          const soundOnIcon = media.querySelector('.sound-on-icon');
-          soundOffIcon.style.display = 'block';
-          soundOnIcon.style.display = 'none';
-          video.play();
-        }
-      });
-    }
-  
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        const video = entry.target;
-        if (!entry.isIntersecting && !video.muted) {
-          video.muted = true;
-          const media = video.closest('.media');
-          if (media) {
-            const soundOffIcon = media.querySelector('.sound-off-icon');
-            const soundOnIcon = media.querySelector('.sound-on-icon');
-            soundOffIcon.style.display = 'block';
-            soundOnIcon.style.display = 'none';
-          }
-        }
-      });
-    }, { threshold: 0.1 });
-  
+document.addEventListener('DOMContentLoaded', function () {
+  const mediaElements = document.querySelectorAll('.media');
+
+  function handleVideoErrors(video) {
+    const errorContainer = document.createElement('div');
+    errorContainer.className = 'video-error';
+    errorContainer.style.textAlign = 'left';
+    errorContainer.style.color = '#fff';
+    errorContainer.style.display = 'none';
+
+    errorContainer.innerHTML = `
+      <div style="padding:20px;">
+        <span style="font-size:0.8rem;word-wrap:break-word;"><strong>Error:</strong> Video could not be loaded.</span><br>
+        <span style="font-size:0.7rem;color:#ccc;word-wrap:break-word;">This may be due to a failed loading attempt or an invalid video URL. Please verify video source paths and reload the page.</span><br><br>
+        <button id="retry-btn" style="font-size:0.8rem;z-index:20;padding:5px 10px; cursor:pointer;">Try Again</button>
+      </div>
+    `;
+
+    video.parentElement.appendChild(errorContainer);
+
+    video.addEventListener('error', () => {
+      errorContainer.style.display = 'block';
+    });
+
+    errorContainer.addEventListener('click', (event) => {
+      if (event.target && event.target.id === 'retry-btn') {
+        errorContainer.style.display = 'none';
+        video.load();
+        video.play();
+      }
+    });
+  }
+
+  function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return rect.top < window.innerHeight && rect.bottom > 0;
+  }
+
+  function muteOutOfViewportVideos() {
     mediaElements.forEach(media => {
       const video = media.querySelector('video');
+      if (video && !isInViewport(video)) {
+        video.muted = true;
+        const soundOffIcon = media.querySelector('.sound-off-icon');
+        const soundOnIcon = media.querySelector('.sound-on-icon');
+        if (soundOffIcon && soundOnIcon) {
+          soundOffIcon.style.display = 'block';
+          soundOnIcon.style.display = 'none';
+        }
+      }
+    });
+  }
+
+  mediaElements.forEach(media => {
+    const video = media.querySelector('video');
+    if (video) {
+      handleVideoErrors(video);
+
+      video.muted = true;
+      video.play();
+
       const soundOffIcon = media.querySelector('.sound-off-icon');
       const soundOnIcon = media.querySelector('.sound-on-icon');
-      const playBtn = media.querySelector('.play-btn');
-      const spinner = media.querySelector('.spinner');
-      const errorMessage = document.createElement('div');
-      
-      errorMessage.classList.add('error-message');
-      errorMessage.style.display = 'none';
-  errorMessage.innerHTML = `
-    <div style="padding: 20px;">
-      <strong>Error:</strong> Video could not be loaded.<br><br>
-  
-      <span style="font-size:0.8rem;color:#ccc;">This may be due to a failed loading attempt or an invalid video URL. Please verify video source paths and reload the page.</span><br><br>
-  
-      </div>
-  `;
-      media.appendChild(errorMessage);
-  
-      video.removeAttribute('controls');
-  
-      video.addEventListener('waiting', () => {
-        spinner.style.display = 'block';
-      });
-  
-      video.addEventListener('canplay', () => {
-        spinner.style.display = 'none';
-      });
-  
-      video.addEventListener('error', () => {
-        spinner.style.display = 'none';
-        errorMessage.style.display = 'block';
-      });
-  
-      playBtn.addEventListener('click', () => {
-        if (video.paused) {
-          video.play();
-          playBtn.style.display = 'none';
-        }
-      });
-  
-      video.addEventListener('pause', () => {
-        playBtn.style.display = 'block';
-      });
-  
-      video.addEventListener('play', () => {
-        playBtn.style.display = 'none';
-      });
-  
-      soundOffIcon.addEventListener('click', () => {
-        muteAllVideos();
-        video.muted = false;
-        soundOffIcon.style.display = 'none';
-        soundOnIcon.style.display = 'block';
-      });
-  
-      soundOnIcon.addEventListener('click', () => {
-        video.muted = true;
-        soundOffIcon.style.display = 'block';
-        soundOnIcon.style.display = 'none';
-      });
-  
-      observer.observe(video);
-    });
+
+      if (soundOffIcon && soundOnIcon) {
+        soundOffIcon.addEventListener('click', () => {
+          video.muted = false;
+          soundOffIcon.style.display = 'none';
+          soundOnIcon.style.display = 'block';
+        });
+
+        soundOnIcon.addEventListener('click', () => {
+          video.muted = true;
+          soundOffIcon.style.display = 'block';
+          soundOnIcon.style.display = 'none';
+        });
+      }
+    }
   });
+
+  window.addEventListener('scroll', muteOutOfViewportVideos);
+
+  muteOutOfViewportVideos();
+});
 </script>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
@@ -251,21 +236,26 @@ document.addEventListener("DOMContentLoaded", function () {
   const prevButton = document.querySelector(".prev-btn");
   const nextButton = document.querySelector(".next-btn");
   const mediaGrid = document.querySelector(".media-grid");
+  const iframes = document.querySelectorAll('iframe');
 
     let currentIndex = 0;
     let currentOverlayVideo = null;
-
+  
     function disableScroll() {
-      document.body.classList.add('no-scroll');
-      document.body.style.overflow = 'hidden';
-      document.body.style.touchAction = 'none';
-    }
+  document.body.classList.add('no-scroll');
+  document.body.style.overflow = 'hidden';
+  mediaGrid.style.touchAction = 'none';
+  mediaGrid.style.webkitTouchAction = 'none';
+}
 
-    function enableScroll() {
-      document.body.classList.remove('no-scroll');
-      document.body.style.overflow = '';
-      document.body.style.touchAction = '';
-    }
+function enableScroll() {
+  document.body.classList.remove('no-scroll');
+  document.body.style.overflow = '';
+  document.body.style.touchAction = '';
+  mediaGrid.style.webkitTouchAction = '';
+  mediaGrid.style.touchAction = '';
+}
+
 
     function muteAllVideos() {
       mediaElements.forEach(media => {
@@ -277,12 +267,10 @@ document.addEventListener("DOMContentLoaded", function () {
           soundOffIcon.style.display = 'block';
           soundOnIcon.style.display = 'none';
           video.play();
+          iframes.forEach((iframe) => {
+        iframe.src = iframe.src;
+    });
         }
-        
-
-document.querySelectorAll("iframe").forEach((iframe) => {
-  iframe.src = iframe.src;
-});
       });
     }
 
@@ -291,16 +279,16 @@ document.querySelectorAll("iframe").forEach((iframe) => {
         if (media.querySelector('video')) {
           const video = media.querySelector('video');
           video.play();
+            iframes.forEach((iframe) => {
+        iframe.src = iframe.src;
+    });
         }
-        document.querySelectorAll("iframe").forEach((iframe) => {
-  iframe.src = iframe.src;
-});
       });
     }
 
     function checkButtons() {
-      prevButton.style.display = currentIndex === 0 ? 'none' : 'block';
-      nextButton.style.display = currentIndex === mediaElements.length - 1 ? 'none' : 'block';
+      prevButton.style.pointerEvents = currentIndex === 0 ? 'none' : '';
+      nextButton.style.pointerEvents = currentIndex === mediaElements.length - 1 ? 'none' : '';
     }
 
  function openOverlay(index) {
@@ -323,10 +311,6 @@ document.querySelectorAll("iframe").forEach((iframe) => {
 
   muteAllVideos();
   checkButtons();
-  
-  document.querySelectorAll("iframe").forEach((iframe) => {
-  iframe.src = iframe.src;
-});
 
 const clonedVideo = clonedMedia.querySelector('video');
 const clonedPlayBtn = clonedMedia.querySelector('.play-btn');
@@ -403,6 +387,11 @@ if (clonedVideo && clonedPlayBtn && clonedSpinner) {
       overlay.classList.add('closing');
     document.body.classList.remove('overlay-active');
 
+ const iframes = document.querySelectorAll(".overlay iframe");
+    iframes.forEach(iframe => {
+        iframe.src = iframe.src;
+    })
+
       setTimeout(() => {
         overlay.classList.remove('closing');
         overlay.style.display = 'none';
@@ -414,10 +403,7 @@ if (clonedVideo && clonedPlayBtn && clonedSpinner) {
         currentOverlayVideo = null;
       }
       playAllVideos();
-      
-      document.querySelectorAll("iframe").forEach((iframe) => {
-  iframe.src = iframe.src;
-});
+      muteAllVideos();
     }
 
     mediaElements.forEach((media, index) => {
@@ -435,18 +421,12 @@ if (clonedVideo && clonedPlayBtn && clonedSpinner) {
           video.muted = false;
           soundOffIcon.style.display = 'none';
           soundOnIcon.style.display = 'block';
-          document.querySelectorAll("iframe").forEach((iframe) => {
-  iframe.src = iframe.src;
-});
-});
+        });
 
         soundOnIcon.addEventListener('click', () => {
           video.muted = true;
           soundOffIcon.style.display = 'block';
           soundOnIcon.style.display = 'none';
-    document.querySelectorAll("iframe").forEach((iframe) => {
-  iframe.src = iframe.src;
-});
         });
       }
 
