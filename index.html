@@ -132,21 +132,26 @@ PRIVACY
 <button id="prev-btn" class="prev-btn"><svg viewBox="2 0 24 24" aria-hidden="true" class="navb" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M18 4l-8 8 8 8" stroke="white" stroke-width="3" stroke-linejoin="miter"></path></svg></button>
 </div>
 <script>
-const iframes = document.querySelectorAll('iframe');
+  // Select all iframes on the page
+  const iframes = document.querySelectorAll('iframe');
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    const iframe = entry.target;
+  // Create an IntersectionObserver to monitor iframe visibility
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      const iframe = entry.target;
 
-    if (!entry.isIntersecting) {
-      const src = iframe.src;
-      iframe.src = '';
-      iframe.src = src;
-    }
-  });
-}, { threshold: 0 });
+      // Check if the iframe is completely out of view
+      if (!entry.isIntersecting) {
+        // Refresh the iframe by resetting its src
+        const src = iframe.src;
+        iframe.src = ''; // Temporarily clear the src
+        iframe.src = src; // Restore the src
+      }
+    });
+  }, { threshold: 0 }); // Trigger as soon as any part of the iframe is out of view
 
-iframes.forEach((iframe) => observer.observe(iframe));
+  // Start observing all iframes
+  iframes.forEach((iframe) => observer.observe(iframe));
 </script>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
@@ -315,6 +320,11 @@ function enableScroll() {
     overlay.classList.remove('opening');
     overlay.classList.add('fullscreen');
   }, 140);
+  
+  
+iframes.forEach((iframe) => {
+  iframe.src = iframe.src;
+});
 
   muteAllVideos();
   checkButtons();
@@ -394,10 +404,10 @@ if (clonedVideo && clonedPlayBtn && clonedSpinner) {
       overlay.classList.add('closing');
     document.body.classList.remove('overlay-active');
 
- const iframes = document.querySelectorAll(".overlay iframe");
-    iframes.forEach(iframe => {
-        iframe.src = iframe.src;
-    })
+iframes.forEach((iframe) => {
+  iframe.src = iframe.src;
+});
+
 
       setTimeout(() => {
         overlay.classList.remove('closing');
@@ -428,12 +438,22 @@ if (clonedVideo && clonedPlayBtn && clonedSpinner) {
           video.muted = false;
           soundOffIcon.style.display = 'none';
           soundOnIcon.style.display = 'block';
+          
+          iframes.forEach((iframe) => {
+  iframe.src = iframe.src;
+});
+
         });
 
         soundOnIcon.addEventListener('click', () => {
           video.muted = true;
           soundOffIcon.style.display = 'block';
           soundOnIcon.style.display = 'none';
+          
+          iframes.forEach((iframe) => {
+  iframe.src = iframe.src;
+});
+
         });
       }
 
@@ -452,6 +472,12 @@ if (clonedVideo && clonedPlayBtn && clonedSpinner) {
       } else {
         currentIndex -= 1;
       }
+      
+  iframes.forEach((iframe) => {
+  iframe.src = iframe.src;
+});
+
+      
       openOverlay(currentIndex);
       checkButtons();
     });
@@ -462,6 +488,12 @@ if (clonedVideo && clonedPlayBtn && clonedSpinner) {
       } else {
         currentIndex += 1;
       }
+      
+iframes.forEach((iframe) => {
+  iframe.src = iframe.src;
+});
+
+  
       openOverlay(currentIndex);
       checkButtons();
     });
