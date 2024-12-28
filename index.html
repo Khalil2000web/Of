@@ -131,27 +131,26 @@ PRIVACY
 <button id="next-btn" class="next-btn"><svg viewBox="-2 0 24 24" aria-hidden="true" class="navb" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M6 4l8 8-8 8" stroke="white" stroke-width="3" stroke-linejoin="miter"></path></svg></button>
 <button id="prev-btn" class="prev-btn"><svg viewBox="2 0 24 24" aria-hidden="true" class="navb" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M18 4l-8 8 8 8" stroke="white" stroke-width="3" stroke-linejoin="miter"></path></svg></button>
 </div>
+
+
+
+
 <script>
-  // Select all iframes on the page
-  const iframes = document.querySelectorAll('iframe');
+const iframes = document.querySelectorAll('iframe');
 
-  // Create an IntersectionObserver to monitor iframe visibility
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      const iframe = entry.target;
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    const iframe = entry.target;
 
-      // Check if the iframe is completely out of view
-      if (!entry.isIntersecting) {
-        // Refresh the iframe by resetting its src
-        const src = iframe.src;
-        iframe.src = ''; // Temporarily clear the src
-        iframe.src = src; // Restore the src
-      }
-    });
-  }, { threshold: 0 }); // Trigger as soon as any part of the iframe is out of view
+    if (!entry.isIntersecting) {
+      const src = iframe.src;
+      iframe.src = '';
+      iframe.src = src;
+    }
+  });
+}, { threshold: 0 });
 
-  // Start observing all iframes
-  iframes.forEach((iframe) => observer.observe(iframe));
+iframes.forEach((iframe) => observer.observe(iframe));
 </script>
 <script>
 document.addEventListener('DOMContentLoaded', function () {
@@ -320,11 +319,6 @@ function enableScroll() {
     overlay.classList.remove('opening');
     overlay.classList.add('fullscreen');
   }, 140);
-  
-  
-iframes.forEach((iframe) => {
-  iframe.src = iframe.src;
-});
 
   muteAllVideos();
   checkButtons();
@@ -404,10 +398,10 @@ if (clonedVideo && clonedPlayBtn && clonedSpinner) {
       overlay.classList.add('closing');
     document.body.classList.remove('overlay-active');
 
-iframes.forEach((iframe) => {
-  iframe.src = iframe.src;
-});
-
+ const iframes = document.querySelectorAll(".overlay iframe");
+    iframes.forEach(iframe => {
+        iframe.src = iframe.src;
+    })
 
       setTimeout(() => {
         overlay.classList.remove('closing');
@@ -438,22 +432,12 @@ iframes.forEach((iframe) => {
           video.muted = false;
           soundOffIcon.style.display = 'none';
           soundOnIcon.style.display = 'block';
-          
-          iframes.forEach((iframe) => {
-  iframe.src = iframe.src;
-});
-
         });
 
         soundOnIcon.addEventListener('click', () => {
           video.muted = true;
           soundOffIcon.style.display = 'block';
           soundOnIcon.style.display = 'none';
-          
-          iframes.forEach((iframe) => {
-  iframe.src = iframe.src;
-});
-
         });
       }
 
@@ -472,12 +456,6 @@ iframes.forEach((iframe) => {
       } else {
         currentIndex -= 1;
       }
-      
-  iframes.forEach((iframe) => {
-  iframe.src = iframe.src;
-});
-
-      
       openOverlay(currentIndex);
       checkButtons();
     });
@@ -488,16 +466,32 @@ iframes.forEach((iframe) => {
       } else {
         currentIndex += 1;
       }
-      
-iframes.forEach((iframe) => {
-  iframe.src = iframe.src;
-});
-
-  
       openOverlay(currentIndex);
       checkButtons();
     });
   });
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    const closeButton = document.querySelector('.close-btn');
+
+    if (!localStorage.getItem('buttonClicked')) {
+        prevBtn.style.border = '3px solid #275c86';
+        nextBtn.style.border = '3px solid #275c86';
+    }
+
+    function hideBorders() {
+        prevBtn.style.border = '3px solid transparent';
+        nextBtn.style.border = '3px solid transparent';
+        localStorage.setItem('buttonClicked', 'true');
+    }
+
+    prevBtn.addEventListener('click', hideBorders);
+    nextBtn.addEventListener('click', hideBorders);
+    closeButton.addEventListener('click', hideBorders);
+});
 </script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
