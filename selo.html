@@ -33,67 +33,25 @@
 <style>.footer-mobile {position: fixed;width: 100%;max-width:80%;left: 50%;transform:translateX(-50%);display: none;-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:none;justify-content:space-around;align-items: center;z-index:var(--z-index-max);bottom:0;background:transparent;gap:8px;}.footer-mobile a {color:var(--text-color);text-decoration:none;align-self:end;padding:0;margin:0;}.footer-mobile a p {color:var(--text-color);font-family:var(--font-main);padding:0 5px;margin:0;padding-bottom:18px;font-size:1rem;font-weight:300;}</style>
 <style>@media screen and (min-width:46em) {.diskfooter {display:flex;}.footer-mobile {display:none;}}</style>
 <style>.diskfooter {position: fixed;bottom:1.5rem;left:50%;transform:translateX(-50%);width: 100%;max-width:98%;margin:0 auto;display:none;justify-content: space-between;align-items: center;padding: 0;color:var(--text-color);z-index:1000;}@media screen and (min-width: 30em){.diskfooter {-webkit-flex-direction:row;-ms-flex-direction:row;flex-direction:row;}}@media screen and (min-width: 48em){.diskfooter {display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;font-size:11px;}}.diskfooter a, .diskfooter #cp {margin: 0;padding: 0;color:var(--text-color);}#cp {text-align: center;flex-grow: 1;}.diskfooter a {text-decoration: none;}.diskfooter a #lefts{padding-right:30px;}.diskfooter a #rights{padding-left:30px;}.diskfooter p {padding: 0;margin:0;}</style>
-
-
-<style>
-.footer-eb6s {
-    display: flex;
-    flex-direction: column;
-    margin:0 auto;
-    padding:0;
-    justify-content: space-around;
-    align-items: center;
-    max-width:99.8%;
-    background-color: #3a3126;
-    height: 30vh;
-    border-top:1px solid #fff;
-}
-
-.jjcy2 {
-    display: flex;
-    align-items: end;
-    justify-content: space-between;
-    padding:0;
-    margin:0 auto;
-    gap:10px;
-    max-width:80%;
-    word-wrap: break-word;
-}
-.jjcy2 a {
-    color:var(--text-color-0f);
-    text-decoration: none;
-}
-.jjcy2 p {
-    padding:5px 10px;
-    font-size:14px;
-    margin:0;
-}
-.sma {min-width:100px;min-height:30px;display: none;margin:0 auto;padding:0;justify-content: center;align-items: center;overflow: hidden;}
-.sma-icon {color:var(--text-color-0f);display: block;width:15px;padding:10px;}
-.whgc {color: var(--text-color-0f);font-size:14px;padding:0;margin: 0;text-align: center;}
-</style>
-
-<style>.hdge4f {max-width:99.8%;width:100%;padding:0;margin:0 auto;display: flex;flex-direction: column;justify-content:center;align-items: center;gap:0;}
-.image {width:100%;max-width:100%;height:auto;pointer-events: none;display: block;margin:0 auto;}
-</style>
+<style>.footer-eb6s {display: flex;flex-direction: column;margin:0 auto;padding:0;justify-content: space-around;align-items: center;max-width:99.8%;background-color: #3a3126;height: 30vh;border-top:1px solid #fff;}.jjcy2 {display: flex;align-items: end;justify-content: space-between;padding:0;margin:0 auto;gap:10px;max-width:100%;word-wrap: break-word;}.jjcy2 a {color:var(--text-color-0f);text-decoration: none;}.jjcy2 p {padding:5px 10px;font-size:14px;margin:0;}.sma {min-width:100px;min-height:30px;display: none;margin:0 auto;padding:0;justify-content: center;align-items: center;overflow: hidden;}.sma-icon {color:var(--text-color-0f);display: block;width:15px;padding:10px;}.whgc {color: var(--text-color-0f);font-size:14px;padding:0;margin: 0;text-align: center;}</style>
+<style>.hdge4f {max-width:99.8%;width:100%;padding:0;margin:0 auto;display: flex;flex-direction: column;justify-content:center;align-items: center;gap:0;}.image {width:100%;max-width:100%;height:auto;pointer-events: none;display: block;margin:0 auto;}</style>
+<style>.menu-container {position: relative;}.menu-btn {padding: 10px;cursor: pointer;background: none;border:none;position: fixed;z-index: 10000;top:20px;right:20px;}.m196lzck {color:#fff;width:28px;display: block;}.fullscreen-menu {position: fixed;top: 0;left: 0;width: 100%;height: 100%;background: rgba(0, 0, 0, 0.9);display: none;flex-direction: column;justify-content: center;align-items: center;z-index: 1000;}.fullscreen-menu.active {display: flex;}.menu-nav ul {list-style: none;padding: 0;margin: 0;text-align: center;}.menu-nav ul li {margin: 20px 0;}.menu-nav ul li a {text-decoration: none;color:var(--text-color);font-size: 24px;text-transform: uppercase;}</style>
 </head>
 <body style="">
-<div class="nav-top">
-<a href="https://music.khaliiil.com">
-MUSIC
-</a>
-<a href="https://tour.khaliiil.com/">
-TOUR
-</a>
-<a href="/crt">
-CRT
-</a>
-<a href="/blog">
-BLOG
-</a>
+
+<div class="menu-container">
+<button id="menu-btn" class="menu-btn" aria-expanded="false" aria-controls="fullscreen-menu"><svg viewBox="0 0 24 24" focusable="false" class="m196lzck" aria-hidden="true"><path fill="currentColor" d="M 3 5 A 1.0001 1.0001 0 1 0 3 7 L 21 7 A 1.0001 1.0001 0 1 0 21 5 L 3 5 z M 3 11 A 1.0001 1.0001 0 1 0 3 13 L 21 13 A 1.0001 1.0001 0 1 0 21 11 L 3 11 z M 3 17 A 1.0001 1.0001 0 1 0 3 19 L 21 19 A 1.0001 1.0001 0 1 0 21 17 L 3 17 z"></path></svg></button>
+<div id="fullscreen-menu" class="fullscreen-menu" aria-hidden="true">
+<nav class="menu-nav">
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
 </div>
-
-
+</div>
 
 <div class="hdge4f">
 <div style="pointer-events: none;"><a rel="noopener noreferrer" style="cursor: pointer;"><img class="image" src="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/Home-page-media/IMG_3072.jpeg" style="width:100%;max-width:100%;height:auto;pointer-events: none;" loading="lazy" decoding="async" alt="Image" title=""></a></div>
@@ -134,61 +92,12 @@ BLOG
 <a href=""><p>TERMS</p></a>
 <a href=""><p>PRIVACY</p></a>
 </div>
-
 <div class="sma">
 <a href="https://instagram.com/khaliiil.d/">
 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="sma-icon" viewBox="0 0 16 16"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/></svg>
 </a>
 </div>
 <p class="whgc">&copy; 2024 KHALIL</p>
-</div>
-
-
-
-<div class="footer-mobile">
-<a href="https://connect.khaliiil.com">
-<p>
-JOIN
-</p>
-</a>
-<a href="/credits">
-<p>
-CREDITS
-</p>
-</a>
-<a href="/terms-conditions">
-<p>
-TERMS
-</p>
-</a>
-<a href="/privacy-policy">
-<p>
-PRIVACY
-</p>
-</a>
-</div>
-<div class="diskfooter">
-<a href="https://connect.khaliiil.com">
-<p id="rights">
-JOIN
-</p>
-</a>
-<a href="/credits">
-<p id="rights">
-CREDITS
-</p>
-</a>
-<p id="cp">&copy;&nbsp;2024 KHALIL</p>
-<a href="/terms-conditions">
-<p id="lefts">
-TERMS
-</p>
-</a>
-<a href="/privacy-policy">
-<p id="lefts">
-PRIVACY
-</p>
-</a>
 </div>
 <script>
   const scrollLeftButton = document.getElementById('scrollLeft');
@@ -322,40 +231,37 @@ document.addEventListener('copy', function (e) {
 }, false);
 </script>
 <script>
-const menuBtn = document.getElementById('menu-btn');
-const fullMenu = document.getElementById('full-menu');
+document.addEventListener("DOMContentLoaded", () => {
+  const menuBtn = document.getElementById("menu-btn");
+  const fullscreenMenu = document.getElementById("fullscreen-menu");
 
-function openMenu() {
-    fullMenu.style.display = 'flex';
-    menuBtn.setAttribute('aria-expanded', 'true');
-    fullMenu.setAttribute('aria-hidden', 'false');
-    menuBtn.innerHTML = `<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#fff" d="M19 6 6 19M6 6l13 13" stroke="white" stroke-width="2.2" stroke-linecap="round"></path></svg>`;
-}
+  const openMenuSVG = `
+    <svg viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="30" >
+      <path fill="white" d="M19 6 6 19M6 6l13 13" stroke="white" stroke-width="2.2" stroke-linecap="round"></path>
+    </svg>
+  `;
 
-function closeMenu() {
-    fullMenu.style.display = 'none';
-    menuBtn.setAttribute('aria-expanded', 'false');
-    fullMenu.setAttribute('aria-hidden', 'true');
-    menuBtn.innerHTML = '<svg viewBox="0 0 24 24" focusable="false" aria-hidden="true"><path fill="#fff" d="M 3 5 A 1.0001 1.0001 0 1 0 3 7 L 21 7 A 1.0001 1.0001 0 1 0 21 5 L 3 5 z M 3 11 A 1.0001 1.0001 0 1 0 3 13 L 21 13 A 1.0001 1.0001 0 1 0 21 11 L 3 11 z M 3 17 A 1.0001 1.0001 0 1 0 3 19 L 21 19 A 1.0001 1.0001 0 1 0 21 17 L 3 17 z"></path></svg>';
-}
+  const defaultButtonText = `<svg viewBox="0 0 24 24" focusable="false" class="m196lzck" aria-hidden="true"><path fill="currentColor" d="M 3 5 A 1.0001 1.0001 0 1 0 3 7 L 21 7 A 1.0001 1.0001 0 1 0 21 5 L 3 5 z M 3 11 A 1.0001 1.0001 0 1 0 3 13 L 21 13 A 1.0001 1.0001 0 1 0 21 11 L 3 11 z M 3 17 A 1.0001 1.0001 0 1 0 3 19 L 21 19 A 1.0001 1.0001 0 1 0 21 17 L 3 17 z"></path></svg>`;
 
-menuBtn.addEventListener('click', () => {
-    if (fullMenu.style.display === 'none' || fullMenu.style.display === '') {
-        openMenu();
+  const toggleMenu = () => {
+    const isMenuOpen = fullscreenMenu.classList.contains("active");
+
+    if (isMenuOpen) {
+      fullscreenMenu.classList.remove("active");
+      fullscreenMenu.setAttribute("aria-hidden", "true");
+      menuBtn.setAttribute("aria-expanded", "false");
+      menuBtn.innerHTML = defaultButtonText;
+      document.body.style.overflow = "";
     } else {
-        closeMenu();
+      fullscreenMenu.classList.add("active");
+      fullscreenMenu.setAttribute("aria-hidden", "false");
+      menuBtn.setAttribute("aria-expanded", "true");
+      menuBtn.innerHTML = openMenuSVG;
+      document.body.style.overflow = "hidden";
     }
-});
+  };
 
-const menuLinks = fullMenu.querySelectorAll('a');
-menuLinks.forEach(link => {
-    link.addEventListener('click', closeMenu);
-});
-
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && fullMenu.style.display === 'flex') {
-        closeMenu();
-    }
+  menuBtn.addEventListener("click", toggleMenu);
 });
 </script>
 </body>
