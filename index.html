@@ -20,18 +20,203 @@
 <meta name="copyright" content="2025">
 <style>:root {--primary-color:#fff;--secondary-color:#ccc;--accent-color:#ddd;--background-color:#000;--light-background-color:#ffffff;--dark-background-color:#333333;--text-color:#fff;--light-text-color:#666;--heading-color:#111;--border-color:#ccc;--light-border-color:#eaeaea;--button-text-color:#fff;--button-hover-bg:#2980b9;--font-size-base:16px;--font-size-small:0.875rem;--font-size-medium:1rem;--font-size-large:1.25rem;--font-size-xlarge:2rem;--font-size-xxlarge:3rem;--font-family-sans:'Arial',sans-serif;--font-family-serif:'Georgia',serif;--font-family-mono:'Courier New',monospace;--font-family-display:'Poppins',sans-serif;--font-main:'BB Manual Mono Regular',Arial,sans-serif;--font-main-bold:'BB Manual Mono SemiBold','BB Manual Mono Regular',Arial,sans-serif;--font-weight-light:300;--font-weight-normal:400;--font-weight-bold:700;--font-weight-black:900;--line-height-normal:1.5;--line-height-heading:1.2;--spacing-xs:4px;--spacing-sm:8px;--spacing-md:16px;--spacing-lg:24px;--spacing-xl:32px;--spacing-xxl:48px;--padding:20px;--margin:20px;--border-width-thin:1px;--border-width-thick:2px;--border-radius-small:4px;--border-radius-medium:8px;--border-radius-large:16px;--box-shadow-light:0 2px 4px rgba(0,0,0,0.1);--box-shadow-medium:0 4px 8px rgba(0,0,0,0.2);--box-shadow-large:0 8px 16px rgba(0,0,0,0.3);--animation-duration-short:0.2s;--animation-duration-medium:0.5s;--animation-duration-long:1s;--animation-ease-in-out:cubic-bezier(0.42,0,0.58,1);--animation-bounce:ease-in-out 1.5s infinite bounce;--transition-duration-short:0.2s;--transition-duration-medium:0.5s;--transition-duration-long:1s;--transition-ease:ease;--transition-ease-in-out:ease-in-out;--z-index-low:1;--z-index-medium:10;--z-index-high:100;--z-index-max:1000;--grid-columns:12;--grid-gap:16px;--width-max:1200px;--width-container:90%;--width-sidebar:250px;--width-content:75%;--height-header:80px;--height-footer:100px;--breakpoint-xs:480px;--breakpoint-sm:768px;--breakpoint-md:1024px;--breakpoint-lg:1200px;--breakpoint-xl:1440px;--button-padding:12px 24px;--button-border-radius:8px;--button-bg:var(--primary-color);--button-hover-bg:var(--button-hover-bg);--button-disabled-bg:#95a5a6;--button-font-size:var(--font-size-medium);--input-padding:10px 15px;--input-border-radius:var(--border-radius-small);--input-border:var(--border-width-thin) solid var(--border-color);--input-focus-border-color:var(--primary-color);--icon-size-small:16px;--icon-size-medium:24px;--icon-size-large:32px;--list-padding:var(--spacing-md);--list-item-margin-bottom:var(--spacing-xs);--overlay-bg-color:rgba(0,0,0,0.7);--modal-padding:var(--spacing-lg);--modal-width:90%;--modal-max-width:500px;--modal-border-radius:var(--border-radius-medium);--tooltip-bg-color:var(--accent-color);--tooltip-text-color:#fff;--tooltip-font-size:var(--font-size-small);--tooltip-padding:5px 10px;--scrollbar-width:10px;--scrollbar-track-color:#f0f0f0;--scrollbar-thumb-color:var(--primary-color);--link-color:var(--primary-color);--link-hover-color:var(--secondary-color);--link-decoration:none;--link-hover-decoration:underline;--table-border-color:var(--border-color);--table-padding:var(--spacing-sm);--table-striped-bg:#f9f9f9;--container-max-width:1200px;--header-height:70px;--footer-height:100px;--card-padding:var(--spacing-md);--card-border-radius:var(--border-radius-medium);}</style>
 <style>@font-face {font-family: 'BB Manual Mono Regular';src: url('/system/fonts/BBManualMonoProTX.22d272fc.ttf');}@font-face {font-family: 'BB Manual Mono SemiBold';src: url('/system/fonts/BBManualMonoProTX-SemiBold.otf');}</style>
-<style>*{box-sizing:border-box;margin:0;padding:0;font-family:var(--font-main);overscroll-behavior: none;scrollbar-width: none;} *::-webkit-scrollbar{display: none;} body{background-color:var(--background-color);color:var(--text-color);overflow:auto;}.media-container{position:fixed;top:0;left:0;width:100%;max-height:100%;max-width:100%;height:auto;overflow-y:auto;overflow-x:hidden;overscroll-behavior:none;scrollbar-width: none;padding-top:0;}.media-container::-webkit-scrollbar{display: none;} .media-container img,.media-container .media{width:100%;max-width:100%;height:auto;display:block;}.info-container{position:absolute;top:20px;left:20px;background:red;padding:10px 15px;border-radius:5px;display:none;}.info-container h2{margin-bottom:5px;font-size:22px;}.info-container p{font-size:16px;opacity:.8;}.nav-bar{position:fixed;bottom:90px;left:0;width:100%;max-width:100%;height:60px;background:transparent;display:flex;justify-content:space-around;align-items:center;padding:0;}@media screen and (min-width:45em) {.nav-bar {position: absolute;max-width:60%;top:80px;left:50%;transform: translateX(-50%);}.media-container {position: absolute;height:auto;max-height: none;}}.btn{background:transparent;border:none;padding:10px 20px;cursor:pointer;border-radius:0;}.btn svg{display:block;width:30px;color:#fff;}video{width:100%;height:auto;min-height:200px;background:#151b17;}.media .sound-icon{position:absolute;bottom:27px;right:27px;max-width:16px;height:auto;cursor:pointer;z-index:10;user-select:none;-webkit-user-select: none;}.sound-icon img {user-select: none;-webkit-user-drag: none;-webkit-user-select: none;max-width:16px;}button {touch-action: manipulation;}.play-btn,.spinner{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:5;display:none;user-select: none;-webkit-user-select: none;}.play-btn{width:100px;height:100px;border-radius:50%;background:url('https://khaliiil.com/static/media/undefined.svg') no-repeat center;background-size:contain;cursor:pointer;border: 2px solid #95a5a6;}.spinner {width: 56px;height: 56px;border-radius: 50%;border: 9px solid #4682B4;opacity:0.8;animation: spinner-bulqg1 0.8s infinite linear alternate, spinner-oaa3wk 1.6s infinite linear;margin: -30px 0 0 -30px;}@keyframes spinner-bulqg1 {0% {clip-path: polygon(50% 50%, 0 0, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%);}12.5% {clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 0%, 100% 0%, 100% 0%);}25% {clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 100%, 100% 100%, 100% 100%);}50% {clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%);}62.5% {clip-path: polygon(50% 50%, 100% 0, 100% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%);}75% {clip-path: polygon(50% 50%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 50% 100%, 0% 100%);}100% {clip-path: polygon(50% 50%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 0% 100%);}}@keyframes spinner-oaa3wk {0% {transform: scaleY(1) rotate(0deg);}49.99% {transform: scaleY(1) rotate(135deg);}50% {transform: scaleY(-1) rotate(0deg);}100% {transform: scaleY(-1) rotate(-135deg);}}.image {pointer-events: none;margin-bottom:160px;}.error-message {position: absolute;top:0;left:0;width:100%;height:100%;z-index:20;background: #151b17;font-family:Arial;display: none;}.media {position:relative;}.media-container iframe {width:100%;max-width:100%;height:300px;object-fit: none;border: none;}@media screen and (min-width:44em) {.media-container iframe {height:550px;}} </style>
-<style>.wh53f {color:var(--text-color);text-align: center;font-size:1.7rem;font-weight: 100;margin:0;padding:10px 30px;padding-top:100px;}.container {display: flex;flex-direction: column;gap:30px;}.container.image {pointer-events: none;width:100%;max-width:100%;height:auto;}.container .med {max-width:80%;width:100%;padding:0;margin:0;height:auto;}.container .med:nth-child(odd) {align-self: flex-end;}.container .med:nth-child(even) {align-self: flex-start;}.ri6 {display:flex;flex-direction:column;align-items:end;}.le6 {cursor: pointer;}</style>
-<style>.menutop {position: fixed;top:25px;left:50%;transform: translateX(-50%);width:100%;max-width:90%;display: flex;margin:0;padding:0;align-items: center;justify-content: space-around;z-index: var(--z-index-max);}.menutop a {color: var(--text-color);text-decoration: none;user-select: none;-webkit-user-select: none;font-size: 22px;} </style>
-<style>.menufooter {position: fixed;bottom: 0;left: 50%;transform: translateX(-50%);width:100%;max-width:90%;display: flex;align-items: end;justify-content: space-between;margin:0;padding:0;z-index: var(--z-index-max);}.menufooter a {color: var(--text-color);text-decoration: none;font-size:15px;padding:0 10px;margin: 0;padding-bottom:20px;user-select:none;-webkit-user-select:none;}.menufooter p {padding:0 10px;padding-bottom:20px;font-size:15px;} @media screen and (min-width:45em) {.menufooter a {font-size: 14px;}.menutop {max-width: 60%;}.menutop a {font-size: 20px;}} </style>
+<style>*{box-sizing:border-box;margin:0;padding:0;font-family:var(--font-main);color: var(--text-color);overflow-x: hidden;}body,html {background-color:var(--background-color);}  </style>
+<style>.mainj364f {margin:0 auto;padding:0;width:100%;max-width:100%;display: flex;flex-direction: column;align-items: center;} </style>
+<style>video {width:100%;max-width: 100%;min-width:99%;padding:0;margin:0;background-color: #151b17;} .media .sound-icon{position:absolute;bottom:27px;right:27px;max-width:16px;height:auto;cursor:pointer;z-index:10;user-select:none;-webkit-user-select: none;}.sound-icon img {user-select: none;-webkit-user-drag: none;-webkit-user-select: none;max-width:16px;}button {touch-action: manipulation;}.play-btn,.spinner{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:5;user-select: none;-webkit-user-select: none;}.play-btn{display: none;width:100px;height:100px;border-radius:50%;background:url('https://khaliiil.com/static/media/undefined.svg') no-repeat center;background-size:contain;cursor:pointer;border: 2px solid #95a5a6;}.spinner {width: 56px;height: 56px;border-radius: 50%;border: 9px solid #4682B4;opacity:0.8;animation: spinner-bulqg1 0.8s infinite linear alternate, spinner-oaa3wk 1.6s infinite linear;margin: -30px 0 0 -30px;}@keyframes spinner-bulqg1 {0% {clip-path: polygon(50% 50%, 0 0, 50% 0%, 50% 0%, 50% 0%, 50% 0%, 50% 0%);}12.5% {clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 0%, 100% 0%, 100% 0%);}25% {clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 100%, 100% 100%, 100% 100%);}50% {clip-path: polygon(50% 50%, 0 0, 50% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%);}62.5% {clip-path: polygon(50% 50%, 100% 0, 100% 0%, 100% 0%, 100% 100%, 50% 100%, 0% 100%);}75% {clip-path: polygon(50% 50%, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 50% 100%, 0% 100%);}100% {clip-path: polygon(50% 50%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 50% 100%, 0% 100%);}}@keyframes spinner-oaa3wk {0% {transform: scaleY(1) rotate(0deg);}49.99% {transform: scaleY(1) rotate(135deg);}50% {transform: scaleY(-1) rotate(0deg);}100% {transform: scaleY(-1) rotate(-135deg);}}.image {pointer-events: none;display: block;width:100%;max-width: 100%;user-select: none;-webkit-user-select: none;}.error-message {position: absolute;top:0;left:0;width:100%;height:100%;z-index:20;background: #151b17;font-family:Arial;display: none;}.media {position:relative;width:100%;max-width:100%;} .mainj364f a {width: 100%;max-width: 100%;color: transparent;text-decoration: none;user-select: none;-webkit-user-select: none;} iframe {width:100%;height:400px;border: none;display: block;} </style>
+<style>.nav,.footer {position: fixed;display:flex;padding:0;margin:0;width:100%;justify-content: space-around;z-index: var(--z-index-max);}.nav {align-items: center;max-width:90%;top:25px;left:50%;transform: translateX(-50%);}.nav a {color: var(--text-color);text-decoration: none;font-size: 22px;}.footer {left:0;max-width: 100%;bottom: 18px;align-items: end;}.footer a {color: var(--text-color);text-decoration: none;font-size:15px;}.footer p {padding: 0;margin: 0;font-size:15px;} .nav a,.footer a {user-select: none;-webkit-user-select: none;} </style>
 </head>
 <body>
-<div class="menutop"><a href="/">MUSIC</a><a href="/crt">CRT</a><a href="https://tour.khaliiil.com/">TOUR</a></div>
-<div class="menufooter"><a href="/terms-conditions">TERMS</a><p>&copy; 2025</p><a href="/privacy-policy">PRIVACY POLICY</a></div>
+<div class="nav">
+<a href="https://tour.khaliiil.com/">TOUR</a>
+</div>
+<div class="footer">
+<a href="/terms-conditions">TERMS</a>
+<p>&copy; 2025</p>
+<a href="/privacy-policy">PRIVACY</a>
+</div>
+<div class="mainj364f">
+<img src="https://github.com/Khalil2000web/Media/raw/refs/heads/main/Home/IMG_2135.jpeg" alt="Image" title="image:TALA_BDAY_01_" class="image" decoding="async" loading="lazy">
+<img src="https://github.com/Khalil2000web/Media/raw/refs/heads/main/Home/IMG_2119.jpeg" alt="Image" title="image:TALA_BDAY_02_" class="image" decoding="async" loading="lazy">
+<img src="https://github.com/Khalil2000web/Media/raw/refs/heads/main/Home/jdkfne83hdywmslqvo.heic" alt="Image" title="image:TALA_BDAY_03_" class="image" decoding="async" loading="lazy">
+<img src="https://github.com/Khalil2000web/Media/raw/refs/heads/main/Home/IMG_1881.jpeg" alt="Image" title="image:TALA_BDAY_04_" class="image" decoding="async" loading="lazy">
+<div class="media"><video src="https://ik.imagekit.io/ybebp19uwa/video-output-3D352C48-4625-4C5E-8DE0-3B4F22605B9C.mov" alt="Video" id="video:20240222TALA_BDAY_35YF43" controlsList="nofullscreen" autoplay loop muted playsinline></video><img src="/static/media/icon-mute.svg" class="sound-icon sound-off-icon" alt="Toggle Sound"><img src="/static/media/icon-volume.svg" style="display:none;" class="sound-icon sound-on-icon" alt="unmute"><div class="play-btn"></div><div class="spinner"></div><div class="error-message" style="display: none;"></div></div>
 
-<div class="media-container" id="media-container"></div><div class="info-container"><h2 id="media-title"></h2><p id="media-description"></p></div>
-<div class="nav-bar"><button class="btn" onclick="prevMedia()"><svg viewBox="4 0 22 22" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M18 4l-8 8 8 8" stroke="white" stroke-width="3" stroke-linejoin="miter"></path></svg></button><button class="btn" onclick="nextMedia()"><svg viewBox="-2 0 22 22" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M6 4l8 8-8 8" stroke="white" stroke-width="3" stroke-linejoin="miter"></path></svg></button></div>
-<script>const mediaItems=[{type:"image",src:"https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/Home/355F0843-EC33-4FDE-8DF3-05FAA45A90DE.jpeg",title:"image:20240217_CAT_CARTER_01_",description:"Cat Carter",alt:"Image",class:"image",target:null},{type:"image",src:"https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/Home/IMG_1497.jpeg",title:"image:20240215_AHMAD_05_",description:"Ahmad License",alt:"Image",class:"image",target:null},{type:"image",src:"https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/Home/IMG_1541.jpeg",title:"image:20240215_AHMAD_04_",description:"Ahmad License",alt:"Image",class:"image",target:null},{type:"image",src:"https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/Home/IMG_1552.jpeg",title:"image:20240215_AHMAD_03_",description:"Ahmad License",alt:"Image",class:"image",target:null},{type:"image",src:"https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/Home/8f3a92b7c6d14e5fa0d1b9e283f74c5a.jpeg",title:"Image:20240215_AHMAD_02_",description:"AHMAD DRIVING LICENSE",alt:"Image",class:"image",target:null},{type:"image",src:"https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/Home/IMG_1480.jpeg",title:"image:20240215_AHMAD_01_",description:"Ahmad License",alt:"Image",class:"image",target:null},{type:"iframe",src:"https://www.youtube.com/embed/uEyGYjlzbA0?autoplay=1&mute=1",title:"YouTube Video",description:"Embedded YouTube video.",class:"iframe-container",allowfullscreen:true},{type:"image",src:"https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/Home/GMP_U2F2ZUdIMDE%3D.gif",title:"Image:2024_TOUR_PAGE_",description:"TOUR 2024",alt:"Image",class:"image",target:"https://tour.khaliiil.com"},{type:"video",src:"https://github.com/Khalil2000web/Media/raw/refs/heads/main/Home/Video_homePage_2024Renaissancefilm.mov",poster:"",alt:"Video",title:"RENAISSANCE FILM 2023",id:"video:202435gccf_RENAISSANCE_FILM",description:"Me at the RENAISSANCE FILM BY BEYONCÉ 2023",class:null,target:null},{type:"iframe",src:"https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&mute=1",title:"YouTube Video",description:"Embedded YouTube video.",class:"iframe-container",allowfullscreen:true},{type:"image",src:"https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/Home/5a67e1ae-0c7b-494c-8440-3eb7d7f35ac9.jpeg",title:"image",description:"Khalil Kid",alt:"Image",class:"image",target:null}];let currentIndex=0;function updateMedia(){const e=document.getElementById("media-container");e.innerHTML="";const t=mediaItems[currentIndex];if("image"===t.type){const a=document.createElement("img");a.src=t.src,a.alt=t.alt,a.className=t.class||"",a.style.pointerEvents="none",t.target?(link=document.createElement("a"),link.href=t.target,link.target="_blank",link.appendChild(a),e.appendChild(link)):e.appendChild(a)}else if("video"===t.type){const a=document.createElement("div");a.className="media "+(t.class||""),a.innerHTML=`<video src="${t.src}" poster="${t.poster}" loop autoplay muted playsinline></video><img src="https://khaliiil.com/static/media/icon-mute.svg" style="max-width:16px" class="sound-icon sound-off-icon"><img src="https://khaliiil.com/static/media/icon-volume.svg" style="display:none;max-width:16px;" class="sound-icon sound-on-icon"><div class="play-btn"></div><div class="spinner" style="display:block;"></div><div class="error-message" style="display:none;flex-direction:column;gap:20px;padding:20px;"><h2 style="font-size:20px;font-family:Arial;">VIDEO COULD NOT LOAD</h2><span style="font-size:12px;font-family:Arial;color:#ccc;">The video is unavailable. This may be due to a network issue, an unsupported format, or missing permissions.<br><br>VIDEO ID: ${t.id}.</span><button style="cursor:pointer;max-width:150px;font-family:arial;font-weight:900;margin:0 auto;" class="retry-btn">Try Again</button></div>`,t.target&&(a.style.cursor="pointer",a.addEventListener("click",()=>{window.open(t.target,"_blank")})),e.appendChild(a),setupVideoPlayer()}else if("iframe"===t.type){const a=document.createElement("iframe");a.src=t.src,a.className=t.class||"",a.allowFullscreen=t.allowfullscreen||!0,e.appendChild(a)}updateButtons()}function setupVideoPlayer(){document.querySelectorAll(".media").forEach(e=>{const t=e.querySelector("video"),a=e.querySelector(".sound-off-icon"),n=e.querySelector(".sound-on-icon"),o=e.querySelector(".play-btn"),r=e.querySelector(".spinner"),l=e.querySelector(".error-message"),c=e.querySelector(".retry-btn");r.style.display="block",t.muted=!0,a.addEventListener("click",e=>{e.stopPropagation(),t.muted=!1,a.style.display="none",n.style.display="block"}),n.addEventListener("click",e=>{e.stopPropagation(),t.muted=!0,a.style.display="block",n.style.display="none"}),t.addEventListener("play",()=>{o.style.display="none",r.style.display="none"}),t.addEventListener("pause",()=>{o.style.display="block"}),o.addEventListener("click",e=>{e.stopPropagation(),t.paused?t.play():t.pause()}),t.addEventListener("waiting",()=>{r.style.display="block"}),t.addEventListener("playing",()=>{r.style.display="none"});let d;t.addEventListener("timeupdate",()=>{clearTimeout(d),r.style.display="none",d=setTimeout(()=>{t.paused||(r.style.display="block")},1e3)}),t.addEventListener("error",()=>{r.style.display="none",l.style.display="flex"}),c.addEventListener("click",e=>{e.stopPropagation(),l.style.display="none",r.style.display="block",t.load(),t.play()})})}function updateButtons(){const e=document.getElementById("prev-btn"),t=document.getElementById("next-btn");e&&t&&(e.style.pointerEvents=0===currentIndex?"none":"auto",e.style.opacity=0===currentIndex?".5":"1",t.style.pointerEvents=currentIndex===mediaItems.length-1?"none":"auto",t.style.opacity=currentIndex===mediaItems.length-1?".5":"1")}function nextMedia(){currentIndex<mediaItems.length-1&&(currentIndex++,reloadIframeIfNeeded(),updateMedia())}function prevMedia(){currentIndex>0&&(currentIndex--,reloadIframeIfNeeded(),updateMedia())}function reloadIframeIfNeeded(){const e=mediaItems[currentIndex];"iframe"===e.type&&(e.src=e.src)}document.addEventListener("DOMContentLoaded",()=>{updateMedia(),updateButtons()});</script>
-<script>document.addEventListener("copy",e=>{const s=window.getSelection();if(!s.rangeCount)return;const r=s.getRangeAt(0),i=r.commonAncestorContainer.querySelector?.("img");if(i){e.preventDefault();e.clipboardData.setData("text/plain",i.alt||"Image cannot be copied");}});</script>
+<img src="https://github.com/Khalil2000web/Media/raw/refs/heads/main/Home/pwlqnd59vbxmctueha.HEIC" alt="Image" title="image:TALA_BDAY_05_" class="image" decoding="async" loading="lazy">
+<img src="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/Home/355F0843-EC33-4FDE-8DF3-05FAA45A90DE.jpeg" alt="Image" title="image:_" class="image" decoding="async" loading="lazy">
+<img src="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/Home/IMG_1497.jpeg" alt="Image" title="image:_" class="image" decoding="async" loading="lazy">
+<img src="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/Home/IMG_1541.jpeg" alt="Image" title="image:_" class="image" decoding="async" loading="lazy">
+<iframe src="https://www.youtube.com/embed/uEyGYjlzbA0?autoplay=1&mute=1"></iframe>
+<img src="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/Home/IMG_1552.jpeg" alt="Image" title="image:_" class="image" decoding="async" loading="lazy">
+<img src="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/Home/8f3a92b7c6d14e5fa0d1b9e283f74c5a.jpeg" alt="Image" title="image:_" class="image" decoding="async" loading="lazy">
+<img src="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/Home/IMG_1480.jpeg" alt="Image" title="image:_" class="image" decoding="async" loading="lazy">
+<div class="media"><video src="https://github.com/Khalil2000web/Media/raw/refs/heads/main/Home/Video_homePage_2024Renaissancefilm.mov" alt="Video" id="video:202435gccf_RENAISSANCE_FILM" controlsList="nofullscreen" autoplay loop muted playsinline></video><img src="/static/media/icon-mute.svg" class="sound-icon sound-off-icon" alt="Toggle Sound"><img src="/static/media/icon-volume.svg" style="display:none;" class="sound-icon sound-on-icon" alt="unmute"><div class="play-btn"></div><div class="spinner"></div><div class="error-message" style="display: none;"></div></div>
+<a href="https://tour.khaliiil.com" rel="noopener noreferrer" target="_blank"><img src="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/Home/GMP_U2F2ZUdIMDE%3D.gif" alt="Image" title="image:_" class="image" decoding="async" loading="lazy"></a>
+<div class="media"><video src="https://ik.imagekit.io/xlretjwgk/Video_bday-videohomepagevideo20248920242992024.mov" poster="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/Home_media_image_gallery/IMG_1228.jpeg" alt="Video" controlsList="nofullscreen" autoplay loop muted playsinline></video><img src="/static/media/icon-mute.svg" class="sound-icon sound-off-icon" alt="Toggle Sound"><img src="/static/media/icon-volume.svg" style="display:none;" class="sound-icon sound-on-icon" alt="unmute"><div class="play-btn"></div><div class="spinner"></div><div class="error-message" style="display: none;"></div></div>
+<img src="https://raw.githubusercontent.com/Khalil2000web/Media/refs/heads/main/Home/5a67e1ae-0c7b-494c-8440-3eb7d7f35ac9.jpeg" alt="Image" title="image:_" class="image" decoding="async" loading="lazy">
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const mediaElements = document.querySelectorAll('.media');
+
+  const showSpinner = (spinner) => spinner && (spinner.style.display = 'block');
+  const hideSpinner = (spinner) => spinner && (spinner.style.display = 'none');
+
+  const handleVideoErrors = (video, spinner) => {
+    const errorContainer = document.createElement('div');
+    errorContainer.className = 'video-error';
+    errorContainer.style.cssText = `
+      display: none;
+      flex-direction: column;
+      gap: 20px;
+      padding: 20px;
+      position: absolute;
+      background: #151b17;
+      top:0;
+      left:0;
+      width:100%;
+      height:100%;
+      color: #fff;
+      z-index: 20;
+      text-align: left;
+    `;
+
+    errorContainer.innerHTML = `
+      <h2 style="font-size:20px;font-family:Arial;">VIDEO COULD NOT LOAD</h2>
+      <span style="font-size:12px;font-family:Arial;color:#ccc;">
+        The video is unavailable. This may be due to a network issue, an unsupported format, or missing permissions.<br><br>
+        VIDEO ID: ${video.id || 'N/A'}.
+      </span>
+      <button class="retry-btn" style="cursor:pointer;max-width:150px;font-family:Arial;color:blue;font-weight:900;margin:0 auto;">
+        Try Again
+      </button>
+    `;
+
+    video.parentElement.appendChild(errorContainer);
+
+    video.addEventListener('error', () => {
+      hideSpinner(spinner);
+      errorContainer.style.display = 'flex';
+    });
+
+    errorContainer.querySelector('.retry-btn').addEventListener('click', () => {
+      errorContainer.style.display = 'none';
+      showSpinner(spinner);
+      video.load();
+      video.play();
+    });
+  };
+
+  const isInViewport = (el) => {
+    const rect = el.getBoundingClientRect();
+    return rect.top < window.innerHeight && rect.bottom > 0;
+  };
+
+  const muteOutOfViewportVideos = () => {
+    mediaElements.forEach(media => {
+      const video = media.querySelector('video');
+      if (video && !isInViewport(video)) {
+        video.muted = true;
+        media.querySelector('.sound-off-icon')?.style.setProperty('display', 'block');
+        media.querySelector('.sound-on-icon')?.style.setProperty('display', 'none');
+      }
+    });
+  };
+
+  const muteOtherVideos = (currentVideo) => {
+    mediaElements.forEach(media => {
+      const video = media.querySelector('video');
+      const soundOffIcon = media.querySelector('.sound-off-icon');
+      const soundOnIcon = media.querySelector('.sound-on-icon');
+
+      if (video !== currentVideo && !video.muted) {
+        video.muted = true;
+        soundOffIcon.style.display = 'block';
+        soundOnIcon.style.display = 'none';
+        const iframes = document.querySelectorAll('iframe');
+        iframes.forEach(iframe => {
+          const src = iframe.src;
+          iframe.src = '';
+          iframe.src = src;
+        });
+      }
+    });
+  };
+
+  mediaElements.forEach(media => {
+    const video = media.querySelector('video');
+    const spinner = media.querySelector('.spinner');
+    const soundOffIcon = media.querySelector('.sound-off-icon');
+    const soundOnIcon = media.querySelector('.sound-on-icon');
+
+    if (!video) return;
+
+    handleVideoErrors(video, spinner);
+    showSpinner(spinner);
+
+    video.muted = true;
+    video.play();
+
+    // Ensure spinner shows whenever video is buffering or loading
+    video.addEventListener('playing', () => {
+      hideSpinner(spinner);  // Hide spinner once the video starts playing
+    });
+
+    // Show spinner on buffering (waiting, stalled, loadstart events)
+    video.addEventListener('waiting', () => showSpinner(spinner)); // When buffering starts
+    video.addEventListener('stalled', () => showSpinner(spinner)); // If the video stalls
+    video.addEventListener('loadstart', () => showSpinner(spinner)); // When the video starts loading
+
+    // Handle video mute behavior
+    if (soundOffIcon && soundOnIcon) {
+      soundOffIcon.addEventListener('click', () => {
+        video.muted = false;
+        soundOffIcon.style.display = 'none';
+        soundOnIcon.style.display = 'block';
+        muteOtherVideos(video); // Mute other videos
+        const iframes = document.querySelectorAll('iframe');
+        iframes.forEach(iframe => {
+          const src = iframe.src;
+          iframe.src = '';
+          iframe.src = src;
+        });
+      });
+
+      soundOnIcon.addEventListener('click', () => {
+        video.muted = true;
+        soundOffIcon.style.display = 'block';
+        soundOnIcon.style.display = 'none';
+        const iframes = document.querySelectorAll('iframe');
+        iframes.forEach(iframe => {
+          const src = iframe.src;
+          iframe.src = '';
+          iframe.src = src;
+        });
+      });
+    }
+  });
+
+  window.addEventListener('scroll', muteOutOfViewportVideos);
+  muteOutOfViewportVideos();
+});
+</script>
+
+<script>
+const iframes = document.querySelectorAll('iframe');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) {
+      const iframe = entry.target;
+      const src = iframe.src;
+      iframe.src = '';
+      iframe.src = src;
+    }
+  });
+}, { threshold: 0 });
+
+iframes.forEach(iframe => {
+  observer.observe(iframe);
+});
+</script>
 </body>
 </html>
