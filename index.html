@@ -299,5 +299,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 <script>document.addEventListener('DOMContentLoaded',()=>{const p=document.getElementById('prev-btn'),n=document.getElementById('next-btn'),c=document.querySelector('.close-btn'),s=b=>b.style.border='3px solid ';if(!localStorage.getItem('buttonClicked'))[p,n].forEach(b=>s(b+'#275c86')),s(c+'#fff');const h=()=>{[p,n,c].forEach(b=>s(b+'transparent')),localStorage.setItem('buttonClicked','true');};[p,n,c].forEach(b=>b.addEventListener('click',h));});</script>
+<script>document.addEventListener("copy",e=>{const s=window.getSelection();if(!s.rangeCount)return;const r=s.getRangeAt(0),i=r.commonAncestorContainer.querySelector?.("img");if(i){e.preventDefault();e.clipboardData.setData("text/plain",i.alt||"Image cannot be copied");}});</script>
 </body>
 </html>
