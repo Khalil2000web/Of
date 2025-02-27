@@ -89,8 +89,6 @@ document.addEventListener("DOMContentLoaded", function () {
       const video = media.querySelector("video");
       if (video && video !== exceptVideo) {
         video.muted = true;
-        video.pause();
-        video.load();
         media.querySelector(".sound-off-icon")?.style.setProperty("display", "block");
         media.querySelector(".sound-on-icon")?.style.setProperty("display", "none");
       }
@@ -99,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function openOverlay(index) {
     disableScroll();
-    muteAllVideosExcept(); // Mute all non-overlay videos
+    muteAllVideosExcept();
     currentIndex = index;
     const clonedMedia = mediaElements[currentIndex].cloneNode(true);
     overlayContent.innerHTML = "";
@@ -166,14 +164,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     enableScroll();
 
-    // Mute or pause the overlay video when closing
+    // Mute and reload **only** when closing overlay
     if (currentOverlayVideo) {
       currentOverlayVideo.muted = true;
       currentOverlayVideo.pause();
+      currentOverlayVideo.load(); // Reload video on close
       currentOverlayVideo = null;
     }
 
-    // Replay and reload src for non-overlay videos
+    // Replay and reload only when overlay is closed
     mediaElements.forEach((media) => {
       const video = media.querySelector("video");
       if (video) {
@@ -216,10 +215,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (soundOffIcon && soundOnIcon) {
         soundOffIcon.addEventListener("click", () => {
-          muteAllVideosExcept(video);
           video.muted = false;
           soundOffIcon.style.display = "none";
           soundOnIcon.style.display = "block";
+          muteAllVideosExcept(video);
         });
 
         soundOnIcon.addEventListener("click", () => {
