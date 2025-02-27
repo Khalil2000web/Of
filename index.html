@@ -84,8 +84,22 @@ document.addEventListener("DOMContentLoaded", function () {
       currentIndex === mediaElements.length - 1 ? "none" : "";
   }
 
+  function muteAllVideosExcept(exceptVideo = null) {
+    mediaElements.forEach((media) => {
+      const video = media.querySelector("video");
+      if (video && video !== exceptVideo) {
+        video.muted = true;
+        video.pause();
+        video.load();
+        media.querySelector(".sound-off-icon")?.style.setProperty("display", "block");
+        media.querySelector(".sound-on-icon")?.style.setProperty("display", "none");
+      }
+    });
+  }
+
   function openOverlay(index) {
     disableScroll();
+    muteAllVideosExcept(); // Mute all non-overlay videos
     currentIndex = index;
     const clonedMedia = mediaElements[currentIndex].cloneNode(true);
     overlayContent.innerHTML = "";
@@ -125,7 +139,7 @@ document.addEventListener("DOMContentLoaded", function () {
           clonedVideo.muted = false;
           soundOffIcon.style.display = "none";
           soundOnIcon.style.display = "block";
-          muteOtherVideos(clonedVideo);
+          muteAllVideosExcept(clonedVideo);
         });
 
         soundOnIcon.addEventListener("click", () => {
@@ -151,10 +165,23 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 90);
 
     enableScroll();
+
+    // Mute or pause the overlay video when closing
     if (currentOverlayVideo) {
       currentOverlayVideo.muted = true;
+      currentOverlayVideo.pause();
       currentOverlayVideo = null;
     }
+
+    // Replay and reload src for non-overlay videos
+    mediaElements.forEach((media) => {
+      const video = media.querySelector("video");
+      if (video) {
+        video.muted = true;
+        video.load();
+        video.play();
+      }
+    });
   }
 
   closeButton.addEventListener("click", closeOverlay);
@@ -189,7 +216,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (soundOffIcon && soundOnIcon) {
         soundOffIcon.addEventListener("click", () => {
-          muteOtherVideos(video);
+          muteAllVideosExcept(video);
           video.muted = false;
           soundOffIcon.style.display = "none";
           soundOnIcon.style.display = "block";
@@ -267,35 +294,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  function muteOtherVideos(currentVideo) {
-    mediaElements.forEach((media) => {
-      const video = media.querySelector("video");
-      if (video && video !== currentVideo && !video.muted) {
-        video.muted = true;
-        media.querySelector(".sound-off-icon")?.style.setProperty("display", "block");
-        media.querySelector(".sound-on-icon")?.style.setProperty("display", "none");
-      }
-    });
-  }
-
-  function isInViewport(el) {
-    const rect = el.getBoundingClientRect();
-    return rect.top < window.innerHeight && rect.bottom > 0;
-  }
-
-  function muteOutOfViewportVideos() {
-    mediaElements.forEach((media) => {
-      const video = media.querySelector("video");
-      if (video && !isInViewport(video)) {
-        video.muted = true;
-        media.querySelector(".sound-off-icon")?.style.setProperty("display", "block");
-        media.querySelector(".sound-on-icon")?.style.setProperty("display", "none");
-      }
-    });
-  }
-
-  window.addEventListener("scroll", muteOutOfViewportVideos);
-  muteOutOfViewportVideos();
+  window.addEventListener("scroll", muteAllVideosExcept);
 });
 </script>
 <script>document.addEventListener('DOMContentLoaded',()=>{const p=document.getElementById('prev-btn'),n=document.getElementById('next-btn'),c=document.querySelector('.close-btn'),s=b=>b.style.border='3px solid ';if(!localStorage.getItem('buttonClicked'))[p,n].forEach(b=>s(b+'#275c86')),s(c+'#fff');const h=()=>{[p,n,c].forEach(b=>s(b+'transparent')),localStorage.setItem('buttonClicked','true');};[p,n,c].forEach(b=>b.addEventListener('click',h));});</script>
