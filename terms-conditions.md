@@ -4,6 +4,7 @@ title: Terms & Conditions
 permalink: /terms-conditions/
 ---
 
+<div class="main5">
 <h2>TERMS & CONDITIONS</h2>
 <p>LAST UPDATED: MARCH 3, 2025</p>
 <p>INTRODUCTION</p>
@@ -59,4 +60,5 @@ permalink: /terms-conditions/
 <p>For any inquiries regarding these Terms, users may contact the Owner at help@khaliiil.com.</p>
 <p>ACCEPTANCE OF TERMS</p>
 <p>By accessing and using this Site, including any subdomains, you confirm that you have read, understood, and agree to comply with these Terms and Conditions.</p>
+</div>
 </main>
