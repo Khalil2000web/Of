@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Home
+title: Khalil
 ---
 
 <div class="gallery">
