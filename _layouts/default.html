@@ -26,6 +26,11 @@
 <link rel="stylesheet" href="{{ '/static/css/index.css' | relative_url }}">
 <script src="https://cdn.jsdelivr.net/gh/Khalil2000web/Of@main/static/js/vid25.js"></script>
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/Khalil2000web/Of@main/static/js/vid25.js" as="script">
+<script>
+  document.addEventListener("turbo:before-fetch-request", (event) => {
+    event.detail.fetchOptions.headers["Turbo-Progress-Bar"] = "false";
+  });
+</script>
 </head>
 <body>
 <header>
