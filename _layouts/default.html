@@ -26,9 +26,11 @@
 <link rel="stylesheet" href="{{ '/static/css/index.css' | relative_url }}">
 <script src="https://cdn.jsdelivr.net/gh/Khalil2000web/Of@main/static/js/vid25.js"></script>
 <link rel="preload" href="https://cdn.jsdelivr.net/gh/Khalil2000web/Of@main/static/js/vid25.js" as="script">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
 <script>
-  document.addEventListener("turbo:before-fetch-request", (event) => {
-    event.detail.fetchOptions.headers["Turbo-Progress-Bar"] = "false";
+  $(document).ready(function() {
+    $(document).pjax('a', 'main', { fragment: 'main', timeout: 5000 });
   });
 </script>
 </head>
