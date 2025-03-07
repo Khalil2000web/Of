@@ -7,7 +7,7 @@ permalink: /crt/
 {% assign crt_url = "/crt" %}
 {% if page.url == crt_url %}
   <style>
-    nav a[href="{{ crt_url }}"] {
+    header a[href="{{ crt_url }}"] {
       display: none;
     }
   </style>
