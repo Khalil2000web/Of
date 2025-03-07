@@ -7,6 +7,7 @@ title: Khalil
 
 <div class="gallery">
 <a rel="noopener noreferrer" style="padding-top:40px;"><img src="https://github.com/Khalil2000web/Media/raw/refs/heads/main/Home/B63DHGRD29ONEN5T6EXB.jpeg" class="image" alt="Image" loading="lazy" decoding="async"></a>
+<a rel="noopener noreferrer"><img src="https://github.com/Khalil2000web/Media/raw/refs/heads/main/Home/IMG_7099.jpeg" class="image" alt="Image" loading="lazy" decoding="async"></a>
 <a rel="noopener noreferrer"><img src="https://github.com/Khalil2000web/Media/raw/refs/heads/main/Home/IMG_2119.jpeg" class="image" alt="Image" loading="lazy" decoding="async"></a>
 <a rel="noopener noreferrer"><img src="https://github.com/Khalil2000web/Media/raw/refs/heads/main/Home/jdkfne83hdywmslqvo.heic" class="image" alt="Image" loading="lazy" decoding="async"></a>
 <a rel="noopener noreferrer"><img src="https://github.com/Khalil2000web/Media/raw/refs/heads/main/Home/IMG_1881.jpeg" class="image" alt="Image" loading="lazy" decoding="async"></a>
