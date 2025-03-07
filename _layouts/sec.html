@@ -24,9 +24,11 @@
 <style>header {position: fixed;top:22px;width:100%;max-width:90%;left:50%;transform: translateX(-50%);display: flex;align-items:center;justify-content: space-around;z-index:1000;}header a {color:var(--text-color);text-decoration: none;font-size:22px;}@media screen and (min-width:44em) {header {max-width: 60%;}header a {font-size:20px;}} </style>
 <style>.footer {position: fixed;z-index:1000;bottom:0;left:50%;transform: translateX(-50%);width:100%;max-width:80%;display: flex;align-items: end;justify-content: space-around;}.footer a {color: var(--text-color);text-decoration: none;font-size:15px;padding-bottom: 18px;}.footer p {padding:0;margin:0;font-size:15px;padding-bottom:18px;} @media screen and (min-width:44em) {.footer{max-width:50%;}.footer a,.footer p {font-size:14px;}} </style>
 <link rel="stylesheet" href="{{ '/static/css/pol.css' | relative_url }}">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
 <script>
-  document.addEventListener("turbo:before-fetch-request", (event) => {
-    event.detail.fetchOptions.headers["Turbo-Progress-Bar"] = "false";
+  $(document).ready(function() {
+    $(document).pjax('a', 'main', { fragment: 'main', timeout: 5000 });
   });
 </script>
 </head>
