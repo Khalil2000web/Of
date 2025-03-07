@@ -4,6 +4,8 @@ title: Khalil
 permalink: /privacy-policy/
 ---
 
+<style>.main5 {width:100%;max-width:83%;padding:0;margin:0 auto;padding-top:90px;padding-bottom: 150px;line-height: 1.8;}.main5 h2 {font-weight: 100;font-family: var(--font-main-bold);padding-bottom:40px;padding-top:40px;text-align: center;letter-spacing: 1px;}.main5 p {text-transform: uppercase;font-size:14px;padding:0;margin:0;text-align: left;line-height:1.8;}.main5 li {text-transform: uppercase;font-size:14px;text-align: left;line-height: 1.8;}.main5 a {color: var(--text-color);} </style>
+
 <div class="main5">
 <h2>PRIVACY POLICY</h2>
 <p>EFFECTIVE DATE: MARCH 3, 2025</p>
