@@ -1,6 +1,6 @@
 ---
 layout: sec
-title: Terms & Conditions
+title: Khalil
 permalink: /terms-conditions/
 ---
 
