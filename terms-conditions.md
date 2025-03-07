@@ -61,4 +61,3 @@ permalink: /terms-conditions/
 <p>ACCEPTANCE OF TERMS</p>
 <p>By accessing and using this Site, including any subdomains, you confirm that you have read, understood, and agree to comply with these Terms and Conditions.</p>
 </div>
-</main>
