@@ -43,5 +43,12 @@
 <p>&copy; 2025</p>
 <a href="/privacy-policy">PRIVACY</a>
 </div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
+<script>
+  $(document).ready(function() {
+    $(document).pjax('a', 'main', { fragment: 'main', timeout: 5000 });
+  });
+</script>
 </body>
 </html>
