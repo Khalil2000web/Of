@@ -1,6 +1,6 @@
 ---
 layout: sec
-title: Privacy Policy
+title: Khalil
 permalink: /privacy-policy/
 ---
 
