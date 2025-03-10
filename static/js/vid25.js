@@ -76,16 +76,7 @@ document.addEventListener("DOMContentLoaded", function () {
       text-align: left;
     `;
 
-    errorContainer.innerHTML = `
-      <h2 style="font-size:20px;font-family:Arial;padding-left:20px;padding-top:20px;">VIDEO COULD NOT LOAD</h2>
-      <span style="font-size:12px;font-family:Arial;color:#ccc;padding-left:20px;">
-        The video is unavailable. This may be due to a network issue, an unsupported format, or missing permissions.<br><br>
-        VIDEO ID: ${video.id || "N/A"}.
-      </span>
-      <button class="retry-btn" style="cursor:pointer;max-width:150px;font-family:Arial;color:blue;font-weight:900;margin:0 auto;">
-        Try Again
-      </button>
-    `;
+    errorContainer.innerHTML = `<h2 style="font-size:20px;font-family:Arial;padding-left:20px;padding-top:20px;">VIDEO COULD NOT LOAD</h2><span style="font-size:12px;font-family:Arial;color:#ccc;padding-left:20px;">The video is unavailable. This may be due to a network issue, an unsupported format, or missing permissions.<br><br>VIDEO ID: ${video.id || "N/A"}.</span><button class="retry-btn" style="cursor:pointer;max-width:150px;font-family:Arial;color:blue;font-weight:900;margin:0 auto;">Try Again</button>`;
 
     video.parentElement.appendChild(errorContainer);
 
