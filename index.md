@@ -3,6 +3,10 @@ layout: default
 title: Khalil
 ---
 
+{% if page.url == "/" %}
+<style>header a[href="/"] {display: none;}</style>
+{% endif %}
+
 <div class="gallery">
 <a rel="noopener noreferrer"><img src="https://github.com/Khalil2000web/Media/raw/refs/heads/main/Home/B63DHGRD29ONEN5T6EXB.jpeg" class="image" alt="Image" loading="lazy" decoding="async"><div class="overlay">RAMADAN MARCH 2025</div></a>
 <a rel="noopener noreferrer"><img src="https://pub-19025506a9754f36baa46a24e6f84719.r2.dev/IMG_7099.jpeg" class="image" alt="Image" loading="lazy" decoding="async"><div class="overlay">RAMADAN MARCH 2025</div></a>
