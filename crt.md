@@ -1,5 +1,5 @@
 ---
-layout: sec
+layout: default
 title: Khalil
 permalink: /crt/
 ---
