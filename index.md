@@ -8,7 +8,7 @@ title: Khalil
 {% endif %}
 
 <div class="gallery">
-<a rel="noopener noreferrer"><img src="https://pub-19025506a9754f36baa46a24e6f84719.r2.dev/photo-output.jpeg" class="image" alt="Image" loading="lazy" decoding="async"><div class="overlay">RAMADAN MARCH 2025</div></a>
+<a rel="noopener noreferrer"><img src="https://pub-19025506a9754f36baa46a24e6f84719.r2.dev/photo-output.jpeg" class="image" alt="Image" loading="lazy" decoding="async"><div class="overlay">RAMADAN 2025</div></a>
 <a rel="noopener noreferrer"><img src="https://pub-19025506a9754f36baa46a24e6f84719.r2.dev/IMG_7099.jpeg" class="image" alt="Image" loading="lazy" decoding="async"><div class="overlay">RAMADAN MARCH 2025</div></a>
 <a rel="noopener noreferrer"><img src="https://github.com/Khalil2000web/Media/raw/refs/heads/main/Home/IMG_2119.jpeg" class="image" alt="Image" loading="lazy" decoding="async"><div class="overlay">TALA BORNDAY PARTY 2025</div></a>
 <a rel="noopener noreferrer"><img src="https://github.com/Khalil2000web/Media/raw/refs/heads/main/Home/jdkfne83hdywmslqvo.heic" class="image" alt="Image" loading="lazy" decoding="async"><div class="overlay">TALA BORNDAY PARTY 2025</div></a>
