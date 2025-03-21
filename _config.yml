@@ -1,2 +1,5 @@
-url: "https://khaliiil.com"
-baseurl: ""
+url: "https://khaliiil.com"   # This is your site's base URL
+baseurl: ""                  # If your site is in the root directory, leave this empty
+
+plugins:
+  - jekyll-redirect-from      # This enables the redirect plugin
