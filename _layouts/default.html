@@ -42,8 +42,9 @@
 {{ content }}
 </main>
 <div class="footer">
+<a href="/join">JOIN</a>
 <a href="/terms-conditions">TERMS</a>
-<p>&copy; 2025</p>
+<p style="display:none;">&copy; 2025</p>
 <a href="/privacy-policy">PRIVACY</a>
 </div>
 <script>document.querySelectorAll('.gallery a').forEach(link => { link.addEventListener('touchstart', () => { document.querySelectorAll('.overlay').forEach(o => o.style.opacity = '0'); link.querySelector('.overlay').style.opacity = '1'; }); link.addEventListener('mouseenter', () => { document.querySelectorAll('.overlay').forEach(o => o.style.opacity = '0'); link.querySelector('.overlay').style.opacity = '1'; }); }); document.addEventListener('touchstart', e => { if (!e.target.closest('.gallery a')) document.querySelectorAll('.overlay').forEach(o => o.style.opacity = '0'); });</script>
