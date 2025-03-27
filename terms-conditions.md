@@ -3,7 +3,7 @@ layout: default
 title: Khalil
 author: "Khalil"
 date: 2024-05-11 10:00:00
-last_modified_at: 2025-03-3 10:30:00
+last_modified_at: 2025-03-27 10:30:00
 permalink: /terms-conditions/
 published: true
 css:
@@ -12,7 +12,7 @@ css:
 
 <div class="main5">
 <h2>TERMS & CONDITIONS</h2>
-<p>LAST UPDATED: MARCH 3, 2025</p>
+<p>LAST UPDATED: MARCH 27, 2025</p>
 <p>INTRODUCTION</p>
 <p>Welcome to KHALIIIL.COM (hereinafter referred to as “the Site”), including all associated subdomains. By accessing, browsing, or utilizing this Site and its subdomains, you (the “User”) acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions (“Terms”). If you do not agree with any part of these Terms, you are prohibited from using the Site or any of its subdomains.</p>
 <p>1. ACCEPTANCE OF TERMS</p>
