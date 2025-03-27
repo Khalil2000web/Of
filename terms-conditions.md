@@ -10,7 +10,7 @@ css:
   - /static/css/policies.css
 ---
 {% if page.url == "/terms-conditions/" %}
-<style> header a[href="/terms-conditions"]{border-top:1px solid #ccc;color:#ccc;} </style>
+<style> footer a[href="/terms-conditions"]{border-top:1px solid #ccc;color:#ccc;} </style>
 {% endif %}
 <div class="main5">
 <h2>TERMS & CONDITIONS</h2>
