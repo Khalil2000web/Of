@@ -12,7 +12,7 @@ css:
 
 <div class="main5">
 <h2>PRIVACY POLICY</h2>
-<p>EFFECTIVE DATE: MARCH 3, 2025</p>
+<p>EFFECTIVE DATE: MARCH 27, 2025</p>
 <p>1. INTRODUCTION</p>
 <p>Welcome to KHALIIIL.COM (the “Site”). We respect your privacy and are committed to ensuring transparency about how our website functions. This Privacy Policy outlines how the Site operates concerning user data and any third-party services used.</p>
 <p>Since we do not collect, process, or store personal data from visitors, this Privacy Policy serves to clarify the scope of our data usage and protection practices.</p>
@@ -43,4 +43,13 @@ css:
 </ul>
 <p>7. ACCEPTANCE OF PRIVACY POLICY</p>
 <p>By using this Site, you acknowledge that you have read and understood this Privacy Policy. If you do not agree to this policy, please discontinue use of the Site.</p>
+
+<p>8. NEWSLETTER SIGN-UP AND DATA COLLECTION VIA FORMSPREE</p>
+<p>8.1 Email Subscription Form</p>
+<p>The site provides a newsletter sign-up form where you may submit your email address to receive updates about site news, promotions, and other information related to Khaliiil.com. The form is hosted by Formspree.io, a third-party service used to collect your email and send you communications.</p>
+<p>8.2 Third-Party Privacy</p>
+<p>When you submit your email address through the newsletter form, it is processed and stored by Formspree.io. We recommend reviewing Formspree’s privacy policy to understand how they handle your data. The link to their privacy policy can be found here: Formspree Privacy Policy.</p>
+<p>8.3 Data Usage</p>
+<p>Your email address will only be used to send you the newsletter and updates. We do not share or sell your email address with any third parties. You can unsubscribe from the newsletter at any time using the “unsubscribe” link provided in the emails.</p>
+
 </div>
