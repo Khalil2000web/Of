@@ -1,6 +1,7 @@
 ---
 layout: over
 title: Khalil
+published: false
 ---
 
 <div class="media-grid">
