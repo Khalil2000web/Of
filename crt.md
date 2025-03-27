@@ -2,11 +2,12 @@
 layout: default
 title: Khalil
 permalink: /crt/
+published: false
 ---
 
 {% if page.url == "/crt/" %}
 <style>
-  header a[href="/crt"], header a[href="/crt/"] {
+  header a[href="/crt"]{
     display: none;
   }
 </style>
