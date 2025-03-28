@@ -22,7 +22,7 @@ css:
 <p>2.2. Third-Party Services (JSDelivr CDN and Formspree)</p>
 <p>While we do not collect personal data, our Site uses third-party services to enhance its functionality and performance.</p>
 <ul>
-<li>JSDelivr: We use JSDelivr as a Content Delivery Network (CDN) to optimize website performance by serving static files (such as JavaScript and CSS files). JSDelivr may collect anonymized usage data as per their own privacy policy. We recommend reviewing JSDelivr’s Privacy Policy to understand how they process data: <a href="https://www.jsdelivr.com/terms">JSDelivr Privacy Policy</a>.</li>
+<li>JSDelivr: We use JSDelivr as a Content Delivery Network (CDN) to optimize website performance by serving static files (such as JavaScript and CSS files). JSDelivr may collect anonymized usage data as per their own privacy policy. We recommend reviewing JSDelivr’s Privacy Policy to understand how they process data: <a href="https://www.jsdelivr.com/terms/privacy-policy">JSDelivr Privacy Policy</a>.</li>
 <li>Formspree: The newsletter sign-up form on our Site uses Formspree.io, a third-party service that collects and processes your email address. We recommend reviewing Formspree’s Privacy Policy to understand how they handle your data: <a href="https://formspree.io/legal/privacy-policy/">formspree Privacy Policy</a>.</li>
 </ul>
 <p>3. DATA SECURITY AND THIRD-PARTY INTERACTIONS</p>
