@@ -11,11 +11,6 @@ css:
 js:
   - /static/js/reviews.js
 ---
-
-{% if page.url == "/reviews/" %}
-<style>header a[href="/reviews"] {display: none;}</style>
-{% endif %}
-
 <div class="movie-list">
 <div class="movie-row" onclick="openModal('Cassandra', 'A family moves into the oldest smart home in Germany, decades after the original owner dies; the AI household helper awakens, and is resolved to never be alone again', 'Mind-blowing!', 'Language: German / First episode date: February 6&#44; 2025 &lpar;Germany&rpar; / Final episode date: February 6&#44; 2025 / Genres: Thriller&#44; Fiction&#44; Soap opera&#44; Drama / Network: Netflix / Program creator: Benjamin Gutsche', '© 2025. All rights belong to their respective owners. This website is a personal review page and does not claim ownership of any copyrighted material.', this)">
 <img src="https://pub-19025506a9754f36baa46a24e6f84719.r2.dev/IMG_7940.jpeg" class="movie-poster" alt="Inception">
