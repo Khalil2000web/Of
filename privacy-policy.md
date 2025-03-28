@@ -14,39 +14,38 @@ css:
 <h2>PRIVACY POLICY</h2>
 <p>EFFECTIVE DATE: MARCH 27, 2025</p>
 <p>1. INTRODUCTION</p>
-<p>Welcome to KHALIIIL.COM (the “Site”). We respect your privacy and are committed to ensuring transparency about how our website functions. This Privacy Policy outlines how the Site operates concerning user data and any third-party services used.</p>
-<p>Since we do not collect, process, or store personal data from visitors, this Privacy Policy serves to clarify the scope of our data usage and protection practices.</p>
+<p>WELCOME TO KHALIIIL.COM (THE “SITE”). WE RESPECT YOUR PRIVACY AND ARE COMMITTED TO ENSURING TRANSPARENCY ABOUT HOW OUR WEBSITE FUNCTIONS. THIS PRIVACY POLICY OUTLINES HOW THE SITE OPERATES CONCERNING USER DATA AND ANY THIRD-PARTY SERVICES USED. SINCE WE DO NOT COLLECT, PROCESS, OR STORE PERSONAL DATA FROM VISITORS, THIS PRIVACY POLICY SERVES TO CLARIFY THE SCOPE OF OUR DATA USAGE AND PROTECTION PRACTICES.</p>
 <p>2. DATA COLLECTION PRACTICES</p>
-<p>2.1. No Personal Data Collection (Except for Newsletter)</p>
-<p>We generally do not collect, process, or store any personal data from visitors. However, in specific cases, such as when you voluntarily subscribe to our newsletter, we collect your email address.</p>
-<p>2.2. Third-Party Services (JSDelivr CDN and Formspree)</p>
-<p>While we do not collect personal data, our Site uses third-party services to enhance its functionality and performance.</p>
+<p>2.1. NO PERSONAL DATA COLLECTION (EXCEPT FOR NEWSLETTER)</p>
+<p>WE GENERALLY DO NOT COLLECT, PROCESS, OR STORE ANY PERSONAL DATA FROM VISITORS. HOWEVER, IN SPECIFIC CASES, SUCH AS WHEN YOU VOLUNTARILY SUBSCRIBE TO OUR NEWSLETTER, WE COLLECT YOUR EMAIL ADDRESS.</p>
+<p>2.2. THIRD-PARTY SERVICES (JSDELIVR CDN AND FORMSPREE)</p>
+<p>WHILE WE DO NOT COLLECT PERSONAL DATA, OUR SITE USES THIRD-PARTY SERVICES TO ENHANCE ITS FUNCTIONALITY AND PERFORMANCE.</p>
 <ul>
-<li>JSDelivr: We use JSDelivr as a Content Delivery Network (CDN) to optimize website performance by serving static files (such as JavaScript and CSS files). JSDelivr may collect anonymized usage data as per their own privacy policy. We recommend reviewing JSDelivr’s Privacy Policy to understand how they process data: <a href="https://www.jsdelivr.com/terms/privacy-policy">JSDelivr Privacy Policy</a>.</li>
-<li>Formspree: The newsletter sign-up form on our Site uses Formspree.io, a third-party service that collects and processes your email address. We recommend reviewing Formspree’s Privacy Policy to understand how they handle your data: <a href="https://formspree.io/legal/privacy-policy/">formspree Privacy Policy</a>.</li>
+<li>JSDELIVR: WE USE JSDELIVR AS A CONTENT DELIVERY NETWORK (CDN) TO OPTIMIZE WEBSITE PERFORMANCE BY SERVING STATIC FILES (SUCH AS JAVASCRIPT AND CSS FILES). JSDELIVR MAY COLLECT ANONYMIZED USAGE DATA AS PER THEIR OWN PRIVACY POLICY. WE RECOMMEND REVIEWING JSDELIVR’S PRIVACY POLICY TO UNDERSTAND HOW THEY PROCESS DATA: <a href="https://www.jsdelivr.com/terms/privacy-policy">JSDELIVER PRIVACY POLICY</a>.</li>
+<li>FORMSPREE: THE NEWSLETTER SIGN-UP FORM ON OUR SITE USES FORMSPREE.IO, A THIRD-PARTY SERVICE THAT COLLECTS AND PROCESSES YOUR EMAIL ADDRESS. WE RECOMMEND REVIEWING FORMSPREE’S PRIVACY POLICY TO UNDERSTAND HOW THEY HANDLE YOUR DATA: <a href="https://formspree.io/legal/privacy-policy/">FORMSPREE PRIVACY POLICY</a>.</li>
 </ul>
 <p>3. DATA SECURITY AND THIRD-PARTY INTERACTIONS</p>
-<p>3.1. No User Data Storage</p>
-<p>Since we do not collect personal data, there is no risk of user data breaches from our Site.</p>
-<p>3.2. External Links and Third-Party Websites</p>
-<p>Our Site may contain links to external websites. Please note that once you leave our Site and access third-party platforms, their respective privacy policies and terms will govern your interactions with them. We are not responsible for the data collection or privacy practices of any external sites.</p>
+<p>3.1. NO USER DATA STORAGE</p>
+<p>SINCE WE DO NOT COLLECT PERSONAL DATA, THERE IS NO RISK OF USER DATA BREACHES FROM OUR SITE.</p>
+<p>3.2. EXTERNAL LINKS AND THIRD-PARTY WEBSITES</p>
+<p>OUR SITE MAY CONTAIN LINKS TO EXTERNAL WEBSITES. PLEASE NOTE THAT ONCE YOU LEAVE OUR SITE AND ACCESS THIRD-PARTY PLATFORMS, THEIR RESPECTIVE PRIVACY POLICIES AND TERMS WILL GOVERN YOUR INTERACTIONS WITH THEM. WE ARE NOT RESPONSIBLE FOR THE DATA COLLECTION OR PRIVACY PRACTICES OF ANY EXTERNAL SITES.</p>
 <p>4. AGE RESTRICTIONS</p>
-<p>This Site is accessible to all users, but it is not intended for use by children under the age of 10. Since we do not collect personal data, we do not knowingly collect information from minors. If you believe a child has provided personal data through an external link, we encourage you to contact the respective third-party service directly.</p>
+<p>THIS SITE IS ACCESSIBLE TO ALL USERS, BUT IT IS NOT INTENDED FOR USE BY CHILDREN UNDER THE AGE OF 10. SINCE WE DO NOT COLLECT PERSONAL DATA, WE DO NOT KNOWINGLY COLLECT INFORMATION FROM MINORS. IF YOU BELIEVE A CHILD HAS PROVIDED PERSONAL DATA THROUGH AN EXTERNAL LINK, WE ENCOURAGE YOU TO CONTACT THE RESPECTIVE THIRD-PARTY SERVICE DIRECTLY.</p>
 <p>5. CHANGES TO THIS PRIVACY POLICY</p>
-<p>We reserve the right to update this Privacy Policy periodically to reflect changes in technology, legal requirements, or website functionality. Any modifications will be posted on this page, and the “Effective Date” at the top will be updated accordingly.</p>
+<p>WE RESERVE THE RIGHT TO UPDATE THIS PRIVACY POLICY PERIODICALLY TO REFLECT CHANGES IN TECHNOLOGY, LEGAL REQUIREMENTS, OR WEBSITE FUNCTIONALITY. ANY MODIFICATIONS WILL BE POSTED ON THIS PAGE, AND THE “EFFECTIVE DATE” AT THE TOP WILL BE UPDATED ACCORDINGLY.</p>
 <p>6. CONTACT INFORMATION</p>
-<p>For any questions regarding this Privacy Policy, please contact us at:</p>
+<p>FOR ANY QUESTIONS REGARDING THIS PRIVACY POLICY, PLEASE CONTACT US AT:</p>
 <ul>
-<li>Email: <a href="mailto:help@khaliiil.com">help@khaliiil.com</a></li>
-<li>Website: <a href="/">www.khaliiil.com</a></li>
+<li>EMAIL: <a href="mailto:help@khaliiil.com">HELP@KHALIIIL.COM</a></li>
+<li>WEBSITE: <a href="/">www.khaliiil.com</a></li>
 </ul>
 <p>7. ACCEPTANCE OF PRIVACY POLICY</p>
-<p>By using this Site, you acknowledge that you have read and understood this Privacy Policy. If you do not agree to this policy, please discontinue use of the Site.</p>
+<p>BY USING THIS SITE, YOU ACKNOWLEDGE THAT YOU HAVE READ AND UNDERSTOOD THIS PRIVACY POLICY. IF YOU DO NOT AGREE TO THIS POLICY, PLEASE DISCONTINUE USE OF THE SITE.</p>
 <p>8. NEWSLETTER SIGN-UP AND DATA COLLECTION VIA FORMSPREE</p>
-<p>8.1. Email Subscription Form</p>
-<p>The site provides a newsletter sign-up form where you may submit your email address to receive updates about site news, promotions, and other information related to Khaliiil.com. The form is hosted by Formspree.io, a third-party service used to collect your email and send you communications.</p>
-<p>8.2. Third-Party Privacy</p>
-<p>When you submit your email address through the newsletter form, it is processed and stored by Formspree.io. We recommend reviewing Formspree’s privacy policy to understand how they handle your data. The link to their privacy policy can be found here: <a href="https://formspree.io/legal/privacy-policy/">formspree Privacy Policy</a>.</p>
-<p>8.3. Data Usage</p>
-<p>Your email address will only be used to send you the newsletter and updates. We do not share or sell your email address with any third parties. You can unsubscribe from the newsletter at any time using the “unsubscribe” link provided in the emails.</p>
+<p>8.1. EMAIL SUBSCRIPTION FORM</p>
+<p>THE SITE PROVIDES A NEWSLETTER SIGN-UP FORM WHERE YOU MAY SUBMIT YOUR EMAIL ADDRESS TO RECEIVE UPDATES ABOUT SITE NEWS, PROMOTIONS, AND OTHER INFORMATION RELATED TO KHALIIIL.COM. THE FORM IS HOSTED BY FORMSPREE.IO, A THIRD-PARTY SERVICE USED TO COLLECT YOUR EMAIL AND SEND YOU COMMUNICATIONS.</p>
+<p>8.2. THIRD-PARTY PRIVACY</p>
+<p>WHEN YOU SUBMIT YOUR EMAIL ADDRESS THROUGH THE NEWSLETTER FORM, IT IS PROCESSED AND STORED BY FORMSPREE.IO. WE RECOMMEND REVIEWING FORMSPREE’S PRIVACY POLICY TO UNDERSTAND HOW THEY HANDLE YOUR DATA. THE LINK TO THEIR PRIVACY POLICY CAN BE FOUND HERE: <a href="https://formspree.io/legal/privacy-policy/">FORMSPREE PRIVACY POLICY</a>.</p>
+<p>8.3. DATA USAGE</p>
+<p>YOUR EMAIL ADDRESS WILL ONLY BE USED TO SEND YOU THE NEWSLETTER AND UPDATES. WE DO NOT SHARE OR SELL YOUR EMAIL ADDRESS WITH ANY THIRD PARTIES. YOU CAN UNSUBSCRIBE FROM THE NEWSLETTER AT ANY TIME USING THE “UNSUBSCRIBE” LINK PROVIDED IN THE EMAILS. ONCE UNSUBSCRIBED, WE WILL NO LONGER PROCESS YOUR EMAIL FOR NEWSLETTER PURPOSES.</p>
 </div>
