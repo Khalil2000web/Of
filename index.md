@@ -8,10 +8,6 @@ js:
   - https://cdn.jsdelivr.net/gh/Khalil2000web/Of@main/static/js/vid25.js
 ---
 
-{% if page.url == "/" %}
-<style>header a[href="/"] {display: none;}</style>
-{% endif %}
-
 <div class="gallery">
 <a rel="noopener noreferrer"><img src="https://pub-19025506a9754f36baa46a24e6f84719.r2.dev/photo-output.jpeg" class="image" alt="Image" loading="lazy" decoding="async"><div class="overlay"></div></a>
 <a rel="noopener noreferrer"><img src="https://pub-19025506a9754f36baa46a24e6f84719.r2.dev/HEPFNCCAPRUVZLPMXCA.JPG" class="image" alt="Image" loading="lazy" decoding="async"><div class="overlay">RAMADAN MARCH 2025</div></a>
