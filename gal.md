@@ -11,52 +11,6 @@ title: Khalil
 <div class="nav-bar"><button class="btn" onclick="prevMedia()"><svg viewBox="4 0 22 22" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M18 4l-8 8 8 8" stroke="white" stroke-width="3" stroke-linejoin="miter"></path></svg></button><button class="btn" onclick="nextMedia()"><svg viewBox="-2 0 22 22" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M6 4l8 8-8 8" stroke="white" stroke-width="3" stroke-linejoin="miter"></path></svg></button></div>
     
     
-<script>
-
-// === OPEN GALLERY FUNCTION ===
-function openGallery(mediaId) {
-    showOverlay(mediaId); // Your custom function to show the overlay
-
-    // Fake history step (so back button works)
-    window.history.pushState({ galleryOpen: true }, '', window.location.href);
-}
-
-// === CLOSE GALLERY FUNCTION ===
-function closeGallery() {
-    hideOverlay(); // Your custom function to hide the overlay
-
-    // Go back one history step
-    window.history.back();
-}
-
-// === HANDLE BROWSER BACK BUTTON ===
-window.addEventListener('popstate', (event) => {
-    if (event.state && event.state.galleryOpen) {
-        hideOverlay(); // Close gallery if back button pressed
-    }
-});
-
-// === PREVENT DEFAULT NAVIGATION INSIDE GALLERY (Optional safety) ===
-document.addEventListener('click', (e) => {
-    const target = e.target.closest('a');
-    if (target && target.closest('.gallery-overlay')) { // Assuming .gallery-overlay is your overlay container
-        e.preventDefault();
-    }
-});
-
-// === MOCKUP PLACEHOLDER FUNCTIONS ===
-// Replace these with your real functions
-function showOverlay(mediaId) {
-    const overlay = document.querySelector('.gallery-overlay');
-    overlay.classList.add('active');
-    // Load your media content here (image, video, etc.)
-}
-
-function hideOverlay() {
-    const overlay = document.querySelector('.gallery-overlay');
-    overlay.classList.remove('active');
-}
-</script>
 
 
 <script>
