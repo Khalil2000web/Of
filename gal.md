@@ -24,15 +24,12 @@ title: Khalil
 
     let currentIndex = getIndexFromURL();
 
-    function getIndexFromURL() {
-        const params = new URLSearchParams(window.location.search);
-        const mediaId = params.get('media');
+function getIndexFromURL() {
+  const params = new URLSearchParams(window.location.search);
+  const index = parseInt(params.get('media'), 10);
 
-        if (!mediaId) return 0;
-
-        const index = mediaItems.findIndex(item => item.id === mediaId);
-        return index !== -1 ? index : 0;
-    }
+  return isNaN(index) ? 0 : Math.max(0, Math.min(index, mediaItems.length - 1));
+}
 
     function updateMedia() {
         const e = document.getElementById("media-container");
