@@ -12,13 +12,6 @@ title: Khalil
     
     
 <script>
-// === ON PAGE LOAD: Check if URL is invalid direct access ===
-window.addEventListener('DOMContentLoaded', () => {
-    if (window.location.pathname.includes('/gal')) {
-        // Redirect to index if someone tries to open gallery directly
-        window.location.replace('/index');
-    }
-});
 
 // === OPEN GALLERY FUNCTION ===
 function openGallery(mediaId) {
