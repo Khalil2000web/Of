@@ -10,7 +10,7 @@ title: Khalil
 <div class="media-container" id="media-container"></div><div class="info-container"><h2 id="media-title"></h2><p id="media-description"></p></div>
 <div class="nav-bar"><button class="btn" onclick="prevMedia()"><svg viewBox="4 0 22 22" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M18 4l-8 8 8 8" stroke="white" stroke-width="3" stroke-linejoin="miter"></path></svg></button><button class="btn" onclick="nextMedia()"><svg viewBox="-2 0 22 22" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><path fill="none" d="M6 4l8 8-8 8" stroke="white" stroke-width="3" stroke-linejoin="miter"></path></svg></button></div>
     
-    
+
 
 
 <script>
