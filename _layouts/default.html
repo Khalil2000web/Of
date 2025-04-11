@@ -9,10 +9,10 @@
 <style>@font-face {font-family: 'BB Manual Mono Regular';src: url('/static/fonts/BBManualMonoProTX.22d272fc.ttf');}@font-face {font-family: 'BB Manual Mono SemiBold';src: url('/static/fonts/BBManualMonoProTX-SemiBold.otf');}</style>
 <style> * {padding:0;margin:0;box-sizing: border-box;}html,body {-webkit-text-size-adjust: 100%; -moz-text-size-adjust: 100%; -ms-text-size-adjust: 100%; text-size-adjust: 100%;overflow-x:hidden;background-color:var(--background-color);color: var(--text-color);font-family: var(--font-main);} </style>
 <style>.nav{position:fixed;top:22px;left:50%;width:100%;max-width:80%;transform:translateX(-50%);display:flex;align-items:center;z-index:var(--z-index-max);justify-content:space-around;gap:0;}nav a{color:var(--text-color);text-decoration:none;font-size:20px;text-transform:uppercase;}footer{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;font-size:14px;color:#ccc;width:100%;max-width:100%;height:200px;padding-bottom:40px;}.footerlinks{display:flex;align-items:center;justify-content:center;flex-direction:column;width:100%;margin:0 auto;margin-top:30px;max-width:70%;gap:10px;}.footerlinks a{color:#ccc;word-wrap:break-word;text-align:left;text-decoration:none;}</style>
+{% if page.url == "/" %}<style>header a[href="/"]{display:none;}</style>{% endif %}
 </head>
 <body>
 <nav class="nav"><a href="/">HOME</a><a href="https://tour.khaliiil.com/">TOUR</a><a href="https://music.khaliiil.com/">MUSIC</a><a href="/rated">RATED</a></nav>
-<header><h1>Khaliil</h1><p>2024 3 Trips On Tour Page</p><a class="cta" href="https://tour.khaliiil.com/">Enter Full Experience</a></header>
 
 {{ content }}
 
