@@ -1,0 +1,1 @@
+.main {display: flex;flex-direction: column;width:100%;height:90vh;max-width: 90%;margin:0 auto;align-items: center;justify-content: center;gap:20px;}.main h2 {font-weight: normal;text-align: center;font-size:35px;}.main p {text-align: center;font-size:22px;margin-top:20px;}.main a {color: var(--text-color);font-size: 22px;cursor: pointer;text-underline-offset: 4px;}
