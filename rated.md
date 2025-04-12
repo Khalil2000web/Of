@@ -4,8 +4,8 @@ title: Khalil
 author: "Khalil"
 date: 2025-03-27 12:30:00
 last_modified_at: 2025-03-27 12:30:00
-permalink: /reviews/
-published: false
+permalink: /rated/
+published: true
 css:
   - /static/css/reviews.css
 js:
