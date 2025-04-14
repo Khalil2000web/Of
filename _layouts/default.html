@@ -45,6 +45,10 @@ document.addEventListener("DOMContentLoaded", function() {
   const menuBtn = document.querySelector('.menu-btn');
   const closeBtn = menu.querySelector('.close-menu');
 
+  if (sessionStorage.getItem('menuOpen') === 'true') {
+    openMenu();
+  }
+
   menuBtn.addEventListener('click', toggleMenu);
   closeBtn.addEventListener('click', closeMenu);
 
@@ -56,6 +60,7 @@ document.addEventListener("DOMContentLoaded", function() {
     menu.classList.add('open');
     menuBtn.setAttribute('aria-expanded', 'true');
     menu.setAttribute('aria-hidden', 'false');
+    sessionStorage.setItem('menuOpen', 'true');
     const firstLink = menu.querySelector('a');
     if (firstLink) firstLink.focus();
   }
@@ -64,6 +69,7 @@ document.addEventListener("DOMContentLoaded", function() {
     menu.classList.remove('open');
     menuBtn.setAttribute('aria-expanded', 'false');
     menu.setAttribute('aria-hidden', 'true');
+    sessionStorage.setItem('menuOpen', 'false');
     menuBtn.focus();
   }
 
