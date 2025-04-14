@@ -34,7 +34,7 @@ js:
 <img src="https://pub-19025506a9754f36baa46a24e6f84719.r2.dev/IMG_8873.jpeg" class="movie-poster" alt="RENAISSANCE: a film by beyoncé">
 <div class="gf5s">
 <div class="movie-title">RENAISSANCE: a film by beyoncé</div>
-<div class="movie-list-info">Netflix series</div>
+<div class="movie-list-info"></div>
 </div>
 </div>
 </div>
