@@ -36,7 +36,7 @@ css:
 <p>6. CONTACT INFORMATION</p>
 <p>FOR ANY QUESTIONS REGARDING THIS PRIVACY POLICY, PLEASE CONTACT US AT:</p>
 <ul>
-<li>EMAIL: <a href="mailto:help@khaliiil.com">HELP@KHALIIIL.COM</a></li>
+<li>EMAIL: <a href="mailto:khalildiab2008@gmail.com">khalildiab2008@gmail.com</a></li>
 <li>WEBSITE: <a href="/">www.khaliiil.com</a></li>
 </ul>
 <p>7. ACCEPTANCE OF PRIVACY POLICY</p>
