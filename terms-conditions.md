@@ -63,7 +63,7 @@ css:
 <p>12. ENTIRE AGREEMENT</p>
 <p>These Terms and Conditions constitute the entire agreement between the Owner and users regarding the use of the Site and its subdomains. Any previous agreements, understandings, or representations, whether written or oral, are superseded by these Terms.</p>
 <p>13. CONTACT INFORMATION</p>
-<p>For any inquiries regarding these Terms, users may contact the Owner at help@khaliiil.com.</p>
+<p>For any inquiries regarding these Terms, users may contact the Owner at khalildiab2008@gmail.com.</p>
 <p>14. NEWSLETTER SUBSCRIPTION AND EMAIL COLLECTION</p>
 <p>14.1 Newsletter Subscription</p>
 <p>By subscribing to the newsletter through the Join Form on this Site, you agree to receive emails about updates, news, and other relevant content related to the Site. The email address you provide will be used solely for this purpose.</p>
