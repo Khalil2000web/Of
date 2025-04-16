@@ -26,6 +26,14 @@
 <style>.menu-btn {position: fixed;top:20px;right:20px;background: none;border: none;cursor: pointer;padding:10px;z-index:990;border-radius: 8px;}.menu-btn svg {color:#fff;display: block;width:25px;}.menu {position: fixed;top: 0;right: -100%;width: 60vw;height: 100%;background-color: #fff;transition: right 0.1s ease-in-out;display: flex;justify-content: center;align-items: center;z-index: 1000;color: #000;}.menu.open {right: 0;}.close-menu {position: absolute;top: 20px;right: 20px;background: none;border: none;padding:10px;cursor: pointer;}.close-menu svg {display: block;width:25px;color:#000;}.menu-content {display: flex;flex-direction: column;width:90%;height:100%;align-items: center;justify-content: space-around;margin:0 auto;}.menu-content nav {display: flex;flex-direction: column;align-items: center;justify-content: center;gap:20px;}.menu-content nav a {text-transform: uppercase;color: #000;text-decoration: none;font-size: 22px;}.menu-content nav a:hover,.menu-content footer a:hover {font-family: var(--font-main-bold);}.menu-content footer {display: flex;flex-direction: column;align-items: center;justify-content: center;gap:20px;}.menu-content footer a,.menu-content footer p {text-transform: uppercase;color: #000;text-decoration: none;font-size: 15px;}</style>
 {% if page.url == "/" %}<style>.menu-content nav a[href="/"]{text-decoration: line-through;}</style>{% endif %}{% if page.url == "/rated/" %}<style>.menu-content nav a[href="/rated"]{text-decoration: line-through;}</style>{% endif %}
 {% if page.url == "/terms-conditions/" %}<style>.menu-content footer a[href="/terms-conditions"]{text-decoration: line-through;}</style>{% endif %}{% if page.url == "/privacy-policy/" %}<style>.menu-content footer a[href="/privacy-policy"]{text-decoration: line-through;}</style>{% endif %} 
+
+
+<style>
+.container { width: 90%; position: fixed; left: 50%; transform: translateX(-50%); top: 22px; display: flex; align-items: center; justify-content: space-between; z-index: var(--z-index); } @media screen and (mun-width:45em) {.container {max-width:60%;}}
+.container a { font-size: 22px; text-decoration: none; color: var(--text-color); cursor: pointer; }
+</style>
+
+
 </head>
 <body>
 <button class="menu-btn" aria-expanded="false" aria-label="Toggle Menu" onclick="toggleMenu()"><svg viewBox="0 0 24 24" focusable="false" aria-hidden="true"><path fill="currentColor" d="M 3 5 A 1.0001 1.0001 0 1 0 3 7 L 21 7 A 1.0001 1.0001 0 1 0 21 5 L 3 5 z M 3 11 A 1.0001 1.0001 0 1 0 3 13 L 21 13 A 1.0001 1.0001 0 1 0 21 11 L 3 11 z M 3 17 A 1.0001 1.0001 0 1 0 3 19 L 21 19 A 1.0001 1.0001 0 1 0 21 17 L 3 17 z"></path></svg></button>
@@ -35,6 +43,15 @@
 <footer><a href="/join">JOIN</a><p>&copy; 2025 KHALIL</p><a href="/privacy-policy">PRIVACY POLICY</a><a href="/terms-conditions">TERMS & CONDITIONS</a></footer>
 </div>
 </div>
+
+<div class="container">
+  <a href="/">HOME</a>
+  <a href="https://tour.khaliiil.com">TOUR</a>
+  <a href="https://muaic.khaliiil.com">MUSIC</a>
+  <a href="/rated">RATED</a>
+</div>
+
+
 
 {{ content }}
 
