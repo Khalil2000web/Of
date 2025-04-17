@@ -94,5 +94,6 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 </script>
+<script>document.addEventListener("copy",e=>{const s=window.getSelection();if(!s.rangeCount)return;const r=s.getRangeAt(0),i=r.commonAncestorContainer.querySelector?.("img");if(i){e.preventDefault();e.clipboardData.setData("text/plain",i.alt||"Image cannot be copied");}});</script>
 </body>
 </html>
