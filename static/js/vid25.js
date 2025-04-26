@@ -68,42 +68,42 @@ document.addEventListener("DOMContentLoaded", function () {
     const soundOffIcon = media.querySelector(".sound-off-icon");
     const soundOnIcon = media.querySelector(".sound-on-icon");
 
-    // 1. Force show both icons initially
-    soundOffIcon.style.display = "block";
-    soundOnIcon.style.display = "none";
+    // 1. Make sure both sound icons are visible initially
+    soundOffIcon.style.display = "block";  // Show sound-off icon initially
+    soundOnIcon.style.display = "none";    // Hide sound-on icon initially
 
-    // 2. Start loading and handle errors
+    // 2. Handle video errors and loading spinner
     handleVideoErrors(video, spinner);
 
     // 3. Start the video muted and hide the spinner
     showSpinner(spinner);
-    video.muted = true;
-    video.style.visibility = "hidden";  // Hide video until ready
+    video.muted = true; // Start video muted
+    video.style.visibility = "hidden"; // Hide video until ready
 
     video.addEventListener("loadedmetadata", () => {
-      hideSpinner(spinner);
-      video.play();
-      video.style.visibility = "visible";  // Show video once it's ready
+      hideSpinner(spinner);  // Hide the spinner once metadata is loaded
+      video.play();  // Play the video once it’s ready
+      video.style.visibility = "visible";  // Show the video
     });
 
-    // 4. Event listeners for video playback and buffering
+    // 4. Event listeners for playback states
     video.addEventListener("playing", () => hideSpinner(spinner));
     video.addEventListener("waiting", () => showSpinner(spinner));
     video.addEventListener("stalled", () => showSpinner(spinner));
     video.addEventListener("loadstart", () => showSpinner(spinner));
 
-    // 5. Handle sound icons toggle
+    // 5. Toggle the sound icons based on the video's mute state
     soundOffIcon.addEventListener("click", () => {
       video.muted = false;
-      soundOffIcon.style.display = "none";  // Hide sound-off icon when sound is on
-      soundOnIcon.style.display = "block";  // Show sound-on icon
-      muteAllVideosExcept(video);
+      soundOffIcon.style.display = "none";  // Hide sound-off icon when unmuted
+      soundOnIcon.style.display = "block";  // Show sound-on icon when unmuted
+      muteAllVideosExcept(video);  // Mute other videos
     });
 
     soundOnIcon.addEventListener("click", () => {
       video.muted = true;
-      soundOffIcon.style.display = "block";  // Show sound-off icon when sound is muted
-      soundOnIcon.style.display = "none";   // Hide sound-on icon
+      soundOffIcon.style.display = "block";  // Show sound-off icon when muted
+      soundOnIcon.style.display = "none";   // Hide sound-on icon when muted
     });
   });
 
