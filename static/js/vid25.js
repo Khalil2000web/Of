@@ -12,39 +12,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  mediaElements.forEach((media) => {
-    const video = media.querySelector("video");
-    if (!video) return;
-
-    const spinner = media.querySelector(".spinner");
-    const soundOffIcon = media.querySelector(".sound-off-icon");
-    const soundOnIcon = media.querySelector(".sound-on-icon");
-
-    handleVideoErrors(video, spinner);
-    showSpinner(spinner);
-    video.muted = true;
-    video.play();
-    video.addEventListener("playing", () => hideSpinner(spinner));
-    video.addEventListener("waiting", () => showSpinner(spinner));
-    video.addEventListener("stalled", () => showSpinner(spinner));
-    video.addEventListener("loadstart", () => showSpinner(spinner));
-
-    if (soundOffIcon && soundOnIcon) {
-      soundOffIcon.addEventListener("click", () => {
-        video.muted = false;
-        soundOffIcon.style.display = "none";
-        soundOnIcon.style.display = "block";
-        muteAllVideosExcept(video);
-      });
-
-      soundOnIcon.addEventListener("click", () => {
-        video.muted = true;
-        soundOffIcon.style.display = "block";
-        soundOnIcon.style.display = "none";
-      });
-    }
-  });
-
   function showSpinner(spinner) {
     if (spinner) spinner.style.display = "block";
   }
@@ -92,6 +59,56 @@ document.addEventListener("DOMContentLoaded", function () {
       video.play();
     });
   }
+
+  mediaElements.forEach((media) => {
+    const video = media.querySelector("video");
+    if (!video) return;
+
+    const spinner = media.querySelector(".spinner");
+    const soundOffIcon = media.querySelector(".sound-off-icon");
+    const soundOnIcon = media.querySelector(".sound-on-icon");
+
+    // 1. Force controls hidden early
+    video.controls = false;
+    video.style.visibility = "hidden";
+    video.muted = true;
+
+    // 2. Handle errors first
+    handleVideoErrors(video, spinner);
+
+    // 3. Start loading
+    showSpinner(spinner);
+
+    // 4. Wait until video metadata ready
+    video.addEventListener("loadedmetadata", () => {
+      hideSpinner(spinner);
+      video.play();
+      video.style.visibility = "visible";
+    });
+
+    // 5. Spinner for buffering
+    video.addEventListener("playing", () => hideSpinner(spinner));
+    video.addEventListener("waiting", () => showSpinner(spinner));
+    video.addEventListener("stalled", () => showSpinner(spinner));
+    video.addEventListener("loadstart", () => showSpinner(spinner));
+
+    // 6. Sound controls
+    if (soundOffIcon && soundOnIcon) {
+      soundOffIcon.addEventListener("click", () => {
+        video.muted = false;
+        soundOffIcon.style.display = "none";
+        soundOnIcon.style.display = "block";
+        muteAllVideosExcept(video);
+      });
+
+      soundOnIcon.addEventListener("click", () => {
+        video.muted = true;
+        soundOffIcon.style.display = "block";
+        soundOnIcon.style.display = "none";
+      });
+    }
+  });
+
 
   const observer = new IntersectionObserver(
     (entries) => {
