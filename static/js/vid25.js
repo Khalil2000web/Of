@@ -68,48 +68,46 @@ document.addEventListener("DOMContentLoaded", function () {
     const soundOffIcon = media.querySelector(".sound-off-icon");
     const soundOnIcon = media.querySelector(".sound-on-icon");
 
-    // 1. Force controls hidden early
-    video.controls = false;
-    video.style.visibility = "hidden";
-    video.muted = true;
+    // 1. Force show both icons initially
+    soundOffIcon.style.display = "block";
+    soundOnIcon.style.display = "none";
 
-    // 2. Handle errors first
+    // 2. Start loading and handle errors
     handleVideoErrors(video, spinner);
 
-    // 3. Start loading
+    // 3. Start the video muted and hide the spinner
     showSpinner(spinner);
+    video.muted = true;
+    video.style.visibility = "hidden";  // Hide video until ready
 
-    // 4. Wait until video metadata ready
     video.addEventListener("loadedmetadata", () => {
       hideSpinner(spinner);
       video.play();
-      video.style.visibility = "visible";
+      video.style.visibility = "visible";  // Show video once it's ready
     });
 
-    // 5. Spinner for buffering
+    // 4. Event listeners for video playback and buffering
     video.addEventListener("playing", () => hideSpinner(spinner));
     video.addEventListener("waiting", () => showSpinner(spinner));
     video.addEventListener("stalled", () => showSpinner(spinner));
     video.addEventListener("loadstart", () => showSpinner(spinner));
 
-    // 6. Sound controls
-    if (soundOffIcon && soundOnIcon) {
-      soundOffIcon.addEventListener("click", () => {
-        video.muted = false;
-        soundOffIcon.style.display = "none";
-        soundOnIcon.style.display = "block";
-        muteAllVideosExcept(video);
-      });
+    // 5. Handle sound icons toggle
+    soundOffIcon.addEventListener("click", () => {
+      video.muted = false;
+      soundOffIcon.style.display = "none";  // Hide sound-off icon when sound is on
+      soundOnIcon.style.display = "block";  // Show sound-on icon
+      muteAllVideosExcept(video);
+    });
 
-      soundOnIcon.addEventListener("click", () => {
-        video.muted = true;
-        soundOffIcon.style.display = "block";
-        soundOnIcon.style.display = "none";
-      });
-    }
+    soundOnIcon.addEventListener("click", () => {
+      video.muted = true;
+      soundOffIcon.style.display = "block";  // Show sound-off icon when sound is muted
+      soundOnIcon.style.display = "none";   // Hide sound-on icon
+    });
   });
 
-
+  // 6. Mute videos when out of view
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
