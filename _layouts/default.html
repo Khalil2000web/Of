@@ -28,9 +28,12 @@
 {% if page.url == "/terms-conditions/" %}<style>.menu-content footer a[href="/terms-conditions"]{text-decoration: line-through;}</style>{% endif %}
 {% if page.url == "/privacy-policy/" %}<style>.menu-content footer a[href="/privacy-policy"]{text-decoration: line-through;}</style>{% endif %}
 {% if page.url == "/rated/" %}<style>.menu-content nav a[href="/rated"]{text-decoration: line-through;}</style>{% endif %} 
+
+<style>.navbar {position: fixed;top:20px;width:100%;left:0;z-index: 10000;display: flex;flex-direction: column;align-items: center;justify-content: space-between;height: 80px;}.nav-links {display: flex;align-items: center;justify-content: space-between;width:85%;margin:0 auto;gap:10px;flex-wrap: wrap;}.nav-links a {color: var(--text-color);text-decoration: none;font-size: 22px;cursor: pointer;}.footer-links {display: flex;align-items: center;justify-content: space-around;width:75%;margin:0 auto;flex-wrap: wrap;gap:10px;}.footer-links a {color: var(--text-color);text-decoration: none;font-size: 15px;text-align: center;cursor: pointer;}@media screen and (min-width:45em) {.footer-links {max-width: 30%;}.nav-links {max-width: 50%;}} </style>
+{% if page.url == "/" %}<style>.nav-links a[href="/"]{display:none;}</style>{% endif %}
 </head>
 <body>
-<button class="menu-btn" aria-expanded="false" aria-label="Toggle Menu" onclick="toggleMenu()">
+<button style="display:none;" class="menu-btn" aria-expanded="false" aria-label="Toggle Menu" onclick="toggleMenu()">
 <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true"><path fill="currentColor" d="M 3 5 A 1.0001 1.0001 0 1 0 3 7 L 21 7 A 1.0001 1.0001 0 1 0 21 5 L 3 5 z M 3 11 A 1.0001 1.0001 0 1 0 3 13 L 21 13 A 1.0001 1.0001 0 1 0 21 11 L 3 11 z M 3 17 A 1.0001 1.0001 0 1 0 3 19 L 21 19 A 1.0001 1.0001 0 1 0 21 17 L 3 17 z"></path></svg></button>
 <div class="menu" id="menu"><button class="close-menu" aria-label="Close Menu" onclick="toggleMenu()"><svg viewBox="0 0 24 24" aria-hidden="true" class="close-overlay"><path fill="white" d="M19 6 6 19M6 6l13 13" stroke="#000" stroke-width="2.2" stroke-linecap="round"></path></svg></button>
 <div class="menu-content">
@@ -38,6 +41,12 @@
 <footer><a href="/join">JOIN</a><p>&copy; 2025 KHALIL</p><a href="/privacy-policy">PRIVACY POLICY</a><a href="/terms-conditions">TERMS & CONDITIONS</a></footer>
 </div>
 </div>
+
+<nav class="navbar">
+<div class="nav-links"><a href="/">HOME</a><a href="https://tour.khaliiil.com/">TOUR</a><a href="https://music.khaliiil.com/">MUSIC</a><a href="/rated">RATED</a></div>
+<div class="footer-links"><a href="/join">JOIN</a><a href="/">&copy; 2025</a><a href="/terms-conditions">TERMS</a><a href="/privacy-policy">PRIVACY</a></div>
+</nav>
+
 
 {{ content }}
 
