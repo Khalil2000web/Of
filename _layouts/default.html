@@ -28,7 +28,7 @@
 
 
 <style>.navbar {position: fixed;top:22px;left:50%;transform: translateX(-50%);display: flex;align-items: center;justify-content: space-around;width: 90%;gap:20px;}.navbar a {color: var(--text-color);text-decoration: none;font-size: 21px;}.footer {position: fixed;bottom: 0;left:50%;transform: translateX(-50%);display: flex;align-items: end;justify-content: space-around;padding:0 20px;width: 90%;}.footer a {color: var(--text-color);text-decoration: none;}.footer p {padding:0 10px;font-size: 17px;padding-bottom: 17px;}@media screen and (min-width:45em) {.navbar {flex-direction: column;height: 90%;top:50%;transform: translateY(-50%);width: max-content;align-items: end;left:auto;right:20px;}.footer {flex-direction: column;align-items: start;height: 90%;top:50%;transform: translateY(-50%);right:auto;left:20px;width: max-content;padding: 0;}.footer p {padding: 0;} } </style>
-{% if page.url == "/" %}<style>.navbar a[href="/"]{display:none;}{% endif %}
+{% if page.url == "/" %}<style>.navbar a[href="/"]{display:none;}</style>{% endif %}
 </head>
 <body>
 <button style="display:none;" class="menu-btn" style="touch-action: manipulation;" aria-expanded="false" aria-label="Toggle Menu" onclick="toggleMenu()">
