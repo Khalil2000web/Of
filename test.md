@@ -4,9 +4,9 @@ title: Khalil
 author: "Khalil"
 published: true
 css:
-  - https://cdn.jsdelivr.net/gh/Khalil2000web/Of@main/static/css/index-ii.css
+  - /static/css/index-ii.css
 js:
-  - https://cdn.jsdelivr.net/gh/Khalil2000web/Of@main/static/js/vidpr-25-ii.js
+  - /static/js/vidpr-25-ii.js
 ---
  
 <div class="galmain3">
