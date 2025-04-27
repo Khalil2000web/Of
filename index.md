@@ -4,7 +4,7 @@ title: Khalil
 author: "Khalil"
 published: true
 css:
-  - https://cdn.jsdelivr.net/gh/Khalil2000web/Of@main/static/css/index.css
+  - https://cdn.jsdelivr.net/gh/Khalil2000web/Of@main/static/css/index-ii.css
 ---
 <header><h1>Khaliil</h1><p>3 Countries. 1 Journey. France, Germany, Switzerland — 2024 Tour</p><p>TOUR.KHALIIIL.COM</p><a class="cta" href="https://tour.khaliiil.com/">Enter Full Experience</a></header>
 
