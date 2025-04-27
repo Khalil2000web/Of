@@ -3,10 +3,8 @@ layout: default
 title: Khalil
 author: "Khalil"
 published: true
-css:
-  - https://cdn.jsdelivr.net/gh/Khalil2000web/Of@main/static/css/index-ii.css
 ---
-<header><h1>Khaliil</h1><p>3 Countries. 1 Journey. France, Germany, Switzerland — 2024 Tour</p><p>TOUR.KHALIIL.COM</p><a class="cta" href="https://tour.khaliil.com/">Enter Full Experience</a></header>
+<header style="max-width:100%;"><h1>Khaliil</h1><p>3 Countries. 1 Journey. France, Germany, Switzerland — 2024 Tour</p><p>TOUR.KHALIIL.COM</p><a class="cta" href="https://tour.khaliil.com/">Enter Full Experience</a></header>
 
 <div class="galmain3">
 <div class="video-container"><canvas></canvas><video poster="https://pub-f4c4477afe9541f7a586037aaee49080.r2.dev/IMG_8992.jpeg" src="https://pub-19025506a9754f36baa46a24e6f84719.r2.dev/video-output-41CC8F37-AEAD-457B-9DD6-98182EE735FD-1.mov" muted loop autoplay playsinline preload="auto" style="display:none;"></video><div class="spinner"></div><div class="sound-btn"><img src="https://khaliil.com/static/images/icon-mute.svg" alt="Toggle Sound"></div><div class="error-message"></div><div class="play-btn"></div></div>
