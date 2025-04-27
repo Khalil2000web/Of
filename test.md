@@ -8,7 +8,7 @@ css:
 js:
   - https://cdn.jsdelivr.net/gh/Khalil2000web/Of@main/static/js/vidpr-25-ii.js
 ---
-
+ 
 <div class="galmain3">
 <div class="video-container"><canvas></canvas><video poster="https://pub-f4c4477afe9541f7a586037aaee49080.r2.dev/IMG_8992.jpeg" src="https://pub-19025506a9754f36baa46a24e6f84719.r2.dev/video-output-41CC8F37-AEAD-457B-9DD6-98182EE735FD-1.mov" muted loop autoplay playsinline preload="auto" style="display:none;"></video><div class="spinner"></div><div class="sound-btn"><img src="https://khaliil.com/static/images/icon-mute.svg" alt="Toggle Sound"></div><div class="error-message"></div><div class="play-btn"></div></div>
 <div style="pointer-events: none;"><img src="https://pub-19025506a9754f36baa46a24e6f84719.r2.dev/IMG_8715.jpeg" class="image" alt="Image" loading="lazy" decoding="async"></div>
