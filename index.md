@@ -22,6 +22,7 @@ css:
 <div style="pointer-events: none;"><img src="https://pub-19025506a9754f36baa46a24e6f84719.r2.dev/BSRQPNCVESHWMQPAMFT.HEIC" class="image" alt="Image" loading="lazy" decoding="async"></div>
 <div style="pointer-events: none;"><img src="https://pub-19025506a9754f36baa46a24e6f84719.r2.dev/IMG_8285.jpeg" class="image" alt="Image" loading="lazy" decoding="async"></div>
 <div style="pointer-events: none;"><img src="https://pub-19025506a9754f36baa46a24e6f84719.r2.dev/IMG_8275.jpeg" class="image" alt="Image" loading="lazy" decoding="async"></div>
+<div class="video-container"><canvas></canvas><video src="https://hf.r2.dev/IMG_8716.mov" muted loop autoplay playsinline preload="auto" style="display:none;"></video><div class="spinner"></div><div class="sound-btn"><img src="https://khaliil.com/static/images/icon-mute.svg" alt="Toggle Sound"></div><div class="error-message"></div><div class="play-btn"></div></div>
 <div style="pointer-events: none;"><img src="https://pub-65e50ac10e764e13b41536c10d90f540.r2.dev/PICT0008.jpeg" class="image" alt="Image" loading="lazy" decoding="async"></div>
 <div style="pointer-events: none;"><img src="https://pub-65e50ac10e764e13b41536c10d90f540.r2.dev/IMG_3665.jpeg" class="image" alt="Image" loading="lazy" decoding="async"></div>
 <div style="pointer-events: none;"><img src="https://pub-65e50ac10e764e13b41536c10d90f540.r2.dev/IMG_3652.jpeg" class="image" alt="Image" loading="lazy" decoding="async"></div>
