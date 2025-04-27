@@ -69,6 +69,7 @@ containers.forEach(container => {
 
 video.addEventListener('canplay', () => {
   resizeCanvas();
+  video.muted = true;
   video.play();
   renderFrame();
   const spinner = container.querySelector('.spinner');
