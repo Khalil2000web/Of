@@ -1,6 +1,6 @@
 ---
 layout: default
-title: TERMS
+title: PRIVACY POLICY
 permalink: /privacy-policy/
 author: "Khaliil"
 date: 2024-05-11 10:00:00
