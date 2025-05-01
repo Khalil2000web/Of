@@ -67,10 +67,10 @@ css:
 <p>14. NEWSLETTER SUBSCRIPTION AND EMAIL COLLECTION</p>
 <p>14.1 Newsletter Subscription</p>
 <p>By subscribing to the newsletter through the Join Form on this Site, you agree to receive emails about updates, news, and other relevant content related to the Site. The email address you provide will be used solely for this purpose.</p>
-<p>14.2 Third-Party Service (Formspree.io)</p>
-<p>The Join Form on the Site is powered by Formspree.io, a third-party service provider that handles the collection of email addresses. By submitting your email through the form, you acknowledge and agree to Formspree.io’s terms and privacy policy, which can be reviewed at <a href="https://formspree.io/legal/terms-of-service/">Formspree.io Terms and Privacy Policy</a>.</p>
+<p>14.2 Third-Party Service (Brevo)</p>
+<p>The Join Form on the Site is powered by Brevo, a third-party service provider that handles the collection of email addresses. By submitting your email through the form, you acknowledge and agree to Brevo’s terms and privacy policy, which can be reviewed at <a href="https://www.brevo.com/legal/termsofuse/">Breov Terms and Privacy Policy</a>.</p>
 <p>14.3 Email Storage and Use</p>
-<p>Your email address will be stored securely and will be used exclusively for communication regarding updates, news, and offers related to the Site. Your email will not be shared with third parties without your consent, except as required by law or as part of the functionality provided by Formspree.io.</p>
+<p>Your email address will be stored securely and will be used exclusively for communication regarding updates, news, and offers related to the Site. Your email will not be shared with third parties without your consent, except as required by law or as part of the functionality provided by Brevo.</p>
 <p>14.4 Opt-Out</p>
 <p>You may unsubscribe from the newsletter at any time by clicking the “unsubscribe” link included in every email you receive. Upon unsubscribing, your email address will be removed from the mailing list.</p>
 <p>14.5 Data Protection</p>
