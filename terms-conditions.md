@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Khalil
-author: "Khalil"
+title: TERMS & CONDITIONS
+author: "Khaliil"
 date: 2024-05-11 10:00:00
 last_modified_at: 2025-03-27 10:30:00
 permalink: /terms-conditions/
@@ -14,14 +14,14 @@ css:
 <h2>TERMS & CONDITIONS</h2>
 <p>LAST UPDATED: {{ page.last_modified_at | date: "%B %d, %Y" | upcase }}</p>
 <p>INTRODUCTION</p>
-<p>Welcome to KHALIIIL.COM (hereinafter referred to as “the Site”), including all associated subdomains. By accessing, browsing, or utilizing this Site and its subdomains, you (the “User”) acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions (“Terms”). If you do not agree with any part of these Terms, you are prohibited from using the Site or any of its subdomains.</p>
+<p>Welcome to KHALIIL.COM (hereinafter referred to as “the Site”), including all associated subdomains. By accessing, browsing, or utilizing this Site and its subdomains, you (the “User”) acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions (“Terms”). If you do not agree with any part of these Terms, you are prohibited from using the Site or any of its subdomains.</p>
 <p>1. ACCEPTANCE OF TERMS</p>
 <p>By accessing or using the Site, including any subdomain, you affirm that you have read, comprehended, and accepted these Terms. Continued use of the Site signifies your ongoing acceptance, even as these Terms may be updated periodically. It is your responsibility to review these Terms regularly to stay informed of any changes.</p>
 <p>2. SCOPE OF TERMS AND SUBDOMAINS</p>
-<p>These Terms apply to the main Site as well as all associated subdomains operated by <a href="/">khaliiil.com</a>. References to “the Site” in these Terms encompass all associated subdomains. Use of any subdomain constitutes acceptance of these Terms, which extend fully to all content, functionality, and features on subdomains.</p>
+<p>These Terms apply to the main Site as well as all associated subdomains operated by <a href="/">khaliil.com</a>. References to “the Site” in these Terms encompass all associated subdomains. Use of any subdomain constitutes acceptance of these Terms, which extend fully to all content, functionality, and features on subdomains.</p>
 <p>3. INTELLECTUAL PROPERTY RIGHTS</p>
 <p>3.1 Ownership of Content</p>
-<p>All content available on the Site and its subdomains, including but not limited to text, images, videos, designs, and any other materials, are exclusively owned by <a href="/">khaliiil.com</a> (hereinafter referred to as “the Owner”) or are used under appropriate licenses. All rights, titles, and interests in and to the Site, subdomains, and all associated intellectual property rights are reserved solely for the Owner.</p>
+<p>All content available on the Site and its subdomains, including but not limited to text, images, videos, designs, and any other materials, are exclusively owned by <a href="/">khaliil.com</a> (hereinafter referred to as “the Owner”) or are used under appropriate licenses. All rights, titles, and interests in and to the Site, subdomains, and all associated intellectual property rights are reserved solely for the Owner.</p>
 <p>3.2 Copyright</p>
 <p>The content on this Site and its subdomains is protected by the Israeli Copyright Law, 2007, and international copyright and intellectual property laws. Unauthorized use, distribution, copying, or modification of the Site’s content is strictly prohibited. Under Israeli law, original works such as literary, artistic, dramatic, and musical works are protected without the need for registration. The protection extends for the lifetime of the author plus 70 years posthumously.</p>
 <p>3.3 Trademarks</p>
