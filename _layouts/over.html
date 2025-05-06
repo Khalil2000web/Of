@@ -204,6 +204,7 @@ document.addEventListener("DOMContentLoaded", function () {
     overlayContent.innerHTML = '';
     overlayContent.appendChild(clonedMedia);
     overlay.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
     overlay.classList.add('overlay-show', 'opening');
     
     setTimeout(() => overlay.classList.replace('opening', 'fullscreen'), 140);
@@ -257,7 +258,7 @@ document.addEventListener("DOMContentLoaded", function () {
     overlay.style.display = 'none';
     overlay.classList.replace('fullscreen', 'closing');
     document.body.classList.remove('overlay-active');
-    
+    document.body.style.overflow = '';
     reloadIframes();
     setTimeout(() => overlay.classList.remove('closing'), 90);
 
