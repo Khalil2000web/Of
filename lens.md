@@ -24,7 +24,6 @@ published: true
 </div>
 <div class="image-overlay" id="imageOverlay"><button title="Close overlay" type="button" tabindex="0" aria-label="Close" class="close-btn"><svg viewBox="0 0 24 24" fill="CurrentColor"><path d="M18.3 5.71a1 1 0 0 0-1.42 0L12 10.59 7.11 5.7A1 1 0 0 0 5.7 7.11L10.59 12l-4.89 4.89a1 1 0 1 0 1.41 1.41L12 13.41l4.89 4.89a1 1 0 0 0 1.41-1.41L13.41 12l4.89-4.89a1 1 0 0 0 0-1.4z"/></svg></button><img id="overlayImage" src="" alt="Expanded image"></div>
 
-{% if page.url == "/" %}
 <script defer>
   const containers = document.querySelectorAll('.sx70__container');
   const overlay = document.getElementById('imageOverlay');
@@ -48,4 +47,3 @@ published: true
   document.body.style.overflow = '';
 });
 </script>
-{% endif %}
