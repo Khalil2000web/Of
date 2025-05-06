@@ -2,6 +2,7 @@
 layout: default
 title: LENS
 author: "Khaliil"
+permalink: /lens/
 published: true
 ---
 
