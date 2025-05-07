@@ -22,7 +22,7 @@ published: true
 <div class="sx70__container"><img src="https://pub-7302578c362b4844b5ef4d1fcdc92c80.r2.dev/IMG_0101.jpeg" loading="lazy" decoding="async" alt="image" class="sx70__image"></div>
 </div>
 </div>
-<div class="image-overlay" id="imageOverlay"><button title="Close overlay" type="button" tabindex="0" aria-label="Close" class="close-btn"><svg viewBox="0 0 24 24" fill="CurrentColor"><path d="M18.3 5.71a1 1 0 0 0-1.42 0L12 10.59 7.11 5.7A1 1 0 0 0 5.7 7.11L10.59 12l-4.89 4.89a1 1 0 1 0 1.41 1.41L12 13.41l4.89 4.89a1 1 0 0 0 1.41-1.41L13.41 12l4.89-4.89a1 1 0 0 0 0-1.4z"/></svg></button><img id="overlayImage" src="" alt="Expanded image"></div>
+<div class="image-overlay" id="imageOverlay"><button title="Close overlay" type="button" tabindex="0" style="touch-action: manipulation;" aria-label="Close" class="close-btn"><svg viewBox="0 0 24 24" fill="CurrentColor"><path d="M18.3 5.71a1 1 0 0 0-1.42 0L12 10.59 7.11 5.7A1 1 0 0 0 5.7 7.11L10.59 12l-4.89 4.89a1 1 0 1 0 1.41 1.41L12 13.41l4.89 4.89a1 1 0 0 0 1.41-1.41L13.41 12l4.89-4.89a1 1 0 0 0 0-1.4z"/></svg></button><img id="overlayImage" src="" alt="Expanded image"></div>
 
 <script defer>
   const containers = document.querySelectorAll('.sx70__container');
