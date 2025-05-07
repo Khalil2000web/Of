@@ -37,6 +37,7 @@ published: true
         overlayImage.src = img.src;
         overlay.style.display = 'flex';
         document.body.style.overflow = 'hidden';
+        closeBtn.focus();
       }
     });
   });
