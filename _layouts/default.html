@@ -58,6 +58,7 @@ containers.forEach(container => {
   const spinner = container.querySelector('.spinner');
 
   let isVideoRendering = false;
+  let retrying = false;
 
   function resizeCanvas() {
     canvas.width = video.videoWidth;
@@ -81,6 +82,14 @@ containers.forEach(container => {
     if (spinner) spinner.style.display = 'none';
   }
 
+  function showPlayButton() {
+    playBtn.style.display = 'block';
+  }
+
+  function hidePlayButton() {
+    playBtn.style.display = 'none';
+  }
+
   function displayErrorMessage(title, description) {
     errorContainer.style.display = 'flex';
     errorContainer.innerHTML = `
@@ -89,18 +98,21 @@ containers.forEach(container => {
       <button class="retry-btn">Try Again</button>
     `;
     hideSpinner();
-    playBtn.style.display = 'block';
+    hidePlayButton();
 
     const retryBtn = errorContainer.querySelector('.retry-btn');
     retryBtn.addEventListener('click', () => {
-      video.load();
+      retrying = true;
       errorContainer.style.display = 'none';
       showSpinner();
+      hidePlayButton();
+      video.load();
     });
   }
 
   playBtn.addEventListener('click', () => {
     showSpinner();
+    hidePlayButton();
     video.loop = true;
     video.play().catch(() => {
       displayErrorMessage(
@@ -151,19 +163,12 @@ containers.forEach(container => {
       renderFrame();
     }
     hideSpinner();
+    showPlayButton();
+    retrying = false;
   });
 
   video.addEventListener('waiting', showSpinner);
   video.addEventListener('playing', hideSpinner);
-
-  setTimeout(() => {
-    if (video.readyState < 2) {
-      displayErrorMessage(
-        "VIDEO COULD NOT LOAD",
-        "The video failed to load after several attempts. Please check the video URL or try again later."
-      );
-    }
-  }, 7000);
 
   video.addEventListener('stalled', () => {
     showSpinner();
@@ -177,19 +182,34 @@ containers.forEach(container => {
     }, 5000);
   });
 
-  video.addEventListener('pause', () => playBtn.style.display = 'block');
-  video.addEventListener('play', () => playBtn.style.display = 'none');
-
-  // Initial loader
-  showSpinner();
-
-  // Early error detection
   video.addEventListener('error', () => {
     displayErrorMessage(
       "VIDEO COULD NOT LOAD",
       "The video is unavailable. This may be due to a network issue, an unsupported format, or missing permissions."
     );
   });
+
+  video.addEventListener('pause', () => {
+    if (!retrying) showPlayButton();
+  });
+
+  video.addEventListener('play', () => {
+    hidePlayButton();
+  });
+
+  // Initial spinner only — no play button yet
+  showSpinner();
+  hidePlayButton();
+
+  // Timed check after initial load attempt
+  setTimeout(() => {
+    if (video.readyState < 2) {
+      displayErrorMessage(
+        "VIDEO COULD NOT LOAD",
+        "The video failed to load after several attempts. Please check the video URL or try again later."
+      );
+    }
+  }, 7000);
 });
 </script>
 
