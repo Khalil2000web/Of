@@ -42,81 +42,157 @@
 
 {{ content }}
 
+
 <script>
 const containers = document.querySelectorAll('.video-container');
 let currentlyUnmutedVideo = null;
 
 containers.forEach(container => {
+  const video = container.querySelector('video');
   const canvas = container.querySelector('canvas');
   const ctx = canvas.getContext('2d');
-  const video = container.querySelector('video');
   const soundBtn = container.querySelector('.sound-btn');
   const soundIcon = soundBtn.querySelector('img');
+  const playBtn = container.querySelector('.play-btn');
+  const errorContainer = container.querySelector('.error-message');
+  const spinner = container.querySelector('.spinner');
 
-  // Resize canvas based on video
+  let isVideoRendering = false;
+
   function resizeCanvas() {
     canvas.width = video.videoWidth;
     canvas.height = video.videoHeight;
   }
 
-  // Draw video frames to canvas
   function renderFrame() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  if (video.readyState >= 2) {
-    ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+    if (!isVideoRendering) return;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    if (video.readyState >= 2) {
+      ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+    }
+    requestAnimationFrame(renderFrame);
   }
-  requestAnimationFrame(renderFrame);
-}
 
-video.addEventListener('canplay', () => {
-  resizeCanvas();
-  video.muted = true;
-  video.play();
-  renderFrame();
-  const spinner = container.querySelector('.spinner');
-  if (spinner) {
-    spinner.style.display = 'none';
+  function showSpinner() {
+    if (spinner) spinner.style.display = 'block';
   }
-});
 
-  // Mute/Unmute Logic
+  function hideSpinner() {
+    if (spinner) spinner.style.display = 'none';
+  }
+
+  function displayErrorMessage(title, description) {
+    errorContainer.style.display = 'flex';
+    errorContainer.innerHTML = `
+      <h2>${title}</h2>
+      <span>${description}</span>
+      <button class="retry-btn">Try Again</button>
+    `;
+    hideSpinner();
+    playBtn.style.display = 'block';
+
+    const retryBtn = errorContainer.querySelector('.retry-btn');
+    retryBtn.addEventListener('click', () => {
+      video.load();
+      errorContainer.style.display = 'none';
+      showSpinner();
+    });
+  }
+
+  playBtn.addEventListener('click', () => {
+    showSpinner();
+    video.loop = true;
+    video.play().catch(() => {
+      displayErrorMessage(
+        "VIDEO COULD NOT LOAD",
+        "The video is unavailable. This may be due to a network issue, an unsupported format, or missing permissions."
+      );
+    });
+  });
+
   soundBtn.addEventListener('click', () => {
     if (video.muted) {
       if (currentlyUnmutedVideo && currentlyUnmutedVideo !== video) {
         currentlyUnmutedVideo.muted = true;
-        updateIcon(currentlyUnmutedVideo, 'https://khaliil.com/static/images/icon-mute.svg');
+        updateSoundIcon(currentlyUnmutedVideo, 'https://khaliil.com/static/images/icon-mute.svg');
       }
       video.muted = false;
       currentlyUnmutedVideo = video;
-      updateIcon(video, 'https://khaliil.com/static/images/icon-volume.svg');
+      updateSoundIcon(video, 'https://khaliil.com/static/images/icon-volume.svg');
     } else {
       video.muted = true;
-      updateIcon(video, 'https://khaliil.com/static/images/icon-mute.svg');
       currentlyUnmutedVideo = null;
+      updateSoundIcon(video, 'https://khaliil.com/static/images/icon-mute.svg');
     }
   });
 
-  function updateIcon(videoElement, iconSrc) {
-    const container = videoElement.closest('.video-container');
+  function updateSoundIcon(vid, iconSrc) {
+    const container = vid.closest('.video-container');
     const icon = container.querySelector('.sound-btn img');
-    icon.src = iconSrc;
+    if (icon) icon.src = iconSrc;
   }
 
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (!entry.isIntersecting && !video.muted) {
         video.muted = true;
-        updateIcon(video, 'https://khaliil.com/static/images/icon-mute.svg');
-        if (currentlyUnmutedVideo === video) {
-          currentlyUnmutedVideo = null;
-        }
+        updateSoundIcon(video, 'https://khaliil.com/static/images/icon-mute.svg');
+        if (currentlyUnmutedVideo === video) currentlyUnmutedVideo = null;
       }
     });
   }, { threshold: 0.1 });
 
   observer.observe(container);
+
+  video.addEventListener('canplay', () => {
+    resizeCanvas();
+    if (!isVideoRendering) {
+      isVideoRendering = true;
+      renderFrame();
+    }
+    hideSpinner();
+  });
+
+  video.addEventListener('waiting', showSpinner);
+  video.addEventListener('playing', hideSpinner);
+
+  setTimeout(() => {
+    if (video.readyState < 2) {
+      displayErrorMessage(
+        "VIDEO COULD NOT LOAD",
+        "The video failed to load after several attempts. Please check the video URL or try again later."
+      );
+    }
+  }, 7000);
+
+  video.addEventListener('stalled', () => {
+    showSpinner();
+    setTimeout(() => {
+      if (video.readyState < 2) {
+        displayErrorMessage(
+          "VIDEO COULD NOT LOAD",
+          "Video failed to load after several attempts."
+        );
+      }
+    }, 5000);
+  });
+
+  video.addEventListener('pause', () => playBtn.style.display = 'block');
+  video.addEventListener('play', () => playBtn.style.display = 'none');
+
+  // Initial loader
+  showSpinner();
+
+  // Early error detection
+  video.addEventListener('error', () => {
+    displayErrorMessage(
+      "VIDEO COULD NOT LOAD",
+      "The video is unavailable. This may be due to a network issue, an unsupported format, or missing permissions."
+    );
+  });
 });
 </script>
+
 <script>document.addEventListener("copy",e=>{const s=window.getSelection();if(!s.rangeCount)return;const r=s.getRangeAt(0),i=r.commonAncestorContainer.querySelector?.("img");if(i){e.preventDefault();e.clipboardData.setData("text/plain",i.alt||"Image cannot be copied");}});</script>
 <script>document.addEventListener("DOMContentLoaded",function(){const e=document.getElementById("menu"),t=document.querySelector(".menu-btn"),n=e.querySelector(".close-menu");"true"===sessionStorage.getItem("menuOpen")&&o(),t.addEventListener("click",r),n.addEventListener("click",c);function r(){e.classList.contains("open")?c():o()}function o(){e.classList.add("open"),t.setAttribute("aria-expanded","true"),e.setAttribute("aria-hidden","false"),sessionStorage.setItem("menuOpen","true"),n.focus()}function c(){e.classList.remove("open"),t.setAttribute("aria-expanded","false"),e.setAttribute("aria-hidden","true"),sessionStorage.setItem("menuOpen","false"),t.focus()}document.addEventListener("keydown",function(s){if(!e.classList.contains("open"))return;const i=e.querySelectorAll("a, button:not(.menu-btn)"),d=i[0],a=i[i.length-1];"Tab"===s.key&&(!0===s.shiftKey&&document.activeElement===d?(s.preventDefault(),a.focus()):!1===s.shiftKey&&document.activeElement===a&&(s.preventDefault(),d.focus())),"Escape"===s.key&&c()})});</script>
 </body>
