@@ -4,6 +4,8 @@ title: LENS
 author: "Khaliil"
 permalink: /lens/
 published: true
+date: 2024-05-5 10:00:00
+last_modified_at: 2025-05-13 10:30:00
 ---
 
 <div class="dh2ll__content">
