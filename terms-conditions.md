@@ -9,7 +9,7 @@ published: true
 ---
 
 <div class="main5">
-<h2>TERMS & CONDITIONS</h2>
+<h2><strong>TERMS & CONDITIONS</strong></h2>
 <p>LAST UPDATED: {{ page.last_modified_at | date: "%B %d, %Y" | upcase }}</p>
 <p><strong>INTRODUCTION</strong></p>
 <p>Welcome to KHALIIL.COM (hereinafter referred to as “the Site”), including all associated subdomains. By accessing, browsing, or utilizing this Site and its subdomains, you (the “User”) acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions (“Terms”). If you do not agree with any part of these Terms, you are prohibited from using the Site or any of its subdomains.</p>
