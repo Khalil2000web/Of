@@ -3,36 +3,109 @@ layout: default
 title: Khalil
 author: "Khalil"
 published: false
-css:
-  - https://cdn.jsdelivr.net/gh/Khalil2000web/Of@main/static/css/index-ii.css
-js:
-  - https://cdn.jsdelivr.net/gh/Khalil2000web/Of@main/static/js/vidpr-25-ii.js
 ---
- 
-<div class="galmain3">
-<div class="video-container"><canvas></canvas><video poster="https://pub-f4c4477afe9541f7a586037aaee49080.r2.dev/IMG_8992.jpeg" src="https://pub-19025506a9754f36baa46a24e6f84719.r2.dev/video-output-41CC8F37-AEAD-457B-9DD6-98182EE735FD-1.mov" muted loop autoplay playsinline preload="auto" style="display:none;"></video><div class="spinner"></div><div class="sound-btn"><img src="https://khaliil.com/static/images/icon-mute.svg" alt="Toggle Sound"></div><div class="error-message"></div><div class="play-btn"></div></div>
-<div style="pointer-events: none;"><img src="https://pub-19025506a9754f36baa46a24e6f84719.r2.dev/IMG_8715.jpeg" class="image" alt="Image" loading="lazy" decoding="async"></div>
-<div style="pointer-events: none;"><img src="https://pub-19025506a9754f36baa46a24e6f84719.r2.dev/photo-output.jpeg" class="image" alt="Image" loading="lazy" decoding="async"></div>
-<div class="video-container"><canvas></canvas><video poster="https://pub-f4c4477afe9541f7a586037aaee49080.r2.dev/IMG_8920.jpeg" src="https://pub-19025506a9754f36baa46a24e6f84719.r2.dev/IMG_8716.mov" muted loop autoplay playsinline preload="auto" style="display:none;"></video><div class="spinner"></div><div class="sound-btn"><img src="https://khaliil.com/static/images/icon-mute.svg" alt="Toggle Sound"></div><div class="error-message"></div><div class="play-btn"></div></div>
-<div style="pointer-events: none;"><img src="https://pub-19025506a9754f36baa46a24e6f84719.r2.dev/IMG_8689.jpeg" class="image" alt="Image" loading="lazy" decoding="async"></div>
-<div style="pointer-events: none;"><img src="https://pub-19025506a9754f36baa46a24e6f84719.r2.dev/IMG_8688.jpeg" class="image" alt="Image" loading="lazy" decoding="async"></div>
-<div style="pointer-events: none;"><img src="https://pub-19025506a9754f36baa46a24e6f84719.r2.dev/7F1676A1-8097-42C8-9F2D-E1B2F49FD8BF.jpeg" class="image" alt="Image" loading="lazy" decoding="async"></div>
-<div style="pointer-events: none;"><img src="https://pub-19025506a9754f36baa46a24e6f84719.r2.dev/F1B9BD09-36AF-4A08-9E5A-6895A6262481.jpeg" class="image" alt="Image" loading="lazy" decoding="async"></div>
-<div style="pointer-events: none;"><img src="https://pub-19025506a9754f36baa46a24e6f84719.r2.dev/GMP_U2F2ZUdIMDE%3D.gif" class="image" alt="Image" loading="lazy" decoding="async"></div>
-<div class="video-container"><canvas></canvas><video src="https://pub-.r2.dev/IMG_7630.mov" muted loop autoplay playsinline preload="auto" style="display:none;"></video><div class="spinner"></div><div class="sound-btn"><img src="https://khaliil.com/static/images/icon-mute.svg" alt="Toggle Sound"></div><div class="error-message"></div><div class="play-btn"></div></div>
-<div style="pointer-events: none;"><img src="https://pub-19025506a9754f36baa46a24e6f84719.r2.dev/BSRQPNCVESHWMQPAMFT.HEIC" class="image" alt="Image" loading="lazy" decoding="async"></div>
-<div style="pointer-events: none;"><img src="https://pub-19025506a9754f36baa46a24e6f84719.r2.dev/IMG_8285.jpeg" class="image" alt="Image" loading="lazy" decoding="async"></div>
-<div style="pointer-events: none;"><img src="https://pub-19025506a9754f36baa46a24e6f84719.r2.dev/IMG_8275.jpeg" class="image" alt="Image" loading="lazy" decoding="async"></div>
-<div style="pointer-events: none;"><img src="https://pub-65e50ac10e764e13b41536c10d90f540.r2.dev/PICT0008.jpeg" class="image" alt="Image" loading="lazy" decoding="async"></div>
-<div style="pointer-events: none;"><img src="https://pub-65e50ac10e764e13b41536c10d90f540.r2.dev/IMG_3665.jpeg" class="image" alt="Image" loading="lazy" decoding="async"></div>
-<div style="pointer-events: none;"><img src="https://pub-65e50ac10e764e13b41536c10d90f540.r2.dev/IMG_3652.jpeg" class="image" alt="Image" loading="lazy" decoding="async"></div>
-<div class="video-container"><canvas></canvas><video src="https://pub-65e50ac10e764e13b41536c10d90f540.r2.dev/PICT0017.mov" muted loop autoplay playsinline preload="auto" style="display:none;"></video><div class="spinner"></div><div class="sound-btn"><img src="https://khaliil.com/static/images/icon-mute.svg" alt="Toggle Sound"></div><div class="error-message"></div><div class="play-btn"></div></div>
-<div style="pointer-events: none;"><img src="https://pub-65e50ac10e764e13b41536c10d90f540.r2.dev/IMG_3481.jpeg" class="image" alt="Image" loading="lazy" decoding="async"></div>
-<div style="pointer-events: none;"><img src="https://pub-65e50ac10e764e13b41536c10d90f540.r2.dev/IMG_3461.jpeg" class="image" alt="Image" loading="lazy" decoding="async"></div>
-<div style="pointer-events: none;"><img src="https://pub-65e50ac10e764e13b41536c10d90f540.r2.dev/IMG_3215.jpeg" class="image" alt="Image" loading="lazy" decoding="async"></div>
-<div class="video-container"><canvas></canvas><video src="https://pub-65e50ac10e764e13b41536c10d90f540.r2.dev/copy_0DC02DE5-7A5F-4EBA-910D-979F5451C1EF.mov" muted loop autoplay playsinline preload="auto" style="display:none;"></video><div class="spinner"></div><div class="sound-btn"><img src="https://khaliil.com/static/images/icon-mute.svg" alt="Toggle Sound"></div><div class="error-message"></div><div class="play-btn"></div></div>
-<div style="pointer-events: none;"><img src="https://pub-65e50ac10e764e13b41536c10d90f540.r2.dev/IMG_2695.jpeg" class="image" alt="Image" loading="lazy" decoding="async"></div>
-<div style="pointer-events: none;"><img src="https://pub-65e50ac10e764e13b41536c10d90f540.r2.dev/IMG_0825.jpeg" class="image" alt="Image" loading="lazy" decoding="async"></div>
-<div style="pointer-events: none;"><img src="https://pub-65e50ac10e764e13b41536c10d90f540.r2.dev/afe87cb6-1819-455e-b9f1-e30195a4e2cd.jpeg" class="image" alt="Image" loading="lazy" decoding="async"></div>
 
+
+<style>
+body {
+  background-color: #000;
+  color: #fff;
+  margin: 0;
+  padding: 4vw;
+  line-height: 1.6;
+}
+
+.terms-container {
+  max-width: 800px;
+  margin: auto;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 1px;
+}
+
+summary {
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: #111;
+  padding: 1rem;
+  border: 1px solid #333;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+details[open] summary {
+  background-color: #1a1a1a;
+}
+
+details p,
+details ul {
+  background-color: #0d0d0d;
+  margin: 0;
+  padding: 1rem 1.5rem;
+  border-left: 2px solid #444;
+  border-radius: 0 0 8px 8px;
+}
+
+a {
+  color: #4ae;
+  text-decoration: underline;
+}
+</style>
+
+
+
+<div class="terms-container">
+<h2>TERMS & CONDITIONS</h2>
+<p><strong>LAST UPDATED: {{ page.last_modified_at | date: "%B %d, %Y" | upcase }}</strong></p>
+<details open>
+<summary><strong>INTRODUCTION</strong></summary>
+<p>Welcome to KHALIIL.COM ...</p>
+</details>
+<details>
+<summary><strong>1. ACCEPTANCE OF TERMS</strong></summary>
+<p>By accessing or using the Site...</p>
+</details>
+<details>
+<summary><strong>2. SCOPE OF TERMS AND SUBDOMAINS</strong></summary>
+<p>These Terms apply to the main Site...</p>
+</details>
+<details>
+<summary><strong>3. INTELLECTUAL PROPERTY RIGHTS</strong></summary>
+<p><strong>3.1. Ownership of Content</strong></p>
+<p>All content available on the Site...</p>
+<p><strong>3.2. Copyright</strong></p>
+<p>The content on this Site...</p>
+<p><strong>3.3. Trademarks</strong></p>
+<p>Any trademarks, logos, or service marks...</p>
+</details>
+<details>
+<summary><strong>4. RESTRICTIONS ON USE</strong></summary>
+<ul>
+<li>Downloading, copying, or redistributing...</li>
+<li>Modifying, publishing, distributing...</li>
+<li>Using content from the Site...</li>
+<li>Misrepresenting or falsely attributing...</li>
+<li>Engaging in any activity that disrupts...</li>
+<li>Using the Site or its content...</li>
+</ul>
+</details>
+<details>
+<summary><strong>5. IMAGES AND VIDEOS ON THE SITE AND SUBDOMAINS</strong></summary>
+<p>The images and videos featured on the Site...</p>
+</details>
+<!-- Repeat for sections 6 through 14 like above -->
+<details>
+<summary><strong>14.5. Data Protection</strong></summary>
+<p>The Site takes reasonable measures...</p>
+</details>
+<details>
+<summary><strong>ACCEPTANCE OF TERMS</strong></summary>
+<p>By accessing and using this Site...</p>
+</details>
 </div>
