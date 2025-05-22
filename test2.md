@@ -2,7 +2,7 @@
 layout: default
 title: Khalil
 author: "Khalil"
-published: false
+published: true
 ---
 
 
