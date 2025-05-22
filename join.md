@@ -32,7 +32,7 @@ last_modified_at: 2025-05-11 10:30:00
     </div>
     <div></div>
     <div id="sib-container" class="sib-container--medium sib-container--vertical" style="text-align:center; background-color:rgba(0,0,0,1); max-width:350px; border-width:0px; border-color:#C0CCD9; border-style:solid; direction:ltr">
-      <form id="sib-form" method="POST" action="https://sibforms.com/serve/MUIFAOzJQzWPuS6mtam2dw9w2nIPrGUmAD8yCEfXx82DPEfMFh28Ba4REA5en-dfPIiPuqITvhH8783yOs63-a6HLrYueKLF2pECTWOfZCDkeFBSq6glIEu9Gafxty7CUEQQMkFST9x7NqOrS373o6OJasocHvetCM1j2NM5oy4pOS-oh3FMaaVtE4TwiB8HWiJLrHCJTCelGtlX" data-type="subscription">
+      <form id="sib-form" method="POST" style="padding:0;" action="https://sibforms.com/serve/MUIFAOzJQzWPuS6mtam2dw9w2nIPrGUmAD8yCEfXx82DPEfMFh28Ba4REA5en-dfPIiPuqITvhH8783yOs63-a6HLrYueKLF2pECTWOfZCDkeFBSq6glIEu9Gafxty7CUEQQMkFST9x7NqOrS373o6OJasocHvetCM1j2NM5oy4pOS-oh3FMaaVtE4TwiB8HWiJLrHCJTCelGtlX" data-type="subscription">
         <div style="padding: 8px 0;">
             <div class="sib-form-block" style="font-size:20px; text-align:center; font-family:'BB Manual Mono Regular', Arial, sans-serif; font-weight:100; color:#fff; background-color:transparent;">
                 <p>SIGN UP NOW FOR THE LATEST INFO AND UPDATES</p>
@@ -45,7 +45,7 @@ last_modified_at: 2025-05-11 10:30:00
           </div>
         </div>
         <div style="padding: 8px 0;">
-          <div class="sib-input sib-form-block">
+          <div class="sib-input sib-form-block" style="padding:0;margin:0;">
             <div class="form__entry entry_block">
               <div class="form__label-row ">
                 <label class="entry__label" style="text-align:left; font-family:'BB Manual Mono Regular', Arial, sans-serif; font-size:14px; font-weight:300; color:#fff; text-transform:uppercase; margin-top:40px;" for="EMAIL" data-required="*">Enter your email address to subscribe</label>
