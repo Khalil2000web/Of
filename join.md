@@ -53,7 +53,7 @@ last_modified_at: 2025-05-11 10:30:00
                     <input class="input" style="color:#fff; font-family:'BB Manual Mono Regular', Arial, sans-serif; background:#000; border:1px solid #fff; outline:none; border-radius:0;" type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="EMAIL" data-required="true" required />
                 </div>
               </div>
-              <label class="entry__error entry__error--primary" style="font-size:16px; font-family:'BB Manual Mono Regular', Arial, sans-serif; text-align:left; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;"></label>
+              <label class="entry__error entry__error--primary" style="padding: 10px 0 10px 5px;font-size:16px; font-family:'BB Manual Mono Regular', Arial, sans-serif; text-align:left; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;"></label>
               <label class="entry__specification" style="font-size:12px; text-align:left; font-family:Helvetica, sans-serif; color:#8390A4; text-align:left">
                 Provide your email address to subscribe. For e.g abc@xyz.com
               </label>
