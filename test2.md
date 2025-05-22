@@ -6,11 +6,15 @@ published: true
 ---
 
 <style>
+body {
+  padding-top:200px;}
+  
   details {
     border: none;
     padding: 0;
     margin-bottom: 1em;
     font-family: sans-serif;
+    width:90%;margin:0 auto;
   }
 
   summary {
