@@ -5,107 +5,50 @@ author: "Khalil"
 published: true
 ---
 
-
 <style>
-body {
-  background-color: #000;
-  color: #fff;
-  margin: 0;
-  padding: 4vw;
-  line-height: 1.6;
-}
+  details {
+    border: none;
+    padding: 0;
+    margin-bottom: 1em;
+    font-family: sans-serif;
+  }
 
-.terms-container {
-  max-width: 800px;
-  margin: auto;
-}
+  summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 0.5em 0;
+  }
 
-h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-  letter-spacing: 1px;
-}
+  summary::marker {
+    display: none;
+  }
 
-summary {
-  font-size: 1.2rem;
-  font-weight: bold;
-  background-color: #111;
-  padding: 1rem;
-  border: 1px solid #333;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  margin-top: 1rem;
-}
+  summary::after {
+    content: "+";
+    font-size: 1.2em;
+    transition: transform 0.2s;
+  }
 
-details[open] summary {
-  background-color: #1a1a1a;
-}
+  details[open] summary::after {
+    content: "–";
+  }
 
-details p,
-details ul {
-  background-color: #0d0d0d;
-  margin: 0;
-  padding: 1rem 1.5rem;
-  border-left: 2px solid #444;
-  border-radius: 0 0 8px 8px;
-}
-
-a {
-  color: #4ae;
-  text-decoration: underline;
-}
+  .details-content {
+    padding-top: 0.5em;
+    font-size: 0.95em;
+    line-height: 1.5;
+    color: #444;
+  }
 </style>
 
-
-
-<div class="terms-container">
-<h2>TERMS & CONDITIONS</h2>
-<p><strong>LAST UPDATED: {{ page.last_modified_at | date: "%B %d, %Y" | upcase }}</strong></p>
-<details open>
-<summary><strong>INTRODUCTION</strong></summary>
-<p>Welcome to KHALIIL.COM ...</p>
-</details>
 <details>
-<summary><strong>1. ACCEPTANCE OF TERMS</strong></summary>
-<p>By accessing or using the Site...</p>
+  <summary><span>DETAILS</span></summary>
+  <div class="details-content">
+    This is the product description. You can put anything here like size, material, care instructions, or unique features of the product.
+  </div>
 </details>
-<details>
-<summary><strong>2. SCOPE OF TERMS AND SUBDOMAINS</strong></summary>
-<p>These Terms apply to the main Site...</p>
-</details>
-<details>
-<summary><strong>3. INTELLECTUAL PROPERTY RIGHTS</strong></summary>
-<p><strong>3.1. Ownership of Content</strong></p>
-<p>All content available on the Site...</p>
-<p><strong>3.2. Copyright</strong></p>
-<p>The content on this Site...</p>
-<p><strong>3.3. Trademarks</strong></p>
-<p>Any trademarks, logos, or service marks...</p>
-</details>
-<details>
-<summary><strong>4. RESTRICTIONS ON USE</strong></summary>
-<ul>
-<li>Downloading, copying, or redistributing...</li>
-<li>Modifying, publishing, distributing...</li>
-<li>Using content from the Site...</li>
-<li>Misrepresenting or falsely attributing...</li>
-<li>Engaging in any activity that disrupts...</li>
-<li>Using the Site or its content...</li>
-</ul>
-</details>
-<details>
-<summary><strong>5. IMAGES AND VIDEOS ON THE SITE AND SUBDOMAINS</strong></summary>
-<p>The images and videos featured on the Site...</p>
-</details>
-<!-- Repeat for sections 6 through 14 like above -->
-<details>
-<summary><strong>14.5. Data Protection</strong></summary>
-<p>The Site takes reasonable measures...</p>
-</details>
-<details>
-<summary><strong>ACCEPTANCE OF TERMS</strong></summary>
-<p>By accessing and using this Site...</p>
-</details>
-</div>
