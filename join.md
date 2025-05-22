@@ -74,11 +74,10 @@ last_modified_at: 2025-05-11 10:30:00
       </form>
     </div>
   </div>
-</div>
-
 <details>
   <summary><span style="word-wrap:break-word;">HOW IT WORKS</span></summary>
   <div class="details-content">
     To subscribe to our newsletter, simply enter your email address and click the “Subscribe” button. By doing so, you agree to our <a href="/terms-conditions" target="_blank">TERMS &amp; CONDITIONS</a> AND <a href="/privacy-policy" target="_blank">PRIVACY POLICY</a>. Once submitted, we’ll receive your email and keep you updated with our latest news.
   </div>
 </details>
+</div>
