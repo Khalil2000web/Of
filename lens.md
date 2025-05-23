@@ -39,7 +39,6 @@ last_modified_at: 2025-05-13 10:30:00
         overlayImage.src = img.src;
         overlay.style.display = 'flex';
         document.body.style.overflow = 'hidden';
-        closeBtn.focus();
       }
     });
   });
