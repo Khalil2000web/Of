@@ -7,20 +7,6 @@ published: true
 <header style="max-width:100%;"><h1>Khaliil</h1><p>3 Countries. 1 Journey. France, Germany, Switzerland — 2024 Tour</p><p>TOUR.KHALIIL.COM</p><a class="cta" href="https://tour.khaliil.com/">Enter Full Experience</a></header>
 
 <div class="galmain3">
-<div class="box">
-  <h2 class="video-title">Fan-Captured Moment • Beyoncé Live</h2>
-  <div class="video-wrapper">
-    <iframe 
-      src="https://www.youtube.com/embed/cugGEY3ShOg?autoplay=1&mute=1&controls=1&rel=0&modestbranding=1" 
-      frameborder="0"
-    allow="autoplay; encrypted-media"
-      allowfullscreen>
-    </iframe>
-  </div>
-  <p class="video-credit">Footage by @micah.dantee on YouTube • All rights belong to Beyoncé & Parkwood</p>
-</div>
-
-
 <div style="pointer-events: none;"><img src="https://pub-19025506a9754f36baa46a24e6f84719.r2.dev/16495E00-7C50-4CFB-9F13-010EED1D8822.jpeg" class="image" alt="Image" loading="lazy" decoding="async"></div>
 <div style="pointer-events: none;"><img src="https://pub-19025506a9754f36baa46a24e6f84719.r2.dev/IMG_0365.jpeg" class="image" alt="Image" loading="lazy" decoding="async"></div>
 <div class="box">
