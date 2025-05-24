@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tour Overlay Page</title>
+  <style>@font-face {font-family: 'BB Manual Mono Regular';src: url('https://khaliil.com/static/fonts/BBManualMonoProTX.22d272fc.ttf');}@font-face {font-family: 'BB Manual Mono SemiBold';src: url('/static/fonts/BBManualMonoProTX-SemiBold.otf');}</style>
+
+  <style>
+    * {      font-family: 'BB Manual Mono Regular';
+  }
+    body {
+      margin: 0;
+      font-family: 'BB Manual Mono Regular';
+      background: #000;
+    }
+
+    .button-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+      padding: 20px;
+    }
+
+    button[data-date] {
+      padding: 14px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      background: black;
+      color: white;
+      text-transform: uppercase;
+    }
+
+    /* Overlay */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 100vw;
+      background: black;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      transform: translateY(100%);
+      transition: transform 0.6s ease, opacity 0.6s ease;
+      z-index: 9999;
+      pointer-events: none;
+      opacity: 0;
+    }
+
+    .overlay.show {
+      transform: translateY(0);
+      pointer-events: auto;
+      opacity: 1;
+    }
+
+    .overlay.hide {
+  transform: translateY(100%);
+  opacity: 1;
+  pointer-events: none;}
+
+    .overlay-header {
+      position: fixed;
+      top: 20px;
+      left: 50%;transform: translateX(-50%);
+      width: 90%;
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 14px;
+      font-weight: normal;
+      z-index: 10000;
+      color: white;
+      text-transform: uppercase;
+      background: transparent;
+    }
+
+    #overlay-content {
+      margin-top: 0;
+      padding: 0;
+      overflow-y: auto;
+      flex-grow: 1;
+    }
+
+    #close-btn {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 14px;
+      cursor: pointer;
+      line-height: 1;
+    }
+
+    /* Hidden content container */
+    #hidden-contents {
+      display: none;
+    } 
+.image {
+  width:100%;height:auto;display: block;pointer-events: none;
+}
+</style>
+</head>
+<body>
+
+  <!-- Buttons Grid -->
+  <div class="button-grid">
+    <button data-date="new-jersey-5-22" data-place="New Jersey">New Jersey – May 22</button>
+    <button data-date="los-angeles-6-10" data-place="Los Angeles">Los Angeles – June 10</button>
+  </div>
+
+  <!-- Hidden content -->
+<div id="hidden-contents">
+<div data-date="new-jersey-5-22">
+<img src="https://cdn.sanity.io/images/fvrrd1kn/production/081798ba91f6708dcd719150e686052523bd05eb-5000x3328.jpg" class="image" loading="lazy">
+<img src="https://cdn.sanity.io/images/fvrrd1kn/production/a9751c19c0d68bee1acdb86dd279d7b3594e6982-5000x3328.jpg" class="image" loading="lazy">
+<img src="https://cdn.sanity.io/images/fvrrd1kn/production/b33b502021a85d70c7beeac8853c0058866d2bc2-5000x3328.jpg" class="image" loading="lazy">
+<img src="https://cdn.sanity.io/images/fvrrd1kn/production/081798ba91f6708dcd719150e686052523bd05eb-5000x3328.jpg" class="image" loading="lazy">
+<img src="https://cdn.sanity.io/images/fvrrd1kn/production/a9751c19c0d68bee1acdb86dd279d7b3594e6982-5000x3328.jpg" class="image" loading="lazy">
+<img src="https://cdn.sanity.io/images/fvrrd1kn/production/b33b502021a85d70c7beeac8853c0058866d2bc2-5000x3328.jpg" class="image" loading="lazy"><img src="https://cdn.sanity.io/images/fvrrd1kn/production/081798ba91f6708dcd719150e686052523bd05eb-5000x3328.jpg" class="image" loading="lazy">
+<img src="https://cdn.sanity.io/images/fvrrd1kn/production/a9751c19c0d68bee1acdb86dd279d7b3594e6982-5000x3328.jpg" class="image" loading="lazy">
+<img src="https://cdn.sanity.io/images/fvrrd1kn/production/b33b502021a85d70c7beeac8853c0058866d2bc2-5000x3328.jpg" class="image" loading="lazy"><img src="https://cdn.sanity.io/images/fvrrd1kn/production/081798ba91f6708dcd719150e686052523bd05eb-5000x3328.jpg" class="image" loading="lazy">
+<img src="https://cdn.sanity.io/images/fvrrd1kn/production/a9751c19c0d68bee1acdb86dd279d7b3594e6982-5000x3328.jpg" class="image" loading="lazy">
+<img src="https://cdn.sanity.io/images/fvrrd1kn/production/b33b502021a85d70c7beeac8853c0058866d2bc2-5000x3328.jpg" class="image" loading="lazy"><img src="https://cdn.sanity.io/images/fvrrd1kn/production/081798ba91f6708dcd719150e686052523bd05eb-5000x3328.jpg" class="image" loading="lazy">
+<img src="https://cdn.sanity.io/images/fvrrd1kn/production/a9751c19c0d68bee1acdb86dd279d7b3594e6982-5000x3328.jpg" class="image" loading="lazy">
+<img src="https://cdn.sanity.io/images/fvrrd1kn/production/b33b502021a85d70c7beeac8853c0058866d2bc2-5000x3328.jpg" class="image" loading="lazy"><img src="https://cdn.sanity.io/images/fvrrd1kn/production/081798ba91f6708dcd719150e686052523bd05eb-5000x3328.jpg" class="image" loading="lazy">
+<img src="https://cdn.sanity.io/images/fvrrd1kn/production/a9751c19c0d68bee1acdb86dd279d7b3594e6982-5000x3328.jpg" class="image" loading="lazy">
+<img src="https://cdn.sanity.io/images/fvrrd1kn/production/b33b502021a85d70c7beeac8853c0058866d2bc2-5000x3328.jpg" class="image" loading="lazy"><img src="https://cdn.sanity.io/images/fvrrd1kn/production/081798ba91f6708dcd719150e686052523bd05eb-5000x3328.jpg" class="image" loading="lazy">
+<img src="https://cdn.sanity.io/images/fvrrd1kn/production/a9751c19c0d68bee1acdb86dd279d7b3594e6982-5000x3328.jpg" class="image" loading="lazy">
+<img src="https://cdn.sanity.io/images/fvrrd1kn/production/b33b502021a85d70c7beeac8853c0058866d2bc2-5000x3328.jpg" class="image" loading="lazy"><img src="https://cdn.sanity.io/images/fvrrd1kn/production/081798ba91f6708dcd719150e686052523bd05eb-5000x3328.jpg" class="image" loading="lazy">
+<img src="https://cdn.sanity.io/images/fvrrd1kn/production/a9751c19c0d68bee1acdb86dd279d7b3594e6982-5000x3328.jpg" class="image" loading="lazy">
+<img src="https://cdn.sanity.io/images/fvrrd1kn/production/b33b502021a85d70c7beeac8853c0058866d2bc2-5000x3328.jpg" class="image" loading="lazy"><img src="https://cdn.sanity.io/images/fvrrd1kn/production/081798ba91f6708dcd719150e686052523bd05eb-5000x3328.jpg" class="image" loading="lazy">
+<img src="https://cdn.sanity.io/images/fvrrd1kn/production/a9751c19c0d68bee1acdb86dd279d7b3594e6982-5000x3328.jpg" class="image" loading="lazy">
+<img src="https://cdn.sanity.io/images/fvrrd1kn/production/b33b502021a85d70c7beeac8853c0058866d2bc2-5000x3328.jpg" class="image" loading="lazy"><img src="https://cdn.sanity.io/images/fvrrd1kn/production/081798ba91f6708dcd719150e686052523bd05eb-5000x3328.jpg" class="image" loading="lazy">
+<img src="https://cdn.sanity.io/images/fvrrd1kn/production/a9751c19c0d68bee1acdb86dd279d7b3594e6982-5000x3328.jpg" class="image" loading="lazy">
+<img src="https://cdn.sanity.io/images/fvrrd1kn/production/b33b502021a85d70c7beeac8853c0058866d2bc2-5000x3328.jpg" class="image" loading="lazy"><img src="https://cdn.sanity.io/images/fvrrd1kn/production/081798ba91f6708dcd719150e686052523bd05eb-5000x3328.jpg" class="image" loading="lazy">
+<img src="https://cdn.sanity.io/images/fvrrd1kn/production/a9751c19c0d68bee1acdb86dd279d7b3594e6982-5000x3328.jpg" class="image" loading="lazy">
+<img src="https://cdn.sanity.io/images/fvrrd1kn/production/b33b502021a85d70c7beeac8853c0058866d2bc2-5000x3328.jpg" class="image" loading="lazy"><img src="https://cdn.sanity.io/images/fvrrd1kn/production/081798ba91f6708dcd719150e686052523bd05eb-5000x3328.jpg" class="image" loading="lazy">
+<img src="https://cdn.sanity.io/images/fvrrd1kn/production/a9751c19c0d68bee1acdb86dd279d7b3594e6982-5000x3328.jpg" class="image" loading="lazy">
+<img src="https://cdn.sanity.io/images/fvrrd1kn/production/b33b502021a85d70c7beeac8853c0058866d2bc2-5000x3328.jpg" class="image" loading="lazy"><img src="https://cdn.sanity.io/images/fvrrd1kn/production/081798ba91f6708dcd719150e686052523bd05eb-5000x3328.jpg" class="image" loading="lazy">
+<img src="https://cdn.sanity.io/images/fvrrd1kn/production/a9751c19c0d68bee1acdb86dd279d7b3594e6982-5000x3328.jpg" class="image" loading="lazy">
+<img src="https://cdn.sanity.io/images/fvrrd1kn/production/b33b502021a85d70c7beeac8853c0058866d2bc2-5000x3328.jpg" class="image" loading="lazy">v
+</div>
+
+  </div>
+
+  <!-- Overlay -->
+  <div id="overlay" class="overlay">
+    <div class="overlay-header">
+      <span id="place-name"></span>
+      <button id="close-btn">CLOSE</button>
+    </div>
+    <div id="overlay-content"></div>
+  </div>
+
+  <script>
+    const overlay = document.getElementById("overlay");
+    const overlayContent = document.getElementById("overlay-content");
+    const placeName = document.getElementById("place-name");
+    const closeBtn = document.getElementById("close-btn");
+
+    document.querySelectorAll("button[data-date]").forEach(button => {
+      button.addEventListener("click", () => {
+        const date = button.getAttribute("data-date");
+        const place = button.getAttribute("data-place");
+        const contentDiv = document.querySelector(`#hidden-contents > div[data-date="${date}"]`);
+
+        if (!contentDiv) return;
+
+        placeName.textContent = place;
+        overlayContent.innerHTML = contentDiv.innerHTML;
+        overlay.classList.add("show");
+        history.pushState(null, "", `?date=${date}`);
+      });
+    });
+
+    closeBtn.addEventListener("click", () => {
+  overlay.classList.remove("show");
+  overlay.classList.add("hide");
+  history.pushState(null, "", window.location.pathname);
+
+  // Wait for the transition to finish before clearing content (600ms)
+  setTimeout(() => {
+    overlay.classList.remove("hide");
+    overlayContent.innerHTML = ""; // Optional: clear content after closing
+  }, 600);
+});
+
+    window.addEventListener("DOMContentLoaded", () => {
+      const params = new URLSearchParams(window.location.search);
+      const date = params.get("date");
+      if (date) {
+        const button = document.querySelector(`button[data-date="${date}"]`);
+        if (button) button.click();
+      }
+    });
+  </script>
+</body>
+</html>
