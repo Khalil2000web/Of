@@ -2,7 +2,7 @@
 layout: default
 title: KHALIIL
 author: "Khaliil"
-published: true
+published: false
 ---
 <header style="max-width:100%;"><h1>Khaliil</h1><p>3 Countries. 1 Journey. France, Germany, Switzerland — 2024 Tour</p><p>TOUR.KHALIIL.COM</p><a class="cta" href="https://tour.khaliil.com/">Enter Full Experience</a></header>
 
