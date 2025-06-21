@@ -125,39 +125,39 @@ published: true
 </div>
 
 <script>
-  const termsBtn = document.getElementById('termsBtn');
-  const privacyBtn = document.getElementById('privacyBtn');
-  const termsContent = document.getElementById('termsContent');
-  const privacyContent = document.getElementById('privacyContent');
+const termsBtn = document.getElementById('termsBtn');
+const privacyBtn = document.getElementById('privacyBtn');
+const termsContent = document.getElementById('termsContent');
+const privacyContent = document.getElementById('privacyContent');
 
-  function switchTab(showTerms) {
-    if (showTerms) {
-      termsBtn.classList.add('active');
-      privacyBtn.classList.remove('active');
+function switchTab(showTerms) {
+  if (showTerms) {
+    termsBtn.classList.add('active');
+    privacyBtn.classList.remove('active');
 
-      termsBtn.setAttribute('aria-selected', 'true');
-      privacyBtn.setAttribute('aria-selected', 'false');
+    termsBtn.setAttribute('aria-selected', 'true');
+    privacyBtn.setAttribute('aria-selected', 'false');
 
-      termsContent.classList.add('active');
-      privacyContent.classList.remove('active');
+    termsContent.classList.add('active');
+    privacyContent.classList.remove('active');
 
-      termsContent.removeAttribute('aria-hidden');
-      privacyContent.setAttribute('aria-hidden', 'true');
-    } else {
-      privacyBtn.classList.add('active');
-      termsBtn.classList.remove('active');
+    termsContent.removeAttribute('aria-hidden');
+    privacyContent.setAttribute('aria-hidden', 'true');
+  } else {
+    privacyBtn.classList.add('active');
+    termsBtn.classList.remove('active');
 
-      privacyBtn.setAttribute('aria-selected', 'true');
-      termsBtn.setAttribute('aria-selected', 'false');
+    privacyBtn.setAttribute('aria-selected', 'true');
+    termsBtn.setAttribute('aria-selected', 'false');
 
-      privacyContent.classList.add('active');
-      termsContent.classList.remove('active');
+    privacyContent.classList.add('active');
+    termsContent.classList.remove('active');
 
-      privacyContent.removeAttribute('aria-hidden');
-      termsContent.setAttribute('aria-hidden', 'true');
-    }
+    privacyContent.removeAttribute('aria-hidden');
+    termsContent.setAttribute('aria-hidden', 'true');
   }
+}
 
-  termsBtn.onclick = () => switchTab(true);
-  privacyBtn.onclick = () => switchTab(false);
+termsBtn.onclick = () => switchTab(true);
+privacyBtn.onclick = () => switchTab(false);
 </script>
