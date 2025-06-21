@@ -1,7 +1,7 @@
 ---
 layout: default
 title: JOIN
-published: true
+published: false
 permalink: /join/
 author: "Khaliil"
 date: 2024-05-11 10:00:00
