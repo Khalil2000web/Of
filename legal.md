@@ -1,14 +1,12 @@
 ---
 layout: default
-title: PRIVACY POLICY
-permalink: /privacy-policy/
+title: LEGAL
+permalink: /legal/
 author: "Khaliil"
 date: 2024-05-11 10:00:00
 last_modified_at: 2025-05-13 10:30:00
 published: true
 ---
-
-
 <div class="switcher"><button id="termsBtn" class="active">Terms & Conditions</button><span class="divider">/</span><button id="privacyBtn">Privacy Policy</button></div>
 
 <div id="termsContent" class="content active">
