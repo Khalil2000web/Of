@@ -3,7 +3,7 @@ layout: default
 title: LENS
 author: "Khaliil"
 permalink: /lens/
-published: true
+published: false
 date: 2024-05-5 10:00:00
 last_modified_at: 2025-05-13 10:30:00
 ---
