@@ -7,9 +7,9 @@ date: 2024-05-11 10:00:00
 last_modified_at: 2025-05-13 10:30:00
 published: true
 ---
-<div class="switcher"><button id="termsBtn" class="active">Terms & Conditions</button><span class="divider">/</span><button id="privacyBtn">Privacy Policy</button></div>
+<div role="tablist" aria-label="Legal Sections" class="switcher"><button id="termsBtn" role="tab" aria-selected="true" aria-controls="termsContent" class="active">Terms & Conditions</button><span class="divider">/</span><button role="tab" aria-selected="false" aria-controls="privacyContent" id="privacyBtn">Privacy Policy</button></div>
 
-<div id="termsContent" class="content active">
+<div id="termsContent" role="tabpanel" aria-labelledby="termsBtn" class="content active">
 <p><strong>LAST UPDATED: {{ page.last_modified_at | date: "%B %d, %Y" | upcase }}</strong></p>
 <p><strong>INTRODUCTION</strong></p>
 <p>Welcome to KHALIIL.COM (hereinafter referred to as “the Site”), including all associated subdomains. By accessing, browsing, or utilizing this Site and its subdomains, you (the “User”) acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions (“Terms”). If you do not agree with any part of these Terms, you are prohibited from using the Site or any of its subdomains.</p>
@@ -77,7 +77,7 @@ published: true
 <p>By accessing and using this Site, including any subdomains, you confirm that you have read, understood, and agree to comply with these Terms and Conditions.</p>
 </div>
 
-<div id="privacyContent" class="content">
+<div id="privacyContent" role="tabpanel" aria-labelledby="privacyBtn" aria-hidden="true" class="content">
 <p><strong>EFFECTIVE DATE: {{ page.last_modified_at | date: "%B %d, %Y" | upcase }}</strong></p>
 <p><strong>1. INTRODUCTION</strong></p>
 <p>WELCOME TO <span aria-label="khalil.com">KHALIIL.COM</span> (THE “SITE”). WE RESPECT YOUR PRIVACY AND ARE COMMITTED TO ENSURING TRANSPARENCY ABOUT HOW OUR WEBSITE FUNCTIONS. THIS PRIVACY POLICY OUTLINES HOW THE SITE OPERATES CONCERNING USER DATA AND ANY THIRD-PARTY SERVICES USED. SINCE WE DO NOT COLLECT, PROCESS, OR STORE PERSONAL DATA FROM VISITORS, THIS PRIVACY POLICY SERVES TO CLARIFY THE SCOPE OF OUR DATA USAGE AND PROTECTION PRACTICES.</p>
@@ -125,22 +125,39 @@ published: true
 </div>
 
 <script>
-const termsBtn = document.getElementById('termsBtn');
-const privacyBtn = document.getElementById('privacyBtn');
-const termsContent = document.getElementById('termsContent');
-const privacyContent = document.getElementById('privacyContent');
+  const termsBtn = document.getElementById('termsBtn');
+  const privacyBtn = document.getElementById('privacyBtn');
+  const termsContent = document.getElementById('termsContent');
+  const privacyContent = document.getElementById('privacyContent');
 
-termsBtn.onclick = () => {
-  termsBtn.classList.add('active');
-  privacyBtn.classList.remove('active');
-  termsContent.classList.add('active');
-  privacyContent.classList.remove('active');
-};
+  function switchTab(showTerms) {
+    if (showTerms) {
+      termsBtn.classList.add('active');
+      privacyBtn.classList.remove('active');
 
-privacyBtn.onclick = () => {
-  privacyBtn.classList.add('active');
-  termsBtn.classList.remove('active');
-  privacyContent.classList.add('active');
-  termsContent.classList.remove('active');
-};
+      termsBtn.setAttribute('aria-selected', 'true');
+      privacyBtn.setAttribute('aria-selected', 'false');
+
+      termsContent.classList.add('active');
+      privacyContent.classList.remove('active');
+
+      termsContent.removeAttribute('aria-hidden');
+      privacyContent.setAttribute('aria-hidden', 'true');
+    } else {
+      privacyBtn.classList.add('active');
+      termsBtn.classList.remove('active');
+
+      privacyBtn.setAttribute('aria-selected', 'true');
+      termsBtn.setAttribute('aria-selected', 'false');
+
+      privacyContent.classList.add('active');
+      termsContent.classList.remove('active');
+
+      privacyContent.removeAttribute('aria-hidden');
+      termsContent.setAttribute('aria-hidden', 'true');
+    }
+  }
+
+  termsBtn.onclick = () => switchTab(true);
+  privacyBtn.onclick = () => switchTab(false);
 </script>
