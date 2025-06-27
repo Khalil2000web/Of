@@ -10,3 +10,7 @@ published: true
 <div class="tour-bg"></div>
 <a href="https://tour.khaliil.com/" id="tour__tour">TOUR.KHALIIL.COM</a>
 </section>
+
+<div class="mainy63">
+<a href="https://tour.domain.com" target="_blank" rel="noopener" aria-label="KHALIIL TOUR AROUND THE WORLD TRAVEL" title="KHALIIL TOUR AROUND THE WORLD TRAVEL">TOUR</a>
+</div>
