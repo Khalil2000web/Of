@@ -12,5 +12,5 @@ published: true
 </section>
 
 <div class="mainy63">
-<a href="https://tour.domain.com" target="_blank" rel="noopener" aria-label="KHALIIL TOUR AROUND THE WORLD TRAVEL" title="KHALIIL TOUR AROUND THE WORLD TRAVEL">TOUR</a>
+<a href="https://tour.khaliil.com" target="_blank" rel="noopener" aria-label="KHALIIL TOUR AROUND THE WORLD TRAVEL" title="KHALIIL TOUR AROUND THE WORLD TRAVEL">TOUR</a>
 </div>
