@@ -5,7 +5,7 @@ permalink: /legal/
 author: "Khaliil"
 date: 2024-05-11 10:00:00
 last_modified_at: 2025-05-13 10:30:00
-published: true
+published: false
 ---
 <div role="tablist" aria-label="Legal Sections" class="switcher"><button id="termsBtn" role="tab" aria-selected="true" aria-controls="termsContent" class="active">Terms & Conditions</button><span class="divider">/</span><button role="tab" aria-selected="false" aria-controls="privacyContent" id="privacyBtn">Privacy Policy</button></div>
 
