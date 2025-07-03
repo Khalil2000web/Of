@@ -2,12 +2,14 @@
 layout: default
 title: Khalil
 author: "Khalil"
-published: false
+published: true
 ---
 
 <style>
 body {
-  padding-top:200px;}
+  padding-top:200px;
+font-family:var(--font-hand-write);
+}
   
   details {
     border: none;
