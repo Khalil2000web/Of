@@ -30,6 +30,10 @@ published: true
 <p>SINCE WE DO NOT COLLECT PERSONAL DATA, THERE IS NO RISK OF USER DATA BREACHES FROM OUR SITE.</p>
 <p><strong>3.2. EXTERNAL LINKS AND THIRD-PARTY WEBSITES</strong></p>
 <p>OUR SITE MAY CONTAIN LINKS TO EXTERNAL WEBSITES. PLEASE NOTE THAT ONCE YOU LEAVE OUR SITE AND ACCESS THIRD-PARTY PLATFORMS, THEIR RESPECTIVE PRIVACY POLICIES AND TERMS WILL GOVERN YOUR INTERACTIONS WITH THEM. WE ARE NOT RESPONSIBLE FOR THE DATA COLLECTION OR PRIVACY PRACTICES OF ANY EXTERNAL SITES.</p>
+
+<p><strong>Performance & Prefetching</strong></p>
+<p>To improve navigation speed and overall user experience, our site may prefetch or preload certain pages or resources in the background. This means your browser might initiate connections and download data for some pages before you actually click on them. No additional personal information is collected beyond the standard data (such as IP address) that your browser already sends when requesting a page.</p>
+
 <p><strong>4. AGE RESTRICTIONS</strong></p>
 <p>THIS SITE IS ACCESSIBLE TO ALL USERS, BUT IT IS NOT INTENDED FOR USE BY CHILDREN UNDER THE AGE OF 10. SINCE WE DO NOT COLLECT PERSONAL DATA, WE DO NOT KNOWINGLY COLLECT INFORMATION FROM MINORS. IF YOU BELIEVE A CHILD HAS PROVIDED PERSONAL DATA THROUGH AN EXTERNAL LINK, WE ENCOURAGE YOU TO CONTACT THE RESPECTIVE THIRD-PARTY SERVICE DIRECTLY.</p>
 <p><strong>5. CHANGES TO THIS PRIVACY POLICY</strong></p>
