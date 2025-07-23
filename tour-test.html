@@ -97,11 +97,28 @@
 .card .name {
   position: absolute;
   top:50%;left: 50%;transform: translate(-50%,-50%);z-index: 10;
-  padding: 0;text-align: center;-webkit-text-stroke: 0.4px var(--text-color);
+  padding: 0;text-align: center;-webkit-text-stroke: 0.3px var(--text-color);
   font-size: 1.4rem;color: var(--text-color);
   font-weight: 300;text-transform: uppercase;
   overflow-wrap: break-word;
   word-break: break-word;
+}
+
+
+.not-ready {
+  border: 1.3px solid #ffff;background-color: #000;
+}
+.not-ready img {
+  visibility: hidden;
+}
+
+.soon-text-alert {
+  font-size:14px;letter-spacing:1px;
+}
+
+@media screen and (max-width:18em) {
+  .card .name {font-size: 0.7rem;}
+  .soon-text-alert {font-size: 7px;}
 }
 </style>
 
@@ -121,27 +138,24 @@
 
 
 
-
 <h1 class="title-h1">Tour Archive</h1>
 <section class="main20">
-<h2>2024</h2>
+<h2>2025</h2>
 <div class="cards">
 <a href="/2025/" class="card"><img src="images/2024-paris.jpg" class="card-img" alt="PRAGUE"><div class="name">PRAGUE</div></a>
-<a href="/2025/" class="card"><img src="images/2024-nyc.jpg" class="card-img" alt="VIENNA"><div class="name">VIENNA</div></a>
-<a href="/2025/" class="card"><img src="images/2024-nyc.jpg" class="card-img" alt="BUDAPEST"><div class="name">BUDAPEST</div></a>
-<a href="/2025/" class="card"><img src="images/2024-nyc.jpg" class="card-img" alt="ATLANTA"><div class="name">ATLANTA</div></a>
+<a href="/" class="card not-ready"><img src="" class="card-img" alt="VIENNA"><div class="name">VIENNA<p class="soon-text-alert">SOON...</p></div></a>
+<a href="/" class="card not-ready"><img src="" class="card-img" alt="BUDAPEST"><div class="name">BUDAPEST<p class="soon-text-alert">SOON...</p></div></a>
+<a href="/" class="card not-ready"><img src="" class="card-img" alt="ATLANTA"><div class="name">ATLANTA<p class="soon-text-alert">SOON...</p></div></a>
 </div>
 </section>
 <section class="main20">
-<h2>2025</h2>
+<h2>2024</h2>
 <div class="cards">
 <a href="/2024/france" class="card"><img src="https://pub-dbfaea2b62d040e1a68ee4949870f6dd.r2.dev/IMG_0874.gif" class="card-img" alt="FRANCE"><div class="name">FRANCE</div></a>
 <a href="/2024/germany" class="card"><img src="https://raw.githubusercontent.com/Khalil2000web/Media/main/germany-media/IMG_9199.jpeg" class="card-img" alt="GERMANY"><div class="name">GERMANY</div></a>
 <a href="/2024/switzerland" class="card"><img src="https://pub-dbfaea2b62d040e1a68ee4949870f6dd.r2.dev/IMG_0877.gif" class="card-img" alt="SWITZERLAND"><div class="name">SWITZERLAND</div></a>
 </div>
 </section>
-
-
 
 
 
