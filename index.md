@@ -13,6 +13,6 @@ published: true
 
 <div class="homepage-47-links">
 <a href="https://tour.khaliil.com/">TOUR</a>
-<a href="/legal">LEGAL</a>
+<a href="/legal" style="font-size: 16px;">LEGAL</a>
 <a href="/legal/terms-conditions" style="font-size: 16px;">&copy; 2025 KHALIIL</a>
 </div>
