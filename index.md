@@ -11,6 +11,8 @@ published: true
 <a href="https://tour.khaliil.com/" id="tour__tour">TOUR.KHALIIL.COM</a>
 </section>
 
-<div class="mainy63">
-<a href="https://tour.khaliil.com" target="_blank" rel="noopener" aria-label="KHALIIL TOUR AROUND THE WORLD TRAVEL" title="KHALIIL TOUR AROUND THE WORLD TRAVEL">TOUR</a>
+<div class="homepage-47-links">
+<a href="https://tour.khaliil.com/">TOUR</a>
+<a href="/legal">LEGAL</a>
+<a href="/legal/terms-conditions" style="font-size: 16px;">&copy; 2025 KHALIIL</a>
 </div>
