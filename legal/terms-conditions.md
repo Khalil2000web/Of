@@ -7,12 +7,9 @@ date: 2024-05-11 10:00:00
 last_modified_at: 2025-05-13 10:30:00
 published: true
 ---
-<div class="legal-controls">
-<a href="/legal/terms-conditions" id="legal-controls-active">TERMS & CONDITIONS</a>
-<span>/</span>
-<a href="/legal/privacy-policy">PRIVACY POLICY</a>
-</div>
+
 <div class="content">
+<h2>TERMS & CONDITIONS</h2>
 <p><strong>LAST UPDATED: {{ page.last_modified_at | date: "%B %d, %Y" | upcase }}</strong></p>
 <p><strong>INTRODUCTION</strong></p>
 <p>Welcome to KHALIIL.COM (hereinafter referred to as “the Site”), including all associated subdomains. By accessing, browsing, or utilizing this Site and its subdomains, you (the “User”) acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions (“Terms”). If you do not agree with any part of these Terms, you are prohibited from using the Site or any of its subdomains.</p>
@@ -65,4 +62,8 @@ published: true
 <p>For any inquiries regarding these Terms, users may contact the Owner at <span style="overflow-wrap: break-word;">khalildiab2008@gmail.com</span>.</p>
 <p><strong>ACCEPTANCE OF TERMS</strong></p>
 <p>By accessing and using this Site, including any subdomains, you confirm that you have read, understood, and agree to comply with these Terms and Conditions.</p>
+</div>
+<div class="nav2">
+<p>GO TO</p>
+<a href="/legal/privacy-policy">PRIVACY POLICY</a>
 </div>
