@@ -16,7 +16,9 @@ published: true
     justify-content: center;
     margin: 0 auto;
     width: 90%;
-    margin-top: 160px;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
     text-transform: uppercase;
     font-size: 30px;
     word-break: break-all;
