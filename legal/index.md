@@ -107,3 +107,138 @@ author: "Khaliil"
 </div>
 
 
+<style>
+  #scrollBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #000;
+    color: #fff;
+    padding:5px 9px;
+    border: 1px solid #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;font-size: 13px;
+    font-family: var(--font-main);
+    transition: opacity 0.25s, transform 0.25s;
+    z-index: 9999;text-transform: uppercase;
+  }
+
+  .arrow {
+    display: inline-block;padding: 0;margin: 0;
+    transition: transform 0.25s;font-size: 20px;
+  }
+  .arrow.up {
+    transform: rotate(180deg);
+  }
+
+  #privacy-policy, #terms-conditions {
+  scroll-margin-top: 110px;
+}
+</style>
+
+<button id="scrollBtn" aria-label="Jump to section">
+  <span class="btn-text">Privacy Policy</span>
+  <span class="arrow" aria-hidden="true">↓</span>
+</button>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const btn = document.getElementById('scrollBtn');
+  const btnText = btn.querySelector('.btn-text');
+  const arrow = btn.querySelector('.arrow');
+
+  const privacyHeading = document.getElementById('privacy-policy');       // <h2 id="privacy-policy">
+  const termsHeading = document.getElementById('terms-conditions');      // <h2 id="terms-conditions">
+
+  if (!privacyHeading || !termsHeading) {
+    console.warn('Add elements with IDs #privacy-policy and #terms-conditions');
+    return;
+  }
+
+  // compute absolute document offsets
+  function getDocOffset(el){
+    let top = 0;
+    while (el) { top += el.offsetTop; el = el.offsetParent; }
+    return top;
+  }
+
+  let privacyStart = 0, privacyEnd = 0, termsStart = 0;
+  function calcOffsets() {
+    privacyStart = getDocOffset(privacyHeading);
+    termsStart  = getDocOffset(termsHeading);
+
+    // find end of privacy: next h2 with id or bottom of document
+    const h2s = Array.from(document.querySelectorAll('h2[id]'));
+    const idx = h2s.indexOf(privacyHeading);
+    if (idx >= 0 && idx < h2s.length - 1) {
+      privacyEnd = getDocOffset(h2s[idx + 1]);
+    } else {
+      privacyEnd = document.body.scrollHeight;
+    }
+  }
+  calcOffsets();
+  window.addEventListener('resize', calcOffsets);
+
+  // update mode + visibility on scroll (rAF throttled)
+  let ticking = false;
+  function update() {
+    ticking = false;
+    const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+    const centerY = scrollY + window.innerHeight / 2;
+
+    // determine if viewport is currently inside the privacy area (center rule)
+    const inPrivacy = centerY >= privacyStart && centerY < privacyEnd;
+
+    // set button text & arrow
+    if (inPrivacy) {
+      btnText.textContent = 'Terms & Conditions';
+      arrow.classList.add('up');
+      btn.dataset.mode = 'toTerms';
+    } else {
+      btnText.textContent = 'Privacy Policy';
+      arrow.classList.remove('up');
+      btn.dataset.mode = 'toPrivacy';
+    }
+
+    // compute how much of the privacy area overlaps the viewport
+    const viewportTop = scrollY;
+    const viewportBottom = scrollY + window.innerHeight;
+    const overlap = Math.max(0, Math.min(viewportBottom, privacyEnd) - Math.max(viewportTop, privacyStart));
+    const denom = Math.min(window.innerHeight, Math.max(privacyEnd - privacyStart, 1));
+    const visibleRatio = overlap / denom;
+
+    // hide when privacy area is mostly visible (>=70%), otherwise show
+    if (visibleRatio >= 0.7) {
+      btn.classList.add('hidden');
+    } else {
+      btn.classList.remove('hidden');
+    }
+  }
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(update);
+      ticking = true;
+    }
+  }, { passive: true });
+
+  // initial run
+  update();
+
+  // click behavior: hide instantly, scroll to the selected heading
+  btn.addEventListener('click', () => {
+  const mode = btn.dataset.mode || 'toPrivacy';
+  btn.classList.add('hidden'); // instant hide on click
+
+  if (mode === 'toPrivacy') {
+    privacyHeading.scrollIntoView({ behavior: 'smooth' });
+  } else {
+    termsHeading.scrollIntoView({ behavior: 'smooth' });
+  }
+
+  setTimeout(calcOffsets, 500);
+});
+});
+</script>
