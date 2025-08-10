@@ -10,7 +10,7 @@ author: "Khaliil"
   <p><strong>LAST UPDATED ON AUGUST 10, 2025</strong></p>
 
   <p><strong>INTRODUCTION</strong></p>
-  <p>Welcome to KHALIIL.COM (hereinafter referred to as “the Site”), including all associated subdomains such as tour.khaliil.com. By accessing or using the Site or any of its subdomains, you (“User”) acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions (“Terms”). If you do not agree with any part of these Terms, you must not use the Site or any subdomain.</p>
+  <p>Welcome to khaliil.com (hereinafter referred to as “the Site”), including all associated subdomains such as tour.khaliil.com. By accessing or using the Site or any of its subdomains, you (“User”) acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions (“Terms”). If you do not agree with any part of these Terms, you must not use the Site or any subdomain.</p>
 
   <p><strong>1. ACCEPTANCE OF TERMS</strong></p>
   <p>Accessing or using the Site or its subdomains constitutes your acceptance of these Terms, which may be updated at any time without prior notice. It is your responsibility to review these Terms regularly to stay informed of any changes.</p>
