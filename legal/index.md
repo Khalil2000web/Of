@@ -1,6 +1,9 @@
 ---
 layout: default
 published: true
+title: LEGAL
+permalink: /legal
+author: "Khaliil"
 ---
 <div class="content">
   <h2>TERMS & CONDITIONS</h2>
