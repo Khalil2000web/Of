@@ -75,7 +75,7 @@ author: "Khaliil"
   <p><strong>EFFECTIVE DATE: AUGUST 10, 2025</strong></p>
 
   <p><strong>1. INTRODUCTION</strong></p>
-  <p>Welcome to <span aria-label="khalil.com">KHALIIL.COM</span> (the “Site”). We respect your privacy and are committed to transparency regarding our website’s operation and data practices.</p>
+  <p>Welcome to <span aria-label="khalil.com">khaliil.com</span> (the “Site”). We respect your privacy and are committed to transparency regarding our website’s operation and data practices.</p>
 
   <p><strong>2. DATA COLLECTION</strong></p>
   <p>We do not collect, process, or store personal data from visitors directly. No forms or sign-ups on this Site collect your personal information.</p>
