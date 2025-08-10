@@ -5,7 +5,7 @@ permalink: /legal/privacy-policy/
 author: "Khaliil"
 date: 2024-05-11 10:00:00
 last_modified_at: 2025-07-23 10:30:00
-published: true
+published: false
 ---
 
 <div class="content">
