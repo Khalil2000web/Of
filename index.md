@@ -20,41 +20,43 @@ published: true
 </div>
 
 <script>
-  const scroller = document.getElementById("scroller");
-  const speed = 200;
-  const delayStart = 2000;
-  const delayEnd = 2800;
+    const scroller = document.getElementById("scroller");
+    const speed = 200;
+    const delayStart = 2000;
+    const delayEnd = 2800;
 
-  function smoothScroll(target) {
-    return new Promise(resolve => {
-      const start = scroller.scrollTop;
-      const distance = target - start;
-      const duration = Math.abs(distance) / speed * 1000;
-      let startTime = null;
+    function smoothScroll(target) {
+      return new Promise(resolve => {
+        const start = scroller.scrollTop;
+        const distance = target - start;
+        const duration = Math.abs(distance) / speed * 1000;
 
-      function step(timestamp) {
-        if (!startTime) startTime = timestamp;
-        const progress = Math.min((timestamp - startTime) / duration, 1);
-        scroller.scrollTop = start + distance * progress;
-        if (progress < 1) {
-          requestAnimationFrame(step);
-        } else {
-          resolve();
+        let startTime = null;
+
+        function step(timestamp) {
+          if (!startTime) startTime = timestamp;
+          const progress = Math.min((timestamp - startTime) / duration, 1);
+          scroller.scrollTop = start + distance * progress;
+          if (progress < 1) {
+            requestAnimationFrame(step);
+          } else {
+            resolve();
+          }
         }
-      }
-      requestAnimationFrame(step);
-    });
-  }
 
-  async function loopScroll() {
-    await new Promise(r => setTimeout(r, delayStart));
-    while (true) {
-      await smoothScroll(scroller.scrollHeight - scroller.clientHeight);
-      await new Promise(r => setTimeout(r, delayEnd));
-      await smoothScroll(0);
-      await new Promise(r => setTimeout(r, delayEnd));
+        requestAnimationFrame(step);
+      });
     }
-  }
 
-  loopScroll();
+    async function loopScroll() {
+      await new Promise(r => setTimeout(r, delayStart));
+      while (true) {
+        await smoothScroll(scroller.scrollHeight - scroller.clientHeight);
+        await new Promise(r => setTimeout(r, delayEnd));
+        await smoothScroll(0);
+        await new Promise(r => setTimeout(r, delayEnd));
+      }
+    }
+
+    loopScroll();
 </script>
