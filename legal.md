@@ -110,7 +110,7 @@ author: "Khaliil"
 <style>
   #scrollBtn {
     position: fixed;
-    bottom: 20px;
+    bottom: 35px;
     right: 20px;
     background: #000;
     color: #fff;
