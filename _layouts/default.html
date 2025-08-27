@@ -36,13 +36,15 @@
 <script src="https://instant.page/5.1.0" type="module" defer></script>
 </head>
 <body>
-<nav class="navbar">
-<div class="nav-row links"><a href="/">Home</a><a href="https://tour.khaliil.com/">Tour</a></div>
-<div class="nav-row footer"><a href="/legal">Legal</a><p class="copyright">© 2025 KHALIIL</p></div>
-</nav>
+<header class="navbar">
+<div class="nav-links"><a href="/">Home</a><a href="https://tour.khaliil.com/">Tour</a></div>
+</header>
 
 {{ content }}
 
+<footer class="footer">
+<div class="footer-links"><p>&copy; 2025 Khaliil</p><a href="https://khaliil.com/legal">Legal</a></div>
+</footer>
 
 <script>document.addEventListener("copy",e=>{const s=window.getSelection();if(!s.rangeCount)return;const r=s.getRangeAt(0),i=r.commonAncestorContainer.querySelector?.("img");if(i){e.preventDefault();e.clipboardData.setData("text/plain",i.alt||"Image cannot be copied");}});</script>
 </body>
