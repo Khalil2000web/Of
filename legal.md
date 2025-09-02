@@ -1,6 +1,6 @@
 ---
 layout: default
-published: false
+published: true
 title: LEGAL
 permalink: /legal
 author: "Khaliil"
