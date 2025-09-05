@@ -2,8 +2,12 @@
 layout: default
 title: KHALIIL
 author: "Khaliil"
-published: false
+published: true
 ---
+<div class="m6">
+<a href="https://tour.khaliil.com/"><p>The road is drawn across silent maps cities wait in shadows lights rest before the storm and soon the journey begins.</p></a>
+</div>
+
 <div class="scroll-container" id="scroller">
 <div class="item"><p>VIENNA</p></div>
 <div class="item"><a style="cursor: pointer;" href="https://tour.khaliil.com/" target="_blank"><img src="https://pub-711e690bbd0d461890cf62bf43a6282b.r2.dev/IMG_1743.jpeg" class="img-item" alt="Image" decoding="async" loading="eager"></a></div>
@@ -18,3 +22,4 @@ published: false
 <div class="item"><a style="cursor: pointer;" href="https://tour.khaliil.com/" target="_blank"><img src="https://pub-1f29174c420746d4bea24ccbcc9e105d.r2.dev/IMG_3692.jpeg" class="img-item" alt="Image" decoding="async" loading="eager"></a></div>
 <div class="item"><a style="cursor: pointer;" href="https://tour.khaliil.com/" target="_blank"><img src="https://pub-1f29174c420746d4bea24ccbcc9e105d.r2.dev/IMG_2491.jpeg" class="img-item" alt="Image" decoding="async" loading="eager"></a></div>
 </div>
+
