@@ -2,7 +2,7 @@
 layout: default
 title: KHALIIL
 author: "Khaliil"
-published: true
+published: false
 ---
 <div class="m6">
 <a href="https://tour.khaliil.com/"><p>The road is drawn across silent maps cities wait in shadows lights rest before the storm and soon the journey begins.</p></a>
